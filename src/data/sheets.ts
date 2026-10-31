@@ -10,7 +10,8 @@ export type SheetSlug =
   | 'vocabulary'
   | 'cloze'
   | 'signs'
-  | 'grammar';
+  | 'grammar'
+  | 'sentence-construction';
 
 export interface SheetAction {
   label: string;
@@ -63,7 +64,8 @@ export interface Sheet {
     | 'vocab'
     | 'cloze'
     | 'signs'
-    | 'grammar';
+    | 'grammar'
+    | 'sentence';
   lead: string;
   preview: string[];
   highlights: SheetHighlight[];
@@ -551,6 +553,55 @@ export const sheets: Sheet[] = [
       actions: [
         { label: 'Xem bản đồ ngữ pháp', href: '#map', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 18 câu luyện tập', href: '#quiz', variant: 'ghost', icon: 'chevron' }
+      ]
+    }
+  },
+  {
+    slug: 'sentence-construction',
+    href: sitePath('sentence-construction/'),
+    navLabel: 'Sắp xếp câu',
+    shortTitle: 'Word order',
+    title: 'Sentence construction',
+    metaTitle:
+      'Sentence Construction & Part VI (Sắp xếp câu) — Cheatsheet lớp 9 | EngPrep',
+    metaDescription:
+      'Cheatsheet sắp xếp câu và Part VI tiếng Anh lớp 9: trật tự từ, cụm danh từ, trạng từ, 4 bước ghép câu, mục từ điển, 10 bẫy đề và 16 câu luyện tập có giải thích.',
+    cardNo: '11 / PART VI',
+    badge: '2 dạng Part VI',
+    accent: 'sentence',
+    lead: 'Sắp xếp từ thành câu và chọn cụm từ từ mục từ điển: hai dạng Part VI trong bốn đề.',
+    preview: ['S + V + O', 'not only … but also', 'by presenting', 'break the habit'],
+    highlights: [
+      { text: 'Bản đồ 2 dạng Part VI và cách nhận diện' },
+      { text: 'Trật tự từ, cụm danh từ, trạng từ và 4 mẫu câu' },
+      { strong: 'Mục từ điển', text: ' và cách chọn cụm 2–3 từ' },
+      { text: '10 bẫy đề và 16 câu luyện tập' }
+    ],
+    meta: '2 dạng Part VI · 16 câu hỏi',
+    questionCount: 16,
+    sections: [
+      { id: 'map', label: 'Bản đồ' },
+      { id: 'word-order', label: 'Trật tự câu' },
+      { id: 'strategy', label: 'Chiến lược' },
+      { id: 'dictionary', label: 'Từ điển' },
+      { id: 'sample', label: 'Câu mẫu' },
+      { id: 'traps', label: 'Bẫy đề' },
+      { id: 'quiz', label: 'Luyện tập' }
+    ],
+    hero: {
+      eyebrow: 'Global Success 9 · Ôn thi vào 10',
+      titleHtml:
+        'Sắp xếp câu,<br>ghép đúng <span class="marker">trật tự</span>.',
+      lead: 'Part VI chỉ có 2 câu nhưng dễ mất điểm vì trật tự từ và dạng cụm. Trang này gom quy tắc ghép câu, cách đọc mục từ điển, 10 bẫy đề và 16 câu luyện tập.',
+      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
+      stats: [
+        { value: '2', label: 'dạng Part VI' },
+        { value: '4', label: 'bước ghép câu' },
+        { value: '16', label: 'câu luyện tập' }
+      ],
+      actions: [
+        { label: 'Xem bản đồ Part VI', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Làm 16 câu luyện tập', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
   }
