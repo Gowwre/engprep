@@ -1,0 +1,68 @@
+---
+import { sheets, type SheetSlug } from '../data/sheets';
+import { sitePath } from '../lib/urls';
+
+interface Props {
+  current?: SheetSlug | 'home';
+}
+
+const { current = 'home' } = Astro.props;
+
+const navItems = [
+  { slug: 'home', href: sitePath(), label: 'Trang chủ' },
+  ...sheets.map((sheet) => ({
+    slug: sheet.slug,
+    href: sheet.href,
+    label: sheet.navLabel
+  }))
+];
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href={sitePath()}>
+      <span class="brand-mark" aria-hidden="true">EP</span>
+      <span class="brand-text">
+        <strong>EngPrep</strong>
+        <small>Cheat sheet · Lớp 9</small>
+      </span>
+      <span class="sr-only">— trang chủ</span>
+    </a>
+
+    <nav class="site-nav" id="site-nav" aria-label="Điều hướng chính">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class:list={{ 'is-active': current === item.slug }}
+          aria-current={current === item.slug ? 'page' : undefined}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn no-print" type="button" data-print aria-label="In trang này" title="In trang này">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7" rx="1"/>
+        </svg>
+      </button>
+      <button class="icon-btn theme-toggle no-print" id="theme-btn" type="button" aria-label="Chuyển sang giao diện tối" title="Chuyển giao diện">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="icon-btn nav-toggle no-print" id="nav-btn" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="site-nav">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>

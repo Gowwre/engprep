@@ -1,0 +1,56 @@
+---
+import { sheets, type SheetSlug } from '../data/sheets';
+import { sitePath } from '../lib/urls';
+
+interface Props {
+  current?: SheetSlug | 'home';
+}
+
+const { current = 'home' } = Astro.props;
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <span class="brand-mark brand-mark-small" aria-hidden="true">EP</span>
+      <div>
+        <strong>EngPrep · Cheat sheet lớp 9</strong>
+        <p>Bộ tài liệu ôn thi dành cho học sinh lớp 9, theo chương trình Global Success 9 và cấu trúc đề thi vào 10.</p>
+      </div>
+    </div>
+    <nav class="footer-plan" aria-label="Bộ tài liệu">
+      <p class="footer-label">Bộ tài liệu</p>
+      <ul class="footer-links">
+        <li>
+          <a
+            href={sitePath()}
+            class:list={{ 'is-current': current === 'home' }}
+            aria-current={current === 'home' ? 'page' : undefined}
+          >
+            Trang chủ
+          </a>
+        </li>
+        {sheets.map((sheet) => (
+          <li>
+            <a
+              href={sheet.href}
+              class:list={{ 'is-current': current === sheet.slug }}
+              aria-current={current === sheet.slug ? 'page' : undefined}
+            >
+              {sheet.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <div class="footer-action">
+      <p class="footer-label">Mỗi ngày 10 phút</p>
+      <p>Đều đặn mỗi ngày hiệu quả hơn học dồn một buổi. Chọn một tờ, in ra và dán ở góc học tập.</p>
+      <button class="btn btn-ghost btn-small no-print" type="button" data-print>In trang này</button>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>Nắm chắc 12 thì và giới từ trước khi vào phòng thi.</p>
+    <p>EngPrep · 2026</p>
+  </div>
+</footer>

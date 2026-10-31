@@ -1,0 +1,64 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import PageNav from '../components/PageNav.astro';
+import type { SheetNavItem, SheetSlug } from '../data/sheets';
+import beVietnamFont from '../assets/fonts/be-vietnam-pro-vietnamese-400.woff2?url';
+import loraFont from '../assets/fonts/lora-normal-vietnamese.woff2?url';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  current?: SheetSlug | 'home';
+  pageNav?: SheetNavItem[];
+}
+
+const { title, description, current = 'home', pageNav = [] } = Astro.props;
+
+const favicon =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b0472a'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='23' font-weight='bold' text-anchor='middle' fill='%23fff8ec'%3EEP%3C/text%3E%3C/svg%3E";
+---
+
+<!doctype html>
+<html lang="vi" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f6f1e6" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href={favicon} />
+    <link rel="preload" href={beVietnamFont} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={loraFont} as="font" type="font/woff2" crossorigin />
+    <slot name="head" />
+    <script is:inline>
+      (function () {
+        try {
+          var saved = localStorage.getItem('engprep-theme');
+          var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.dataset.theme = saved || (dark ? 'dark' : 'light');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+
+    <SiteHeader current={current} />
+    {pageNav.length > 0 && <PageNav items={pageNav} />}
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <SiteFooter current={current} />
+
+    <script>
+      import '../scripts/site.js';
+    </script>
+  </body>
+</html>

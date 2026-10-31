@@ -1,0 +1,984 @@
+---
+import SheetLayout from '../layouts/SheetLayout.astro';
+---
+
+<SheetLayout slug="prepositions">
+  <Fragment slot="visual">
+    <div class="study-stack prep-stack">
+      <div class="stack-card stack-card-back"></div>
+      <div class="stack-card stack-card-mid"></div>
+      <div class="stack-card stack-card-front">
+        <p class="mini-label">Mẹo nhớ nhanh</p>
+        <p class="mini-formula mini-formula-prep">AT a point<br>ON a surface<br>IN a space</p>
+        <div class="mini-rule"></div>
+        <p class="mini-desc">Một điểm – một bề mặt – một không gian. Cách nhớ này dùng cho cả thời gian và nơi chốn.</p>
+        <div class="mini-chips">
+          <span>at 7 p.m.</span><span>on Monday</span><span>in 2026</span><span>in the box</span>
+        </div>
+        <p class="mini-example">We met <mark>at</mark> the cinema <mark>on</mark> Saturday.</p>
+        <p class="mini-translation">Chúng mình gặp nhau ở rạp chiếu phim vào thứ Bảy.</p>
+      </div>
+    </div>
+    <div class="sticky-note">
+      <span class="sticky-label">Bẫy quen thuộc</span>
+      <strong>at night</strong>
+      <span>nhưng <em>in the morning</em></span>
+    </div>
+    <div class="stamp">Ôn thi<br>vào 10<br><span>2026–2027</span></div>
+  </Fragment>
+
+  <!-- MAP -->
+  <section class="section" id="map">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">01 · Bản đồ</p>
+          <h2>Bốn nhóm giới từ, một bản đồ.</h2>
+          <p>Khi nào? Ở đâu? Đi đâu? Đi với từ nào? Bấm vào từng nhóm để xem bảng chi tiết bên dưới.</p>
+        </div>
+        <p class="section-aside"><span>4</span> nhóm<br><span>54</span> cụm</p>
+      </div>
+
+      <div class="prep-map-grid">
+        <a class="prep-map-card" href="#time">
+          <p class="map-kicker">01 · Khi nào?</p>
+          <h3>Thời gian</h3>
+          <p class="map-rule"><code>at</code> giờ · <code>on</code> ngày · <code>in</code> tháng/năm</p>
+          <div class="map-chips">
+            <span>since</span><span>for</span><span>during</span><span>while</span><span>until</span><span>by</span>
+          </div>
+          <span class="map-link">Xem bảng thời gian →</span>
+        </a>
+
+        <a class="prep-map-card map-place" href="#place">
+          <p class="map-kicker">02 · Ở đâu?</p>
+          <h3>Vị trí</h3>
+          <p class="map-rule"><code>in</code> không gian · <code>on</code> bề mặt · <code>at</code> điểm</p>
+          <div class="map-chips">
+            <span>in the box</span><span>on the wall</span><span>at the door</span><span>under</span><span>between</span><span>behind</span><span>opposite</span>
+          </div>
+          <span class="map-link">Xem hình và bảng vị trí →</span>
+        </a>
+
+        <a class="prep-map-card map-movement" href="#movement">
+          <p class="map-kicker">03 · Đi đâu?</p>
+          <h3>Chuyển động</h3>
+          <p class="map-rule"><code>to</code> hướng đến · <code>into</code> bên trong · <code>onto</code> bên trên</p>
+          <div class="map-chips">
+            <span>into</span><span>onto</span><span>through</span><span>across</span><span>along</span><span>around</span><span>past</span>
+          </div>
+          <span class="map-link">Xem bảng chuyển động →</span>
+        </a>
+
+        <a class="prep-map-card map-fixed" href="#collocations">
+          <p class="map-kicker">04 · Đi với từ nào?</p>
+          <h3>Cụm cố định</h3>
+          <p class="map-rule">Học cả cụm, đừng dịch từng chữ.</p>
+          <div class="map-chips">
+            <span>depend on</span><span>good at</span><span>proud of</span><span>look forward to</span><span>in spite of</span>
+          </div>
+          <span class="map-link">Xem 54 cụm cố định →</span>
+        </a>
+      </div>
+
+      <div class="decision-strip">
+        <p class="decision-title">Chọn giới từ theo ba câu hỏi<span>Trả lời ba câu này để biết nên xem phần nào.</span></p>
+        <ol>
+          <li><strong>Khi nào?</strong><span>at · on · in · since · for</span></li>
+          <li><strong>Ở đâu / đi đâu?</strong><span>in · on · at · into · through</span></li>
+          <li><strong>Từ nào đi kèm?</strong><span>depend on · good at · proud of</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- RULES -->
+  <section class="section section-alt" id="rules">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">02 · Quy tắc</p>
+          <h2>Ba điều cần nắm trước khi học bảng.</h2>
+          <p>Nắm ba điều này, phần lớn câu hỏi giới từ sẽ dễ hơn nhiều.</p>
+        </div>
+        <p class="section-aside"><span>3</span> điều<br>cần nắm</p>
+      </div>
+
+      <div class="rule-grid">
+        <article class="rule-card">
+          <span class="rule-no" aria-hidden="true">01</span>
+          <h3>Điểm – bề mặt – không gian</h3>
+          <p>AT dùng cho một điểm cụ thể; ON dùng khi vật nằm trên bề mặt; IN dùng khi vật ở bên trong một không gian. Cách hiểu này áp dụng cho cả thời gian lẫn nơi chốn.</p>
+          <div class="rule-mini">
+            <div class="rule-mini-row"><b>AT</b><i>một điểm</i><code>at the door</code></div>
+            <div class="rule-mini-row"><b>ON</b><i>một bề mặt</i><code>on the wall</code></div>
+            <div class="rule-mini-row"><b>IN</b><i>một không gian</i><code>in the room</code></div>
+          </div>
+        </article>
+
+        <article class="rule-card">
+          <span class="rule-no" aria-hidden="true">02</span>
+          <h3>Học theo cụm</h3>
+          <p>Đừng cố lí giải vì sao lại là on. Hãy nhớ cả cụm như một từ mới. Đề thi thường hỏi đúng những cụm quen thuộc này.</p>
+          <div class="rule-examples">
+            <span>depend on</span><span>good at</span><span>proud of</span><span>in spite of</span><span>look forward to</span>
+          </div>
+          <div class="rule-formula">depend <strong>on</strong> · good <strong>at</strong> · afraid <strong>of</strong></div>
+        </article>
+
+        <article class="rule-card">
+          <span class="rule-no" aria-hidden="true">03</span>
+          <h3>Sau giới từ là N / V-ing</h3>
+          <p>Sau giới từ không dùng động từ nguyên mẫu. Nếu sau giới từ là một hành động, dùng V-ing.</p>
+          <div class="rule-formula">prep + <strong>N</strong><br>prep + <strong>V-ing</strong></div>
+          <div class="rule-examples">
+            <span>interested in learning</span><span>look forward to seeing</span><span>instead of going</span>
+          </div>
+          <p class="rule-warn"><strong>Đừng nhầm:</strong> trong “want <em>to see</em>”, “to” là dạng nguyên mẫu, không phải giới từ.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIME -->
+  <section class="section" id="time">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">03 · Thời gian</p>
+          <h2>Thời gian: at, on, in và những từ dễ nhầm.</h2>
+          <p>Trước hết chọn theo mức độ cụ thể: giờ → ngày → tháng/năm. Sau đó học nhóm since, for, during, while, until, by.</p>
+        </div>
+        <p class="section-aside"><span>3</span> mức thời gian<br><span>6</span> từ dễ nhầm</p>
+      </div>
+
+      <div class="zoom-ladder" aria-label="Độ lớn thời gian tăng dần">
+        <div class="zoom-step">
+          <span class="zoom-tag">AT</span>
+          <strong>7 p.m.</strong>
+          <em>giờ chính xác</em>
+        </div>
+        <span class="zoom-arrow" aria-hidden="true">→</span>
+        <div class="zoom-step">
+          <span class="zoom-tag">ON</span>
+          <strong>Monday</strong>
+          <em>thứ, ngày</em>
+        </div>
+        <span class="zoom-arrow" aria-hidden="true">→</span>
+        <div class="zoom-step">
+          <span class="zoom-tag">IN</span>
+          <strong>October</strong>
+          <em>tháng, mùa</em>
+        </div>
+        <span class="zoom-arrow" aria-hidden="true">→</span>
+        <div class="zoom-step">
+          <span class="zoom-tag">IN</span>
+          <strong>2026</strong>
+          <em>năm, thế kỷ</em>
+        </div>
+      </div>
+
+      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
+      <div class="table-shell">
+        <table class="prep-table">
+          <caption class="sr-only">Bảng dùng at, on, in với thời gian</caption>
+          <thead>
+            <tr>
+              <th scope="col">Giới từ</th>
+              <th scope="col">Dùng khi nào</th>
+              <th scope="col">Ví dụ</th>
+              <th scope="col">Ghi nhớ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row-at">
+              <th scope="row" class="row-head"><strong>AT</strong><span>điểm thời gian</span></th>
+              <td>Giờ cụ thể, dịp lễ và một số cụm cố định.</td>
+              <td><code>at 7 p.m.</code> · <code>at noon</code> · <code>at midnight</code> · <code>at Christmas</code> · <code>at the weekend</code> (BrE)</td>
+              <td><code>at night</code>, <code>at the moment</code>, <code>at the age of 15</code>, <code>at the same time</code>.</td>
+            </tr>
+            <tr class="row-on">
+              <th scope="row" class="row-head"><strong>ON</strong><span>ngày, thứ</span></th>
+              <td>Thứ, ngày, ngày tháng; buổi cụ thể của một ngày.</td>
+              <td><code>on Monday</code> · <code>on 12th March</code> · <code>on Monday morning</code> · <code>on Christmas Day</code></td>
+              <td><code>on time</code> = đúng giờ. Không nói <em>on next Monday</em>.</td>
+            </tr>
+            <tr class="row-in">
+              <th scope="row" class="row-head"><strong>IN</strong><span>khoảng thời gian</span></th>
+              <td>Tháng, năm, mùa, thế kỷ; buổi trong ngày; khoảng thời gian tính từ hiện tại.</td>
+              <td><code>in October</code> · <code>in 2026</code> · <code>in winter</code> · <code>in the 21st century</code> · <code>in the morning</code> · <code>in two days</code></td>
+              <td><code>in time</code> = kịp lúc. <code>in the morning</code> nhưng <code>on Monday morning</code>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pair-grid">
+        <article class="pair-card">
+          <h3>since + mốc</h3>
+          <p class="pair-use">Bắt đầu từ một mốc và kéo dài đến hiện tại.</p>
+          <p class="pair-eg">I have lived here <strong>since 2020</strong>.<br><em>Mình sống ở đây từ năm 2020.</em></p>
+        </article>
+        <article class="pair-card">
+          <h3>for + khoảng</h3>
+          <p class="pair-use">Cho biết khoảng thời gian kéo dài bao lâu.</p>
+          <p class="pair-eg">She has studied English <strong>for five years</strong>.<br><em>Bạn ấy học tiếng Anh được năm năm.</em></p>
+        </article>
+        <article class="pair-card pair-clay">
+          <h3>during + N</h3>
+          <p class="pair-use">Trong suốt một sự kiện hoặc khoảng thời gian.</p>
+          <p class="pair-eg">Many tourists visit Hue <strong>during the festival</strong>.<br><em>Nhiều du khách đến Huế trong lễ hội.</em></p>
+        </article>
+        <article class="pair-card pair-clay">
+          <h3>while + mệnh đề</h3>
+          <p class="pair-use">Trong khi một hành động khác đang diễn ra.</p>
+          <p class="pair-eg"><strong>While</strong> I was reading, the phone rang.<br><em>Trong khi mình đang đọc thì điện thoại reo.</em></p>
+        </article>
+        <article class="pair-card pair-indigo">
+          <h3>until + mốc</h3>
+          <p class="pair-use">Tiếp tục đến mốc đó rồi dừng.</p>
+          <p class="pair-eg">We waited <strong>until 8 p.m.</strong><br><em>Chúng mình đợi đến 8 giờ tối.</em></p>
+        </article>
+        <article class="pair-card pair-indigo">
+          <h3>by + mốc</h3>
+          <p class="pair-use">Hoàn thành chậm nhất tại mốc đó.</p>
+          <p class="pair-eg">Please finish it <strong>by Friday</strong>.<br><em>Hãy hoàn thành trước thứ Sáu nhé.</em></p>
+        </article>
+      </div>
+
+      <div class="time-tracks">
+        <div class="time-tracks-head">
+          <h3>Bốn từ, bốn kiểu thời gian</h3>
+          <span>quá khứ ← nay → tương lai</span>
+        </div>
+        <div class="time-track">
+          <span class="track-label">since 2020</span>
+          <div class="track-bar"><span class="track-fill" style="width:51%"></span><span class="track-now">nay</span></div>
+          <p class="track-note">Bắt đầu từ mốc, kéo dài đến hiện tại.</p>
+        </div>
+        <div class="time-track">
+          <span class="track-label">for 5 years</span>
+          <div class="track-bar"><span class="track-fill" style="width:51%"></span><span class="track-now">nay</span></div>
+          <p class="track-note">Nhấn mạnh khoảng thời gian, không cần mốc bắt đầu.</p>
+        </div>
+        <div class="time-track track-indigo">
+          <span class="track-label">until 8 p.m.</span>
+          <div class="track-bar"><span class="track-fill to-future" style="width:40%"></span><span class="track-now">nay</span></div>
+          <p class="track-note">Tiếp tục đến mốc rồi dừng lại.</p>
+        </div>
+        <div class="time-track track-gold">
+          <span class="track-label">by 8 p.m.</span>
+          <div class="track-bar"><span class="track-fill to-future" style="width:40%"></span><span class="track-now">nay</span></div>
+          <p class="track-note">Hoàn thành chậm nhất tại mốc, có thể sớm hơn.</p>
+        </div>
+      </div>
+
+      <p class="mini-note"><strong>Lưu ý:</strong> <code>at night</code> nhưng <code>in the morning / afternoon / evening</code>; <code>on Monday morning</code>. Không dùng giới từ trước <em>last, next, this, every</em>: next Monday, every day, this morning.</p>
+    </div>
+  </section>
+
+  <!-- PLACE -->
+  <section class="section section-alt" id="place">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">04 · Vị trí</p>
+          <h2>Vị trí: nhìn hình là nhớ.</h2>
+          <p>Nắm chắc bộ ba in – on – at trước, rồi xem các cặp dễ nhầm: between/among, beside/besides, in front of/in the front of.</p>
+        </div>
+        <p class="section-aside"><span>8</span> hình minh hoạ<br><span>4</span> cặp dễ nhầm</p>
+      </div>
+
+      <div class="scene-grid">
+        <figure class="scene-card">
+          <div class="scene scene-in" aria-hidden="true">
+            <span class="scene-floor"></span>
+            <span class="scene-box"></span>
+            <span class="scene-ball"></span>
+          </div>
+          <figcaption><strong>in</strong><span>trong hộp</span><em>in the box</em></figcaption>
+        </figure>
+
+        <figure class="scene-card">
+          <div class="scene scene-on" aria-hidden="true">
+            <span class="scene-floor"></span>
+            <span class="scene-box"></span>
+            <span class="scene-ball"></span>
+          </div>
+          <figcaption><strong>on</strong><span>trên hộp</span><em>on the box</em></figcaption>
+        </figure>
+
+        <figure class="scene-card">
+          <div class="scene scene-under" aria-hidden="true">
+            <span class="scene-floor"></span>
+            <span class="scene-box"></span>
+            <span class="scene-ball"></span>
+          </div>
+          <figcaption><strong>under</strong><span>dưới hộp</span><em>under the box</em></figcaption>
+        </figure>
+
+        <figure class="scene-card">
+          <div class="scene scene-next" aria-hidden="true">
+            <span class="scene-floor"></span>
+            <span class="scene-box"></span>
+            <span class="scene-ball"></span>
+          </div>
+          <figcaption><strong>next to</strong><span>bên cạnh hộp</span><em>next to the box</em></figcaption>
+        </figure>
+
+        <figure class="scene-card">
+          <div class="scene scene-behind" aria-hidden="true">
+            <span class="scene-floor"></span>
+            <span class="scene-box"></span>
+            <span class="scene-ball"></span>
+          </div>
+          <figcaption><strong>behind</strong><span>phía sau hộp</span><em>behind the box</em></figcaption>
+        </figure>
+
+        <figure class="scene-card">
+          <div class="scene scene-front" aria-hidden="true">
+            <span class="scene-floor"></span>
+            <span class="scene-box"></span>
+            <span class="scene-ball"></span>
+          </div>
+          <figcaption><strong>in front of</strong><span>phía trước hộp</span><em>in front of the box</em></figcaption>
+        </figure>
+
+        <figure class="scene-card">
+          <div class="scene scene-above" aria-hidden="true">
+            <span class="scene-floor"></span>
+            <span class="scene-box"></span>
+            <span class="scene-ball"></span>
+          </div>
+          <figcaption><strong>above</strong><span>ở phía trên</span><em>above the box</em></figcaption>
+        </figure>
+
+        <figure class="scene-card">
+          <div class="scene scene-between" aria-hidden="true">
+            <span class="scene-floor"></span>
+            <span class="scene-box"></span>
+            <span class="scene-box scene-box--2"></span>
+            <span class="scene-ball"></span>
+          </div>
+          <figcaption><strong>between</strong><span>ở giữa hai hộp</span><em>between the boxes</em></figcaption>
+        </figure>
+      </div>
+
+      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
+      <div class="table-shell">
+        <table class="prep-table">
+          <caption class="sr-only">Bảng dùng in, on, at với vị trí</caption>
+          <thead>
+            <tr>
+              <th scope="col">Giới từ</th>
+              <th scope="col">Quy tắc</th>
+              <th scope="col">Ví dụ</th>
+              <th scope="col">Cụm cần nhớ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row-in">
+              <th scope="row" class="row-head"><strong>IN</strong><span>không gian kín</span></th>
+              <td>Bên trong một không gian, khối, khu vực lớn.</td>
+              <td><code>in the box</code> · <code>in the room</code> · <code>in Hanoi</code> · <code>in Vietnam</code> · <code>in the water</code></td>
+              <td><code>in the middle of</code>, <code>in the corner of the room</code>, <code>in a car/taxi</code>, <code>in the world</code>.</td>
+            </tr>
+            <tr class="row-on">
+              <th scope="row" class="row-head"><strong>ON</strong><span>bề mặt</span></th>
+              <td>Nằm trên bề mặt, trên một tuyến đường hoặc một tầng.</td>
+              <td><code>on the table</code> · <code>on the wall</code> · <code>on the floor</code> · <code>on the second floor</code> · <code>on the left/right</code></td>
+              <td><code>on a bus/train/plane/bike</code>, <code>on foot</code>, <code>on the coast</code>.</td>
+            </tr>
+            <tr class="row-at">
+              <th scope="row" class="row-head"><strong>AT</strong><span>điểm cụ thể</span></th>
+              <td>Một điểm cụ thể hoặc nơi gắn với một hoạt động.</td>
+              <td><code>at the bus stop</code> · <code>at the door</code> · <code>at the corner</code> · <code>at the top/bottom of</code></td>
+              <td><code>at school/work/home</code>, <code>at the party</code>, <code>at the front/back of</code>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="place-note"><strong>Phân biệt nhanh:</strong> <code>in the corner of the room</code> (góc phòng) · <code>at/on the corner of the street</code> (góc phố) · <code>on the wall</code> (treo trên tường) · <code>in the wall</code> (lỗ trong tường).</p>
+
+      <div class="compare-grid">
+        <article class="compare-card">
+          <span class="vs-pill">Cặp 1</span>
+          <h3>Between <em>vs</em> Among</h3>
+          <div class="compare-cols">
+            <div class="compare-col compare-col-present">
+              <h4>Between</h4>
+              <p>Dùng cho <strong>hai</strong> người/vật.</p>
+              <p class="eg">Lan sits <strong>between</strong> Nam and Hoa.</p>
+            </div>
+            <div class="compare-col compare-col-past">
+              <h4>Among</h4>
+              <p>Dùng cho <strong>ba</strong> người/vật trở lên, trong một nhóm.</p>
+              <p class="eg">She is happy <strong>among</strong> her friends.</p>
+            </div>
+          </div>
+          <p class="compare-tip"><strong>Chốt nhanh:</strong> chỉ có hai đối tượng → between; từ ba trở lên → among.</p>
+        </article>
+
+        <article class="compare-card">
+          <span class="vs-pill">Cặp 2</span>
+          <h3>Beside <em>vs</em> Besides</h3>
+          <div class="compare-cols">
+            <div class="compare-col compare-col-present">
+              <h4>Beside</h4>
+              <p>Bên cạnh (= next to).</p>
+              <p class="eg">The lamp is <strong>beside</strong> the bed.</p>
+            </div>
+            <div class="compare-col compare-col-past">
+              <h4>Besides</h4>
+              <p>Ngoài ra, bên cạnh đó (thêm thông tin).</p>
+              <p class="eg"><strong>Besides</strong> English, she studies French.</p>
+            </div>
+          </div>
+          <p class="compare-tip"><strong>Chốt nhanh:</strong> beside = vị trí; besides = “thêm vào đó”.</p>
+        </article>
+
+        <article class="compare-card">
+          <span class="vs-pill">Cặp 3</span>
+          <h3>In front of <em>vs</em> In the front of</h3>
+          <div class="compare-cols">
+            <div class="compare-col compare-col-present">
+              <h4>In front of</h4>
+              <p>Ở phía trước một vật/người (bên ngoài).</p>
+              <p class="eg">The car is <strong>in front of</strong> the house.</p>
+            </div>
+            <div class="compare-col compare-col-past">
+              <h4>In the front of</h4>
+              <p>Trong phần phía trước của một vật (xe, phòng).</p>
+              <p class="eg">He sits <strong>in the front of</strong> the car.</p>
+            </div>
+          </div>
+          <p class="compare-tip"><strong>Chốt nhanh:</strong> có “the” là phần đầu bên trong; không có “the” là phía trước bên ngoài.</p>
+        </article>
+
+        <article class="compare-card">
+          <span class="vs-pill">Cặp 4</span>
+          <h3>At the corner <em>vs</em> In the corner</h3>
+          <div class="compare-cols">
+            <div class="compare-col compare-col-present">
+              <h4>At the corner</h4>
+              <p>Ở góc phố, ngã tư.</p>
+              <p class="eg">The shop is <strong>at the corner of</strong> Hang Bai and Trang Tien.</p>
+            </div>
+            <div class="compare-col compare-col-past">
+              <h4>In the corner</h4>
+              <p>Ở trong góc phòng.</p>
+              <p class="eg">The chair is <strong>in the corner of</strong> the room.</p>
+            </div>
+          </div>
+          <p class="compare-tip"><strong>Chốt nhanh:</strong> góc phố dùng at/on; góc trong phòng dùng in.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOVEMENT -->
+  <section class="section" id="movement">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">05 · Chuyển động</p>
+          <h2>Chuyển động: đi đâu, qua đâu?</h2>
+          <p>Phân biệt hướng đến (to), đi vào bên trong (into), lên trên bề mặt (onto), xuyên qua (through) và băng qua (across).</p>
+        </div>
+        <p class="section-aside"><span>12</span> giới từ<br>chuyển động</p>
+      </div>
+
+      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
+      <div class="table-shell">
+        <table class="prep-table">
+          <caption class="sr-only">Bảng giới từ chuyển động</caption>
+          <thead>
+            <tr>
+              <th scope="col">Giới từ</th>
+              <th scope="col">Hướng</th>
+              <th scope="col">Ví dụ</th>
+              <th scope="col">Lưu ý</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row-to">
+              <th scope="row" class="row-head"><strong>to</strong><span>hướng đến</span></th>
+              <td>Đi về phía một nơi.</td>
+              <td><code>go to school</code> · <code>fly to Hanoi</code></td>
+              <td><code>go home</code>, <code>go abroad</code>: không dùng to.</td>
+            </tr>
+            <tr class="row-to">
+              <th scope="row" class="row-head"><strong>into</strong><span>vào bên trong</span></th>
+              <td>Đi từ ngoài vào trong.</td>
+              <td><code>walk into the room</code> · <code>jump into the pool</code></td>
+              <td>Nhấn mạnh việc đi vào bên trong.</td>
+            </tr>
+            <tr class="row-to">
+              <th scope="row" class="row-head"><strong>onto</strong><span>lên trên</span></th>
+              <td>Đi lên trên một bề mặt.</td>
+              <td><code>jump onto the stage</code> · <code>climb onto the roof</code></td>
+              <td>onto = lên trên bề mặt; into = vào bên trong.</td>
+            </tr>
+            <tr class="row-path">
+              <th scope="row" class="row-head"><strong>out of</strong><span>ra khỏi</span></th>
+              <td>Ra khỏi bên trong.</td>
+              <td><code>walk out of the building</code></td>
+              <td>out of, không phải out from.</td>
+            </tr>
+            <tr class="row-path">
+              <th scope="row" class="row-head"><strong>off</strong><span>rời bề mặt</span></th>
+              <td>Rời khỏi một bề mặt/phương tiện.</td>
+              <td><code>fall off the bike</code> · <code>get off the bus</code></td>
+              <td>off = rời khỏi; on = đang ở trên.</td>
+            </tr>
+            <tr class="row-path">
+              <th scope="row" class="row-head"><strong>through</strong><span>xuyên qua</span></th>
+              <td>Đi xuyên qua bên trong.</td>
+              <td><code>go through the tunnel</code> · <code>look through the window</code></td>
+              <td>Đi qua bên trong (đường hầm, khu rừng...).</td>
+            </tr>
+            <tr class="row-path">
+              <th scope="row" class="row-head"><strong>across</strong><span>băng qua</span></th>
+              <td>Từ bên này sang bên kia của một bề mặt.</td>
+              <td><code>walk across the road</code> · <code>swim across the river</code></td>
+              <td>Đi ngang qua bề mặt (con đường, dòng sông...).</td>
+            </tr>
+            <tr class="row-path">
+              <th scope="row" class="row-head"><strong>along</strong><span>dọc theo</span></th>
+              <td>Đi theo chiều dài của vật/đường.</td>
+              <td><code>walk along the beach</code> · <code>cycle along the road</code></td>
+              <td>along = theo chiều dài.</td>
+            </tr>
+            <tr class="row-other">
+              <th scope="row" class="row-head"><strong>around</strong><span>vòng quanh</span></th>
+              <td>Đi vòng quanh một vật/khu vực.</td>
+              <td><code>travel around the world</code> · <code>sit around the table</code></td>
+              <td>around = vòng quanh.</td>
+            </tr>
+            <tr class="row-other">
+              <th scope="row" class="row-head"><strong>over</strong><span>qua bên trên</span></th>
+              <td>Đi qua phía trên một vật.</td>
+              <td><code>climb over the wall</code> · <code>fly over the city</code></td>
+              <td>over = bắc qua/qua trên.</td>
+            </tr>
+            <tr class="row-other">
+              <th scope="row" class="row-head"><strong>under</strong><span>qua bên dưới</span></th>
+              <td>Đi qua phía dưới một vật.</td>
+              <td><code>walk under the bridge</code></td>
+              <td>under = ở/đi qua bên dưới.</td>
+            </tr>
+            <tr class="row-other">
+              <th scope="row" class="row-head"><strong>toward(s)</strong><span>về phía</span></th>
+              <td>Đi về phía ai/điều gì.</td>
+              <td><code>run toward the exit</code></td>
+              <td>toward và towards dùng như nhau.</td>
+            </tr>
+            <tr class="row-other">
+              <th scope="row" class="row-head"><strong>past</strong><span>đi ngang qua</span></th>
+              <td>Đi ngang qua và tiếp tục.</td>
+              <td><code>walk past the post office</code></td>
+              <td>past = đi ngang qua rồi đi tiếp.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="movement-notes">
+        <article class="movement-note">
+          <h3>Phân biệt to – into – onto</h3>
+          <p><strong>to</strong> chỉ hướng đến; <strong>into</strong> là vào bên trong; <strong>onto</strong> là lên trên bề mặt. <em>Go to the room</em> là đến phòng; <em>go into the room</em> là đi vào trong phòng.</p>
+        </article>
+        <article class="movement-note">
+          <h3>Phân biệt through – across</h3>
+          <p><strong>through</strong> = xuyên qua bên trong (đường hầm, khu rừng, cửa sổ). <strong>across</strong> = băng ngang qua bề mặt (con đường, dòng sông, cây cầu).</p>
+        </article>
+        <article class="movement-note">
+          <h3>Đừng thêm giới từ</h3>
+          <p>Không nói <em>arrive to</em>, <em>go to home</em>, <em>enter into a room</em>, <em>reach to a place</em>. Dùng <code>arrive in/at</code>, <code>go home</code>, <code>enter a room</code>, <code>reach a place</code>.</p>
+        </article>
+      </div>
+
+      <p class="mini-note"><strong>Phương tiện:</strong> <code>by car/bus/train/plane</code> (không mạo từ) · <code>on foot</code> · <code>in a car/taxi</code> · <code>on a bus/train/plane/bike</code>.</p>
+    </div>
+  </section>
+
+  <!-- COLLOCATIONS -->
+  <section class="section section-alt" id="collocations">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">06 · Cụm cố định</p>
+          <h2>Cụm cố định: thuộc càng kỹ, làm càng nhanh.</h2>
+          <p>Có 54 cụm, chia thành bốn nhóm. Dùng bộ lọc hoặc ô tìm kiếm để tra nhanh trước khi làm đề.</p>
+        </div>
+        <p class="section-aside"><span>54</span> cụm<br><span>4</span> nhóm</p>
+      </div>
+
+      <div class="collocation-legend" aria-label="Chú thích màu theo loại cụm">
+        <span><i class="legend-dot" style="--dot-color: var(--jade)"></i>Động từ + giới từ</span>
+        <span><i class="legend-dot" style="--dot-color: var(--clay)"></i>Tính từ + giới từ</span>
+        <span><i class="legend-dot" style="--dot-color: var(--indigo)"></i>Danh từ + giới từ</span>
+        <span><i class="legend-dot" style="--dot-color: var(--gold-ink)"></i>Cụm / thành ngữ</span>
+      </div>
+
+      <div class="toolbar collocation-toolbar">
+        <div class="filter-tabs" role="group" aria-label="Lọc theo loại cụm">
+          <button class="filter-tab" type="button" data-category="all" aria-pressed="true">Tất cả</button>
+          <button class="filter-tab" type="button" data-category="verb" aria-pressed="false">Động từ</button>
+          <button class="filter-tab" type="button" data-category="adj" aria-pressed="false">Tính từ</button>
+          <button class="filter-tab" type="button" data-category="noun" aria-pressed="false">Danh từ</button>
+          <button class="filter-tab" type="button" data-category="phrase" aria-pressed="false">Cụm</button>
+        </div>
+
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <label class="sr-only" for="collocation-search">Tìm cụm giới từ</label>
+          <input id="collocation-search" type="search" placeholder="Tìm “depend”, “tự hào”, “in spite”…" autocomplete="off">
+          <button class="search-clear" id="collocation-clear" type="button" aria-label="Xoá tìm kiếm" hidden>&times;</button>
+        </div>
+
+        <span class="result-count" id="collocation-count" aria-live="polite">54/54 cụm</span>
+      </div>
+
+      <div class="collocation-grid" id="collocation-grid">
+        <article class="collocation-item" data-cat="verb">
+          <p class="collocation-en">depend <mark>on</mark></p>
+          <p class="collocation-vi">phụ thuộc vào</p>
+        </article>
+        <article class="collocation-item" data-cat="verb">
+          <p class="collocation-en">look <mark>after</mark></p>
+          <p class="collocation-vi">chăm sóc</p>
+        </article>
+        <article class="collocation-item" data-cat="verb">
+          <p class="collocation-en">look <mark>for</mark></p>
+          <p class="collocation-vi">tìm kiếm</p>
+        </article>
+        <article class="collocation-item" data-cat="verb">
+          <p class="collocation-en">look forward <mark>to</mark></p>
+          <p class="collocation-vi">mong chờ (+ V-ing)</p>
+        </article>
+        <article class="collocation-item" data-cat="verb">
+          <p class="collocation-en">listen <mark>to</mark></p>
+          <p class="collocation-vi">lắng nghe</p>
+        </article>
+        <article class="collocation-item" data-cat="verb">
+          <p class="collocation-en">wait <mark>for</mark></p>
+          <p class="collocation-vi">chờ đợi</p>
+        </article>
+        <article class="collocation-item" data-cat="verb">
+          <p class="collocation-en">take part <mark>in</mark></p>
+          <p class="collocation-vi">tham gia</p>
+        </article>
+        <article class="collocation-item" data-cat="verb">
+          <p class="collocation-en">belong <mark>to</mark></p>
+          <p class="collocation-vi">thuộc về</p>
+        </article>
+        <article class="collocation-item" data-cat="verb">
+          <p class="collocation-en">arrive <mark>at/in</mark></p>
+          <p class="collocation-vi">đến nơi</p>
+        </article>
+        <article class="collocation-item" data-cat="verb">
+          <p class="collocation-en">agree <mark>with</mark></p>
+          <p class="collocation-vi">đồng ý với</p>
+        </article>
+        <article class="collocation-item" data-cat="verb">
+          <p class="collocation-en">apologise / apologize <mark>for</mark></p>
+          <p class="collocation-vi">xin lỗi vì</p>
+        </article>
+        <article class="collocation-item" data-cat="verb">
+          <p class="collocation-en">concentrate <mark>on</mark></p>
+          <p class="collocation-vi">tập trung vào</p>
+        </article>
+        <article class="collocation-item" data-cat="verb">
+          <p class="collocation-en">deal <mark>with</mark></p>
+          <p class="collocation-vi">giải quyết, xử lý</p>
+        </article>
+        <article class="collocation-item" data-cat="verb">
+          <p class="collocation-en">rely <mark>on</mark></p>
+          <p class="collocation-vi">dựa vào, tin cậy</p>
+        </article>
+        <article class="collocation-item" data-cat="verb">
+          <p class="collocation-en">succeed <mark>in</mark></p>
+          <p class="collocation-vi">thành công trong việc</p>
+        </article>
+        <article class="collocation-item" data-cat="verb">
+          <p class="collocation-en">worry <mark>about</mark></p>
+          <p class="collocation-vi">lo lắng về</p>
+        </article>
+
+        <article class="collocation-item" data-cat="adj">
+          <p class="collocation-en">interested <mark>in</mark></p>
+          <p class="collocation-vi">hứng thú với</p>
+        </article>
+        <article class="collocation-item" data-cat="adj">
+          <p class="collocation-en">good <mark>at</mark></p>
+          <p class="collocation-vi">giỏi về</p>
+        </article>
+        <article class="collocation-item" data-cat="adj">
+          <p class="collocation-en">bad <mark>at</mark></p>
+          <p class="collocation-vi">kém về</p>
+        </article>
+        <article class="collocation-item" data-cat="adj">
+          <p class="collocation-en">afraid <mark>of</mark></p>
+          <p class="collocation-vi">sợ</p>
+        </article>
+        <article class="collocation-item" data-cat="adj">
+          <p class="collocation-en">proud <mark>of</mark></p>
+          <p class="collocation-vi">tự hào về</p>
+        </article>
+        <article class="collocation-item" data-cat="adj">
+          <p class="collocation-en">famous <mark>for</mark></p>
+          <p class="collocation-vi">nổi tiếng vì</p>
+        </article>
+        <article class="collocation-item" data-cat="adj">
+          <p class="collocation-en">different <mark>from</mark></p>
+          <p class="collocation-vi">khác với</p>
+        </article>
+        <article class="collocation-item" data-cat="adj">
+          <p class="collocation-en">similar <mark>to</mark></p>
+          <p class="collocation-vi">giống với</p>
+        </article>
+        <article class="collocation-item" data-cat="adj">
+          <p class="collocation-en">kind <mark>to</mark></p>
+          <p class="collocation-vi">tốt bụng với</p>
+        </article>
+        <article class="collocation-item" data-cat="adj">
+          <p class="collocation-en">angry <mark>with</mark></p>
+          <p class="collocation-vi">tức giận với (người)</p>
+        </article>
+        <article class="collocation-item" data-cat="adj">
+          <p class="collocation-en">excited <mark>about</mark></p>
+          <p class="collocation-vi">hào hứng về</p>
+        </article>
+        <article class="collocation-item" data-cat="adj">
+          <p class="collocation-en">tired <mark>of</mark></p>
+          <p class="collocation-vi">chán, mệt vì</p>
+        </article>
+        <article class="collocation-item" data-cat="adj">
+          <p class="collocation-en">fond <mark>of</mark></p>
+          <p class="collocation-vi">thích</p>
+        </article>
+        <article class="collocation-item" data-cat="adj">
+          <p class="collocation-en">full <mark>of</mark></p>
+          <p class="collocation-vi">đầy ắp</p>
+        </article>
+
+        <article class="collocation-item" data-cat="noun">
+          <p class="collocation-en">reason <mark>for</mark></p>
+          <p class="collocation-vi">lý do cho</p>
+        </article>
+        <article class="collocation-item" data-cat="noun">
+          <p class="collocation-en">solution <mark>to</mark></p>
+          <p class="collocation-vi">giải pháp cho</p>
+        </article>
+        <article class="collocation-item" data-cat="noun">
+          <p class="collocation-en">key <mark>to</mark></p>
+          <p class="collocation-vi">chìa khoá cho</p>
+        </article>
+        <article class="collocation-item" data-cat="noun">
+          <p class="collocation-en">cause <mark>of</mark></p>
+          <p class="collocation-vi">nguyên nhân của</p>
+        </article>
+        <article class="collocation-item" data-cat="noun">
+          <p class="collocation-en">result <mark>of</mark></p>
+          <p class="collocation-vi">kết quả của</p>
+        </article>
+        <article class="collocation-item" data-cat="noun">
+          <p class="collocation-en">problem <mark>with</mark></p>
+          <p class="collocation-vi">vấn đề với</p>
+        </article>
+        <article class="collocation-item" data-cat="noun">
+          <p class="collocation-en">interest <mark>in</mark></p>
+          <p class="collocation-vi">sự quan tâm đến</p>
+        </article>
+        <article class="collocation-item" data-cat="noun">
+          <p class="collocation-en">difference <mark>between</mark></p>
+          <p class="collocation-vi">sự khác biệt giữa</p>
+        </article>
+        <article class="collocation-item" data-cat="noun">
+          <p class="collocation-en">access <mark>to</mark></p>
+          <p class="collocation-vi">quyền truy cập, sự tiếp cận</p>
+        </article>
+        <article class="collocation-item" data-cat="noun">
+          <p class="collocation-en">effect <mark>on</mark></p>
+          <p class="collocation-vi">tác động lên</p>
+        </article>
+        <article class="collocation-item" data-cat="noun">
+          <p class="collocation-en">invitation <mark>to</mark></p>
+          <p class="collocation-vi">lời mời đến</p>
+        </article>
+        <article class="collocation-item" data-cat="noun">
+          <p class="collocation-en">relationship <mark>between</mark></p>
+          <p class="collocation-vi">mối quan hệ giữa</p>
+        </article>
+
+        <article class="collocation-item" data-cat="phrase">
+          <p class="collocation-en"><mark>in</mark> the end</p>
+          <p class="collocation-vi">cuối cùng (kết quả)</p>
+        </article>
+        <article class="collocation-item" data-cat="phrase">
+          <p class="collocation-en"><mark>at</mark> the end of</p>
+          <p class="collocation-vi">ở cuối (vị trí/thời gian)</p>
+        </article>
+        <article class="collocation-item" data-cat="phrase">
+          <p class="collocation-en"><mark>on</mark> time</p>
+          <p class="collocation-vi">đúng giờ</p>
+        </article>
+        <article class="collocation-item" data-cat="phrase">
+          <p class="collocation-en"><mark>in</mark> time</p>
+          <p class="collocation-vi">kịp lúc</p>
+        </article>
+        <article class="collocation-item" data-cat="phrase">
+          <p class="collocation-en"><mark>at</mark> first</p>
+          <p class="collocation-vi">lúc đầu</p>
+        </article>
+        <article class="collocation-item" data-cat="phrase">
+          <p class="collocation-en"><mark>in</mark> fact</p>
+          <p class="collocation-vi">thực ra</p>
+        </article>
+        <article class="collocation-item" data-cat="phrase">
+          <p class="collocation-en"><mark>on</mark> purpose</p>
+          <p class="collocation-vi">cố ý</p>
+        </article>
+        <article class="collocation-item" data-cat="phrase">
+          <p class="collocation-en"><mark>by</mark> mistake</p>
+          <p class="collocation-vi">do nhầm lẫn</p>
+        </article>
+        <article class="collocation-item" data-cat="phrase">
+          <p class="collocation-en"><mark>in</mark> my opinion</p>
+          <p class="collocation-vi">theo ý kiến của tôi</p>
+        </article>
+        <article class="collocation-item" data-cat="phrase">
+          <p class="collocation-en">in spite <mark>of</mark></p>
+          <p class="collocation-vi">mặc dù (+ N/V-ing)</p>
+        </article>
+        <article class="collocation-item" data-cat="phrase">
+          <p class="collocation-en">because <mark>of</mark></p>
+          <p class="collocation-vi">bởi vì (+ N/V-ing)</p>
+        </article>
+        <article class="collocation-item" data-cat="phrase">
+          <p class="collocation-en">instead <mark>of</mark></p>
+          <p class="collocation-vi">thay vì (+ N/V-ing)</p>
+        </article>
+      </div>
+
+      <div class="empty-state collocation-empty" id="collocation-empty" hidden>
+        <p class="empty-title">Không tìm thấy cụm nào phù hợp.</p>
+        <p>Thử từ khoá khác, hoặc xoá bộ lọc để xem lại cả 54 cụm.</p>
+        <button class="btn btn-ghost" id="collocation-reset" type="button">Xoá bộ lọc</button>
+      </div>
+
+      <p class="mini-note"><strong>Mẹo làm bài:</strong> gặp câu điền giới từ, hãy đọc cả cụm trước và sau chỗ trống. Đáp án nào không đi với từ đó thì loại luôn, không cần dịch cả câu. Ví dụ: <em>depend ___</em> chỉ có thể là <strong>on</strong>.</p>
+    </div>
+  </section>
+
+  <!-- TRAPS -->
+  <section class="section" id="traps">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">07 · Bẫy đề</p>
+          <h2>Mười lỗi hay mất điểm.</h2>
+          <p>Xem câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay gặp khi làm phần giới từ.</p>
+        </div>
+        <p class="section-aside"><span>10</span> lỗi<br>cần sửa</p>
+      </div>
+
+      <div class="trap-grid">
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I was born <strong>at</strong> 2010.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I was born <strong>in</strong> 2010.</p></div>
+          <p class="trap-why">Năm dùng in. at chỉ dùng cho giờ: at 7 a.m.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I go to school <strong>by</strong> foot.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I go to school <strong>on</strong> foot.</p></div>
+          <p class="trap-why">Đi bộ là cụm cố định on foot. by dùng cho phương tiện: by bus, by bike.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>She is good <strong>in</strong> English.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>She is good <strong>at</strong> English.</p></div>
+          <p class="trap-why">good at + môn học/kỹ năng. Tương tự: bad at, excellent at.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>It depends <strong>of</strong> the weather.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>It depends <strong>on</strong> the weather.</p></div>
+          <p class="trap-why">depend on = phụ thuộc vào. Đừng dịch “của” thành of.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I’m looking forward to <strong>see</strong> you.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I’m looking forward to <strong>seeing</strong> you.</p></div>
+          <p class="trap-why">“to” trong look forward to là giới từ → sau nó dùng V-ing.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>We arrived <strong>to</strong> Da Nang.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>We arrived <strong>in</strong> Da Nang.</p></div>
+          <p class="trap-why">arrive in + thành phố/quốc gia; arrive at + địa điểm nhỏ. Không dùng arrive to.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I have lived here <strong>since</strong> three years.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I have lived here <strong>for</strong> three years.</p></div>
+          <p class="trap-why">since + mốc (since 2020); for + khoảng thời gian (for three years).</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>Despite of</strong> the rain, we went out.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>Despite</strong> the rain, we went out.</p></div>
+          <p class="trap-why">despite + N/V-ing (không có of). in spite of + N/V-ing mới có of.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>At the end</strong>, we decided to stay home.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>In the end</strong>, we decided to stay home.</p></div>
+          <p class="trap-why">in the end = cuối cùng (kết quả). at the end of + địa điểm/thời gian.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I’ll meet you <strong>in</strong> Monday morning.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I’ll meet you <strong>on</strong> Monday morning.</p></div>
+          <p class="trap-why">Có thứ/ngày cụ thể thì dùng on, dù trong câu có “morning”.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="section section-quiz" id="quiz">
+    <div class="container">
+      <div class="section-head section-head-center">
+        <div>
+          <p class="section-kicker">08 · Luyện tập</p>
+          <h2>Làm thử 16 câu.</h2>
+          <p>Chọn đáp án đúng. Mỗi câu có giải thích ngay sau khi trả lời để bạn nhớ lại quy tắc.</p>
+        </div>
+      </div>
+
+      <p class="quiz-best" id="quiz-best" aria-live="polite">Điểm cao nhất của bạn: chưa có</p>
+
+      <div class="quiz-shell">
+        <div class="quiz-top">
+          <span class="quiz-step" id="quiz-step">Câu 1 / 16</span>
+          <div class="quiz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="16" aria-valuenow="1" aria-label="Tiến độ làm bài">
+            <span id="quiz-bar"></span>
+          </div>
+          <span class="quiz-score" id="quiz-score">0 đúng</span>
+        </div>
+        <div class="quiz-stage" id="quiz-stage" aria-live="polite"></div>
+      </div>
+
+      <noscript><p class="quiz-noscript">Bật JavaScript để làm bài luyện tập tương tác. Phần cheat sheet phía trên vẫn đọc được bình thường.</p></noscript>
+    </div>
+  </section>
+
+</SheetLayout>
+
+<script>
+  import '../scripts/prepositions.js';
+</script>

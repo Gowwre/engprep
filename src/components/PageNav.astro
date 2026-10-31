@@ -1,0 +1,18 @@
+---
+import type { SheetNavItem } from '../data/sheets';
+
+interface Props {
+  items: SheetNavItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav class="page-nav no-print" aria-label="Mục lục trang">
+  <div class="container page-nav-inner">
+    <span class="page-nav-label">Trên trang</span>
+    {items.map((item) => (
+      <a href={`#${item.id}`}>{item.label}</a>
+    ))}
+  </div>
+</nav>

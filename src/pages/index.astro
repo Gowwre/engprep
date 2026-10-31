@@ -1,0 +1,182 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getSheet, sheets, totalQuestions } from '../data/sheets';
+
+const tenses = getSheet('tenses');
+const prepositions = getSheet('prepositions');
+---
+
+<BaseLayout
+  title="EngPrep — Cheat sheet 12 thì & giới từ lớp 9"
+  description="Bộ cheat sheet tiếng Anh lớp 9: 12 thì, giới từ, 54 cụm cố định, bẫy đề và bài luyện tập có giải thích. Một chỗ ôn thi, in được khổ A4, dùng offline."
+  current="home"
+>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Global Success 9 · Ôn thi vào 10</p>
+        <h1>Hai tờ cheat sheet,<br>một chỗ <span class="marker">ôn thi</span>.</h1>
+        <p class="hero-lead">12 thì và giới từ tiếng Anh, gói gọn trong hai tờ ôn thi in được khổ A4. Công thức, dấu hiệu, bẫy đề và bài luyện tập có giải thích — tất cả ở cùng một nơi.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href={tenses.href}>
+            Bắt đầu với 12 thì
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href={prepositions.href}>
+            Học giới từ
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </a>
+        </div>
+
+        <ul class="hero-badges" aria-label="Thông tin bộ tài liệu">
+          <li>In được khổ A4</li>
+          <li>Không cần mạng</li>
+          <li>Giải thích tiếng Việt</li>
+        </ul>
+
+        <dl class="hero-stats">
+          <div><dt>12</dt><dd>thì cần nắm</dd></div>
+          <div><dt>54</dt><dd>cụm giới từ</dd></div>
+          <div><dt>{totalQuestions}</dt><dd>câu luyện tập</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hub-stack">
+          <div class="hub-sheet hub-sheet--tenses">
+            <span class="hub-sheet-kicker">Cheat sheet 01</span>
+            <strong class="hub-sheet-title">12 thì</strong>
+            <p class="hub-sheet-formula">S + have/has<br>+ V3/ed</p>
+            <div class="mini-rule"></div>
+            <div class="mini-chips">
+              <span>since 2015</span><span>for 3 years</span><span>already</span>
+            </div>
+            <p class="mini-example">I <mark>have visited</mark> Hue three times.</p>
+          </div>
+
+          <div class="hub-sheet hub-sheet--prep">
+            <span class="hub-sheet-kicker">Cheat sheet 02</span>
+            <strong class="hub-sheet-title">Giới từ</strong>
+            <p class="hub-sheet-formula">AT a point<br>ON a surface<br>IN a space</p>
+            <div class="mini-rule"></div>
+            <div class="mini-chips">
+              <span>at 7 p.m.</span><span>on Monday</span><span>in 2026</span>
+            </div>
+            <p class="mini-example">We met <mark>at</mark> the cinema <mark>on</mark> Saturday.</p>
+          </div>
+        </div>
+
+        <div class="sticky-note">
+          <span class="sticky-label">Mẹo dùng</span>
+          <strong>In ra và dán</strong>
+          <span>ở góc học tập!</span>
+        </div>
+        <div class="stamp">Học<br>mỗi ngày<br><span>10 phút</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section class="section" id="resources">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">01 · Bộ tài liệu</p>
+          <h2>Hai tờ cheat sheet, đủ để ôn.</h2>
+          <p>Mỗi tờ có sơ đồ, bảng tra nhanh, bẫy đề và bài kiểm tra riêng. Bắt đầu từ tờ bạn cần, hoặc đi theo lộ trình bên dưới.</p>
+        </div>
+        <p class="section-aside"><span>{sheets.length}</span> tờ<br><span>{totalQuestions}</span> câu hỏi</p>
+      </div>
+
+      <div class="hub-grid">
+        {sheets.map((sheet) => (
+          <article class:list={['hub-card', `hub-card--${sheet.accent}`]}>
+            <div class="hub-card-top">
+              <span class="hub-card-no">{sheet.cardNo}</span>
+              <span class="hub-badge">{sheet.badge}</span>
+            </div>
+            <h3>{sheet.title}</h3>
+            <p class="hub-card-lead">{sheet.lead}</p>
+            <div class="hub-preview" aria-hidden="true">
+              {sheet.preview.map((item) => <span>{item}</span>)}
+            </div>
+            <ul class="hub-list">
+              {sheet.highlights.map((highlight) => (
+                <li>
+                  {highlight.strong && <strong>{highlight.strong}</strong>}
+                  {highlight.text}
+                </li>
+              ))}
+            </ul>
+            <div class="hub-card-foot">
+              <span class="hub-meta">{sheet.meta}</span>
+              <a class="btn btn-primary btn-small" href={sheet.href}>
+                Mở cheat sheet
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- PATH -->
+  <section class="section section-alt" id="plan">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">02 · Lộ trình</p>
+          <h2>Ba bước trước khi làm đề.</h2>
+          <p>Không cần học hết trong một buổi. Đi theo thứ tự này để nhớ lâu hơn.</p>
+        </div>
+        <p class="section-aside"><span>3</span> bước<br>mỗi ngày 10 phút</p>
+      </div>
+
+      <div class="path-grid">
+        <article class="path-card">
+          <span class="path-no" aria-hidden="true">01</span>
+          <h3>Nắm 12 thì</h3>
+          <p>Đọc sơ đồ, sau đó học công thức và dấu hiệu của từng thì. Ưu tiên hiện tại hoàn thành, quá khứ tiếp diễn và tương lai đơn.</p>
+          <a class="path-link" href={tenses.href}>Mở 12 thì →</a>
+        </article>
+
+        <article class="path-card">
+          <span class="path-no" aria-hidden="true">02</span>
+          <h3>Học giới từ theo cụm</h3>
+          <p>Nắm at/on/in trước, rồi học 54 cụm cố định. Đừng cố dịch từng giới từ riêng lẻ.</p>
+          <a class="path-link" href={prepositions.href}>Mở giới từ →</a>
+        </article>
+
+        <article class="path-card">
+          <span class="path-no" aria-hidden="true">03</span>
+          <h3>Tự kiểm tra</h3>
+          <p>Làm bài ngắn để biết phần nào còn hổng, rồi quay lại đúng mục cần ôn.</p>
+          <div class="path-links">
+            <a href={`${tenses.href}#quiz`}>12 câu thì</a>
+            <a href={`${prepositions.href}#quiz`}>16 câu giới từ</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="section">
+    <div class="container">
+      <div class="home-band">
+        <div>
+          <p class="section-kicker">03 · Mang vào phòng thi</p>
+          <h2>Hai quy tắc nhớ nhanh.</h2>
+          <p><strong>Thì:</strong> since + mốc, for + khoảng · <strong>Giới từ:</strong> at + giờ, on + ngày, in + tháng/năm. Nắm hai điều này trước, rồi hãy học các cụm cố định.</p>
+        </div>
+        <div class="home-band-actions">
+          <a class="btn btn-primary" href={tenses.href}>Ôn 12 thì</a>
+          <a class="btn btn-ghost" href={prepositions.href}>Ôn giới từ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

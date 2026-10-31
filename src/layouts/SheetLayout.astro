@@ -1,0 +1,70 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { getSheet, type SheetSlug } from '../data/sheets';
+
+interface Props {
+  slug: SheetSlug;
+}
+
+const { slug } = Astro.props;
+const sheet = getSheet(slug);
+---
+
+<BaseLayout
+  title={sheet.metaTitle}
+  description={sheet.metaDescription}
+  current={sheet.slug}
+  pageNav={sheet.sections}
+>
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">{sheet.hero.eyebrow}</p>
+        <h1 set:html={sheet.hero.titleHtml}></h1>
+        <p class="hero-lead">{sheet.hero.lead}</p>
+
+        <div class="hero-actions">
+          {sheet.hero.actions.map((action) => (
+            <a
+              href={action.href}
+              class:list={[
+                'btn',
+                action.variant === 'primary' ? 'btn-primary' : 'btn-ghost'
+              ]}
+            >
+              {action.label}
+              {action.icon === 'arrow' ? (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              ) : (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              )}
+            </a>
+          ))}
+        </div>
+
+        <ul class="hero-badges" aria-label="Thông tin bộ tài liệu">
+          {sheet.hero.badges.map((badge) => <li>{badge}</li>)}
+        </ul>
+
+        <dl class="hero-stats">
+          {sheet.hero.stats.map((stat) => (
+            <div>
+              <dt>{stat.value}</dt>
+              <dd>{stat.label}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <slot name="visual" />
+      </div>
+    </div>
+  </section>
+
+  <slot />
+</BaseLayout>
