@@ -21,6 +21,18 @@ npm run build
 npm run preview
 ```
 
+## Open Graph
+
+Mỗi trang có metadata Open Graph/Twitter đầy đủ, canonical URL và JSON-LD. Ảnh chia sẻ 1200×630 cho trang chủ và từng tờ nằm trong `public/og/`.
+
+Ảnh được render từ route nội bộ `/og/<slug>/` (có `noindex`) để giữ đúng font, màu accent và nội dung của từng tờ:
+
+```bash
+npm run og
+```
+
+Lệnh này build site, render lại toàn bộ 13 ảnh rồi ghi vào `public/og/`. Cần Chrome/Chromium; nếu có ImageMagick (`magick`), ảnh được render ở 2× rồi hạ về 1200×630.
+
 ## Deploy
 
 Repo đã được cấu hình cho GitHub Pages tại `https://gowwre.github.io/engprep/`:
@@ -47,6 +59,8 @@ src/
 ├── lib/
 │   └── urls.ts            # helper link có hỗ trợ base
 ├── pages/
+│   ├── og/
+│   │   └── [slug].astro   # render ảnh Open Graph 1200×630
 │   ├── cloze.astro
 │   ├── grammar.astro
 │   ├── index.astro
@@ -61,6 +75,7 @@ src/
 │   ├── vocabulary.astro
 │   └── word-forms.astro
 ├── scripts/
+│   ├── generate-og.mjs    # render PNG vào public/og/
 │   ├── site.js            # theme, menu, print, scrollspy
 │   ├── tenses.js          # filter, search, quiz của trang 12 thì
 │   ├── prepositions.js    # filter, quiz của trang giới từ
@@ -80,6 +95,7 @@ src/
     ├── grammar.css
     ├── home.css
     ├── mock-exam.css
+    ├── og.css             # style cho ảnh Open Graph
     ├── prepositions.css
     ├── pronunciation.css
     ├── reading.css

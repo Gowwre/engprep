@@ -2,7 +2,8 @@
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import PageNav from '../components/PageNav.astro';
-import type { SheetNavItem, SheetSlug } from '../data/sheets';
+import { getSheet, sheets, type SheetNavItem, type SheetSlug } from '../data/sheets';
+import { sitePath } from '../lib/urls';
 import beVietnamFont from '../assets/fonts/be-vietnam-pro-vietnamese-400.woff2?url';
 import loraFont from '../assets/fonts/lora-normal-vietnamese.woff2?url';
 import '../styles/global.css';
@@ -12,9 +13,90 @@ interface Props {
   description: string;
   current?: SheetSlug | 'home';
   pageNav?: SheetNavItem[];
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogImageAlt?: string;
+  ogType?: 'website' | 'article';
+  noindex?: boolean;
 }
 
-const { title, description, current = 'home', pageNav = [] } = Astro.props;
+const {
+  title,
+  description,
+  current = 'home',
+  pageNav = [],
+  ogTitle = title,
+  ogDescription = description,
+  ogImage = sitePath(`og/${current}.png`),
+  ogImageAlt,
+  ogType = current === 'home' ? 'website' : 'article',
+  noindex = false
+} = Astro.props;
+
+const sheet = current === 'home' ? null : getSheet(current);
+const origin = Astro.site ?? Astro.url;
+const canonical = new URL(Astro.url.pathname, origin).href;
+const ogImageUrl = new URL(ogImage, origin).href;
+const siteUrl = new URL(sitePath(), origin).href;
+const resolvedImageAlt =
+  ogImageAlt ??
+  (sheet
+    ? `Bìa cheat sheet “${sheet.title}” của EngPrep`
+    : 'EngPrep — 12 tờ cheat sheet tiếng Anh lớp 9');
+
+const websiteId = `${siteUrl}#website`;
+const websiteLd = {
+  '@type': 'WebSite',
+  '@id': websiteId,
+  url: siteUrl,
+  name: 'EngPrep',
+  alternateName: 'EngPrep — Cheat sheet lớp 9',
+  description:
+    'Bộ cheat sheet tiếng Anh lớp 9 theo chương trình Global Success 9: ngữ pháp, từ vựng, đọc hiểu, phát âm, viết lại câu và đề thi thử 24 câu.',
+  inLanguage: 'vi',
+  image: ogImageUrl,
+  publisher: {
+    '@type': 'Organization',
+    name: 'EngPrep',
+    url: siteUrl
+  },
+  hasPart: sheets.map((item) => ({
+    '@type': 'LearningResource',
+    name: item.title,
+    url: new URL(item.href, origin).href
+  }))
+};
+
+const graph: Record<string, unknown>[] = [websiteLd];
+
+if (sheet) {
+  graph.push({
+    '@type': 'LearningResource',
+    '@id': `${canonical}#resource`,
+    name: sheet.title,
+    description: sheet.metaDescription,
+    url: canonical,
+    inLanguage: 'vi',
+    image: ogImageUrl,
+    learningResourceType: 'Cheat sheet',
+    educationalLevel: 'Lớp 9',
+    typicalAgeRange: '14-15',
+    isAccessibleForFree: true,
+    audience: {
+      '@type': 'EducationalAudience',
+      educationalRole: 'student'
+    },
+    isPartOf: {
+      '@id': websiteId
+    }
+  });
+}
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': graph
+};
 
 const favicon =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b0472a'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='23' font-weight='bold' text-anchor='middle' fill='%23fff8ec'%3EEP%3C/text%3E%3C/svg%3E";
@@ -27,10 +109,40 @@ const favicon =
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="author" content="EngPrep" />
+    <meta
+      name="robots"
+      content={noindex
+        ? 'noindex,nofollow'
+        : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'}
+    />
+    <link rel="canonical" href={canonical} />
     <meta name="theme-color" content="#f6f1e6" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+
+    <meta property="og:site_name" content="EngPrep" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:secure_url" content={ogImageUrl} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={resolvedImageAlt} />
+    {ogType === 'article' && (
+      <meta property="article:section" content="Ôn thi tiếng Anh lớp 9" />
+    )}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={ogDescription} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:image:alt" content={resolvedImageAlt} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
     <link rel="icon" href={favicon} />
     <link rel="preload" href={beVietnamFont} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={loraFont} as="font" type="font/woff2" crossorigin />

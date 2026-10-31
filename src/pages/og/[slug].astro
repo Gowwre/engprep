@@ -1,0 +1,181 @@
+---
+import { getSheet, sheets, totalQuestions, type Sheet, type SheetSlug } from '../../data/sheets';
+import '../../styles/og.css';
+
+type OgProps = { kind: 'home' } | { kind: 'sheet'; sheetSlug: SheetSlug };
+
+const accentPalette: Record<Sheet['accent'], { main: string; bg: string; line: string }> = {
+  tenses: { main: '#b0472a', bg: '#f8e6dd', line: '#ecc3b2' },
+  prep: { main: '#1f6b4f', bg: '#e4efe7', line: '#b9d6c5' },
+  word: { main: '#40538f', bg: '#e7eaf6', line: '#c3cae6' },
+  reading: { main: '#775400', bg: '#fbf1d3', line: '#e0a92f' },
+  sound: { main: '#7a3f6b', bg: '#f2e4ee', line: '#d8b8cf' },
+  write: { main: '#1d6b68', bg: '#e2f0ee', line: '#b8d8d3' },
+  vocab: { main: '#5f6b2a', bg: '#eef1dc', line: '#cfd7a8' },
+  cloze: { main: '#7a5230', bg: '#f0e6da', line: '#d9c2a9' },
+  signs: { main: '#3d5a6c', bg: '#e6eef2', line: '#bfd2dc' },
+  grammar: { main: '#8a3d52', bg: '#f4e4e8', line: '#ddb8c2' },
+  sentence: { main: '#4b555c', bg: '#e9edf0', line: '#c6d0d6' },
+  mock: { main: '#285a9e', bg: '#e5edf8', line: '#bfd1ea' }
+};
+
+export function getStaticPaths() {
+  return [
+    { params: { slug: 'home' }, props: { kind: 'home' as const } },
+    ...sheets.map((sheet) => ({
+      params: { slug: sheet.slug },
+      props: { kind: 'sheet' as const, sheetSlug: sheet.slug }
+    }))
+  ];
+}
+
+const props = Astro.props as OgProps;
+const isHome = props.kind === 'home';
+const sheet = props.kind === 'sheet' ? getSheet(props.sheetSlug) : null;
+
+const accent = sheet ? accentPalette[sheet.accent] : accentPalette.tenses;
+const pageTitle = sheet ? sheet.title : 'Mười hai tờ, một chỗ ôn thi.';
+const displayTitle = isHome ? 'Mười hai tờ,<br>một chỗ ôn thi.' : pageTitle;
+const kicker = sheet ? sheet.cardNo : 'CHEAT SHEET · LỚP 9';
+const lead = sheet
+  ? sheet.lead
+  : '12 thì, giới từ, word forms, reading, phát âm, viết lại câu, từ vựng, cloze, biển báo, ngữ pháp, Part VI và đề thi thử 24 câu.';
+const eyebrow = sheet ? sheet.hero.eyebrow : 'Global Success 9 · Ôn thi vào 10';
+const stats = sheet
+  ? sheet.hero.stats
+  : [
+      { value: String(sheets.length), label: 'tờ cheat sheet' },
+      { value: String(totalQuestions), label: 'câu luyện tập' },
+      { value: 'A4', label: 'in được' }
+    ];
+const titleSize = isHome ? 60 : pageTitle.length > 29 ? 52 : pageTitle.length > 22 ? 56 : 60;
+const panelSections = sheet ? sheet.sections.filter((item) => item.id !== 'quiz').slice(0, 5) : [];
+const panelPreview = sheet ? sheet.preview.slice(0, 3) : [];
+const sheetIndex = sheet ? sheets.findIndex((item) => item.slug === sheet.slug) : -1;
+const footnote =
+  sheet?.slug === 'mock-exam'
+    ? 'Làm trên web · Đồng hồ 45 phút · Chấm tự động'
+    : 'In được khổ A4 · Dùng offline · Giải thích tiếng Việt';
+
+const homeRule = `linear-gradient(90deg, ${sheets
+  .map((item, index) => {
+    const color = accentPalette[item.accent].main;
+    const start = (index / sheets.length) * 100;
+    const end = ((index + 1) / sheets.length) * 100;
+    return `${color} ${start}% ${end}%`;
+  })
+  .join(', ')})`;
+const ruleBackground = sheet
+  ? `linear-gradient(90deg, ${accent.main} 0 82%, #e0a92f 82% 100%)`
+  : homeRule;
+---
+
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1200, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>OG · {pageTitle} · EngPrep</title>
+  </head>
+  <body>
+    <main
+      class="og-page"
+      style={`--accent:${accent.main};--accent-bg:${accent.bg};--accent-line:${accent.line};`}
+    >
+      <div class="og-watermark" aria-hidden="true">{sheet ? sheet.cardNo.split(' ')[0] : 'EP'}</div>
+      <div class="og-top-rule" style={`background:${ruleBackground}`} aria-hidden="true"></div>
+
+      <header class="og-brand-row">
+        <div class="og-brand">
+          <span class="og-brand-mark" aria-hidden="true">EP</span>
+          <span class="og-brand-text">
+            <strong>EngPrep</strong>
+            <small>Cheat sheet · Lớp 9</small>
+          </span>
+        </div>
+        <span class="og-eyebrow-pill">{eyebrow}</span>
+      </header>
+
+      <section class="og-copy" style={`--title-size:${titleSize}px`}>
+        <p class="og-kicker">{kicker}</p>
+        <h1 class="og-title">
+          {isHome ? <Fragment set:html={displayTitle} /> : pageTitle}
+        </h1>
+        <p class="og-lead">{lead}</p>
+
+        <div class="og-stats" aria-label="Thông tin tờ cheat sheet">
+          {stats.map((stat) => (
+            <div class="og-stat">
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <aside class="og-panel" aria-label={isHome ? 'Danh sách 12 tờ cheat sheet' : 'Nội dung chính của tờ'}>
+        <div class="og-panel-card">
+          <div class="og-panel-head">
+            <span class="og-panel-kicker">{isHome ? 'Bộ tài liệu' : 'Trong tờ này'}</span>
+            <span class="og-badge">{isHome ? `${sheets.length} tờ` : sheet?.badge}</span>
+          </div>
+
+          {isHome ? (
+            <div class="og-mini-grid">
+              {sheets.map((item, index) => (
+                <div
+                  class="og-mini-card"
+                  style={`--mini-accent:${accentPalette[item.accent].main}`}
+                >
+                  <span class="og-mini-no">{String(index + 1).padStart(2, '0')}</span>
+                  <strong>{item.navLabel}</strong>
+                  <span class="og-mini-count">{item.questionCount} câu</span>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <>
+              <ul class="og-panel-list">
+                {panelSections.map((section, index) => (
+                  <li>
+                    <span class="og-panel-num">{String(index + 1).padStart(2, '0')}</span>
+                    <span>{section.label}</span>
+                  </li>
+                ))}
+              </ul>
+              <div class="og-panel-divider"></div>
+              <p class="og-panel-label">Ví dụ nhanh</p>
+              <div class="og-chips">
+                {panelPreview.map((item) => <span class="og-chip">{item}</span>)}
+              </div>
+              <div class="og-set-progress" aria-hidden="true">
+                <span class="og-set-label">
+                  Tờ {String(sheetIndex + 1).padStart(2, '0')} / {String(sheets.length).padStart(2, '0')}
+                </span>
+                <span class="og-set-dots">
+                  {sheets.map((_item, index) => (
+                    <span
+                      class:list={['og-set-dot', { 'is-current': index === sheetIndex }]}
+                    ></span>
+                  ))}
+                </span>
+              </div>
+            </>
+          )}
+
+          <p class:list={['og-panel-meta', { 'og-panel-meta--home': isHome }]}>
+            {isHome ? 'Global Success 9 · Ôn thi vào 10' : sheet?.meta}
+          </p>
+        </div>
+        <div class="og-tape" aria-hidden="true"></div>
+      </aside>
+
+      <footer class="og-footer">
+        <span class="og-url">gowwre.github.io/engprep</span>
+        <span class="og-footnote">{footnote}</span>
+        <span class="og-year">2026–2027</span>
+      </footer>
+    </main>
+  </body>
+</html>
