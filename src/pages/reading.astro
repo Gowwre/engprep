@@ -1,0 +1,655 @@
+---
+import SheetLayout from '../layouts/SheetLayout.astro';
+---
+
+<SheetLayout slug="reading">
+  <Fragment slot="visual">
+    <div class="study-stack rc-stack">
+      <div class="stack-card stack-card-back"></div>
+      <div class="stack-card stack-card-mid"></div>
+      <div class="stack-card stack-card-front">
+        <p class="mini-label">Đọc mẫu · Ý chính</p>
+        <p class="rc-mini-passage">Many students feel nervous before exams. <mark>However</mark>, a good study plan can help them feel more confident.</p>
+        <p class="rc-mini-question">What is the passage mainly about?</p>
+        <div class="rc-mini-choices">
+          <span>A. Why exams are difficult</span>
+          <span class="is-correct">B. How to prepare for exams</span>
+          <span>C. When to take exams</span>
+        </div>
+        <p class="rc-mini-why"><strong>B</strong> · Ý chính nằm sau “However”.</p>
+      </div>
+    </div>
+    <div class="sticky-note">
+      <span class="sticky-label">Mẹo thi</span>
+      <strong>Đáp án phải có</strong>
+      <span>bằng chứng trong bài!</span>
+    </div>
+    <div class="stamp">Ôn thi<br>vào 10<br><span>2026–2027</span></div>
+  </Fragment>
+
+  <!-- MAP -->
+  <section class="section" id="map">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">01 · Bản đồ</p>
+          <h2>Bảy dạng câu, bảy cách xử lý.</h2>
+          <p>Đọc hiểu không chỉ là dịch. Mỗi dạng câu hỏi cần một cách tìm thông tin khác nhau — nhận diện dạng câu trước khi đọc đáp án.</p>
+        </div>
+        <p class="section-aside"><span>7</span> dạng câu<br><span>4</span> bước đọc</p>
+      </div>
+
+      <div class="rc-map-grid">
+        <a class="rc-map-card rc-map-main" href="#types">
+          <p class="map-kicker">01 · Toàn bài</p>
+          <h3>Ý chính</h3>
+          <p class="map-rule">Câu đầu, câu cuối và những từ được lặp lại.</p>
+          <div class="map-chips">
+            <span>mainly about</span><span>best title</span><span>purpose</span>
+          </div>
+          <span class="map-link">Xem cách làm →</span>
+        </a>
+
+        <a class="rc-map-card rc-map-detail" href="#types">
+          <p class="map-kicker">02 · Thông tin</p>
+          <h3>Chi tiết</h3>
+          <p class="map-rule">Scan tên, số, ngày, địa điểm trong bài.</p>
+          <div class="map-chips">
+            <span>according to</span><span>who</span><span>when</span><span>where</span>
+          </div>
+          <span class="map-link">Xem cách làm →</span>
+        </a>
+
+        <a class="rc-map-card rc-map-vocab" href="#types">
+          <p class="map-kicker">03 · Ngữ cảnh</p>
+          <h3>Từ vựng</h3>
+          <p class="map-rule">Đọc câu trước và câu sau để đoán nghĩa.</p>
+          <div class="map-chips">
+            <span>closest in meaning</span><span>means</span>
+          </div>
+          <span class="map-link">Xem cách làm →</span>
+        </a>
+
+        <a class="rc-map-card rc-map-ref" href="#types">
+          <p class="map-kicker">04 · Liên kết</p>
+          <h3>Từ thay thế</h3>
+          <p class="map-rule">Tìm danh từ phù hợp với đại từ.</p>
+          <div class="map-chips">
+            <span>it</span><span>they</span><span>this</span><span>that</span>
+          </div>
+          <span class="map-link">Xem cách làm →</span>
+        </a>
+
+        <a class="rc-map-card rc-map-infer" href="#types">
+          <p class="map-kicker">05 · Suy luận</p>
+          <h3>Suy luận</h3>
+          <p class="map-rule">Ghép manh mối, không chọn đáp án cực đoan.</p>
+          <div class="map-chips">
+            <span>infer</span><span>suggest</span><span>probably</span>
+          </div>
+          <span class="map-link">Xem cách làm →</span>
+        </a>
+
+        <a class="rc-map-card rc-map-tf" href="#types">
+          <p class="map-kicker">06 · Kiểm tra</p>
+          <h3>Đúng / Sai / NOT</h3>
+          <p class="map-rule">Đối chiếu từng phương án với bài.</p>
+          <div class="map-chips">
+            <span>true</span><span>false</span><span>NOT mentioned</span><span>EXCEPT</span>
+          </div>
+          <span class="map-link">Xem cách làm →</span>
+        </a>
+
+        <a class="rc-map-card rc-map-cloze" href="#types">
+          <p class="map-kicker">07 · Điền từ</p>
+          <h3>Cloze</h3>
+          <p class="map-rule">Ngữ pháp, từ nối và nghĩa của cả câu.</p>
+          <div class="map-chips">
+            <span>fill in</span><span>best fits</span><span>however</span>
+          </div>
+          <span class="map-link">Xem cách làm →</span>
+        </a>
+      </div>
+
+      <p class="mini-note"><strong>Nguyên tắc vàng:</strong> đáp án đúng phải có bằng chứng trong bài. Nếu một phương án nghe rất hay nhưng bạn không chỉ ra được câu nào chống lưng, đừng chọn.</p>
+    </div>
+  </section>
+
+  <!-- STRATEGY -->
+  <section class="section section-alt" id="strategy">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">02 · Chiến lược</p>
+          <h2>Bốn bước đọc một bài.</h2>
+          <p>Đừng lao vào dịch từng từ. Đọc lướt để hiểu bài nói về gì, sau đó mới tìm thông tin cho từng câu hỏi.</p>
+        </div>
+        <p class="section-aside"><span>4</span> bước<br><span>8</span> phút / bài</p>
+      </div>
+
+      <div class="rc-step-grid">
+        <article class="rc-step">
+          <span class="rc-step-no" aria-hidden="true">01</span>
+          <h3>Skim · 1 phút</h3>
+          <p>Đọc tiêu đề, câu đầu và câu cuối mỗi đoạn. Chú ý từ lặp lại và từ nối để nắm ý chính.</p>
+          <p class="rc-step-formula">title + first / last sentence</p>
+        </article>
+
+        <article class="rc-step">
+          <span class="rc-step-no" aria-hidden="true">02</span>
+          <h3>Đọc câu hỏi · 1 phút</h3>
+          <p>Gạch chân keyword: tên riêng, số, ngày, từ hỏi và từ phủ định như NOT, EXCEPT.</p>
+          <p class="rc-step-formula">who · when · why · NOT</p>
+        </article>
+
+        <article class="rc-step">
+          <span class="rc-step-no" aria-hidden="true">03</span>
+          <h3>Scan · 5 phút</h3>
+          <p>Tìm keyword hoặc từ đồng nghĩa trong bài. Đáp án thường được viết lại (paraphrase), không lặp y nguyên.</p>
+          <p class="rc-step-formula">keyword → synonym → evidence</p>
+        </article>
+
+        <article class="rc-step">
+          <span class="rc-step-no" aria-hidden="true">04</span>
+          <h3>Kiểm tra · 1 phút</h3>
+          <p>Loại đáp án sai phạm vi, sai số lượng hoặc quá cực đoan. Chỉ chọn khi tìm được câu chứng minh.</p>
+          <p class="rc-step-formula">correct = evidence in the text</p>
+        </article>
+      </div>
+
+      <div class="rc-time-strip" aria-label="Phân bổ thời gian cho một bài đọc">
+        <div class="rc-time-step">
+          <span>Skim</span>
+          <strong>1 phút</strong>
+        </div>
+        <span class="rc-time-arrow" aria-hidden="true">→</span>
+        <div class="rc-time-step">
+          <span>Đọc câu hỏi</span>
+          <strong>1 phút</strong>
+        </div>
+        <span class="rc-time-arrow" aria-hidden="true">→</span>
+        <div class="rc-time-step">
+          <span>Scan &amp; chọn</span>
+          <strong>5 phút</strong>
+        </div>
+        <span class="rc-time-arrow" aria-hidden="true">→</span>
+        <div class="rc-time-step">
+          <span>Kiểm tra</span>
+          <strong>1 phút</strong>
+        </div>
+      </div>
+
+      <p class="mini-note"><strong>Đừng dịch từng chữ:</strong> đọc theo cụm 3–5 từ và bám vào cấu trúc câu. Gặp từ lạ, hãy đoán nghĩa từ ngữ cảnh rồi đọc tiếp; chỉ tra từ khi nó xuất hiện trong câu hỏi.</p>
+    </div>
+  </section>
+
+  <!-- TYPES -->
+  <section class="section" id="types">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">03 · Dạng câu</p>
+          <h2>Nhìn câu hỏi, biết phải tìm gì.</h2>
+          <p>Bảng tra nhanh bảy dạng câu hỏi đọc hiểu. Khi làm bài, hãy xác định dạng câu trước rồi mới đọc các phương án.</p>
+        </div>
+        <p class="section-aside"><span>7</span> dạng<br><span>1</span> bảng tra</p>
+      </div>
+
+      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
+      <div class="rc-table-wrap">
+        <table class="rc-table rc-type-table">
+          <caption class="sr-only">Bảng bảy dạng câu hỏi đọc hiểu và cách xử lý</caption>
+          <thead>
+            <tr>
+              <th scope="col">Dạng câu</th>
+              <th scope="col">Dấu hiệu trong đề</th>
+              <th scope="col">Cách xử lý</th>
+              <th scope="col">Bẫy thường gặp</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><span class="rc-cat rc-cat-main">Ý chính</span></th>
+              <td><code>mainly about</code> · <code>best title</code> · <code>purpose</code></td>
+              <td>Đọc câu đầu, câu cuối và các từ lặp lại. Chọn ý bao quát được cả bài.</td>
+              <td>Chọn một chi tiết chỉ xuất hiện ở một câu.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="rc-cat rc-cat-detail">Chi tiết</span></th>
+              <td><code>according to</code> · <code>who</code> · <code>when</code> · <code>where</code></td>
+              <td>Gạch keyword, scan tên/số/ngày rồi đọc câu chứa thông tin đó.</td>
+              <td>Chọn đáp án đúng nhưng không trả lời đúng câu hỏi.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="rc-cat rc-cat-vocab">Từ vựng</span></th>
+              <td><code>closest in meaning</code> · <code>means</code></td>
+              <td>Đọc câu trước và sau, thay từng đáp án vào câu để thử nghĩa.</td>
+              <td>Chọn nghĩa quen thuộc nhưng sai trong ngữ cảnh.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="rc-cat rc-cat-ref">Từ thay thế</span></th>
+              <td><code>it</code> · <code>they</code> · <code>this</code> · <code>that</code></td>
+              <td>Tìm danh từ hoặc cụm danh từ gần nhất phù hợp số ít/số nhiều.</td>
+              <td>Nhầm số ít với số nhiều hoặc chọn từ quá xa.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="rc-cat rc-cat-infer">Suy luận</span></th>
+              <td><code>infer</code> · <code>suggest</code> · <code>probably</code></td>
+              <td>Ghép 2–3 manh mối trong bài. Đáp án phải suy ra được, không chỉ chép lại.</td>
+              <td>Suy luận quá xa hoặc chọn đáp án cực đoan.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="rc-cat rc-cat-tf">Đúng / Sai / NOT</span></th>
+              <td><code>true</code> · <code>false</code> · <code>NOT mentioned</code> · <code>EXCEPT</code></td>
+              <td>Đối chiếu từng phương án với bài; đánh dấu câu nào đúng, câu nào không có.</td>
+              <td>Bỏ qua chữ NOT hoặc EXCEPT trong câu hỏi.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="rc-cat rc-cat-cloze">Điền từ</span></th>
+              <td><code>fill in</code> · <code>best fits</code> · <code>gap</code></td>
+              <td>Đọc cả câu, xét ngữ pháp, từ nối và nghĩa, rồi thử từng đáp án.</td>
+              <td>Chỉ nhìn từ đứng trước/sau mà bỏ qua nghĩa cả câu.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mini-note"><strong>Mẹo nhận diện:</strong> gạch chân từ hỏi trong đề trước khi đọc đáp án. Với câu hỏi có NOT/EXCEPT, khoanh tròn chữ đó để không bỏ sót.</p>
+    </div>
+  </section>
+
+  <!-- CONNECTORS -->
+  <section class="section section-alt" id="connectors">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">04 · Từ nối</p>
+          <h2>Từ nối chỉ hướng đọc câu tiếp theo.</h2>
+          <p>Thấy “however” thì chuẩn bị đọc ý trái ngược; thấy “therefore” thì tìm kết quả. Dùng bộ lọc hoặc ô tìm kiếm để tra nhanh.</p>
+        </div>
+        <p class="section-aside"><span>26</span> từ nối<br><span>6</span> nhóm</p>
+      </div>
+
+      <div class="toolbar rc-toolbar">
+        <div class="filter-tabs" role="group" aria-label="Lọc từ nối theo nhóm">
+          <button class="filter-tab" type="button" data-cat="all" aria-pressed="true">Tất cả</button>
+          <button class="filter-tab" type="button" data-cat="addition" aria-pressed="false">Thêm ý</button>
+          <button class="filter-tab" type="button" data-cat="contrast" aria-pressed="false">Tương phản</button>
+          <button class="filter-tab" type="button" data-cat="cause" aria-pressed="false">Nguyên nhân – kết quả</button>
+          <button class="filter-tab" type="button" data-cat="example" aria-pressed="false">Ví dụ</button>
+          <button class="filter-tab" type="button" data-cat="sequence" aria-pressed="false">Trình tự</button>
+          <button class="filter-tab" type="button" data-cat="conclusion" aria-pressed="false">Kết luận</button>
+        </div>
+
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <label class="sr-only" for="connector-search">Tìm từ nối</label>
+          <input id="connector-search" type="search" placeholder="Tìm “however”, “vì vậy”, “ví dụ”…" autocomplete="off">
+          <button class="search-clear" id="connector-clear" type="button" aria-label="Xoá tìm kiếm" hidden>&times;</button>
+        </div>
+
+        <span class="result-count" id="connector-count" aria-live="polite">26/26 từ nối</span>
+      </div>
+
+      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
+      <div class="rc-table-wrap">
+        <table class="rc-table rc-connector-table">
+          <caption class="sr-only">Bảng từ nối thường gặp trong bài đọc hiểu</caption>
+          <thead>
+            <tr>
+              <th scope="col">Từ nối</th>
+              <th scope="col">Nhóm</th>
+              <th scope="col">Cách dùng</th>
+              <th scope="col">Ví dụ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="rc-connector-row" data-cat="addition">
+              <th scope="row"><code>and</code></th>
+              <td><span class="rc-cat rc-cat-addition">Thêm ý</span></td>
+              <td>Nối hai ý tương đương.</td>
+              <td>She likes tea <strong>and</strong> coffee.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="addition">
+              <th scope="row"><code>also</code></th>
+              <td><span class="rc-cat rc-cat-addition">Thêm ý</span></td>
+              <td>Cũng, thêm vào.</td>
+              <td>He <strong>also</strong> plays football.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="addition">
+              <th scope="row"><code>moreover</code></th>
+              <td><span class="rc-cat rc-cat-addition">Thêm ý</span></td>
+              <td>Hơn nữa (trang trọng).</td>
+              <td><strong>Moreover</strong>, it is cheap.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="addition">
+              <th scope="row"><code>in addition</code></th>
+              <td><span class="rc-cat rc-cat-addition">Thêm ý</span></td>
+              <td>Ngoài ra.</td>
+              <td><strong>In addition</strong>, recycling saves energy.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="addition">
+              <th scope="row"><code>besides</code></th>
+              <td><span class="rc-cat rc-cat-addition">Thêm ý</span></td>
+              <td>Ngoài ra, bên cạnh đó.</td>
+              <td><strong>Besides</strong>, the weather was perfect.</td>
+            </tr>
+
+            <tr class="rc-connector-row" data-cat="contrast">
+              <th scope="row"><code>but</code></th>
+              <td><span class="rc-cat rc-cat-contrast">Tương phản</span></td>
+              <td>Nhưng.</td>
+              <td>It was raining, <strong>but</strong> we went out.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="contrast">
+              <th scope="row"><code>however</code></th>
+              <td><span class="rc-cat rc-cat-contrast">Tương phản</span></td>
+              <td>Tuy nhiên.</td>
+              <td><strong>However</strong>, the plan failed.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="contrast">
+              <th scope="row"><code>although / though</code></th>
+              <td><span class="rc-cat rc-cat-contrast">Tương phản</span></td>
+              <td>Mặc dù + mệnh đề.</td>
+              <td><strong>Although</strong> it rained, we went out.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="contrast">
+              <th scope="row"><code>despite / in spite of</code></th>
+              <td><span class="rc-cat rc-cat-contrast">Tương phản</span></td>
+              <td>Mặc dù + N/V-ing.</td>
+              <td><strong>Despite</strong> the rain, we went out.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="contrast">
+              <th scope="row"><code>whereas</code></th>
+              <td><span class="rc-cat rc-cat-contrast">Tương phản</span></td>
+              <td>Trong khi (đối lập hai ý).</td>
+              <td>I like tea, <strong>whereas</strong> she prefers coffee.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="contrast">
+              <th scope="row"><code>on the other hand</code></th>
+              <td><span class="rc-cat rc-cat-contrast">Tương phản</span></td>
+              <td>Mặt khác.</td>
+              <td><strong>On the other hand</strong>, city life is busy.</td>
+            </tr>
+
+            <tr class="rc-connector-row" data-cat="cause">
+              <th scope="row"><code>because</code></th>
+              <td><span class="rc-cat rc-cat-cause">Nguyên nhân – kết quả</span></td>
+              <td>Bởi vì + mệnh đề.</td>
+              <td>We stayed home <strong>because</strong> it rained.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="cause">
+              <th scope="row"><code>since / as</code></th>
+              <td><span class="rc-cat rc-cat-cause">Nguyên nhân – kết quả</span></td>
+              <td>Bởi vì (trang trọng).</td>
+              <td><strong>Since</strong> it was late, we left.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="cause">
+              <th scope="row"><code>so</code></th>
+              <td><span class="rc-cat rc-cat-cause">Nguyên nhân – kết quả</span></td>
+              <td>Vì vậy.</td>
+              <td>It was late, <strong>so</strong> we left.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="cause">
+              <th scope="row"><code>therefore</code></th>
+              <td><span class="rc-cat rc-cat-cause">Nguyên nhân – kết quả</span></td>
+              <td>Do đó.</td>
+              <td>He studied hard; <strong>therefore</strong>, he passed.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="cause">
+              <th scope="row"><code>as a result</code></th>
+              <td><span class="rc-cat rc-cat-cause">Nguyên nhân – kết quả</span></td>
+              <td>Kết quả là.</td>
+              <td><strong>As a result</strong>, the air is cleaner.</td>
+            </tr>
+
+            <tr class="rc-connector-row" data-cat="example">
+              <th scope="row"><code>for example</code></th>
+              <td><span class="rc-cat rc-cat-example">Ví dụ</span></td>
+              <td>Ví dụ.</td>
+              <td><strong>For example</strong>, plastic bags harm turtles.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="example">
+              <th scope="row"><code>for instance</code></th>
+              <td><span class="rc-cat rc-cat-example">Ví dụ</span></td>
+              <td>Chẳng hạn.</td>
+              <td><strong>For instance</strong>, Hue is a good example.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="example">
+              <th scope="row"><code>such as</code></th>
+              <td><span class="rc-cat rc-cat-example">Ví dụ</span></td>
+              <td>Như là (trước danh từ).</td>
+              <td>Fruits <strong>such as</strong> mangoes are sweet.</td>
+            </tr>
+
+            <tr class="rc-connector-row" data-cat="sequence">
+              <th scope="row"><code>first / firstly</code></th>
+              <td><span class="rc-cat rc-cat-sequence">Trình tự</span></td>
+              <td>Đầu tiên.</td>
+              <td><strong>First</strong>, read the questions.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="sequence">
+              <th scope="row"><code>then / next</code></th>
+              <td><span class="rc-cat rc-cat-sequence">Trình tự</span></td>
+              <td>Sau đó.</td>
+              <td><strong>Then</strong>, scan for keywords.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="sequence">
+              <th scope="row"><code>before / after</code></th>
+              <td><span class="rc-cat rc-cat-sequence">Trình tự</span></td>
+              <td>Trước / sau.</td>
+              <td>Check your answers <strong>before</strong> you submit.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="sequence">
+              <th scope="row"><code>finally</code></th>
+              <td><span class="rc-cat rc-cat-sequence">Trình tự</span></td>
+              <td>Cuối cùng.</td>
+              <td><strong>Finally</strong>, choose the best answer.</td>
+            </tr>
+
+            <tr class="rc-connector-row" data-cat="conclusion">
+              <th scope="row"><code>in conclusion</code></th>
+              <td><span class="rc-cat rc-cat-conclusion">Kết luận</span></td>
+              <td>Kết luận.</td>
+              <td><strong>In conclusion</strong>, reading every day helps.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="conclusion">
+              <th scope="row"><code>to sum up</code></th>
+              <td><span class="rc-cat rc-cat-conclusion">Kết luận</span></td>
+              <td>Tóm lại.</td>
+              <td><strong>To sum up</strong>, practice makes perfect.</td>
+            </tr>
+            <tr class="rc-connector-row" data-cat="conclusion">
+              <th scope="row"><code>overall</code></th>
+              <td><span class="rc-cat rc-cat-conclusion">Kết luận</span></td>
+              <td>Nhìn chung.</td>
+              <td><strong>Overall</strong>, the festival was a success.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="empty-state" id="connector-empty" hidden>
+        <p class="empty-title">Không tìm thấy từ nối nào khớp.</p>
+        <p>Thử từ khoá khác hoặc xoá bộ lọc để xem lại cả 26 từ nối.</p>
+        <button class="btn btn-ghost" id="connector-reset" type="button">Xoá bộ lọc</button>
+      </div>
+
+      <p class="mini-note"><strong>Đọc theo từ nối:</strong> “but/however/although” báo hiệu ý trái ngược; “so/therefore/as a result” báo hiệu kết quả; “for example/such as” báo hiệu ví dụ. Nắm được hướng đi của câu, bạn đoán nghĩa nhanh hơn.</p>
+    </div>
+  </section>
+
+  <!-- SAMPLE -->
+  <section class="section" id="sample">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">05 · Đọc mẫu</p>
+          <h2>Một đoạn, bốn câu hỏi.</h2>
+          <p>Đọc đoạn văn, nhìn các chỗ được đánh dấu, rồi xem cách tìm bằng chứng cho từng câu hỏi. Màu đánh dấu tương ứng với dạng câu hỏi.</p>
+        </div>
+        <p class="section-aside"><span>1</span> đoạn mẫu<br><span>4</span> câu hỏi</p>
+      </div>
+
+      <article class="rc-sample">
+        <div class="rc-sample-head">
+          <div>
+            <p class="section-kicker">Plastic in the ocean</p>
+            <h3>Đọc và tìm bằng chứng.</h3>
+          </div>
+          <p class="rc-sample-meta">91 từ · 2 phút</p>
+        </div>
+
+        <p class="rc-passage"><mark class="rc-evidence rc-evidence-main">Plastic waste is a serious problem in many oceans.</mark> Every year, millions of tonnes of plastic end up in the sea. <mark class="rc-evidence rc-evidence-detail">Fish and sea turtles often mistake small pieces of plastic for food.</mark> As a result, they can become sick or die. However, <mark class="rc-evidence rc-evidence-ref">some countries are now taking action. They have banned single-use plastic bags and encouraged people to recycle.</mark> In Vietnam, many supermarkets have started using paper bags instead of plastic ones. <mark class="rc-evidence rc-evidence-infer">These changes are small, but they can make a big difference if everyone joins in.</mark></p>
+
+        <div class="rc-legend" aria-label="Chú thích màu bằng chứng">
+          <span><i class="rc-legend-dot rc-dot-main"></i>Ý chính / kết luận</span>
+          <span><i class="rc-legend-dot rc-dot-detail"></i>Bằng chứng chi tiết</span>
+          <span><i class="rc-legend-dot rc-dot-ref"></i>Từ thay thế</span>
+          <span><i class="rc-legend-dot rc-dot-infer"></i>Manh mối suy luận</span>
+        </div>
+
+        <div class="rc-qa-grid">
+          <article class="rc-qa">
+            <p class="rc-qa-tag">Ý chính</p>
+            <h4>What is the passage mainly about?</h4>
+            <p class="rc-qa-answer">Plastic pollution and actions to reduce it.</p>
+            <p class="rc-qa-why">Câu đầu nêu vấn đề; cuối bài nói về hành động và kết quả.</p>
+          </article>
+
+          <article class="rc-qa">
+            <p class="rc-qa-tag">Chi tiết</p>
+            <h4>What do fish and sea turtles mistake for food?</h4>
+            <p class="rc-qa-answer">Small pieces of plastic.</p>
+            <p class="rc-qa-why">Thông tin nằm trực tiếp trong câu được đánh dấu màu xanh.</p>
+          </article>
+
+          <article class="rc-qa">
+            <p class="rc-qa-tag">Từ thay thế</p>
+            <h4>In the passage, “They” refers to ______.</h4>
+            <p class="rc-qa-answer">Some countries.</p>
+            <p class="rc-qa-why">Đại từ số nhiều đứng sau “some countries”; các nước này đã cấm túi ni-lông dùng một lần.</p>
+          </article>
+
+          <article class="rc-qa">
+            <p class="rc-qa-tag">NOT mentioned</p>
+            <h4>Which of the following is NOT mentioned?</h4>
+            <p class="rc-qa-answer">Every supermarket in the world has banned plastic bags.</p>
+            <p class="rc-qa-why">Bài chỉ nói nhiều siêu thị ở Việt Nam dùng túi giấy; không nói tất cả siêu thị trên thế giới.</p>
+          </article>
+        </div>
+      </article>
+
+      <p class="mini-note"><strong>Cách dùng đoạn mẫu:</strong> che các câu trả lời, tự tìm bằng chứng trước. Sau đó so sánh với phần giải thích. Mỗi màu là một kiểu bằng chứng khác nhau, không phải đáp án nào cũng nằm nguyên văn trong bài.</p>
+    </div>
+  </section>
+
+  <!-- TRAPS -->
+  <section class="section section-alt" id="traps">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">06 · Bẫy đề</p>
+          <h2>Mười lỗi hay mất điểm.</h2>
+          <p>Đọc câu hỏi, câu trả lời và lý do. Đây là những lỗi học sinh lớp 9 hay mắc khi làm phần đọc hiểu.</p>
+        </div>
+        <p class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
+      </div>
+
+      <div class="trap-grid">
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Chọn đáp án lặp lại y nguyên từ trong bài.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Chọn đáp án <strong>paraphrase</strong> và đúng nghĩa.</p></div>
+          <p class="trap-why">Đề đọc hiểu thường viết lại ý, không lặp y nguyên. Đừng chọn chỉ vì thấy từ quen.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Chọn đáp án đúng nhưng không trả lời câu hỏi.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Đáp án phải khớp <strong>đúng phạm vi</strong> câu hỏi.</p></div>
+          <p class="trap-why">Một chi tiết có trong bài chưa chắc là câu trả lời cho câu hỏi đang hỏi.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Bỏ qua chữ <strong>NOT</strong> hoặc <strong>EXCEPT</strong>.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Khoanh tròn NOT/EXCEPT trước khi đọc đáp án.</p></div>
+          <p class="trap-why">Câu hỏi phủ định yêu cầu tìm đáp án không có trong bài, không phải đáp án đúng nhất.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Chọn đáp án có <strong>all, always, never, only</strong>.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Kiểm tra từ lượng hóa với thông tin trong bài.</p></div>
+          <p class="trap-why">Đáp án cực đoan thường sai. Bài có thể nói “some” hoặc “many”, không phải “all”.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Nhầm đại từ số ít với số nhiều.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Kiểm tra danh từ thay thế và số ít/số nhiều.</p></div>
+          <p class="trap-why">“They” cần danh từ số nhiều; “it” cần danh từ số ít hoặc một sự việc.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Suy luận quá xa, không có bằng chứng.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Chỉ suy ra từ 2–3 manh mối có trong bài.</p></div>
+          <p class="trap-why">Đáp án suy luận vẫn phải được bài đọc hỗ trợ, không phải điều bạn tự nghĩ ra.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Lấy ý của một câu làm ý chính cả bài.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Chọn ý bao quát được toàn bộ đoạn.</p></div>
+          <p class="trap-why">Ý chính phải bao trùm các chi tiết, không chỉ đúng với một câu.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Dịch từng từ và bỏ qua ngữ cảnh.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Đọc cả câu và dùng từ xung quanh để đoán nghĩa.</p></div>
+          <p class="trap-why">Một từ có thể có nhiều nghĩa. Ngữ cảnh quyết định nghĩa đúng.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Bỏ qua từ nối như <strong>however</strong> hoặc <strong>although</strong>.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Đọc từ nối để biết ý tiếp theo thuận hay ngược.</p></div>
+          <p class="trap-why">Từ nối thay đổi hoàn toàn ý của câu. Đọc sai từ nối dễ chọn ngược đáp án.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Thay đổi số lượng hoặc thì so với bài.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>So khớp chính xác số, thời gian và mức độ.</p></div>
+          <p class="trap-why">“Some” khác “all”, “last year” khác “next year”. Một chi tiết nhỏ sai cũng làm đáp án sai.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="section section-quiz" id="quiz">
+    <div class="container">
+      <div class="section-head section-head-center">
+        <div>
+          <p class="section-kicker">07 · Luyện tập</p>
+          <h2>Đọc 12 đoạn, trả lời 12 câu.</h2>
+          <p>Mỗi câu có một đoạn đọc ngắn. Đọc câu hỏi trước, tìm bằng chứng trong đoạn rồi chọn đáp án.</p>
+        </div>
+      </div>
+
+      <p class="quiz-best" id="quiz-best" aria-live="polite">Điểm cao nhất của bạn: chưa có</p>
+
+      <div class="quiz-shell">
+        <div class="quiz-top">
+          <span class="quiz-step" id="quiz-step">Câu 1 / 12</span>
+          <div class="quiz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="12" aria-valuenow="1" aria-label="Tiến độ làm bài">
+            <span id="quiz-bar"></span>
+          </div>
+          <span class="quiz-score" id="quiz-score">0 đúng</span>
+        </div>
+        <div class="quiz-stage" id="quiz-stage" aria-live="polite"></div>
+      </div>
+
+      <noscript><p class="quiz-noscript">Bật JavaScript để làm bài luyện tập tương tác. Phần cheat sheet phía trên vẫn đọc được bình thường.</p></noscript>
+    </div>
+  </section>
+
+</SheetLayout>
+
+<script>
+  import '../scripts/reading.js';
+</script>

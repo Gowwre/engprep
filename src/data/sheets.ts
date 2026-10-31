@@ -1,6 +1,6 @@
 import { sitePath } from '../lib/urls';
 
-export type SheetSlug = 'tenses' | 'prepositions' | 'word-forms';
+export type SheetSlug = 'tenses' | 'prepositions' | 'word-forms' | 'reading';
 
 export interface SheetAction {
   label: string;
@@ -43,7 +43,7 @@ export interface Sheet {
   metaDescription: string;
   cardNo: string;
   badge: string;
-  accent: 'tenses' | 'prep' | 'word';
+  accent: 'tenses' | 'prep' | 'word' | 'reading';
   lead: string;
   preview: string[];
   highlights: SheetHighlight[];
@@ -196,6 +196,54 @@ export const sheets: Sheet[] = [
       actions: [
         { label: 'Xem bản đồ từ loại', href: '#map', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 16 câu trắc nghiệm', href: '#quiz', variant: 'ghost', icon: 'chevron' }
+      ]
+    }
+  },
+  {
+    slug: 'reading',
+    href: sitePath('reading/'),
+    navLabel: 'Đọc hiểu',
+    shortTitle: 'Reading',
+    title: 'Reading comprehension',
+    metaTitle: 'Reading Comprehension (Đọc hiểu) — Cheatsheet lớp 9 | EngPrep',
+    metaDescription:
+      'Cheatsheet đọc hiểu tiếng Anh lớp 9: 7 dạng câu hỏi, chiến lược skim và scan, 26 từ nối, đoạn đọc mẫu có chú thích, 10 bẫy đề và 12 câu luyện tập có giải thích.',
+    cardNo: '04 / READING',
+    badge: '7 dạng câu',
+    accent: 'reading',
+    lead: 'Skim để nắm ý, scan để tìm bằng chứng và xử lý 7 dạng câu hỏi đọc hiểu thường gặp.',
+    preview: ['main idea', 'detail', 'inference', 'however'],
+    highlights: [
+      { text: 'Bản đồ 7 dạng câu hỏi và cách xử lý' },
+      { text: 'Quy trình 4 bước skim – scan – chọn bằng chứng' },
+      { strong: '26 từ nối', text: ' và đoạn đọc mẫu có chú thích' },
+      { text: '10 bẫy đề và 12 câu luyện tập' }
+    ],
+    meta: '7 dạng câu · 12 câu hỏi',
+    questionCount: 12,
+    sections: [
+      { id: 'map', label: 'Bản đồ' },
+      { id: 'strategy', label: 'Chiến lược' },
+      { id: 'types', label: 'Dạng câu' },
+      { id: 'connectors', label: 'Từ nối' },
+      { id: 'sample', label: 'Đọc mẫu' },
+      { id: 'traps', label: 'Bẫy đề' },
+      { id: 'quiz', label: 'Luyện tập' }
+    ],
+    hero: {
+      eyebrow: 'Global Success 9 · Ôn thi vào 10',
+      titleHtml:
+        'Reading comprehension,<br>đọc đúng <span class="marker">ý chính</span>.',
+      lead: 'Không cần dịch từng chữ. Trang này dạy cách skim, scan, tìm bằng chứng và xử lý 7 dạng câu hỏi đọc hiểu — kèm đoạn đọc mẫu, 10 bẫy đề và 12 câu luyện tập.',
+      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
+      stats: [
+        { value: '7', label: 'dạng câu hỏi' },
+        { value: '4', label: 'bước đọc' },
+        { value: '12', label: 'câu luyện tập' }
+      ],
+      actions: [
+        { label: 'Xem bản đồ dạng câu', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Làm 12 câu đọc hiểu', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
   }

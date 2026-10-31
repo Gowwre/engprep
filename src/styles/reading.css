@@ -1,0 +1,806 @@
+/* =========================================================
+   EngPrep — Reading comprehension (Đọc hiểu)
+   Page-specific styles layered on styles.css
+   ========================================================= */
+
+/* ---------- Hero ---------- */
+
+.rc-stack {
+  height: 410px;
+}
+
+.rc-stack .stack-card-back {
+  background: var(--gold-bg);
+}
+
+.rc-stack .stack-card-mid {
+  background: var(--jade-bg);
+}
+
+.rc-stack .stack-card-front {
+  padding-top: 64px;
+}
+
+.rc-stack .mini-label {
+  color: var(--gold-ink);
+}
+
+.rc-mini-passage {
+  margin: 11px 0 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.rc-mini-passage mark {
+  padding: 0 2px;
+  color: var(--gold-ink);
+  background: var(--gold-bg);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+
+.rc-mini-question {
+  margin: 14px 0 8px;
+  font-family: var(--font-display);
+  font-size: 1.03rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.rc-mini-choices {
+  display: grid;
+  gap: 5px;
+}
+
+.rc-mini-choices span {
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface-2);
+  font-size: 0.67rem;
+  line-height: 1.45;
+}
+
+.rc-mini-choices .is-correct {
+  border-color: var(--success);
+  color: var(--success);
+  background: var(--success-bg);
+  font-weight: 700;
+}
+
+.rc-mini-why {
+  margin: auto 0 0;
+  padding-top: 10px;
+  border-top: 1px dashed var(--line);
+  color: var(--muted);
+  font-size: 0.65rem;
+  line-height: 1.45;
+}
+
+.rc-mini-why strong {
+  color: var(--success);
+}
+
+/* ---------- Section 01: map ---------- */
+
+.rc-map-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.rc-map-card {
+  --map: var(--gold-ink);
+  --map-bg: var(--gold-bg);
+  --map-line: var(--gold);
+  display: flex;
+  flex-direction: column;
+  padding: 17px 16px 15px;
+  border: 1.5px solid var(--border-strong);
+  border-top: 5px solid var(--map);
+  border-radius: 15px;
+  background: var(--surface);
+  box-shadow: 4px 4px 0 var(--shadow);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.rc-map-card:hover {
+  box-shadow: 6px 6px 0 var(--shadow);
+  transform: translateY(-3px);
+}
+
+.rc-map-card.rc-map-detail,
+.rc-map-card.rc-map-tf {
+  --map: var(--jade);
+  --map-bg: var(--jade-bg);
+  --map-line: var(--jade-line);
+}
+
+.rc-map-card.rc-map-vocab,
+.rc-map-card.rc-map-cloze {
+  --map: var(--indigo);
+  --map-bg: var(--indigo-bg);
+  --map-line: var(--indigo-line);
+}
+
+.rc-map-card.rc-map-ref,
+.rc-map-card.rc-map-infer {
+  --map: var(--clay);
+  --map-bg: var(--clay-bg);
+  --map-line: var(--clay-line);
+}
+
+.rc-map-card h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* ---------- Section 02: strategy ---------- */
+
+.rc-step-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.rc-step {
+  padding: 17px 16px;
+  border: 1.5px solid var(--border-strong);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 4px 4px 0 var(--shadow);
+}
+
+.rc-step-no {
+  display: grid;
+  place-items: center;
+  width: 23px;
+  height: 23px;
+  margin-bottom: 9px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  color: var(--gold-ink);
+  background: var(--gold-bg);
+  font-family: var(--font-mono);
+  font-size: 0.57rem;
+  font-weight: 800;
+}
+
+.rc-step h3 {
+  margin: 0 0 6px;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.rc-step p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.rc-step p.rc-step-formula {
+  padding: 7px 9px;
+  margin-top: 10px;
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+  color: var(--ink);
+  background: var(--gold-bg);
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  line-height: 1.45;
+}
+
+.rc-time-strip {
+  display: flex;
+  align-items: stretch;
+  gap: 7px;
+  padding: 12px;
+  border: 1.5px dashed var(--line);
+  border-radius: 13px;
+  background: var(--surface);
+}
+
+.rc-time-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-2);
+}
+
+.rc-time-step span {
+  color: var(--muted);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.rc-time-step strong {
+  margin-top: 2px;
+  color: var(--gold-ink);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.rc-time-arrow {
+  align-self: center;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+/* ---------- Tables (types, connectors) ---------- */
+
+.rc-table-wrap {
+  overflow-x: auto;
+  border: 1.5px solid var(--border-strong);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: 4px 4px 0 var(--shadow);
+  scrollbar-width: thin;
+}
+
+.rc-table {
+  width: 100%;
+  min-width: 820px;
+  border-collapse: collapse;
+  font-size: 0.79rem;
+}
+
+.rc-table thead th {
+  padding: 11px 14px;
+  border-bottom: 1.5px solid var(--line);
+  color: var(--muted);
+  background: var(--surface-2);
+  font-size: 0.58rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.rc-table td,
+.rc-table tbody th {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line);
+  line-height: 1.55;
+  text-align: left;
+  vertical-align: top;
+}
+
+.rc-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.rc-table tbody tr:hover {
+  background: var(--surface-2);
+}
+
+.rc-table tbody th {
+  white-space: nowrap;
+}
+
+.rc-table code {
+  padding: 1px 5px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface-2);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  white-space: nowrap;
+}
+
+.rc-table strong {
+  color: var(--gold-ink);
+  font-weight: 750;
+}
+
+.rc-type-table th:first-child {
+  width: 136px;
+}
+
+.rc-connector-table th:first-child {
+  width: 185px;
+}
+
+.rc-connector-table td:nth-child(2) {
+  width: 160px;
+}
+
+.rc-cat {
+  display: inline-block;
+  padding: 2px 7px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.56rem;
+  font-weight: 800;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.rc-cat-main,
+.rc-cat-infer,
+.rc-cat-example {
+  border-color: var(--gold);
+  color: var(--gold-ink);
+  background: var(--gold-bg);
+}
+
+.rc-cat-detail,
+.rc-cat-tf,
+.rc-cat-addition,
+.rc-cat-sequence {
+  border-color: var(--jade-line);
+  color: var(--jade);
+  background: var(--jade-bg);
+}
+
+.rc-cat-vocab,
+.rc-cat-cloze,
+.rc-cat-cause {
+  border-color: var(--indigo-line);
+  color: var(--indigo);
+  background: var(--indigo-bg);
+}
+
+.rc-cat-ref,
+.rc-cat-contrast,
+.rc-cat-conclusion {
+  border-color: var(--clay-line);
+  color: var(--clay);
+  background: var(--clay-bg);
+}
+
+.rc-toolbar .filter-tab {
+  padding-inline: 10px;
+  font-size: 0.74rem;
+}
+
+/* ---------- Section 05: sample ---------- */
+
+.rc-sample {
+  padding: 23px 24px;
+  border: 1.5px solid var(--border-strong);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: 5px 5px 0 var(--shadow);
+}
+
+.rc-sample-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1.5px solid var(--line);
+}
+
+.rc-sample-head h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.rc-sample-meta {
+  flex-shrink: 0;
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  white-space: nowrap;
+}
+
+.rc-passage {
+  margin: 17px 0 0;
+  font-size: 0.91rem;
+  line-height: 1.85;
+}
+
+.rc-evidence {
+  padding: 1px 2px;
+  color: inherit;
+  border-radius: 2px;
+}
+
+.rc-evidence-main {
+  background: var(--gold-bg);
+  box-shadow: inset 0 -2px 0 var(--gold);
+}
+
+.rc-evidence-detail {
+  background: var(--jade-bg);
+  box-shadow: inset 0 -2px 0 var(--jade);
+}
+
+.rc-evidence-ref {
+  background: var(--indigo-bg);
+  box-shadow: inset 0 -2px 0 var(--indigo);
+}
+
+.rc-evidence-infer {
+  background: var(--clay-bg);
+  box-shadow: inset 0 -2px 0 var(--clay);
+}
+
+.rc-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 16px;
+  padding: 10px 12px;
+  margin-top: 15px;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 0.63rem;
+}
+
+.rc-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rc-legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.rc-dot-main { background: var(--gold); }
+.rc-dot-detail { background: var(--jade); }
+.rc-dot-ref { background: var(--indigo); }
+.rc-dot-infer { background: var(--clay); }
+
+.rc-qa-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 17px;
+}
+
+.rc-qa {
+  padding: 13px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 11px;
+  background: var(--surface-2);
+}
+
+.rc-qa-tag {
+  display: inline-block;
+  padding: 2px 7px;
+  margin: 0 0 7px;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  color: var(--gold-ink);
+  background: var(--gold-bg);
+  font-size: 0.54rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.rc-qa h4 {
+  margin: 0 0 7px;
+  font-size: 0.79rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.rc-qa-answer {
+  margin: 0;
+  color: var(--success);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.rc-qa-why {
+  padding-top: 7px;
+  margin: 7px 0 0;
+  border-top: 1px dashed var(--line);
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+/* ---------- Quiz passage ---------- */
+
+.rc-quiz-passage {
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border: 1.5px solid var(--line);
+  border-left: 4px solid var(--gold);
+  border-radius: 9px;
+  background: var(--surface-2);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.rc-quiz-passage-label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--gold-ink);
+  font-size: 0.55rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.rc-quiz-passage p {
+  margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1100px) {
+  .rc-map-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .rc-step-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 780px) {
+  .rc-toolbar .filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .rc-toolbar .filter-tab {
+    flex: 1 1 auto;
+    padding-inline: 7px;
+    font-size: 0.7rem;
+  }
+
+  .rc-sample {
+    padding: 18px 16px;
+  }
+
+  .rc-sample-head {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .rc-qa-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .rc-map-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rc-step-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rc-time-strip {
+    flex-wrap: wrap;
+  }
+
+  .rc-time-step {
+    flex: 1 1 40%;
+  }
+
+  .rc-time-arrow {
+    display: none;
+  }
+
+  .rc-stack {
+    height: 400px;
+  }
+
+  .rc-mini-passage {
+    font-size: 0.8rem;
+  }
+
+  .rc-mini-question {
+    font-size: 0.95rem;
+  }
+}
+
+/* ---------- Print ---------- */
+
+@media print {
+  .rc-map-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 5px !important;
+  }
+
+  .rc-map-card {
+    padding: 6px !important;
+    border-radius: 7px !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+
+  .rc-map-card h3 {
+    font-size: 8.5pt;
+  }
+
+  .rc-step-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 5px !important;
+    margin-bottom: 7px;
+  }
+
+  .rc-step {
+    padding: 6px !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+
+  .rc-step-no {
+    width: 13px;
+    height: 13px;
+    margin-bottom: 3px;
+    font-size: 4.8pt;
+  }
+
+  .rc-step h3 {
+    margin-bottom: 2px;
+    font-size: 7.6pt;
+  }
+
+  .rc-step p {
+    font-size: 5.6pt;
+    line-height: 1.35;
+  }
+
+  .rc-step p.rc-step-formula {
+    padding: 3px 4px;
+    margin-top: 4px;
+    font-size: 5pt;
+  }
+
+  .rc-time-strip {
+    gap: 3px;
+    padding: 5px;
+    border-radius: 6px;
+  }
+
+  .rc-time-step {
+    padding: 4px 5px;
+  }
+
+  .rc-time-step span {
+    font-size: 4.6pt;
+  }
+
+  .rc-time-step strong {
+    font-size: 7pt;
+  }
+
+  .rc-table-wrap {
+    overflow: visible !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+  }
+
+  .rc-table {
+    min-width: 0 !important;
+  }
+
+  .rc-table thead th {
+    padding: 4px 6px;
+    font-size: 5.2pt;
+  }
+
+  .rc-table td,
+  .rc-table tbody th {
+    padding: 4px 6px;
+    font-size: 6.1pt;
+  }
+
+  .rc-table code {
+    font-size: 5.4pt;
+  }
+
+  .rc-type-table th:first-child {
+    width: 64px;
+  }
+
+  .rc-connector-table th:first-child {
+    width: 92px;
+  }
+
+  .rc-connector-table td:nth-child(2) {
+    width: 74px;
+  }
+
+  .rc-cat {
+    padding: 0 4px;
+    font-size: 4.7pt;
+  }
+
+  .rc-sample {
+    padding: 9px 11px;
+    border-radius: 9px;
+    box-shadow: none !important;
+  }
+
+  .rc-sample-head {
+    padding-bottom: 6px;
+  }
+
+  .rc-sample-head h3 {
+    font-size: 10pt;
+  }
+
+  .rc-sample-meta {
+    font-size: 5.4pt;
+  }
+
+  .rc-passage {
+    margin-top: 7px;
+    font-size: 6.6pt;
+    line-height: 1.55;
+  }
+
+  .rc-legend {
+    gap: 4px 10px;
+    padding: 4px 6px;
+    margin-top: 5px;
+    font-size: 5.2pt;
+  }
+
+  .rc-qa-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 5px !important;
+    margin-top: 6px;
+  }
+
+  .rc-qa {
+    padding: 5px 6px;
+    border-radius: 5px;
+    break-inside: avoid;
+  }
+
+  .rc-qa-tag {
+    padding: 0 4px;
+    margin-bottom: 3px;
+    font-size: 4.5pt;
+  }
+
+  .rc-qa h4 {
+    margin-bottom: 3px;
+    font-size: 6pt;
+  }
+
+  .rc-qa-answer {
+    font-size: 6pt;
+  }
+
+  .rc-qa-why {
+    padding-top: 3px;
+    margin-top: 3px;
+    font-size: 5.2pt;
+  }
+
+  .rc-connector-row[hidden] {
+    display: table-row !important;
+  }
+}

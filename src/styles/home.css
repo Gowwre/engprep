@@ -51,10 +51,94 @@
   transform: rotate(2.4deg);
 }
 
+.hub-sheet--reading {
+  border-top: 6px solid var(--gold);
+  background: var(--gold-bg);
+}
+
 .hub-sheet--tenses .mini-example,
 .hub-sheet--prep .mini-example,
 .hub-sheet--tenses .mini-chips,
 .hub-sheet--prep .mini-chips {
+  display: none;
+}
+
+/* Four sheets: a clean 2 × 2 collage instead of a deep stack. */
+
+.hub-stack--four {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  width: min(100%, 460px);
+  height: auto;
+}
+
+.hub-stack--four .hub-sheet {
+  position: relative;
+  inset: auto;
+  width: auto;
+  height: 100%;
+  padding: 16px 15px 14px;
+  border-radius: 16px;
+  box-shadow: 5px 5px 0 var(--shadow);
+}
+
+.hub-stack--four .hub-sheet--tenses {
+  top: auto;
+  right: auto;
+  z-index: auto;
+  width: auto;
+  transform: rotate(-1.2deg);
+}
+
+.hub-stack--four .hub-sheet--prep {
+  top: auto;
+  left: auto;
+  z-index: auto;
+  width: auto;
+  transform: rotate(1.4deg);
+}
+
+.hub-stack--four .hub-sheet--word {
+  top: auto;
+  right: auto;
+  z-index: auto;
+  width: auto;
+  transform: rotate(1deg);
+}
+
+.hub-stack--four .hub-sheet--reading {
+  transform: rotate(-1.6deg);
+}
+
+.hub-stack--four .hub-sheet-title {
+  font-size: 1.55rem;
+}
+
+.hub-stack--four .hub-sheet-formula {
+  margin-top: 7px;
+  font-size: 1.12rem;
+  line-height: 1.28;
+}
+
+.hub-stack--four .mini-rule {
+  margin: 9px 0 7px;
+}
+
+.hub-stack--four .mini-chips {
+  margin-top: 0;
+}
+
+.hub-stack--four .mini-chips span {
+  padding: 2px 5px;
+  font-size: 0.58rem;
+}
+
+.hub-stack--four .mini-example {
+  display: none;
+}
+
+.hub-stack--four + .sticky-note {
   display: none;
 }
 
@@ -90,6 +174,10 @@
   color: var(--indigo);
 }
 
+.hub-sheet--reading .hub-sheet-title {
+  color: var(--gold-ink);
+}
+
 .hub-sheet-formula {
   margin: 10px 0 0;
   font-family: var(--font-display);
@@ -119,6 +207,10 @@
 
 .hub-sheet--word .mini-example mark {
   color: var(--indigo);
+}
+
+.hub-sheet--reading .mini-example mark {
+  color: var(--gold-ink);
 }
 
 /* ---------- Resource cards ---------- */
@@ -159,6 +251,16 @@
   --accent: var(--indigo);
   --accent-bg: var(--indigo-bg);
   --accent-line: var(--indigo-line);
+}
+
+.hub-card--reading {
+  --accent: var(--gold-ink);
+  --accent-bg: var(--gold-bg);
+  --accent-line: var(--gold);
+}
+
+.hub-card.hub-card--reading h3 {
+  font-size: clamp(1.5rem, 2.2vw, 1.9rem);
 }
 
 .hub-card-top {
@@ -409,10 +511,6 @@
 /* ---------- Responsive ---------- */
 
 @media (max-width: 980px) {
-  .hub-stack {
-    height: 570px;
-  }
-
   .path-grid {
     grid-template-columns: 1fr;
   }
@@ -426,6 +524,12 @@
   }
 }
 
+@media (max-width: 1100px) {
+  .hub-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 780px) {
   .hub-grid {
     grid-template-columns: 1fr;
@@ -433,33 +537,26 @@
 }
 
 @media (max-width: 620px) {
-  .hub-stack {
+  .hub-stack--four {
+    gap: 10px;
     width: min(100%, 350px);
-    height: 500px;
   }
 
-  .hub-sheet {
-    padding: 16px 16px 14px;
+  .hub-stack--four .hub-sheet {
+    padding: 13px 12px 12px;
   }
 
-  .hub-sheet--prep {
-    top: 120px;
+  .hub-stack--four .hub-sheet-title {
+    font-size: 1.3rem;
   }
 
-  .hub-sheet--word {
-    top: 290px;
+  .hub-stack--four .hub-sheet-formula {
+    font-size: 1rem;
   }
 
-  .hub-sheet-title {
-    font-size: 1.7rem;
-  }
-
-  .hub-sheet-formula {
-    font-size: 1.2rem;
-  }
-
-  .hub-sheet .mini-example {
-    font-size: 0.76rem;
+  .hub-stack--four .mini-chips span {
+    padding: 1px 4px;
+    font-size: 0.52rem;
   }
 
   .hub-card {
@@ -476,22 +573,25 @@
 }
 
 @media (max-width: 400px) {
-  .hub-stack {
-    height: 470px;
+  .hub-stack--four {
+    gap: 8px;
+    width: min(100%, 330px);
   }
 
-  .hub-sheet--tenses {
-    width: 90%;
+  .hub-stack--four .hub-sheet {
+    padding: 11px 10px 10px;
   }
 
-  .hub-sheet--prep {
-    top: 110px;
-    width: 88%;
+  .hub-stack--four .hub-sheet-title {
+    font-size: 1.15rem;
   }
 
-  .hub-sheet--word {
-    top: 270px;
-    width: 86%;
+  .hub-stack--four .hub-sheet-formula {
+    font-size: 0.92rem;
+  }
+
+  .hub-stack--four .mini-chips {
+    display: none;
   }
 
   .hub-card-foot .btn {
@@ -509,7 +609,7 @@
   }
 
   .hub-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 7px !important;
   }
 
