@@ -8,19 +8,16 @@ interface Props {
 
 const { current = 'home' } = Astro.props;
 
-const navItems = [
-  { slug: 'home', href: sitePath(), label: 'Trang chủ' },
-  ...sheets.map((sheet) => ({
-    slug: sheet.slug,
-    href: sheet.href,
-    label: sheet.navLabel
-  }))
-];
+const navItems = sheets.map((sheet) => ({
+  slug: sheet.slug,
+  href: sheet.href,
+  label: sheet.navLabel
+}));
 ---
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href={sitePath()}>
+    <a class="brand" href={sitePath()} aria-current={current === 'home' ? 'page' : undefined}>
       <span class="brand-mark" aria-hidden="true">EP</span>
       <span class="brand-text">
         <strong>EngPrep</strong>

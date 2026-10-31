@@ -11,11 +11,12 @@ const sentenceTransformation = getSheet('sentence-transformation');
 const vocabulary = getSheet('vocabulary');
 const cloze = getSheet('cloze');
 const signs = getSheet('signs');
+const grammar = getSheet('grammar');
 ---
 
 <BaseLayout
-  title="EngPrep — Cheat sheet 12 thì, giới từ, word forms, reading, phát âm, viết lại câu, từ vựng, điền khuyết & biển báo lớp 9"
-  description="Bộ cheat sheet tiếng Anh lớp 9: 12 thì, giới từ, word forms, reading comprehension, phát âm – trọng âm, viết lại câu, từ vựng, cloze và gap-fill, biển báo – giao tiếp, bẫy đề và bài luyện tập có giải thích. Một chỗ ôn thi, in được khổ A4, dùng offline."
+  title="EngPrep — Cheat sheet 12 thì, giới từ, word forms, reading, phát âm, viết lại câu, từ vựng, điền khuyết, biển báo & ngữ pháp lớp 9"
+  description="Bộ cheat sheet tiếng Anh lớp 9: 12 thì, giới từ, word forms, reading comprehension, phát âm – trọng âm, viết lại câu, từ vựng, cloze và gap-fill, biển báo – giao tiếp, ngữ pháp cốt lõi, bẫy đề và bài luyện tập có giải thích. Một chỗ ôn thi, in được khổ A4, dùng offline."
   current="home"
 >
   <!-- HERO -->
@@ -23,8 +24,8 @@ const signs = getSheet('signs');
     <div class="container hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">Global Success 9 · Ôn thi vào 10</p>
-        <h1>Chín tờ cheat sheet,<br>một chỗ <span class="marker">ôn thi</span>.</h1>
-        <p class="hero-lead">12 thì, giới từ, word forms, reading, phát âm – trọng âm, viết lại câu, từ vựng – collocations, cloze và biển báo – giao tiếp, gói gọn trong chín tờ ôn thi in được khổ A4. Công thức, dấu hiệu, bẫy đề và bài luyện tập có giải thích — tất cả ở cùng một nơi.</p>
+        <h1>Mười tờ cheat sheet,<br>một chỗ <span class="marker">ôn thi</span>.</h1>
+        <p class="hero-lead">12 thì, giới từ, word forms, reading, phát âm – trọng âm, viết lại câu, từ vựng – collocations, cloze, biển báo – giao tiếp và ngữ pháp cốt lõi, gói gọn trong mười tờ ôn thi in được khổ A4. Công thức, dấu hiệu, bẫy đề và bài luyện tập có giải thích — tất cả ở cùng một nơi.</p>
 
         <div class="hero-actions hero-actions--home">
           <a class="btn btn-primary" href={tenses.href}>
@@ -63,6 +64,10 @@ const signs = getSheet('signs');
             Biển báo
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
           </a>
+          <a class="btn btn-ghost" href={grammar.href}>
+            Ngữ pháp
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </a>
         </div>
 
         <ul class="hero-badges" aria-label="Thông tin bộ tài liệu">
@@ -79,7 +84,7 @@ const signs = getSheet('signs');
       </div>
 
       <div class="hero-visual" aria-hidden="true">
-        <div class="hub-stack hub-stack--nine">
+        <div class="hub-stack hub-stack--ten">
           <div class="hub-sheet hub-sheet--tenses">
             <span class="hub-sheet-kicker">Cheat sheet 01</span>
             <strong class="hub-sheet-title">12 thì</strong>
@@ -178,6 +183,17 @@ const signs = getSheet('signs');
             </div>
             <p class="mini-example">Read the <mark>key word</mark>.</p>
           </div>
+
+          <div class="hub-sheet hub-sheet--grammar">
+            <span class="hub-sheet-kicker">Cheat sheet 10</span>
+            <strong class="hub-sheet-title">Grammar</strong>
+            <p class="hub-sheet-formula">connectors<br>relatives<br>comparisons<br>verb patterns</p>
+            <div class="mini-rule"></div>
+            <div class="mini-chips">
+              <span>however</span><span>who / which</span><span>more crowded</span>
+            </div>
+            <p class="mini-example">Choose the <mark>structure</mark>, not the sound.</p>
+          </div>
         </div>
 
         <div class="sticky-note">
@@ -196,7 +212,7 @@ const signs = getSheet('signs');
       <div class="section-head">
         <div>
           <p class="section-kicker">01 · Bộ tài liệu</p>
-          <h2>Chín tờ cheat sheet, đủ để ôn.</h2>
+          <h2>Mười tờ cheat sheet, đủ để ôn.</h2>
           <p>Mỗi tờ có sơ đồ, bảng tra nhanh, bẫy đề và bài kiểm tra riêng. Bắt đầu từ tờ bạn cần, hoặc đi theo lộ trình bên dưới.</p>
         </div>
         <p class="section-aside"><span>{sheets.length}</span> tờ<br><span>{totalQuestions}</span> câu hỏi</p>
@@ -264,11 +280,12 @@ const signs = getSheet('signs');
 
         <article class="path-card">
           <span class="path-no" aria-hidden="true">03</span>
-          <h3>Luyện từ vựng &amp; kỹ năng</h3>
-          <p>Học word forms, từ vựng – collocations, cloze, đọc hiểu, phát âm – trọng âm và biển báo – giao tiếp.</p>
+          <h3>Luyện từ vựng, ngữ pháp &amp; kỹ năng</h3>
+          <p>Học word forms, từ vựng – collocations, ngữ pháp cốt lõi, cloze, đọc hiểu, phát âm – trọng âm và biển báo – giao tiếp.</p>
           <div class="path-links">
             <a href={wordForms.href}>Word forms</a>
             <a href={vocabulary.href}>Từ vựng</a>
+            <a href={grammar.href}>Ngữ pháp</a>
             <a href={cloze.href}>Cloze</a>
             <a href={reading.href}>Reading</a>
             <a href={pronunciation.href}>Phát âm</a>
@@ -297,6 +314,7 @@ const signs = getSheet('signs');
             <a href={`${vocabulary.href}#quiz`}>16 câu từ vựng</a>
             <a href={`${cloze.href}#quiz`}>12 câu cloze</a>
             <a href={`${signs.href}#quiz`}>16 câu biển báo</a>
+            <a href={`${grammar.href}#quiz`}>18 câu ngữ pháp</a>
           </div>
         </article>
       </div>
@@ -309,8 +327,8 @@ const signs = getSheet('signs');
       <div class="home-band">
         <div>
           <p class="section-kicker">03 · Mang vào phòng thi</p>
-          <h2>Chín quy tắc nhớ nhanh.</h2>
-          <p><strong>Thì:</strong> since + mốc, for + khoảng · <strong>Giới từ:</strong> at + giờ, on + ngày, in + tháng/năm · <strong>Từ loại:</strong> sau tính từ thường là danh từ, sau động từ thường là trạng từ · <strong>Đọc hiểu:</strong> đáp án phải có bằng chứng trong bài · <strong>Phát âm:</strong> xét âm cuối, không xét chữ cuối · <strong>Viết lại:</strong> đổi cấu trúc, giữ nguyên nghĩa · <strong>Từ vựng:</strong> học cả cụm, không học từ đơn · <strong>Cloze:</strong> đọc cả câu, kiểm tra ngữ pháp và nghĩa · <strong>Biển báo:</strong> bám từ khoá No, Only, Free, Required.</p>
+          <h2>Mười quy tắc nhớ nhanh.</h2>
+          <p><strong>Thì:</strong> since + mốc, for + khoảng · <strong>Giới từ:</strong> at + giờ, on + ngày, in + tháng/năm · <strong>Từ loại:</strong> sau tính từ thường là danh từ, sau động từ thường là trạng từ · <strong>Đọc hiểu:</strong> đáp án phải có bằng chứng trong bài · <strong>Phát âm:</strong> xét âm cuối, không xét chữ cuối · <strong>Viết lại:</strong> đổi cấu trúc, giữ nguyên nghĩa · <strong>Từ vựng:</strong> học cả cụm, không học từ đơn · <strong>Cloze:</strong> đọc cả câu, kiểm tra ngữ pháp và nghĩa · <strong>Biển báo:</strong> bám từ khoá No, Only, Free, Required · <strong>Ngữ pháp:</strong> nhìn từ đứng trước và cấu trúc cần điền.</p>
         </div>
         <div class="home-band-actions">
           <a class="btn btn-primary" href={tenses.href}>Ôn 12 thì</a>
@@ -322,6 +340,7 @@ const signs = getSheet('signs');
           <a class="btn btn-ghost" href={vocabulary.href}>Luyện từ vựng</a>
           <a class="btn btn-ghost" href={cloze.href}>Luyện cloze</a>
           <a class="btn btn-ghost" href={signs.href}>Luyện biển báo</a>
+          <a class="btn btn-ghost" href={grammar.href}>Luyện ngữ pháp</a>
         </div>
       </div>
     </div>

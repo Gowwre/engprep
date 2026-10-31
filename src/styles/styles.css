@@ -45,6 +45,10 @@
   --slate-bg: #e6eef2;
   --slate-line: #bfd2dc;
 
+  --berry: #8a3d52;
+  --berry-bg: #f4e4e8;
+  --berry-line: #ddb8c2;
+
   --gold: #e0a92f;
   --gold-bg: #fbf1d3;
   --gold-ink: #775400;
@@ -107,6 +111,10 @@
   --slate: #9ec4d6;
   --slate-bg: #1b2a32;
   --slate-line: #36515f;
+
+  --berry: #e0a3b3;
+  --berry-bg: #351d25;
+  --berry-line: #68404d;
 
   --gold: #f0c05b;
   --gold-bg: #352c14;
@@ -3480,6 +3488,9 @@ h4 {
     --slate: #34505f;
     --slate-bg: #eef4f7;
     --slate-line: #c3d4dc;
+    --berry: #743247;
+    --berry-bg: #f9eef1;
+    --berry-line: #e3c6cf;
     --gold: #b17d10;
     --gold-bg: #fbf4de;
     --gold-ink: #6b4b00;

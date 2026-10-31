@@ -9,7 +9,8 @@ export type SheetSlug =
   | 'sentence-transformation'
   | 'vocabulary'
   | 'cloze'
-  | 'signs';
+  | 'signs'
+  | 'grammar';
 
 export interface SheetAction {
   label: string;
@@ -61,7 +62,8 @@ export interface Sheet {
     | 'write'
     | 'vocab'
     | 'cloze'
-    | 'signs';
+    | 'signs'
+    | 'grammar';
   lead: string;
   preview: string[];
   highlights: SheetHighlight[];
@@ -500,6 +502,55 @@ export const sheets: Sheet[] = [
       actions: [
         { label: 'Xem bản đồ biển báo', href: '#map', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 16 câu luyện tập', href: '#quiz', variant: 'ghost', icon: 'chevron' }
+      ]
+    }
+  },
+  {
+    slug: 'grammar',
+    href: sitePath('grammar/'),
+    navLabel: 'Ngữ pháp',
+    shortTitle: 'Grammar',
+    title: 'Grammar essentials',
+    metaTitle: 'Grammar Essentials (Ngữ pháp cốt lõi) — Cheatsheet lớp 9 | EngPrep',
+    metaDescription:
+      'Cheatsheet ngữ pháp cốt lõi tiếng Anh lớp 9: từ nối, mệnh đề quan hệ, so sánh, cấu trúc động từ, wish, câu hỏi đuôi, lượng từ, cấu trúc nhờ vả, 10 bẫy đề và 18 câu luyện tập.',
+    cardNo: '10 / GRAMMAR',
+    badge: '4 nhóm lõi',
+    accent: 'grammar',
+    lead: 'Từ nối, mệnh đề quan hệ, so sánh và cấu trúc động từ: bốn nhóm ngữ pháp lặp lại ở câu 5–12.',
+    preview: ['however', 'who / which', 'more crowded', 'encourage sb to V'],
+    highlights: [
+      { text: 'Bản đồ 4 nhóm ngữ pháp lõi và cách nhận diện' },
+      { text: 'Bảng từ nối, mệnh đề quan hệ và so sánh' },
+      { strong: 'Cấu trúc động từ', text: ' cùng 4 điểm ngữ pháp phụ dễ lấy' },
+      { text: '10 bẫy đề và 18 câu luyện tập' }
+    ],
+    meta: '4 nhóm lõi · 18 câu hỏi',
+    questionCount: 18,
+    sections: [
+      { id: 'map', label: 'Bản đồ' },
+      { id: 'connectors', label: 'Từ nối' },
+      { id: 'relatives', label: 'Mệnh đề quan hệ' },
+      { id: 'comparisons', label: 'So sánh' },
+      { id: 'verb-patterns', label: 'Mẫu động từ' },
+      { id: 'quick-points', label: 'Điểm phụ' },
+      { id: 'traps', label: 'Bẫy đề' },
+      { id: 'quiz', label: 'Luyện tập' }
+    ],
+    hero: {
+      eyebrow: 'Global Success 9 · Ôn thi vào 10',
+      titleHtml:
+        'Ngữ pháp cốt lõi,<br>chọn đúng <span class="marker">cấu trúc</span>.',
+      lead: 'Từ nối, mệnh đề quan hệ, so sánh và cấu trúc động từ chiếm phần lớn câu 5–12. Trang này gom bảng tra nhanh, mẫu câu, 10 bẫy đề và 18 câu luyện tập.',
+      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
+      stats: [
+        { value: '4', label: 'nhóm lõi' },
+        { value: '4', label: 'điểm phụ' },
+        { value: '18', label: 'câu luyện tập' }
+      ],
+      actions: [
+        { label: 'Xem bản đồ ngữ pháp', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Làm 18 câu luyện tập', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
   }

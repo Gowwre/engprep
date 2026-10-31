@@ -1,0 +1,1073 @@
+/* =========================================================
+   EngPrep — Grammar essentials (Ngữ pháp cốt lõi)
+   Page-specific styles layered on styles.css
+   ========================================================= */
+
+/* ---------- Hero ---------- */
+
+.gr-stack {
+  height: 420px;
+}
+
+.gr-stack .stack-card-back {
+  background: var(--berry-bg);
+}
+
+.gr-stack .stack-card-mid {
+  background: var(--gold-bg);
+}
+
+.gr-stack .stack-card-front {
+  padding-top: 64px;
+}
+
+.gr-stack .mini-label {
+  color: var(--berry);
+}
+
+.gr-mini-case {
+  padding: 7px 9px;
+  margin-top: 7px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--berry);
+  border-radius: 7px;
+  background: var(--surface-2);
+}
+
+.gr-mini-relative {
+  border-left-color: var(--jade);
+}
+
+.gr-mini-comparison {
+  border-left-color: var(--gold-ink);
+}
+
+.gr-mini-tag {
+  display: block;
+  margin-bottom: 1px;
+  color: var(--berry);
+  font-size: 0.48rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.gr-mini-relative .gr-mini-tag {
+  color: var(--jade);
+}
+
+.gr-mini-comparison .gr-mini-tag {
+  color: var(--gold-ink);
+}
+
+.gr-mini-case p {
+  margin: 0;
+  font-size: 0.74rem;
+  line-height: 1.45;
+}
+
+.gr-mini-case mark {
+  color: var(--berry);
+  background: var(--berry-bg);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+
+.gr-mini-why {
+  padding-top: 8px;
+  margin: auto 0 0;
+  border-top: 1px dashed var(--line);
+  color: var(--muted);
+  font-size: 0.64rem;
+  line-height: 1.45;
+}
+
+.gr-stack .mini-chips {
+  margin-top: 9px;
+}
+
+/* ---------- Section 01: map ---------- */
+
+.gr-map-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.gr-map-card {
+  --map: var(--clay);
+  --map-bg: var(--clay-bg);
+  --map-line: var(--clay-line);
+  display: flex;
+  flex-direction: column;
+  min-height: 255px;
+  padding: 17px 16px 15px;
+  border: 1.5px solid var(--border-strong);
+  border-top: 5px solid var(--map);
+  border-radius: 15px;
+  background: var(--surface);
+  box-shadow: 4px 4px 0 var(--shadow);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.gr-map-card:hover {
+  box-shadow: 6px 6px 0 var(--shadow);
+  transform: translateY(-3px);
+}
+
+.gr-map-card.gr-map-relative {
+  --map: var(--jade);
+  --map-bg: var(--jade-bg);
+  --map-line: var(--jade-line);
+}
+
+.gr-map-card.gr-map-comparison {
+  --map: var(--gold-ink);
+  --map-bg: var(--gold-bg);
+  --map-line: var(--gold);
+}
+
+.gr-map-card.gr-map-pattern {
+  --map: var(--indigo);
+  --map-bg: var(--indigo-bg);
+  --map-line: var(--indigo-line);
+}
+
+.gr-map-card h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+.gr-map-card .map-rule strong {
+  color: var(--ink);
+}
+
+.gr-map-card .map-rule code {
+  padding: 0 3px;
+  border: 1px solid var(--map-line);
+  border-radius: 3px;
+  color: var(--ink);
+  background: var(--map-bg);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+}
+
+.gr-map-card .map-chips {
+  margin-bottom: 10px;
+}
+
+.gr-map-question {
+  padding-top: 8px;
+  margin: 0 0 11px;
+  border-top: 1px dashed var(--line);
+  color: var(--muted);
+  font-size: 0.64rem;
+  line-height: 1.45;
+}
+
+.gr-extra-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border: 1.5px dashed var(--berry-line);
+  border-radius: 12px;
+  background: var(--berry-bg);
+}
+
+.gr-extra-strip p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.gr-extra-strip strong {
+  color: var(--ink);
+}
+
+.gr-extra-strip code {
+  padding: 1px 4px;
+  border: 1px solid var(--berry-line);
+  border-radius: 4px;
+  color: var(--berry);
+  background: var(--surface);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+}
+
+.gr-extra-strip a {
+  flex-shrink: 0;
+  color: var(--berry);
+  font-size: 0.7rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* ---------- Tables ---------- */
+
+.gr-table-wrap {
+  overflow-x: auto;
+  border: 1.5px solid var(--border-strong);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: 4px 4px 0 var(--shadow);
+  scrollbar-width: thin;
+}
+
+.gr-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  font-size: 0.77rem;
+}
+
+.gr-table thead th {
+  padding: 11px 14px;
+  border-bottom: 1.5px solid var(--line);
+  color: var(--muted);
+  background: var(--surface-2);
+  font-size: 0.58rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.gr-table td,
+.gr-table tbody th {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  line-height: 1.55;
+  text-align: left;
+  vertical-align: top;
+}
+
+.gr-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.gr-table tbody tr:hover {
+  background: var(--surface-2);
+}
+
+.gr-table tbody th {
+  width: 125px;
+  white-space: nowrap;
+}
+
+.gr-table td:nth-child(2) {
+  width: 260px;
+}
+
+.gr-table td:nth-child(3) {
+  width: 300px;
+}
+
+.gr-table code {
+  padding: 1px 5px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface-2);
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  white-space: nowrap;
+}
+
+.gr-relative-table tbody th {
+  width: 90px;
+}
+
+.gr-relative-table td:nth-child(2) {
+  width: 110px;
+}
+
+.gr-relative-table td:nth-child(3) {
+  width: 250px;
+}
+
+.gr-cat {
+  display: inline-block;
+  padding: 2px 7px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.55rem;
+  font-weight: 800;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.gr-cat-add {
+  border-color: var(--jade-line);
+  color: var(--jade);
+  background: var(--jade-bg);
+}
+
+.gr-cat-contrast {
+  border-color: var(--clay-line);
+  color: var(--clay);
+  background: var(--clay-bg);
+}
+
+.gr-cat-cause {
+  border-color: var(--gold);
+  color: var(--gold-ink);
+  background: var(--gold-bg);
+}
+
+.gr-cat-result {
+  border-color: var(--indigo-line);
+  color: var(--indigo);
+  background: var(--indigo-bg);
+}
+
+.gr-cat-choice {
+  border-color: var(--teal-line);
+  color: var(--teal);
+  background: var(--teal-bg);
+}
+
+.gr-cat-time {
+  border-color: var(--plum-line);
+  color: var(--plum);
+  background: var(--plum-bg);
+}
+
+.gr-note-card,
+.gr-pattern-note {
+  padding: 12px 16px;
+  margin-top: 14px;
+  border: 1.5px solid var(--line);
+  border-left: 4px solid var(--berry);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.6;
+}
+
+.gr-note-card p,
+.gr-pattern-note p {
+  margin: 0;
+}
+
+.gr-note-card strong,
+.gr-pattern-note strong {
+  color: var(--ink);
+}
+
+.gr-note-card code,
+.gr-pattern-note code {
+  padding: 1px 4px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface-2);
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+}
+
+/* ---------- Relatives: compare ---------- */
+
+.gr-mini-label {
+  margin: 0 0 3px;
+  color: var(--berry);
+  font-size: 0.55rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.gr-compare-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.gr-compare-card {
+  padding: 16px 18px;
+  border: 1.5px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.gr-compare-card-alt {
+  border-color: var(--berry-line);
+  background: var(--berry-bg);
+}
+
+.gr-compare-card h3 {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.gr-check-list {
+  display: grid;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.gr-check-list li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.55;
+}
+
+.gr-check-list li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--berry);
+  content: "✓";
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.gr-check-list code {
+  padding: 0 3px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--surface-2);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+}
+
+.gr-compare-card-alt .gr-check-list code {
+  background: var(--surface);
+}
+
+/* ---------- Comparisons ---------- */
+
+.gr-formula-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.gr-formula-card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 15px;
+  border: 1.5px solid var(--line);
+  border-top: 4px solid var(--berry);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 4px 4px 0 var(--shadow);
+}
+
+.gr-formula-card h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.gr-formula {
+  padding: 9px 10px;
+  margin: 9px 0 0;
+  border: 1px solid var(--berry-line);
+  border-radius: 7px;
+  background: var(--berry-bg);
+  line-height: 1.75;
+}
+
+.gr-formula code {
+  color: var(--berry);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.gr-formula-desc {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+.gr-formula-eg {
+  padding-top: 8px;
+  margin: auto 0 0;
+  border-top: 1px dashed var(--line);
+  color: var(--muted);
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+.gr-formula-eg strong {
+  color: var(--berry);
+}
+
+.gr-compare-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.gr-irregular-card,
+.gr-compare-note {
+  padding: 16px 18px;
+  border: 1.5px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.gr-compare-note {
+  display: flex;
+  flex-direction: column;
+}
+
+.gr-irregular-card h3,
+.gr-compare-note h3 {
+  margin: 0 0 9px;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.gr-irregular-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.7rem;
+}
+
+.gr-irregular-table th {
+  padding: 5px 6px;
+  border-bottom: 1.5px solid var(--line);
+  color: var(--muted);
+  font-size: 0.54rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.gr-irregular-table td {
+  padding: 5px 6px;
+  border-bottom: 1px solid var(--line);
+  line-height: 1.45;
+}
+
+.gr-irregular-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.gr-irregular-table td:first-child {
+  color: var(--muted);
+}
+
+.gr-compare-mini {
+  padding-top: 8px;
+  margin: auto 0 0;
+  border-top: 1px dashed var(--line);
+  color: var(--muted);
+  font-size: 0.67rem;
+  line-height: 1.5;
+}
+
+.gr-compare-mini strong {
+  color: var(--ink);
+}
+
+.gr-compare-mini code {
+  padding: 0 3px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--surface-2);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+}
+
+/* ---------- Verb patterns ---------- */
+
+.gr-pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.gr-pattern-card {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px 14px;
+  border: 1.5px solid var(--line);
+  border-top: 4px solid var(--clay);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.gr-pattern-ing {
+  border-top-color: var(--jade);
+}
+
+.gr-pattern-bare {
+  border-top-color: var(--gold-ink);
+}
+
+.gr-pattern-change {
+  border-top-color: var(--indigo);
+}
+
+.gr-pattern-card h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.gr-pattern-card h3 code {
+  color: var(--berry);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.gr-verb-list {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.61rem;
+  line-height: 1.7;
+}
+
+.gr-pattern-eg {
+  padding-top: 8px;
+  margin: auto 0 0;
+  border-top: 1px dashed var(--line);
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.55;
+}
+
+.gr-pattern-eg strong {
+  color: var(--ink);
+}
+
+/* ---------- Quick points ---------- */
+
+.gr-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.gr-quick-card {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px 14px;
+  border: 1.5px solid var(--line);
+  border-top: 4px solid var(--berry);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.gr-quick-card:nth-child(2) {
+  border-top-color: var(--jade);
+}
+
+.gr-quick-card:nth-child(3) {
+  border-top-color: var(--gold-ink);
+}
+
+.gr-quick-card:nth-child(4) {
+  border-top-color: var(--indigo);
+}
+
+.gr-quick-card h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.gr-quick-formula {
+  padding: 7px 8px;
+  margin: 8px 0 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface-2);
+  line-height: 1.65;
+}
+
+.gr-quick-formula code {
+  color: var(--berry);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+}
+
+.gr-quick-desc {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 0.65rem;
+  line-height: 1.5;
+}
+
+.gr-quick-eg {
+  padding-top: 7px;
+  margin: auto 0 0;
+  border-top: 1px dashed var(--line);
+  color: var(--muted);
+  font-size: 0.67rem;
+  line-height: 1.5;
+}
+
+.gr-quick-eg strong {
+  color: var(--berry);
+}
+
+/* ---------- Quiz prompts ---------- */
+
+.gr-quiz-context {
+  padding: 11px 14px;
+  margin-bottom: 16px;
+  border: 1.5px solid var(--line);
+  border-left: 4px solid var(--berry);
+  border-radius: 8px;
+  background: var(--surface-2);
+  font-size: 0.84rem;
+  line-height: 1.7;
+}
+
+.gr-quiz-context p {
+  margin: 0;
+}
+
+.gr-quiz-context .gap,
+.gr-review-context .gap {
+  border-color: var(--berry);
+}
+
+.gr-review-context {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1100px) {
+  .gr-map-grid,
+  .gr-pattern-grid,
+  .gr-quick-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gr-map-card {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .gr-formula-grid,
+  .gr-compare-grid,
+  .gr-compare-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .gr-extra-strip {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+}
+
+@media (max-width: 620px) {
+  .gr-stack {
+    height: 405px;
+  }
+
+  .gr-map-grid,
+  .gr-pattern-grid,
+  .gr-quick-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gr-map-card {
+    padding: 16px 15px 14px;
+  }
+}
+
+/* ---------- Print ---------- */
+
+@media print {
+  .gr-map-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+  }
+
+  .gr-map-card {
+    min-height: 0 !important;
+    padding: 5px 6px !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+
+  .gr-map-card h3 {
+    font-size: 7.2pt;
+  }
+
+  .gr-map-card .map-rule {
+    font-size: 5.2pt;
+    line-height: 1.35;
+  }
+
+  .gr-map-card .map-chips {
+    gap: 2px;
+    margin: 4px 0 4px;
+  }
+
+  .gr-map-card .map-chips span {
+    padding: 0 3px;
+    font-size: 4.4pt;
+  }
+
+  .gr-map-question {
+    padding-top: 3px;
+    margin-bottom: 4px;
+    font-size: 4.6pt;
+  }
+
+  .gr-extra-strip {
+    gap: 5px;
+    padding: 5px 7px;
+    margin-top: 4px;
+    border-radius: 6px;
+  }
+
+  .gr-extra-strip p {
+    font-size: 5.4pt;
+  }
+
+  .gr-extra-strip a {
+    font-size: 5pt;
+  }
+
+  .gr-table-wrap {
+    overflow: visible !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+  }
+
+  .gr-table {
+    min-width: 0 !important;
+  }
+
+  .gr-table thead th {
+    padding: 4px 6px;
+    font-size: 4.9pt;
+  }
+
+  .gr-table td,
+  .gr-table tbody th {
+    padding: 4px 6px;
+    font-size: 5.6pt;
+  }
+
+  .gr-table tbody th {
+    width: 80px;
+  }
+
+  .gr-table td:nth-child(2) {
+    width: 135px;
+  }
+
+  .gr-table td:nth-child(3) {
+    width: 145px;
+  }
+
+  .gr-table code {
+    font-size: 5pt;
+  }
+
+  .gr-relative-table tbody th {
+    width: 48px;
+  }
+
+  .gr-relative-table td:nth-child(2) {
+    width: 60px;
+  }
+
+  .gr-relative-table td:nth-child(3) {
+    width: 120px;
+  }
+
+  .gr-cat {
+    padding: 0 4px;
+    font-size: 4.4pt;
+  }
+
+  .gr-note-card,
+  .gr-pattern-note {
+    padding: 5px 7px;
+    margin-top: 5px;
+    font-size: 5.4pt;
+  }
+
+  .gr-compare-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+    margin-top: 5px;
+  }
+
+  .gr-compare-card {
+    padding: 6px 7px;
+    border-radius: 6px;
+    break-inside: avoid;
+  }
+
+  .gr-compare-card h3 {
+    margin-bottom: 3px;
+    font-size: 7pt;
+  }
+
+  .gr-check-list {
+    gap: 2px;
+  }
+
+  .gr-check-list li {
+    padding-left: 9px;
+    font-size: 5.1pt;
+  }
+
+  .gr-check-list li::before {
+    font-size: 4.8pt;
+  }
+
+  .gr-formula-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+  }
+
+  .gr-formula-card {
+    padding: 6px 7px;
+    border-radius: 6px;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+
+  .gr-formula-card h3 {
+    font-size: 7pt;
+  }
+
+  .gr-formula {
+    padding: 4px 5px;
+    margin-top: 3px;
+  }
+
+  .gr-formula code {
+    font-size: 4.8pt;
+  }
+
+  .gr-formula-desc {
+    margin-top: 3px;
+    font-size: 5pt;
+  }
+
+  .gr-formula-eg {
+    padding-top: 3px;
+    font-size: 5.1pt;
+  }
+
+  .gr-compare-bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+    margin-top: 4px;
+  }
+
+  .gr-compare-mini {
+    padding-top: 3px;
+    font-size: 4.8pt;
+  }
+
+  .gr-irregular-card,
+  .gr-compare-note {
+    padding: 6px 7px;
+    border-radius: 6px;
+    break-inside: avoid;
+  }
+
+  .gr-irregular-card h3,
+  .gr-compare-note h3 {
+    margin-bottom: 3px;
+    font-size: 7pt;
+  }
+
+  .gr-irregular-table {
+    font-size: 5pt;
+  }
+
+  .gr-irregular-table th,
+  .gr-irregular-table td {
+    padding: 2px 4px;
+  }
+
+  .gr-pattern-grid,
+  .gr-quick-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+  }
+
+  .gr-pattern-card,
+  .gr-quick-card {
+    padding: 5px 6px;
+    border-radius: 5px;
+    break-inside: avoid;
+  }
+
+  .gr-pattern-card h3,
+  .gr-quick-card h3 {
+    font-size: 6.6pt;
+  }
+
+  .gr-pattern-card h3 code {
+    font-size: 5.6pt;
+  }
+
+  .gr-verb-list {
+    margin-top: 3px;
+    font-size: 4.6pt;
+    line-height: 1.4;
+  }
+
+  .gr-pattern-eg,
+  .gr-quick-eg {
+    padding-top: 3px;
+    font-size: 4.9pt;
+  }
+
+  .gr-quick-formula {
+    padding: 3px 4px;
+    margin-top: 3px;
+  }
+
+  .gr-quick-formula code {
+    font-size: 4.5pt;
+  }
+
+  .gr-quick-desc {
+    margin-top: 3px;
+    font-size: 4.8pt;
+  }
+}
