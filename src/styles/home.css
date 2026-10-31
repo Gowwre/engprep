@@ -636,7 +636,7 @@
 
 .home-band {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 480px);
   align-items: center;
   gap: 30px;
   padding: 32px 34px;
@@ -674,17 +674,19 @@
 
 /* ---------- Responsive ---------- */
 
-@media (max-width: 980px) {
-  .path-grid {
-    grid-template-columns: 1fr;
-  }
-
+@media (max-width: 1180px) {
   .home-band {
     grid-template-columns: 1fr;
   }
 
   .home-band-actions {
     justify-content: flex-start;
+  }
+}
+
+@media (max-width: 980px) {
+  .path-grid {
+    grid-template-columns: 1fr;
   }
 }
 
