@@ -76,6 +76,11 @@
   background: var(--cocoa-bg);
 }
 
+.hub-sheet--signs {
+  border-top: 6px solid var(--slate);
+  background: var(--slate-bg);
+}
+
 .hub-sheet--tenses .mini-example,
 .hub-sheet--prep .mini-example,
 .hub-sheet--tenses .mini-chips,
@@ -83,27 +88,27 @@
   display: none;
 }
 
-/* Four sheets: a clean 2 × 2 collage instead of a deep stack. */
+/* Nine sheets: a 3 × 3 collage of compact covers. */
 
-.hub-stack--eight {
+.hub-stack--nine {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  width: min(100%, 460px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  width: min(100%, 520px);
   height: auto;
 }
 
-.hub-stack--eight .hub-sheet {
+.hub-stack--nine .hub-sheet {
   position: relative;
   inset: auto;
   width: auto;
   height: 100%;
-  padding: 16px 15px 14px;
-  border-radius: 16px;
-  box-shadow: 5px 5px 0 var(--shadow);
+  padding: 14px 13px 13px;
+  border-radius: 14px;
+  box-shadow: 4px 4px 0 var(--shadow);
 }
 
-.hub-stack--eight .hub-sheet--tenses {
+.hub-stack--nine .hub-sheet--tenses {
   top: auto;
   right: auto;
   z-index: auto;
@@ -111,7 +116,7 @@
   transform: rotate(-1.2deg);
 }
 
-.hub-stack--eight .hub-sheet--prep {
+.hub-stack--nine .hub-sheet--prep {
   top: auto;
   left: auto;
   z-index: auto;
@@ -119,7 +124,7 @@
   transform: rotate(1.4deg);
 }
 
-.hub-stack--eight .hub-sheet--word {
+.hub-stack--nine .hub-sheet--word {
   top: auto;
   right: auto;
   z-index: auto;
@@ -127,54 +132,54 @@
   transform: rotate(1deg);
 }
 
-.hub-stack--eight .hub-sheet--reading {
+.hub-stack--nine .hub-sheet--reading {
   transform: rotate(-1.6deg);
 }
 
-.hub-stack--eight .hub-sheet--sound {
+.hub-stack--nine .hub-sheet--sound {
   transform: rotate(-0.8deg);
 }
 
-.hub-stack--eight .hub-sheet--write {
+.hub-stack--nine .hub-sheet--write {
   transform: rotate(1.2deg);
 }
 
-.hub-stack--eight .hub-sheet--vocab {
+.hub-stack--nine .hub-sheet--vocab {
   transform: rotate(-0.7deg);
 }
 
-.hub-stack--eight .hub-sheet--cloze {
+.hub-stack--nine .hub-sheet--cloze {
   transform: rotate(1.4deg);
 }
 
-.hub-stack--eight .hub-sheet-title {
-  font-size: 1.55rem;
+.hub-stack--nine .hub-sheet--signs {
+  transform: rotate(-1deg);
 }
 
-.hub-stack--eight .hub-sheet-formula {
+.hub-stack--nine .hub-sheet-kicker {
+  font-size: 0.5rem;
+  letter-spacing: 0.11em;
+}
+
+.hub-stack--nine .hub-sheet-title {
+  margin-top: 4px;
+  font-size: 1.22rem;
+  line-height: 1.05;
+}
+
+.hub-stack--nine .hub-sheet-formula {
   margin-top: 7px;
-  font-size: 1.12rem;
-  line-height: 1.28;
+  font-size: 0.84rem;
+  line-height: 1.32;
 }
 
-.hub-stack--eight .mini-rule {
-  margin: 9px 0 7px;
-}
-
-.hub-stack--eight .mini-chips {
-  margin-top: 0;
-}
-
-.hub-stack--eight .mini-chips span {
-  padding: 2px 5px;
-  font-size: 0.58rem;
-}
-
-.hub-stack--eight .mini-example {
+.hub-stack--nine .mini-rule,
+.hub-stack--nine .mini-chips,
+.hub-stack--nine .mini-example {
   display: none;
 }
 
-.hub-stack--eight + .sticky-note {
+.hub-stack--nine + .sticky-note {
   display: none;
 }
 
@@ -230,6 +235,10 @@
   color: var(--cocoa);
 }
 
+.hub-sheet--signs .hub-sheet-title {
+  color: var(--slate);
+}
+
 .hub-sheet-formula {
   margin: 10px 0 0;
   font-family: var(--font-display);
@@ -279,11 +288,6 @@
 .hero-actions--home .btn {
   grid-column: span 2;
   padding-inline: 12px;
-}
-
-.hero-actions--home .btn:nth-child(7),
-.hero-actions--home .btn:nth-child(8) {
-  grid-column: span 3;
 }
 
 /* ---------- Resource cards ---------- */
@@ -358,6 +362,12 @@
   --accent: var(--cocoa);
   --accent-bg: var(--cocoa-bg);
   --accent-line: var(--cocoa-line);
+}
+
+.hub-card--signs {
+  --accent: var(--slate);
+  --accent-bg: var(--slate-bg);
+  --accent-line: var(--slate-line);
 }
 
 .hub-card.hub-card--reading h3 {
@@ -630,7 +640,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .hub-grid .hub-card:last-child:nth-child(3n+1) {
+  .hub-grid .hub-card:last-child:nth-child(odd) {
     grid-column: 1 / -1;
   }
 }
@@ -656,26 +666,26 @@
     grid-column: auto;
   }
 
-  .hub-stack--eight {
+  .hub-stack--nine {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
     width: min(100%, 350px);
   }
 
-  .hub-stack--eight .hub-sheet {
+  .hub-stack--nine .hub-sheet {
     padding: 13px 12px 12px;
   }
 
-  .hub-stack--eight .hub-sheet-title {
-    font-size: 1.3rem;
+  .hub-stack--nine .hub-sheet--signs {
+    grid-column: 1 / -1;
   }
 
-  .hub-stack--eight .hub-sheet-formula {
-    font-size: 1rem;
+  .hub-stack--nine .hub-sheet-title {
+    font-size: 1.15rem;
   }
 
-  .hub-stack--eight .mini-chips span {
-    padding: 1px 4px;
-    font-size: 0.52rem;
+  .hub-stack--nine .hub-sheet-formula {
+    font-size: 0.88rem;
   }
 
   .hub-card {
@@ -692,25 +702,21 @@
 }
 
 @media (max-width: 400px) {
-  .hub-stack--eight {
+  .hub-stack--nine {
     gap: 8px;
     width: min(100%, 330px);
   }
 
-  .hub-stack--eight .hub-sheet {
+  .hub-stack--nine .hub-sheet {
     padding: 11px 10px 10px;
   }
 
-  .hub-stack--eight .hub-sheet-title {
-    font-size: 1.15rem;
+  .hub-stack--nine .hub-sheet-title {
+    font-size: 1.05rem;
   }
 
-  .hub-stack--eight .hub-sheet-formula {
-    font-size: 0.92rem;
-  }
-
-  .hub-stack--eight .mini-chips {
-    display: none;
+  .hub-stack--nine .hub-sheet-formula {
+    font-size: 0.82rem;
   }
 
   .hub-card-foot .btn {

@@ -1,0 +1,607 @@
+---
+import SheetLayout from '../layouts/SheetLayout.astro';
+---
+
+<SheetLayout slug="signs">
+  <Fragment slot="visual">
+    <div class="study-stack sg-stack">
+      <div class="stack-card stack-card-back"></div>
+      <div class="stack-card stack-card-mid"></div>
+      <div class="stack-card stack-card-front">
+        <p class="mini-label">Signs &amp; notices · 01</p>
+        <div class="sg-hero-sign">
+          <span class="sg-hero-sign-top">Notice</span>
+          <strong>NO<br>PARKING</strong>
+          <span class="sg-hero-sign-foot">Khu vực cấm đỗ xe</span>
+        </div>
+        <div class="sg-hero-chat">
+          <span class="sg-hero-chat-label">Communication</span>
+          <p><strong>Would you mind</strong> opening the window?</p>
+          <p class="sg-hero-chat-reply">— Not at all.</p>
+        </div>
+        <div class="mini-chips">
+          <span>prohibition</span><span>request</span><span>Not at all.</span>
+        </div>
+      </div>
+    </div>
+    <div class="sticky-note">
+      <span class="sticky-label">Mẹo thi</span>
+      <strong>Đọc từ khoá</strong>
+      <span>No, only, free, required…</span>
+    </div>
+    <div class="stamp">Ôn thi<br>vào 10<br><span>2026–2027</span></div>
+  </Fragment>
+
+  <!-- MAP -->
+  <section class="section" id="map">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">01 · Bản đồ</p>
+          <h2>Bốn nhóm biển báo.</h2>
+          <p>Mỗi biển báo hoặc thông báo trong đề đều thuộc một trong bốn nhóm này. Xác định nhóm trước, rồi mới đọc nghĩa chi tiết.</p>
+        </div>
+        <p class="section-aside"><span>4</span> nhóm biển<br><span>8</span> chức năng giao tiếp</p>
+      </div>
+
+      <div class="sg-map-grid">
+        <a class="sg-map-card sg-map-ban" href="#signs">
+          <p class="map-kicker">01 · Cấm</p>
+          <h3>Prohibition</h3>
+          <p class="map-rule">Điều bạn <strong>không được làm</strong>. Thường bắt đầu bằng <code>No</code>, <code>Do not</code> hoặc <code>Keep out</code>.</p>
+          <div class="map-chips">
+            <span>NO PARKING</span><span>DO NOT ENTER</span><span>KEEP OUT</span>
+          </div>
+          <span class="map-link">Xem bảng biển báo →</span>
+        </a>
+
+        <a class="sg-map-card sg-map-warning" href="#signs">
+          <p class="map-kicker">02 · Cảnh báo</p>
+          <h3>Warning</h3>
+          <p class="map-rule">Có <strong>nguy hiểm hoặc rủi ro</strong>. Cần cẩn thận, tránh xa hoặc chú ý khi đi lại.</p>
+          <div class="map-chips">
+            <span>WET FLOOR</span><span>MIND THE GAP</span><span>BEWARE OF DOG</span>
+          </div>
+          <span class="map-link">Xem bảng biển báo →</span>
+        </a>
+
+        <a class="sg-map-card sg-map-rule" href="#signs">
+          <p class="map-kicker">03 · Cho phép &amp; hướng dẫn</p>
+          <h3>Instruction</h3>
+          <p class="map-rule">Cho biết <strong>ai được làm gì hoặc đi lối nào</strong>: đẩy cửa, đi bên trái, chỉ nhân viên.</p>
+          <div class="map-chips">
+            <span>PUSH</span><span>KEEP LEFT</span><span>QUEUE HERE</span><span>STAFF ONLY</span>
+          </div>
+          <span class="map-link">Xem bảng biển báo →</span>
+        </a>
+
+        <a class="sg-map-card sg-map-info" href="#signs">
+          <p class="map-kicker">04 · Thông tin</p>
+          <h3>Information</h3>
+          <p class="map-rule">Giờ mở cửa, giá, điều kiện đặt chỗ hoặc tình trạng dịch vụ. Đọc kỹ <strong>con số</strong> và <strong>từ điều kiện</strong>.</p>
+          <div class="map-chips">
+            <span>FREE ENTRY</span><span>50% OFF</span><span>BOOKING REQUIRED</span>
+          </div>
+          <span class="map-link">Xem bảng biển báo →</span>
+        </a>
+      </div>
+
+      <p class="mini-note"><strong>Đừng đoán theo hình:</strong> đề thi thường chỉ in chữ. Hãy đọc đúng từ khoá và loại biển, vì đáp án sai hay đảo nghĩa hoặc thêm thông tin không có trên biển.</p>
+    </div>
+  </section>
+
+  <!-- STRATEGY -->
+  <section class="section section-alt" id="strategy">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">02 · Chiến lược</p>
+          <h2>Đọc một biển báo trong 20 giây.</h2>
+          <p>Với câu hỏi biển báo, đừng dịch cả câu. Hãy nhận diện nhóm, gạch từ khoá rồi diễn giải thành một câu ngắn.</p>
+        </div>
+        <p class="section-aside"><span>4</span> bước<br><span>20</span> giây / câu</p>
+      </div>
+
+      <div class="sg-step-grid">
+        <article class="sg-step">
+          <span class="sg-step-no" aria-hidden="true">01</span>
+          <h3>Nhận diện nhóm</h3>
+          <p>Cấm, cảnh báo, hướng dẫn hay thông tin? Nhóm biển quyết định kiểu đáp án đúng.</p>
+          <p class="sg-step-formula">prohibition · warning · instruction · information</p>
+        </article>
+
+        <article class="sg-step">
+          <span class="sg-step-no" aria-hidden="true">02</span>
+          <h3>Gạch từ khoá</h3>
+          <p>Chú ý <code>No</code>, <code>Only</code>, <code>Free</code>, <code>Required</code>, <code>Off</code>, <code>Out of order</code>.</p>
+          <p class="sg-step-formula">No · only · free · required · off</p>
+        </article>
+
+        <article class="sg-step">
+          <span class="sg-step-no" aria-hidden="true">03</span>
+          <h3>Diễn giải một câu</h3>
+          <p>Tự hỏi: “Ai được làm?”, “Được làm gì?”, “Không được làm gì?”, “Phải làm gì?” rồi trả lời thật ngắn.</p>
+          <p class="sg-step-formula">who · can / can’t / must</p>
+        </article>
+
+        <article class="sg-step">
+          <span class="sg-step-no" aria-hidden="true">04</span>
+          <h3>Loại đáp án sai</h3>
+          <p>Bỏ đáp án trái nghĩa, quá rộng hoặc thêm chi tiết không xuất hiện trên biển.</p>
+          <p class="sg-step-formula">opposite · too broad · not mentioned</p>
+        </article>
+      </div>
+
+      <div class="sg-keyword-strip" aria-label="Sáu từ khoá quyết định nghĩa của biển báo">
+        <div><code>NO</code><span>cấm</span></div>
+        <div><code>ONLY</code><span>chỉ dành cho</span></div>
+        <div><code>FREE</code><span>miễn phí</span></div>
+        <div><code>REQUIRED</code><span>bắt buộc</span></div>
+        <div><code>OFF</code><span>giảm giá</span></div>
+        <div><code>OUT OF ORDER</code><span>bị hỏng</span></div>
+      </div>
+
+      <p class="mini-note"><strong>Câu hỏi thường gặp:</strong> “What does the sign mean?”, “What should you do?”, “What is the notice about?”. Cả ba đều yêu cầu hiểu nghĩa, không phải đọc lại nguyên văn.</p>
+    </div>
+  </section>
+
+  <!-- SIGNS -->
+  <section class="section" id="signs">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">03 · Biển báo</p>
+          <h2>20 mẫu biển báo, thông báo.</h2>
+          <p>Đây là những mẫu xuất hiện nhiều nhất trong đề lớp 9. Cột cuối là bẫy thường gặp — đọc kỹ để không chọn đáp án đảo nghĩa.</p>
+        </div>
+        <p class="section-aside"><span>20</span> mẫu<br><span>4</span> nhóm</p>
+      </div>
+
+      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
+      <div class="sg-table-wrap">
+        <table class="sg-table">
+          <caption class="sr-only">Bảng 20 biển báo, thông báo thường gặp và nghĩa</caption>
+          <thead>
+            <tr>
+              <th scope="col">Biển / thông báo</th>
+              <th scope="col">Nhóm</th>
+              <th scope="col">Nghĩa</th>
+              <th scope="col">Bẫy thường gặp</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><code>NO PARKING</code></th>
+              <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
+              <td>Không được đỗ xe.</td>
+              <td>Không phải “có chỗ đỗ xe”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>NO SMOKING</code></th>
+              <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
+              <td>Không được hút thuốc.</td>
+              <td>Không phải “khu vực hút thuốc”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>DO NOT ENTER</code></th>
+              <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
+              <td>Không được đi vào.</td>
+              <td>Không phải “lối vào”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>KEEP OUT</code></th>
+              <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
+              <td>Không được lại gần hoặc vào khu vực này.</td>
+              <td>Không phải “giữ cửa mở”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>STAFF ONLY</code></th>
+              <td><span class="sg-cat sg-cat-ban">Giới hạn</span></td>
+              <td>Chỉ nhân viên được vào.</td>
+              <td>Không phải “mọi người đều được vào”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>DANGER: HIGH VOLTAGE</code></th>
+              <td><span class="sg-cat sg-cat-warning">Cảnh báo</span></td>
+              <td>Nguy hiểm: điện cao thế.</td>
+              <td>Không phải “ổ điện bình thường”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>WET FLOOR</code></th>
+              <td><span class="sg-cat sg-cat-warning">Cảnh báo</span></td>
+              <td>Sàn ướt, coi chừng trượt.</td>
+              <td>Không phải “sàn đã lau xong”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>MIND THE GAP</code></th>
+              <td><span class="sg-cat sg-cat-warning">Cảnh báo</span></td>
+              <td>Coi chừng khoảng trống.</td>
+              <td>Không phải “đứng chờ ở đây”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>BEWARE OF DOG</code></th>
+              <td><span class="sg-cat sg-cat-warning">Cảnh báo</span></td>
+              <td>Coi chừng chó.</td>
+              <td>Không phải “được mang chó vào”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>PUSH / PULL</code></th>
+              <td><span class="sg-cat sg-cat-rule">Hướng dẫn</span></td>
+              <td>Đẩy / kéo cửa.</td>
+              <td>Không phải “cấm mở cửa”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>KEEP LEFT</code></th>
+              <td><span class="sg-cat sg-cat-rule">Hướng dẫn</span></td>
+              <td>Đi bên trái.</td>
+              <td>Không phải “rẽ trái”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>QUEUE HERE</code></th>
+              <td><span class="sg-cat sg-cat-rule">Hướng dẫn</span></td>
+              <td>Xếp hàng tại đây.</td>
+              <td>Không phải “mua vé ở đây”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>USE OTHER DOOR</code></th>
+              <td><span class="sg-cat sg-cat-rule">Hướng dẫn</span></td>
+              <td>Dùng cửa khác.</td>
+              <td>Không phải “cửa này bị khóa vĩnh viễn”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>OPEN DAILY 8 A.M.–9 P.M.</code></th>
+              <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
+              <td>Mở hằng ngày từ 8 giờ đến 21 giờ.</td>
+              <td>Không phải “mở cả đêm”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>FREE ENTRY</code></th>
+              <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
+              <td>Vào cửa miễn phí.</td>
+              <td>Không phải “đồ ăn miễn phí”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>50% OFF</code></th>
+              <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
+              <td>Giảm 50% giá.</td>
+              <td>Không phải “mua 1 tặng 1”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>BOOKING REQUIRED</code></th>
+              <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
+              <td>Phải đặt trước.</td>
+              <td>Không phải “không cần đặt trước”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>OUT OF ORDER</code></th>
+              <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
+              <td>Máy hoặc hệ thống bị hỏng.</td>
+              <td>Không phải “hãy đặt hàng”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>SOLD OUT</code></th>
+              <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
+              <td>Hết vé hoặc hết hàng.</td>
+              <td>Không phải “đang bán”.</td>
+            </tr>
+            <tr>
+              <th scope="row"><code>NO FOOD OR DRINK</code></th>
+              <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
+              <td>Không mang đồ ăn hoặc đồ uống vào.</td>
+              <td>Không phải “chỉ cấm đồ ăn”.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mini-note"><strong>Quy tắc vàng:</strong> đáp án đúng là cách diễn đạt khác của biển, không phải câu dài hơn. Nếu đáp án nhắc đến một chi tiết không có trên biển, hãy loại ngay.</p>
+    </div>
+  </section>
+
+  <!-- COMMUNICATION -->
+  <section class="section section-alt" id="communication">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">04 · Giao tiếp</p>
+          <h2>Tám chức năng giao tiếp.</h2>
+          <p>Mỗi câu hỏi giao tiếp kiểm tra một chức năng: gợi ý, mời, xin lỗi, cảm ơn, nhờ, xin phép, động viên hoặc hỏi sức khoẻ. Hãy chọn câu đáp đúng chức năng, không chỉ đúng ngữ pháp.</p>
+        </div>
+        <p class="section-aside"><span>8</span> chức năng<br><span>1</span> quy tắc</p>
+      </div>
+
+      <div class="sg-comm-grid">
+        <article class="sg-comm-card">
+          <div class="sg-comm-head">
+            <span class="sg-comm-no" aria-hidden="true">01</span>
+            <p class="sg-comm-kicker">Gợi ý</p>
+          </div>
+          <h3>Suggestion</h3>
+          <p class="sg-comm-prompt"><code>Why don’t we + V?</code><br><code>How about + V-ing?</code><br><code>Shall we + V?</code></p>
+          <p class="sg-comm-reply"><span>Đáp:</span> Good idea. / That sounds great. / I’d love to, but…</p>
+          <p class="sg-comm-eg">Why don’t we recycle paper? — Good idea.</p>
+        </article>
+
+        <article class="sg-comm-card">
+          <div class="sg-comm-head">
+            <span class="sg-comm-no" aria-hidden="true">02</span>
+            <p class="sg-comm-kicker">Mời</p>
+          </div>
+          <h3>Invitation</h3>
+          <p class="sg-comm-prompt"><code>Would you like to + V?</code><br><code>Are you free + time?</code><br><code>Do you want to + V?</code></p>
+          <p class="sg-comm-reply"><span>Đáp:</span> I’d love to. Thanks. / I’m sorry, I can’t.</p>
+          <p class="sg-comm-eg">Would you like to join us? — I’d love to. Thanks.</p>
+        </article>
+
+        <article class="sg-comm-card">
+          <div class="sg-comm-head">
+            <span class="sg-comm-no" aria-hidden="true">03</span>
+            <p class="sg-comm-kicker">Xin lỗi</p>
+          </div>
+          <h3>Apology</h3>
+          <p class="sg-comm-prompt"><code>I’m sorry for + V-ing.</code><br><code>I’m sorry I’m late.</code><br><code>I apologize for + N/V-ing.</code></p>
+          <p class="sg-comm-reply"><span>Đáp:</span> That’s all right. / Never mind. / Don’t worry about it.</p>
+          <p class="sg-comm-eg">I’m sorry I’m late. — Never mind.</p>
+        </article>
+
+        <article class="sg-comm-card">
+          <div class="sg-comm-head">
+            <span class="sg-comm-no" aria-hidden="true">04</span>
+            <p class="sg-comm-kicker">Cảm ơn</p>
+          </div>
+          <h3>Thanks</h3>
+          <p class="sg-comm-prompt"><code>Thank you for + V-ing/N.</code><br><code>Thanks a lot.</code><br><code>I’m grateful for + N.</code></p>
+          <p class="sg-comm-reply"><span>Đáp:</span> You’re welcome. / Not at all. / It’s my pleasure.</p>
+          <p class="sg-comm-eg">Thank you for your help. — You’re welcome.</p>
+        </article>
+
+        <article class="sg-comm-card">
+          <div class="sg-comm-head">
+            <span class="sg-comm-no" aria-hidden="true">05</span>
+            <p class="sg-comm-kicker">Nhờ vả</p>
+          </div>
+          <h3>Request</h3>
+          <p class="sg-comm-prompt"><code>Can / Could you + V?</code><br><code>Would you mind + V-ing?</code></p>
+          <p class="sg-comm-reply"><span>Đáp:</span> Sure. / Of course. / Not at all. (đồng ý giúp)</p>
+          <p class="sg-comm-eg">Would you mind opening the window? — Not at all.</p>
+        </article>
+
+        <article class="sg-comm-card">
+          <div class="sg-comm-head">
+            <span class="sg-comm-no" aria-hidden="true">06</span>
+            <p class="sg-comm-kicker">Xin phép</p>
+          </div>
+          <h3>Permission</h3>
+          <p class="sg-comm-prompt"><code>May I + V?</code><br><code>Can I + V?</code><br><code>Is it OK if I + V?</code></p>
+          <p class="sg-comm-reply"><span>Đáp:</span> Go ahead. / Yes, of course. / I’m afraid you can’t.</p>
+          <p class="sg-comm-eg">May I use your phone? — I’m afraid you can’t.</p>
+        </article>
+
+        <article class="sg-comm-card">
+          <div class="sg-comm-head">
+            <span class="sg-comm-no" aria-hidden="true">07</span>
+            <p class="sg-comm-kicker">Động viên</p>
+          </div>
+          <h3>Encouragement</h3>
+          <p class="sg-comm-prompt"><code>Don’t worry.</code><br><code>You can do it.</code><br><code>Cheer up! / Keep trying!</code></p>
+          <p class="sg-comm-reply"><span>Đáp:</span> Thanks. I’ll try. / That’s very kind of you.</p>
+          <p class="sg-comm-eg">Don’t worry. You can do it! — Thanks. I’ll try.</p>
+        </article>
+
+        <article class="sg-comm-card">
+          <div class="sg-comm-head">
+            <span class="sg-comm-no" aria-hidden="true">08</span>
+            <p class="sg-comm-kicker">Sức khoẻ</p>
+          </div>
+          <h3>Health</h3>
+          <p class="sg-comm-prompt"><code>What’s the matter?</code><br><code>You look tired.</code><br><code>Bless you! / Get well soon.</code></p>
+          <p class="sg-comm-reply"><span>Đáp:</span> I have a headache. / I feel better now. / Thank you.</p>
+          <p class="sg-comm-eg">You look tired. — I have a headache.</p>
+        </article>
+      </div>
+
+      <p class="mini-note"><strong>Ba câu dễ nhầm:</strong> “Would you mind…?” + “Not at all.” là <strong>đồng ý giúp</strong> · “Why don’t we…?” là <strong>gợi ý</strong>, không phải hỏi nguyên nhân · “I’m afraid I can’t.” là <strong>từ chối lịch sự</strong>.</p>
+    </div>
+  </section>
+
+  <!-- SAMPLE -->
+  <section class="section" id="sample">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">05 · Đề mẫu</p>
+          <h2>Bốn câu, bốn kiểu suy luận.</h2>
+          <p>Đọc câu hỏi, tự chọn đáp án rồi mới xem giải thích. Hai câu đầu là biển báo, hai câu sau là giao tiếp.</p>
+        </div>
+        <p class="section-aside"><span>2</span> biển báo<br><span>2</span> giao tiếp</p>
+      </div>
+
+      <div class="sg-sample-grid">
+        <article class="sg-sample-card">
+          <div class="sg-sample-top">
+            <span class="sg-sample-tag">Biển báo · Cấm</span>
+            <span class="sg-sample-no" aria-hidden="true">01</span>
+          </div>
+          <div class="sg-sample-sign">
+            <span>Notice</span>
+            <strong>NO PARKING</strong>
+          </div>
+          <p class="sg-sample-q">What does the sign mean?</p>
+          <ol class="sg-sample-options">
+            <li>A. You can park here.</li>
+            <li class="is-correct">B. You must not park here.</li>
+            <li>C. Parking is free today.</li>
+            <li>D. You should park quickly.</li>
+          </ol>
+          <p class="sg-sample-why"><strong>B.</strong> <code>No + V-ing</code> = cấm làm gì. “Parking” ở đây là việc đỗ xe.</p>
+        </article>
+
+        <article class="sg-sample-card">
+          <div class="sg-sample-top">
+            <span class="sg-sample-tag">Thông báo · Điều kiện</span>
+            <span class="sg-sample-no" aria-hidden="true">02</span>
+          </div>
+          <div class="sg-sample-sign sg-sample-sign-soft">
+            <span>Notice</span>
+            <strong>BOOKING REQUIRED</strong>
+          </div>
+          <p class="sg-sample-q">What should you do?</p>
+          <ol class="sg-sample-options">
+            <li>A. Come at any time.</li>
+            <li class="is-correct">B. Book before you come.</li>
+            <li>C. Pay at the door.</li>
+            <li>D. Wait for a free table.</li>
+          </ol>
+          <p class="sg-sample-why"><strong>B.</strong> <code>Required</code> = bắt buộc; <code>booking</code> = việc đặt trước.</p>
+        </article>
+
+        <article class="sg-sample-card">
+          <div class="sg-sample-top">
+            <span class="sg-sample-tag">Giao tiếp · Nhờ vả</span>
+            <span class="sg-sample-no" aria-hidden="true">03</span>
+          </div>
+          <div class="sg-sample-context">
+            <p><strong>Mai:</strong> “Would you mind opening the window?”</p>
+            <p><strong>Nam:</strong> “______”</p>
+          </div>
+          <p class="sg-sample-q">Choose the best response.</p>
+          <ol class="sg-sample-options">
+            <li class="is-correct">A. Not at all.</li>
+            <li>B. Yes, I would.</li>
+            <li>C. You’re welcome.</li>
+            <li>D. Never mind.</li>
+          </ol>
+          <p class="sg-sample-why"><strong>A.</strong> “Not at all.” = không phiền, tức là đồng ý giúp. “You’re welcome.” trả lời cảm ơn.</p>
+        </article>
+
+        <article class="sg-sample-card">
+          <div class="sg-sample-top">
+            <span class="sg-sample-tag">Giao tiếp · Gợi ý</span>
+            <span class="sg-sample-no" aria-hidden="true">04</span>
+          </div>
+          <div class="sg-sample-context">
+            <p><strong>Lan:</strong> “Why don’t we join the clean-up campaign?”</p>
+            <p><strong>Hoa:</strong> “______”</p>
+          </div>
+          <p class="sg-sample-q">Choose the best response.</p>
+          <ol class="sg-sample-options">
+            <li>A. Because we are busy.</li>
+            <li class="is-correct">B. Good idea.</li>
+            <li>C. You’re welcome.</li>
+            <li>D. I’m sorry, I’m late.</li>
+          </ol>
+          <p class="sg-sample-why"><strong>B.</strong> “Why don’t we…?” là lời gợi ý, nên đáp “Good idea.”, không phải trả lời “Because…”.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAPS -->
+  <section class="section section-alt" id="traps">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">06 · Bẫy đề</p>
+          <h2>Mười lỗi hay mất điểm.</h2>
+          <p>Đọc câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc khi làm câu biển báo và giao tiếp.</p>
+        </div>
+        <p class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
+      </div>
+
+      <div class="trap-grid">
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>NO PARKING</strong> = có chỗ đỗ xe.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>NO PARKING</strong> = không được đỗ xe.</p></div>
+          <p class="trap-why">No + V-ing là cấm, không phải thông báo có dịch vụ.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>FREE ENTRY</strong> = đồ ăn miễn phí.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>FREE ENTRY</strong> = vào cửa miễn phí.</p></div>
+          <p class="trap-why">Entry là việc vào cửa; không nói gì đến đồ ăn.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>OUT OF ORDER</strong> = hãy đặt hàng.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>OUT OF ORDER</strong> = máy bị hỏng.</p></div>
+          <p class="trap-why">Out of order là tình trạng hỏng, không phải lệnh đặt hàng.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>50% OFF</strong> = mua 1 tặng 1.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>50% OFF</strong> = giảm 50% giá.</p></div>
+          <p class="trap-why">Off là giảm giá; không phải chương trình tặng hàng.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>BOOKING REQUIRED</strong> = không cần đặt trước.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>BOOKING REQUIRED</strong> = phải đặt trước.</p></div>
+          <p class="trap-why">Required là bắt buộc, ngược với “không cần”.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>STAFF ONLY</strong> = mọi người đều được vào.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>STAFF ONLY</strong> = chỉ nhân viên được vào.</p></div>
+          <p class="trap-why">Only giới hạn đối tượng; không phải lời mời cho tất cả.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>“Would you mind…?” — “Not at all.” = không đồng ý giúp.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>“Would you mind…?” — “Not at all.” = đồng ý giúp.</p></div>
+          <p class="trap-why">Not at all = không phiền, tức là sẵn lòng giúp.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>“Why don’t we…?” — “Because we are busy.”</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>“Why don’t we…?” — “Good idea.”</p></div>
+          <p class="trap-why">Đây là lời gợi ý, không phải câu hỏi nguyên nhân.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>“I’m afraid I can’t.” = tôi đang sợ.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>“I’m afraid I can’t.” = rất tiếc, tôi không thể.</p></div>
+          <p class="trap-why">Đây là cách từ chối lịch sự, không phải diễn tả nỗi sợ.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>“You’re welcome.” dùng để đáp lời xin lỗi.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>“You’re welcome.” dùng để đáp lời cảm ơn.</p></div>
+          <p class="trap-why">Đáp lời xin lỗi là “Never mind.” hoặc “That’s all right.”.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="section section-quiz" id="quiz">
+    <div class="container">
+      <div class="section-head section-head-center">
+        <div>
+          <p class="section-kicker">07 · Luyện tập</p>
+          <h2>8 biển báo, 8 tình huống giao tiếp.</h2>
+          <p>Mỗi câu có một biển báo hoặc một đoạn hội thoại ngắn. Chọn đáp án rồi xem giải thích.</p>
+        </div>
+      </div>
+
+      <p class="quiz-best" id="quiz-best" aria-live="polite">Điểm cao nhất của bạn: chưa có</p>
+
+      <div class="quiz-shell">
+        <div class="quiz-top">
+          <span class="quiz-step" id="quiz-step">Câu 1 / 16</span>
+          <div class="quiz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="16" aria-valuenow="1" aria-label="Tiến độ làm bài">
+            <span id="quiz-bar"></span>
+          </div>
+          <span class="quiz-score" id="quiz-score">0 đúng</span>
+        </div>
+        <div class="quiz-stage" id="quiz-stage" aria-live="polite"></div>
+      </div>
+
+      <noscript><p class="quiz-noscript">Bật JavaScript để làm bài luyện tập tương tác. Phần cheat sheet phía trên vẫn đọc được bình thường.</p></noscript>
+    </div>
+  </section>
+
+</SheetLayout>
+
+<script>
+  import '../scripts/signs.js';
+</script>

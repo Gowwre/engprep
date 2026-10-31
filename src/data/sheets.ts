@@ -8,7 +8,8 @@ export type SheetSlug =
   | 'pronunciation'
   | 'sentence-transformation'
   | 'vocabulary'
-  | 'cloze';
+  | 'cloze'
+  | 'signs';
 
 export interface SheetAction {
   label: string;
@@ -51,7 +52,16 @@ export interface Sheet {
   metaDescription: string;
   cardNo: string;
   badge: string;
-  accent: 'tenses' | 'prep' | 'word' | 'reading' | 'sound' | 'write' | 'vocab' | 'cloze';
+  accent:
+    | 'tenses'
+    | 'prep'
+    | 'word'
+    | 'reading'
+    | 'sound'
+    | 'write'
+    | 'vocab'
+    | 'cloze'
+    | 'signs';
   lead: string;
   preview: string[];
   highlights: SheetHighlight[];
@@ -441,6 +451,55 @@ export const sheets: Sheet[] = [
       actions: [
         { label: 'Xem bản đồ chỗ trống', href: '#map', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 12 câu điền khuyết', href: '#quiz', variant: 'ghost', icon: 'chevron' }
+      ]
+    }
+  },
+  {
+    slug: 'signs',
+    href: sitePath('signs/'),
+    navLabel: 'Biển báo',
+    shortTitle: 'Signs',
+    title: 'Signs, notices & communication',
+    metaTitle:
+      'Signs, Notices & Communication (Biển báo, giao tiếp) — Cheatsheet lớp 9 | EngPrep',
+    metaDescription:
+      'Cheatsheet biển báo, thông báo và giao tiếp tiếng Anh lớp 9: 4 nhóm biển báo, 20 mẫu thường gặp, 8 chức năng giao tiếp, 4 câu đề mẫu, 10 bẫy đề và 16 câu luyện tập có giải thích.',
+    cardNo: '09 / SIGNS',
+    badge: '4 nhóm biển',
+    accent: 'signs',
+    lead: 'Bốn nhóm biển báo, 20 mẫu thông báo và 8 chức năng giao tiếp thường gặp ở đề thi.',
+    preview: ['NO PARKING', 'FREE ENTRY', 'BOOKING REQUIRED', 'Would you mind…?'],
+    highlights: [
+      { text: 'Bản đồ 4 nhóm biển báo và cách nhận diện' },
+      { text: '20 mẫu biển báo, thông báo kèm nghĩa' },
+      { strong: '8 chức năng giao tiếp', text: ' với câu hỏi và cách đáp' },
+      { text: '10 bẫy đề và 16 câu luyện tập' }
+    ],
+    meta: '4 nhóm biển · 16 câu hỏi',
+    questionCount: 16,
+    sections: [
+      { id: 'map', label: 'Bản đồ' },
+      { id: 'strategy', label: 'Chiến lược' },
+      { id: 'signs', label: 'Biển báo' },
+      { id: 'communication', label: 'Giao tiếp' },
+      { id: 'sample', label: 'Đề mẫu' },
+      { id: 'traps', label: 'Bẫy đề' },
+      { id: 'quiz', label: 'Luyện tập' }
+    ],
+    hero: {
+      eyebrow: 'Global Success 9 · Ôn thi vào 10',
+      titleHtml:
+        'Biển báo &amp; giao tiếp,<br>đọc đúng <span class="marker">ý đề</span>.',
+      lead: 'Hai câu biển báo và hai câu giao tiếp trong mỗi đề — trọn 1 điểm. Trang này gom 4 nhóm biển báo, 20 mẫu thông báo, 8 chức năng giao tiếp và 16 câu luyện tập — kèm 10 bẫy đề.',
+      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
+      stats: [
+        { value: '4', label: 'nhóm biển' },
+        { value: '8', label: 'chức năng' },
+        { value: '16', label: 'câu luyện tập' }
+      ],
+      actions: [
+        { label: 'Xem bản đồ biển báo', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Làm 16 câu luyện tập', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
   }
