@@ -7,11 +7,12 @@ const prepositions = getSheet('prepositions');
 const wordForms = getSheet('word-forms');
 const reading = getSheet('reading');
 const pronunciation = getSheet('pronunciation');
+const sentenceTransformation = getSheet('sentence-transformation');
 ---
 
 <BaseLayout
-  title="EngPrep — Cheat sheet 12 thì, giới từ, word forms, reading & phát âm lớp 9"
-  description="Bộ cheat sheet tiếng Anh lớp 9: 12 thì, giới từ, word forms, reading comprehension, phát âm và trọng âm, bẫy đề và bài luyện tập có giải thích. Một chỗ ôn thi, in được khổ A4, dùng offline."
+  title="EngPrep — Cheat sheet 12 thì, giới từ, word forms, reading, phát âm & viết lại câu lớp 9"
+  description="Bộ cheat sheet tiếng Anh lớp 9: 12 thì, giới từ, word forms, reading comprehension, phát âm – trọng âm, viết lại câu, bẫy đề và bài luyện tập có giải thích. Một chỗ ôn thi, in được khổ A4, dùng offline."
   current="home"
 >
   <!-- HERO -->
@@ -19,8 +20,8 @@ const pronunciation = getSheet('pronunciation');
     <div class="container hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">Global Success 9 · Ôn thi vào 10</p>
-        <h1>Năm tờ cheat sheet,<br>một chỗ <span class="marker">ôn thi</span>.</h1>
-        <p class="hero-lead">12 thì, giới từ, word forms, reading comprehension và phát âm – trọng âm, gói gọn trong năm tờ ôn thi in được khổ A4. Công thức, dấu hiệu, bẫy đề và bài luyện tập có giải thích — tất cả ở cùng một nơi.</p>
+        <h1>Sáu tờ cheat sheet,<br>một chỗ <span class="marker">ôn thi</span>.</h1>
+        <p class="hero-lead">12 thì, giới từ, word forms, reading comprehension, phát âm – trọng âm và viết lại câu, gói gọn trong sáu tờ ôn thi in được khổ A4. Công thức, dấu hiệu, bẫy đề và bài luyện tập có giải thích — tất cả ở cùng một nơi.</p>
 
         <div class="hero-actions hero-actions--home">
           <a class="btn btn-primary" href={tenses.href}>
@@ -43,6 +44,10 @@ const pronunciation = getSheet('pronunciation');
             Phát âm
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
           </a>
+          <a class="btn btn-ghost" href={sentenceTransformation.href}>
+            Viết lại câu
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </a>
         </div>
 
         <ul class="hero-badges" aria-label="Thông tin bộ tài liệu">
@@ -59,7 +64,7 @@ const pronunciation = getSheet('pronunciation');
       </div>
 
       <div class="hero-visual" aria-hidden="true">
-        <div class="hub-stack hub-stack--five">
+        <div class="hub-stack hub-stack--six">
           <div class="hub-sheet hub-sheet--tenses">
             <span class="hub-sheet-kicker">Cheat sheet 01</span>
             <strong class="hub-sheet-title">12 thì</strong>
@@ -114,6 +119,17 @@ const pronunciation = getSheet('pronunciation');
             </div>
             <p class="mini-example">“Watched” ends in <mark>/t/</mark>.</p>
           </div>
+
+          <div class="hub-sheet hub-sheet--write">
+            <span class="hub-sheet-kicker">Cheat sheet 06</span>
+            <strong class="hub-sheet-title">Rewriting</strong>
+            <p class="hub-sheet-formula">If / Unless<br>wish<br>so … that</p>
+            <div class="mini-rule"></div>
+            <div class="mini-chips">
+              <span>V-ing</span><span>since</span><span>despite</span>
+            </div>
+            <p class="mini-example">I wish I <mark>had</mark> a bike.</p>
+          </div>
         </div>
 
         <div class="sticky-note">
@@ -132,7 +148,7 @@ const pronunciation = getSheet('pronunciation');
       <div class="section-head">
         <div>
           <p class="section-kicker">01 · Bộ tài liệu</p>
-          <h2>Năm tờ cheat sheet, đủ để ôn.</h2>
+          <h2>Sáu tờ cheat sheet, đủ để ôn.</h2>
           <p>Mỗi tờ có sơ đồ, bảng tra nhanh, bẫy đề và bài kiểm tra riêng. Bắt đầu từ tờ bạn cần, hoặc đi theo lộ trình bên dưới.</p>
         </div>
         <p class="section-aside"><span>{sheets.length}</span> tờ<br><span>{totalQuestions}</span> câu hỏi</p>
@@ -177,10 +193,10 @@ const pronunciation = getSheet('pronunciation');
       <div class="section-head">
         <div>
           <p class="section-kicker">02 · Lộ trình</p>
-          <h2>Bốn bước trước khi làm đề.</h2>
+          <h2>Năm bước trước khi làm đề.</h2>
           <p>Không cần học hết trong một buổi. Đi theo thứ tự này để nhớ lâu hơn.</p>
         </div>
-        <p class="section-aside"><span>4</span> bước<br>mỗi ngày 10 phút</p>
+        <p class="section-aside"><span>5</span> bước<br>mỗi ngày 10 phút</p>
       </div>
 
       <div class="path-grid">
@@ -211,6 +227,13 @@ const pronunciation = getSheet('pronunciation');
 
         <article class="path-card">
           <span class="path-no" aria-hidden="true">04</span>
+          <h3>Viết lại câu</h3>
+          <p>Học tám nhóm mẫu, mẫu động từ và các bẫy thường gặp ở câu 37–40.</p>
+          <a class="path-link" href={sentenceTransformation.href}>Mở viết lại câu →</a>
+        </article>
+
+        <article class="path-card">
+          <span class="path-no" aria-hidden="true">05</span>
           <h3>Tự kiểm tra</h3>
           <p>Làm bài ngắn để biết phần nào còn hổng, rồi quay lại đúng mục cần ôn.</p>
           <div class="path-links">
@@ -219,6 +242,7 @@ const pronunciation = getSheet('pronunciation');
             <a href={`${wordForms.href}#quiz`}>16 câu word forms</a>
             <a href={`${reading.href}#quiz`}>12 câu reading</a>
             <a href={`${pronunciation.href}#quiz`}>16 câu phát âm</a>
+            <a href={`${sentenceTransformation.href}#quiz`}>16 câu viết lại</a>
           </div>
         </article>
       </div>
@@ -231,8 +255,8 @@ const pronunciation = getSheet('pronunciation');
       <div class="home-band">
         <div>
           <p class="section-kicker">03 · Mang vào phòng thi</p>
-          <h2>Năm quy tắc nhớ nhanh.</h2>
-          <p><strong>Thì:</strong> since + mốc, for + khoảng · <strong>Giới từ:</strong> at + giờ, on + ngày, in + tháng/năm · <strong>Từ loại:</strong> sau tính từ thường là danh từ, sau động từ thường là trạng từ · <strong>Đọc hiểu:</strong> đáp án phải có bằng chứng trong bài · <strong>Phát âm:</strong> xét âm cuối, không xét chữ cuối.</p>
+          <h2>Sáu quy tắc nhớ nhanh.</h2>
+          <p><strong>Thì:</strong> since + mốc, for + khoảng · <strong>Giới từ:</strong> at + giờ, on + ngày, in + tháng/năm · <strong>Từ loại:</strong> sau tính từ thường là danh từ, sau động từ thường là trạng từ · <strong>Đọc hiểu:</strong> đáp án phải có bằng chứng trong bài · <strong>Phát âm:</strong> xét âm cuối, không xét chữ cuối · <strong>Viết lại:</strong> đổi cấu trúc, giữ nguyên nghĩa.</p>
         </div>
         <div class="home-band-actions">
           <a class="btn btn-primary" href={tenses.href}>Ôn 12 thì</a>
@@ -240,6 +264,7 @@ const pronunciation = getSheet('pronunciation');
           <a class="btn btn-ghost" href={wordForms.href}>Ôn word forms</a>
           <a class="btn btn-ghost" href={reading.href}>Luyện đọc hiểu</a>
           <a class="btn btn-ghost" href={pronunciation.href}>Luyện phát âm</a>
+          <a class="btn btn-ghost" href={sentenceTransformation.href}>Luyện viết lại câu</a>
         </div>
       </div>
     </div>

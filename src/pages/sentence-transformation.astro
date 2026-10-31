@@ -1,0 +1,375 @@
+---
+import SheetLayout from '../layouts/SheetLayout.astro';
+---
+
+<SheetLayout slug="sentence-transformation">
+  <Fragment slot="visual">
+    <div class="study-stack wt-stack">
+      <div class="stack-card stack-card-back"></div>
+      <div class="stack-card stack-card-mid"></div>
+      <div class="stack-card stack-card-front">
+        <p class="mini-label">Viết lại câu · Wish</p>
+        <p class="wt-mini-original">I don’t have a bike.</p>
+        <p class="wt-mini-arrow">→ I wish I had a bike.</p>
+        <div class="mini-rule"></div>
+        <p class="wt-mini-note">Hiện tại đơn lùi thành quá khứ đơn.</p>
+        <p class="wt-mini-formula">S + wish + S + V2/ed</p>
+        <div class="mini-chips">
+          <span>If</span><span>Unless</span><span>V-ing</span><span>so … that</span>
+        </div>
+        <div class="wt-mini-extra">
+          <span><strong>If</strong> you study hard, you will pass.</span>
+          <span><strong>Unless</strong> you study hard, you will fail.</span>
+        </div>
+      </div>
+    </div>
+    <div class="sticky-note">
+      <span class="sticky-label">Mẹo thi</span>
+      <strong>Đổi cấu trúc</strong>
+      <span>nhưng giữ nguyên nghĩa!</span>
+    </div>
+    <div class="stamp">Ôn thi<br>vào 10<br><span>2026–2027</span></div>
+  </Fragment>
+
+  <!-- MAP -->
+  <section class="section" id="map">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">01 · Bản đồ</p>
+          <h2>Tám nhóm mẫu, một dạng bài.</h2>
+          <p>Câu 37–40 yêu cầu viết lại câu sao cho nghĩa không đổi. Nhận diện nhóm mẫu trước, rồi mới chọn công thức.</p>
+        </div>
+        <p class="section-aside"><span>8</span> nhóm mẫu<br><span>16</span> câu hỏi</p>
+      </div>
+
+      <div class="wt-map-grid">
+        <a class="wt-map-card wt-map-condition" href="#formulas">
+          <p class="map-kicker">01 · Điều kiện</p>
+          <h3>If / Unless</h3>
+          <p class="map-rule">Đổi câu điều kiện, giữ nguyên hệ quả.</p>
+          <div class="map-chips">
+            <span>If + V</span><span>Unless</span><span>will/can</span>
+          </div>
+          <span class="map-link">Xem công thức →</span>
+        </a>
+
+        <a class="wt-map-card wt-map-wish" href="#formulas">
+          <p class="map-kicker">02 · Ước</p>
+          <h3>Wish</h3>
+          <p class="map-rule">Lùi thì để diễn tả điều không có thật.</p>
+          <div class="map-chips">
+            <span>wish + V2/ed</span><span>wish + had + V3</span>
+          </div>
+          <span class="map-link">Xem công thức →</span>
+        </a>
+
+        <a class="wt-map-card wt-map-ving" href="#formulas">
+          <p class="map-kicker">03 · V-ing</p>
+          <h3>Cụm từ + V-ing</h3>
+          <p class="map-rule">fond of, keen on, mind, suggest, look forward to.</p>
+          <div class="map-chips">
+            <span>fond of</span><span>keen on</span><span>mind</span><span>suggest</span>
+          </div>
+          <span class="map-link">Xem công thức →</span>
+        </a>
+
+        <a class="wt-map-card wt-map-since" href="#formulas">
+          <p class="map-kicker">04 · Mốc thời gian</p>
+          <h3>Since</h3>
+          <p class="map-rule">Đổi giữa “last wrote” và “haven’t written since”.</p>
+          <div class="map-chips">
+            <span>It has been …</span><span>since</span><span>last + V2/ed</span>
+          </div>
+          <span class="map-link">Xem công thức →</span>
+        </a>
+
+        <a class="wt-map-card wt-map-result" href="#formulas">
+          <p class="map-kicker">05 · Kết quả</p>
+          <h3>So / such … that</h3>
+          <p class="map-rule">Đổi giữa so + adj và such + (a/an) + adj + N.</p>
+          <div class="map-chips">
+            <span>so + adj + that</span><span>such + N + that</span>
+          </div>
+          <span class="map-link">Xem công thức →</span>
+        </a>
+
+        <a class="wt-map-card wt-map-phrasal" href="#formulas">
+          <p class="map-kicker">06 · Cụm động từ</p>
+          <h3>Phrasal verbs</h3>
+          <p class="map-rule">Thay cụm động từ bằng cách diễn đạt tương đương.</p>
+          <div class="map-chips">
+            <span>break down</span><span>run out of</span><span>put off</span>
+          </div>
+          <span class="map-link">Xem công thức →</span>
+        </a>
+
+        <a class="wt-map-card wt-map-contrast" href="#formulas">
+          <p class="map-kicker">07 · Tương phản / lý do</p>
+          <h3>Although / Because</h3>
+          <p class="map-rule">Clause đổi thành N hoặc V-ing sau despite/because of.</p>
+          <div class="map-chips">
+            <span>although</span><span>despite</span><span>because of</span>
+          </div>
+          <span class="map-link">Xem công thức →</span>
+        </a>
+
+        <a class="wt-map-card wt-map-reported" href="#formulas">
+          <p class="map-kicker">08 · Gián tiếp</p>
+          <h3>Reported speech</h3>
+          <p class="map-rule">Lùi thì, đổi đại từ và trạng từ thời gian.</p>
+          <div class="map-chips">
+            <span>said</span><span>told</span><span>suggested</span>
+          </div>
+          <span class="map-link">Xem công thức →</span>
+        </a>
+      </div>
+
+      <p class="mini-note"><strong>Nguyên tắc:</strong> viết lại câu là đổi cấu trúc, không đổi nghĩa. Trước khi viết, hãy xác định thì, chủ ngữ, tân ngữ và mốc thời gian của câu gốc.</p>
+    </div>
+  </section>
+
+  <!-- FORMULAS -->
+  <section class="section section-alt" id="formulas">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">02 · Công thức</p>
+          <h2>Tám nhóm mẫu cần nằm lòng.</h2>
+          <p>Bảng tra nhanh công thức và ví dụ. Khi làm bài, hãy đối chiếu câu gốc với câu mới để kiểm tra nghĩa và thì.</p>
+        </div>
+        <p class="section-aside"><span>8</span> nhóm<br><span>1</span> bảng tra</p>
+      </div>
+
+      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
+      <div class="wt-table-wrap">
+        <table class="wt-table wt-formula-table">
+          <caption class="sr-only">Công thức viết lại câu theo tám nhóm mẫu</caption>
+          <thead>
+            <tr>
+              <th scope="col">Nhóm mẫu</th>
+              <th scope="col">Công thức</th>
+              <th scope="col">Ví dụ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><span class="wt-cat wt-cat-condition">Điều kiện</span></th>
+              <td><code>If + S + V(s/es), S + will/can + V</code><br><code>Unless + S + V(s/es), S + will/can + V</code></td>
+              <td>If you study hard, you will pass.<br>Unless you study hard, you will fail.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="wt-cat wt-cat-wish">Wish</span></th>
+              <td><code>S + wish + S + V2/ed</code> (hiện tại)<br><code>S + wish + S + had + V3/ed</code> (quá khứ)</td>
+              <td>I wish I had a bike.<br>She wishes she had studied harder.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="wt-cat wt-cat-ving">V-ing</span></th>
+              <td><code>be fond of / keen on + V-ing</code><br><code>mind / suggest / avoid + V-ing</code></td>
+              <td>Michael is fond of playing football.<br>He suggested going to the cinema.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="wt-cat wt-cat-since">Since</span></th>
+              <td><code>It has been + time + since + S + last + V2/ed</code><br><code>S + have/has + not + V3/ed + since + mốc</code></td>
+              <td>It has been two years since she last participated.<br>She hasn’t participated since 2023.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="wt-cat wt-cat-result">So / such</span></th>
+              <td><code>S + be + so + adj + that + S + V</code><br><code>It + be + such + (a/an) + adj + N + that + S + V</code></td>
+              <td>Tom is so lazy that he can’t get good marks.<br>It was such awful weather that we couldn’t go out.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="wt-cat wt-cat-phrasal">Cụm động từ</span></th>
+              <td><code>break down = stop working</code><br><code>run out of = have no more</code><br><code>put off = postpone</code></td>
+              <td>Our car broke down on the way.<br>The shop has run out of roses.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="wt-cat wt-cat-contrast">Tương phản / lý do</span></th>
+              <td><code>Although + clause ↔ Despite/In spite of + N/V-ing</code><br><code>Because + clause ↔ Because of + N/V-ing</code></td>
+              <td>Although it rained, we went out.<br>Despite the rain, we went out.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="wt-cat wt-cat-reported">Gián tiếp</span></th>
+              <td><code>S + said (that) + S + V(lùi thì)</code><br><code>S + told + O + (that) + ...</code><br><code>suggest + V-ing / that + S + (should) + V</code></td>
+              <td>He said he would help me the next day.<br>He suggested going to the cinema.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="wt-formula-notes">
+        <article class="wt-formula-note">
+          <h3>Wish: lùi một thì</h3>
+          <p>Hiện tại đơn → quá khứ đơn; quá khứ đơn → quá khứ hoàn thành. <em>I don’t have a bike → I wish I had a bike.</em></p>
+        </article>
+        <article class="wt-formula-note">
+          <h3>So / such: đổi vị trí</h3>
+          <p><strong>so + adj</strong> nhưng <strong>such + (a/an) + adj + N</strong>. Gặp danh từ không đếm được, không dùng “a/an”: <em>such awful weather</em>.</p>
+        </article>
+        <article class="wt-formula-note">
+          <h3>Although / Because: đổi loại từ</h3>
+          <p>Sau <strong>although/because</strong> là mệnh đề; sau <strong>despite/in spite of/because of</strong> là N hoặc V-ing.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VERB PATTERNS -->
+  <section class="section" id="verb-patterns">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">03 · Mẫu động từ</p>
+          <h2>V-ing hay to-V?</h2>
+          <p>Nhiều câu viết lại chỉ khác nhau ở dạng động từ. Học theo nhóm thay vì học từng từ riêng lẻ.</p>
+        </div>
+        <p class="section-aside"><span>2</span> nhóm lớn<br><span>1</span> bảng đổi nghĩa</p>
+      </div>
+
+      <div class="wt-verb-grid">
+        <article class="wt-verb-card wt-verb-ing">
+          <p class="wt-verb-label">V + V-ing</p>
+          <h3>Động từ / tính từ + V-ing</h3>
+          <p class="wt-verb-desc">Sau các từ này, động từ luôn ở dạng V-ing.</p>
+          <div class="wt-verb-chips">
+            <span>enjoy</span><span>mind</span><span>avoid</span><span>suggest</span><span>look forward to</span><span>be fond of</span><span>be keen on</span><span>spend time</span><span>can’t help</span><span>it’s no use</span>
+          </div>
+          <p class="wt-verb-eg">She enjoys <strong>reading</strong> books. · He suggested <strong>going</strong> out.</p>
+        </article>
+
+        <article class="wt-verb-card wt-verb-to">
+          <p class="wt-verb-label">V + to-V</p>
+          <h3>Động từ + to-V</h3>
+          <p class="wt-verb-desc">Sau các từ này, động từ ở dạng nguyên mẫu có “to”.</p>
+          <div class="wt-verb-chips">
+            <span>want</span><span>decide</span><span>hope</span><span>plan</span><span>promise</span><span>refuse</span><span>agree</span><span>encourage sb</span><span>ask sb</span><span>remind sb</span>
+          </div>
+          <p class="wt-verb-eg">She decided <strong>to study</strong> abroad. · They asked me <strong>to help</strong> them.</p>
+        </article>
+      </div>
+
+      <div class="wt-change-note">
+        <h3>Đổi nghĩa khi đổi dạng</h3>
+        <div class="wt-change-grid">
+          <div><code>stop + V-ing</code><span>dừng hành động</span><strong>He stopped smoking.</strong></div>
+          <div><code>stop + to-V</code><span>dừng lại để làm gì</span><strong>He stopped to smoke.</strong></div>
+          <div><code>remember + V-ing</code><span>nhớ đã làm</span><strong>I remember locking the door.</strong></div>
+          <div><code>remember + to-V</code><span>nhớ phải làm</span><strong>Remember to lock the door.</strong></div>
+          <div><code>try + V-ing</code><span>thử làm</span><strong>Try pressing this button.</strong></div>
+          <div><code>try + to-V</code><span>cố gắng làm</span><strong>Try to finish it on time.</strong></div>
+        </div>
+      </div>
+
+      <p class="mini-note"><strong>Mẹo:</strong> “look forward to” có “to” là giới từ, nên sau nó là V-ing, không phải to-V. Tương tự, “be used to” cũng đi với V-ing.</p>
+    </div>
+  </section>
+
+  <!-- TRAPS -->
+  <section class="section section-alt" id="traps">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">04 · Bẫy đề</p>
+          <h2>Mười lỗi hay mất điểm.</h2>
+          <p>Đọc câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc khi viết lại câu.</p>
+        </div>
+        <p class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
+      </div>
+
+      <div class="trap-grid">
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>Quên lùi thì</strong> khi viết lại câu gián tiếp.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>“I will help you” → He said he <strong>would</strong> help me.</p></div>
+          <p class="trap-why">Will → would, can → could, hiện tại → quá khứ. Đổi cả đại từ và trạng từ thời gian.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>Despite</strong> it rained, we went out.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>Despite</strong> the rain, we went out.</p></div>
+          <p class="trap-why">Sau despite/in spite of phải là N hoặc V-ing, không phải mệnh đề.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>Because of</strong> he performed well, he won.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>Because of</strong> his good performance, he won.</p></div>
+          <p class="trap-why">Because + mệnh đề; because of + N/V-ing.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>She hasn’t written here <strong>since</strong> three years.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>She hasn’t written here <strong>for</strong> three years.</p></div>
+          <p class="trap-why">Since + mốc (since 2023); for + khoảng thời gian (for three years).</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>It was <strong>so awful weather</strong> that we stayed home.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>It was <strong>such awful weather</strong> that we stayed home.</p></div>
+          <p class="trap-why">So + adj; such + (a/an) + adj + N. “Weather” không đếm được nên không có “a/an”.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I wish I <strong>have</strong> a bike.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I wish I <strong>had</strong> a bike.</p></div>
+          <p class="trap-why">Wish hiện tại dùng V2/ed; wish quá khứ dùng had + V3/ed.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>He suggested <strong>to go</strong> to the cinema.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>He suggested <strong>going</strong> to the cinema.</p></div>
+          <p class="trap-why">Suggest, mind, avoid, enjoy, be fond of đều đi với V-ing.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I’m looking forward <strong>to see</strong> you.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I’m looking forward <strong>to seeing</strong> you.</p></div>
+          <p class="trap-why">“To” trong look forward to là giới từ, nên sau nó là V-ing.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Our car <strong>broke up</strong> on the way.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Our car <strong>broke down</strong> on the way.</p></div>
+          <p class="trap-why">Break down = hỏng máy; break up = chia tay, tan rã. Học nghĩa cả cụm.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>It takes me two hours <strong>do</strong> my homework.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I spend two hours <strong>doing</strong> my homework.</p></div>
+          <p class="trap-why">It takes + time + to-V; S + spend + time + V-ing.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="section section-quiz" id="quiz">
+    <div class="container">
+      <div class="section-head section-head-center">
+        <div>
+          <p class="section-kicker">05 · Luyện tập</p>
+          <h2>Kiểm tra 16 câu viết lại.</h2>
+          <p>Chọn câu viết lại đúng nghĩa. Mỗi câu có giải thích ngay sau khi trả lời.</p>
+        </div>
+      </div>
+
+      <p class="quiz-best" id="quiz-best" aria-live="polite">Điểm cao nhất của bạn: chưa có</p>
+
+      <div class="quiz-shell">
+        <div class="quiz-top">
+          <span class="quiz-step" id="quiz-step">Câu 1 / 16</span>
+          <div class="quiz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="16" aria-valuenow="1" aria-label="Tiến độ làm bài">
+            <span id="quiz-bar"></span>
+          </div>
+          <span class="quiz-score" id="quiz-score">0 đúng</span>
+        </div>
+        <div class="quiz-stage" id="quiz-stage" aria-live="polite"></div>
+      </div>
+
+      <noscript><p class="quiz-noscript">Bật JavaScript để làm bài luyện tập tương tác. Phần cheat sheet phía trên vẫn đọc được bình thường.</p></noscript>
+    </div>
+  </section>
+
+</SheetLayout>
+
+<script>
+  import '../scripts/sentence-transformation.js';
+</script>

@@ -1,6 +1,12 @@
 import { sitePath } from '../lib/urls';
 
-export type SheetSlug = 'tenses' | 'prepositions' | 'word-forms' | 'reading' | 'pronunciation';
+export type SheetSlug =
+  | 'tenses'
+  | 'prepositions'
+  | 'word-forms'
+  | 'reading'
+  | 'pronunciation'
+  | 'sentence-transformation';
 
 export interface SheetAction {
   label: string;
@@ -43,7 +49,7 @@ export interface Sheet {
   metaDescription: string;
   cardNo: string;
   badge: string;
-  accent: 'tenses' | 'prep' | 'word' | 'reading' | 'sound';
+  accent: 'tenses' | 'prep' | 'word' | 'reading' | 'sound' | 'write';
   lead: string;
   preview: string[];
   highlights: SheetHighlight[];
@@ -292,6 +298,52 @@ export const sheets: Sheet[] = [
       actions: [
         { label: 'Xem bản đồ âm', href: '#map', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 16 câu luyện tập', href: '#quiz', variant: 'ghost', icon: 'chevron' }
+      ]
+    }
+  },
+  {
+    slug: 'sentence-transformation',
+    href: sitePath('sentence-transformation/'),
+    navLabel: 'Viết lại câu',
+    shortTitle: 'Rewriting',
+    title: 'Sentence transformation',
+    metaTitle: 'Sentence Transformation (Viết lại câu) — Cheatsheet lớp 9 | EngPrep',
+    metaDescription:
+      'Cheatsheet viết lại câu tiếng Anh lớp 9: câu điều kiện, wish, cụm từ + V-ing, hiện tại hoàn thành + since, so/such, cụm động từ, tương phản và 16 câu luyện tập có giải thích.',
+    cardNo: '06 / REWRITING',
+    badge: '8 nhóm mẫu',
+    accent: 'write',
+    lead: 'Điều kiện, wish, V-ing, since, so/such và cụm động từ: tám nhóm viết lại câu lặp lại qua các đề.',
+    preview: ['If / Unless', 'wish + V2/ed', 'fond of + V-ing', 'so … that'],
+    highlights: [
+      { text: 'Bản đồ 8 nhóm mẫu viết lại câu' },
+      { text: 'Công thức và ví dụ cho từng nhóm' },
+      { strong: 'V-ing vs to-V', text: ' và các cụm động từ thường gặp' },
+      { text: '10 bẫy đề và 16 câu luyện tập' }
+    ],
+    meta: '8 nhóm mẫu · 16 câu hỏi',
+    questionCount: 16,
+    sections: [
+      { id: 'map', label: 'Bản đồ' },
+      { id: 'formulas', label: 'Công thức' },
+      { id: 'verb-patterns', label: 'Mẫu động từ' },
+      { id: 'traps', label: 'Bẫy đề' },
+      { id: 'quiz', label: 'Luyện tập' }
+    ],
+    hero: {
+      eyebrow: 'Global Success 9 · Ôn thi vào 10',
+      titleHtml:
+        'Viết lại câu,<br>giữ nghĩa <span class="marker">đổi cấu trúc</span>.',
+      lead: 'Câu 37–40 luôn là viết lại câu. Trang này gom 8 nhóm mẫu lặp lại, công thức, mẫu động từ và 16 câu luyện tập — kèm 10 bẫy đề thường gặp.',
+      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
+      stats: [
+        { value: '8', label: 'nhóm mẫu' },
+        { value: '10', label: 'bẫy đề' },
+        { value: '16', label: 'câu luyện tập' }
+      ],
+      actions: [
+        { label: 'Xem bản đồ mẫu câu', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Làm 16 câu viết lại', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
   }
