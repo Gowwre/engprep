@@ -1,0 +1,436 @@
+---
+import SheetLayout from '../layouts/SheetLayout.astro';
+---
+
+<SheetLayout slug="cloze">
+  <Fragment slot="visual">
+    <div class="study-stack cz-stack">
+      <div class="stack-card stack-card-back"></div>
+      <div class="stack-card stack-card-mid"></div>
+      <div class="stack-card stack-card-front">
+        <p class="mini-label">Cloze · Từ nối</p>
+        <p class="cz-mini-passage">Plastic bags are convenient. ______, they are harmful to the environment.</p>
+        <div class="cz-mini-options">
+          <span>A. Because</span>
+          <span class="is-correct">B. However</span>
+          <span>C. So</span>
+        </div>
+        <p class="cz-mini-why"><strong>However</strong> báo hiệu ý tương phản.</p>
+        <div class="mini-chips">
+          <span>contrast</span><span>connector</span><span>however</span>
+        </div>
+      </div>
+    </div>
+    <div class="sticky-note">
+      <span class="sticky-label">Mẹo thi</span>
+      <strong>Đọc cả câu</strong>
+      <span>đừng chỉ nhìn chỗ trống!</span>
+    </div>
+    <div class="stamp">Ôn thi<br>vào 10<br><span>2026–2027</span></div>
+  </Fragment>
+
+  <!-- MAP -->
+  <section class="section" id="map">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">01 · Bản đồ</p>
+          <h2>Năm loại chỗ trống.</h2>
+          <p>Bài điền khuyết không chỉ hỏi từ vựng. Mỗi chỗ trống có thể kiểm tra ngữ pháp, nghĩa, collocation, từ nối hoặc từ thay thế.</p>
+        </div>
+        <p class="section-aside"><span>5</span> loại gap<br><span>12</span> câu hỏi</p>
+      </div>
+
+      <div class="cz-map-grid">
+        <a class="cz-map-card cz-map-grammar" href="#grammar">
+          <p class="map-kicker">01 · Ngữ pháp</p>
+          <h3>Grammar gap</h3>
+          <p class="map-rule">Giới từ, dạng động từ, mệnh đề quan hệ, so sánh.</p>
+          <div class="map-chips">
+            <span>depend on</span><span>to-V</span><span>who</span><span>more</span>
+          </div>
+          <span class="map-link">Xem bảng ngữ pháp →</span>
+        </a>
+
+        <a class="cz-map-card cz-map-vocab" href="#vocabulary">
+          <p class="map-kicker">02 · Nghĩa</p>
+          <h3>Vocabulary gap</h3>
+          <p class="map-rule">Đoán nghĩa từ câu trước, câu sau và chủ đề.</p>
+          <div class="map-chips">
+            <span>polluted</span><span>opportunity</span><span>benefit</span>
+          </div>
+          <span class="map-link">Xem manh mối →</span>
+        </a>
+
+        <a class="cz-map-card cz-map-colloc" href="#vocabulary">
+          <p class="map-kicker">03 · Cụm từ</p>
+          <h3>Collocation</h3>
+          <p class="map-rule">Từ nào đi với từ nào: make a decision, heavy rain.</p>
+          <div class="map-chips">
+            <span>make a decision</span><span>take part in</span><span>heavy rain</span>
+          </div>
+          <span class="map-link">Xem collocations →</span>
+        </a>
+
+        <a class="cz-map-card cz-map-connector" href="#grammar">
+          <p class="map-kicker">04 · Liên kết</p>
+          <h3>Connector</h3>
+          <p class="map-rule">Quan hệ giữa hai câu: thêm ý, tương phản, nguyên nhân, kết quả.</p>
+          <div class="map-chips">
+            <span>however</span><span>because</span><span>therefore</span>
+          </div>
+          <span class="map-link">Xem từ nối →</span>
+        </a>
+
+        <a class="cz-map-card cz-map-ref" href="#grammar">
+          <p class="map-kicker">05 · Thay thế</p>
+          <h3>Reference</h3>
+          <p class="map-rule">It, they, this, that thay cho danh từ nào?</p>
+          <div class="map-chips">
+            <span>it</span><span>they</span><span>this</span><span>that</span>
+          </div>
+          <span class="map-link">Xem cách tìm →</span>
+        </a>
+      </div>
+
+      <p class="mini-note"><strong>Nguyên tắc:</strong> không điền ngay khi vừa đọc chỗ trống. Hãy đọc cả câu, xác định loại từ cần điền, rồi mới xét nghĩa và ngữ pháp.</p>
+    </div>
+  </section>
+
+  <!-- STRATEGY -->
+  <section class="section section-alt" id="strategy">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">02 · Chiến lược</p>
+          <h2>Bốn bước làm bài điền khuyết.</h2>
+          <p>Bài có 6 chỗ trống thường mất khoảng 8 phút. Đọc lướt trước, xử lý từng chỗ, rồi đọc lại cả đoạn.</p>
+        </div>
+        <p class="section-aside"><span>4</span> bước<br><span>8</span> phút / bài</p>
+      </div>
+
+      <div class="cz-step-grid">
+        <article class="cz-step">
+          <span class="cz-step-no" aria-hidden="true">01</span>
+          <h3>Skim cả đoạn</h3>
+          <p>Đọc nhanh để nắm chủ đề, giọng điệu và cấu trúc. Chú ý từ nối và các từ lặp lại.</p>
+          <p class="cz-step-formula">topic + tone + structure</p>
+        </article>
+
+        <article class="cz-step">
+          <span class="cz-step-no" aria-hidden="true">02</span>
+          <h3>Đọc quanh gap</h3>
+          <p>Đọc câu chứa chỗ trống và câu trước/sau. Dự đoán loại từ và nghĩa trước khi xem đáp án.</p>
+          <p class="cz-step-formula">sentence before + after</p>
+        </article>
+
+        <article class="cz-step">
+          <span class="cz-step-no" aria-hidden="true">03</span>
+          <h3>Kiểm tra ngữ pháp</h3>
+          <p>Loại từ, thì, số ít/số nhiều, giới từ đi kèm và collocation. Đây là bước dễ mất điểm nhất.</p>
+          <p class="cz-step-formula">grammar + collocation</p>
+        </article>
+
+        <article class="cz-step">
+          <span class="cz-step-no" aria-hidden="true">04</span>
+          <h3>Đọc lại cả đoạn</h3>
+          <p>Điền thử đáp án rồi đọc lại. Nếu câu tối nghĩa hoặc sai logic, hãy xem lại chỗ trống đó.</p>
+          <p class="cz-step-formula">plug in + reread</p>
+        </article>
+      </div>
+
+      <div class="cz-time-strip" aria-label="Phân bổ thời gian cho một bài điền khuyết">
+        <div class="cz-time-step"><span>Skim</span><strong>1 phút</strong></div>
+        <span class="cz-time-arrow" aria-hidden="true">→</span>
+        <div class="cz-time-step"><span>Đọc quanh gap</span><strong>1 phút</strong></div>
+        <span class="cz-time-arrow" aria-hidden="true">→</span>
+        <div class="cz-time-step"><span>Chọn &amp; kiểm tra</span><strong>5 phút</strong></div>
+        <span class="cz-time-arrow" aria-hidden="true">→</span>
+        <div class="cz-time-step"><span>Đọc lại</span><strong>1 phút</strong></div>
+      </div>
+
+      <p class="mini-note"><strong>Đừng dịch từng chữ:</strong> đọc theo cụm và bám vào cấu trúc câu. Gặp từ lạ, hãy dùng ngữ cảnh để đoán; chỉ tra từ khi nó nằm trong câu hỏi hoặc cần phân biệt nghĩa.</p>
+    </div>
+  </section>
+
+  <!-- GRAMMAR -->
+  <section class="section" id="grammar">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">03 · Ngữ pháp</p>
+          <h2>Chỗ trống ngữ pháp: nhìn dấu hiệu.</h2>
+          <p>62,5% chỗ trống trong bài điền khuyết là ngữ pháp. Khi thấy dấu hiệu quen thuộc, hãy kiểm tra đúng nhóm đó trước.</p>
+        </div>
+        <p class="section-aside"><span>7</span> nhóm<br><span>1</span> bảng tra</p>
+      </div>
+
+      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
+      <div class="cz-table-wrap">
+        <table class="cz-table cz-grammar-table">
+          <caption class="sr-only">Bảng dấu hiệu ngữ pháp trong bài điền khuyết</caption>
+          <thead>
+            <tr>
+              <th scope="col">Loại gap</th>
+              <th scope="col">Dấu hiệu</th>
+              <th scope="col">Cần kiểm tra</th>
+              <th scope="col">Ví dụ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><span class="cz-cat cz-cat-prep">Giới từ</span></th>
+              <td>Đứng trước danh từ, V-ing hoặc đại từ.</td>
+              <td>Giới từ đi kèm động từ/tính từ; giới từ thời gian, nơi chốn.</td>
+              <td><code>depend on</code> · <code>interested in</code> · <code>in 2026</code></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cz-cat cz-cat-conj">Từ nối</span></th>
+              <td>Nối hai mệnh đề hoặc hai câu.</td>
+              <td>Quan hệ thêm ý, tương phản, nguyên nhân, kết quả.</td>
+              <td><code>however</code> · <code>because</code> · <code>therefore</code></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cz-cat cz-cat-rel">Đại từ quan hệ</span></th>
+              <td>Đứng sau danh từ, trước mệnh đề.</td>
+              <td>Người hay vật; mệnh đề xác định hay không xác định.</td>
+              <td><code>who</code> · <code>which</code> · <code>that</code></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cz-cat cz-cat-verb">Dạng động từ</span></th>
+              <td>Sau modal, “to”, giới từ hoặc chủ ngữ.</td>
+              <td>V, to-V, V-ing; thì và hòa hợp chủ ngữ.</td>
+              <td><code>decided to go</code> · <code>enjoys reading</code> · <code>has lived</code></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cz-cat cz-cat-comp">So sánh</span></th>
+              <td>Có <code>than</code>, <code>the most</code>, <code>as … as</code>.</td>
+              <td>Tính từ ngắn/dài; so sánh hơn hay nhất.</td>
+              <td><code>more crowded</code> · <code>the best</code> · <code>as tall as</code></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cz-cat cz-cat-quant">Lượng từ</span></th>
+              <td>Trước danh từ hoặc thay cho danh từ.</td>
+              <td>Đếm được hay không đếm được; khẳng định hay phủ định.</td>
+              <td><code>many people</code> · <code>much water</code> · <code>some</code></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cz-cat cz-cat-art">Mạo từ</span></th>
+              <td>Trước danh từ số ít hoặc danh từ đã xác định.</td>
+              <td>a/an/the; danh từ đếm được hay không đếm được.</td>
+              <td><code>a book</code> · <code>an hour</code> · <code>the sun</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mini-note"><strong>Thứ tự kiểm tra:</strong> loại từ → thì/số ít số nhiều → giới từ/collocation → nghĩa. Đừng chọn đáp án chỉ vì nó “nghe quen tai”.</p>
+    </div>
+  </section>
+
+  <!-- VOCABULARY -->
+  <section class="section section-alt" id="vocabulary">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">04 · Từ vựng</p>
+          <h2>Chỗ trống từ vựng: tìm manh mối.</h2>
+          <p>Khi chỗ trống không phải ngữ pháp, câu xung quanh thường giấu định nghĩa, ví dụ, từ trái nghĩa hoặc collocation.</p>
+        </div>
+        <p class="section-aside"><span>6</span> loại manh mối<br><span>1</span> quy tắc</p>
+      </div>
+
+      <div class="cz-clue-grid">
+        <article class="cz-clue-card">
+          <p class="cz-clue-label">01 · Định nghĩa</p>
+          <h3>is / means / refers to</h3>
+          <p>Câu sau giải thích nghĩa của từ cần điền.</p>
+          <p class="cz-clue-eg">A <strong>habitat</strong> is the natural home of an animal.</p>
+        </article>
+
+        <article class="cz-clue-card">
+          <p class="cz-clue-label">02 · Ví dụ</p>
+          <h3>such as / for example</h3>
+          <p>Ví dụ phía sau thu hẹp nghĩa của từ.</p>
+          <p class="cz-clue-eg">Fruits <strong>such as</strong> mangoes and bananas are sweet.</p>
+        </article>
+
+        <article class="cz-clue-card">
+          <p class="cz-clue-label">03 · Tương phản</p>
+          <h3>but / however / although</h3>
+          <p>Từ nối tương phản báo hiệu nghĩa trái ngược.</p>
+          <p class="cz-clue-eg">The town is small, <strong>but</strong> it is very lively.</p>
+        </article>
+
+        <article class="cz-clue-card">
+          <p class="cz-clue-label">04 · Nguyên nhân – kết quả</p>
+          <h3>because / so / therefore</h3>
+          <p>Một vế giải thích nguyên nhân hoặc kết quả của vế kia.</p>
+          <p class="cz-clue-eg">It rained heavily, <strong>so</strong> the match was cancelled.</p>
+        </article>
+
+        <article class="cz-clue-card">
+          <p class="cz-clue-label">05 · Collocation</p>
+          <h3>từ đi với từ</h3>
+          <p>Chọn từ tạo thành cụm tự nhiên với từ đứng cạnh.</p>
+          <p class="cz-clue-eg"><strong>make</strong> a decision · <strong>heavy</strong> rain · <strong>take</strong> responsibility</p>
+        </article>
+
+        <article class="cz-clue-card">
+          <p class="cz-clue-label">06 · Chủ đề</p>
+          <h3>các từ xung quanh</h3>
+          <p>Chủ đề của cả đoạn giúp loại đáp án sai nghĩa.</p>
+          <p class="cz-clue-eg">Trong đoạn về môi trường: <strong>pollution, recycle, renewable</strong>.</p>
+        </article>
+      </div>
+
+      <p class="mini-note"><strong>Mẹo:</strong> thay từng đáp án vào câu và đọc to trong đầu. Đáp án đúng phải đúng nghĩa, đúng ngữ pháp và tạo thành cụm tự nhiên.</p>
+    </div>
+  </section>
+
+  <!-- SAMPLE -->
+  <section class="section" id="sample">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">05 · Đoạn mẫu</p>
+          <h2>Một đoạn, sáu chỗ trống.</h2>
+          <p>Đọc cả đoạn, thử điền trước khi xem đáp án. Mỗi chỗ trống đại diện cho một loại gap khác nhau.</p>
+        </div>
+        <p class="section-aside"><span>1</span> đoạn mẫu<br><span>6</span> chỗ trống</p>
+      </div>
+
+      <article class="cz-sample">
+        <div class="cz-sample-head">
+          <div>
+            <p class="section-kicker">Plastic pollution</p>
+            <h3>Đọc và điền từ.</h3>
+          </div>
+          <p class="cz-sample-meta">6 gaps · 8 phút</p>
+        </div>
+
+        <p class="cz-passage">Plastic pollution is a serious <span class="cz-gap">(1) ______</span> in many countries. Every year, millions of tonnes of plastic end up in the sea. Fish and sea turtles often mistake small pieces of plastic <span class="cz-gap">(2) ______</span> food. <span class="cz-gap">(3) ______</span>, some countries are now taking action. They have banned single-use plastic bags and encouraged people to recycle. In Vietnam, many supermarkets have started using paper bags <span class="cz-gap">(4) ______</span> plastic ones. These changes are small, <span class="cz-gap">(5) ______</span> they can make a big difference if everyone joins in. We should all <span class="cz-gap">(6) ______</span> responsibility for protecting the environment.</p>
+
+        <div class="cz-answer-grid">
+          <div><span>1</span><strong>problem</strong><em>danh từ; serious problem</em></div>
+          <div><span>2</span><strong>for</strong><em>mistake A for B</em></div>
+          <div><span>3</span><strong>However</strong><em>tương phản</em></div>
+          <div><span>4</span><strong>instead of</strong><em>thay vì</em></div>
+          <div><span>5</span><strong>but</strong><em>tương phản trong câu</em></div>
+          <div><span>6</span><strong>take</strong><em>take responsibility for</em></div>
+        </div>
+      </article>
+
+      <p class="mini-note"><strong>Cách dùng đoạn mẫu:</strong> che phần đáp án, tự điền và nói lý do cho từng chỗ. Sau đó so sánh. Nếu lý do chỉ là “nghe hay” mà không phải ngữ pháp/collocation, hãy xem lại.</p>
+    </div>
+  </section>
+
+  <!-- TRAPS -->
+  <section class="section section-alt" id="traps">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">06 · Bẫy đề</p>
+          <h2>Mười lỗi hay mất điểm.</h2>
+          <p>Đọc câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc khi làm bài điền khuyết.</p>
+        </div>
+        <p class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
+      </div>
+
+      <div class="trap-grid">
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Chọn đáp án chỉ vì <strong>nghe quen</strong>.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Kiểm tra <strong>loại từ, ngữ pháp và nghĩa</strong>.</p></div>
+          <p class="trap-why">Đáp án đúng phải khớp cả ba yếu tố, không chỉ khớp nghĩa.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Many <strong>information</strong> · much <strong>people</strong></p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Much <strong>information</strong> · many <strong>people</strong></p></div>
+          <p class="trap-why">Information không đếm được; people là danh từ số nhiều.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>It depends <strong>of</strong> the weather.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>It depends <strong>on</strong> the weather.</p></div>
+          <p class="trap-why">Depend on là cụm cố định; không dịch “của” thành of.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>She decided <strong>going</strong> abroad.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>She decided <strong>to go</strong> abroad.</p></div>
+          <p class="trap-why">Decide + to-V. Đừng chỉ nhìn nghĩa mà bỏ qua mẫu động từ.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>The book <strong>who</strong> I borrowed is interesting.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>The book <strong>which</strong> I borrowed is interesting.</p></div>
+          <p class="trap-why">Who dùng cho người; which/that dùng cho vật.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>It was <strong>so awful weather</strong>.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>It was <strong>such awful weather</strong>.</p></div>
+          <p class="trap-why">So + adj; such + (a/an) + adj + N. Weather không đếm được nên không có “an”.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>Because</strong> the rain, we stayed home.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>Because of</strong> the rain, we stayed home.</p></div>
+          <p class="trap-why">Because + mệnh đề; because of + N/V-ing.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>He <strong>did</strong> a decision.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>He <strong>made</strong> a decision.</p></div>
+          <p class="trap-why">Decision đi với make; homework đi với do. Học cả cụm.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>She is <strong>a</strong> honest girl.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>She is <strong>an</strong> honest girl.</p></div>
+          <p class="trap-why">Chọn a/an theo âm đầu, không theo chữ cái: an hour, an honest person.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Điền xong nhưng không đọc lại cả đoạn.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Đọc lại để kiểm tra logic và mạch văn.</p></div>
+          <p class="trap-why">Một đáp án có thể đúng riêng câu nhưng sai logic của cả đoạn.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="section section-quiz" id="quiz">
+    <div class="container">
+      <div class="section-head section-head-center">
+        <div>
+          <p class="section-kicker">07 · Luyện tập</p>
+          <h2>Đọc 12 đoạn, điền 12 chỗ trống.</h2>
+          <p>Mỗi câu có một đoạn ngắn và một chỗ trống. Đọc cả câu, chọn đáp án rồi xem giải thích.</p>
+        </div>
+      </div>
+
+      <p class="quiz-best" id="quiz-best" aria-live="polite">Điểm cao nhất của bạn: chưa có</p>
+
+      <div class="quiz-shell">
+        <div class="quiz-top">
+          <span class="quiz-step" id="quiz-step">Câu 1 / 12</span>
+          <div class="quiz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="12" aria-valuenow="1" aria-label="Tiến độ làm bài">
+            <span id="quiz-bar"></span>
+          </div>
+          <span class="quiz-score" id="quiz-score">0 đúng</span>
+        </div>
+        <div class="quiz-stage" id="quiz-stage" aria-live="polite"></div>
+      </div>
+
+      <noscript><p class="quiz-noscript">Bật JavaScript để làm bài luyện tập tương tác. Phần cheat sheet phía trên vẫn đọc được bình thường.</p></noscript>
+    </div>
+  </section>
+
+</SheetLayout>
+
+<script>
+  import '../scripts/cloze.js';
+</script>

@@ -7,7 +7,8 @@ export type SheetSlug =
   | 'reading'
   | 'pronunciation'
   | 'sentence-transformation'
-  | 'vocabulary';
+  | 'vocabulary'
+  | 'cloze';
 
 export interface SheetAction {
   label: string;
@@ -50,7 +51,7 @@ export interface Sheet {
   metaDescription: string;
   cardNo: string;
   badge: string;
-  accent: 'tenses' | 'prep' | 'word' | 'reading' | 'sound' | 'write' | 'vocab';
+  accent: 'tenses' | 'prep' | 'word' | 'reading' | 'sound' | 'write' | 'vocab' | 'cloze';
   lead: string;
   preview: string[];
   highlights: SheetHighlight[];
@@ -392,6 +393,54 @@ export const sheets: Sheet[] = [
       actions: [
         { label: 'Xem bản đồ từ vựng', href: '#map', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 16 câu luyện tập', href: '#quiz', variant: 'ghost', icon: 'chevron' }
+      ]
+    }
+  },
+  {
+    slug: 'cloze',
+    href: sitePath('cloze/'),
+    navLabel: 'Điền khuyết',
+    shortTitle: 'Cloze',
+    title: 'Cloze & gap-fill',
+    metaTitle: 'Cloze & Gap-fill (Điền khuyết) — Cheatsheet lớp 9 | EngPrep',
+    metaDescription:
+      'Cheatsheet điền khuyết tiếng Anh lớp 9: 5 loại chỗ trống, chiến lược đọc cả đoạn, bảng ngữ pháp và từ vựng, đoạn mẫu có giải thích, 10 bẫy đề và 12 câu luyện tập.',
+    cardNo: '08 / CLOZE',
+    badge: '5 loại gap',
+    accent: 'cloze',
+    lead: 'Ngữ pháp, từ vựng, collocation, từ nối và từ thay thế: năm loại chỗ trống trong bài điền khuyết.',
+    preview: ['however', 'depend on', 'much water', 'instead of'],
+    highlights: [
+      { text: 'Bản đồ 5 loại chỗ trống và cách nhận diện' },
+      { text: 'Quy trình 4 bước đọc cả đoạn' },
+      { strong: 'Bảng ngữ pháp', text: ' và manh mối từ vựng' },
+      { text: 'Đoạn mẫu, 10 bẫy đề và 12 câu luyện tập' }
+    ],
+    meta: '5 loại gap · 12 câu hỏi',
+    questionCount: 12,
+    sections: [
+      { id: 'map', label: 'Bản đồ' },
+      { id: 'strategy', label: 'Chiến lược' },
+      { id: 'grammar', label: 'Ngữ pháp' },
+      { id: 'vocabulary', label: 'Từ vựng' },
+      { id: 'sample', label: 'Đoạn mẫu' },
+      { id: 'traps', label: 'Bẫy đề' },
+      { id: 'quiz', label: 'Luyện tập' }
+    ],
+    hero: {
+      eyebrow: 'Global Success 9 · Ôn thi vào 10',
+      titleHtml:
+        'Cloze,<br>đọc cả câu để <span class="marker">điền đúng</span>.',
+      lead: 'Bài điền khuyết kiểm tra cả ngữ pháp lẫn từ vựng. Trang này gom 5 loại chỗ trống, quy trình 4 bước, bảng tra nhanh và 12 câu luyện tập — kèm 10 bẫy đề.',
+      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
+      stats: [
+        { value: '5', label: 'loại gap' },
+        { value: '10', label: 'bẫy đề' },
+        { value: '12', label: 'câu luyện tập' }
+      ],
+      actions: [
+        { label: 'Xem bản đồ chỗ trống', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Làm 12 câu điền khuyết', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
   }

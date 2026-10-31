@@ -47,6 +47,7 @@ src/
 ├── lib/
 │   └── urls.ts            # helper link có hỗ trợ base
 ├── pages/
+│   ├── cloze.astro
 │   ├── index.astro
 │   ├── prepositions.astro
 │   ├── pronunciation.astro
@@ -63,8 +64,10 @@ src/
 │   ├── reading.js         # filter, quiz của trang đọc hiểu
 │   ├── pronunciation.js   # quiz của trang phát âm, trọng âm
 │   ├── sentence-transformation.js # quiz của trang viết lại câu
-│   └── vocabulary.js      # filter, quiz của trang từ vựng
+│   ├── vocabulary.js      # filter, quiz của trang từ vựng
+│   └── cloze.js           # quiz của trang điền khuyết
 └── styles/
+    ├── cloze.css
     ├── global.css         # entry point, import theo đúng thứ tự
     ├── home.css
     ├── prepositions.css
@@ -83,7 +86,7 @@ src/
    - tiêu đề, mô tả, badge, preview, highlights
    - `sections` cho thanh điều hướng trong trang
    - `hero` cho phần mở đầu
-   - `accent`: hiện có `tenses`, `prep`, `word`, `reading`, `sound`, `write` và `vocab`; thêm biến thể CSS nếu muốn màu mới
+   - `accent`: hiện có `tenses`, `prep`, `word`, `reading`, `sound`, `write`, `vocab` và `cloze`; thêm biến thể CSS nếu muốn màu mới
 2. Tạo `src/pages/<slug>.astro`:
 
 ```astro
