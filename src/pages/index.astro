@@ -4,11 +4,12 @@ import { getSheet, sheets, totalQuestions } from '../data/sheets';
 
 const tenses = getSheet('tenses');
 const prepositions = getSheet('prepositions');
+const wordForms = getSheet('word-forms');
 ---
 
 <BaseLayout
-  title="EngPrep — Cheat sheet 12 thì & giới từ lớp 9"
-  description="Bộ cheat sheet tiếng Anh lớp 9: 12 thì, giới từ, 54 cụm cố định, bẫy đề và bài luyện tập có giải thích. Một chỗ ôn thi, in được khổ A4, dùng offline."
+  title="EngPrep — Cheat sheet 12 thì, giới từ & word forms lớp 9"
+  description="Bộ cheat sheet tiếng Anh lớp 9: 12 thì, giới từ, word forms, 40 họ từ, bẫy đề và bài luyện tập có giải thích. Một chỗ ôn thi, in được khổ A4, dùng offline."
   current="home"
 >
   <!-- HERO -->
@@ -16,8 +17,8 @@ const prepositions = getSheet('prepositions');
     <div class="container hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">Global Success 9 · Ôn thi vào 10</p>
-        <h1>Hai tờ cheat sheet,<br>một chỗ <span class="marker">ôn thi</span>.</h1>
-        <p class="hero-lead">12 thì và giới từ tiếng Anh, gói gọn trong hai tờ ôn thi in được khổ A4. Công thức, dấu hiệu, bẫy đề và bài luyện tập có giải thích — tất cả ở cùng một nơi.</p>
+        <h1>Ba tờ cheat sheet,<br>một chỗ <span class="marker">ôn thi</span>.</h1>
+        <p class="hero-lead">12 thì, giới từ và word forms tiếng Anh, gói gọn trong ba tờ ôn thi in được khổ A4. Công thức, dấu hiệu, bẫy đề và bài luyện tập có giải thích — tất cả ở cùng một nơi.</p>
 
         <div class="hero-actions">
           <a class="btn btn-primary" href={tenses.href}>
@@ -26,6 +27,10 @@ const prepositions = getSheet('prepositions');
           </a>
           <a class="btn btn-ghost" href={prepositions.href}>
             Học giới từ
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href={wordForms.href}>
+            Học word forms
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
           </a>
         </div>
@@ -66,6 +71,17 @@ const prepositions = getSheet('prepositions');
             </div>
             <p class="mini-example">We met <mark>at</mark> the cinema <mark>on</mark> Saturday.</p>
           </div>
+
+          <div class="hub-sheet hub-sheet--word">
+            <span class="hub-sheet-kicker">Cheat sheet 03</span>
+            <strong class="hub-sheet-title">Word forms</strong>
+            <p class="hub-sheet-formula">success<br>→ successful<br>→ successfully</p>
+            <div class="mini-rule"></div>
+            <div class="mini-chips">
+              <span>-tion</span><span>-ful</span><span>-ly</span><span>un-</span>
+            </div>
+            <p class="mini-example">She is a <mark>successful</mark> singer.</p>
+          </div>
         </div>
 
         <div class="sticky-note">
@@ -73,7 +89,7 @@ const prepositions = getSheet('prepositions');
           <strong>In ra và dán</strong>
           <span>ở góc học tập!</span>
         </div>
-        <div class="stamp">Học<br>mỗi ngày<br><span>10 phút</span></div>
+        <div class="stamp stamp-home">Học<br>mỗi ngày<br><span>10 phút</span></div>
       </div>
     </div>
   </section>
@@ -84,7 +100,7 @@ const prepositions = getSheet('prepositions');
       <div class="section-head">
         <div>
           <p class="section-kicker">01 · Bộ tài liệu</p>
-          <h2>Hai tờ cheat sheet, đủ để ôn.</h2>
+          <h2>Ba tờ cheat sheet, đủ để ôn.</h2>
           <p>Mỗi tờ có sơ đồ, bảng tra nhanh, bẫy đề và bài kiểm tra riêng. Bắt đầu từ tờ bạn cần, hoặc đi theo lộ trình bên dưới.</p>
         </div>
         <p class="section-aside"><span>{sheets.length}</span> tờ<br><span>{totalQuestions}</span> câu hỏi</p>
@@ -129,10 +145,10 @@ const prepositions = getSheet('prepositions');
       <div class="section-head">
         <div>
           <p class="section-kicker">02 · Lộ trình</p>
-          <h2>Ba bước trước khi làm đề.</h2>
+          <h2>Bốn bước trước khi làm đề.</h2>
           <p>Không cần học hết trong một buổi. Đi theo thứ tự này để nhớ lâu hơn.</p>
         </div>
-        <p class="section-aside"><span>3</span> bước<br>mỗi ngày 10 phút</p>
+        <p class="section-aside"><span>4</span> bước<br>mỗi ngày 10 phút</p>
       </div>
 
       <div class="path-grid">
@@ -152,11 +168,19 @@ const prepositions = getSheet('prepositions');
 
         <article class="path-card">
           <span class="path-no" aria-hidden="true">03</span>
+          <h3>Luyện word forms</h3>
+          <p>Học vị trí từ loại, bảng hậu tố và 40 họ từ. Đây là phần dễ mất điểm nếu chỉ học thuộc lòng.</p>
+          <a class="path-link" href={wordForms.href}>Mở word forms →</a>
+        </article>
+
+        <article class="path-card">
+          <span class="path-no" aria-hidden="true">04</span>
           <h3>Tự kiểm tra</h3>
           <p>Làm bài ngắn để biết phần nào còn hổng, rồi quay lại đúng mục cần ôn.</p>
           <div class="path-links">
             <a href={`${tenses.href}#quiz`}>12 câu thì</a>
             <a href={`${prepositions.href}#quiz`}>16 câu giới từ</a>
+            <a href={`${wordForms.href}#quiz`}>16 câu word forms</a>
           </div>
         </article>
       </div>
@@ -169,12 +193,13 @@ const prepositions = getSheet('prepositions');
       <div class="home-band">
         <div>
           <p class="section-kicker">03 · Mang vào phòng thi</p>
-          <h2>Hai quy tắc nhớ nhanh.</h2>
-          <p><strong>Thì:</strong> since + mốc, for + khoảng · <strong>Giới từ:</strong> at + giờ, on + ngày, in + tháng/năm. Nắm hai điều này trước, rồi hãy học các cụm cố định.</p>
+          <h2>Ba quy tắc nhớ nhanh.</h2>
+          <p><strong>Thì:</strong> since + mốc, for + khoảng · <strong>Giới từ:</strong> at + giờ, on + ngày, in + tháng/năm · <strong>Từ loại:</strong> sau tính từ thường là danh từ, sau động từ thường là trạng từ.</p>
         </div>
         <div class="home-band-actions">
           <a class="btn btn-primary" href={tenses.href}>Ôn 12 thì</a>
           <a class="btn btn-ghost" href={prepositions.href}>Ôn giới từ</a>
+          <a class="btn btn-ghost" href={wordForms.href}>Ôn word forms</a>
         </div>
       </div>
     </div>

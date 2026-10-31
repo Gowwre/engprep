@@ -1,6 +1,6 @@
 import { sitePath } from '../lib/urls';
 
-export type SheetSlug = 'tenses' | 'prepositions';
+export type SheetSlug = 'tenses' | 'prepositions' | 'word-forms';
 
 export interface SheetAction {
   label: string;
@@ -43,7 +43,7 @@ export interface Sheet {
   metaDescription: string;
   cardNo: string;
   badge: string;
-  accent: 'tenses' | 'prep';
+  accent: 'tenses' | 'prep' | 'word';
   lead: string;
   preview: string[];
   highlights: SheetHighlight[];
@@ -148,6 +148,54 @@ export const sheets: Sheet[] = [
       actions: [
         { label: 'Xem bản đồ giới từ', href: '#map', variant: 'primary', icon: 'arrow' },
         { label: 'Làm bài kiểm tra', href: '#quiz', variant: 'ghost', icon: 'chevron' }
+      ]
+    }
+  },
+  {
+    slug: 'word-forms',
+    href: sitePath('word-forms/'),
+    navLabel: 'Word forms',
+    shortTitle: 'Word forms',
+    title: 'Word forms tiếng Anh',
+    metaTitle: 'Word Forms (Cấu tạo từ) — Cheatsheet lớp 9 | EngPrep',
+    metaDescription:
+      'Cheatsheet word forms cho học sinh lớp 9: vị trí từ loại trong câu, 33 hậu tố, 15 tiền tố, 40 họ từ thường gặp, 10 bẫy đề và 16 câu luyện tập có giải thích.',
+    cardNo: '03 / WORD FORMS',
+    badge: '40 họ từ',
+    accent: 'word',
+    lead: 'Từ gốc → danh từ → tính từ → trạng từ: nhận diện hậu tố, tiền tố và 40 họ từ thường gặp.',
+    preview: ['success', 'successful', 'successfully', 'un- + happy'],
+    highlights: [
+      { text: 'Bản đồ 4 dạng từ và bảng vị trí trong câu' },
+      { text: '33 hậu tố, 15 tiền tố kèm ví dụ' },
+      { strong: '40 họ từ', text: ' thường gặp, tra nhanh khi làm đề' },
+      { text: '10 bẫy đề và 16 câu trắc nghiệm' }
+    ],
+    meta: '40 họ từ · 16 câu hỏi',
+    questionCount: 16,
+    sections: [
+      { id: 'map', label: 'Bản đồ' },
+      { id: 'rules', label: 'Quy tắc' },
+      { id: 'suffixes', label: 'Hậu tố' },
+      { id: 'prefixes', label: 'Tiền tố' },
+      { id: 'families', label: 'Họ từ' },
+      { id: 'traps', label: 'Bẫy đề' },
+      { id: 'quiz', label: 'Luyện tập' }
+    ],
+    hero: {
+      eyebrow: 'Global Success 9 · Ôn thi vào 10',
+      titleHtml:
+        'Word forms,<br>xác định đúng <span class="marker">từ loại</span>.',
+      lead: 'Đọc vị trí trong câu, nhận diện hậu tố và chọn đúng dạng từ. Trang này gom quy tắc, bảng hậu tố – tiền tố, 40 họ từ và 10 bẫy đề thường gặp, kèm 16 câu tự kiểm tra.',
+      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
+      stats: [
+        { value: '40', label: 'họ từ' },
+        { value: '33', label: 'hậu tố' },
+        { value: '16', label: 'câu luyện tập' }
+      ],
+      actions: [
+        { label: 'Xem bản đồ từ loại', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Làm 16 câu trắc nghiệm', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
   }
