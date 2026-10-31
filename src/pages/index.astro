@@ -8,11 +8,12 @@ const wordForms = getSheet('word-forms');
 const reading = getSheet('reading');
 const pronunciation = getSheet('pronunciation');
 const sentenceTransformation = getSheet('sentence-transformation');
+const vocabulary = getSheet('vocabulary');
 ---
 
 <BaseLayout
-  title="EngPrep — Cheat sheet 12 thì, giới từ, word forms, reading, phát âm & viết lại câu lớp 9"
-  description="Bộ cheat sheet tiếng Anh lớp 9: 12 thì, giới từ, word forms, reading comprehension, phát âm – trọng âm, viết lại câu, bẫy đề và bài luyện tập có giải thích. Một chỗ ôn thi, in được khổ A4, dùng offline."
+  title="EngPrep — Cheat sheet 12 thì, giới từ, word forms, reading, phát âm, viết lại câu & từ vựng lớp 9"
+  description="Bộ cheat sheet tiếng Anh lớp 9: 12 thì, giới từ, word forms, reading comprehension, phát âm – trọng âm, viết lại câu, từ vựng và collocations, bẫy đề và bài luyện tập có giải thích. Một chỗ ôn thi, in được khổ A4, dùng offline."
   current="home"
 >
   <!-- HERO -->
@@ -20,8 +21,8 @@ const sentenceTransformation = getSheet('sentence-transformation');
     <div class="container hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">Global Success 9 · Ôn thi vào 10</p>
-        <h1>Sáu tờ cheat sheet,<br>một chỗ <span class="marker">ôn thi</span>.</h1>
-        <p class="hero-lead">12 thì, giới từ, word forms, reading comprehension, phát âm – trọng âm và viết lại câu, gói gọn trong sáu tờ ôn thi in được khổ A4. Công thức, dấu hiệu, bẫy đề và bài luyện tập có giải thích — tất cả ở cùng một nơi.</p>
+        <h1>Bảy tờ cheat sheet,<br>một chỗ <span class="marker">ôn thi</span>.</h1>
+        <p class="hero-lead">12 thì, giới từ, word forms, reading comprehension, phát âm – trọng âm, viết lại câu và từ vựng – collocations, gói gọn trong bảy tờ ôn thi in được khổ A4. Công thức, dấu hiệu, bẫy đề và bài luyện tập có giải thích — tất cả ở cùng một nơi.</p>
 
         <div class="hero-actions hero-actions--home">
           <a class="btn btn-primary" href={tenses.href}>
@@ -48,6 +49,10 @@ const sentenceTransformation = getSheet('sentence-transformation');
             Viết lại câu
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
           </a>
+          <a class="btn btn-ghost" href={vocabulary.href}>
+            Từ vựng
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </a>
         </div>
 
         <ul class="hero-badges" aria-label="Thông tin bộ tài liệu">
@@ -64,7 +69,7 @@ const sentenceTransformation = getSheet('sentence-transformation');
       </div>
 
       <div class="hero-visual" aria-hidden="true">
-        <div class="hub-stack hub-stack--six">
+        <div class="hub-stack hub-stack--seven">
           <div class="hub-sheet hub-sheet--tenses">
             <span class="hub-sheet-kicker">Cheat sheet 01</span>
             <strong class="hub-sheet-title">12 thì</strong>
@@ -130,6 +135,17 @@ const sentenceTransformation = getSheet('sentence-transformation');
             </div>
             <p class="mini-example">I wish I <mark>had</mark> a bike.</p>
           </div>
+
+          <div class="hub-sheet hub-sheet--vocab">
+            <span class="hub-sheet-kicker">Cheat sheet 07</span>
+            <strong class="hub-sheet-title">Vocabulary</strong>
+            <p class="hub-sheet-formula">collocations<br>phrasal verbs<br>dictionary</p>
+            <div class="mini-rule"></div>
+            <div class="mini-chips">
+              <span>make a decision</span><span>look after</span><span>eating habits</span>
+            </div>
+            <p class="mini-example">Learn <mark>collocations</mark>, not single words.</p>
+          </div>
         </div>
 
         <div class="sticky-note">
@@ -148,7 +164,7 @@ const sentenceTransformation = getSheet('sentence-transformation');
       <div class="section-head">
         <div>
           <p class="section-kicker">01 · Bộ tài liệu</p>
-          <h2>Sáu tờ cheat sheet, đủ để ôn.</h2>
+          <h2>Bảy tờ cheat sheet, đủ để ôn.</h2>
           <p>Mỗi tờ có sơ đồ, bảng tra nhanh, bẫy đề và bài kiểm tra riêng. Bắt đầu từ tờ bạn cần, hoặc đi theo lộ trình bên dưới.</p>
         </div>
         <p class="section-aside"><span>{sheets.length}</span> tờ<br><span>{totalQuestions}</span> câu hỏi</p>
@@ -216,10 +232,11 @@ const sentenceTransformation = getSheet('sentence-transformation');
 
         <article class="path-card">
           <span class="path-no" aria-hidden="true">03</span>
-          <h3>Luyện từ vựng, đọc &amp; âm</h3>
-          <p>Học word forms, đọc hiểu và phát âm – trọng âm để xử lý các câu hỏi nền tảng.</p>
+          <h3>Luyện từ vựng &amp; kỹ năng</h3>
+          <p>Học word forms, từ vựng – collocations, đọc hiểu và phát âm – trọng âm.</p>
           <div class="path-links">
             <a href={wordForms.href}>Word forms</a>
+            <a href={vocabulary.href}>Từ vựng</a>
             <a href={reading.href}>Reading</a>
             <a href={pronunciation.href}>Phát âm</a>
           </div>
@@ -243,6 +260,7 @@ const sentenceTransformation = getSheet('sentence-transformation');
             <a href={`${reading.href}#quiz`}>12 câu reading</a>
             <a href={`${pronunciation.href}#quiz`}>16 câu phát âm</a>
             <a href={`${sentenceTransformation.href}#quiz`}>16 câu viết lại</a>
+            <a href={`${vocabulary.href}#quiz`}>16 câu từ vựng</a>
           </div>
         </article>
       </div>
@@ -255,8 +273,8 @@ const sentenceTransformation = getSheet('sentence-transformation');
       <div class="home-band">
         <div>
           <p class="section-kicker">03 · Mang vào phòng thi</p>
-          <h2>Sáu quy tắc nhớ nhanh.</h2>
-          <p><strong>Thì:</strong> since + mốc, for + khoảng · <strong>Giới từ:</strong> at + giờ, on + ngày, in + tháng/năm · <strong>Từ loại:</strong> sau tính từ thường là danh từ, sau động từ thường là trạng từ · <strong>Đọc hiểu:</strong> đáp án phải có bằng chứng trong bài · <strong>Phát âm:</strong> xét âm cuối, không xét chữ cuối · <strong>Viết lại:</strong> đổi cấu trúc, giữ nguyên nghĩa.</p>
+          <h2>Bảy quy tắc nhớ nhanh.</h2>
+          <p><strong>Thì:</strong> since + mốc, for + khoảng · <strong>Giới từ:</strong> at + giờ, on + ngày, in + tháng/năm · <strong>Từ loại:</strong> sau tính từ thường là danh từ, sau động từ thường là trạng từ · <strong>Đọc hiểu:</strong> đáp án phải có bằng chứng trong bài · <strong>Phát âm:</strong> xét âm cuối, không xét chữ cuối · <strong>Viết lại:</strong> đổi cấu trúc, giữ nguyên nghĩa · <strong>Từ vựng:</strong> học cả cụm, không học từ đơn.</p>
         </div>
         <div class="home-band-actions">
           <a class="btn btn-primary" href={tenses.href}>Ôn 12 thì</a>
@@ -265,6 +283,7 @@ const sentenceTransformation = getSheet('sentence-transformation');
           <a class="btn btn-ghost" href={reading.href}>Luyện đọc hiểu</a>
           <a class="btn btn-ghost" href={pronunciation.href}>Luyện phát âm</a>
           <a class="btn btn-ghost" href={sentenceTransformation.href}>Luyện viết lại câu</a>
+          <a class="btn btn-ghost" href={vocabulary.href}>Luyện từ vựng</a>
         </div>
       </div>
     </div>

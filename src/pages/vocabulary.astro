@@ -1,0 +1,604 @@
+---
+import SheetLayout from '../layouts/SheetLayout.astro';
+---
+
+<SheetLayout slug="vocabulary">
+  <Fragment slot="visual">
+    <div class="study-stack vc-stack">
+      <div class="stack-card stack-card-back"></div>
+      <div class="stack-card stack-card-mid"></div>
+      <div class="stack-card stack-card-front">
+        <p class="mini-label">Mục từ điển · provide</p>
+        <div class="vc-mini-entry">
+          <p class="vc-mini-word">provide <span>/prəˈvaɪd/ v.</span></p>
+          <p class="vc-mini-def">to give something to somebody</p>
+          <p class="vc-mini-colloc">provide <mark>information</mark></p>
+          <p class="vc-mini-colloc">provide <mark>an opportunity</mark></p>
+        </div>
+        <div class="mini-rule"></div>
+        <p class="vc-mini-question">Chọn cụm đúng:</p>
+        <p class="vc-mini-answer">provide information ✓</p>
+        <p class="vc-mini-why">Học cả cụm, không học từ đơn.</p>
+      </div>
+    </div>
+    <div class="sticky-note">
+      <span class="sticky-label">Mẹo thi</span>
+      <strong>Từ nào đi với từ nào?</strong>
+      <span>học cả cụm!</span>
+    </div>
+    <div class="stamp">Ôn thi<br>vào 10<br><span>2026–2027</span></div>
+  </Fragment>
+
+  <!-- MAP -->
+  <section class="section" id="map">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">01 · Bản đồ</p>
+          <h2>Bốn nhóm từ vựng cần ôn.</h2>
+          <p>Từ vựng trong đề không hỏi từ đơn lẻ. Đề hỏi cách từ kết hợp với nhau, nghĩa trong ngữ cảnh và cụm từ trong mục từ điển.</p>
+        </div>
+        <p class="section-aside"><span>4</span> nhóm<br><span>16</span> câu hỏi</p>
+      </div>
+
+      <div class="vc-map-grid">
+        <a class="vc-map-card vc-map-colloc" href="#collocations">
+          <p class="map-kicker">01 · Cách kết hợp</p>
+          <h3>Collocations</h3>
+          <p class="map-rule">Học cụm 2–3 từ thay vì học từng từ riêng lẻ.</p>
+          <div class="map-chips">
+            <span>make a decision</span><span>heavy rain</span><span>take part in</span>
+          </div>
+          <span class="map-link">Xem 32 cụm →</span>
+        </a>
+
+        <a class="vc-map-card vc-map-phrasal" href="#collocations">
+          <p class="map-kicker">02 · Nghĩa cố định</p>
+          <h3>Phrasal verbs</h3>
+          <p class="map-rule">Động từ + tiểu từ tạo nghĩa mới, không đoán từng chữ.</p>
+          <div class="map-chips">
+            <span>look after</span><span>run out of</span><span>put off</span>
+          </div>
+          <span class="map-link">Xem phrasal verbs →</span>
+        </a>
+
+        <a class="vc-map-card vc-map-topic" href="#topics">
+          <p class="map-kicker">03 · Theo chủ đề</p>
+          <h3>Topic vocabulary</h3>
+          <p class="map-rule">Sáu chủ đề quen thuộc: môi trường, công nghệ, du lịch, sức khoẻ, cộng đồng, học đường.</p>
+          <div class="map-chips">
+            <span>environment</span><span>technology</span><span>travel</span><span>health</span>
+          </div>
+          <span class="map-link">Xem từ theo chủ đề →</span>
+        </a>
+
+        <a class="vc-map-card vc-map-entry" href="#dictionary">
+          <p class="map-kicker">04 · Phần VI</p>
+          <h3>Dictionary entry</h3>
+          <p class="map-rule">Đọc mục từ, chọn cụm phù hợp và kiểm tra ngữ pháp.</p>
+          <div class="map-chips">
+            <span>provide</span><span>habit</span><span>an opportunity</span>
+          </div>
+          <span class="map-link">Xem cách làm →</span>
+        </a>
+      </div>
+
+      <p class="mini-note"><strong>Nguyên tắc:</strong> gặp một từ mới, hãy ghi luôn cụm đi với nó. Ví dụ: không ghi “decision” mà ghi “make a decision”; không ghi “provide” mà ghi “provide information / an opportunity”.</p>
+    </div>
+  </section>
+
+  <!-- COLLOCATIONS -->
+  <section class="section section-alt" id="collocations">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">02 · Collocations</p>
+          <h2>32 cụm thường gặp trong đề.</h2>
+          <p>Chia thành sáu nhóm: động từ + danh từ, tính từ + danh từ, động từ + giới từ, danh từ + giới từ, cụm cố định và phrasal verbs.</p>
+        </div>
+        <p class="section-aside"><span>32</span> cụm<br><span>6</span> nhóm</p>
+      </div>
+
+      <div class="toolbar vc-toolbar">
+        <div class="filter-tabs" role="group" aria-label="Lọc collocations theo nhóm">
+          <button class="filter-tab" type="button" data-cat="all" aria-pressed="true">Tất cả</button>
+          <button class="filter-tab" type="button" data-cat="vn" aria-pressed="false">V + N</button>
+          <button class="filter-tab" type="button" data-cat="adjn" aria-pressed="false">Adj + N</button>
+          <button class="filter-tab" type="button" data-cat="vprep" aria-pressed="false">V + prep</button>
+          <button class="filter-tab" type="button" data-cat="nprep" aria-pressed="false">N + prep</button>
+          <button class="filter-tab" type="button" data-cat="fixed" aria-pressed="false">Cụm cố định</button>
+          <button class="filter-tab" type="button" data-cat="phrasal" aria-pressed="false">Phrasal verb</button>
+        </div>
+
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <label class="sr-only" for="collocation-search">Tìm collocation</label>
+          <input id="collocation-search" type="search" placeholder="Tìm “decision”, “quyết định”, “on”…" autocomplete="off">
+          <button class="search-clear" id="collocation-clear" type="button" aria-label="Xoá tìm kiếm" hidden>&times;</button>
+        </div>
+
+        <span class="result-count" id="collocation-count" aria-live="polite">32/32 cụm</span>
+      </div>
+
+      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
+      <div class="vc-table-wrap">
+        <table class="vc-table vc-collocation-table">
+          <caption class="sr-only">Bảng collocations thường gặp trong đề thi lớp 9</caption>
+          <thead>
+            <tr>
+              <th scope="col">Cụm</th>
+              <th scope="col">Nhóm</th>
+              <th scope="col">Nghĩa</th>
+              <th scope="col">Ví dụ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="vc-collocation-row" data-cat="vn">
+              <th scope="row"><code>make a decision</code></th>
+              <td><span class="vc-cat vc-cat-vn">V + N</span></td>
+              <td>đưa ra quyết định</td>
+              <td>She <strong>made a decision</strong> about the trip.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="vn">
+              <th scope="row"><code>take part in</code></th>
+              <td><span class="vc-cat vc-cat-vn">V + N</span></td>
+              <td>tham gia</td>
+              <td>He <strong>took part in</strong> the contest.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="vn">
+              <th scope="row"><code>do homework</code></th>
+              <td><span class="vc-cat vc-cat-vn">V + N</span></td>
+              <td>làm bài tập</td>
+              <td>I <strong>do my homework</strong> every evening.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="vn">
+              <th scope="row"><code>have an impact on</code></th>
+              <td><span class="vc-cat vc-cat-vn">V + N</span></td>
+              <td>có tác động đến</td>
+              <td>Social media <strong>has an impact on</strong> teenagers.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="vn">
+              <th scope="row"><code>make a difference</code></th>
+              <td><span class="vc-cat vc-cat-vn">V + N</span></td>
+              <td>tạo sự khác biệt</td>
+              <td>Small actions can <strong>make a difference</strong>.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="vn">
+              <th scope="row"><code>pay attention to</code></th>
+              <td><span class="vc-cat vc-cat-vn">V + N</span></td>
+              <td>chú ý đến</td>
+              <td><strong>Pay attention to</strong> the keywords.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="vn">
+              <th scope="row"><code>take responsibility for</code></th>
+              <td><span class="vc-cat vc-cat-vn">V + N</span></td>
+              <td>chịu trách nhiệm về</td>
+              <td>We should <strong>take responsibility for</strong> our actions.</td>
+            </tr>
+
+            <tr class="vc-collocation-row" data-cat="adjn">
+              <th scope="row"><code>heavy rain</code></th>
+              <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
+              <td>mưa lớn</td>
+              <td><strong>Heavy rain</strong> caused floods.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="adjn">
+              <th scope="row"><code>serious problem</code></th>
+              <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
+              <td>vấn đề nghiêm trọng</td>
+              <td>Plastic waste is a <strong>serious problem</strong>.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="adjn">
+              <th scope="row"><code>healthy lifestyle</code></th>
+              <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
+              <td>lối sống lành mạnh</td>
+              <td>A <strong>healthy lifestyle</strong> is important.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="adjn">
+              <th scope="row"><code>public transport</code></th>
+              <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
+              <td>giao thông công cộng</td>
+              <td>We should use <strong>public transport</strong>.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="adjn">
+              <th scope="row"><code>renewable energy</code></th>
+              <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
+              <td>năng lượng tái tạo</td>
+              <td>Solar power is a form of <strong>renewable energy</strong>.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="adjn">
+              <th scope="row"><code>cultural heritage</code></th>
+              <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
+              <td>di sản văn hoá</td>
+              <td>We should protect <strong>cultural heritage</strong>.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="adjn">
+              <th scope="row"><code>social media</code></th>
+              <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
+              <td>mạng xã hội</td>
+              <td>Many teens use <strong>social media</strong> every day.</td>
+            </tr>
+
+            <tr class="vc-collocation-row" data-cat="vprep">
+              <th scope="row"><code>depend on</code></th>
+              <td><span class="vc-cat vc-cat-vprep">V + prep</span></td>
+              <td>phụ thuộc vào</td>
+              <td>It <strong>depends on</strong> the weather.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="vprep">
+              <th scope="row"><code>look after</code></th>
+              <td><span class="vc-cat vc-cat-vprep">V + prep</span></td>
+              <td>chăm sóc</td>
+              <td>She <strong>looks after</strong> her little brother.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="vprep">
+              <th scope="row"><code>look forward to</code></th>
+              <td><span class="vc-cat vc-cat-vprep">V + prep</span></td>
+              <td>mong chờ (+ V-ing)</td>
+              <td>I <strong>look forward to seeing</strong> you.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="vprep">
+              <th scope="row"><code>deal with</code></th>
+              <td><span class="vc-cat vc-cat-vprep">V + prep</span></td>
+              <td>giải quyết, xử lý</td>
+              <td>We need to <strong>deal with</strong> this problem.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="vprep">
+              <th scope="row"><code>concentrate on</code></th>
+              <td><span class="vc-cat vc-cat-vprep">V + prep</span></td>
+              <td>tập trung vào</td>
+              <td><strong>Concentrate on</strong> your studies.</td>
+            </tr>
+
+            <tr class="vc-collocation-row" data-cat="nprep">
+              <th scope="row"><code>reason for</code></th>
+              <td><span class="vc-cat vc-cat-nprep">N + prep</span></td>
+              <td>lý do cho</td>
+              <td>the <strong>reason for</strong> the change</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="nprep">
+              <th scope="row"><code>solution to</code></th>
+              <td><span class="vc-cat vc-cat-nprep">N + prep</span></td>
+              <td>giải pháp cho</td>
+              <td>a <strong>solution to</strong> the problem</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="nprep">
+              <th scope="row"><code>effect on</code></th>
+              <td><span class="vc-cat vc-cat-nprep">N + prep</span></td>
+              <td>tác động lên</td>
+              <td>Noise has a bad <strong>effect on</strong> sleep.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="nprep">
+              <th scope="row"><code>access to</code></th>
+              <td><span class="vc-cat vc-cat-nprep">N + prep</span></td>
+              <td>quyền tiếp cận</td>
+              <td><strong>access to</strong> the internet</td>
+            </tr>
+
+            <tr class="vc-collocation-row" data-cat="fixed">
+              <th scope="row"><code>in the end</code></th>
+              <td><span class="vc-cat vc-cat-fixed">Cụm cố định</span></td>
+              <td>cuối cùng</td>
+              <td><strong>In the end</strong>, we decided to stay.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="fixed">
+              <th scope="row"><code>on time</code></th>
+              <td><span class="vc-cat vc-cat-fixed">Cụm cố định</span></td>
+              <td>đúng giờ</td>
+              <td>The train arrived <strong>on time</strong>.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="fixed">
+              <th scope="row"><code>by mistake</code></th>
+              <td><span class="vc-cat vc-cat-fixed">Cụm cố định</span></td>
+              <td>do nhầm lẫn</td>
+              <td>I took your bag <strong>by mistake</strong>.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="fixed">
+              <th scope="row"><code>in spite of</code></th>
+              <td><span class="vc-cat vc-cat-fixed">Cụm cố định</span></td>
+              <td>mặc dù</td>
+              <td><strong>In spite of</strong> the rain, we went out.</td>
+            </tr>
+
+            <tr class="vc-collocation-row" data-cat="phrasal">
+              <th scope="row"><code>break down</code></th>
+              <td><span class="vc-cat vc-cat-phrasal">Phrasal verb</span></td>
+              <td>hỏng máy</td>
+              <td>Our car <strong>broke down</strong>.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="phrasal">
+              <th scope="row"><code>run out of</code></th>
+              <td><span class="vc-cat vc-cat-phrasal">Phrasal verb</span></td>
+              <td>hết, không còn</td>
+              <td>We <strong>ran out of</strong> water.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="phrasal">
+              <th scope="row"><code>put off</code></th>
+              <td><span class="vc-cat vc-cat-phrasal">Phrasal verb</span></td>
+              <td>hoãn lại</td>
+              <td>They <strong>put off</strong> the meeting.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="phrasal">
+              <th scope="row"><code>turn off</code></th>
+              <td><span class="vc-cat vc-cat-phrasal">Phrasal verb</span></td>
+              <td>tắt</td>
+              <td><strong>Turn off</strong> the lights.</td>
+            </tr>
+            <tr class="vc-collocation-row" data-cat="phrasal">
+              <th scope="row"><code>give up</code></th>
+              <td><span class="vc-cat vc-cat-phrasal">Phrasal verb</span></td>
+              <td>từ bỏ</td>
+              <td>Don’t <strong>give up</strong>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="empty-state" id="collocation-empty" hidden>
+        <p class="empty-title">Không tìm thấy cụm nào khớp.</p>
+        <p>Thử từ khoá khác hoặc xoá bộ lọc để xem lại cả 32 cụm.</p>
+        <button class="btn btn-ghost" id="collocation-reset" type="button">Xoá bộ lọc</button>
+      </div>
+
+      <p class="mini-note"><strong>Mẹo:</strong> khi học một cụm, hãy đọc cả câu ví dụ. Ví dụ <em>make a decision</em> đi với “make”, không phải “do”; <em>look forward to</em> đi với V-ing.</p>
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section class="section" id="topics">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">03 · Theo chủ đề</p>
+          <h2>Sáu chủ đề quen thuộc.</h2>
+          <p>Đề xoay chủ đề nhưng vẫn dùng lại các nhóm từ quen thuộc. Học theo chủ đề để gặp lại từ trong bài đọc và bài điền khuyết.</p>
+        </div>
+        <p class="section-aside"><span>6</span> chủ đề<br><span>8</span> cụm / chủ đề</p>
+      </div>
+
+      <div class="vc-topic-grid">
+        <article class="vc-topic-card vc-topic-env">
+          <p class="vc-topic-label">01 · Environment</p>
+          <h3>Môi trường</h3>
+          <div class="vc-topic-chips">
+            <span>pollution</span><span>climate change</span><span>renewable energy</span><span>plastic waste</span><span>protect the environment</span><span>reduce emissions</span><span>natural disaster</span><span>wildlife</span>
+          </div>
+        </article>
+
+        <article class="vc-topic-card vc-topic-tech">
+          <p class="vc-topic-label">02 · Technology &amp; AI</p>
+          <h3>Công nghệ</h3>
+          <div class="vc-topic-chips">
+            <span>artificial intelligence</span><span>deepfake</span><span>misinformation</span><span>social media</span><span>digital device</span><span>online safety</span><span>spread information</span><span>influence public opinion</span>
+          </div>
+        </article>
+
+        <article class="vc-topic-card vc-topic-travel">
+          <p class="vc-topic-label">03 · Travel</p>
+          <h3>Du lịch</h3>
+          <div class="vc-topic-chips">
+            <span>destination</span><span>accommodation</span><span>tourist attraction</span><span>local cuisine</span><span>package tour</span><span>means of transport</span><span>book a ticket</span><span>go sightseeing</span>
+          </div>
+        </article>
+
+        <article class="vc-topic-card vc-topic-health">
+          <p class="vc-topic-label">04 · Health</p>
+          <h3>Sức khoẻ</h3>
+          <div class="vc-topic-chips">
+            <span>balanced diet</span><span>physical activity</span><span>mental health</span><span>get enough sleep</span><span>cut down on fast food</span><span>stay healthy</span><span>overweight</span><span>stress</span>
+          </div>
+        </article>
+
+        <article class="vc-topic-card vc-topic-community">
+          <p class="vc-topic-label">05 · Community</p>
+          <h3>Cộng đồng</h3>
+          <div class="vc-topic-chips">
+            <span>volunteer</span><span>charity</span><span>community service</span><span>cultural heritage</span><span>festival</span><span>custom</span><span>tradition</span><span>take part in</span>
+          </div>
+        </article>
+
+        <article class="vc-topic-card vc-topic-school">
+          <p class="vc-topic-label">06 · Education</p>
+          <h3>Học đường</h3>
+          <div class="vc-topic-chips">
+            <span>curriculum</span><span>assignment</span><span>extracurricular activity</span><span>vocational school</span><span>qualification</span><span>higher education</span><span>pass an exam</span><span>school facilities</span>
+          </div>
+        </article>
+      </div>
+
+      <p class="mini-note"><strong>Mẹo ghi chép:</strong> mỗi khi gặp một từ mới trong bài đọc, ghi từ đó vào đúng chủ đề và thêm một cụm đi kèm. Ví dụ: <em>energy → renewable energy</em>, <em>habit → eating habits</em>.</p>
+    </div>
+  </section>
+
+  <!-- DICTIONARY -->
+  <section class="section section-alt" id="dictionary">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">04 · Mục từ điển</p>
+          <h2>Phần VI: chọn cụm, không chọn từ.</h2>
+          <p>Hai đề gần đây dùng mục từ điển để kiểm tra cụm từ cố định. Đọc cả mục từ, xem ví dụ rồi mới chọn cụm phù hợp.</p>
+        </div>
+        <p class="section-aside"><span>2</span> mục từ mẫu<br><span>3</span> bước chọn</p>
+      </div>
+
+      <div class="vc-entry-grid">
+        <article class="vc-entry">
+          <div class="vc-entry-head">
+            <strong>provide</strong>
+            <span>/prəˈvaɪd/ v.</span>
+          </div>
+          <p class="vc-entry-def">to give something to somebody</p>
+          <div class="vc-entry-line">
+            <code>provide <mark>information</mark></code>
+            <span>Volunteers provide information about the museum.</span>
+          </div>
+          <div class="vc-entry-line">
+            <code>provide <mark>an opportunity</mark></code>
+            <span>The program provides an opportunity for learners.</span>
+          </div>
+          <div class="vc-entry-line">
+            <code>provide <mark>support</mark></code>
+            <span>They provide support for local families.</span>
+          </div>
+        </article>
+
+        <article class="vc-entry">
+          <div class="vc-entry-head">
+            <strong>habit</strong>
+            <span>/ˈhæbɪt/ n.</span>
+          </div>
+          <p class="vc-entry-def">something you do regularly</p>
+          <div class="vc-entry-line">
+            <code><mark>eating</mark> habits</code>
+            <span>Your eating habits affect your health.</span>
+          </div>
+          <div class="vc-entry-line">
+            <code>break the <mark>habit</mark> of + V-ing</code>
+            <span>I’m trying to break the habit of staying up late.</span>
+          </div>
+          <div class="vc-entry-line">
+            <code>sleeping <mark>habits</mark></code>
+            <span>Good sleeping habits help you focus.</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="vc-steps">
+        <article class="vc-step">
+          <span>01</span>
+          <h3>Đọc cả mục từ</h3>
+          <p>Xác định từ loại, nghĩa và các cụm đi kèm. Đừng chỉ nhìn dòng đầu tiên.</p>
+        </article>
+        <article class="vc-step">
+          <span>02</span>
+          <h3>Soi ví dụ</h3>
+          <p>Chú ý giới từ, số ít/số nhiều và thì của động từ trong câu ví dụ.</p>
+        </article>
+        <article class="vc-step">
+          <span>03</span>
+          <h3>Chọn cụm 2–3 từ</h3>
+          <p>Chọn cụm đúng nghĩa, rồi kiểm tra lại ngữ pháp trong câu hoàn chỉnh.</p>
+        </article>
+      </div>
+
+      <div class="vc-check-strip">
+        <span><strong>provide information</strong> · không thêm -s</span>
+        <span><strong>provides an opportunity</strong> · chia -s</span>
+        <span><strong>eating habits</strong> · số nhiều</span>
+        <span><strong>break the habit of + V-ing</strong></span>
+      </div>
+
+      <p class="mini-note"><strong>Đừng học tủ:</strong> mục từ có thể thay đổi mỗi năm, nhưng cách làm thì không. Hãy luyện đọc mục từ và kiểm tra cụm + ngữ pháp, thay vì học thuộc một đáp án.</p>
+    </div>
+  </section>
+
+  <!-- TRAPS -->
+  <section class="section" id="traps">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">05 · Bẫy đề</p>
+          <h2>Mười lỗi hay mất điểm.</h2>
+          <p>Đọc câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc khi làm phần từ vựng và mục từ điển.</p>
+        </div>
+        <p class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
+      </div>
+
+      <div class="trap-grid">
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>do</strong> a decision</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>make</strong> a decision</p></div>
+          <p class="trap-why">Decision đi với make, không đi với do. Học cả cụm.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>make</strong> homework</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>do</strong> homework</p></div>
+          <p class="trap-why">Do homework, do the dishes; make a decision, make a plan.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>She <strong>said</strong> me the news.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>She <strong>told</strong> me the news.</p></div>
+          <p class="trap-why">Say something; tell somebody something.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Can you <strong>lend</strong> me some money? — No, I need to <strong>borrow</strong> from you.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Can you <strong>lend</strong> me some money? — I need to <strong>borrow</strong> some.</p></div>
+          <p class="trap-why">Borrow something from somebody; lend something to somebody.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>The weather <strong>effects</strong> my mood.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>The weather <strong>affects</strong> my mood.</p></div>
+          <p class="trap-why">Affect là động từ; effect là danh từ: the effect on health.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>They provide <strong>students books</strong>.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>They provide <strong>students with books</strong>.</p></div>
+          <p class="trap-why">Provide somebody with something; provide something for somebody.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>eat habits</strong></p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>eating habits</strong></p></div>
+          <p class="trap-why">Habit đi với V-ing hoặc danh từ: eating habits, sleeping habits.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Our car <strong>broke up</strong> on the way.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Our car <strong>broke down</strong> on the way.</p></div>
+          <p class="trap-why">Break down = hỏng máy; break up = chia tay, tan rã.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>The program <strong>provide</strong> an opportunity for learners.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>The program <strong>provides</strong> an opportunity for learners.</p></div>
+          <p class="trap-why">Chủ ngữ số ít “The program” → provides. Đừng quên chia động từ trong mục từ điển.</p>
+        </article>
+
+        <article class="trap">
+          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I need some <strong>informations</strong>.</p></div>
+          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I need some <strong>information</strong>.</p></div>
+          <p class="trap-why">Information, advice, furniture, equipment là danh từ không đếm được, không thêm -s.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="section section-quiz" id="quiz">
+    <div class="container">
+      <div class="section-head section-head-center">
+        <div>
+          <p class="section-kicker">06 · Luyện tập</p>
+          <h2>Kiểm tra 16 câu từ vựng.</h2>
+          <p>Chọn đáp án đúng. Mỗi câu có giải thích ngay sau khi trả lời.</p>
+        </div>
+      </div>
+
+      <p class="quiz-best" id="quiz-best" aria-live="polite">Điểm cao nhất của bạn: chưa có</p>
+
+      <div class="quiz-shell">
+        <div class="quiz-top">
+          <span class="quiz-step" id="quiz-step">Câu 1 / 16</span>
+          <div class="quiz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="16" aria-valuenow="1" aria-label="Tiến độ làm bài">
+            <span id="quiz-bar"></span>
+          </div>
+          <span class="quiz-score" id="quiz-score">0 đúng</span>
+        </div>
+        <div class="quiz-stage" id="quiz-stage" aria-live="polite"></div>
+      </div>
+
+      <noscript><p class="quiz-noscript">Bật JavaScript để làm bài luyện tập tương tác. Phần cheat sheet phía trên vẫn đọc được bình thường.</p></noscript>
+    </div>
+  </section>
+
+</SheetLayout>
+
+<script>
+  import '../scripts/vocabulary.js';
+</script>

@@ -6,7 +6,8 @@ export type SheetSlug =
   | 'word-forms'
   | 'reading'
   | 'pronunciation'
-  | 'sentence-transformation';
+  | 'sentence-transformation'
+  | 'vocabulary';
 
 export interface SheetAction {
   label: string;
@@ -49,7 +50,7 @@ export interface Sheet {
   metaDescription: string;
   cardNo: string;
   badge: string;
-  accent: 'tenses' | 'prep' | 'word' | 'reading' | 'sound' | 'write';
+  accent: 'tenses' | 'prep' | 'word' | 'reading' | 'sound' | 'write' | 'vocab';
   lead: string;
   preview: string[];
   highlights: SheetHighlight[];
@@ -344,6 +345,53 @@ export const sheets: Sheet[] = [
       actions: [
         { label: 'Xem bản đồ mẫu câu', href: '#map', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 16 câu viết lại', href: '#quiz', variant: 'ghost', icon: 'chevron' }
+      ]
+    }
+  },
+  {
+    slug: 'vocabulary',
+    href: sitePath('vocabulary/'),
+    navLabel: 'Từ vựng',
+    shortTitle: 'Vocabulary',
+    title: 'Vocabulary & collocations',
+    metaTitle: 'Vocabulary & Collocations (Từ vựng) — Cheatsheet lớp 9 | EngPrep',
+    metaDescription:
+      'Cheatsheet từ vựng và collocations tiếng Anh lớp 9: 32 cụm thường gặp, phrasal verbs, từ vựng theo chủ đề, mục từ điển phần VI, 10 bẫy đề và 16 câu luyện tập có giải thích.',
+    cardNo: '07 / VOCABULARY',
+    badge: '32 cụm',
+    accent: 'vocab',
+    lead: 'Collocations, phrasal verbs, từ vựng theo chủ đề và cách đọc mục từ điển ở phần VI.',
+    preview: ['make a decision', 'look after', 'renewable energy', 'eating habits'],
+    highlights: [
+      { text: '32 cụm collocation thường gặp, có bộ lọc' },
+      { text: 'Phrasal verbs và từ vựng 6 chủ đề thi' },
+      { strong: 'Mục từ điển', text: ' và cách chọn cụm 2–3 từ' },
+      { text: '10 bẫy đề và 16 câu luyện tập' }
+    ],
+    meta: '32 cụm · 16 câu hỏi',
+    questionCount: 16,
+    sections: [
+      { id: 'map', label: 'Bản đồ' },
+      { id: 'collocations', label: 'Collocations' },
+      { id: 'topics', label: 'Chủ đề' },
+      { id: 'dictionary', label: 'Từ điển' },
+      { id: 'traps', label: 'Bẫy đề' },
+      { id: 'quiz', label: 'Luyện tập' }
+    ],
+    hero: {
+      eyebrow: 'Global Success 9 · Ôn thi vào 10',
+      titleHtml:
+        'Từ vựng,<br>học theo <span class="marker">cả cụm</span>.',
+      lead: 'Đừng học từ đơn lẻ. Trang này gom collocations, phrasal verbs, từ vựng theo chủ đề và cách xử lý mục từ điển ở phần VI — kèm 16 câu luyện tập.',
+      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
+      stats: [
+        { value: '32', label: 'cụm collocation' },
+        { value: '10', label: 'bẫy đề' },
+        { value: '16', label: 'câu luyện tập' }
+      ],
+      actions: [
+        { label: 'Xem bản đồ từ vựng', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Làm 16 câu luyện tập', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
   }

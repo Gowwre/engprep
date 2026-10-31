@@ -53,6 +53,7 @@ src/
 │   ├── reading.astro
 │   ├── sentence-transformation.astro
 │   ├── tenses.astro
+│   ├── vocabulary.astro
 │   └── word-forms.astro
 ├── scripts/
 │   ├── site.js            # theme, menu, print, scrollspy
@@ -61,7 +62,8 @@ src/
 │   ├── word-forms.js      # filter, search, quiz của trang word forms
 │   ├── reading.js         # filter, quiz của trang đọc hiểu
 │   ├── pronunciation.js   # quiz của trang phát âm, trọng âm
-│   └── sentence-transformation.js # quiz của trang viết lại câu
+│   ├── sentence-transformation.js # quiz của trang viết lại câu
+│   └── vocabulary.js      # filter, quiz của trang từ vựng
 └── styles/
     ├── global.css         # entry point, import theo đúng thứ tự
     ├── home.css
@@ -70,6 +72,7 @@ src/
     ├── reading.css
     ├── sentence-transformation.css
     ├── styles.css
+    ├── vocabulary.css
     └── word-forms.css
 ```
 
@@ -80,7 +83,7 @@ src/
    - tiêu đề, mô tả, badge, preview, highlights
    - `sections` cho thanh điều hướng trong trang
    - `hero` cho phần mở đầu
-   - `accent`: hiện có `tenses`, `prep`, `word`, `reading`, `sound` và `write`; thêm biến thể CSS nếu muốn màu mới
+   - `accent`: hiện có `tenses`, `prep`, `word`, `reading`, `sound`, `write` và `vocab`; thêm biến thể CSS nếu muốn màu mới
 2. Tạo `src/pages/<slug>.astro`:
 
 ```astro

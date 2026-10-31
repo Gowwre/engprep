@@ -1,0 +1,704 @@
+/* =========================================================
+   EngPrep — Vocabulary & collocations (Từ vựng)
+   Page-specific styles layered on styles.css
+   ========================================================= */
+
+/* ---------- Hero ---------- */
+
+.vc-stack {
+  height: 400px;
+}
+
+.vc-stack .stack-card-back {
+  background: var(--olive-bg);
+}
+
+.vc-stack .stack-card-mid {
+  background: var(--teal-bg);
+}
+
+.vc-stack .stack-card-front {
+  padding-top: 64px;
+}
+
+.vc-stack .mini-label {
+  color: var(--olive);
+}
+
+.vc-mini-entry {
+  padding: 11px 12px;
+  margin-top: 11px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--olive);
+  border-radius: 8px;
+  background: var(--surface-2);
+}
+
+.vc-mini-word {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.vc-mini-word span {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.vc-mini-def {
+  margin: 2px 0 8px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.4;
+}
+
+.vc-mini-colloc {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1.65;
+}
+
+.vc-mini-colloc mark {
+  color: var(--olive);
+  background: var(--olive-bg);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+
+.vc-mini-question {
+  margin: 12px 0 4px;
+  color: var(--muted);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.vc-mini-answer {
+  margin: 0;
+  color: var(--success);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.vc-mini-why {
+  margin: auto 0 0;
+  padding-top: 9px;
+  border-top: 1px dashed var(--line);
+  color: var(--muted);
+  font-size: 0.64rem;
+  line-height: 1.45;
+}
+
+/* ---------- Section 01: map ---------- */
+
+.vc-map-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.vc-map-card {
+  --map: var(--olive);
+  --map-bg: var(--olive-bg);
+  --map-line: var(--olive-line);
+  display: flex;
+  flex-direction: column;
+  padding: 17px 16px 15px;
+  border: 1.5px solid var(--border-strong);
+  border-top: 5px solid var(--map);
+  border-radius: 15px;
+  background: var(--surface);
+  box-shadow: 4px 4px 0 var(--shadow);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.vc-map-card:hover {
+  box-shadow: 6px 6px 0 var(--shadow);
+  transform: translateY(-3px);
+}
+
+.vc-map-card.vc-map-phrasal {
+  --map: var(--clay);
+  --map-bg: var(--clay-bg);
+  --map-line: var(--clay-line);
+}
+
+.vc-map-card.vc-map-topic {
+  --map: var(--jade);
+  --map-bg: var(--jade-bg);
+  --map-line: var(--jade-line);
+}
+
+.vc-map-card.vc-map-entry {
+  --map: var(--indigo);
+  --map-bg: var(--indigo-bg);
+  --map-line: var(--indigo-line);
+}
+
+.vc-map-card h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+/* ---------- Section 02: collocations ---------- */
+
+.vc-toolbar .filter-tab {
+  padding-inline: 9px;
+  font-size: 0.73rem;
+}
+
+.vc-table-wrap {
+  overflow-x: auto;
+  border: 1.5px solid var(--border-strong);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: 4px 4px 0 var(--shadow);
+  scrollbar-width: thin;
+}
+
+.vc-table {
+  width: 100%;
+  min-width: 840px;
+  border-collapse: collapse;
+  font-size: 0.79rem;
+}
+
+.vc-table thead th {
+  padding: 11px 14px;
+  border-bottom: 1.5px solid var(--line);
+  color: var(--muted);
+  background: var(--surface-2);
+  font-size: 0.58rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.vc-table td,
+.vc-table tbody th {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line);
+  line-height: 1.55;
+  text-align: left;
+  vertical-align: top;
+}
+
+.vc-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.vc-table tbody tr:hover {
+  background: var(--surface-2);
+}
+
+.vc-table tbody th {
+  width: 190px;
+  white-space: nowrap;
+}
+
+.vc-table code {
+  padding: 1px 5px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface-2);
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  white-space: nowrap;
+}
+
+.vc-table td:nth-child(2) {
+  width: 120px;
+}
+
+.vc-table td:nth-child(3) {
+  width: 150px;
+  color: var(--muted);
+}
+
+.vc-table strong {
+  color: var(--olive);
+  font-weight: 750;
+}
+
+.vc-cat {
+  display: inline-block;
+  padding: 2px 7px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.55rem;
+  font-weight: 800;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.vc-cat-vn,
+.vc-cat-phrasal {
+  border-color: var(--clay-line);
+  color: var(--clay);
+  background: var(--clay-bg);
+}
+
+.vc-cat-adjn,
+.vc-cat-fixed {
+  border-color: var(--jade-line);
+  color: var(--jade);
+  background: var(--jade-bg);
+}
+
+.vc-cat-vprep,
+.vc-cat-nprep {
+  border-color: var(--indigo-line);
+  color: var(--indigo);
+  background: var(--indigo-bg);
+}
+
+/* ---------- Section 03: topics ---------- */
+
+.vc-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.vc-topic-card {
+  --topic: var(--jade);
+  --topic-bg: var(--jade-bg);
+  --topic-line: var(--jade-line);
+  padding: 16px 16px 15px;
+  border: 1.5px solid var(--border-strong);
+  border-top: 5px solid var(--topic);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 4px 4px 0 var(--shadow);
+}
+
+.vc-topic-card.vc-topic-tech {
+  --topic: var(--indigo);
+  --topic-bg: var(--indigo-bg);
+  --topic-line: var(--indigo-line);
+}
+
+.vc-topic-card.vc-topic-travel {
+  --topic: var(--gold-ink);
+  --topic-bg: var(--gold-bg);
+  --topic-line: var(--gold);
+}
+
+.vc-topic-card.vc-topic-health {
+  --topic: var(--clay);
+  --topic-bg: var(--clay-bg);
+  --topic-line: var(--clay-line);
+}
+
+.vc-topic-card.vc-topic-community {
+  --topic: var(--plum);
+  --topic-bg: var(--plum-bg);
+  --topic-line: var(--plum-line);
+}
+
+.vc-topic-card.vc-topic-school {
+  --topic: var(--teal);
+  --topic-bg: var(--teal-bg);
+  --topic-line: var(--teal-line);
+}
+
+.vc-topic-label {
+  margin: 0 0 3px;
+  color: var(--topic);
+  font-size: 0.56rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.vc-topic-card h3 {
+  margin: 0 0 9px;
+  font-family: var(--font-display);
+  font-size: 1.16rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.vc-topic-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.vc-topic-chips span {
+  padding: 2px 6px;
+  border: 1px solid var(--topic-line);
+  border-radius: 5px;
+  background: var(--topic-bg);
+  font-family: var(--font-mono);
+  font-size: 0.61rem;
+  line-height: 1.55;
+}
+
+/* ---------- Section 04: dictionary ---------- */
+
+.vc-entry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.vc-entry {
+  padding: 18px 19px;
+  border: 1.5px solid var(--border-strong);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 4px 4px 0 var(--shadow);
+}
+
+.vc-entry-head {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  padding-bottom: 7px;
+  border-bottom: 1.5px solid var(--line);
+}
+
+.vc-entry-head strong {
+  color: var(--olive);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.vc-entry-head span {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+}
+
+.vc-entry-def {
+  margin: 7px 0 10px;
+  color: var(--muted);
+  font-size: 0.73rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.vc-entry-line {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 10px;
+  padding: 7px 0;
+  border-top: 1px dashed var(--line);
+}
+
+.vc-entry-line code {
+  color: var(--ink);
+  background: transparent;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+.vc-entry-line code mark {
+  color: var(--olive);
+  background: var(--olive-bg);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+
+.vc-entry-line span {
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+.vc-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.vc-step {
+  padding: 13px 15px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--olive);
+  border-radius: 9px;
+  background: var(--surface);
+}
+
+.vc-step > span {
+  color: var(--olive);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 800;
+}
+
+.vc-step h3 {
+  margin: 2px 0 4px;
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.vc-step p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+.vc-check-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px 12px;
+  margin-top: 13px;
+  border: 1px dashed var(--olive-line);
+  border-radius: 9px;
+  background: var(--olive-bg);
+}
+
+.vc-check-strip span {
+  padding: 2px 7px;
+  border: 1px solid var(--olive-line);
+  border-radius: 5px;
+  background: var(--surface);
+  font-size: 0.64rem;
+  line-height: 1.5;
+}
+
+.vc-check-strip strong {
+  color: var(--olive);
+  font-family: var(--font-mono);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1100px) {
+  .vc-map-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vc-topic-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .vc-entry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vc-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 780px) {
+  .vc-toolbar .filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .vc-toolbar .filter-tab {
+    flex: 1 1 auto;
+    padding-inline: 7px;
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .vc-map-grid,
+  .vc-topic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vc-stack {
+    height: 390px;
+  }
+
+  .vc-entry-line {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
+
+/* ---------- Print ---------- */
+
+@media print {
+  .vc-map-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 5px !important;
+  }
+
+  .vc-map-card {
+    padding: 6px !important;
+    border-radius: 7px !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+
+  .vc-map-card h3 {
+    font-size: 8pt;
+  }
+
+  .vc-table-wrap {
+    overflow: visible !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+  }
+
+  .vc-table {
+    min-width: 0 !important;
+  }
+
+  .vc-table thead th {
+    padding: 4px 6px;
+    font-size: 5pt;
+  }
+
+  .vc-table td,
+  .vc-table tbody th {
+    padding: 4px 6px;
+    font-size: 5.9pt;
+  }
+
+  .vc-table tbody th {
+    width: 100px;
+  }
+
+  .vc-table code {
+    font-size: 5.1pt;
+  }
+
+  .vc-cat {
+    padding: 0 4px;
+    font-size: 4.5pt;
+  }
+
+  .vc-topic-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 5px !important;
+  }
+
+  .vc-topic-card {
+    padding: 6px 7px !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+
+  .vc-topic-label {
+    font-size: 4.5pt;
+  }
+
+  .vc-topic-card h3 {
+    margin-bottom: 4px;
+    font-size: 7.6pt;
+  }
+
+  .vc-topic-chips {
+    gap: 2px;
+  }
+
+  .vc-topic-chips span {
+    padding: 0 3px;
+    font-size: 4.8pt;
+  }
+
+  .vc-entry-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 5px !important;
+  }
+
+  .vc-entry {
+    padding: 7px 8px !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+
+  .vc-entry-head strong {
+    font-size: 9.5pt;
+  }
+
+  .vc-entry-head span {
+    font-size: 5pt;
+  }
+
+  .vc-entry-def {
+    margin: 3px 0 4px;
+    font-size: 5.4pt;
+  }
+
+  .vc-entry-line {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 4px;
+    padding: 3px 0;
+  }
+
+  .vc-entry-line code {
+    font-size: 5.4pt;
+  }
+
+  .vc-entry-line span {
+    font-size: 5.1pt;
+  }
+
+  .vc-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+    margin-top: 5px;
+  }
+
+  .vc-step {
+    padding: 5px 6px;
+    border-radius: 5px;
+    break-inside: avoid;
+  }
+
+  .vc-step > span {
+    font-size: 4.6pt;
+  }
+
+  .vc-step h3 {
+    font-size: 7pt;
+  }
+
+  .vc-step p {
+    font-size: 5.2pt;
+  }
+
+  .vc-check-strip {
+    gap: 3px;
+    padding: 5px 6px;
+    margin-top: 4px;
+  }
+
+  .vc-check-strip span {
+    font-size: 5pt;
+  }
+
+  .vc-collocation-row[hidden] {
+    display: table-row !important;
+  }
+}
