@@ -4053,3 +4053,15 @@ h4 {
     text-decoration: none;
   }
 }
+
+@media print {
+  .traps-start {
+    break-before: page;
+  }
+}
+
+@media print {
+  .sample-start {
+    break-before: page;
+  }
+}

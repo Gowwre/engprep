@@ -1274,22 +1274,6 @@
     margin-bottom: 6px;
   }
 
-  .trap-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 6px !important;
-  }
-
-  .trap {
-    padding: 6px 7px !important;
-  }
-
-  .trap-line {
-    font-size: 6.2pt;
-  }
-
-  .trap-why {
-    font-size: 5.4pt;
-  }
 }
 
 /* ---------- Responsive ---------- */

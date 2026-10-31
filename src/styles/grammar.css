@@ -1071,3 +1071,9 @@
     font-size: 4.8pt;
   }
 }
+
+@media print {
+  #relatives {
+    break-before: page;
+  }
+}

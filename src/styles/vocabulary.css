@@ -702,3 +702,9 @@
     display: table-row !important;
   }
 }
+
+@media print {
+  #dictionary .mini-note {
+    display: none !important;
+  }
+}

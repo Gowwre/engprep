@@ -855,3 +855,9 @@
     font-size: 5pt;
   }
 }
+
+@media print {
+  #vowels {
+    break-before: page;
+  }
+}
