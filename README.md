@@ -2,6 +2,8 @@
 
 Bộ cheat sheet tiếng Anh lớp 9, xây bằng [Astro](https://astro.build/).
 
+**Live:** https://gowwre.github.io/engprep/
+
 ## Chạy local
 
 ```bash
@@ -19,9 +21,15 @@ npm run build
 npm run preview
 ```
 
-Deploy thư mục `dist/` lên hosting tĩnh (Netlify, Vercel, GitHub Pages, Cloudflare Pages...).
+## Deploy
 
-Nếu deploy dưới một đường dẫn con, đặt `base` trong `astro.config.mjs`; các link nội bộ đã đi qua `src/lib/urls.ts` nên sẽ tự cập nhật.
+Repo đã được cấu hình cho GitHub Pages tại `https://gowwre.github.io/engprep/`:
+
+- `astro.config.mjs` đặt `site` và `base: '/engprep/'`
+- Mỗi lần push lên `main`, workflow `.github/workflows/deploy.yml` sẽ chạy `npm ci`, `npm run check`, `npm run build` và deploy `dist/` lên Pages
+- Có thể chạy lại thủ công bằng `gh workflow run deploy.yml`
+
+Khi đổi tên repo, dùng custom domain hoặc deploy ở một đường dẫn khác, cập nhật `site`/`base` trong `astro.config.mjs`. Các link nội bộ đã đi qua `src/lib/urls.ts` nên sẽ tự cập nhật theo `base`.
 
 ## Cấu trúc
 
