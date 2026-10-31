@@ -49,6 +49,7 @@ src/
 ├── pages/
 │   ├── index.astro
 │   ├── prepositions.astro
+│   ├── pronunciation.astro
 │   ├── reading.astro
 │   ├── tenses.astro
 │   └── word-forms.astro
@@ -57,11 +58,13 @@ src/
 │   ├── tenses.js          # filter, search, quiz của trang 12 thì
 │   ├── prepositions.js    # filter, quiz của trang giới từ
 │   ├── word-forms.js      # filter, search, quiz của trang word forms
-│   └── reading.js         # filter, quiz của trang đọc hiểu
+│   ├── reading.js         # filter, quiz của trang đọc hiểu
+│   └── pronunciation.js   # quiz của trang phát âm, trọng âm
 └── styles/
     ├── global.css         # entry point, import theo đúng thứ tự
     ├── home.css
     ├── prepositions.css
+    ├── pronunciation.css
     ├── reading.css
     ├── styles.css
     └── word-forms.css
@@ -74,7 +77,7 @@ src/
    - tiêu đề, mô tả, badge, preview, highlights
    - `sections` cho thanh điều hướng trong trang
    - `hero` cho phần mở đầu
-   - `accent`: hiện có `tenses`, `prep`, `word` và `reading`; thêm biến thể CSS nếu muốn màu mới
+   - `accent`: hiện có `tenses`, `prep`, `word`, `reading` và `sound`; thêm biến thể CSS nếu muốn màu mới
 2. Tạo `src/pages/<slug>.astro`:
 
 ```astro

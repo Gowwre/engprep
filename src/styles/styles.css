@@ -25,6 +25,10 @@
   --indigo-bg: #e7eaf6;
   --indigo-line: #c3cae6;
 
+  --plum: #7a3f6b;
+  --plum-bg: #f2e4ee;
+  --plum-line: #d8b8cf;
+
   --gold: #e0a92f;
   --gold-bg: #fbf1d3;
   --gold-ink: #775400;
@@ -67,6 +71,10 @@
   --indigo: #a7b4ea;
   --indigo-bg: #222946;
   --indigo-line: #3f4b7a;
+
+  --plum: #d9a7c6;
+  --plum-bg: #34202e;
+  --plum-line: #633f58;
 
   --gold: #f0c05b;
   --gold-bg: #352c14;
@@ -3415,6 +3423,9 @@ h4 {
     --indigo: #35457a;
     --indigo-bg: #eff1f8;
     --indigo-line: #c5cbe0;
+    --plum: #6b315c;
+    --plum-bg: #f7edf3;
+    --plum-line: #dbc2d2;
     --gold: #b17d10;
     --gold-bg: #fbf4de;
     --gold-ink: #6b4b00;

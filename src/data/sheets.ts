@@ -1,6 +1,6 @@
 import { sitePath } from '../lib/urls';
 
-export type SheetSlug = 'tenses' | 'prepositions' | 'word-forms' | 'reading';
+export type SheetSlug = 'tenses' | 'prepositions' | 'word-forms' | 'reading' | 'pronunciation';
 
 export interface SheetAction {
   label: string;
@@ -43,7 +43,7 @@ export interface Sheet {
   metaDescription: string;
   cardNo: string;
   badge: string;
-  accent: 'tenses' | 'prep' | 'word' | 'reading';
+  accent: 'tenses' | 'prep' | 'word' | 'reading' | 'sound';
   lead: string;
   preview: string[];
   highlights: SheetHighlight[];
@@ -244,6 +244,54 @@ export const sheets: Sheet[] = [
       actions: [
         { label: 'Xem bản đồ dạng câu', href: '#map', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 12 câu đọc hiểu', href: '#quiz', variant: 'ghost', icon: 'chevron' }
+      ]
+    }
+  },
+  {
+    slug: 'pronunciation',
+    href: sitePath('pronunciation/'),
+    navLabel: 'Phát âm',
+    shortTitle: 'Pronunciation',
+    title: 'Pronunciation & stress',
+    metaTitle: 'Pronunciation & Stress (Phát âm, trọng âm) — Cheatsheet lớp 9 | EngPrep',
+    metaDescription:
+      'Cheatsheet phát âm và trọng âm tiếng Anh lớp 9: quy tắc -ed, -s/-es, các cặp nguyên âm dễ nhầm, trọng âm 2 và 3 âm tiết, 10 bẫy đề và 16 câu luyện tập có giải thích.',
+    cardNo: '05 / SOUNDS',
+    badge: '4 nhóm âm',
+    accent: 'sound',
+    lead: 'Đuôi -ed, -s/-es, nguyên âm và trọng âm: bốn nhóm âm thanh xuất hiện ở câu 1–4 của đề.',
+    preview: ['watched /t/', 'played /d/', 'needed /ɪd/', 'PHO-to-graph'],
+    highlights: [
+      { text: 'Quy tắc -ed, -s/-es theo âm cuối' },
+      { text: 'Các cặp nguyên âm dễ nhầm và âm câm' },
+      { strong: 'Trọng âm 2–3 âm tiết', text: ' và đuôi từ hút trọng âm' },
+      { text: '10 bẫy đề và 16 câu luyện tập' }
+    ],
+    meta: '4 nhóm âm · 16 câu hỏi',
+    questionCount: 16,
+    sections: [
+      { id: 'map', label: 'Bản đồ' },
+      { id: 'ed', label: '-ed' },
+      { id: 's', label: '-s / -es' },
+      { id: 'vowels', label: 'Nguyên âm' },
+      { id: 'stress', label: 'Trọng âm' },
+      { id: 'traps', label: 'Bẫy đề' },
+      { id: 'quiz', label: 'Luyện tập' }
+    ],
+    hero: {
+      eyebrow: 'Global Success 9 · Ôn thi vào 10',
+      titleHtml:
+        'Phát âm &amp; trọng âm,<br>lấy trọn <span class="marker">1 điểm</span> đầu tiên.',
+      lead: 'Câu 1–4 trong đề luôn là phát âm và trọng âm. Trang này gom quy tắc -ed, -s/-es, các cặp nguyên âm dễ nhầm, trọng âm 2–3 âm tiết và 16 câu luyện tập.',
+      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
+      stats: [
+        { value: '4', label: 'nhóm âm' },
+        { value: '10', label: 'bẫy đề' },
+        { value: '16', label: 'câu luyện tập' }
+      ],
+      actions: [
+        { label: 'Xem bản đồ âm', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Làm 16 câu luyện tập', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
   }
