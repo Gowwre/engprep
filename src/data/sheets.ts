@@ -11,7 +11,8 @@ export type SheetSlug =
   | 'cloze'
   | 'signs'
   | 'grammar'
-  | 'sentence-construction';
+  | 'sentence-construction'
+  | 'mock-exam';
 
 export interface SheetAction {
   label: string;
@@ -65,7 +66,8 @@ export interface Sheet {
     | 'cloze'
     | 'signs'
     | 'grammar'
-    | 'sentence';
+    | 'sentence'
+    | 'mock';
   lead: string;
   preview: string[];
   highlights: SheetHighlight[];
@@ -602,6 +604,50 @@ export const sheets: Sheet[] = [
       actions: [
         { label: 'Xem bản đồ Part VI', href: '#map', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 16 câu luyện tập', href: '#quiz', variant: 'ghost', icon: 'chevron' }
+      ]
+    }
+  },
+  {
+    slug: 'mock-exam',
+    href: sitePath('mock-exam/'),
+    navLabel: 'Thi thử',
+    shortTitle: 'Mini exam',
+    title: 'Mixed mini-exam',
+    metaTitle: 'Mixed Mini-Exam (Đề thi thử 24 câu) — EngPrep lớp 9',
+    metaDescription:
+      'Đề thi thử tiếng Anh lớp 9 24 câu, 45 phút: phát âm, ngữ pháp, giao tiếp, biển báo, cloze, reading, word forms, Part VI và viết lại câu. Chấm điểm, thống kê kỹ năng và giải thích đáp án.',
+    cardNo: '12 / MOCK EXAM',
+    badge: '24 câu · 45 phút',
+    accent: 'mock',
+    lead: 'Đề trộn 24 câu, đủ 8 nhóm câu, có đồng hồ 45 phút, chấm điểm và thống kê điểm yếu.',
+    preview: ['24 câu', '45 phút', '8 nhóm câu', 'chấm tự động'],
+    highlights: [
+      { text: 'Đề 8 nhóm câu bám cấu trúc thi thật' },
+      { text: 'Đồng hồ 45 phút và thanh tiến độ' },
+      { strong: 'Chấm điểm', text: ', thống kê theo kỹ năng' },
+      { text: 'Xem lại câu sai kèm giải thích' }
+    ],
+    meta: '24 câu · 45 phút',
+    questionCount: 24,
+    sections: [
+      { id: 'structure', label: 'Cấu trúc' },
+      { id: 'strategy', label: 'Chiến lược' },
+      { id: 'exam', label: 'Làm bài' }
+    ],
+    hero: {
+      eyebrow: 'Global Success 9 · Đề thi thử',
+      titleHtml:
+        '24 câu,<br>đủ <span class="marker">8 nhóm câu</span>.',
+      lead: 'Đề rút gọn 45 phút, trộn đủ phát âm, ngữ pháp, giao tiếp, biển báo, cloze, reading, word forms, Part VI và viết lại câu. Làm bài, chấm điểm và xem lại lỗi sai.',
+      badges: ['Làm trên web', 'Đồng hồ 45 phút', 'Chấm tự động'],
+      stats: [
+        { value: '24', label: 'câu hỏi' },
+        { value: '45', label: 'phút' },
+        { value: '8', label: 'nhóm câu' }
+      ],
+      actions: [
+        { label: 'Bắt đầu làm bài', href: '#exam', variant: 'primary', icon: 'arrow' },
+        { label: 'Xem cấu trúc đề', href: '#structure', variant: 'ghost', icon: 'chevron' }
       ]
     }
   }

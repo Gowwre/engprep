@@ -1,0 +1,197 @@
+---
+import SheetLayout from '../layouts/SheetLayout.astro';
+---
+
+<SheetLayout slug="mock-exam">
+  <Fragment slot="visual">
+    <div class="study-stack mx-stack">
+      <div class="stack-card stack-card-back"></div>
+      <div class="stack-card stack-card-mid"></div>
+      <div class="stack-card stack-card-front">
+        <p class="mini-label">Mock exam · 24 câu</p>
+        <p class="mx-hero-timer" aria-hidden="true">45:00</p>
+        <p class="mx-hero-sub">45 phút · 8 nhóm câu · 24 câu hỏi</p>
+
+        <div class="mx-hero-progress">
+          <span>0 / 24</span>
+          <div><i></i></div>
+        </div>
+
+        <div class="mx-hero-result">
+          <span>Kết quả</span>
+          <strong>— / 24</strong>
+        </div>
+
+        <p class="mx-hero-why">Đồng hồ bắt đầu khi bấm nút. Kết quả có thống kê theo kỹ năng.</p>
+
+        <div class="mini-chips">
+          <span>timer</span><span>score</span><span>review</span>
+        </div>
+      </div>
+    </div>
+    <div class="sticky-note">
+      <span class="sticky-label">Mẹo thi</span>
+      <strong>Không bỏ trống</strong>
+      <span>câu nào cũng chọn một đáp án!</span>
+    </div>
+    <div class="stamp">Ôn thi<br>vào 10<br><span>2026–2027</span></div>
+  </Fragment>
+
+  <!-- STRUCTURE -->
+  <section class="section" id="structure">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">01 · Cấu trúc</p>
+          <h2>Đề 24 câu, 8 nhóm.</h2>
+          <p>Đây là đề rút gọn để luyện tổng hợp, không phải đề thi chính thức. Cấu trúc bám theo bảy phần quen thuộc, chia thành 8 nhóm câu trong 24 câu và 45 phút.</p>
+        </div>
+        <p class="section-aside"><span>24</span> câu<br><span>45</span> phút</p>
+      </div>
+
+      <div class="mx-table-wrap">
+        <table class="mx-table">
+          <caption class="sr-only">Cấu trúc đề thi thử 24 câu</caption>
+          <thead>
+            <tr>
+              <th scope="col">Nhóm</th>
+              <th scope="col">Câu</th>
+              <th scope="col">Kỹ năng</th>
+              <th scope="col">Số câu</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">1</th><td>1–2</td><td>Phát âm &amp; trọng âm</td><td>2</td></tr>
+            <tr><th scope="row">2</th><td>3–6</td><td>Ngữ pháp &amp; từ vựng</td><td>4</td></tr>
+            <tr><th scope="row">3</th><td>7–10</td><td>Giao tiếp &amp; biển báo</td><td>4</td></tr>
+            <tr><th scope="row">4</th><td>11–13</td><td>Điền khuyết</td><td>3</td></tr>
+            <tr><th scope="row">5</th><td>14–16</td><td>Đọc hiểu</td><td>3</td></tr>
+            <tr><th scope="row">6</th><td>17–19</td><td>Cấu tạo từ</td><td>3</td></tr>
+            <tr><th scope="row">7</th><td>20–21</td><td>Part VI</td><td>2</td></tr>
+            <tr><th scope="row">8</th><td>22–24</td><td>Viết lại câu</td><td>3</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><th scope="row">Tổng</th><td>1–24</td><td>Đủ 8 nhóm câu</td><td>24</td></tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <div class="mx-score-note">
+        <p><strong>Cách tính điểm:</strong> 24 câu, mỗi câu khoảng 0,42 điểm. Kết quả hiển thị theo thang 24 và quy đổi thang 10. Điểm chỉ để luyện, không phải điểm thi thật.</p>
+        <p><strong>Thời gian:</strong> 45 phút. Đồng hồ chạy khi bấm “Bắt đầu tính giờ”; hết giờ bài sẽ tự nộp.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRATEGY -->
+  <section class="section section-alt" id="strategy">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">02 · Chiến lược</p>
+          <h2>45 phút: chia thế nào?</h2>
+          <p>Đừng làm lần lượt từ câu 1 đến 24 nếu bị kẹt. Lượt đầu hãy lấy điểm chắc, sau đó mới quay lại câu khó.</p>
+        </div>
+        <p class="section-aside"><span>4</span> lượt<br><span>5</span> phút dự phòng</p>
+      </div>
+
+      <div class="mx-step-grid">
+        <article class="mx-step">
+          <span class="mx-step-no" aria-hidden="true">01</span>
+          <h3>Đọc nhanh · 5 phút</h3>
+          <p>Lướt toàn đề, đánh dấu câu dễ và câu cần đọc kỹ. Chưa cần chọn đáp án ngay.</p>
+          <p class="mx-step-formula">scan + mark</p>
+        </article>
+        <article class="mx-step">
+          <span class="mx-step-no" aria-hidden="true">02</span>
+          <h3>Câu chắc · 20 phút</h3>
+          <p>Làm phát âm, ngữ pháp, giao tiếp, biển báo, word forms và viết lại câu.</p>
+          <p class="mx-step-formula">câu 1–10 · 17–24</p>
+        </article>
+        <article class="mx-step">
+          <span class="mx-step-no" aria-hidden="true">03</span>
+          <h3>Đọc kỹ · 15 phút</h3>
+          <p>Dành thời gian cho cloze và reading. Đọc cả đoạn, tìm bằng chứng trước khi chọn.</p>
+          <p class="mx-step-formula">câu 11–16</p>
+        </article>
+        <article class="mx-step">
+          <span class="mx-step-no" aria-hidden="true">04</span>
+          <h3>Kiểm tra · 5 phút</h3>
+          <p>Rà lại câu chưa chọn, kiểm tra thì/số ít, và chắc chắn không bỏ trống câu nào.</p>
+          <p class="mx-step-formula">no blank answers</p>
+        </article>
+      </div>
+
+      <div class="mx-time-strip" aria-label="Phân bổ 45 phút">
+        <span><strong>5</strong> đọc nhanh</span>
+        <span><strong>20</strong> câu chắc</span>
+        <span><strong>15</strong> đọc kỹ</span>
+        <span><strong>5</strong> kiểm tra</span>
+      </div>
+
+      <div class="mx-checklist">
+        <p><strong>Trước khi nộp:</strong></p>
+        <ul>
+          <li>Đã chọn đủ 24 câu?</li>
+          <li>Không bỏ trống câu nào?</li>
+          <li>Đã kiểm tra câu dễ mất điểm: thì, giới từ, dạng từ?</li>
+          <li>Còn thời gian thì xem lại cloze và reading.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXAM -->
+  <section class="section" id="exam">
+    <div class="container">
+      <div class="mx-start" id="mx-start">
+        <p class="section-kicker">03 · Làm bài</p>
+        <h2>24 câu · 45 phút</h2>
+        <p>Bài gồm 24 câu trắc nghiệm. Đồng hồ bắt đầu khi bấm nút. Bạn có thể đổi đáp án trước khi nộp; kết quả và giải thích chỉ hiện sau khi nộp.</p>
+        <div class="mx-start-stats">
+          <div><strong>24</strong><span>câu hỏi</span></div>
+          <div><strong>45</strong><span>phút</span></div>
+          <div><strong>8</strong><span>nhóm câu</span></div>
+        </div>
+        <button class="btn btn-primary" id="mx-start-btn" type="button">
+          Bắt đầu tính giờ
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <p class="mx-best" id="mx-best" aria-live="polite">Điểm cao nhất: chưa có</p>
+      </div>
+
+      <div class="mx-exam" id="mx-exam" hidden>
+        <div class="mx-bar" id="mx-bar">
+          <div class="mx-bar-time">
+            <span>Thời gian</span>
+            <strong id="mx-timer" role="timer">45:00</strong>
+          </div>
+          <div class="mx-bar-progress">
+            <div class="mx-bar-track" role="progressbar" aria-valuemin="0" aria-valuemax="24" aria-valuenow="0" aria-label="Số câu đã chọn">
+              <span id="mx-bar-fill"></span>
+            </div>
+            <span id="mx-progress-text" aria-live="polite">0 / 24 đã chọn</span>
+          </div>
+          <button class="btn btn-primary btn-small" id="mx-submit-top" type="button">Nộp bài</button>
+          <span class="mx-bar-warning" id="mx-bar-warning" role="status"></span>
+        </div>
+
+        <div class="mx-form" id="mx-form"></div>
+
+        <div class="mx-submit-row">
+          <p class="mx-warning" id="mx-warning" role="status"></p>
+          <button class="btn btn-primary" id="mx-submit" type="button">Nộp bài</button>
+        </div>
+      </div>
+
+      <div class="mx-result" id="mx-result" hidden></div>
+
+      <noscript><p class="quiz-noscript">Bật JavaScript để làm đề thi thử tương tác. Phần cấu trúc và chiến lược phía trên vẫn đọc được bình thường.</p></noscript>
+    </div>
+  </section>
+
+</SheetLayout>
+
+<script>
+  import '../scripts/mock-exam.js';
+</script>

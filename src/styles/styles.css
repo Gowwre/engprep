@@ -53,6 +53,10 @@
   --graphite-bg: #e9edf0;
   --graphite-line: #c6d0d6;
 
+  --cobalt: #285a9e;
+  --cobalt-bg: #e5edf8;
+  --cobalt-line: #bfd1ea;
+
   --gold: #e0a92f;
   --gold-bg: #fbf1d3;
   --gold-ink: #775400;
@@ -123,6 +127,10 @@
   --graphite: #b9c4cb;
   --graphite-bg: #222a2f;
   --graphite-line: #44535c;
+
+  --cobalt: #9fc0ee;
+  --cobalt-bg: #1a2434;
+  --cobalt-line: #355276;
 
   --gold: #f0c05b;
   --gold-bg: #352c14;
@@ -320,10 +328,10 @@ h4 {
 }
 
 .site-nav a {
-  padding: 8px 7px;
+  padding: 8px 5px;
   border-radius: 999px;
   color: var(--muted);
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   font-weight: 600;
   white-space: nowrap;
   transition: color 0.15s ease, background 0.15s ease;
@@ -3502,6 +3510,9 @@ h4 {
     --graphite: #3d474e;
     --graphite-bg: #f0f3f5;
     --graphite-line: #ccd5da;
+    --cobalt: #234f8a;
+    --cobalt-bg: #eef3fa;
+    --cobalt-line: #c7d8ea;
     --gold: #b17d10;
     --gold-bg: #fbf4de;
     --gold-ink: #6b4b00;
