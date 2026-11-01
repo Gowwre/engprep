@@ -1,5 +1,6 @@
 ---
-import { sheets, type SheetSlug } from '../data/sheets';
+import BrandMark from './BrandMark.astro';
+import { getSheet, sheets, type Sheet, type SheetSlug } from '../data/sheets';
 import { sitePath } from '../lib/urls';
 
 interface Props {
@@ -13,15 +14,40 @@ const navItems = sheets.map((sheet) => ({
   href: sheet.href,
   label: sheet.navLabel
 }));
+
+const accentVars: Record<Sheet['accent'], string> = {
+  tenses: 'var(--clay)',
+  prep: 'var(--jade)',
+  word: 'var(--indigo)',
+  reading: 'var(--gold-ink)',
+  sound: 'var(--plum)',
+  write: 'var(--teal)',
+  vocab: 'var(--olive)',
+  cloze: 'var(--cocoa)',
+  signs: 'var(--slate)',
+  grammar: 'var(--berry)',
+  sentence: 'var(--graphite)',
+  mock: 'var(--cobalt)'
+};
+
+const currentSheet = current === 'home' ? null : getSheet(current);
+const headerAccent = currentSheet ? accentVars[currentSheet.accent] : 'var(--clay)';
 ---
 
-<header class="site-header">
+<header class="site-header" style={`--header-accent:${headerAccent}`}>
+  <span class:list={['header-strip', current === 'home' && 'header-strip--twelve']} aria-hidden="true">
+    {current === 'home' &&
+      sheets.map((sheet) => (
+        <span class="header-strip-seg" style={`background:${accentVars[sheet.accent]}`}></span>
+      ))}
+  </span>
+
   <div class="container header-inner">
     <a class="brand" href={sitePath()} aria-current={current === 'home' ? 'page' : undefined}>
-      <span class="brand-mark" aria-hidden="true">EP</span>
+      <BrandMark class="brand-mark" />
       <span class="brand-text">
         <strong>EngPrep</strong>
-        <small>Cheat sheet · Lớp 9</small>
+        <small>Cheat sheet lớp 9</small>
       </span>
       <span class="sr-only">— trang chủ</span>
     </a>

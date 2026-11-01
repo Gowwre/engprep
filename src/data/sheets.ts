@@ -40,7 +40,6 @@ export interface SheetHero {
   eyebrow: string;
   titleHtml: string;
   lead: string;
-  badges: string[];
   stats: SheetStat[];
   actions: SheetAction[];
 }
@@ -114,7 +113,6 @@ export const sheets: Sheet[] = [
       titleHtml:
         '12 thì tiếng Anh,<br>gói gọn trong <span class="marker">một tờ</span> <span class="nowrap">cheat sheet.</span>',
       lead: 'Công thức, cách dùng, dấu hiệu nhận biết và bẫy đề thi, tất cả trong một trang, kèm ví dụ về văn hoá, cộng đồng và lối sống lành mạnh.',
-      badges: ['In được khổ A4', 'Không cần mạng', 'Giải thích tiếng Việt'],
       stats: [
         { value: '12', label: 'thì cần nắm' },
         { value: '3', label: 'mốc thời gian' },
@@ -163,7 +161,6 @@ export const sheets: Sheet[] = [
       titleHtml:
         'Giới từ theo cụm,<br>làm <span class="marker">đúng cả câu</span>.',
       lead: 'at, on, in tưởng dễ nhưng lại rất dễ mất điểm. Trang này tổng hợp cách dùng giới từ chỉ thời gian, nơi chốn, chuyển động, 54 cụm cố định và 10 lỗi thường gặp — kèm giải thích tiếng Việt và bài tập tự kiểm tra.',
-      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
       stats: [
         { value: '54', label: 'cụm cố định' },
         { value: '16', label: 'câu luyện tập' },
@@ -211,7 +208,6 @@ export const sheets: Sheet[] = [
       titleHtml:
         'Word forms,<br>xác định đúng <span class="marker">từ loại</span>.',
       lead: 'Đọc vị trí trong câu, nhận diện hậu tố và chọn đúng dạng từ. Trang này gom quy tắc, bảng hậu tố – tiền tố, 40 họ từ và 10 bẫy đề thường gặp, kèm 16 câu tự kiểm tra.',
-      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
       stats: [
         { value: '40', label: 'họ từ' },
         { value: '33', label: 'hậu tố' },
@@ -259,7 +255,6 @@ export const sheets: Sheet[] = [
       titleHtml:
         'Reading comprehension,<br>đọc đúng <span class="marker">ý chính</span>.',
       lead: 'Không cần dịch từng chữ. Trang này dạy cách skim, scan, tìm bằng chứng và xử lý 7 dạng câu hỏi đọc hiểu — kèm đoạn đọc mẫu, 10 bẫy đề và 12 câu luyện tập.',
-      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
       stats: [
         { value: '7', label: 'dạng câu hỏi' },
         { value: '4', label: 'bước đọc' },
@@ -307,7 +302,6 @@ export const sheets: Sheet[] = [
       titleHtml:
         'Phát âm &amp; trọng âm,<br>lấy trọn <span class="marker">1 điểm</span> đầu tiên.',
       lead: 'Câu 1–4 trong đề luôn là phát âm và trọng âm. Trang này gom quy tắc -ed, -s/-es, các cặp nguyên âm dễ nhầm, trọng âm 2–3 âm tiết và 16 câu luyện tập.',
-      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
       stats: [
         { value: '4', label: 'nhóm âm' },
         { value: '10', label: 'bẫy đề' },
@@ -353,7 +347,6 @@ export const sheets: Sheet[] = [
       titleHtml:
         'Viết lại câu,<br>giữ nghĩa <span class="marker">đổi cấu trúc</span>.',
       lead: 'Câu 37–40 luôn là viết lại câu. Trang này gom 8 nhóm mẫu lặp lại, công thức, mẫu động từ và 16 câu luyện tập — kèm 10 bẫy đề thường gặp.',
-      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
       stats: [
         { value: '8', label: 'nhóm mẫu' },
         { value: '10', label: 'bẫy đề' },
@@ -400,7 +393,6 @@ export const sheets: Sheet[] = [
       titleHtml:
         'Từ vựng,<br>học theo <span class="marker">cả cụm</span>.',
       lead: 'Đừng học từ đơn lẻ. Trang này gom collocations, phrasal verbs, từ vựng theo chủ đề và cách xử lý mục từ điển ở phần VI — kèm 16 câu luyện tập.',
-      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
       stats: [
         { value: '32', label: 'cụm collocation' },
         { value: '10', label: 'bẫy đề' },
@@ -448,7 +440,6 @@ export const sheets: Sheet[] = [
       titleHtml:
         'Cloze,<br>đọc cả câu để <span class="marker">điền đúng</span>.',
       lead: 'Bài điền khuyết kiểm tra cả ngữ pháp lẫn từ vựng. Trang này gom 5 loại chỗ trống, quy trình 4 bước, bảng tra nhanh và 12 câu luyện tập — kèm 10 bẫy đề.',
-      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
       stats: [
         { value: '5', label: 'loại gap' },
         { value: '10', label: 'bẫy đề' },
@@ -497,7 +488,6 @@ export const sheets: Sheet[] = [
       titleHtml:
         'Biển báo &amp; giao tiếp,<br>đọc đúng <span class="marker">ý đề</span>.',
       lead: 'Hai câu biển báo và hai câu giao tiếp trong mỗi đề — trọn 1 điểm. Trang này gom 4 nhóm biển báo, 20 mẫu thông báo, 8 chức năng giao tiếp và 16 câu luyện tập — kèm 10 bẫy đề.',
-      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
       stats: [
         { value: '4', label: 'nhóm biển' },
         { value: '8', label: 'chức năng' },
@@ -546,7 +536,6 @@ export const sheets: Sheet[] = [
       titleHtml:
         'Ngữ pháp cốt lõi,<br>chọn đúng <span class="marker">cấu trúc</span>.',
       lead: 'Từ nối, mệnh đề quan hệ, so sánh và cấu trúc động từ chiếm phần lớn câu 5–12. Trang này gom bảng tra nhanh, mẫu câu, 10 bẫy đề và 18 câu luyện tập.',
-      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
       stats: [
         { value: '4', label: 'nhóm lõi' },
         { value: '4', label: 'điểm phụ' },
@@ -595,7 +584,6 @@ export const sheets: Sheet[] = [
       titleHtml:
         'Sắp xếp câu,<br>ghép đúng <span class="marker">trật tự</span>.',
       lead: 'Part VI chỉ có 2 câu nhưng dễ mất điểm vì trật tự từ và dạng cụm. Trang này gom quy tắc ghép câu, cách đọc mục từ điển, 10 bẫy đề và 16 câu luyện tập.',
-      badges: ['Bản in A4', 'Dùng offline', 'Giải thích tiếng Việt'],
       stats: [
         { value: '2', label: 'dạng Part VI' },
         { value: '4', label: 'bước ghép câu' },
@@ -639,7 +627,6 @@ export const sheets: Sheet[] = [
       titleHtml:
         '24 câu,<br>đủ <span class="marker">8 nhóm câu</span>.',
       lead: 'Đề rút gọn 45 phút, trộn đủ phát âm, ngữ pháp, giao tiếp, biển báo, cloze, reading, word forms, Part VI và viết lại câu. Làm bài, chấm điểm và xem lại lỗi sai.',
-      badges: ['Làm trên web', 'Đồng hồ 45 phút', 'Chấm tự động'],
       stats: [
         { value: '24', label: 'câu hỏi' },
         { value: '45', label: 'phút' },

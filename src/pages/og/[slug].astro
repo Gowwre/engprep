@@ -1,4 +1,5 @@
 ---
+import BrandMark from '../../components/BrandMark.astro';
 import { getSheet, sheets, totalQuestions, type Sheet, type SheetSlug } from '../../data/sheets';
 import '../../styles/og.css';
 
@@ -88,10 +89,10 @@ const ruleBackground = sheet
 
       <header class="og-brand-row">
         <div class="og-brand">
-          <span class="og-brand-mark" aria-hidden="true">EP</span>
+          <BrandMark class="og-brand-mark" />
           <span class="og-brand-text">
             <strong>EngPrep</strong>
-            <small>Cheat sheet · Lớp 9</small>
+            <small>Cheat sheet lớp 9</small>
           </span>
         </div>
         <span class="og-eyebrow-pill">{eyebrow}</span>

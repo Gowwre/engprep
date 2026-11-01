@@ -1,4 +1,5 @@
 ---
+import BrandMark from './BrandMark.astro';
 import { sheets, type SheetSlug } from '../data/sheets';
 import { sitePath } from '../lib/urls';
 
@@ -12,7 +13,7 @@ const { current = 'home' } = Astro.props;
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <span class="brand-mark brand-mark-small" aria-hidden="true">EP</span>
+      <BrandMark class="brand-mark brand-mark-small" />
       <div>
         <strong>EngPrep · Cheat sheet lớp 9</strong>
         <p>Bộ tài liệu ôn thi dành cho học sinh lớp 9, theo chương trình Global Success 9 và cấu trúc đề thi vào 10.</p>

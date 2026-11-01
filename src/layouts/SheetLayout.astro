@@ -46,10 +46,6 @@ const sheet = getSheet(slug);
           ))}
         </div>
 
-        <ul class="hero-badges" aria-label="Thông tin bộ tài liệu">
-          {sheet.hero.badges.map((badge) => <li>{badge}</li>)}
-        </ul>
-
         <dl class="hero-stats">
           {sheet.hero.stats.map((stat) => (
             <div>

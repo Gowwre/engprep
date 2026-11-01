@@ -10,9 +10,12 @@ const { items } = Astro.props;
 
 <nav class="page-nav no-print" aria-label="Mục lục trang">
   <div class="container page-nav-inner">
-    <span class="page-nav-label">Trên trang</span>
-    {items.map((item) => (
-      <a href={`#${item.id}`}>{item.label}</a>
+    <span class="page-nav-label">Trong tờ</span>
+    {items.map((item, index) => (
+      <a href={`#${item.id}`}>
+        <span class="page-nav-no" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+        {item.label}
+      </a>
     ))}
   </div>
 </nav>

@@ -646,10 +646,6 @@
   box-shadow: 6px 6px 0 var(--shadow);
 }
 
-.home-band .section-kicker {
-  color: var(--gold-ink);
-}
-
 .home-band h2 {
   margin: 4px 0 6px;
   font-family: var(--font-display);

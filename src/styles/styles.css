@@ -264,6 +264,26 @@ h4 {
   backdrop-filter: blur(14px);
 }
 
+.header-strip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  height: 3px;
+  background: var(--header-accent, var(--clay));
+  pointer-events: none;
+}
+
+.header-strip--twelve {
+  background: none;
+}
+
+.header-strip-seg {
+  flex: 1;
+  height: 100%;
+}
+
 .header-inner {
   position: relative;
   display: flex;
@@ -280,23 +300,14 @@ h4 {
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border: 1.5px solid var(--border-strong);
-  border-radius: 12px;
-  color: #fff8ec;
-  background: var(--clay);
-  box-shadow: 2px 2px 0 var(--shadow);
-  font-family: var(--font-display);
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 1;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  color: var(--ink);
 }
 
-[data-theme="dark"] .brand-mark {
-  color: #21130d;
+.brand-mark-svg {
+  display: block;
 }
 
 .brand-text {
@@ -307,45 +318,74 @@ h4 {
 
 .brand-text strong {
   font-family: var(--font-display);
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
+  font-size: 1.1rem;
+  letter-spacing: -0.015em;
 }
 
 .brand-text small {
-  margin-top: 2px;
+  margin-top: 1px;
   color: var(--muted);
-  font-size: 0.66rem;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 1px;
+  gap: 2px;
   margin-left: auto;
 }
 
 .site-nav a {
-  padding: 8px 5px;
-  border-radius: 999px;
+  position: relative;
+  z-index: 1;
+  padding: 8px 7px;
   color: var(--muted);
   font-size: 0.8rem;
   font-weight: 600;
   white-space: nowrap;
-  transition: color 0.15s ease, background 0.15s ease;
+  transition: color 0.16s ease;
 }
 
-.site-nav a:hover {
-  color: var(--ink);
+.site-nav a::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -18px;
+  left: 0;
+  z-index: -1;
+  border: 1px solid var(--line);
+  border-bottom: 0;
+  border-top: 1px solid var(--clay);
+  border-radius: 5px 5px 0 0;
   background: var(--surface);
+  content: "";
+  opacity: 0;
+  transition: opacity 0.16s ease;
+}
+
+.site-nav a:not(.is-active):hover {
+  color: var(--ink);
+}
+
+.site-nav a:not(.is-active):hover::before {
+  opacity: 0.6;
+}
+
+.site-nav a:not(.is-active):focus-visible::before {
+  opacity: 0.6;
 }
 
 .site-nav a.is-active {
   color: var(--ink);
-  background: var(--surface);
-  box-shadow: inset 0 -2px 0 var(--clay);
+  font-weight: 700;
+}
+
+.site-nav a.is-active::before {
+  border-top-width: 2px;
+  opacity: 1;
 }
 
 .header-actions {
@@ -423,7 +463,7 @@ h4 {
 .page-nav-inner {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 0;
   height: 48px;
   overflow-x: auto;
   scrollbar-width: none;
@@ -435,35 +475,76 @@ h4 {
 
 .page-nav-label {
   flex-shrink: 0;
-  margin-right: 8px;
+  margin-right: 14px;
   color: var(--muted);
-  font-size: 0.58rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
   white-space: nowrap;
 }
 
 .page-nav a {
+  position: relative;
+  display: inline-flex;
   flex-shrink: 0;
-  padding: 6px 11px;
-  border-radius: 999px;
+  align-items: baseline;
+  gap: 6px;
+  padding: 10px 10px 12px;
   color: var(--muted);
   font-size: 0.76rem;
-  font-weight: 650;
+  font-weight: 600;
   white-space: nowrap;
-  transition: color 0.15s ease, background 0.15s ease;
+  transition: color 0.16s ease;
 }
 
-.page-nav a:hover {
+.page-nav a::after {
+  position: absolute;
+  right: 10px;
+  bottom: 6px;
+  left: 10px;
+  height: 2px;
+  background: var(--clay);
+  content: "";
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.page-nav a:hover,
+.page-nav a:focus-visible {
   color: var(--ink);
-  background: var(--surface);
+}
+
+.page-nav a:hover::after,
+.page-nav a:focus-visible::after {
+  opacity: 0.45;
+  transform: scaleX(1);
 }
 
 .page-nav a.is-active {
   color: var(--ink);
-  background: var(--surface);
-  box-shadow: inset 0 -2px 0 var(--clay);
+}
+
+.page-nav a.is-active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.page-nav-no {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  transition: color 0.16s ease;
+}
+
+.page-nav a:hover .page-nav-no,
+.page-nav a:focus-visible .page-nav-no,
+.page-nav a.is-active .page-nav-no {
+  color: var(--clay);
 }
 
 /* =========================================================
@@ -601,35 +682,6 @@ h4 {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 28px;
-}
-
-.hero-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 0;
-  margin: 18px 0 0;
-  list-style: none;
-}
-
-.hero-badges li {
-  position: relative;
-  padding-left: 17px;
-  color: var(--muted);
-  font-size: 0.74rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-}
-
-.hero-badges li::before {
-  position: absolute;
-  top: 0.52em;
-  left: 2px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--jade);
-  content: "";
 }
 
 .hero-stats {
@@ -2727,9 +2779,8 @@ h4 {
 
 .brand-mark-small {
   flex-shrink: 0;
-  width: 38px;
-  height: 38px;
-  font-size: 19px;
+  width: 34px;
+  height: 34px;
 }
 
 .footer-brand strong {
@@ -2859,9 +2910,17 @@ h4 {
     gap: 18px;
   }
 
+  .site-nav {
+    gap: 1px;
+  }
+
   .site-nav a {
-    padding-inline: 4px;
+    padding-inline: 5px;
     font-size: 0.76rem;
+  }
+
+  .site-nav a::before {
+    bottom: -19px;
   }
 }
 
@@ -2916,7 +2975,16 @@ h4 {
     white-space: normal;
   }
 
+  .site-nav a::before {
+    display: none;
+  }
+
+  .site-nav a:hover {
+    background: var(--surface);
+  }
+
   .site-nav a.is-active {
+    background: var(--surface);
     box-shadow: inset 3px 0 0 var(--clay);
   }
 }
@@ -3219,8 +3287,13 @@ h4 {
   }
 
   .page-nav a {
-    padding: 5px 9px;
+    padding: 10px 9px 12px;
     font-size: 0.72rem;
+  }
+
+  .page-nav a::after {
+    right: 9px;
+    left: 9px;
   }
 
   .brand-text small {
@@ -3375,9 +3448,8 @@ h4 {
   }
 
   .brand-mark {
-    width: 37px;
-    height: 37px;
-    font-size: 19px;
+    width: 36px;
+    height: 36px;
   }
 
   .hero h1 {
@@ -3550,7 +3622,6 @@ h4 {
   .site-header,
   .hero-visual,
   .hero-actions,
-  .hero-badges,
   .toolbar,
   .empty-state,
   .site-footer,
