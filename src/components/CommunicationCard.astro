@@ -1,0 +1,23 @@
+---
+interface Props {
+  no: string;
+  kicker: string;
+  title: string;
+  prompt: string;
+  reply: string;
+  example: string;
+}
+
+const { no, kicker, title, prompt, reply, example } = Astro.props;
+---
+
+<article class="sg-comm-card">
+  <div class="sg-comm-head">
+    <span class="sg-comm-no" aria-hidden="true">{no}</span>
+    <p class="sg-comm-kicker">{kicker}</p>
+  </div>
+  <h3>{title}</h3>
+  <p class="sg-comm-prompt" set:html={prompt}></p>
+  <p class="sg-comm-reply"><span>Đáp:</span> <Fragment set:html={reply} /></p>
+  <p class="sg-comm-eg" set:html={example}></p>
+</article>

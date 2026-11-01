@@ -1,8 +1,10 @@
 ---
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
+import CommunicationCard from '../components/CommunicationCard.astro';
 import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
+import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
 import TrapCard from '../components/TrapCard.astro';
 import '../styles/signs.css';
@@ -96,33 +98,37 @@ import '../styles/signs.css';
       </SectionHead>
 
       <div class="sg-step-grid">
-        <article class="sg-step">
-          <span class="sg-step-no" aria-hidden="true">01</span>
-          <h3>Nhận diện nhóm</h3>
-          <p>Cấm, cảnh báo, hướng dẫn hay thông tin? Nhóm biển quyết định kiểu đáp án đúng.</p>
-          <p class="sg-step-formula">cấm · cảnh báo · hướng dẫn · thông tin</p>
-        </article>
+        <StepCard
+          prefix="sg"
+          no="01"
+          title="Nhận diện nhóm"
+          body="Cấm, cảnh báo, hướng dẫn hay thông tin? Nhóm biển quyết định kiểu đáp án đúng."
+          formula="cấm · cảnh báo · hướng dẫn · thông tin"
+        />
 
-        <article class="sg-step">
-          <span class="sg-step-no" aria-hidden="true">02</span>
-          <h3>Gạch từ khoá</h3>
-          <p>Chú ý <code>No</code>, <code>Only</code>, <code>Free</code>, <code>Required</code>, <code>Off</code>, <code>Out of order</code>.</p>
-          <p class="sg-step-formula">No · only · free · required · off</p>
-        </article>
+        <StepCard
+          prefix="sg"
+          no="02"
+          title="Gạch từ khoá"
+          body="Chú ý <code>No</code>, <code>Only</code>, <code>Free</code>, <code>Required</code>, <code>Off</code>, <code>Out of order</code>."
+          formula="No · only · free · required · off"
+        />
 
-        <article class="sg-step">
-          <span class="sg-step-no" aria-hidden="true">03</span>
-          <h3>Diễn giải một câu</h3>
-          <p>Tự hỏi: “Ai được làm?”, “Được làm gì?”, “Không được làm gì?”, “Phải làm gì?” rồi trả lời thật ngắn.</p>
-          <p class="sg-step-formula">who · can / can’t / must</p>
-        </article>
+        <StepCard
+          prefix="sg"
+          no="03"
+          title="Diễn giải một câu"
+          body="Tự hỏi: “Ai được làm?”, “Được làm gì?”, “Không được làm gì?”, “Phải làm gì?” rồi trả lời thật ngắn."
+          formula="who · can / can’t / must"
+        />
 
-        <article class="sg-step">
-          <span class="sg-step-no" aria-hidden="true">04</span>
-          <h3>Loại đáp án sai</h3>
-          <p>Bỏ đáp án trái nghĩa, quá rộng hoặc thêm chi tiết không xuất hiện trên biển.</p>
-          <p class="sg-step-formula">trái nghĩa · quá rộng · không có trong bài</p>
-        </article>
+        <StepCard
+          prefix="sg"
+          no="04"
+          title="Loại đáp án sai"
+          body="Bỏ đáp án trái nghĩa, quá rộng hoặc thêm chi tiết không xuất hiện trên biển."
+          formula="trái nghĩa · quá rộng · không có trong bài"
+        />
       </div>
 
       <div class="sg-keyword-strip" aria-label="Sáu từ khoá quyết định nghĩa của biển báo">
@@ -296,93 +302,77 @@ import '../styles/signs.css';
       </SectionHead>
 
       <div class="sg-comm-grid">
-        <article class="sg-comm-card">
-          <div class="sg-comm-head">
-            <span class="sg-comm-no" aria-hidden="true">01</span>
-            <p class="sg-comm-kicker">Gợi ý</p>
-          </div>
-          <h3>Gợi ý</h3>
-          <p class="sg-comm-prompt"><code>Why don’t we + V?</code><br><code>How about + V-ing?</code><br><code>Shall we + V?</code></p>
-          <p class="sg-comm-reply"><span>Đáp:</span> Good idea. / That sounds great. / I’d love to, but…</p>
-          <p class="sg-comm-eg">Why don’t we recycle paper? — Good idea.</p>
-        </article>
+        <CommunicationCard
+          no="01"
+          kicker="Gợi ý"
+          title="Gợi ý"
+          prompt="<code>Why don’t we + V?</code><br><code>How about + V-ing?</code><br><code>Shall we + V?</code>"
+          reply="Good idea. / That sounds great. / I’d love to, but…"
+          example="Why don’t we recycle paper? — Good idea."
+        />
 
-        <article class="sg-comm-card">
-          <div class="sg-comm-head">
-            <span class="sg-comm-no" aria-hidden="true">02</span>
-            <p class="sg-comm-kicker">Mời</p>
-          </div>
-          <h3>Mời</h3>
-          <p class="sg-comm-prompt"><code>Would you like to + V?</code><br><code>Are you free + time?</code><br><code>Do you want to + V?</code></p>
-          <p class="sg-comm-reply"><span>Đáp:</span> I’d love to. Thanks. / I’m sorry, I can’t.</p>
-          <p class="sg-comm-eg">Would you like to join us? — I’d love to. Thanks.</p>
-        </article>
+        <CommunicationCard
+          no="02"
+          kicker="Mời"
+          title="Mời"
+          prompt="<code>Would you like to + V?</code><br><code>Are you free + time?</code><br><code>Do you want to + V?</code>"
+          reply="I’d love to. Thanks. / I’m sorry, I can’t."
+          example="Would you like to join us? — I’d love to. Thanks."
+        />
 
-        <article class="sg-comm-card">
-          <div class="sg-comm-head">
-            <span class="sg-comm-no" aria-hidden="true">03</span>
-            <p class="sg-comm-kicker">Xin lỗi</p>
-          </div>
-          <h3>Xin lỗi</h3>
-          <p class="sg-comm-prompt"><code>I’m sorry for + V-ing.</code><br><code>I’m sorry I’m late.</code><br><code>I apologize for + N/V-ing.</code></p>
-          <p class="sg-comm-reply"><span>Đáp:</span> That’s all right. / Never mind. / Don’t worry about it.</p>
-          <p class="sg-comm-eg">I’m sorry I’m late. — Never mind.</p>
-        </article>
+        <CommunicationCard
+          no="03"
+          kicker="Xin lỗi"
+          title="Xin lỗi"
+          prompt="<code>I’m sorry for + V-ing.</code><br><code>I’m sorry I’m late.</code><br><code>I apologize for + N/V-ing.</code>"
+          reply="That’s all right. / Never mind. / Don’t worry about it."
+          example="I’m sorry I’m late. — Never mind."
+        />
 
-        <article class="sg-comm-card">
-          <div class="sg-comm-head">
-            <span class="sg-comm-no" aria-hidden="true">04</span>
-            <p class="sg-comm-kicker">Cảm ơn</p>
-          </div>
-          <h3>Cảm ơn</h3>
-          <p class="sg-comm-prompt"><code>Thank you for + V-ing/N.</code><br><code>Thanks a lot.</code><br><code>I’m grateful for + N.</code></p>
-          <p class="sg-comm-reply"><span>Đáp:</span> You’re welcome. / Not at all. / It’s my pleasure.</p>
-          <p class="sg-comm-eg">Thank you for your help. — You’re welcome.</p>
-        </article>
+        <CommunicationCard
+          no="04"
+          kicker="Cảm ơn"
+          title="Cảm ơn"
+          prompt="<code>Thank you for + V-ing/N.</code><br><code>Thanks a lot.</code><br><code>I’m grateful for + N.</code>"
+          reply="You’re welcome. / Not at all. / It’s my pleasure."
+          example="Thank you for your help. — You’re welcome."
+        />
 
-        <article class="sg-comm-card">
-          <div class="sg-comm-head">
-            <span class="sg-comm-no" aria-hidden="true">05</span>
-            <p class="sg-comm-kicker">Nhờ vả</p>
-          </div>
-          <h3>Yêu cầu</h3>
-          <p class="sg-comm-prompt"><code>Can / Could you + V?</code><br><code>Would you mind + V-ing?</code></p>
-          <p class="sg-comm-reply"><span>Đáp:</span> Sure. / Of course. / Not at all. (đồng ý giúp)</p>
-          <p class="sg-comm-eg">Would you mind opening the window? — Not at all.</p>
-        </article>
+        <CommunicationCard
+          no="05"
+          kicker="Nhờ vả"
+          title="Yêu cầu"
+          prompt="<code>Can / Could you + V?</code><br><code>Would you mind + V-ing?</code>"
+          reply="Sure. / Of course. / Not at all. (đồng ý giúp)"
+          example="Would you mind opening the window? — Not at all."
+        />
 
-        <article class="sg-comm-card">
-          <div class="sg-comm-head">
-            <span class="sg-comm-no" aria-hidden="true">06</span>
-            <p class="sg-comm-kicker">Xin phép</p>
-          </div>
-          <h3>Cho phép</h3>
-          <p class="sg-comm-prompt"><code>May I + V?</code><br><code>Can I + V?</code><br><code>Is it OK if I + V?</code></p>
-          <p class="sg-comm-reply"><span>Đáp:</span> Go ahead. / Yes, of course. / I’m afraid you can’t.</p>
-          <p class="sg-comm-eg">May I use your phone? — I’m afraid you can’t.</p>
-        </article>
+        <CommunicationCard
+          no="06"
+          kicker="Xin phép"
+          title="Cho phép"
+          prompt="<code>May I + V?</code><br><code>Can I + V?</code><br><code>Is it OK if I + V?</code>"
+          reply="Go ahead. / Yes, of course. / I’m afraid you can’t."
+          example="May I use your phone? — I’m afraid you can’t."
+        />
 
-        <article class="sg-comm-card">
-          <div class="sg-comm-head">
-            <span class="sg-comm-no" aria-hidden="true">07</span>
-            <p class="sg-comm-kicker">Động viên</p>
-          </div>
-          <h3>Khích lệ</h3>
-          <p class="sg-comm-prompt"><code>Don’t worry.</code><br><code>You can do it.</code><br><code>Cheer up! / Keep trying!</code></p>
-          <p class="sg-comm-reply"><span>Đáp:</span> Thanks. I’ll try. / That’s very kind of you.</p>
-          <p class="sg-comm-eg">Don’t worry. You can do it! — Thanks. I’ll try.</p>
-        </article>
+        <CommunicationCard
+          no="07"
+          kicker="Động viên"
+          title="Khích lệ"
+          prompt="<code>Don’t worry.</code><br><code>You can do it.</code><br><code>Cheer up! / Keep trying!</code>"
+          reply="Thanks. I’ll try. / That’s very kind of you."
+          example="Don’t worry. You can do it! — Thanks. I’ll try."
+        />
 
-        <article class="sg-comm-card">
-          <div class="sg-comm-head">
-            <span class="sg-comm-no" aria-hidden="true">08</span>
-            <p class="sg-comm-kicker">Sức khoẻ</p>
-          </div>
-          <h3>Sức khoẻ</h3>
-          <p class="sg-comm-prompt"><code>What’s the matter?</code><br><code>You look tired.</code><br><code>Bless you! / Get well soon.</code></p>
-          <p class="sg-comm-reply"><span>Đáp:</span> I have a headache. / I feel better now. / Thank you.</p>
-          <p class="sg-comm-eg">You look tired. — I have a headache.</p>
-        </article>
+        <CommunicationCard
+          no="08"
+          kicker="Sức khoẻ"
+          title="Sức khoẻ"
+          prompt="<code>What’s the matter?</code><br><code>You look tired.</code><br><code>Bless you! / Get well soon.</code>"
+          reply="I have a headache. / I feel better now. / Thank you."
+          example="You look tired. — I have a headache."
+        />
       </div>
 
       <p class="mini-note"><strong>Ba câu dễ nhầm:</strong> “Would you mind…?” + “Not at all.” là <strong>đồng ý giúp</strong> · “Why don’t we…?” là <strong>gợi ý</strong>, không phải hỏi nguyên nhân · “I’m afraid I can’t.” là <strong>từ chối lịch sự</strong>.</p>

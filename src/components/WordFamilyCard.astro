@@ -1,0 +1,33 @@
+---
+interface Form {
+  word: string;
+  type: string;
+}
+
+interface Props {
+  word: string;
+  gloss: string;
+  forms: Form[];
+  example: string;
+  core?: boolean;
+}
+
+const { word, gloss, forms, example, core = false } = Astro.props;
+---
+
+<article class="wf-family" data-core={core ? 'true' : undefined}>
+  {core && <span class="wf-core-star" aria-hidden="true">★</span>}
+
+  <div class="wf-family-head">
+    <h3>{word}</h3>
+    <span class="wf-family-gloss">{gloss}</span>
+  </div>
+
+  <div class="wf-forms">
+    {forms.map((form) => (
+      <span><b>{form.word}</b><i>{form.type}</i></span>
+    ))}
+  </div>
+
+  <p class="wf-family-eg" set:html={example}></p>
+</article>

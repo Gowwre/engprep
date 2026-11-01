@@ -1,0 +1,19 @@
+---
+interface Props {
+  words: string[];
+  tense: string;
+  note: string;
+  caution?: boolean;
+}
+
+const { words, tense, note, caution = false } = Astro.props;
+---
+
+<article class:list={['signal-card', caution && 'signal-card-caution']}>
+  <div class="signal-words">
+    {words.map((word) => <span>{word}</span>)}
+  </div>
+  <p class="signal-arrow">Nghĩ đến</p>
+  <p class="signal-tense">{tense}</p>
+  <p class="signal-note">{note}</p>
+</article>

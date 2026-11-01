@@ -1,0 +1,30 @@
+---
+interface Props {
+  prefix: string;
+  no: string;
+  title: string;
+  body: string;
+  formula?: string;
+  plainNo?: boolean;
+}
+
+const {
+  prefix,
+  no,
+  title,
+  body,
+  formula,
+  plainNo = false
+} = Astro.props;
+---
+
+<article class={`${prefix}-step`}>
+  {plainNo ? (
+    <span>{no}</span>
+  ) : (
+    <span class={`${prefix}-step-no`} aria-hidden="true">{no}</span>
+  )}
+  <h3>{title}</h3>
+  <p set:html={body}></p>
+  {formula && <p class={`${prefix}-step-formula`}>{formula}</p>}
+</article>

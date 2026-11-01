@@ -5,7 +5,9 @@ import EmptyState from '../components/EmptyState.astro';
 import FilterToolbar from '../components/FilterToolbar.astro';
 import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
+import SignalCard from '../components/SignalCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TenseCard from '../components/TenseCard.astro';
 import TrapCard from '../components/TrapCard.astro';
 ---
 
@@ -244,405 +246,306 @@ import TrapCard from '../components/TrapCard.astro';
 
       <div class="tense-grid" id="tense-grid">
 
-        <article class="tense-card" id="present-simple" data-group="present">
-          <div class="card-head">
-            <span class="tense-no">01</span>
-            <div class="tense-title">
-              <span class="group-pill">Hiện tại</span>
-              <h3>Thì hiện tại đơn <span>Present Simple</span></h3>
-            </div>
-          </div>
-          <div class="formulas">
-            <div class="formula"><span class="formula-sign">+</span><code>S + V(s/es)</code></div>
-            <div class="formula"><span class="formula-sign">−</span><code>S + don't/doesn't + V</code></div>
-            <div class="formula"><span class="formula-sign">?</span><code>Do/Does + S + V?</code></div>
-          </div>
-          <div class="card-block">
-            <h4>Cách dùng</h4>
-            <ul class="uses">
-              <li>Thói quen, việc lặp đi lặp lại: <em>I walk to school every day.</em></li>
-              <li>Sự thật hiển nhiên, quy luật tự nhiên: <em>The sun rises in the east.</em></li>
-              <li>Lịch trình, thời gian biểu: <em>The workshop opens at 8 a.m.</em></li>
-              <li>Sở thích, trạng thái lâu dài: <em>She loves Vietnamese folk music.</em></li>
-            </ul>
-          </div>
-          <div class="card-block">
-            <h4>Dấu hiệu nhận biết</h4>
-            <div class="chips"><span>always</span><span>usually</span><span>often</span><span>sometimes</span><span>never</span><span>every day</span><span>on Mondays</span></div>
-          </div>
-          <blockquote class="example">
-            <p class="example-en">Every weekend, my family <mark>visits</mark> Bat Trang pottery village.</p>
-            <p class="example-vi">Cuối tuần nào, gia đình mình cũng đến thăm làng gốm Bát Tràng.</p>
-          </blockquote>
-          <p class="pitfall"><strong>Lỗi thường gặp:</strong> Chủ ngữ số ít (he/she/it) phải thêm -s/-es. Trạng từ tần suất đứng trước động từ thường nhưng đứng sau “to be”: <em>She is always late.</em></p>
-        </article>
+        <TenseCard
+          id="present-simple"
+          group="present"
+          no="01"
+          groupLabel="Hiện tại"
+          title="Thì hiện tại đơn"
+          english="Present Simple"
+          formulas={[
+            { sign: "+", text: "S + V(s/es)" },
+            { sign: "−", text: "S + don't/doesn't + V" },
+            { sign: "?", text: "Do/Does + S + V?" },
+          ]}
+          uses={[
+            "Thói quen, việc lặp đi lặp lại: <em>I walk to school every day.</em>",
+            "Sự thật hiển nhiên, quy luật tự nhiên: <em>The sun rises in the east.</em>",
+            "Lịch trình, thời gian biểu: <em>The workshop opens at 8 a.m.</em>",
+            "Sở thích, trạng thái lâu dài: <em>She loves Vietnamese folk music.</em>",
+          ]}
+          signals={["always", "usually", "often", "sometimes", "never", "every day", "on Mondays"]}
+          exampleEn="Every weekend, my family <mark>visits</mark> Bat Trang pottery village."
+          exampleVi="Cuối tuần nào, gia đình mình cũng đến thăm làng gốm Bát Tràng."
+          pitfall="Chủ ngữ số ít (he/she/it) phải thêm -s/-es. Trạng từ tần suất đứng trước động từ thường nhưng đứng sau “to be”: <em>She is always late.</em>"
+        />
 
-        <article class="tense-card" id="present-continuous" data-group="present">
-          <div class="card-head">
-            <span class="tense-no">02</span>
-            <div class="tense-title">
-              <span class="group-pill">Hiện tại</span>
-              <h3>Thì hiện tại tiếp diễn <span>Present Continuous</span></h3>
-            </div>
-          </div>
-          <div class="formulas">
-            <div class="formula"><span class="formula-sign">+</span><code>S + am/is/are + V-ing</code></div>
-            <div class="formula"><span class="formula-sign">−</span><code>S + am/is/are + not + V-ing</code></div>
-            <div class="formula"><span class="formula-sign">?</span><code>Am/Is/Are + S + V-ing?</code></div>
-          </div>
-          <div class="card-block">
-            <h4>Cách dùng</h4>
-            <ul class="uses">
-              <li>Đang xảy ra ngay lúc nói: <em>Listen! Someone is singing.</em></li>
-              <li>Tình hình đang thay đổi: <em>More young people are moving to big cities.</em></li>
-              <li>Kế hoạch đã sắp xếp cho tương lai gần: <em>We are visiting Hue next Friday.</em></li>
-              <li>Dùng với “always” để phàn nàn: <em>He is always leaving his books everywhere!</em></li>
-            </ul>
-          </div>
-          <div class="card-block">
-            <h4>Dấu hiệu nhận biết</h4>
-            <div class="chips"><span>now</span><span>right now</span><span>at the moment</span><span>Look!</span><span>Listen!</span><span>these days</span><span>currently</span></div>
-          </div>
-          <blockquote class="example">
-            <p class="example-en">Look! The artisans <mark>are moulding</mark> clay at the workshop.</p>
-            <p class="example-vi">Nhìn kìa! Những người thợ đang nặn đất sét tại xưởng.</p>
-          </blockquote>
-          <p class="pitfall"><strong>Lỗi thường gặp:</strong> Không dùng với động từ trạng thái: know, like, love, want, need, believe, understand, belong. Nhớ gấp đôi phụ âm (run → running) và bỏ -e (make → making).</p>
-        </article>
+        <TenseCard
+          id="present-continuous"
+          group="present"
+          no="02"
+          groupLabel="Hiện tại"
+          title="Thì hiện tại tiếp diễn"
+          english="Present Continuous"
+          formulas={[
+            { sign: "+", text: "S + am/is/are + V-ing" },
+            { sign: "−", text: "S + am/is/are + not + V-ing" },
+            { sign: "?", text: "Am/Is/Are + S + V-ing?" },
+          ]}
+          uses={[
+            "Đang xảy ra ngay lúc nói: <em>Listen! Someone is singing.</em>",
+            "Tình hình đang thay đổi: <em>More young people are moving to big cities.</em>",
+            "Kế hoạch đã sắp xếp cho tương lai gần: <em>We are visiting Hue next Friday.</em>",
+            "Dùng với “always” để phàn nàn: <em>He is always leaving his books everywhere!</em>",
+          ]}
+          signals={["now", "right now", "at the moment", "Look!", "Listen!", "these days", "currently"]}
+          exampleEn="Look! The artisans <mark>are moulding</mark> clay at the workshop."
+          exampleVi="Nhìn kìa! Những người thợ đang nặn đất sét tại xưởng."
+          pitfall="Không dùng với động từ trạng thái: know, like, love, want, need, believe, understand, belong. Nhớ gấp đôi phụ âm (run → running) và bỏ -e (make → making)."
+        />
 
-        <article class="tense-card" id="present-perfect" data-group="present">
-          <div class="card-head">
-            <span class="tense-no">03</span>
-            <div class="tense-title">
-              <span class="group-pill">Hiện tại</span>
-              <h3>Thì hiện tại hoàn thành <span>Present Perfect</span></h3>
-            </div>
-            <span class="exam-badge">★ Hay gặp</span>
-          </div>
-          <div class="formulas">
-            <div class="formula"><span class="formula-sign">+</span><code>S + have/has + V3/ed</code></div>
-            <div class="formula"><span class="formula-sign">−</span><code>S + haven't/hasn't + V3/ed</code></div>
-            <div class="formula"><span class="formula-sign">?</span><code>Have/Has + S + V3/ed?</code></div>
-          </div>
-          <div class="card-block">
-            <h4>Cách dùng</h4>
-            <ul class="uses">
-              <li>Kể trải nghiệm tính đến nay, không nói rõ thời điểm: <em>I have visited Hue three times.</em></li>
-              <li>Việc đã xong nhưng kết quả còn ảnh hưởng đến hiện tại: <em>She has lost her ticket, so she can't get in.</em></li>
-              <li>Bắt đầu từ quá khứ, kéo dài đến hiện tại: <em>He has lived here since 2015.</em></li>
-              <li>Dùng với just, already, yet để nói việc đã hoặc chưa xảy ra.</li>
-            </ul>
-          </div>
-          <div class="card-block">
-            <h4>Dấu hiệu nhận biết</h4>
-            <div class="chips"><span>already</span><span>just</span><span>yet</span><span>ever</span><span>never</span><span>since</span><span>for</span><span>so far</span></div>
-          </div>
-          <blockquote class="example">
-            <p class="example-en">I <mark>have already tried</mark> making conical hats.</p>
-            <p class="example-vi">Mình đã thử làm nón lá rồi.</p>
-          </blockquote>
-          <p class="pitfall"><strong>Lỗi thường gặp:</strong> Không dùng với mốc thời gian đã kết thúc: <em>I have seen him yesterday.</em> (sai). Nhớ: since + mốc (since 2015), for + khoảng thời gian (for 3 years).</p>
-        </article>
+        <TenseCard
+          id="present-perfect"
+          group="present"
+          no="03"
+          groupLabel="Hiện tại"
+          title="Thì hiện tại hoàn thành"
+          english="Present Perfect"
+          badge="★ Hay gặp"
+          formulas={[
+            { sign: "+", text: "S + have/has + V3/ed" },
+            { sign: "−", text: "S + haven't/hasn't + V3/ed" },
+            { sign: "?", text: "Have/Has + S + V3/ed?" },
+          ]}
+          uses={[
+            "Kể trải nghiệm tính đến nay, không nói rõ thời điểm: <em>I have visited Hue three times.</em>",
+            "Việc đã xong nhưng kết quả còn ảnh hưởng đến hiện tại: <em>She has lost her ticket, so she can't get in.</em>",
+            "Bắt đầu từ quá khứ, kéo dài đến hiện tại: <em>He has lived here since 2015.</em>",
+            "Dùng với just, already, yet để nói việc đã hoặc chưa xảy ra.",
+          ]}
+          signals={["already", "just", "yet", "ever", "never", "since", "for", "so far"]}
+          exampleEn="I <mark>have already tried</mark> making conical hats."
+          exampleVi="Mình đã thử làm nón lá rồi."
+          pitfall="Không dùng với mốc thời gian đã kết thúc: <em>I have seen him yesterday.</em> (sai). Nhớ: since + mốc (since 2015), for + khoảng thời gian (for 3 years)."
+        />
 
-        <article class="tense-card" id="present-perfect-continuous" data-group="present">
-          <div class="card-head">
-            <span class="tense-no">04</span>
-            <div class="tense-title">
-              <span class="group-pill">Hiện tại</span>
-              <h3>Thì hiện tại hoàn thành tiếp diễn <span>Present Perfect Continuous</span></h3>
-            </div>
-          </div>
-          <div class="formulas">
-            <div class="formula"><span class="formula-sign">+</span><code>S + have/has + been + V-ing</code></div>
-            <div class="formula"><span class="formula-sign">−</span><code>S + haven't/hasn't + been + V-ing</code></div>
-            <div class="formula"><span class="formula-sign">?</span><code>Have/Has + S + been + V-ing?</code></div>
-          </div>
-          <div class="card-block">
-            <h4>Cách dùng</h4>
-            <ul class="uses">
-              <li>Việc bắt đầu từ quá khứ, vẫn đang tiếp diễn; nhấn mạnh việc kéo dài bao lâu: <em>They have been restoring the temple for two years.</em></li>
-              <li>Việc vừa diễn ra, vẫn còn dấu vết: <em>Her hands are dirty because she has been gardening.</em></li>
-              <li>Nhấn mạnh quá trình hơn kết quả.</li>
-            </ul>
-          </div>
-          <div class="card-block">
-            <h4>Dấu hiệu nhận biết</h4>
-            <div class="chips"><span>for</span><span>since</span><span>all day</span><span>all week</span><span>how long</span><span>lately</span><span>recently</span></div>
-          </div>
-          <blockquote class="example">
-            <p class="example-en">They <mark>have been restoring</mark> the old communal house for six months.</p>
-            <p class="example-vi">Họ đã trùng tu ngôi đình cũ suốt sáu tháng nay.</p>
-          </blockquote>
-          <p class="pitfall"><strong>Lỗi thường gặp:</strong> Không dùng với động từ trạng thái. Nếu chỉ nêu số lần hoặc kết quả, dùng hiện tại hoàn thành: <em>I have read that book three times.</em></p>
-        </article>
+        <TenseCard
+          id="present-perfect-continuous"
+          group="present"
+          no="04"
+          groupLabel="Hiện tại"
+          title="Thì hiện tại hoàn thành tiếp diễn"
+          english="Present Perfect Continuous"
+          formulas={[
+            { sign: "+", text: "S + have/has + been + V-ing" },
+            { sign: "−", text: "S + haven't/hasn't + been + V-ing" },
+            { sign: "?", text: "Have/Has + S + been + V-ing?" },
+          ]}
+          uses={[
+            "Việc bắt đầu từ quá khứ, vẫn đang tiếp diễn; nhấn mạnh việc kéo dài bao lâu: <em>They have been restoring the temple for two years.</em>",
+            "Việc vừa diễn ra, vẫn còn dấu vết: <em>Her hands are dirty because she has been gardening.</em>",
+            "Nhấn mạnh quá trình hơn kết quả.",
+          ]}
+          signals={["for", "since", "all day", "all week", "how long", "lately", "recently"]}
+          exampleEn="They <mark>have been restoring</mark> the old communal house for six months."
+          exampleVi="Họ đã trùng tu ngôi đình cũ suốt sáu tháng nay."
+          pitfall="Không dùng với động từ trạng thái. Nếu chỉ nêu số lần hoặc kết quả, dùng hiện tại hoàn thành: <em>I have read that book three times.</em>"
+        />
 
-        <article class="tense-card" id="past-simple" data-group="past">
-          <div class="card-head">
-            <span class="tense-no">05</span>
-            <div class="tense-title">
-              <span class="group-pill">Quá khứ</span>
-              <h3>Thì quá khứ đơn <span>Past Simple</span></h3>
+        <TenseCard
+          id="past-simple"
+          group="past"
+          no="05"
+          groupLabel="Quá khứ"
+          title="Thì quá khứ đơn"
+          english="Past Simple"
+          formulas={[
+            { sign: "+", text: "S + V2/ed" },
+            { sign: "−", text: "S + didn't + V" },
+            { sign: "?", text: "Did + S + V?" },
+          ]}
+          uses={[
+            "Việc đã xảy ra và kết thúc tại một thời điểm cụ thể trong quá khứ: <em>We visited My Son Sanctuary last summer.</em>",
+            "Chuỗi hành động liên tiếp: <em>She arrived, opened the door, and sat down.</em>",
+            "Thói quen trong quá khứ: <em>My grandfather walked to school every day.</em>",
+            "Sự kiện, sự thật trong quá khứ: <em>Nguyen Du wrote Truyen Kieu.</em>",
+          ]}
+          signals={["yesterday", "last week", "ago", "in 2010", "then", "when", "in the past"]}
+          exampleEn="Last summer, our class <mark>visited</mark> My Son Sanctuary."
+          exampleVi="Hè năm ngoái, lớp mình đã đến thăm Thánh địa Mỹ Sơn."
+          pitfall="Sau didn't và Did phải dùng động từ nguyên mẫu: <em>didn't went</em> (sai). Học kỹ cách phát âm -ed vì đề có phần này."
+        >
+          <Fragment slot="extra">
+            <div class="mini-note">
+              <strong>Phát âm -ed:</strong> /t/ sau âm vô thanh (watched, stopped) · /d/ sau âm hữu thanh (played, cleaned) · /ɪd/ sau t, d (wanted, needed).
             </div>
-          </div>
-          <div class="formulas">
-            <div class="formula"><span class="formula-sign">+</span><code>S + V2/ed</code></div>
-            <div class="formula"><span class="formula-sign">−</span><code>S + didn't + V</code></div>
-            <div class="formula"><span class="formula-sign">?</span><code>Did + S + V?</code></div>
-          </div>
-          <div class="card-block">
-            <h4>Cách dùng</h4>
-            <ul class="uses">
-              <li>Việc đã xảy ra và kết thúc tại một thời điểm cụ thể trong quá khứ: <em>We visited My Son Sanctuary last summer.</em></li>
-              <li>Chuỗi hành động liên tiếp: <em>She arrived, opened the door, and sat down.</em></li>
-              <li>Thói quen trong quá khứ: <em>My grandfather walked to school every day.</em></li>
-              <li>Sự kiện, sự thật trong quá khứ: <em>Nguyen Du wrote Truyen Kieu.</em></li>
-            </ul>
-          </div>
-          <div class="card-block">
-            <h4>Dấu hiệu nhận biết</h4>
-            <div class="chips"><span>yesterday</span><span>last week</span><span>ago</span><span>in 2010</span><span>then</span><span>when</span><span>in the past</span></div>
-          </div>
-          <blockquote class="example">
-            <p class="example-en">Last summer, our class <mark>visited</mark> My Son Sanctuary.</p>
-            <p class="example-vi">Hè năm ngoái, lớp mình đã đến thăm Thánh địa Mỹ Sơn.</p>
-          </blockquote>
-          <p class="pitfall"><strong>Lỗi thường gặp:</strong> Sau didn't và Did phải dùng động từ nguyên mẫu: <em>didn't went</em> (sai). Học kỹ cách phát âm -ed vì đề có phần này.</p>
-          <div class="mini-note">
-            <strong>Phát âm -ed:</strong> /t/ sau âm vô thanh (watched, stopped) · /d/ sau âm hữu thanh (played, cleaned) · /ɪd/ sau t, d (wanted, needed).
-          </div>
-        </article>
+          </Fragment>
+        </TenseCard>
 
-        <article class="tense-card" id="past-continuous" data-group="past">
-          <div class="card-head">
-            <span class="tense-no">06</span>
-            <div class="tense-title">
-              <span class="group-pill">Quá khứ</span>
-              <h3>Thì quá khứ tiếp diễn <span>Past Continuous</span></h3>
+        <TenseCard
+          id="past-continuous"
+          group="past"
+          no="06"
+          groupLabel="Quá khứ"
+          title="Thì quá khứ tiếp diễn"
+          english="Past Continuous"
+          badge="★ Trọng tâm thi"
+          formulas={[
+            { sign: "+", text: "S + was/were + V-ing" },
+            { sign: "−", text: "S + was/were + not + V-ing" },
+            { sign: "?", text: "Was/Were + S + V-ing?" },
+          ]}
+          uses={[
+            "Đang diễn ra tại một thời điểm trong quá khứ: <em>At 8 p.m. yesterday, I was watching a documentary.</em>",
+            "Đang diễn ra thì bị hành động khác xen vào: <em>While I was reading, the phone rang.</em>",
+            "Hai hành động song song: <em>My mother was cooking while my father was setting the table.</em>",
+            "Dựng bối cảnh cho câu chuyện: <em>The sun was setting and birds were singing.</em>",
+          ]}
+          signals={["at 8 p.m. yesterday", "at that time", "while", "when", "all morning"]}
+          exampleEn="While I <mark>was reading</mark> about Vietnamese customs, my brother <mark>was watching</mark> a documentary."
+          exampleVi="Trong khi mình đang đọc về phong tục Việt Nam thì anh mình đang xem phim tài liệu."
+          pitfall="“While” thường đi với hành động dài (quá khứ tiếp diễn); hành động ngắn xen vào dùng quá khứ đơn."
+        >
+          <Fragment slot="extra">
+            <div class="focus-note">
+              <strong>Viết lại câu với “while”:</strong> While + S + was/were + V-ing, S + V2/ed. → <em>While I was walking home, I met an old friend.</em>
             </div>
-            <span class="exam-badge">★ Trọng tâm thi</span>
-          </div>
-          <div class="formulas">
-            <div class="formula"><span class="formula-sign">+</span><code>S + was/were + V-ing</code></div>
-            <div class="formula"><span class="formula-sign">−</span><code>S + was/were + not + V-ing</code></div>
-            <div class="formula"><span class="formula-sign">?</span><code>Was/Were + S + V-ing?</code></div>
-          </div>
-          <div class="card-block">
-            <h4>Cách dùng</h4>
-            <ul class="uses">
-              <li>Đang diễn ra tại một thời điểm trong quá khứ: <em>At 8 p.m. yesterday, I was watching a documentary.</em></li>
-              <li>Đang diễn ra thì bị hành động khác xen vào: <em>While I was reading, the phone rang.</em></li>
-              <li>Hai hành động song song: <em>My mother was cooking while my father was setting the table.</em></li>
-              <li>Dựng bối cảnh cho câu chuyện: <em>The sun was setting and birds were singing.</em></li>
-            </ul>
-          </div>
-          <div class="card-block">
-            <h4>Dấu hiệu nhận biết</h4>
-            <div class="chips"><span>at 8 p.m. yesterday</span><span>at that time</span><span>while</span><span>when</span><span>all morning</span></div>
-          </div>
-          <blockquote class="example">
-            <p class="example-en">While I <mark>was reading</mark> about Vietnamese customs, my brother <mark>was watching</mark> a documentary.</p>
-            <p class="example-vi">Trong khi mình đang đọc về phong tục Việt Nam thì anh mình đang xem phim tài liệu.</p>
-          </blockquote>
-          <p class="pitfall"><strong>Lỗi thường gặp:</strong> “While” thường đi với hành động dài (quá khứ tiếp diễn); hành động ngắn xen vào dùng quá khứ đơn.</p>
-          <div class="focus-note">
-            <strong>Viết lại câu với “while”:</strong> While + S + was/were + V-ing, S + V2/ed. → <em>While I was walking home, I met an old friend.</em>
-          </div>
-        </article>
+          </Fragment>
+        </TenseCard>
 
-        <article class="tense-card" id="past-perfect" data-group="past">
-          <div class="card-head">
-            <span class="tense-no">07</span>
-            <div class="tense-title">
-              <span class="group-pill">Quá khứ</span>
-              <h3>Thì quá khứ hoàn thành <span>Past Perfect</span></h3>
-            </div>
-          </div>
-          <div class="formulas">
-            <div class="formula"><span class="formula-sign">+</span><code>S + had + V3/ed</code></div>
-            <div class="formula"><span class="formula-sign">−</span><code>S + hadn't + V3/ed</code></div>
-            <div class="formula"><span class="formula-sign">?</span><code>Had + S + V3/ed?</code></div>
-          </div>
-          <div class="card-block">
-            <h4>Cách dùng</h4>
-            <ul class="uses">
-              <li>Xảy ra trước một hành động quá khứ khác: <em>The film had started when we arrived.</em></li>
-              <li>Xảy ra trước một mốc trong quá khứ: <em>By 2010, he had worked here for ten years.</em></li>
-              <li>Trong câu tường thuật hoặc câu điều kiện loại 3: <em>She said she had seen the film.</em></li>
-              <li>Sau by the time / before / after để làm rõ thứ tự.</li>
-            </ul>
-          </div>
-          <div class="card-block">
-            <h4>Dấu hiệu nhận biết</h4>
-            <div class="chips"><span>before</span><span>after</span><span>by the time</span><span>by 2010</span><span>already</span><span>never … before</span></div>
-          </div>
-          <blockquote class="example">
-            <p class="example-en">By the time we arrived, the water puppet show <mark>had started</mark>.</p>
-            <p class="example-vi">Khi chúng mình đến nơi thì buổi múa rối nước đã bắt đầu rồi.</p>
-          </blockquote>
-          <p class="pitfall"><strong>Lỗi thường gặp:</strong> Chỉ dùng khi cần nhấn mạnh việc xảy ra trước. Nếu chỉ kể chuỗi việc liên tiếp, dùng quá khứ đơn.</p>
-        </article>
+        <TenseCard
+          id="past-perfect"
+          group="past"
+          no="07"
+          groupLabel="Quá khứ"
+          title="Thì quá khứ hoàn thành"
+          english="Past Perfect"
+          formulas={[
+            { sign: "+", text: "S + had + V3/ed" },
+            { sign: "−", text: "S + hadn't + V3/ed" },
+            { sign: "?", text: "Had + S + V3/ed?" },
+          ]}
+          uses={[
+            "Xảy ra trước một hành động quá khứ khác: <em>The film had started when we arrived.</em>",
+            "Xảy ra trước một mốc trong quá khứ: <em>By 2010, he had worked here for ten years.</em>",
+            "Trong câu tường thuật hoặc câu điều kiện loại 3: <em>She said she had seen the film.</em>",
+            "Sau by the time / before / after để làm rõ thứ tự.",
+          ]}
+          signals={["before", "after", "by the time", "by 2010", "already", "never … before"]}
+          exampleEn="By the time we arrived, the water puppet show <mark>had started</mark>."
+          exampleVi="Khi chúng mình đến nơi thì buổi múa rối nước đã bắt đầu rồi."
+          pitfall="Chỉ dùng khi cần nhấn mạnh việc xảy ra trước. Nếu chỉ kể chuỗi việc liên tiếp, dùng quá khứ đơn."
+        />
 
-        <article class="tense-card" id="past-perfect-continuous" data-group="past">
-          <div class="card-head">
-            <span class="tense-no">08</span>
-            <div class="tense-title">
-              <span class="group-pill">Quá khứ</span>
-              <h3>Thì quá khứ hoàn thành tiếp diễn <span>Past Perfect Continuous</span></h3>
-            </div>
-          </div>
-          <div class="formulas">
-            <div class="formula"><span class="formula-sign">+</span><code>S + had + been + V-ing</code></div>
-            <div class="formula"><span class="formula-sign">−</span><code>S + hadn't + been + V-ing</code></div>
-            <div class="formula"><span class="formula-sign">?</span><code>Had + S + been + V-ing?</code></div>
-          </div>
-          <div class="card-block">
-            <h4>Cách dùng</h4>
-            <ul class="uses">
-              <li>Việc đang diễn ra và kéo dài trước một hành động hay một mốc khác trong quá khứ: <em>They had been preparing for months before the festival opened.</em></li>
-              <li>Nhấn mạnh việc kéo dài bao lâu: <em>She had been learning Vietnamese for two years before she moved here.</em></li>
-            </ul>
-          </div>
-          <div class="card-block">
-            <h4>Dấu hiệu nhận biết</h4>
-            <div class="chips"><span>for</span><span>since</span><span>all day</span><span>before</span><span>by the time</span><span>when</span></div>
-          </div>
-          <blockquote class="example">
-            <p class="example-en">The dancers <mark>had been practising</mark> for hours before the show began.</p>
-            <p class="example-vi">Các vũ công đã luyện tập hàng giờ trước khi buổi diễn bắt đầu.</p>
-          </blockquote>
-          <p class="pitfall"><strong>Lỗi thường gặp:</strong> Ít gặp trong đề lớp 9, chủ yếu cần nhận diện. Nếu chỉ muốn nói việc đã xong trước một mốc, dùng quá khứ hoàn thành.</p>
-        </article>
+        <TenseCard
+          id="past-perfect-continuous"
+          group="past"
+          no="08"
+          groupLabel="Quá khứ"
+          title="Thì quá khứ hoàn thành tiếp diễn"
+          english="Past Perfect Continuous"
+          formulas={[
+            { sign: "+", text: "S + had + been + V-ing" },
+            { sign: "−", text: "S + hadn't + been + V-ing" },
+            { sign: "?", text: "Had + S + been + V-ing?" },
+          ]}
+          uses={[
+            "Việc đang diễn ra và kéo dài trước một hành động hay một mốc khác trong quá khứ: <em>They had been preparing for months before the festival opened.</em>",
+            "Nhấn mạnh việc kéo dài bao lâu: <em>She had been learning Vietnamese for two years before she moved here.</em>",
+          ]}
+          signals={["for", "since", "all day", "before", "by the time", "when"]}
+          exampleEn="The dancers <mark>had been practising</mark> for hours before the show began."
+          exampleVi="Các vũ công đã luyện tập hàng giờ trước khi buổi diễn bắt đầu."
+          pitfall="Ít gặp trong đề lớp 9, chủ yếu cần nhận diện. Nếu chỉ muốn nói việc đã xong trước một mốc, dùng quá khứ hoàn thành."
+        />
 
-        <article class="tense-card" id="future-simple" data-group="future">
-          <div class="card-head">
-            <span class="tense-no">09</span>
-            <div class="tense-title">
-              <span class="group-pill">Tương lai</span>
-              <h3>Thì tương lai đơn <span>Future Simple</span></h3>
+        <TenseCard
+          id="future-simple"
+          group="future"
+          no="09"
+          groupLabel="Tương lai"
+          title="Thì tương lai đơn"
+          english="Future Simple"
+          badge="★ Điều kiện loại 1"
+          formulas={[
+            { sign: "+", text: "S + will + V" },
+            { sign: "−", text: "S + won't + V" },
+            { sign: "?", text: "Will + S + V?" },
+          ]}
+          uses={[
+            "Dự đoán theo ý kiến, cảm nhận của người nói: <em>I think the festival will be crowded.</em>",
+            "Quyết định ngay lúc nói: <em>The phone is ringing. I'll answer it.</em>",
+            "Lời hứa, đề nghị: <em>I'll help you carry the pottery.</em>",
+            "Mệnh đề chính của câu điều kiện loại 1.",
+          ]}
+          signals={["tomorrow", "next week", "in the future", "soon", "I think", "probably"]}
+          exampleEn="I think Vietnam <mark>will attract</mark> more tourists next year."
+          exampleVi="Mình nghĩ Việt Nam sẽ thu hút nhiều du khách hơn vào năm sau."
+          pitfall="Không dùng will trong mệnh đề if: <em>If it will rain</em> (sai). Mệnh đề if dùng hiện tại đơn."
+        >
+          <Fragment slot="extra">
+            <div class="focus-note">
+              <strong>Câu điều kiện loại 1:</strong> If + S + V(s/es), S + will + V. → <em>If it rains, we will stay home.</em>
             </div>
-            <span class="exam-badge">★ Điều kiện loại 1</span>
-          </div>
-          <div class="formulas">
-            <div class="formula"><span class="formula-sign">+</span><code>S + will + V</code></div>
-            <div class="formula"><span class="formula-sign">−</span><code>S + won't + V</code></div>
-            <div class="formula"><span class="formula-sign">?</span><code>Will + S + V?</code></div>
-          </div>
-          <div class="card-block">
-            <h4>Cách dùng</h4>
-            <ul class="uses">
-              <li>Dự đoán theo ý kiến, cảm nhận của người nói: <em>I think the festival will be crowded.</em></li>
-              <li>Quyết định ngay lúc nói: <em>The phone is ringing. I'll answer it.</em></li>
-              <li>Lời hứa, đề nghị: <em>I'll help you carry the pottery.</em></li>
-              <li>Mệnh đề chính của câu điều kiện loại 1.</li>
-            </ul>
-          </div>
-          <div class="card-block">
-            <h4>Dấu hiệu nhận biết</h4>
-            <div class="chips"><span>tomorrow</span><span>next week</span><span>in the future</span><span>soon</span><span>I think</span><span>probably</span></div>
-          </div>
-          <blockquote class="example">
-            <p class="example-en">I think Vietnam <mark>will attract</mark> more tourists next year.</p>
-            <p class="example-vi">Mình nghĩ Việt Nam sẽ thu hút nhiều du khách hơn vào năm sau.</p>
-          </blockquote>
-          <p class="pitfall"><strong>Lỗi thường gặp:</strong> Không dùng will trong mệnh đề if: <em>If it will rain</em> (sai). Mệnh đề if dùng hiện tại đơn.</p>
-          <div class="focus-note">
-            <strong>Câu điều kiện loại 1:</strong> If + S + V(s/es), S + will + V. → <em>If it rains, we will stay home.</em>
-          </div>
-        </article>
+          </Fragment>
+        </TenseCard>
 
-        <article class="tense-card" id="future-continuous" data-group="future">
-          <div class="card-head">
-            <span class="tense-no">10</span>
-            <div class="tense-title">
-              <span class="group-pill">Tương lai</span>
-              <h3>Thì tương lai tiếp diễn <span>Future Continuous</span></h3>
-            </div>
-          </div>
-          <div class="formulas">
-            <div class="formula"><span class="formula-sign">+</span><code>S + will + be + V-ing</code></div>
-            <div class="formula"><span class="formula-sign">−</span><code>S + won't + be + V-ing</code></div>
-            <div class="formula"><span class="formula-sign">?</span><code>Will + S + be + V-ing?</code></div>
-          </div>
-          <div class="card-block">
-            <h4>Cách dùng</h4>
-            <ul class="uses">
-              <li>Sẽ đang diễn ra tại một thời điểm trong tương lai: <em>At this time next week, we will be exploring Hoi An.</em></li>
-              <li>Hỏi lịch sự về kế hoạch: <em>Will you be using the computer this afternoon?</em></li>
-              <li>Hành động theo lịch trình: <em>The coach will be leaving at 6 a.m.</em></li>
-            </ul>
-          </div>
-          <div class="card-block">
-            <h4>Dấu hiệu nhận biết</h4>
-            <div class="chips"><span>at this time tomorrow</span><span>at 8 p.m. next Sunday</span><span>this time next week</span><span>all day tomorrow</span></div>
-          </div>
-          <blockquote class="example">
-            <p class="example-en">At this time next week, we <mark>will be exploring</mark> Hoi An Ancient Town.</p>
-            <p class="example-vi">Giờ này tuần sau, chúng mình sẽ đang khám phá phố cổ Hội An.</p>
-          </blockquote>
-          <p class="pitfall"><strong>Lỗi thường gặp:</strong> Phân biệt <em>will + V</em> (sẽ xảy ra) với <em>will be + V-ing</em> (sẽ đang diễn ra tại một mốc).</p>
-        </article>
+        <TenseCard
+          id="future-continuous"
+          group="future"
+          no="10"
+          groupLabel="Tương lai"
+          title="Thì tương lai tiếp diễn"
+          english="Future Continuous"
+          formulas={[
+            { sign: "+", text: "S + will + be + V-ing" },
+            { sign: "−", text: "S + won't + be + V-ing" },
+            { sign: "?", text: "Will + S + be + V-ing?" },
+          ]}
+          uses={[
+            "Sẽ đang diễn ra tại một thời điểm trong tương lai: <em>At this time next week, we will be exploring Hoi An.</em>",
+            "Hỏi lịch sự về kế hoạch: <em>Will you be using the computer this afternoon?</em>",
+            "Hành động theo lịch trình: <em>The coach will be leaving at 6 a.m.</em>",
+          ]}
+          signals={["at this time tomorrow", "at 8 p.m. next Sunday", "this time next week", "all day tomorrow"]}
+          exampleEn="At this time next week, we <mark>will be exploring</mark> Hoi An Ancient Town."
+          exampleVi="Giờ này tuần sau, chúng mình sẽ đang khám phá phố cổ Hội An."
+          pitfall="Phân biệt <em>will + V</em> (sẽ xảy ra) với <em>will be + V-ing</em> (sẽ đang diễn ra tại một mốc)."
+        />
 
-        <article class="tense-card" id="future-perfect" data-group="future">
-          <div class="card-head">
-            <span class="tense-no">11</span>
-            <div class="tense-title">
-              <span class="group-pill">Tương lai</span>
-              <h3>Thì tương lai hoàn thành <span>Future Perfect</span></h3>
-            </div>
-          </div>
-          <div class="formulas">
-            <div class="formula"><span class="formula-sign">+</span><code>S + will + have + V3/ed</code></div>
-            <div class="formula"><span class="formula-sign">−</span><code>S + won't + have + V3/ed</code></div>
-            <div class="formula"><span class="formula-sign">?</span><code>Will + S + have + V3/ed?</code></div>
-          </div>
-          <div class="card-block">
-            <h4>Cách dùng</h4>
-            <ul class="uses">
-              <li>Sẽ xong trước một thời điểm trong tương lai: <em>By 2030, the city will have built three new metro lines.</em></li>
-              <li>Sẽ xong trước khi một việc khác trong tương lai xảy ra: <em>By the time you arrive, I will have finished cooking.</em></li>
-            </ul>
-          </div>
-          <div class="card-block">
-            <h4>Dấu hiệu nhận biết</h4>
-            <div class="chips"><span>by 2030</span><span>by the time</span><span>before</span><span>by then</span><span>by next month</span></div>
-          </div>
-          <blockquote class="example">
-            <p class="example-en">By 2030, the city <mark>will have built</mark> three new metro lines.</p>
-            <p class="example-vi">Đến năm 2030, thành phố sẽ xây xong ba tuyến tàu điện ngầm mới.</p>
-          </blockquote>
-          <p class="pitfall"><strong>Lỗi thường gặp:</strong> Mốc thời gian phải ở tương lai. Nếu mốc ở quá khứ, dùng had + V3. Nhớ dùng <em>have</em>, không dùng has.</p>
-        </article>
+        <TenseCard
+          id="future-perfect"
+          group="future"
+          no="11"
+          groupLabel="Tương lai"
+          title="Thì tương lai hoàn thành"
+          english="Future Perfect"
+          formulas={[
+            { sign: "+", text: "S + will + have + V3/ed" },
+            { sign: "−", text: "S + won't + have + V3/ed" },
+            { sign: "?", text: "Will + S + have + V3/ed?" },
+          ]}
+          uses={[
+            "Sẽ xong trước một thời điểm trong tương lai: <em>By 2030, the city will have built three new metro lines.</em>",
+            "Sẽ xong trước khi một việc khác trong tương lai xảy ra: <em>By the time you arrive, I will have finished cooking.</em>",
+          ]}
+          signals={["by 2030", "by the time", "before", "by then", "by next month"]}
+          exampleEn="By 2030, the city <mark>will have built</mark> three new metro lines."
+          exampleVi="Đến năm 2030, thành phố sẽ xây xong ba tuyến tàu điện ngầm mới."
+          pitfall="Mốc thời gian phải ở tương lai. Nếu mốc ở quá khứ, dùng had + V3. Nhớ dùng <em>have</em>, không dùng has."
+        />
 
-        <article class="tense-card" id="future-perfect-continuous" data-group="future">
-          <div class="card-head">
-            <span class="tense-no">12</span>
-            <div class="tense-title">
-              <span class="group-pill">Tương lai</span>
-              <h3>Thì tương lai hoàn thành tiếp diễn <span>Future Perfect Continuous</span></h3>
-            </div>
-          </div>
-          <div class="formulas">
-            <div class="formula"><span class="formula-sign">+</span><code>S + will + have + been + V-ing</code></div>
-            <div class="formula"><span class="formula-sign">−</span><code>S + won't + have + been + V-ing</code></div>
-            <div class="formula"><span class="formula-sign">?</span><code>Will + S + have + been + V-ing?</code></div>
-          </div>
-          <div class="card-block">
-            <h4>Cách dùng</h4>
-            <ul class="uses">
-              <li>Nhấn mạnh việc kéo dài bao lâu tính đến một mốc tương lai: <em>By next June, she will have been learning English for five years.</em></li>
-              <li>Việc sẽ diễn ra liên tục cho đến thời điểm đó.</li>
-            </ul>
-          </div>
-          <div class="card-block">
-            <h4>Dấu hiệu nhận biết</h4>
-            <div class="chips"><span>by … for …</span><span>by next June</span><span>by the time + hiện tại đơn</span></div>
-          </div>
-          <blockquote class="example">
-            <p class="example-en">By next June, she <mark>will have been learning</mark> English for five years.</p>
-            <p class="example-vi">Đến tháng 6 năm sau, bạn ấy sẽ học tiếng Anh được tròn năm năm.</p>
-          </blockquote>
-          <p class="pitfall"><strong>Lỗi thường gặp:</strong> Hiếm gặp trong đề lớp 9, chủ yếu cần nhận diện công thức. Không dùng với động từ trạng thái.</p>
-        </article>
+        <TenseCard
+          id="future-perfect-continuous"
+          group="future"
+          no="12"
+          groupLabel="Tương lai"
+          title="Thì tương lai hoàn thành tiếp diễn"
+          english="Future Perfect Continuous"
+          formulas={[
+            { sign: "+", text: "S + will + have + been + V-ing" },
+            { sign: "−", text: "S + won't + have + been + V-ing" },
+            { sign: "?", text: "Will + S + have + been + V-ing?" },
+          ]}
+          uses={[
+            "Nhấn mạnh việc kéo dài bao lâu tính đến một mốc tương lai: <em>By next June, she will have been learning English for five years.</em>",
+            "Việc sẽ diễn ra liên tục cho đến thời điểm đó.",
+          ]}
+          signals={["by … for …", "by next June", "by the time + hiện tại đơn"]}
+          exampleEn="By next June, she <mark>will have been learning</mark> English for five years."
+          exampleVi="Đến tháng 6 năm sau, bạn ấy sẽ học tiếng Anh được tròn năm năm."
+          pitfall="Hiếm gặp trong đề lớp 9, chủ yếu cần nhận diện công thức. Không dùng với động từ trạng thái."
+        />
 
       </div>
 
@@ -751,78 +654,68 @@ import TrapCard from '../components/TrapCard.astro';
       </SectionHead>
 
       <div class="signal-grid">
-        <article class="signal-card">
-          <div class="signal-words"><span>every day</span><span>usually</span><span>on Mondays</span></div>
-          <p class="signal-arrow">Nghĩ đến</p>
-          <p class="signal-tense">Hiện tại đơn</p>
-          <p class="signal-note">Thói quen, lịch trình, sự thật hiển nhiên.</p>
-        </article>
-        <article class="signal-card">
-          <div class="signal-words"><span>now</span><span>at the moment</span><span>Look!</span><span>Listen!</span></div>
-          <p class="signal-arrow">Nghĩ đến</p>
-          <p class="signal-tense">Hiện tại tiếp diễn</p>
-          <p class="signal-note">Đang diễn ra ngay lúc nói.</p>
-        </article>
-        <article class="signal-card">
-          <div class="signal-words"><span>already</span><span>just</span><span>yet</span><span>ever</span><span>never</span></div>
-          <p class="signal-arrow">Nghĩ đến</p>
-          <p class="signal-tense">Hiện tại hoàn thành</p>
-          <p class="signal-note">Trải nghiệm hoặc kết quả, không gắn với thời gian cụ thể.</p>
-        </article>
-        <article class="signal-card signal-card-caution">
-          <div class="signal-words"><span>since</span><span>for</span></div>
-          <p class="signal-arrow">Nghĩ đến</p>
-          <p class="signal-tense">Hiện tại hoàn thành / tiếp diễn</p>
-          <p class="signal-note">since + mốc thời gian; for + khoảng thời gian. Cũng xuất hiện ở quá khứ hoàn thành và tương lai hoàn thành.</p>
-        </article>
-        <article class="signal-card">
-          <div class="signal-words"><span>yesterday</span><span>ago</span><span>last week</span><span>in 2019</span></div>
-          <p class="signal-arrow">Nghĩ đến</p>
-          <p class="signal-tense">Quá khứ đơn</p>
-          <p class="signal-note">Thời gian đã kết thúc, không dùng hiện tại hoàn thành.</p>
-        </article>
-        <article class="signal-card">
-          <div class="signal-words"><span>while</span><span>at 8 p.m. yesterday</span></div>
-          <p class="signal-arrow">Nghĩ đến</p>
-          <p class="signal-tense">Quá khứ tiếp diễn</p>
-          <p class="signal-note">Đang diễn ra tại một mốc trong quá khứ.</p>
-        </article>
-        <article class="signal-card">
-          <div class="signal-words"><span>before</span><span>after</span><span>by the time + quá khứ</span></div>
-          <p class="signal-arrow">Nghĩ đến</p>
-          <p class="signal-tense">Quá khứ hoàn thành</p>
-          <p class="signal-note">Hành động xảy ra trước một hành động quá khứ khác.</p>
-        </article>
-        <article class="signal-card">
-          <div class="signal-words"><span>tomorrow</span><span>next week</span><span>I think</span></div>
-          <p class="signal-arrow">Nghĩ đến</p>
-          <p class="signal-tense">Tương lai đơn</p>
-          <p class="signal-note">Dự đoán hoặc quyết định ngay lúc nói.</p>
-        </article>
-        <article class="signal-card">
-          <div class="signal-words"><span>at this time tomorrow</span><span>this time next week</span></div>
-          <p class="signal-arrow">Nghĩ đến</p>
-          <p class="signal-tense">Tương lai tiếp diễn</p>
-          <p class="signal-note">Sẽ đang diễn ra tại một mốc trong tương lai.</p>
-        </article>
-        <article class="signal-card">
-          <div class="signal-words"><span>by 2030</span><span>by the time + tương lai</span></div>
-          <p class="signal-arrow">Nghĩ đến</p>
-          <p class="signal-tense">Tương lai hoàn thành</p>
-          <p class="signal-note">Hoàn thành trước một mốc trong tương lai.</p>
-        </article>
-        <article class="signal-card">
-          <div class="signal-words"><span>by … for …</span></div>
-          <p class="signal-arrow">Nghĩ đến</p>
-          <p class="signal-tense">Tương lai hoàn thành tiếp diễn</p>
-          <p class="signal-note">Kéo dài liên tục đến một mốc trong tương lai.</p>
-        </article>
-        <article class="signal-card signal-card-caution">
-          <div class="signal-words"><span>when</span></div>
-          <p class="signal-arrow">Nghĩ đến</p>
-          <p class="signal-tense">Tuỳ ngữ cảnh</p>
-          <p class="signal-note">when + việc ngắn → quá khứ đơn; when + việc đang diễn ra → quá khứ tiếp diễn; when + việc xảy ra trước → quá khứ hoàn thành.</p>
-        </article>
+        <SignalCard
+          words={["every day", "usually", "on Mondays"]}
+          tense="Hiện tại đơn"
+          note="Thói quen, lịch trình, sự thật hiển nhiên."
+        />
+        <SignalCard
+          words={["now", "at the moment", "Look!", "Listen!"]}
+          tense="Hiện tại tiếp diễn"
+          note="Đang diễn ra ngay lúc nói."
+        />
+        <SignalCard
+          words={["already", "just", "yet", "ever", "never"]}
+          tense="Hiện tại hoàn thành"
+          note="Trải nghiệm hoặc kết quả, không gắn với thời gian cụ thể."
+        />
+        <SignalCard
+          words={["since", "for"]}
+          tense="Hiện tại hoàn thành / tiếp diễn"
+          note="since + mốc thời gian; for + khoảng thời gian. Cũng xuất hiện ở quá khứ hoàn thành và tương lai hoàn thành."
+          caution
+        />
+        <SignalCard
+          words={["yesterday", "ago", "last week", "in 2019"]}
+          tense="Quá khứ đơn"
+          note="Thời gian đã kết thúc, không dùng hiện tại hoàn thành."
+        />
+        <SignalCard
+          words={["while", "at 8 p.m. yesterday"]}
+          tense="Quá khứ tiếp diễn"
+          note="Đang diễn ra tại một mốc trong quá khứ."
+        />
+        <SignalCard
+          words={["before", "after", "by the time + quá khứ"]}
+          tense="Quá khứ hoàn thành"
+          note="Hành động xảy ra trước một hành động quá khứ khác."
+        />
+        <SignalCard
+          words={["tomorrow", "next week", "I think"]}
+          tense="Tương lai đơn"
+          note="Dự đoán hoặc quyết định ngay lúc nói."
+        />
+        <SignalCard
+          words={["at this time tomorrow", "this time next week"]}
+          tense="Tương lai tiếp diễn"
+          note="Sẽ đang diễn ra tại một mốc trong tương lai."
+        />
+        <SignalCard
+          words={["by 2030", "by the time + tương lai"]}
+          tense="Tương lai hoàn thành"
+          note="Hoàn thành trước một mốc trong tương lai."
+        />
+        <SignalCard
+          words={["by … for …"]}
+          tense="Tương lai hoàn thành tiếp diễn"
+          note="Kéo dài liên tục đến một mốc trong tương lai."
+        />
+        <SignalCard
+          words={["when"]}
+          tense="Tuỳ ngữ cảnh"
+          note="when + việc ngắn → quá khứ đơn; when + việc đang diễn ra → quá khứ tiếp diễn; when + việc xảy ra trước → quá khứ hoàn thành."
+          caution
+        />
       </div>
     </div>
   </section>

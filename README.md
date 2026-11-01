@@ -50,15 +50,21 @@ src/
 ├── assets/fonts/          # font self-hosted (Be Vietnam Pro, Lora, Roboto Mono)
 ├── components/
 │   ├── BrandMark.astro
+│   ├── ClueCard.astro     # manh mối điền khuyết
+│   ├── CommunicationCard.astro # chức năng giao tiếp
 │   ├── EmptyState.astro   # trạng thái “không tìm thấy” của bộ lọc
 │   ├── FilterToolbar.astro # tabs + ô tìm kiếm + đếm kết quả
 │   ├── PageNav.astro
 │   ├── QuizPanel.astro    # khung quiz dùng chung cho mọi tờ
 │   ├── SectionHead.astro  # kicker + tiêu đề + lead + aside
+│   ├── SignalCard.astro   # dấu hiệu nhận biết → thì
 │   ├── SiteFooter.astro
 │   ├── SiteHeader.astro
+│   ├── StepCard.astro     # thẻ bước làm bài có số thứ tự
 │   ├── StudyStackVisual.astro # thẻ hero, sticky note và stamp
-│   └── TrapCard.astro     # câu sai / câu đúng / lý do
+│   ├── TenseCard.astro    # thẻ công thức một thì
+│   ├── TrapCard.astro     # câu sai / câu đúng / lý do
+│   └── WordFamilyCard.astro # thẻ họ từ
 ├── data/
 │   └── sheets.ts          # registry của tất cả tờ ôn thi
 ├── layouts/
@@ -111,7 +117,9 @@ Thứ tự này giữ cascade đúng và để mỗi route chỉ tải styleshee
    - `SectionHead` cho tiêu đề từng section.
    - `StudyStackVisual` cho thẻ hero (truyền nội dung mặt trước qua slot).
    - `FilterToolbar` + `EmptyState` nếu section có bộ lọc.
+   - `StepCard` cho các bước làm bài có số thứ tự.
    - `TrapCard` cho các cặp câu sai/câu đúng.
+   - Các thẻ chuyên biệt: `TenseCard`, `WordFamilyCard`, `SignalCard`, `ClueCard`, `CommunicationCard`.
 3. Dùng khung quiz chung trong section luyện tập:
 
 ```astro

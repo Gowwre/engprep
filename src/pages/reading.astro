@@ -5,6 +5,7 @@ import EmptyState from '../components/EmptyState.astro';
 import FilterToolbar from '../components/FilterToolbar.astro';
 import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
+import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
 import TrapCard from '../components/TrapCard.astro';
 import '../styles/reading.css';
@@ -123,33 +124,37 @@ import '../styles/reading.css';
       </SectionHead>
 
       <div class="rc-step-grid">
-        <article class="rc-step">
-          <span class="rc-step-no" aria-hidden="true">01</span>
-          <h3>Đọc lướt · 1 phút</h3>
-          <p>Đọc tiêu đề, câu đầu và câu cuối mỗi đoạn. Chú ý từ lặp lại và từ nối để nắm ý chính.</p>
-          <p class="rc-step-formula">tiêu đề + câu đầu / cuối</p>
-        </article>
+        <StepCard
+          prefix="rc"
+          no="01"
+          title="Đọc lướt · 1 phút"
+          body="Đọc tiêu đề, câu đầu và câu cuối mỗi đoạn. Chú ý từ lặp lại và từ nối để nắm ý chính."
+          formula="tiêu đề + câu đầu / cuối"
+        />
 
-        <article class="rc-step">
-          <span class="rc-step-no" aria-hidden="true">02</span>
-          <h3>Đọc câu hỏi · 1 phút</h3>
-          <p>Gạch chân keyword: tên riêng, số, ngày, từ hỏi và từ phủ định như NOT, EXCEPT.</p>
-          <p class="rc-step-formula">ai · khi nào · tại sao · NOT</p>
-        </article>
+        <StepCard
+          prefix="rc"
+          no="02"
+          title="Đọc câu hỏi · 1 phút"
+          body="Gạch chân keyword: tên riêng, số, ngày, từ hỏi và từ phủ định như NOT, EXCEPT."
+          formula="ai · khi nào · tại sao · NOT"
+        />
 
-        <article class="rc-step">
-          <span class="rc-step-no" aria-hidden="true">03</span>
-          <h3>Đọc quét · 5 phút</h3>
-          <p>Tìm keyword hoặc từ đồng nghĩa trong bài. Đáp án thường được viết lại (paraphrase), không lặp y nguyên.</p>
-          <p class="rc-step-formula">từ khoá → từ đồng nghĩa → bằng chứng</p>
-        </article>
+        <StepCard
+          prefix="rc"
+          no="03"
+          title="Đọc quét · 5 phút"
+          body="Tìm keyword hoặc từ đồng nghĩa trong bài. Đáp án thường được viết lại (paraphrase), không lặp y nguyên."
+          formula="từ khoá → từ đồng nghĩa → bằng chứng"
+        />
 
-        <article class="rc-step">
-          <span class="rc-step-no" aria-hidden="true">04</span>
-          <h3>Kiểm tra · 1 phút</h3>
-          <p>Loại đáp án sai phạm vi, sai số lượng hoặc quá cực đoan. Chỉ chọn khi tìm được câu chứng minh.</p>
-          <p class="rc-step-formula">đáp án đúng = bằng chứng trong bài</p>
-        </article>
+        <StepCard
+          prefix="rc"
+          no="04"
+          title="Kiểm tra · 1 phút"
+          body="Loại đáp án sai phạm vi, sai số lượng hoặc quá cực đoan. Chỉ chọn khi tìm được câu chứng minh."
+          formula="đáp án đúng = bằng chứng trong bài"
+        />
       </div>
 
       <div class="rc-time-strip" aria-label="Phân bổ thời gian cho một bài đọc">

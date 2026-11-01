@@ -1,0 +1,17 @@
+---
+interface Props {
+  label: string;
+  title: string;
+  body: string;
+  example: string;
+}
+
+const { label, title, body, example } = Astro.props;
+---
+
+<article class="cz-clue-card">
+  <p class="cz-clue-label">{label}</p>
+  <h3>{title}</h3>
+  <p>{body}</p>
+  <p class="cz-clue-eg" set:html={example}></p>
+</article>

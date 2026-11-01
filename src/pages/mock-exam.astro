@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
 import SectionHead from '../components/SectionHead.astro';
+import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
 import '../styles/mock-exam.css';
 ---
@@ -87,30 +88,34 @@ import '../styles/mock-exam.css';
       </SectionHead>
 
       <div class="mx-step-grid">
-        <article class="mx-step">
-          <span class="mx-step-no" aria-hidden="true">01</span>
-          <h3>Đọc nhanh · 5 phút</h3>
-          <p>Lướt toàn đề, đánh dấu câu dễ và câu cần đọc kỹ. Chưa cần chọn đáp án ngay.</p>
-          <p class="mx-step-formula">đọc quét + đánh dấu</p>
-        </article>
-        <article class="mx-step">
-          <span class="mx-step-no" aria-hidden="true">02</span>
-          <h3>Câu chắc · 20 phút</h3>
-          <p>Làm phát âm, ngữ pháp, giao tiếp, biển báo, từ loại và viết lại câu.</p>
-          <p class="mx-step-formula">câu 1–10 · 17–24</p>
-        </article>
-        <article class="mx-step">
-          <span class="mx-step-no" aria-hidden="true">03</span>
-          <h3>Đọc kỹ · 15 phút</h3>
-          <p>Dành thời gian cho điền khuyết và đọc hiểu. Đọc cả đoạn, tìm bằng chứng trước khi chọn.</p>
-          <p class="mx-step-formula">câu 11–16</p>
-        </article>
-        <article class="mx-step">
-          <span class="mx-step-no" aria-hidden="true">04</span>
-          <h3>Kiểm tra · 5 phút</h3>
-          <p>Rà lại câu chưa chọn, kiểm tra thì/số ít, và chắc chắn không bỏ trống câu nào.</p>
-          <p class="mx-step-formula">không bỏ trống đáp án</p>
-        </article>
+        <StepCard
+          prefix="mx"
+          no="01"
+          title="Đọc nhanh · 5 phút"
+          body="Lướt toàn đề, đánh dấu câu dễ và câu cần đọc kỹ. Chưa cần chọn đáp án ngay."
+          formula="đọc quét + đánh dấu"
+        />
+        <StepCard
+          prefix="mx"
+          no="02"
+          title="Câu chắc · 20 phút"
+          body="Làm phát âm, ngữ pháp, giao tiếp, biển báo, từ loại và viết lại câu."
+          formula="câu 1–10 · 17–24"
+        />
+        <StepCard
+          prefix="mx"
+          no="03"
+          title="Đọc kỹ · 15 phút"
+          body="Dành thời gian cho điền khuyết và đọc hiểu. Đọc cả đoạn, tìm bằng chứng trước khi chọn."
+          formula="câu 11–16"
+        />
+        <StepCard
+          prefix="mx"
+          no="04"
+          title="Kiểm tra · 5 phút"
+          body="Rà lại câu chưa chọn, kiểm tra thì/số ít, và chắc chắn không bỏ trống câu nào."
+          formula="không bỏ trống đáp án"
+        />
       </div>
 
       <div class="mx-time-strip" aria-label="Phân bổ 45 phút">

@@ -1,0 +1,81 @@
+---
+interface Formula {
+  sign: string;
+  text: string;
+}
+
+interface Props {
+  id: string;
+  group: string;
+  no: string;
+  groupLabel: string;
+  title: string;
+  english: string;
+  badge?: string;
+  formulas: Formula[];
+  uses: string[];
+  signals: string[];
+  exampleEn: string;
+  exampleVi: string;
+  pitfall: string;
+}
+
+const {
+  id,
+  group,
+  no,
+  groupLabel,
+  title,
+  english,
+  badge,
+  formulas,
+  uses,
+  signals,
+  exampleEn,
+  exampleVi,
+  pitfall
+} = Astro.props;
+---
+
+<article class="tense-card" id={id} data-group={group}>
+  <div class="card-head">
+    <span class="tense-no">{no}</span>
+    <div class="tense-title">
+      <span class="group-pill">{groupLabel}</span>
+      <h3>{title} <span>{english}</span></h3>
+    </div>
+    {badge && <span class="exam-badge">{badge}</span>}
+  </div>
+
+  <div class="formulas">
+    {formulas.map((formula) => (
+      <div class="formula">
+        <span class="formula-sign">{formula.sign}</span>
+        <code>{formula.text}</code>
+      </div>
+    ))}
+  </div>
+
+  <div class="card-block">
+    <h4>Cách dùng</h4>
+    <ul class="uses">
+      {uses.map((use) => <li set:html={use} />)}
+    </ul>
+  </div>
+
+  <div class="card-block">
+    <h4>Dấu hiệu nhận biết</h4>
+    <div class="chips">
+      {signals.map((signal) => <span>{signal}</span>)}
+    </div>
+  </div>
+
+  <blockquote class="example">
+    <p class="example-en" set:html={exampleEn}></p>
+    <p class="example-vi">{exampleVi}</p>
+  </blockquote>
+
+  <p class="pitfall"><strong>Lỗi thường gặp:</strong> <Fragment set:html={pitfall} /></p>
+
+  <slot name="extra" />
+</article>

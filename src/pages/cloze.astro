@@ -1,8 +1,10 @@
 ---
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
+import ClueCard from '../components/ClueCard.astro';
 import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
+import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
 import TrapCard from '../components/TrapCard.astro';
 import '../styles/cloze.css';
@@ -103,33 +105,37 @@ import '../styles/cloze.css';
       </SectionHead>
 
       <div class="cz-step-grid">
-        <article class="cz-step">
-          <span class="cz-step-no" aria-hidden="true">01</span>
-          <h3>Đọc lướt cả đoạn</h3>
-          <p>Đọc nhanh để nắm chủ đề, giọng điệu và cấu trúc. Chú ý từ nối và các từ lặp lại.</p>
-          <p class="cz-step-formula">chủ đề + giọng điệu + cấu trúc</p>
-        </article>
+        <StepCard
+          prefix="cz"
+          no="01"
+          title="Đọc lướt cả đoạn"
+          body="Đọc nhanh để nắm chủ đề, giọng điệu và cấu trúc. Chú ý từ nối và các từ lặp lại."
+          formula="chủ đề + giọng điệu + cấu trúc"
+        />
 
-        <article class="cz-step">
-          <span class="cz-step-no" aria-hidden="true">02</span>
-          <h3>Đọc quanh chỗ trống</h3>
-          <p>Đọc câu chứa chỗ trống và câu trước/sau. Dự đoán loại từ và nghĩa trước khi xem đáp án.</p>
-          <p class="cz-step-formula">câu trước + câu sau</p>
-        </article>
+        <StepCard
+          prefix="cz"
+          no="02"
+          title="Đọc quanh chỗ trống"
+          body="Đọc câu chứa chỗ trống và câu trước/sau. Dự đoán loại từ và nghĩa trước khi xem đáp án."
+          formula="câu trước + câu sau"
+        />
 
-        <article class="cz-step">
-          <span class="cz-step-no" aria-hidden="true">03</span>
-          <h3>Kiểm tra ngữ pháp</h3>
-          <p>Loại từ, thì, số ít/số nhiều, giới từ đi kèm và cụm từ cố định. Đây là bước dễ mất điểm nhất.</p>
-          <p class="cz-step-formula">ngữ pháp + cụm từ cố định</p>
-        </article>
+        <StepCard
+          prefix="cz"
+          no="03"
+          title="Kiểm tra ngữ pháp"
+          body="Loại từ, thì, số ít/số nhiều, giới từ đi kèm và cụm từ cố định. Đây là bước dễ mất điểm nhất."
+          formula="ngữ pháp + cụm từ cố định"
+        />
 
-        <article class="cz-step">
-          <span class="cz-step-no" aria-hidden="true">04</span>
-          <h3>Đọc lại cả đoạn</h3>
-          <p>Điền thử đáp án rồi đọc lại. Nếu câu tối nghĩa hoặc sai logic, hãy xem lại chỗ trống đó.</p>
-          <p class="cz-step-formula">điền thử + đọc lại</p>
-        </article>
+        <StepCard
+          prefix="cz"
+          no="04"
+          title="Đọc lại cả đoạn"
+          body="Điền thử đáp án rồi đọc lại. Nếu câu tối nghĩa hoặc sai logic, hãy xem lại chỗ trống đó."
+          formula="điền thử + đọc lại"
+        />
       </div>
 
       <div class="cz-time-strip" aria-label="Phân bổ thời gian cho một bài điền khuyết">
@@ -226,47 +232,47 @@ import '../styles/cloze.css';
       </SectionHead>
 
       <div class="cz-clue-grid">
-        <article class="cz-clue-card">
-          <p class="cz-clue-label">01 · Định nghĩa</p>
-          <h3>is / means / refers to</h3>
-          <p>Câu sau giải thích nghĩa của từ cần điền.</p>
-          <p class="cz-clue-eg">A <strong>habitat</strong> is the natural home of an animal.</p>
-        </article>
+        <ClueCard
+          label="01 · Định nghĩa"
+          title="is / means / refers to"
+          body="Câu sau giải thích nghĩa của từ cần điền."
+          example="A <strong>habitat</strong> is the natural home of an animal."
+        />
 
-        <article class="cz-clue-card">
-          <p class="cz-clue-label">02 · Ví dụ</p>
-          <h3>such as / for example</h3>
-          <p>Ví dụ phía sau thu hẹp nghĩa của từ.</p>
-          <p class="cz-clue-eg">Fruits <strong>such as</strong> mangoes and bananas are sweet.</p>
-        </article>
+        <ClueCard
+          label="02 · Ví dụ"
+          title="such as / for example"
+          body="Ví dụ phía sau thu hẹp nghĩa của từ."
+          example="Fruits <strong>such as</strong> mangoes and bananas are sweet."
+        />
 
-        <article class="cz-clue-card">
-          <p class="cz-clue-label">03 · Tương phản</p>
-          <h3>but / however / although</h3>
-          <p>Từ nối tương phản báo hiệu nghĩa trái ngược.</p>
-          <p class="cz-clue-eg">The town is small, <strong>but</strong> it is very lively.</p>
-        </article>
+        <ClueCard
+          label="03 · Tương phản"
+          title="but / however / although"
+          body="Từ nối tương phản báo hiệu nghĩa trái ngược."
+          example="The town is small, <strong>but</strong> it is very lively."
+        />
 
-        <article class="cz-clue-card">
-          <p class="cz-clue-label">04 · Nguyên nhân – kết quả</p>
-          <h3>because / so / therefore</h3>
-          <p>Một vế giải thích nguyên nhân hoặc kết quả của vế kia.</p>
-          <p class="cz-clue-eg">It rained heavily, <strong>so</strong> the match was cancelled.</p>
-        </article>
+        <ClueCard
+          label="04 · Nguyên nhân – kết quả"
+          title="because / so / therefore"
+          body="Một vế giải thích nguyên nhân hoặc kết quả của vế kia."
+          example="It rained heavily, <strong>so</strong> the match was cancelled."
+        />
 
-        <article class="cz-clue-card">
-          <p class="cz-clue-label">05 · Cụm từ cố định</p>
-          <h3>từ đi với từ</h3>
-          <p>Chọn từ tạo thành cụm tự nhiên với từ đứng cạnh.</p>
-          <p class="cz-clue-eg"><strong>make</strong> a decision · <strong>heavy</strong> rain · <strong>take</strong> responsibility</p>
-        </article>
+        <ClueCard
+          label="05 · Cụm từ cố định"
+          title="từ đi với từ"
+          body="Chọn từ tạo thành cụm tự nhiên với từ đứng cạnh."
+          example="<strong>make</strong> a decision · <strong>heavy</strong> rain · <strong>take</strong> responsibility"
+        />
 
-        <article class="cz-clue-card">
-          <p class="cz-clue-label">06 · Chủ đề</p>
-          <h3>các từ xung quanh</h3>
-          <p>Chủ đề của cả đoạn giúp loại đáp án sai nghĩa.</p>
-          <p class="cz-clue-eg">Trong đoạn về môi trường: <strong>pollution, recycle, renewable</strong>.</p>
-        </article>
+        <ClueCard
+          label="06 · Chủ đề"
+          title="các từ xung quanh"
+          body="Chủ đề của cả đoạn giúp loại đáp án sai nghĩa."
+          example="Trong đoạn về môi trường: <strong>pollution, recycle, renewable</strong>."
+        />
       </div>
 
       <p class="mini-note"><strong>Mẹo:</strong> thay từng đáp án vào câu và đọc to trong đầu. Đáp án đúng phải đúng nghĩa, đúng ngữ pháp và tạo thành cụm tự nhiên.</p>

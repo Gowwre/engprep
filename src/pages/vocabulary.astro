@@ -5,6 +5,7 @@ import EmptyState from '../components/EmptyState.astro';
 import FilterToolbar from '../components/FilterToolbar.astro';
 import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
+import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
 import TrapCard from '../components/TrapCard.astro';
 import '../styles/vocabulary.css';
@@ -453,21 +454,27 @@ import '../styles/vocabulary.css';
       </div>
 
       <div class="vc-steps">
-        <article class="vc-step">
-          <span>01</span>
-          <h3>Đọc cả mục từ</h3>
-          <p>Xác định từ loại, nghĩa và các cụm đi kèm. Đừng chỉ nhìn dòng đầu tiên.</p>
-        </article>
-        <article class="vc-step">
-          <span>02</span>
-          <h3>Soi ví dụ</h3>
-          <p>Chú ý giới từ, số ít/số nhiều và thì của động từ trong câu ví dụ.</p>
-        </article>
-        <article class="vc-step">
-          <span>03</span>
-          <h3>Chọn cụm 2–3 từ</h3>
-          <p>Chọn cụm đúng nghĩa, rồi kiểm tra lại ngữ pháp trong câu hoàn chỉnh.</p>
-        </article>
+        <StepCard
+          prefix="vc"
+          no="01"
+          title="Đọc cả mục từ"
+          body="Xác định từ loại, nghĩa và các cụm đi kèm. Đừng chỉ nhìn dòng đầu tiên."
+          plainNo
+        />
+        <StepCard
+          prefix="vc"
+          no="02"
+          title="Soi ví dụ"
+          body="Chú ý giới từ, số ít/số nhiều và thì của động từ trong câu ví dụ."
+          plainNo
+        />
+        <StepCard
+          prefix="vc"
+          no="03"
+          title="Chọn cụm 2–3 từ"
+          body="Chọn cụm đúng nghĩa, rồi kiểm tra lại ngữ pháp trong câu hoàn chỉnh."
+          plainNo
+        />
       </div>
 
       <div class="vc-check-strip">

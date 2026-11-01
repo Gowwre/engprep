@@ -3,6 +3,7 @@ import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
 import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
+import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
 import TrapCard from '../components/TrapCard.astro';
 import '../styles/sentence-construction.css';
@@ -186,30 +187,34 @@ import '../styles/sentence-construction.css';
       </SectionHead>
 
       <div class="sc-step-grid">
-        <article class="sc-step">
-          <span class="sc-step-no" aria-hidden="true">01</span>
-          <h3>Tìm chủ ngữ</h3>
-          <p>Ai hoặc cái gì thực hiện hành động? Chủ ngữ thường là cụm danh từ đứng đầu.</p>
-          <p class="sc-step-formula">Who / what + V?</p>
-        </article>
-        <article class="sc-step">
-          <span class="sc-step-no" aria-hidden="true">02</span>
-          <h3>Tìm động từ chính</h3>
-          <p>Động từ nào chia theo chủ ngữ? Kiểm tra thì, số ít/số nhiều và dạng bị động.</p>
-          <p class="sc-step-formula">S + V + …</p>
-        </article>
-        <article class="sc-step">
-          <span class="sc-step-no" aria-hidden="true">03</span>
-          <h3>Gắn tân ngữ &amp; cụm bổ nghĩa</h3>
-          <p>Giữ cụm cố định, giới từ và mệnh đề quan hệ đi liền với từ mà chúng bổ nghĩa.</p>
-          <p class="sc-step-formula">V + O + by / to / set by …</p>
-        </article>
-        <article class="sc-step">
-          <span class="sc-step-no" aria-hidden="true">04</span>
-          <h3>Đọc lại &amp; kiểm tra</h3>
-          <p>Chữ đầu viết hoa, cuối câu có dấu chấm, không thừa/thiếu từ, nghĩa rõ ràng.</p>
-          <p class="sc-step-formula">viết hoa + dấu câu + nghĩa</p>
-        </article>
+        <StepCard
+          prefix="sc"
+          no="01"
+          title="Tìm chủ ngữ"
+          body="Ai hoặc cái gì thực hiện hành động? Chủ ngữ thường là cụm danh từ đứng đầu."
+          formula="Who / what + V?"
+        />
+        <StepCard
+          prefix="sc"
+          no="02"
+          title="Tìm động từ chính"
+          body="Động từ nào chia theo chủ ngữ? Kiểm tra thì, số ít/số nhiều và dạng bị động."
+          formula="S + V + …"
+        />
+        <StepCard
+          prefix="sc"
+          no="03"
+          title="Gắn tân ngữ & cụm bổ nghĩa"
+          body="Giữ cụm cố định, giới từ và mệnh đề quan hệ đi liền với từ mà chúng bổ nghĩa."
+          formula="V + O + by / to / set by …"
+        />
+        <StepCard
+          prefix="sc"
+          no="04"
+          title="Đọc lại & kiểm tra"
+          body="Chữ đầu viết hoa, cuối câu có dấu chấm, không thừa/thiếu từ, nghĩa rõ ràng."
+          formula="viết hoa + dấu câu + nghĩa"
+        />
       </div>
 
       <div class="sc-time-strip" aria-label="Phân bổ thời gian cho hai câu phần VI">
