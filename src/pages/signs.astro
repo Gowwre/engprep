@@ -2,50 +2,44 @@
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
 import QuizPanel from '../components/QuizPanel.astro';
+import SectionHead from '../components/SectionHead.astro';
+import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TrapCard from '../components/TrapCard.astro';
 import '../styles/signs.css';
 ---
 
 <SheetLayout slug="signs">
   <Fragment slot="visual">
-    <div class="study-stack sg-stack">
-      <div class="stack-card stack-card-back"></div>
-      <div class="stack-card stack-card-mid"></div>
-      <div class="stack-card stack-card-front">
-        <p class="mini-label">Biển báo &amp; thông báo · 01</p>
-        <div class="sg-hero-sign">
-          <span class="sg-hero-sign-top">Notice</span>
-          <strong>NO<br>PARKING</strong>
-          <span class="sg-hero-sign-foot">Khu vực cấm đỗ xe</span>
-        </div>
-        <div class="sg-hero-chat">
-          <span class="sg-hero-chat-label">Communication</span>
-          <p><strong>Would you mind</strong> opening the window?</p>
-          <p class="sg-hero-chat-reply">— Not at all.</p>
-        </div>
-        <div class="mini-chips">
-          <span>prohibition</span><span>request</span><span>Not at all.</span>
-        </div>
+    <StudyStackVisual
+      stackClass="sg-stack"
+      noteLabel="Mẹo thi"
+      noteTitle="Đọc từ khoá"
+      note="No, only, free, required…"
+    >
+      <p class="mini-label">Biển báo &amp; thông báo · 01</p>
+      <div class="sg-hero-sign">
+        <span class="sg-hero-sign-top">Notice</span>
+        <strong>NO<br>PARKING</strong>
+        <span class="sg-hero-sign-foot">Khu vực cấm đỗ xe</span>
       </div>
-    </div>
-    <div class="sticky-note">
-      <span class="sticky-label">Mẹo thi</span>
-      <strong>Đọc từ khoá</strong>
-      <span>No, only, free, required…</span>
-    </div>
-    <div class="stamp">Ôn thi<br>vào 10<br><span>2026–2027</span></div>
+      <div class="sg-hero-chat">
+        <span class="sg-hero-chat-label">Communication</span>
+        <p><strong>Would you mind</strong> opening the window?</p>
+        <p class="sg-hero-chat-reply">— Not at all.</p>
+      </div>
+      <div class="mini-chips">
+        <span>prohibition</span><span>request</span><span>Not at all.</span>
+      </div>
+    </StudyStackVisual>
   </Fragment>
 
   <!-- MAP -->
   <section class="section" id="map">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">01 · Bản đồ</p>
-          <h2>Bốn nhóm biển báo.</h2>
-          <p>Mỗi biển báo hoặc thông báo trong đề đều thuộc một trong bốn nhóm này. Xác định nhóm trước, rồi mới đọc nghĩa chi tiết.</p>
-        </div>
-        <p class="section-aside"><span>4</span> nhóm biển<br><span>8</span> chức năng giao tiếp</p>
-      </div>
+      <SectionHead kicker="01 · Bản đồ" title="Bốn nhóm biển báo.">
+        Mỗi biển báo hoặc thông báo trong đề đều thuộc một trong bốn nhóm này. Xác định nhóm trước, rồi mới đọc nghĩa chi tiết.
+        <p slot="aside" class="section-aside"><span>4</span> nhóm biển<br><span>8</span> chức năng giao tiếp</p>
+      </SectionHead>
 
       <div class="sg-map-grid">
         <a class="sg-map-card sg-map-ban" href="#signs">
@@ -96,14 +90,10 @@ import '../styles/signs.css';
   <!-- STRATEGY -->
   <section class="section section-alt" id="strategy">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">02 · Chiến lược</p>
-          <h2>Đọc một biển báo trong 20 giây.</h2>
-          <p>Với câu hỏi biển báo, đừng dịch cả câu. Hãy nhận diện nhóm, gạch từ khoá rồi diễn giải thành một câu ngắn.</p>
-        </div>
-        <p class="section-aside"><span>4</span> bước<br><span>20</span> giây / câu</p>
-      </div>
+      <SectionHead kicker="02 · Chiến lược" title="Đọc một biển báo trong 20 giây.">
+        Với câu hỏi biển báo, đừng dịch cả câu. Hãy nhận diện nhóm, gạch từ khoá rồi diễn giải thành một câu ngắn.
+        <p slot="aside" class="section-aside"><span>4</span> bước<br><span>20</span> giây / câu</p>
+      </SectionHead>
 
       <div class="sg-step-grid">
         <article class="sg-step">
@@ -151,14 +141,10 @@ import '../styles/signs.css';
   <!-- SIGNS -->
   <section class="section" id="signs">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">03 · Biển báo</p>
-          <h2>20 mẫu biển báo, thông báo.</h2>
-          <p>Đây là những mẫu xuất hiện nhiều nhất trong đề lớp 9. Cột cuối là bẫy thường gặp — đọc kỹ để không chọn đáp án đảo nghĩa.</p>
-        </div>
-        <p class="section-aside"><span>20</span> mẫu<br><span>4</span> nhóm</p>
-      </div>
+      <SectionHead kicker="03 · Biển báo" title="20 mẫu biển báo, thông báo.">
+        Đây là những mẫu xuất hiện nhiều nhất trong đề lớp 9. Cột cuối là bẫy thường gặp — đọc kỹ để không chọn đáp án đảo nghĩa.
+        <p slot="aside" class="section-aside"><span>20</span> mẫu<br><span>4</span> nhóm</p>
+      </SectionHead>
 
       <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
       <div class="sg-table-wrap">
@@ -304,14 +290,10 @@ import '../styles/signs.css';
   <!-- COMMUNICATION -->
   <section class="section section-alt" id="communication">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">04 · Giao tiếp</p>
-          <h2>Tám chức năng giao tiếp.</h2>
-          <p>Mỗi câu hỏi giao tiếp kiểm tra một chức năng: gợi ý, mời, xin lỗi, cảm ơn, nhờ, xin phép, động viên hoặc hỏi sức khoẻ. Hãy chọn câu đáp đúng chức năng, không chỉ đúng ngữ pháp.</p>
-        </div>
-        <p class="section-aside"><span>8</span> chức năng<br><span>1</span> quy tắc</p>
-      </div>
+      <SectionHead kicker="04 · Giao tiếp" title="Tám chức năng giao tiếp.">
+        Mỗi câu hỏi giao tiếp kiểm tra một chức năng: gợi ý, mời, xin lỗi, cảm ơn, nhờ, xin phép, động viên hoặc hỏi sức khoẻ. Hãy chọn câu đáp đúng chức năng, không chỉ đúng ngữ pháp.
+        <p slot="aside" class="section-aside"><span>8</span> chức năng<br><span>1</span> quy tắc</p>
+      </SectionHead>
 
       <div class="sg-comm-grid">
         <article class="sg-comm-card">
@@ -410,14 +392,10 @@ import '../styles/signs.css';
   <!-- SAMPLE -->
   <section class="section sample-start" id="sample">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">05 · Đề mẫu</p>
-          <h2>Bốn câu, bốn kiểu suy luận.</h2>
-          <p>Đọc câu hỏi, tự chọn đáp án rồi mới xem giải thích. Hai câu đầu là biển báo, hai câu sau là giao tiếp.</p>
-        </div>
-        <p class="section-aside"><span>2</span> biển báo<br><span>2</span> giao tiếp</p>
-      </div>
+      <SectionHead kicker="05 · Đề mẫu" title="Bốn câu, bốn kiểu suy luận.">
+        Đọc câu hỏi, tự chọn đáp án rồi mới xem giải thích. Hai câu đầu là biển báo, hai câu sau là giao tiếp.
+        <p slot="aside" class="section-aside"><span>2</span> biển báo<br><span>2</span> giao tiếp</p>
+      </SectionHead>
 
       <div class="sg-sample-grid">
         <article class="sg-sample-card">
@@ -502,75 +480,71 @@ import '../styles/signs.css';
   <!-- TRAPS -->
   <section class="section section-alt" id="traps">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">06 · Bẫy đề</p>
-          <h2>Mười lỗi hay mất điểm.</h2>
-          <p>Đọc câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc khi làm câu biển báo và giao tiếp.</p>
-        </div>
-        <p class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
-      </div>
+      <SectionHead kicker="06 · Bẫy đề" title="Mười lỗi hay mất điểm.">
+        Đọc câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc khi làm câu biển báo và giao tiếp.
+        <p slot="aside" class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
+      </SectionHead>
 
       <div class="trap-grid">
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>NO PARKING</strong> = có chỗ đỗ xe.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>NO PARKING</strong> = không được đỗ xe.</p></div>
-          <p class="trap-why">No + V-ing là cấm, không phải thông báo có dịch vụ.</p>
-        </article>
+        <TrapCard
+          bad="<strong>NO PARKING</strong> = có chỗ đỗ xe."
+          good="<strong>NO PARKING</strong> = không được đỗ xe."
+          why="No + V-ing là cấm, không phải thông báo có dịch vụ."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>FREE ENTRY</strong> = đồ ăn miễn phí.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>FREE ENTRY</strong> = vào cửa miễn phí.</p></div>
-          <p class="trap-why">Entry là việc vào cửa; không nói gì đến đồ ăn.</p>
-        </article>
+        <TrapCard
+          bad="<strong>FREE ENTRY</strong> = đồ ăn miễn phí."
+          good="<strong>FREE ENTRY</strong> = vào cửa miễn phí."
+          why="Entry là việc vào cửa; không nói gì đến đồ ăn."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>OUT OF ORDER</strong> = hãy đặt hàng.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>OUT OF ORDER</strong> = máy bị hỏng.</p></div>
-          <p class="trap-why">Out of order là tình trạng hỏng, không phải lệnh đặt hàng.</p>
-        </article>
+        <TrapCard
+          bad="<strong>OUT OF ORDER</strong> = hãy đặt hàng."
+          good="<strong>OUT OF ORDER</strong> = máy bị hỏng."
+          why="Out of order là tình trạng hỏng, không phải lệnh đặt hàng."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>50% OFF</strong> = mua 1 tặng 1.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>50% OFF</strong> = giảm 50% giá.</p></div>
-          <p class="trap-why">Off là giảm giá; không phải chương trình tặng hàng.</p>
-        </article>
+        <TrapCard
+          bad="<strong>50% OFF</strong> = mua 1 tặng 1."
+          good="<strong>50% OFF</strong> = giảm 50% giá."
+          why="Off là giảm giá; không phải chương trình tặng hàng."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>BOOKING REQUIRED</strong> = không cần đặt trước.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>BOOKING REQUIRED</strong> = phải đặt trước.</p></div>
-          <p class="trap-why">Required là bắt buộc, ngược với “không cần”.</p>
-        </article>
+        <TrapCard
+          bad="<strong>BOOKING REQUIRED</strong> = không cần đặt trước."
+          good="<strong>BOOKING REQUIRED</strong> = phải đặt trước."
+          why="Required là bắt buộc, ngược với “không cần”."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>STAFF ONLY</strong> = mọi người đều được vào.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>STAFF ONLY</strong> = chỉ nhân viên được vào.</p></div>
-          <p class="trap-why">Only giới hạn đối tượng; không phải lời mời cho tất cả.</p>
-        </article>
+        <TrapCard
+          bad="<strong>STAFF ONLY</strong> = mọi người đều được vào."
+          good="<strong>STAFF ONLY</strong> = chỉ nhân viên được vào."
+          why="Only giới hạn đối tượng; không phải lời mời cho tất cả."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>“Would you mind…?” — “Not at all.” = không đồng ý giúp.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>“Would you mind…?” — “Not at all.” = đồng ý giúp.</p></div>
-          <p class="trap-why">Not at all = không phiền, tức là sẵn lòng giúp.</p>
-        </article>
+        <TrapCard
+          bad="“Would you mind…?” — “Not at all.” = không đồng ý giúp."
+          good="“Would you mind…?” — “Not at all.” = đồng ý giúp."
+          why="Not at all = không phiền, tức là sẵn lòng giúp."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>“Why don’t we…?” — “Because we are busy.”</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>“Why don’t we…?” — “Good idea.”</p></div>
-          <p class="trap-why">Đây là lời gợi ý, không phải câu hỏi nguyên nhân.</p>
-        </article>
+        <TrapCard
+          bad="“Why don’t we…?” — “Because we are busy.”"
+          good="“Why don’t we…?” — “Good idea.”"
+          why="Đây là lời gợi ý, không phải câu hỏi nguyên nhân."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>“I’m afraid I can’t.” = tôi đang sợ.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>“I’m afraid I can’t.” = rất tiếc, tôi không thể.</p></div>
-          <p class="trap-why">Đây là cách từ chối lịch sự, không phải diễn tả nỗi sợ.</p>
-        </article>
+        <TrapCard
+          bad="“I’m afraid I can’t.” = tôi đang sợ."
+          good="“I’m afraid I can’t.” = rất tiếc, tôi không thể."
+          why="Đây là cách từ chối lịch sự, không phải diễn tả nỗi sợ."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>“You’re welcome.” dùng để đáp lời xin lỗi.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>“You’re welcome.” dùng để đáp lời cảm ơn.</p></div>
-          <p class="trap-why">Đáp lời xin lỗi là “Never mind.” hoặc “That’s all right.”.</p>
-        </article>
+        <TrapCard
+          bad="“You’re welcome.” dùng để đáp lời xin lỗi."
+          good="“You’re welcome.” dùng để đáp lời cảm ơn."
+          why="Đáp lời xin lỗi là “Never mind.” hoặc “That’s all right.”."
+        />
       </div>
     </div>
   </section>
@@ -578,13 +552,9 @@ import '../styles/signs.css';
   <!-- QUIZ -->
   <section class="section section-quiz" id="quiz">
     <div class="container">
-      <div class="section-head section-head-center">
-        <div>
-          <p class="section-kicker">07 · Luyện tập</p>
-          <h2>8 biển báo, 8 tình huống giao tiếp.</h2>
-          <p>Mỗi câu có một biển báo hoặc một đoạn hội thoại ngắn. Chọn đáp án rồi xem giải thích.</p>
-        </div>
-      </div>
+      <SectionHead kicker="07 · Luyện tập" title="8 biển báo, 8 tình huống giao tiếp." center>
+        Mỗi câu có một biển báo hoặc một đoạn hội thoại ngắn. Chọn đáp án rồi xem giải thích.
+      </SectionHead>
 
       <QuizPanel total={16} />
     </div>

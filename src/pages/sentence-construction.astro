@@ -2,52 +2,46 @@
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
 import QuizPanel from '../components/QuizPanel.astro';
+import SectionHead from '../components/SectionHead.astro';
+import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TrapCard from '../components/TrapCard.astro';
 import '../styles/sentence-construction.css';
 ---
 
 <SheetLayout slug="sentence-construction">
   <Fragment slot="visual">
-    <div class="study-stack sc-stack">
-      <div class="stack-card stack-card-back"></div>
-      <div class="stack-card stack-card-mid"></div>
-      <div class="stack-card stack-card-front">
-        <p class="mini-label">Phần VI · Sắp xếp câu</p>
+    <StudyStackVisual
+      stackClass="sc-stack"
+      noteLabel="Mẹo thi"
+      noteTitle="Tìm S + V trước"
+      note="đừng ghép theo cảm giác!"
+    >
+      <p class="mini-label">Phần VI · Sắp xếp câu</p>
 
-        <div class="sc-hero-chunks">
-          <span>The host band</span>
-          <span>a mashup of their hit songs</span>
-          <span>started off the concert</span>
-          <span>by presenting</span>
-        </div>
-
-        <p class="sc-hero-arrow">↓ S + V + O + by + V-ing</p>
-        <p class="sc-hero-sentence">The host band started off the concert <mark>by presenting</mark> a mashup of their hit songs.</p>
-        <p class="sc-hero-why">Giữ cụm “by presenting” trước tân ngữ “a mashup…”.</p>
-
-        <div class="mini-chips">
-          <span>trật tự từ</span><span>cụm từ</span><span>phần VI</span>
-        </div>
+      <div class="sc-hero-chunks">
+        <span>The host band</span>
+        <span>a mashup of their hit songs</span>
+        <span>started off the concert</span>
+        <span>by presenting</span>
       </div>
-    </div>
-    <div class="sticky-note">
-      <span class="sticky-label">Mẹo thi</span>
-      <strong>Tìm S + V trước</strong>
-      <span>đừng ghép theo cảm giác!</span>
-    </div>
-    <div class="stamp">Ôn thi<br>vào 10<br><span>2026–2027</span></div>
+
+      <p class="sc-hero-arrow">↓ S + V + O + by + V-ing</p>
+      <p class="sc-hero-sentence">The host band started off the concert <mark>by presenting</mark> a mashup of their hit songs.</p>
+      <p class="sc-hero-why">Giữ cụm “by presenting” trước tân ngữ “a mashup…”.</p>
+
+      <div class="mini-chips">
+        <span>trật tự từ</span><span>cụm từ</span><span>phần VI</span>
+      </div>
+    </StudyStackVisual>
   </Fragment>
 
   <!-- MAP -->
   <section class="section" id="map">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">01 · Bản đồ</p>
-          <h2>Hai dạng phần VI.</h2>
-          <p>Phần VI có 2 câu, 0,5 điểm. Hai đề gần đây đổi từ sắp xếp câu sang dùng mục từ điển, nhưng cả hai đều kiểm tra trật tự từ, cụm cố định và dạng ngữ pháp.</p>
-        </div>
-        <p class="section-aside"><span>2</span> dạng<br><span>0,5</span> điểm</p>
-      </div>
+      <SectionHead kicker="01 · Bản đồ" title="Hai dạng phần VI.">
+        Phần VI có 2 câu, 0,5 điểm. Hai đề gần đây đổi từ sắp xếp câu sang dùng mục từ điển, nhưng cả hai đều kiểm tra trật tự từ, cụm cố định và dạng ngữ pháp.
+        <p slot="aside" class="section-aside"><span>2</span> dạng<br><span>0,5</span> điểm</p>
+      </SectionHead>
 
       <div class="sc-map-grid">
         <a class="sc-map-card sc-map-rearrange" href="#word-order">
@@ -86,14 +80,10 @@ import '../styles/sentence-construction.css';
   <!-- WORD ORDER -->
   <section class="section section-alt" id="word-order">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">02 · Trật tự câu</p>
-          <h2>S + V + O + bổ nghĩa.</h2>
-          <p>Đừng ghép theo kiểu “cụm nào đọc xuôi tai trước”. Hãy xác định khung câu, rồi gắn từng cụm vào đúng vị trí.</p>
-        </div>
-        <p class="section-aside"><span>6</span> quy tắc<br><span>4</span> mẫu câu</p>
-      </div>
+      <SectionHead kicker="02 · Trật tự câu" title="S + V + O + bổ nghĩa.">
+        Đừng ghép theo kiểu “cụm nào đọc xuôi tai trước”. Hãy xác định khung câu, rồi gắn từng cụm vào đúng vị trí.
+        <p slot="aside" class="section-aside"><span>6</span> quy tắc<br><span>4</span> mẫu câu</p>
+      </SectionHead>
 
       <div class="sc-frame" aria-label="Khung trật tự câu cơ bản">
         <div class="sc-frame-box"><strong>S</strong><span>ai / cái gì</span></div>
@@ -190,14 +180,10 @@ import '../styles/sentence-construction.css';
   <!-- STRATEGY -->
   <section class="section" id="strategy">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">03 · Chiến lược</p>
-          <h2>Bốn bước ghép câu.</h2>
-          <p>Với dạng sắp xếp, đừng viết cả câu ngay. Xác định khung trước, rồi gắn các cụm còn lại.</p>
-        </div>
-        <p class="section-aside"><span>4</span> bước<br><span>3</span> phút / 2 câu</p>
-      </div>
+      <SectionHead kicker="03 · Chiến lược" title="Bốn bước ghép câu.">
+        Với dạng sắp xếp, đừng viết cả câu ngay. Xác định khung trước, rồi gắn các cụm còn lại.
+        <p slot="aside" class="section-aside"><span>4</span> bước<br><span>3</span> phút / 2 câu</p>
+      </SectionHead>
 
       <div class="sc-step-grid">
         <article class="sc-step">
@@ -249,14 +235,10 @@ import '../styles/sentence-construction.css';
   <!-- DICTIONARY -->
   <section class="section section-alt" id="dictionary">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">04 · Từ điển</p>
-          <h2>Chọn cụm 2–3 từ.</h2>
-          <p>Dạng mới không yêu cầu sắp xếp câu. Bạn đọc mục từ, tìm cụm phù hợp rồi điền đúng dạng vào câu.</p>
-        </div>
-        <p class="section-aside"><span>2–3</span> từ<br><span>1</span> mục từ</p>
-      </div>
+      <SectionHead kicker="04 · Từ điển" title="Chọn cụm 2–3 từ.">
+        Dạng mới không yêu cầu sắp xếp câu. Bạn đọc mục từ, tìm cụm phù hợp rồi điền đúng dạng vào câu.
+        <p slot="aside" class="section-aside"><span>2–3</span> từ<br><span>1</span> mục từ</p>
+      </SectionHead>
 
       <div class="sc-dict-grid">
         <article class="sc-dict-entry">
@@ -302,14 +284,10 @@ import '../styles/sentence-construction.css';
   <!-- SAMPLE -->
   <section class="section" id="sample">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">05 · Câu mẫu</p>
-          <h2>Hai câu sắp xếp mẫu.</h2>
-          <p>Đọc các nhóm từ, thử ghép trước khi xem đáp án. Chú ý cụm cố định và phần bổ nghĩa.</p>
-        </div>
-        <p class="section-aside"><span>2</span> câu<br><span>2023–2024</span></p>
-      </div>
+      <SectionHead kicker="05 · Câu mẫu" title="Hai câu sắp xếp mẫu.">
+        Đọc các nhóm từ, thử ghép trước khi xem đáp án. Chú ý cụm cố định và phần bổ nghĩa.
+        <p slot="aside" class="section-aside"><span>2</span> câu<br><span>2023–2024</span></p>
+      </SectionHead>
 
       <div class="sc-sample-grid">
         <article class="sc-sample-card">
@@ -350,75 +328,71 @@ import '../styles/sentence-construction.css';
   <!-- TRAPS -->
   <section class="section section-alt traps-start" id="traps">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">06 · Bẫy đề</p>
-          <h2>Mười lỗi hay mất điểm.</h2>
-          <p>Đọc câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc ở phần VI.</p>
-        </div>
-        <p class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
-      </div>
+      <SectionHead kicker="06 · Bẫy đề" title="Mười lỗi hay mất điểm.">
+        Đọc câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc ở phần VI.
+        <p slot="aside" class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
+      </SectionHead>
 
       <div class="trap-grid">
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>a song <strong>beautiful</strong></p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>a <strong>beautiful</strong> song</p></div>
-          <p class="trap-why">Tính từ đứng trước danh từ trong tiếng Anh.</p>
-        </article>
+        <TrapCard
+          bad="a song <strong>beautiful</strong>"
+          good="a <strong>beautiful</strong> song"
+          why="Tính từ đứng trước danh từ trong tiếng Anh."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Studying abroad <strong>give</strong> students opportunities.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Studying abroad <strong>gives</strong> students opportunities.</p></div>
-          <p class="trap-why">Cụm V-ing làm chủ ngữ số ít → động từ thêm -s.</p>
-        </article>
+        <TrapCard
+          bad="Studying abroad <strong>give</strong> students opportunities."
+          good="Studying abroad <strong>gives</strong> students opportunities."
+          why="Cụm V-ing làm chủ ngữ số ít → động từ thêm -s."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>explained <strong>carefully</strong> the project</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>explained the project <strong>carefully</strong></p></div>
-          <p class="trap-why">Không chen trạng từ giữa động từ và tân ngữ.</p>
-        </article>
+        <TrapCard
+          bad="explained <strong>carefully</strong> the project"
+          good="explained the project <strong>carefully</strong>"
+          why="Không chen trạng từ giữa động từ và tân ngữ."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>By presenting</strong> started off the concert a mashup.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>started off the concert <strong>by presenting</strong> a mashup.</p></div>
-          <p class="trap-why">Cụm <code>by + V-ing</code> đứng sau tân ngữ, không đứng đầu câu.</p>
-        </article>
+        <TrapCard
+          bad="<strong>By presenting</strong> started off the concert a mashup."
+          good="started off the concert <strong>by presenting</strong> a mashup."
+          why="Cụm <code>by + V-ing</code> đứng sau tân ngữ, không đứng đầu câu."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>But also</strong> dangerous <strong>not only</strong> expensive.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>Not only</strong> expensive <strong>but also</strong> dangerous.</p></div>
-          <p class="trap-why">Giữ đúng cặp <code>not only … but also …</code>.</p>
-        </article>
+        <TrapCard
+          bad="<strong>But also</strong> dangerous <strong>not only</strong> expensive."
+          good="<strong>Not only</strong> expensive <strong>but also</strong> dangerous."
+          why="Giữ đúng cặp <code>not only … but also …</code>."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>follow <strong>set by Uncle Hồ</strong> the example.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>follow the example <strong>set by Uncle Hồ</strong>.</p></div>
-          <p class="trap-why">Mệnh đề rút gọn phải đứng ngay sau danh từ mà nó bổ nghĩa.</p>
-        </article>
+        <TrapCard
+          bad="follow <strong>set by Uncle Hồ</strong> the example."
+          good="follow the example <strong>set by Uncle Hồ</strong>."
+          why="Mệnh đề rút gọn phải đứng ngay sau danh từ mà nó bổ nghĩa."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>The program <strong>provide</strong> an opportunity.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>The program <strong>provides</strong> an opportunity.</p></div>
-          <p class="trap-why">Chủ ngữ số ít → thêm -s; đừng chỉ nhìn nghĩa của từ.</p>
-        </article>
+        <TrapCard
+          bad="The program <strong>provide</strong> an opportunity."
+          good="The program <strong>provides</strong> an opportunity."
+          why="Chủ ngữ số ít → thêm -s; đừng chỉ nhìn nghĩa của từ."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Your <strong>eating habit</strong> play an important role.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Your <strong>eating habits</strong> play an important role.</p></div>
-          <p class="trap-why">Danh từ đếm được số nhiều và động từ “play” cho thấy cần <code>habits</code>.</p>
-        </article>
+        <TrapCard
+          bad="Your <strong>eating habit</strong> play an important role."
+          good="Your <strong>eating habits</strong> play an important role."
+          why="Danh từ đếm được số nhiều và động từ “play” cho thấy cần <code>habits</code>."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>opportunities <strong>learn</strong> about cultures</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>opportunities <strong>to learn</strong> about cultures</p></div>
-          <p class="trap-why">Cụm cố định <code>opportunities to learn about</code>; không bỏ “to”.</p>
-        </article>
+        <TrapCard
+          bad="opportunities <strong>learn</strong> about cultures"
+          good="opportunities <strong>to learn</strong> about cultures"
+          why="Cụm cố định <code>opportunities to learn about</code>; không bỏ “to”."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Viết cả câu ví dụ vào chỗ trống dạng từ điển.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Chỉ viết cụm 2–3 từ cần điền.</p></div>
-          <p class="trap-why">Đề giới hạn 2–3 từ; viết thừa sẽ không được chấm điểm.</p>
-        </article>
+        <TrapCard
+          bad="Viết cả câu ví dụ vào chỗ trống dạng từ điển."
+          good="Chỉ viết cụm 2–3 từ cần điền."
+          why="Đề giới hạn 2–3 từ; viết thừa sẽ không được chấm điểm."
+        />
       </div>
     </div>
   </section>
@@ -426,13 +400,9 @@ import '../styles/sentence-construction.css';
   <!-- QUIZ -->
   <section class="section section-quiz" id="quiz">
     <div class="container">
-      <div class="section-head section-head-center">
-        <div>
-          <p class="section-kicker">07 · Luyện tập</p>
-          <h2>8 câu sắp xếp, 8 câu từ điển.</h2>
-          <p>Mỗi câu có một bộ nhóm từ hoặc một mục từ điển. Chọn đáp án rồi xem giải thích.</p>
-        </div>
-      </div>
+      <SectionHead kicker="07 · Luyện tập" title="8 câu sắp xếp, 8 câu từ điển." center>
+        Mỗi câu có một bộ nhóm từ hoặc một mục từ điển. Chọn đáp án rồi xem giải thích.
+      </SectionHead>
 
       <QuizPanel total={16} />
     </div>

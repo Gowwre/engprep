@@ -1,0 +1,61 @@
+---
+interface Tab {
+  value: string;
+  label: string;
+}
+
+interface Props {
+  class?: string;
+  tabKey: string;
+  tabs: Tab[];
+  ariaLabel: string;
+  searchId: string;
+  searchLabel: string;
+  placeholder: string;
+  clearId: string;
+  countId: string;
+  countText: string;
+}
+
+const {
+  class: className,
+  tabKey,
+  tabs,
+  ariaLabel,
+  searchId,
+  searchLabel,
+  placeholder,
+  clearId,
+  countId,
+  countText
+} = Astro.props;
+---
+
+<div class:list={['toolbar', className]}>
+  <div class="filter-tabs" role="group" aria-label={ariaLabel}>
+    {tabs.map((tab) => (
+      <button
+        class="filter-tab"
+        type="button"
+        aria-pressed={tab.value === 'all' ? 'true' : 'false'}
+        {...{ [`data-${tabKey}`]: tab.value }}
+      >
+        {tab.label}
+      </button>
+    ))}
+  </div>
+
+  <div class="search-wrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <circle cx="11" cy="11" r="7" />
+      <path d="M20 20l-3.5-3.5" />
+    </svg>
+    <label class="sr-only" for={searchId}>{searchLabel}</label>
+    <input id={searchId} type="search" placeholder={placeholder} autocomplete="off" />
+    <button class="search-clear" id={clearId} type="button" aria-label="Xoá tìm kiếm" hidden>
+      &times;
+    </button>
+  </div>
+
+  <span class="result-count" id={countId} aria-live="polite">{countText}</span>
+</div>

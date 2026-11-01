@@ -2,50 +2,44 @@
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
 import QuizPanel from '../components/QuizPanel.astro';
+import SectionHead from '../components/SectionHead.astro';
+import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TrapCard from '../components/TrapCard.astro';
 import '../styles/pronunciation.css';
 ---
 
 <SheetLayout slug="pronunciation">
   <Fragment slot="visual">
-    <div class="study-stack pron-stack">
-      <div class="stack-card stack-card-back"></div>
-      <div class="stack-card stack-card-mid"></div>
-      <div class="stack-card stack-card-front">
-        <p class="mini-label">Đuôi -ed · Ba cách đọc</p>
-        <div class="pron-mini-buckets">
-          <div class="pron-mini-bucket pron-t"><span>/t/</span><strong>watched</strong></div>
-          <div class="pron-mini-bucket pron-d"><span>/d/</span><strong>played</strong></div>
-          <div class="pron-mini-bucket pron-id"><span>/ɪd/</span><strong>needed</strong></div>
-        </div>
-        <div class="mini-rule"></div>
-        <p class="pron-mini-question">Which ending does “stopped” have?</p>
-        <div class="pron-mini-choices">
-          <span class="is-correct">A. /t/</span>
-          <span>B. /d/</span>
-          <span>C. /ɪd/</span>
-        </div>
-        <p class="pron-mini-why"><strong>/t/</strong> · “stop” kết thúc bằng /p/ (vô thanh).</p>
+    <StudyStackVisual
+      stackClass="pron-stack"
+      noteLabel="Mẹo thi"
+      noteTitle="Nghe âm cuối"
+      note="đừng nhìn chữ cái!"
+    >
+      <p class="mini-label">Đuôi -ed · Ba cách đọc</p>
+      <div class="pron-mini-buckets">
+        <div class="pron-mini-bucket pron-t"><span>/t/</span><strong>watched</strong></div>
+        <div class="pron-mini-bucket pron-d"><span>/d/</span><strong>played</strong></div>
+        <div class="pron-mini-bucket pron-id"><span>/ɪd/</span><strong>needed</strong></div>
       </div>
-    </div>
-    <div class="sticky-note">
-      <span class="sticky-label">Mẹo thi</span>
-      <strong>Nghe âm cuối</strong>
-      <span>đừng nhìn chữ cái!</span>
-    </div>
-    <div class="stamp">Ôn thi<br>vào 10<br><span>2026–2027</span></div>
+      <div class="mini-rule"></div>
+      <p class="pron-mini-question">Which ending does “stopped” have?</p>
+      <div class="pron-mini-choices">
+        <span class="is-correct">A. /t/</span>
+        <span>B. /d/</span>
+        <span>C. /ɪd/</span>
+      </div>
+      <p class="pron-mini-why"><strong>/t/</strong> · “stop” kết thúc bằng /p/ (vô thanh).</p>
+    </StudyStackVisual>
   </Fragment>
 
   <!-- MAP -->
   <section class="section" id="map">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">01 · Bản đồ</p>
-          <h2>Bốn nhóm âm, một điểm đầu tiên.</h2>
-          <p>Câu 1–2 hỏi phát âm, câu 3–4 hỏi trọng âm. Bốn nhóm này có quy tắc rõ ràng và lặp lại qua các đề.</p>
-        </div>
-        <p class="section-aside"><span>4</span> nhóm âm<br><span>16</span> câu hỏi</p>
-      </div>
+      <SectionHead kicker="01 · Bản đồ" title="Bốn nhóm âm, một điểm đầu tiên.">
+        Câu 1–2 hỏi phát âm, câu 3–4 hỏi trọng âm. Bốn nhóm này có quy tắc rõ ràng và lặp lại qua các đề.
+        <p slot="aside" class="section-aside"><span>4</span> nhóm âm<br><span>16</span> câu hỏi</p>
+      </SectionHead>
 
       <div class="pron-map-grid">
         <a class="pron-map-card pron-map-ed" href="#ed">
@@ -96,14 +90,10 @@ import '../styles/pronunciation.css';
   <!-- ED -->
   <section class="section section-alt" id="ed">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">02 · Đuôi -ed</p>
-          <h2>Nghe âm cuối, đừng nhìn chữ.</h2>
-          <p>Đuôi -ed có ba cách đọc: /t/, /d/ và /ɪd/. Cách đọc phụ thuộc vào âm cuối của từ gốc, không phụ thuộc vào chữ cái cuối.</p>
-        </div>
-        <p class="section-aside"><span>3</span> cách đọc<br><span>1</span> quy tắc</p>
-      </div>
+      <SectionHead kicker="02 · Đuôi -ed" title="Nghe âm cuối, đừng nhìn chữ.">
+        Đuôi -ed có ba cách đọc: /t/, /d/ và /ɪd/. Cách đọc phụ thuộc vào âm cuối của từ gốc, không phụ thuộc vào chữ cái cuối.
+        <p slot="aside" class="section-aside"><span>3</span> cách đọc<br><span>1</span> quy tắc</p>
+      </SectionHead>
 
       <div class="pron-rule-grid">
         <article class="pron-rule-card pron-t">
@@ -145,14 +135,10 @@ import '../styles/pronunciation.css';
   <!-- S -->
   <section class="section" id="s">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">03 · Đuôi -s / -es</p>
-          <h2>Ba âm, một mẹo: nhìn âm cuối.</h2>
-          <p>Đuôi -s/-es có ba cách đọc: /s/, /z/ và /ɪz/. Đừng thấy -es là mặc định đọc /ɪz/ — phải xét âm cuối của từ gốc.</p>
-        </div>
-        <p class="section-aside"><span>3</span> cách đọc<br><span>2</span> lỗi hay gặp</p>
-      </div>
+      <SectionHead kicker="03 · Đuôi -s / -es" title="Ba âm, một mẹo: nhìn âm cuối.">
+        Đuôi -s/-es có ba cách đọc: /s/, /z/ và /ɪz/. Đừng thấy -es là mặc định đọc /ɪz/ — phải xét âm cuối của từ gốc.
+        <p slot="aside" class="section-aside"><span>3</span> cách đọc<br><span>2</span> lỗi hay gặp</p>
+      </SectionHead>
 
       <div class="pron-rule-grid">
         <article class="pron-rule-card pron-s">
@@ -190,14 +176,10 @@ import '../styles/pronunciation.css';
   <!-- VOWELS -->
   <section class="section section-alt" id="vowels">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">04 · Nguyên âm</p>
-          <h2>Học theo cặp, đừng học lẻ.</h2>
-          <p>Câu hỏi phát âm thường đưa bốn từ có cùng cách viết nhưng khác âm. Học các cặp tối thiểu (minimal pairs) để phân biệt nhanh.</p>
-        </div>
-        <p class="section-aside"><span>6</span> cặp âm<br><span>2</span> nhóm dấu hiệu</p>
-      </div>
+      <SectionHead kicker="04 · Nguyên âm" title="Học theo cặp, đừng học lẻ.">
+        Câu hỏi phát âm thường đưa bốn từ có cùng cách viết nhưng khác âm. Học các cặp tối thiểu (minimal pairs) để phân biệt nhanh.
+        <p slot="aside" class="section-aside"><span>6</span> cặp âm<br><span>2</span> nhóm dấu hiệu</p>
+      </SectionHead>
 
       <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
       <div class="pron-table-wrap">
@@ -263,14 +245,10 @@ import '../styles/pronunciation.css';
   <!-- STRESS -->
   <section class="section" id="stress">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">05 · Trọng âm</p>
-          <h2>Đếm âm tiết, đừng đếm chữ cái.</h2>
-          <p>Trọng âm là âm tiết được đọc mạnh và rõ hơn. Với từ 2–3 âm tiết, có vài quy tắc đủ để xử lý phần lớn câu hỏi.</p>
-        </div>
-        <p class="section-aside"><span>2</span> nhóm từ<br><span>6</span> đuôi hút trọng âm</p>
-      </div>
+      <SectionHead kicker="05 · Trọng âm" title="Đếm âm tiết, đừng đếm chữ cái.">
+        Trọng âm là âm tiết được đọc mạnh và rõ hơn. Với từ 2–3 âm tiết, có vài quy tắc đủ để xử lý phần lớn câu hỏi.
+        <p slot="aside" class="section-aside"><span>2</span> nhóm từ<br><span>6</span> đuôi hút trọng âm</p>
+      </SectionHead>
 
       <div class="pron-stress-grid">
         <article class="pron-stress-card">
@@ -378,75 +356,71 @@ import '../styles/pronunciation.css';
   <!-- TRAPS -->
   <section class="section section-alt" id="traps">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">06 · Bẫy đề</p>
-          <h2>Mười lỗi hay mất điểm.</h2>
-          <p>Đây là những lỗi học sinh lớp 9 hay mắc khi làm câu 1–4. Đọc câu sai, câu đúng và lý do.</p>
-        </div>
-        <p class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
-      </div>
+      <SectionHead kicker="06 · Bẫy đề" title="Mười lỗi hay mất điểm.">
+        Đây là những lỗi học sinh lớp 9 hay mắc khi làm câu 1–4. Đọc câu sai, câu đúng và lý do.
+        <p slot="aside" class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
+      </SectionHead>
 
       <div class="trap-grid">
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Đọc mọi từ đuôi -ed là <strong>/ɪd/</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Chỉ /ɪd/ sau <strong>/t/</strong> hoặc <strong>/d/</strong>.</p></div>
-          <p class="trap-why">watched /t/, played /d/, needed /ɪd/. Xét âm cuối, không xét chữ cuối.</p>
-        </article>
+        <TrapCard
+          bad="Đọc mọi từ đuôi -ed là <strong>/ɪd/</strong>."
+          good="Chỉ /ɪd/ sau <strong>/t/</strong> hoặc <strong>/d/</strong>."
+          why="watched /t/, played /d/, needed /ɪd/. Xét âm cuối, không xét chữ cuối."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Thấy <strong>-es</strong> là đọc <strong>/ɪz/</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Goes, does đọc <strong>/z/</strong>; watches, changes đọc /ɪz/.</p></div>
-          <p class="trap-why">-es chỉ đọc /ɪz/ sau các âm xuýt /s, z, ʃ, ʒ, tʃ, dʒ/.</p>
-        </article>
+        <TrapCard
+          bad="Thấy <strong>-es</strong> là đọc <strong>/ɪz/</strong>."
+          good="Goes, does đọc <strong>/z/</strong>; watches, changes đọc /ɪz/."
+          why="-es chỉ đọc /ɪz/ sau các âm xuýt /s, z, ʃ, ʒ, tʃ, dʒ/."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Đọc giống nhau <strong>ship</strong> và <strong>sheep</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>ship /ʃɪp/ · sheep /ʃiːp/.</p></div>
-          <p class="trap-why">/ɪ/ ngắn, /iː/ dài. Tương tự sit/seat, live/leave.</p>
-        </article>
+        <TrapCard
+          bad="Đọc giống nhau <strong>ship</strong> và <strong>sheep</strong>."
+          good="ship /ʃɪp/ · sheep /ʃiːp/."
+          why="/ɪ/ ngắn, /iː/ dài. Tương tự sit/seat, live/leave."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Đọc giống nhau <strong>pen</strong> và <strong>pain</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>pen /pen/ · pain /peɪn/.</p></div>
-          <p class="trap-why">/e/ là âm ngắn; /eɪ/ là âm đôi, thường gặp ở a-e hoặc ai.</p>
-        </article>
+        <TrapCard
+          bad="Đọc giống nhau <strong>pen</strong> và <strong>pain</strong>."
+          good="pen /pen/ · pain /peɪn/."
+          why="/e/ là âm ngắn; /eɪ/ là âm đôi, thường gặp ở a-e hoặc ai."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Đọc giống nhau <strong>cat</strong> và <strong>cart</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>cat /kæt/ · cart /kɑːt/.</p></div>
-          <p class="trap-why">/æ/ ngắn và bẹt; /ɑː/ dài. Chú ý nhóm a và a + r.</p>
-        </article>
+        <TrapCard
+          bad="Đọc giống nhau <strong>cat</strong> và <strong>cart</strong>."
+          good="cat /kæt/ · cart /kɑːt/."
+          why="/æ/ ngắn và bẹt; /ɑː/ dài. Chú ý nhóm a và a + r."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Nhấn sai khi từ đổi loại: <strong>REcord</strong> (v).</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>REcord</strong> (n) · <strong>reCORD</strong> (v).</p></div>
-          <p class="trap-why">Danh từ thường nhấn âm 1; động từ cùng gốc thường nhấn âm 2.</p>
-        </article>
+        <TrapCard
+          bad="Nhấn sai khi từ đổi loại: <strong>REcord</strong> (v)."
+          good="<strong>REcord</strong> (n) · <strong>reCORD</strong> (v)."
+          why="Danh từ thường nhấn âm 1; động từ cùng gốc thường nhấn âm 2."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Nhấn âm đầu của <strong>decision</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>de<strong>CI</strong>sion /dɪˈsɪʒ.ən/.</p></div>
-          <p class="trap-why">-sion / -tion hút trọng âm vào âm tiết ngay trước nó.</p>
-        </article>
+        <TrapCard
+          bad="Nhấn âm đầu của <strong>decision</strong>."
+          good="de<strong>CI</strong>sion /dɪˈsɪʒ.ən/."
+          why="-sion / -tion hút trọng âm vào âm tiết ngay trước nó."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Nghĩ <strong>-ly</strong> làm trọng âm chuyển về cuối.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>HAPpy → <strong>HAPpily</strong>; trọng âm giữ nguyên.</p></div>
-          <p class="trap-why">-ly thường không làm đổi trọng âm của từ gốc.</p>
-        </article>
+        <TrapCard
+          bad="Nghĩ <strong>-ly</strong> làm trọng âm chuyển về cuối."
+          good="HAPpy → <strong>HAPpily</strong>; trọng âm giữ nguyên."
+          why="-ly thường không làm đổi trọng âm của từ gốc."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Đọc <strong>photograph</strong> và <strong>photography</strong> cùng trọng âm.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>PHO</strong>tograph · pho<strong>TOG</strong>raphy · photo<strong>GRAPH</strong>ic.</p></div>
-          <p class="trap-why">Trọng âm có thể di chuyển trong cùng một họ từ. Học từng dạng.</p>
-        </article>
+        <TrapCard
+          bad="Đọc <strong>photograph</strong> và <strong>photography</strong> cùng trọng âm."
+          good="<strong>PHO</strong>tograph · pho<strong>TOG</strong>raphy · photo<strong>GRAPH</strong>ic."
+          why="Trọng âm có thể di chuyển trong cùng một họ từ. Học từng dạng."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Đọc rõ các chữ câm: <strong>hour, know, write</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>hour /ˈaʊə/ · know /nəʊ/ · write /raɪt/.</p></div>
-          <p class="trap-why">Chữ câm không được đọc và cũng không tạo thêm âm tiết.</p>
-        </article>
+        <TrapCard
+          bad="Đọc rõ các chữ câm: <strong>hour, know, write</strong>."
+          good="hour /ˈaʊə/ · know /nəʊ/ · write /raɪt/."
+          why="Chữ câm không được đọc và cũng không tạo thêm âm tiết."
+        />
       </div>
     </div>
   </section>
@@ -454,13 +428,9 @@ import '../styles/pronunciation.css';
   <!-- QUIZ -->
   <section class="section section-quiz" id="quiz">
     <div class="container">
-      <div class="section-head section-head-center">
-        <div>
-          <p class="section-kicker">07 · Luyện tập</p>
-          <h2>Kiểm tra 16 câu phát âm &amp; trọng âm.</h2>
-          <p>Chọn đáp án đúng. Mỗi câu có giải thích ngay sau khi trả lời để bạn nhớ lại quy tắc.</p>
-        </div>
-      </div>
+      <SectionHead kicker="07 · Luyện tập" title="Kiểm tra 16 câu phát âm & trọng âm." center>
+        Chọn đáp án đúng. Mỗi câu có giải thích ngay sau khi trả lời để bạn nhớ lại quy tắc.
+      </SectionHead>
 
       <QuizPanel total={16} />
     </div>

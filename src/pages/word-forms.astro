@@ -1,48 +1,44 @@
 ---
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
+import EmptyState from '../components/EmptyState.astro';
+import FilterToolbar from '../components/FilterToolbar.astro';
 import QuizPanel from '../components/QuizPanel.astro';
+import SectionHead from '../components/SectionHead.astro';
+import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TrapCard from '../components/TrapCard.astro';
 import '../styles/word-forms.css';
 ---
 
 <SheetLayout slug="word-forms">
   <Fragment slot="visual">
-    <div class="study-stack wf-stack">
-      <div class="stack-card stack-card-back"></div>
-      <div class="stack-card stack-card-mid"></div>
-      <div class="stack-card stack-card-front">
-        <p class="mini-label">Một gốc, bốn dạng</p>
-        <p class="mini-formula wf-mini-formula">
-          <span>succeed</span><br>→ success<br>→ successful<br>→ successfully
-        </p>
-        <div class="mini-rule"></div>
-        <p class="mini-desc">Nhìn vị trí trong câu để chọn danh từ, tính từ, động từ hay trạng từ.</p>
-        <div class="mini-chips">
-          <span>-tion</span><span>-ful</span><span>-ly</span><span>un-</span>
-        </div>
-        <p class="mini-example">She is a <mark>successful</mark> singer.</p>
-        <p class="mini-translation">Cô ấy là một ca sĩ thành công.</p>
+    <StudyStackVisual
+      stackClass="wf-stack"
+      noteLabel="Mẹo thi"
+      noteTitle="Sau tính từ"
+      note="thường là danh từ!"
+    >
+      <p class="mini-label">Một gốc, bốn dạng</p>
+      <p class="mini-formula wf-mini-formula">
+        <span>succeed</span><br>→ success<br>→ successful<br>→ successfully
+      </p>
+      <div class="mini-rule"></div>
+      <p class="mini-desc">Nhìn vị trí trong câu để chọn danh từ, tính từ, động từ hay trạng từ.</p>
+      <div class="mini-chips">
+        <span>-tion</span><span>-ful</span><span>-ly</span><span>un-</span>
       </div>
-    </div>
-    <div class="sticky-note">
-      <span class="sticky-label">Mẹo thi</span>
-      <strong>Sau tính từ</strong>
-      <span>thường là danh từ!</span>
-    </div>
-    <div class="stamp">Ôn thi<br>vào 10<br><span>2026–2027</span></div>
+      <p class="mini-example">She is a <mark>successful</mark> singer.</p>
+      <p class="mini-translation">Cô ấy là một ca sĩ thành công.</p>
+    </StudyStackVisual>
   </Fragment>
 
   <!-- MAP -->
   <section class="section" id="map">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">01 · Bản đồ</p>
-          <h2>Một từ gốc, bốn dạng cần nhớ.</h2>
-          <p>Từ loại hỏi dạng đúng của từ trong ngoặc. Nhìn vị trí và đuôi từ để biết cần danh từ, tính từ, động từ hay trạng từ.</p>
-        </div>
-        <p class="section-aside"><span>4</span> dạng từ<br><span>1</span> từ gốc</p>
-      </div>
+      <SectionHead kicker="01 · Bản đồ" title="Một từ gốc, bốn dạng cần nhớ.">
+        Từ loại hỏi dạng đúng của từ trong ngoặc. Nhìn vị trí và đuôi từ để biết cần danh từ, tính từ, động từ hay trạng từ.
+        <p slot="aside" class="section-aside"><span>4</span> dạng từ<br><span>1</span> từ gốc</p>
+      </SectionHead>
 
       <div class="wf-map-grid">
         <a class="wf-map-card wf-map-noun" href="#suffixes">
@@ -119,14 +115,10 @@ import '../styles/word-forms.css';
   <!-- RULES -->
   <section class="section section-alt" id="rules">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">02 · Quy tắc</p>
-          <h2>Nhìn vị trí, đoán từ loại.</h2>
-          <p>Phần lớn câu hỏi từ loại có thể giải bằng vị trí của chỗ trống. Làm theo ba bước này trước khi nghĩ đến nghĩa của từ.</p>
-        </div>
-        <p class="section-aside"><span>3</span> bước<br><span>8</span> vị trí</p>
-      </div>
+      <SectionHead kicker="02 · Quy tắc" title="Nhìn vị trí, đoán từ loại.">
+        Phần lớn câu hỏi từ loại có thể giải bằng vị trí của chỗ trống. Làm theo ba bước này trước khi nghĩ đến nghĩa của từ.
+        <p slot="aside" class="section-aside"><span>3</span> bước<br><span>8</span> vị trí</p>
+      </SectionHead>
 
       <div class="wf-step-grid">
         <article class="wf-step">
@@ -214,33 +206,29 @@ import '../styles/word-forms.css';
   <!-- SUFFIXES -->
   <section class="section" id="suffixes">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">03 · Hậu tố</p>
-          <h2>Nhìn đuôi, đoán loại từ.</h2>
-          <p>Có 33 hậu tố thường gặp trong đề lớp 9. Dùng bộ lọc theo loại từ hoặc ô tìm kiếm để tra nhanh.</p>
-        </div>
-        <p class="section-aside"><span>33</span> hậu tố<br><span>4</span> loại từ</p>
-      </div>
+      <SectionHead kicker="03 · Hậu tố" title="Nhìn đuôi, đoán loại từ.">
+        Có 33 hậu tố thường gặp trong đề lớp 9. Dùng bộ lọc theo loại từ hoặc ô tìm kiếm để tra nhanh.
+        <p slot="aside" class="section-aside"><span>33</span> hậu tố<br><span>4</span> loại từ</p>
+      </SectionHead>
 
-      <div class="toolbar wf-suffix-toolbar">
-        <div class="filter-tabs" role="group" aria-label="Lọc hậu tố theo loại từ">
-          <button class="filter-tab" type="button" data-cat="all" aria-pressed="true">Tất cả</button>
-          <button class="filter-tab" type="button" data-cat="noun" aria-pressed="false">Danh từ</button>
-          <button class="filter-tab" type="button" data-cat="adj" aria-pressed="false">Tính từ</button>
-          <button class="filter-tab" type="button" data-cat="verb" aria-pressed="false">Động từ</button>
-          <button class="filter-tab" type="button" data-cat="adv" aria-pressed="false">Trạng từ</button>
-        </div>
-
-        <div class="search-wrap">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-          <label class="sr-only" for="suffix-search">Tìm hậu tố hoặc ví dụ</label>
-          <input id="suffix-search" type="search" placeholder="Tìm “-ment”, “success”, “thành công”…" autocomplete="off">
-          <button class="search-clear" id="suffix-clear" type="button" aria-label="Xoá tìm kiếm" hidden>&times;</button>
-        </div>
-
-        <span class="result-count" id="suffix-count" aria-live="polite">33/33 hậu tố</span>
-      </div>
+      <FilterToolbar
+        class="wf-suffix-toolbar"
+        tabKey="cat"
+        ariaLabel="Lọc hậu tố theo loại từ"
+        tabs={[
+          { value: 'all', label: 'Tất cả' },
+          { value: 'noun', label: 'Danh từ' },
+          { value: 'adj', label: 'Tính từ' },
+          { value: 'verb', label: 'Động từ' },
+          { value: 'adv', label: 'Trạng từ' },
+        ]}
+        searchId="suffix-search"
+        searchLabel="Tìm hậu tố hoặc ví dụ"
+        placeholder="Tìm “-ment”, “success”, “thành công”…"
+        clearId="suffix-clear"
+        countId="suffix-count"
+        countText="33/33 hậu tố"
+      />
 
       <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
       <div class="wf-table-wrap">
@@ -460,11 +448,12 @@ import '../styles/word-forms.css';
         </table>
       </div>
 
-      <div class="empty-state" id="suffix-empty" hidden>
-        <p class="empty-title">Không tìm thấy hậu tố nào khớp.</p>
-        <p>Thử từ khoá khác hoặc xoá bộ lọc để xem lại cả 33 hậu tố.</p>
-        <button class="btn btn-ghost" id="suffix-reset" type="button">Xoá bộ lọc</button>
-      </div>
+      <EmptyState
+        id="suffix-empty"
+        title="Không tìm thấy hậu tố nào khớp."
+        text="Thử từ khoá khác hoặc xoá bộ lọc để xem lại cả 33 hậu tố."
+        resetId="suffix-reset"
+      />
 
       <p class="mini-note"><strong>Đừng nhầm:</strong> cùng một đuôi có thể tạo nhiều loại từ. <code>-al</code> có thể là danh từ (<em>arrival</em>) hoặc tính từ (<em>natural</em>); <code>-ing</code> có thể là danh từ (<em>building</em>) hoặc tính từ (<em>boring</em>). Vị trí trong câu quyết định. Trạng từ bất quy tắc cần nhớ: good → <strong>well</strong>, fast → <strong>fast</strong>, hard → <strong>hard</strong>, early → <strong>early</strong>, late → <strong>late</strong>.</p>
     </div>
@@ -473,14 +462,10 @@ import '../styles/word-forms.css';
   <!-- PREFIXES -->
   <section class="section section-alt" id="prefixes">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">04 · Tiền tố</p>
-          <h2>Tiền tố đổi nghĩa, không đổi loại từ.</h2>
-          <p>Phần lớn tiền tố giữ nguyên từ loại của từ gốc. Học nhóm phủ định trước vì đề rất hay hỏi.</p>
-        </div>
-        <p class="section-aside"><span>15</span> tiền tố<br><span>7</span> tiền tố phủ định</p>
-      </div>
+      <SectionHead kicker="04 · Tiền tố" title="Tiền tố đổi nghĩa, không đổi loại từ.">
+        Phần lớn tiền tố giữ nguyên từ loại của từ gốc. Học nhóm phủ định trước vì đề rất hay hỏi.
+        <p slot="aside" class="section-aside"><span>15</span> tiền tố<br><span>7</span> tiền tố phủ định</p>
+      </SectionHead>
 
       <div class="wf-mnemonic">
         <span class="wf-mnemonic-label">Nhớ nhanh</span>
@@ -601,30 +586,26 @@ import '../styles/word-forms.css';
   <!-- FAMILIES -->
   <section class="section" id="families">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">05 · Họ từ</p>
-          <h2>40 họ từ thường gặp.</h2>
-          <p>Mỗi thẻ là một từ gốc và các dạng thường gặp. Dùng bộ lọc “Trọng tâm” khi ôn nhanh, hoặc tìm kiếm khi làm đề.</p>
-        </div>
-        <p class="section-aside"><span>40</span> họ từ<br><span>12</span> trọng tâm</p>
-      </div>
+      <SectionHead kicker="05 · Họ từ" title="40 họ từ thường gặp.">
+        Mỗi thẻ là một từ gốc và các dạng thường gặp. Dùng bộ lọc “Trọng tâm” khi ôn nhanh, hoặc tìm kiếm khi làm đề.
+        <p slot="aside" class="section-aside"><span>40</span> họ từ<br><span>12</span> trọng tâm</p>
+      </SectionHead>
 
-      <div class="toolbar wf-family-toolbar">
-        <div class="filter-tabs" role="group" aria-label="Lọc họ từ">
-          <button class="filter-tab" type="button" data-core="all" aria-pressed="true">Tất cả</button>
-          <button class="filter-tab" type="button" data-core="core" aria-pressed="false">Trọng tâm</button>
-        </div>
-
-        <div class="search-wrap">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-          <label class="sr-only" for="family-search">Tìm họ từ</label>
-          <input id="family-search" type="search" placeholder="Tìm “succeed”, “môi trường”, “-ful”…" autocomplete="off">
-          <button class="search-clear" id="family-clear" type="button" aria-label="Xoá tìm kiếm" hidden>&times;</button>
-        </div>
-
-        <span class="result-count" id="family-count" aria-live="polite">40/40 họ từ</span>
-      </div>
+      <FilterToolbar
+        class="wf-family-toolbar"
+        tabKey="core"
+        ariaLabel="Lọc họ từ"
+        tabs={[
+          { value: 'all', label: 'Tất cả' },
+          { value: 'core', label: 'Trọng tâm' },
+        ]}
+        searchId="family-search"
+        searchLabel="Tìm họ từ"
+        placeholder="Tìm “succeed”, “môi trường”, “-ful”…"
+        clearId="family-clear"
+        countId="family-count"
+        countText="40/40 họ từ"
+      />
 
       <div class="wf-family-grid" id="family-grid">
         <article class="wf-family" data-core="true">
@@ -1157,11 +1138,12 @@ import '../styles/word-forms.css';
         </article>
       </div>
 
-      <div class="empty-state" id="family-empty" hidden>
-        <p class="empty-title">Không tìm thấy họ từ nào khớp.</p>
-        <p>Thử từ khoá khác hoặc xoá bộ lọc để xem lại cả 40 họ từ.</p>
-        <button class="btn btn-ghost" id="family-reset" type="button">Xoá bộ lọc</button>
-      </div>
+      <EmptyState
+        id="family-empty"
+        title="Không tìm thấy họ từ nào khớp."
+        text="Thử từ khoá khác hoặc xoá bộ lọc để xem lại cả 40 họ từ."
+        resetId="family-reset"
+      />
 
       <p class="mini-note"><strong>Mẹo làm đề:</strong> đọc cả câu và xác định từ cần điền bổ nghĩa cho ai. Nếu là người cảm thấy → <code>-ed</code>; nếu là vật/việc gây cảm giác → <code>-ing</code>. Nếu đứng trước danh từ → tính từ; nếu bổ nghĩa cho động từ → trạng từ.</p>
     </div>
@@ -1170,75 +1152,71 @@ import '../styles/word-forms.css';
   <!-- TRAPS -->
   <section class="section section-alt traps-start" id="traps">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">06 · Bẫy đề</p>
-          <h2>Mười lỗi hay mất điểm.</h2>
-          <p>Xem câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc nhất khi làm phần từ loại.</p>
-        </div>
-        <p class="section-aside"><span>10</span> lỗi<br>cần sửa</p>
-      </div>
+      <SectionHead kicker="06 · Bẫy đề" title="Mười lỗi hay mất điểm.">
+        Xem câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc nhất khi làm phần từ loại.
+        <p slot="aside" class="section-aside"><span>10</span> lỗi<br>cần sửa</p>
+      </SectionHead>
 
       <div class="trap-grid">
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I am very <strong>interesting</strong> in music.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I am very <strong>interested</strong> in music.</p></div>
-          <p class="trap-why">Người cảm thấy → -ed; vật/việc gây cảm giác → -ing.</p>
-        </article>
+        <TrapCard
+          bad="I am very <strong>interesting</strong> in music."
+          good="I am very <strong>interested</strong> in music."
+          why="Người cảm thấy → -ed; vật/việc gây cảm giác → -ing."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>The film was so <strong>bored</strong> that we fell asleep.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>The film was so <strong>boring</strong> that we fell asleep.</p></div>
-          <p class="trap-why">Bộ phim gây cảm giác buồn chán → boring. Người cảm thấy buồn chán → bored.</p>
-        </article>
+        <TrapCard
+          bad="The film was so <strong>bored</strong> that we fell asleep."
+          good="The film was so <strong>boring</strong> that we fell asleep."
+          why="Bộ phim gây cảm giác buồn chán → boring. Người cảm thấy buồn chán → bored."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>She gave me a good <strong>advise</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>She gave me a good <strong>advice</strong>.</p></div>
-          <p class="trap-why">advice là danh từ không đếm được; advise là động từ: She advised me to study.</p>
-        </article>
+        <TrapCard
+          bad="She gave me a good <strong>advise</strong>."
+          good="She gave me a good <strong>advice</strong>."
+          why="advice là danh từ không đếm được; advise là động từ: She advised me to study."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>The weather <strong>effects</strong> my mood.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>The weather <strong>affects</strong> my mood.</p></div>
-          <p class="trap-why">affect là động từ (ảnh hưởng); effect là danh từ (tác động): the effect of the weather.</p>
-        </article>
+        <TrapCard
+          bad="The weather <strong>effects</strong> my mood."
+          good="The weather <strong>affects</strong> my mood."
+          why="affect là động từ (ảnh hưởng); effect là danh từ (tác động): the effect of the weather."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>He is a <strong>success</strong> businessman.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>He is a <strong>successful</strong> businessman.</p></div>
-          <p class="trap-why">Trước danh từ businessman cần tính từ successful, không dùng danh từ success.</p>
-        </article>
+        <TrapCard
+          bad="He is a <strong>success</strong> businessman."
+          good="He is a <strong>successful</strong> businessman."
+          why="Trước danh từ businessman cần tính từ successful, không dùng danh từ success."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>We need a more <strong>economic</strong> car.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>We need a more <strong>economical</strong> car.</p></div>
-          <p class="trap-why">economic = thuộc kinh tế; economical = tiết kiệm, ít tốn kém.</p>
-        </article>
+        <TrapCard
+          bad="We need a more <strong>economic</strong> car."
+          good="We need a more <strong>economical</strong> car."
+          why="economic = thuộc kinh tế; economical = tiết kiệm, ít tốn kém."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>She studies very <strong>hardly</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>She studies very <strong>hard</strong>.</p></div>
-          <p class="trap-why">hard = chăm chỉ; hardly = hầu như không. Đừng thêm -ly vào hard khi muốn nói “chăm chỉ”.</p>
-        </article>
+        <TrapCard
+          bad="She studies very <strong>hardly</strong>."
+          good="She studies very <strong>hard</strong>."
+          why="hard = chăm chỉ; hardly = hầu như không. Đừng thêm -ly vào hard khi muốn nói “chăm chỉ”."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>He came <strong>lately</strong> yesterday.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>He came <strong>late</strong> yesterday.</p></div>
-          <p class="trap-why">late = muộn; lately = gần đây. “Yesterday” cần late, không phải lately.</p>
-        </article>
+        <TrapCard
+          bad="He came <strong>lately</strong> yesterday."
+          good="He came <strong>late</strong> yesterday."
+          why="late = muộn; lately = gần đây. “Yesterday” cần late, không phải lately."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>She speaks very <strong>friendly</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>She speaks <strong>in a friendly way</strong>.</p></div>
-          <p class="trap-why">friendly là tính từ, không phải trạng từ. Muốn bổ nghĩa cho động từ, dùng “in a friendly way”.</p>
-        </article>
+        <TrapCard
+          bad="She speaks very <strong>friendly</strong>."
+          good="She speaks <strong>in a friendly way</strong>."
+          why="friendly là tính từ, không phải trạng từ. Muốn bổ nghĩa cho động từ, dùng “in a friendly way”."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>She sings very <strong>good</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>She sings very <strong>well</strong>.</p></div>
-          <p class="trap-why">good là tính từ; well là trạng từ bất quy tắc của good.</p>
-        </article>
+        <TrapCard
+          bad="She sings very <strong>good</strong>."
+          good="She sings very <strong>well</strong>."
+          why="good là tính từ; well là trạng từ bất quy tắc của good."
+        />
       </div>
     </div>
   </section>
@@ -1246,13 +1224,9 @@ import '../styles/word-forms.css';
   <!-- QUIZ -->
   <section class="section section-quiz" id="quiz">
     <div class="container">
-      <div class="section-head section-head-center">
-        <div>
-          <p class="section-kicker">07 · Luyện tập</p>
-          <h2>Kiểm tra 16 câu từ loại.</h2>
-          <p>Chọn dạng đúng của từ. Mỗi câu có giải thích ngay sau khi trả lời để bạn nhớ lại quy tắc.</p>
-        </div>
-      </div>
+      <SectionHead kicker="07 · Luyện tập" title="Kiểm tra 16 câu từ loại." center>
+        Chọn dạng đúng của từ. Mỗi câu có giải thích ngay sau khi trả lời để bạn nhớ lại quy tắc.
+      </SectionHead>
 
       <QuizPanel total={16} />
     </div>

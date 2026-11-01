@@ -1,0 +1,37 @@
+---
+interface Props {
+  stackClass?: string;
+  noteLabel: string;
+  noteTitle: string;
+  note: string;
+  stampTop?: string;
+  stampMiddle?: string;
+  stampYear?: string;
+}
+
+const {
+  stackClass,
+  noteLabel,
+  noteTitle,
+  note,
+  stampTop = 'Ôn thi',
+  stampMiddle = 'vào 10',
+  stampYear = '2026–2027'
+} = Astro.props;
+---
+
+<div class:list={['study-stack', stackClass]}>
+  <div class="stack-card stack-card-back"></div>
+  <div class="stack-card stack-card-mid"></div>
+  <div class="stack-card stack-card-front">
+    <slot />
+  </div>
+</div>
+
+<div class="sticky-note">
+  <span class="sticky-label">{noteLabel}</span>
+  <strong>{noteTitle}</strong>
+  <span set:html={note}></span>
+</div>
+
+<div class="stamp">{stampTop}<br />{stampMiddle}<br /><span>{stampYear}</span></div>

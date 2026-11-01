@@ -1,55 +1,48 @@
 ---
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
+import SectionHead from '../components/SectionHead.astro';
+import StudyStackVisual from '../components/StudyStackVisual.astro';
 import '../styles/mock-exam.css';
 ---
 
 <SheetLayout slug="mock-exam">
   <Fragment slot="visual">
-    <div class="study-stack mx-stack">
-      <div class="stack-card stack-card-back"></div>
-      <div class="stack-card stack-card-mid"></div>
-      <div class="stack-card stack-card-front">
-        <p class="mini-label">Thi thử · 24 câu</p>
-        <p class="mx-hero-timer" aria-hidden="true">45:00</p>
-        <p class="mx-hero-sub">45 phút · 8 nhóm câu · 24 câu hỏi</p>
+    <StudyStackVisual
+      stackClass="mx-stack"
+      noteLabel="Mẹo thi"
+      noteTitle="Không bỏ trống"
+      note="câu nào cũng chọn một đáp án!"
+    >
+      <p class="mini-label">Thi thử · 24 câu</p>
+      <p class="mx-hero-timer" aria-hidden="true">45:00</p>
+      <p class="mx-hero-sub">45 phút · 8 nhóm câu · 24 câu hỏi</p>
 
-        <div class="mx-hero-progress">
-          <span>0 / 24</span>
-          <div><i></i></div>
-        </div>
-
-        <div class="mx-hero-result">
-          <span>Kết quả</span>
-          <strong>— / 24</strong>
-        </div>
-
-        <p class="mx-hero-why">Đồng hồ bắt đầu khi bấm nút. Kết quả có thống kê theo kỹ năng.</p>
-
-        <div class="mini-chips">
-          <span>đồng hồ</span><span>điểm</span><span>xem lại</span>
-        </div>
+      <div class="mx-hero-progress">
+        <span>0 / 24</span>
+        <div><i></i></div>
       </div>
-    </div>
-    <div class="sticky-note">
-      <span class="sticky-label">Mẹo thi</span>
-      <strong>Không bỏ trống</strong>
-      <span>câu nào cũng chọn một đáp án!</span>
-    </div>
-    <div class="stamp">Ôn thi<br>vào 10<br><span>2026–2027</span></div>
+
+      <div class="mx-hero-result">
+        <span>Kết quả</span>
+        <strong>— / 24</strong>
+      </div>
+
+      <p class="mx-hero-why">Đồng hồ bắt đầu khi bấm nút. Kết quả có thống kê theo kỹ năng.</p>
+
+      <div class="mini-chips">
+        <span>đồng hồ</span><span>điểm</span><span>xem lại</span>
+      </div>
+    </StudyStackVisual>
   </Fragment>
 
   <!-- STRUCTURE -->
   <section class="section" id="structure">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">01 · Cấu trúc</p>
-          <h2>Đề 24 câu, 8 nhóm.</h2>
-          <p>Đây là đề rút gọn để luyện tổng hợp, không phải đề thi chính thức. Cấu trúc bám theo bảy phần quen thuộc, chia thành 8 nhóm câu trong 24 câu và 45 phút.</p>
-        </div>
-        <p class="section-aside"><span>24</span> câu<br><span>45</span> phút</p>
-      </div>
+      <SectionHead kicker="01 · Cấu trúc" title="Đề 24 câu, 8 nhóm.">
+        Đây là đề rút gọn để luyện tổng hợp, không phải đề thi chính thức. Cấu trúc bám theo bảy phần quen thuộc, chia thành 8 nhóm câu trong 24 câu và 45 phút.
+        <p slot="aside" class="section-aside"><span>24</span> câu<br><span>45</span> phút</p>
+      </SectionHead>
 
       <div class="mx-table-wrap">
         <table class="mx-table">
@@ -88,14 +81,10 @@ import '../styles/mock-exam.css';
   <!-- STRATEGY -->
   <section class="section section-alt" id="strategy">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">02 · Chiến lược</p>
-          <h2>45 phút: chia thế nào?</h2>
-          <p>Đừng làm lần lượt từ câu 1 đến 24 nếu bị kẹt. Lượt đầu hãy lấy điểm chắc, sau đó mới quay lại câu khó.</p>
-        </div>
-        <p class="section-aside"><span>4</span> lượt<br><span>5</span> phút dự phòng</p>
-      </div>
+      <SectionHead kicker="02 · Chiến lược" title="45 phút: chia thế nào?">
+        Đừng làm lần lượt từ câu 1 đến 24 nếu bị kẹt. Lượt đầu hãy lấy điểm chắc, sau đó mới quay lại câu khó.
+        <p slot="aside" class="section-aside"><span>4</span> lượt<br><span>5</span> phút dự phòng</p>
+      </SectionHead>
 
       <div class="mx-step-grid">
         <article class="mx-step">

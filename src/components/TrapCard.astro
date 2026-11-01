@@ -1,0 +1,21 @@
+---
+interface Props {
+  bad: string;
+  good: string;
+  why: string;
+}
+
+const { bad, good, why } = Astro.props;
+---
+
+<article class="trap">
+  <div class="trap-line trap-line-bad">
+    <span class="trap-mark" aria-hidden="true">✗</span>
+    <p><span class="sr-only">Sai: </span><Fragment set:html={bad} /></p>
+  </div>
+  <div class="trap-line trap-line-good">
+    <span class="trap-mark" aria-hidden="true">✓</span>
+    <p><span class="sr-only">Đúng: </span><Fragment set:html={good} /></p>
+  </div>
+  <p class="trap-why"><Fragment set:html={why} /></p>
+</article>

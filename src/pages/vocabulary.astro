@@ -1,48 +1,44 @@
 ---
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
+import EmptyState from '../components/EmptyState.astro';
+import FilterToolbar from '../components/FilterToolbar.astro';
 import QuizPanel from '../components/QuizPanel.astro';
+import SectionHead from '../components/SectionHead.astro';
+import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TrapCard from '../components/TrapCard.astro';
 import '../styles/vocabulary.css';
 ---
 
 <SheetLayout slug="vocabulary">
   <Fragment slot="visual">
-    <div class="study-stack vc-stack">
-      <div class="stack-card stack-card-back"></div>
-      <div class="stack-card stack-card-mid"></div>
-      <div class="stack-card stack-card-front">
-        <p class="mini-label">Mục từ điển · provide</p>
-        <div class="vc-mini-entry">
-          <p class="vc-mini-word">provide <span>/prəˈvaɪd/ v.</span></p>
-          <p class="vc-mini-def">to give something to somebody</p>
-          <p class="vc-mini-colloc">provide <mark>information</mark></p>
-          <p class="vc-mini-colloc">provide <mark>an opportunity</mark></p>
-        </div>
-        <div class="mini-rule"></div>
-        <p class="vc-mini-question">Chọn cụm đúng:</p>
-        <p class="vc-mini-answer">provide information ✓</p>
-        <p class="vc-mini-why">Học cả cụm, không học từ đơn.</p>
+    <StudyStackVisual
+      stackClass="vc-stack"
+      noteLabel="Mẹo thi"
+      noteTitle="Từ nào đi với từ nào?"
+      note="học cả cụm!"
+    >
+      <p class="mini-label">Mục từ điển · provide</p>
+      <div class="vc-mini-entry">
+        <p class="vc-mini-word">provide <span>/prəˈvaɪd/ v.</span></p>
+        <p class="vc-mini-def">to give something to somebody</p>
+        <p class="vc-mini-colloc">provide <mark>information</mark></p>
+        <p class="vc-mini-colloc">provide <mark>an opportunity</mark></p>
       </div>
-    </div>
-    <div class="sticky-note">
-      <span class="sticky-label">Mẹo thi</span>
-      <strong>Từ nào đi với từ nào?</strong>
-      <span>học cả cụm!</span>
-    </div>
-    <div class="stamp">Ôn thi<br>vào 10<br><span>2026–2027</span></div>
+      <div class="mini-rule"></div>
+      <p class="vc-mini-question">Chọn cụm đúng:</p>
+      <p class="vc-mini-answer">provide information ✓</p>
+      <p class="vc-mini-why">Học cả cụm, không học từ đơn.</p>
+    </StudyStackVisual>
   </Fragment>
 
   <!-- MAP -->
   <section class="section" id="map">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">01 · Bản đồ</p>
-          <h2>Bốn nhóm từ vựng cần ôn.</h2>
-          <p>Từ vựng trong đề không hỏi từ đơn lẻ. Đề hỏi cách từ kết hợp với nhau, nghĩa trong ngữ cảnh và cụm từ trong mục từ điển.</p>
-        </div>
-        <p class="section-aside"><span>4</span> nhóm<br><span>16</span> câu hỏi</p>
-      </div>
+      <SectionHead kicker="01 · Bản đồ" title="Bốn nhóm từ vựng cần ôn.">
+        Từ vựng trong đề không hỏi từ đơn lẻ. Đề hỏi cách từ kết hợp với nhau, nghĩa trong ngữ cảnh và cụm từ trong mục từ điển.
+        <p slot="aside" class="section-aside"><span>4</span> nhóm<br><span>16</span> câu hỏi</p>
+      </SectionHead>
 
       <div class="vc-map-grid">
         <a class="vc-map-card vc-map-colloc" href="#collocations">
@@ -93,35 +89,31 @@ import '../styles/vocabulary.css';
   <!-- COLLOCATIONS -->
   <section class="section section-alt" id="collocations">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">02 · Cụm từ</p>
-          <h2>32 cụm thường gặp trong đề.</h2>
-          <p>Chia thành sáu nhóm: động từ + danh từ, tính từ + danh từ, động từ + giới từ, danh từ + giới từ, cụm cố định và cụm động từ.</p>
-        </div>
-        <p class="section-aside"><span>32</span> cụm<br><span>6</span> nhóm</p>
-      </div>
+      <SectionHead kicker="02 · Cụm từ" title="32 cụm thường gặp trong đề.">
+        Chia thành sáu nhóm: động từ + danh từ, tính từ + danh từ, động từ + giới từ, danh từ + giới từ, cụm cố định và cụm động từ.
+        <p slot="aside" class="section-aside"><span>32</span> cụm<br><span>6</span> nhóm</p>
+      </SectionHead>
 
-      <div class="toolbar vc-toolbar">
-        <div class="filter-tabs" role="group" aria-label="Lọc cụm từ theo nhóm">
-          <button class="filter-tab" type="button" data-cat="all" aria-pressed="true">Tất cả</button>
-          <button class="filter-tab" type="button" data-cat="vn" aria-pressed="false">V + N</button>
-          <button class="filter-tab" type="button" data-cat="adjn" aria-pressed="false">Adj + N</button>
-          <button class="filter-tab" type="button" data-cat="vprep" aria-pressed="false">V + prep</button>
-          <button class="filter-tab" type="button" data-cat="nprep" aria-pressed="false">N + prep</button>
-          <button class="filter-tab" type="button" data-cat="fixed" aria-pressed="false">Cụm cố định</button>
-          <button class="filter-tab" type="button" data-cat="phrasal" aria-pressed="false">Cụm động từ</button>
-        </div>
-
-        <div class="search-wrap">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-          <label class="sr-only" for="collocation-search">Tìm cụm từ</label>
-          <input id="collocation-search" type="search" placeholder="Tìm “decision”, “quyết định”, “on”…" autocomplete="off">
-          <button class="search-clear" id="collocation-clear" type="button" aria-label="Xoá tìm kiếm" hidden>&times;</button>
-        </div>
-
-        <span class="result-count" id="collocation-count" aria-live="polite">32/32 cụm</span>
-      </div>
+      <FilterToolbar
+        class="vc-toolbar"
+        tabKey="cat"
+        ariaLabel="Lọc cụm từ theo nhóm"
+        tabs={[
+          { value: 'all', label: 'Tất cả' },
+          { value: 'vn', label: 'V + N' },
+          { value: 'adjn', label: 'Adj + N' },
+          { value: 'vprep', label: 'V + prep' },
+          { value: 'nprep', label: 'N + prep' },
+          { value: 'fixed', label: 'Cụm cố định' },
+          { value: 'phrasal', label: 'Cụm động từ' },
+        ]}
+        searchId="collocation-search"
+        searchLabel="Tìm cụm từ"
+        placeholder="Tìm “decision”, “quyết định”, “on”…"
+        clearId="collocation-clear"
+        countId="collocation-count"
+        countText="32/32 cụm"
+      />
 
       <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
       <div class="vc-table-wrap">
@@ -337,11 +329,12 @@ import '../styles/vocabulary.css';
         </table>
       </div>
 
-      <div class="empty-state" id="collocation-empty" hidden>
-        <p class="empty-title">Không tìm thấy cụm nào khớp.</p>
-        <p>Thử từ khoá khác hoặc xoá bộ lọc để xem lại cả 32 cụm.</p>
-        <button class="btn btn-ghost" id="collocation-reset" type="button">Xoá bộ lọc</button>
-      </div>
+      <EmptyState
+        id="collocation-empty"
+        title="Không tìm thấy cụm nào khớp."
+        text="Thử từ khoá khác hoặc xoá bộ lọc để xem lại cả 32 cụm."
+        resetId="collocation-reset"
+      />
 
       <p class="mini-note"><strong>Mẹo:</strong> khi học một cụm, hãy đọc cả câu ví dụ. Ví dụ <em>make a decision</em> đi với “make”, không phải “do”; <em>look forward to</em> đi với V-ing.</p>
     </div>
@@ -350,14 +343,10 @@ import '../styles/vocabulary.css';
   <!-- TOPICS -->
   <section class="section" id="topics">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">03 · Theo chủ đề</p>
-          <h2>Sáu chủ đề quen thuộc.</h2>
-          <p>Đề xoay chủ đề nhưng vẫn dùng lại các nhóm từ quen thuộc. Học theo chủ đề để gặp lại từ trong bài đọc và bài điền khuyết.</p>
-        </div>
-        <p class="section-aside"><span>6</span> chủ đề<br><span>8</span> cụm / chủ đề</p>
-      </div>
+      <SectionHead kicker="03 · Theo chủ đề" title="Sáu chủ đề quen thuộc.">
+        Đề xoay chủ đề nhưng vẫn dùng lại các nhóm từ quen thuộc. Học theo chủ đề để gặp lại từ trong bài đọc và bài điền khuyết.
+        <p slot="aside" class="section-aside"><span>6</span> chủ đề<br><span>8</span> cụm / chủ đề</p>
+      </SectionHead>
 
       <div class="vc-topic-grid">
         <article class="vc-topic-card vc-topic-env">
@@ -416,14 +405,10 @@ import '../styles/vocabulary.css';
   <!-- DICTIONARY -->
   <section class="section section-alt" id="dictionary">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">04 · Mục từ điển</p>
-          <h2>Phần VI: chọn cụm, không chọn từ.</h2>
-          <p>Hai đề gần đây dùng mục từ điển để kiểm tra cụm từ cố định. Đọc cả mục từ, xem ví dụ rồi mới chọn cụm phù hợp.</p>
-        </div>
-        <p class="section-aside"><span>2</span> mục từ mẫu<br><span>3</span> bước chọn</p>
-      </div>
+      <SectionHead kicker="04 · Mục từ điển" title="Phần VI: chọn cụm, không chọn từ.">
+        Hai đề gần đây dùng mục từ điển để kiểm tra cụm từ cố định. Đọc cả mục từ, xem ví dụ rồi mới chọn cụm phù hợp.
+        <p slot="aside" class="section-aside"><span>2</span> mục từ mẫu<br><span>3</span> bước chọn</p>
+      </SectionHead>
 
       <div class="vc-entry-grid">
         <article class="vc-entry">
@@ -499,75 +484,71 @@ import '../styles/vocabulary.css';
   <!-- TRAPS -->
   <section class="section" id="traps">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">05 · Bẫy đề</p>
-          <h2>Mười lỗi hay mất điểm.</h2>
-          <p>Đọc câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc khi làm phần từ vựng và mục từ điển.</p>
-        </div>
-        <p class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
-      </div>
+      <SectionHead kicker="05 · Bẫy đề" title="Mười lỗi hay mất điểm.">
+        Đọc câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc khi làm phần từ vựng và mục từ điển.
+        <p slot="aside" class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
+      </SectionHead>
 
       <div class="trap-grid">
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>do</strong> a decision</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>make</strong> a decision</p></div>
-          <p class="trap-why">Decision đi với make, không đi với do. Học cả cụm.</p>
-        </article>
+        <TrapCard
+          bad="<strong>do</strong> a decision"
+          good="<strong>make</strong> a decision"
+          why="Decision đi với make, không đi với do. Học cả cụm."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>make</strong> homework</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>do</strong> homework</p></div>
-          <p class="trap-why">Do homework, do the dishes; make a decision, make a plan.</p>
-        </article>
+        <TrapCard
+          bad="<strong>make</strong> homework"
+          good="<strong>do</strong> homework"
+          why="Do homework, do the dishes; make a decision, make a plan."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>She <strong>said</strong> me the news.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>She <strong>told</strong> me the news.</p></div>
-          <p class="trap-why">Say something; tell somebody something.</p>
-        </article>
+        <TrapCard
+          bad="She <strong>said</strong> me the news."
+          good="She <strong>told</strong> me the news."
+          why="Say something; tell somebody something."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Can you <strong>lend</strong> me some money? — No, I need to <strong>borrow</strong> from you.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Can you <strong>lend</strong> me some money? — I need to <strong>borrow</strong> some.</p></div>
-          <p class="trap-why">Borrow something from somebody; lend something to somebody.</p>
-        </article>
+        <TrapCard
+          bad="Can you <strong>lend</strong> me some money? — No, I need to <strong>borrow</strong> from you."
+          good="Can you <strong>lend</strong> me some money? — I need to <strong>borrow</strong> some."
+          why="Borrow something from somebody; lend something to somebody."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>The weather <strong>effects</strong> my mood.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>The weather <strong>affects</strong> my mood.</p></div>
-          <p class="trap-why">Affect là động từ; effect là danh từ: the effect on health.</p>
-        </article>
+        <TrapCard
+          bad="The weather <strong>effects</strong> my mood."
+          good="The weather <strong>affects</strong> my mood."
+          why="Affect là động từ; effect là danh từ: the effect on health."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>They provide <strong>students books</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>They provide <strong>students with books</strong>.</p></div>
-          <p class="trap-why">Provide somebody with something; provide something for somebody.</p>
-        </article>
+        <TrapCard
+          bad="They provide <strong>students books</strong>."
+          good="They provide <strong>students with books</strong>."
+          why="Provide somebody with something; provide something for somebody."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>eat habits</strong></p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>eating habits</strong></p></div>
-          <p class="trap-why">Habit đi với V-ing hoặc danh từ: eating habits, sleeping habits.</p>
-        </article>
+        <TrapCard
+          bad="<strong>eat habits</strong>"
+          good="<strong>eating habits</strong>"
+          why="Habit đi với V-ing hoặc danh từ: eating habits, sleeping habits."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Our car <strong>broke up</strong> on the way.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Our car <strong>broke down</strong> on the way.</p></div>
-          <p class="trap-why">Break down = hỏng máy; break up = chia tay, tan rã.</p>
-        </article>
+        <TrapCard
+          bad="Our car <strong>broke up</strong> on the way."
+          good="Our car <strong>broke down</strong> on the way."
+          why="Break down = hỏng máy; break up = chia tay, tan rã."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>The program <strong>provide</strong> an opportunity for learners.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>The program <strong>provides</strong> an opportunity for learners.</p></div>
-          <p class="trap-why">Chủ ngữ số ít “The program” → provides. Đừng quên chia động từ trong mục từ điển.</p>
-        </article>
+        <TrapCard
+          bad="The program <strong>provide</strong> an opportunity for learners."
+          good="The program <strong>provides</strong> an opportunity for learners."
+          why="Chủ ngữ số ít “The program” → provides. Đừng quên chia động từ trong mục từ điển."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I need some <strong>informations</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I need some <strong>information</strong>.</p></div>
-          <p class="trap-why">Information, advice, furniture, equipment là danh từ không đếm được, không thêm -s.</p>
-        </article>
+        <TrapCard
+          bad="I need some <strong>informations</strong>."
+          good="I need some <strong>information</strong>."
+          why="Information, advice, furniture, equipment là danh từ không đếm được, không thêm -s."
+        />
       </div>
     </div>
   </section>
@@ -575,13 +556,9 @@ import '../styles/vocabulary.css';
   <!-- QUIZ -->
   <section class="section section-quiz" id="quiz">
     <div class="container">
-      <div class="section-head section-head-center">
-        <div>
-          <p class="section-kicker">06 · Luyện tập</p>
-          <h2>Kiểm tra 16 câu từ vựng.</h2>
-          <p>Chọn đáp án đúng. Mỗi câu có giải thích ngay sau khi trả lời.</p>
-        </div>
-      </div>
+      <SectionHead kicker="06 · Luyện tập" title="Kiểm tra 16 câu từ vựng." center>
+        Chọn đáp án đúng. Mỗi câu có giải thích ngay sau khi trả lời.
+      </SectionHead>
 
       <QuizPanel total={16} />
     </div>

@@ -50,10 +50,15 @@ src/
 ├── assets/fonts/          # font self-hosted (Be Vietnam Pro, Lora, Roboto Mono)
 ├── components/
 │   ├── BrandMark.astro
+│   ├── EmptyState.astro   # trạng thái “không tìm thấy” của bộ lọc
+│   ├── FilterToolbar.astro # tabs + ô tìm kiếm + đếm kết quả
 │   ├── PageNav.astro
 │   ├── QuizPanel.astro    # khung quiz dùng chung cho mọi tờ
+│   ├── SectionHead.astro  # kicker + tiêu đề + lead + aside
 │   ├── SiteFooter.astro
-│   └── SiteHeader.astro
+│   ├── SiteHeader.astro
+│   ├── StudyStackVisual.astro # thẻ hero, sticky note và stamp
+│   └── TrapCard.astro     # câu sai / câu đúng / lý do
 ├── data/
 │   └── sheets.ts          # registry của tất cả tờ ôn thi
 ├── layouts/
@@ -102,7 +107,11 @@ Thứ tự này giữ cascade đúng và để mỗi route chỉ tải styleshee
    - `sections` cho thanh điều hướng trong trang
    - `hero` cho phần mở đầu
    - `accent`: hiện có `tenses`, `prep`, `word`, `reading`, `sound`, `write`, `vocab`, `cloze`, `signs`, `grammar`, `sentence` và `mock`; thêm biến thể CSS nếu muốn màu mới
-2. Tạo `src/pages/<slug>.astro`, import `global.css`, layout, `QuizPanel` và CSS riêng như mẫu ở trên.
+2. Tạo `src/pages/<slug>.astro`, import `global.css`, layout, các component dùng chung và CSS riêng như mẫu ở trên.
+   - `SectionHead` cho tiêu đề từng section.
+   - `StudyStackVisual` cho thẻ hero (truyền nội dung mặt trước qua slot).
+   - `FilterToolbar` + `EmptyState` nếu section có bộ lọc.
+   - `TrapCard` cho các cặp câu sai/câu đúng.
 3. Dùng khung quiz chung trong section luyện tập:
 
 ```astro

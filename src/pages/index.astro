@@ -1,8 +1,9 @@
 ---
 import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import '../styles/home.css';
+import SectionHead from '../components/SectionHead.astro';
 import { getSheet, sheets, totalQuestions } from '../data/sheets';
+import '../styles/home.css';
 
 const tenses = getSheet('tenses');
 const prepositions = getSheet('prepositions');
@@ -198,13 +199,10 @@ const mockExam = getSheet('mock-exam');
   <!-- RESOURCES -->
   <section class="section" id="resources">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <h2>Mười hai tờ, đủ để ôn.</h2>
-          <p>Mỗi tờ có sơ đồ, bảng tra nhanh, bẫy đề và bài kiểm tra riêng. Bắt đầu từ tờ bạn cần, hoặc đi theo lộ trình bên dưới.</p>
-        </div>
-        <p class="section-aside"><span>{sheets.length}</span> tờ<br><span>{totalQuestions}</span> câu hỏi</p>
-      </div>
+      <SectionHead title="Mười hai tờ, đủ để ôn.">
+        Mỗi tờ có sơ đồ, bảng tra nhanh, bẫy đề và bài kiểm tra riêng. Bắt đầu từ tờ bạn cần, hoặc đi theo lộ trình bên dưới.
+        <p slot="aside" class="section-aside"><span>{sheets.length}</span> tờ<br><span>{totalQuestions}</span> câu hỏi</p>
+      </SectionHead>
 
       <div class="hub-grid">
         {sheets.map((sheet) => (
@@ -242,13 +240,10 @@ const mockExam = getSheet('mock-exam');
   <!-- PATH -->
   <section class="section section-alt" id="plan">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <h2>Năm bước trước khi làm đề.</h2>
-          <p>Không cần học hết trong một buổi. Đi theo thứ tự này để nhớ lâu hơn.</p>
-        </div>
-        <p class="section-aside"><span>5</span> bước<br>mỗi ngày 10 phút</p>
-      </div>
+      <SectionHead title="Năm bước trước khi làm đề.">
+        Không cần học hết trong một buổi. Đi theo thứ tự này để nhớ lâu hơn.
+        <p slot="aside" class="section-aside"><span>5</span> bước<br>mỗi ngày 10 phút</p>
+      </SectionHead>
 
       <div class="path-grid">
         <article class="path-card">

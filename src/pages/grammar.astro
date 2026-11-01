@@ -2,58 +2,52 @@
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
 import QuizPanel from '../components/QuizPanel.astro';
+import SectionHead from '../components/SectionHead.astro';
+import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TrapCard from '../components/TrapCard.astro';
 import '../styles/grammar.css';
 ---
 
 <SheetLayout slug="grammar">
   <Fragment slot="visual">
-    <div class="study-stack gr-stack">
-      <div class="stack-card stack-card-back"></div>
-      <div class="stack-card stack-card-mid"></div>
-      <div class="stack-card stack-card-front">
-        <p class="mini-label">Ngữ pháp · 4 nhóm lõi</p>
+    <StudyStackVisual
+      stackClass="gr-stack"
+      noteLabel="Mẹo thi"
+      noteTitle="Hỏi: từ nào?"
+      note="who, which, because, more…"
+    >
+      <p class="mini-label">Ngữ pháp · 4 nhóm lõi</p>
 
-        <div class="gr-mini-case gr-mini-connector">
-          <span class="gr-mini-tag">Từ nối</span>
-          <p>I wanted to go out, <mark>but</mark> it was raining.</p>
-        </div>
-
-        <div class="gr-mini-case gr-mini-relative">
-          <span class="gr-mini-tag">Mệnh đề quan hệ</span>
-          <p>Anna, <mark>who</mark> sings folk songs well, may be suitable.</p>
-        </div>
-
-        <div class="gr-mini-case gr-mini-comparison">
-          <span class="gr-mini-tag">So sánh</span>
-          <p>This city is <mark>more crowded</mark> than I expected.</p>
-        </div>
-
-        <p class="gr-mini-why">Nhìn từ đứng trước và cấu trúc quanh chỗ trống.</p>
-
-        <div class="mini-chips">
-          <span>connectors</span><span>relatives</span><span>comparisons</span><span>verb patterns</span>
-        </div>
+      <div class="gr-mini-case gr-mini-connector">
+        <span class="gr-mini-tag">Từ nối</span>
+        <p>I wanted to go out, <mark>but</mark> it was raining.</p>
       </div>
-    </div>
-    <div class="sticky-note">
-      <span class="sticky-label">Mẹo thi</span>
-      <strong>Hỏi: từ nào?</strong>
-      <span>who, which, because, more…</span>
-    </div>
-    <div class="stamp">Ôn thi<br>vào 10<br><span>2026–2027</span></div>
+
+      <div class="gr-mini-case gr-mini-relative">
+        <span class="gr-mini-tag">Mệnh đề quan hệ</span>
+        <p>Anna, <mark>who</mark> sings folk songs well, may be suitable.</p>
+      </div>
+
+      <div class="gr-mini-case gr-mini-comparison">
+        <span class="gr-mini-tag">So sánh</span>
+        <p>This city is <mark>more crowded</mark> than I expected.</p>
+      </div>
+
+      <p class="gr-mini-why">Nhìn từ đứng trước và cấu trúc quanh chỗ trống.</p>
+
+      <div class="mini-chips">
+        <span>connectors</span><span>relatives</span><span>comparisons</span><span>verb patterns</span>
+      </div>
+    </StudyStackVisual>
   </Fragment>
 
   <!-- MAP -->
   <section class="section" id="map">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">01 · Bản đồ</p>
-          <h2>Bốn nhóm ngữ pháp lõi.</h2>
-          <p>Câu 5–12 không hỏi ngẫu nhiên. Phần lớn chỗ trống rơi vào bốn nhóm này — hãy nhận diện nhóm trước khi đọc đáp án.</p>
-        </div>
-        <p class="section-aside"><span>4</span> nhóm lõi<br><span>4</span> điểm phụ</p>
-      </div>
+      <SectionHead kicker="01 · Bản đồ" title="Bốn nhóm ngữ pháp lõi.">
+        Câu 5–12 không hỏi ngẫu nhiên. Phần lớn chỗ trống rơi vào bốn nhóm này — hãy nhận diện nhóm trước khi đọc đáp án.
+        <p slot="aside" class="section-aside"><span>4</span> nhóm lõi<br><span>4</span> điểm phụ</p>
+      </SectionHead>
 
       <div class="gr-map-grid">
         <a class="gr-map-card gr-map-connector" href="#connectors">
@@ -113,14 +107,10 @@ import '../styles/grammar.css';
   <!-- CONNECTORS -->
   <section class="section section-alt" id="connectors">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">02 · Từ nối</p>
-          <h2>Chọn từ nối theo quan hệ.</h2>
-          <p>Sáu câu trong bốn đề. Đừng dịch từng từ — hãy xác định hai vế đang thêm ý, tương phản, nguyên nhân hay kết quả.</p>
-        </div>
-        <p class="section-aside"><span>6</span> quan hệ<br><span>1</span> bảng tra</p>
-      </div>
+      <SectionHead kicker="02 · Từ nối" title="Chọn từ nối theo quan hệ.">
+        Sáu câu trong bốn đề. Đừng dịch từng từ — hãy xác định hai vế đang thêm ý, tương phản, nguyên nhân hay kết quả.
+        <p slot="aside" class="section-aside"><span>6</span> quan hệ<br><span>1</span> bảng tra</p>
+      </SectionHead>
 
       <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
       <div class="gr-table-wrap">
@@ -184,14 +174,10 @@ import '../styles/grammar.css';
   <!-- RELATIVES -->
   <section class="section" id="relatives">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">03 · Mệnh đề quan hệ</p>
-          <h2>Chọn đại từ theo danh từ trước.</h2>
-          <p>Mỗi đề có đúng một câu mệnh đề quan hệ. Chỉ cần nhìn danh từ đứng trước và xác định đại từ làm chủ ngữ hay tân ngữ.</p>
-        </div>
-        <p class="section-aside"><span>7</span> đại từ<br><span>2</span> loại mệnh đề</p>
-      </div>
+      <SectionHead kicker="03 · Mệnh đề quan hệ" title="Chọn đại từ theo danh từ trước.">
+        Mỗi đề có đúng một câu mệnh đề quan hệ. Chỉ cần nhìn danh từ đứng trước và xác định đại từ làm chủ ngữ hay tân ngữ.
+        <p slot="aside" class="section-aside"><span>7</span> đại từ<br><span>2</span> loại mệnh đề</p>
+      </SectionHead>
 
       <div class="gr-table-wrap">
         <table class="gr-table gr-relative-table">
@@ -280,14 +266,10 @@ import '../styles/grammar.css';
   <!-- COMPARISONS -->
   <section class="section section-alt" id="comparisons">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">04 · So sánh</p>
-          <h2>Ba công thức so sánh.</h2>
-          <p>Nhìn dấu hiệu trong câu: <code>as … as</code>, <code>than</code> hay <code>the most</code>. Đừng chỉ nhìn tính từ.</p>
-        </div>
-        <p class="section-aside"><span>3</span> công thức<br><span>5</span> bất quy tắc</p>
-      </div>
+      <SectionHead kicker="04 · So sánh" title="Ba công thức so sánh.">
+        Nhìn dấu hiệu trong câu: <code>as … as</code>, <code>than</code> hay <code>the most</code>. Đừng chỉ nhìn tính từ.
+        <p slot="aside" class="section-aside"><span>3</span> công thức<br><span>5</span> bất quy tắc</p>
+      </SectionHead>
 
       <div class="gr-formula-grid">
         <article class="gr-formula-card">
@@ -351,14 +333,10 @@ import '../styles/grammar.css';
   <!-- VERB PATTERNS -->
   <section class="section" id="verb-patterns">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">05 · Mẫu động từ</p>
-          <h2>Động từ quyết định dạng theo sau.</h2>
-          <p>Bốn câu trong bốn đề. Học động từ theo nhóm, đừng học từng từ riêng lẻ.</p>
-        </div>
-        <p class="section-aside"><span>4</span> nhóm<br><span>1</span> quy tắc</p>
-      </div>
+      <SectionHead kicker="05 · Mẫu động từ" title="Động từ quyết định dạng theo sau.">
+        Bốn câu trong bốn đề. Học động từ theo nhóm, đừng học từng từ riêng lẻ.
+        <p slot="aside" class="section-aside"><span>4</span> nhóm<br><span>1</span> quy tắc</p>
+      </SectionHead>
 
       <div class="gr-pattern-grid">
         <article class="gr-pattern-card gr-pattern-to">
@@ -399,14 +377,10 @@ import '../styles/grammar.css';
   <!-- QUICK POINTS -->
   <section class="section section-alt" id="quick-points">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">06 · Điểm phụ</p>
-          <h2>Bốn điểm phụ dễ lấy.</h2>
-          <p>Mỗi điểm chỉ xuất hiện một lần trong bốn đề, nhưng rất dễ học và có thể quay lại. Đừng bỏ trắng.</p>
-        </div>
-        <p class="section-aside"><span>4</span> điểm<br><span>1</span> buổi ôn</p>
-      </div>
+      <SectionHead kicker="06 · Điểm phụ" title="Bốn điểm phụ dễ lấy.">
+        Mỗi điểm chỉ xuất hiện một lần trong bốn đề, nhưng rất dễ học và có thể quay lại. Đừng bỏ trắng.
+        <p slot="aside" class="section-aside"><span>4</span> điểm<br><span>1</span> buổi ôn</p>
+      </SectionHead>
 
       <div class="gr-quick-grid">
         <article class="gr-quick-card">
@@ -447,75 +421,71 @@ import '../styles/grammar.css';
   <!-- TRAPS -->
   <section class="section" id="traps">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">07 · Bẫy đề</p>
-          <h2>Mười lỗi hay mất điểm.</h2>
-          <p>Đọc câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc ở phần ngữ pháp.</p>
-        </div>
-        <p class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
-      </div>
+      <SectionHead kicker="07 · Bẫy đề" title="Mười lỗi hay mất điểm.">
+        Đọc câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc ở phần ngữ pháp.
+        <p slot="aside" class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
+      </SectionHead>
 
       <div class="trap-grid">
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>Although</strong> the heavy rain, we went out.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>Despite</strong> the heavy rain, we went out.</p></div>
-          <p class="trap-why"><code>Although + mệnh đề</code>; <code>despite + N/V-ing</code>.</p>
-        </article>
+        <TrapCard
+          bad="<strong>Although</strong> the heavy rain, we went out."
+          good="<strong>Despite</strong> the heavy rain, we went out."
+          why="<code>Although + mệnh đề</code>; <code>despite + N/V-ing</code>."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>He stayed home <strong>because of</strong> he was sick.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>He stayed home <strong>because</strong> he was sick.</p></div>
-          <p class="trap-why"><code>Because + mệnh đề</code>; <code>because of + N/V-ing</code>.</p>
-        </article>
+        <TrapCard
+          bad="He stayed home <strong>because of</strong> he was sick."
+          good="He stayed home <strong>because</strong> he was sick."
+          why="<code>Because + mệnh đề</code>; <code>because of + N/V-ing</code>."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>It rained, <strong>however</strong> we went out.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>It rained, <strong>but</strong> we went out.</p></div>
-          <p class="trap-why"><code>However</code> thường đứng đầu câu và có dấu phẩy; <code>but</code> nối trực tiếp hai mệnh đề.</p>
-        </article>
+        <TrapCard
+          bad="It rained, <strong>however</strong> we went out."
+          good="It rained, <strong>but</strong> we went out."
+          why="<code>However</code> thường đứng đầu câu và có dấu phẩy; <code>but</code> nối trực tiếp hai mệnh đề."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>The book <strong>who</strong> I borrowed is interesting.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>The book <strong>which</strong> I borrowed is interesting.</p></div>
-          <p class="trap-why"><code>Who</code> dùng cho người; <code>which/that</code> dùng cho vật.</p>
-        </article>
+        <TrapCard
+          bad="The book <strong>who</strong> I borrowed is interesting."
+          good="The book <strong>which</strong> I borrowed is interesting."
+          why="<code>Who</code> dùng cho người; <code>which/that</code> dùng cho vật."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Anna, <strong>that</strong> sings well, is my friend.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Anna, <strong>who</strong> sings well, is my friend.</p></div>
-          <p class="trap-why">Sau dấu phẩy không dùng <code>that</code>; dùng <code>who</code> cho người.</p>
-        </article>
+        <TrapCard
+          bad="Anna, <strong>that</strong> sings well, is my friend."
+          good="Anna, <strong>who</strong> sings well, is my friend."
+          why="Sau dấu phẩy không dùng <code>that</code>; dùng <code>who</code> cho người."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>The boy <strong>who’s</strong> bike was stolen is my cousin.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>The boy <strong>whose</strong> bike was stolen is my cousin.</p></div>
-          <p class="trap-why"><code>Whose + N</code> chỉ sở hữu; <code>who’s</code> = <code>who is</code>.</p>
-        </article>
+        <TrapCard
+          bad="The boy <strong>who’s</strong> bike was stolen is my cousin."
+          good="The boy <strong>whose</strong> bike was stolen is my cousin."
+          why="<code>Whose + N</code> chỉ sở hữu; <code>who’s</code> = <code>who is</code>."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>This city is <strong>more better</strong> than that one.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>This city is <strong>better</strong> than that one.</p></div>
-          <p class="trap-why">Không dùng <code>more</code> trước tính từ đã ở dạng so sánh hơn.</p>
-        </article>
+        <TrapCard
+          bad="This city is <strong>more better</strong> than that one."
+          good="This city is <strong>better</strong> than that one."
+          why="Không dùng <code>more</code> trước tính từ đã ở dạng so sánh hơn."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>There is <strong>fewer</strong> water in the bottle.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>There is <strong>less</strong> water in the bottle.</p></div>
-          <p class="trap-why"><code>Fewer</code> + danh từ đếm được số nhiều; <code>less</code> + danh từ không đếm được.</p>
-        </article>
+        <TrapCard
+          bad="There is <strong>fewer</strong> water in the bottle."
+          good="There is <strong>less</strong> water in the bottle."
+          why="<code>Fewer</code> + danh từ đếm được số nhiều; <code>less</code> + danh từ không đếm được."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I look forward to <strong>see</strong> you.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I look forward to <strong>seeing</strong> you.</p></div>
-          <p class="trap-why"><code>Look forward to + V-ing</code>; “to” ở đây là giới từ.</p>
-        </article>
+        <TrapCard
+          bad="I look forward to <strong>see</strong> you."
+          good="I look forward to <strong>seeing</strong> you."
+          why="<code>Look forward to + V-ing</code>; “to” ở đây là giới từ."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Don’t forget <strong>turning off</strong> the lights.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Don’t forget <strong>to turn off</strong> the lights.</p></div>
-          <p class="trap-why"><code>Forget to do</code> = quên làm; <code>forget doing</code> = quên đã làm.</p>
-        </article>
+        <TrapCard
+          bad="Don’t forget <strong>turning off</strong> the lights."
+          good="Don’t forget <strong>to turn off</strong> the lights."
+          why="<code>Forget to do</code> = quên làm; <code>forget doing</code> = quên đã làm."
+        />
       </div>
     </div>
   </section>
@@ -523,13 +493,9 @@ import '../styles/grammar.css';
   <!-- QUIZ -->
   <section class="section section-quiz" id="quiz">
     <div class="container">
-      <div class="section-head section-head-center">
-        <div>
-          <p class="section-kicker">08 · Luyện tập</p>
-          <h2>18 câu ngữ pháp, đủ bốn nhóm.</h2>
-          <p>Mỗi câu có một câu hoặc đoạn hội thoại ngắn. Chọn đáp án rồi xem giải thích.</p>
-        </div>
-      </div>
+      <SectionHead kicker="08 · Luyện tập" title="18 câu ngữ pháp, đủ bốn nhóm." center>
+        Mỗi câu có một câu hoặc đoạn hội thoại ngắn. Chọn đáp án rồi xem giải thích.
+      </SectionHead>
 
       <QuizPanel total={18} />
     </div>

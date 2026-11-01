@@ -1,46 +1,42 @@
 ---
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
+import EmptyState from '../components/EmptyState.astro';
+import FilterToolbar from '../components/FilterToolbar.astro';
 import QuizPanel from '../components/QuizPanel.astro';
+import SectionHead from '../components/SectionHead.astro';
+import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TrapCard from '../components/TrapCard.astro';
 import '../styles/reading.css';
 ---
 
 <SheetLayout slug="reading">
   <Fragment slot="visual">
-    <div class="study-stack rc-stack">
-      <div class="stack-card stack-card-back"></div>
-      <div class="stack-card stack-card-mid"></div>
-      <div class="stack-card stack-card-front">
-        <p class="mini-label">Đọc mẫu · Ý chính</p>
-        <p class="rc-mini-passage">Many students feel nervous before exams. <mark>However</mark>, a good study plan can help them feel more confident.</p>
-        <p class="rc-mini-question">What is the passage mainly about?</p>
-        <div class="rc-mini-choices">
-          <span>A. Why exams are difficult</span>
-          <span class="is-correct">B. How to prepare for exams</span>
-          <span>C. When to take exams</span>
-        </div>
-        <p class="rc-mini-why"><strong>B</strong> · Ý chính nằm sau “However”.</p>
+    <StudyStackVisual
+      stackClass="rc-stack"
+      noteLabel="Mẹo thi"
+      noteTitle="Đáp án phải có"
+      note="bằng chứng trong bài!"
+    >
+      <p class="mini-label">Đọc mẫu · Ý chính</p>
+      <p class="rc-mini-passage">Many students feel nervous before exams. <mark>However</mark>, a good study plan can help them feel more confident.</p>
+      <p class="rc-mini-question">What is the passage mainly about?</p>
+      <div class="rc-mini-choices">
+        <span>A. Why exams are difficult</span>
+        <span class="is-correct">B. How to prepare for exams</span>
+        <span>C. When to take exams</span>
       </div>
-    </div>
-    <div class="sticky-note">
-      <span class="sticky-label">Mẹo thi</span>
-      <strong>Đáp án phải có</strong>
-      <span>bằng chứng trong bài!</span>
-    </div>
-    <div class="stamp">Ôn thi<br>vào 10<br><span>2026–2027</span></div>
+      <p class="rc-mini-why"><strong>B</strong> · Ý chính nằm sau “However”.</p>
+    </StudyStackVisual>
   </Fragment>
 
   <!-- MAP -->
   <section class="section" id="map">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">01 · Bản đồ</p>
-          <h2>Bảy dạng câu, bảy cách xử lý.</h2>
-          <p>Đọc hiểu không chỉ là dịch. Mỗi dạng câu hỏi cần một cách tìm thông tin khác nhau — nhận diện dạng câu trước khi đọc đáp án.</p>
-        </div>
-        <p class="section-aside"><span>7</span> dạng câu<br><span>4</span> bước đọc</p>
-      </div>
+      <SectionHead kicker="01 · Bản đồ" title="Bảy dạng câu, bảy cách xử lý.">
+        Đọc hiểu không chỉ là dịch. Mỗi dạng câu hỏi cần một cách tìm thông tin khác nhau — nhận diện dạng câu trước khi đọc đáp án.
+        <p slot="aside" class="section-aside"><span>7</span> dạng câu<br><span>4</span> bước đọc</p>
+      </SectionHead>
 
       <div class="rc-map-grid">
         <a class="rc-map-card rc-map-main" href="#types">
@@ -121,14 +117,10 @@ import '../styles/reading.css';
   <!-- STRATEGY -->
   <section class="section section-alt" id="strategy">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">02 · Chiến lược</p>
-          <h2>Bốn bước đọc một bài.</h2>
-          <p>Đừng lao vào dịch từng từ. Đọc lướt để hiểu bài nói về gì, sau đó mới tìm thông tin cho từng câu hỏi.</p>
-        </div>
-        <p class="section-aside"><span>4</span> bước<br><span>8</span> phút / bài</p>
-      </div>
+      <SectionHead kicker="02 · Chiến lược" title="Bốn bước đọc một bài.">
+        Đừng lao vào dịch từng từ. Đọc lướt để hiểu bài nói về gì, sau đó mới tìm thông tin cho từng câu hỏi.
+        <p slot="aside" class="section-aside"><span>4</span> bước<br><span>8</span> phút / bài</p>
+      </SectionHead>
 
       <div class="rc-step-grid">
         <article class="rc-step">
@@ -189,14 +181,10 @@ import '../styles/reading.css';
   <!-- TYPES -->
   <section class="section" id="types">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">03 · Dạng câu</p>
-          <h2>Nhìn câu hỏi, biết phải tìm gì.</h2>
-          <p>Bảng tra nhanh bảy dạng câu hỏi đọc hiểu. Khi làm bài, hãy xác định dạng câu trước rồi mới đọc các phương án.</p>
-        </div>
-        <p class="section-aside"><span>7</span> dạng<br><span>1</span> bảng tra</p>
-      </div>
+      <SectionHead kicker="03 · Dạng câu" title="Nhìn câu hỏi, biết phải tìm gì.">
+        Bảng tra nhanh bảy dạng câu hỏi đọc hiểu. Khi làm bài, hãy xác định dạng câu trước rồi mới đọc các phương án.
+        <p slot="aside" class="section-aside"><span>7</span> dạng<br><span>1</span> bảng tra</p>
+      </SectionHead>
 
       <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
       <div class="rc-table-wrap">
@@ -264,35 +252,31 @@ import '../styles/reading.css';
   <!-- CONNECTORS -->
   <section class="section section-alt" id="connectors">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">04 · Từ nối</p>
-          <h2>Từ nối chỉ hướng đọc câu tiếp theo.</h2>
-          <p>Thấy “however” thì chuẩn bị đọc ý trái ngược; thấy “therefore” thì tìm kết quả. Dùng bộ lọc hoặc ô tìm kiếm để tra nhanh.</p>
-        </div>
-        <p class="section-aside"><span>26</span> từ nối<br><span>6</span> nhóm</p>
-      </div>
+      <SectionHead kicker="04 · Từ nối" title="Từ nối chỉ hướng đọc câu tiếp theo.">
+        Thấy “however” thì chuẩn bị đọc ý trái ngược; thấy “therefore” thì tìm kết quả. Dùng bộ lọc hoặc ô tìm kiếm để tra nhanh.
+        <p slot="aside" class="section-aside"><span>26</span> từ nối<br><span>6</span> nhóm</p>
+      </SectionHead>
 
-      <div class="toolbar rc-toolbar">
-        <div class="filter-tabs" role="group" aria-label="Lọc từ nối theo nhóm">
-          <button class="filter-tab" type="button" data-cat="all" aria-pressed="true">Tất cả</button>
-          <button class="filter-tab" type="button" data-cat="addition" aria-pressed="false">Thêm ý</button>
-          <button class="filter-tab" type="button" data-cat="contrast" aria-pressed="false">Tương phản</button>
-          <button class="filter-tab" type="button" data-cat="cause" aria-pressed="false">Nguyên nhân – kết quả</button>
-          <button class="filter-tab" type="button" data-cat="example" aria-pressed="false">Ví dụ</button>
-          <button class="filter-tab" type="button" data-cat="sequence" aria-pressed="false">Trình tự</button>
-          <button class="filter-tab" type="button" data-cat="conclusion" aria-pressed="false">Kết luận</button>
-        </div>
-
-        <div class="search-wrap">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-          <label class="sr-only" for="connector-search">Tìm từ nối</label>
-          <input id="connector-search" type="search" placeholder="Tìm “however”, “vì vậy”, “ví dụ”…" autocomplete="off">
-          <button class="search-clear" id="connector-clear" type="button" aria-label="Xoá tìm kiếm" hidden>&times;</button>
-        </div>
-
-        <span class="result-count" id="connector-count" aria-live="polite">26/26 từ nối</span>
-      </div>
+      <FilterToolbar
+        class="rc-toolbar"
+        tabKey="cat"
+        ariaLabel="Lọc từ nối theo nhóm"
+        tabs={[
+          { value: 'all', label: 'Tất cả' },
+          { value: 'addition', label: 'Thêm ý' },
+          { value: 'contrast', label: 'Tương phản' },
+          { value: 'cause', label: 'Nguyên nhân – kết quả' },
+          { value: 'example', label: 'Ví dụ' },
+          { value: 'sequence', label: 'Trình tự' },
+          { value: 'conclusion', label: 'Kết luận' },
+        ]}
+        searchId="connector-search"
+        searchLabel="Tìm từ nối"
+        placeholder="Tìm “however”, “vì vậy”, “ví dụ”…"
+        clearId="connector-clear"
+        countId="connector-count"
+        countText="26/26 từ nối"
+      />
 
       <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
       <div class="rc-table-wrap">
@@ -472,11 +456,12 @@ import '../styles/reading.css';
         </table>
       </div>
 
-      <div class="empty-state" id="connector-empty" hidden>
-        <p class="empty-title">Không tìm thấy từ nối nào khớp.</p>
-        <p>Thử từ khoá khác hoặc xoá bộ lọc để xem lại cả 26 từ nối.</p>
-        <button class="btn btn-ghost" id="connector-reset" type="button">Xoá bộ lọc</button>
-      </div>
+      <EmptyState
+        id="connector-empty"
+        title="Không tìm thấy từ nối nào khớp."
+        text="Thử từ khoá khác hoặc xoá bộ lọc để xem lại cả 26 từ nối."
+        resetId="connector-reset"
+      />
 
       <p class="mini-note"><strong>Đọc theo từ nối:</strong> “but/however/although” báo hiệu ý trái ngược; “so/therefore/as a result” báo hiệu kết quả; “for example/such as” báo hiệu ví dụ. Nắm được hướng đi của câu, bạn đoán nghĩa nhanh hơn.</p>
     </div>
@@ -485,14 +470,10 @@ import '../styles/reading.css';
   <!-- SAMPLE -->
   <section class="section" id="sample">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">05 · Đọc mẫu</p>
-          <h2>Một đoạn, bốn câu hỏi.</h2>
-          <p>Đọc đoạn văn, nhìn các chỗ được đánh dấu, rồi xem cách tìm bằng chứng cho từng câu hỏi. Màu đánh dấu tương ứng với dạng câu hỏi.</p>
-        </div>
-        <p class="section-aside"><span>1</span> đoạn mẫu<br><span>4</span> câu hỏi</p>
-      </div>
+      <SectionHead kicker="05 · Đọc mẫu" title="Một đoạn, bốn câu hỏi.">
+        Đọc đoạn văn, nhìn các chỗ được đánh dấu, rồi xem cách tìm bằng chứng cho từng câu hỏi. Màu đánh dấu tương ứng với dạng câu hỏi.
+        <p slot="aside" class="section-aside"><span>1</span> đoạn mẫu<br><span>4</span> câu hỏi</p>
+      </SectionHead>
 
       <article class="rc-sample">
         <div class="rc-sample-head">
@@ -550,75 +531,71 @@ import '../styles/reading.css';
   <!-- TRAPS -->
   <section class="section section-alt" id="traps">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">06 · Bẫy đề</p>
-          <h2>Mười lỗi hay mất điểm.</h2>
-          <p>Đọc câu hỏi, câu trả lời và lý do. Đây là những lỗi học sinh lớp 9 hay mắc khi làm phần đọc hiểu.</p>
-        </div>
-        <p class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
-      </div>
+      <SectionHead kicker="06 · Bẫy đề" title="Mười lỗi hay mất điểm.">
+        Đọc câu hỏi, câu trả lời và lý do. Đây là những lỗi học sinh lớp 9 hay mắc khi làm phần đọc hiểu.
+        <p slot="aside" class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
+      </SectionHead>
 
       <div class="trap-grid">
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Chọn đáp án lặp lại y nguyên từ trong bài.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Chọn đáp án <strong>paraphrase</strong> và đúng nghĩa.</p></div>
-          <p class="trap-why">Đề đọc hiểu thường viết lại ý, không lặp y nguyên. Đừng chọn chỉ vì thấy từ quen.</p>
-        </article>
+        <TrapCard
+          bad="Chọn đáp án lặp lại y nguyên từ trong bài."
+          good="Chọn đáp án <strong>paraphrase</strong> và đúng nghĩa."
+          why="Đề đọc hiểu thường viết lại ý, không lặp y nguyên. Đừng chọn chỉ vì thấy từ quen."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Chọn đáp án đúng nhưng không trả lời câu hỏi.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Đáp án phải khớp <strong>đúng phạm vi</strong> câu hỏi.</p></div>
-          <p class="trap-why">Một chi tiết có trong bài chưa chắc là câu trả lời cho câu hỏi đang hỏi.</p>
-        </article>
+        <TrapCard
+          bad="Chọn đáp án đúng nhưng không trả lời câu hỏi."
+          good="Đáp án phải khớp <strong>đúng phạm vi</strong> câu hỏi."
+          why="Một chi tiết có trong bài chưa chắc là câu trả lời cho câu hỏi đang hỏi."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Bỏ qua chữ <strong>NOT</strong> hoặc <strong>EXCEPT</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Khoanh tròn NOT/EXCEPT trước khi đọc đáp án.</p></div>
-          <p class="trap-why">Câu hỏi phủ định yêu cầu tìm đáp án không có trong bài, không phải đáp án đúng nhất.</p>
-        </article>
+        <TrapCard
+          bad="Bỏ qua chữ <strong>NOT</strong> hoặc <strong>EXCEPT</strong>."
+          good="Khoanh tròn NOT/EXCEPT trước khi đọc đáp án."
+          why="Câu hỏi phủ định yêu cầu tìm đáp án không có trong bài, không phải đáp án đúng nhất."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Chọn đáp án có <strong>all, always, never, only</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Kiểm tra từ lượng hóa với thông tin trong bài.</p></div>
-          <p class="trap-why">Đáp án cực đoan thường sai. Bài có thể nói “some” hoặc “many”, không phải “all”.</p>
-        </article>
+        <TrapCard
+          bad="Chọn đáp án có <strong>all, always, never, only</strong>."
+          good="Kiểm tra từ lượng hóa với thông tin trong bài."
+          why="Đáp án cực đoan thường sai. Bài có thể nói “some” hoặc “many”, không phải “all”."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Nhầm đại từ số ít với số nhiều.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Kiểm tra danh từ thay thế và số ít/số nhiều.</p></div>
-          <p class="trap-why">“They” cần danh từ số nhiều; “it” cần danh từ số ít hoặc một sự việc.</p>
-        </article>
+        <TrapCard
+          bad="Nhầm đại từ số ít với số nhiều."
+          good="Kiểm tra danh từ thay thế và số ít/số nhiều."
+          why="“They” cần danh từ số nhiều; “it” cần danh từ số ít hoặc một sự việc."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Suy luận quá xa, không có bằng chứng.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Chỉ suy ra từ 2–3 manh mối có trong bài.</p></div>
-          <p class="trap-why">Đáp án suy luận vẫn phải được bài đọc hỗ trợ, không phải điều bạn tự nghĩ ra.</p>
-        </article>
+        <TrapCard
+          bad="Suy luận quá xa, không có bằng chứng."
+          good="Chỉ suy ra từ 2–3 manh mối có trong bài."
+          why="Đáp án suy luận vẫn phải được bài đọc hỗ trợ, không phải điều bạn tự nghĩ ra."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Lấy ý của một câu làm ý chính cả bài.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Chọn ý bao quát được toàn bộ đoạn.</p></div>
-          <p class="trap-why">Ý chính phải bao trùm các chi tiết, không chỉ đúng với một câu.</p>
-        </article>
+        <TrapCard
+          bad="Lấy ý của một câu làm ý chính cả bài."
+          good="Chọn ý bao quát được toàn bộ đoạn."
+          why="Ý chính phải bao trùm các chi tiết, không chỉ đúng với một câu."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Dịch từng từ và bỏ qua ngữ cảnh.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Đọc cả câu và dùng từ xung quanh để đoán nghĩa.</p></div>
-          <p class="trap-why">Một từ có thể có nhiều nghĩa. Ngữ cảnh quyết định nghĩa đúng.</p>
-        </article>
+        <TrapCard
+          bad="Dịch từng từ và bỏ qua ngữ cảnh."
+          good="Đọc cả câu và dùng từ xung quanh để đoán nghĩa."
+          why="Một từ có thể có nhiều nghĩa. Ngữ cảnh quyết định nghĩa đúng."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Bỏ qua từ nối như <strong>however</strong> hoặc <strong>although</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Đọc từ nối để biết ý tiếp theo thuận hay ngược.</p></div>
-          <p class="trap-why">Từ nối thay đổi hoàn toàn ý của câu. Đọc sai từ nối dễ chọn ngược đáp án.</p>
-        </article>
+        <TrapCard
+          bad="Bỏ qua từ nối như <strong>however</strong> hoặc <strong>although</strong>."
+          good="Đọc từ nối để biết ý tiếp theo thuận hay ngược."
+          why="Từ nối thay đổi hoàn toàn ý của câu. Đọc sai từ nối dễ chọn ngược đáp án."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Thay đổi số lượng hoặc thì so với bài.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>So khớp chính xác số, thời gian và mức độ.</p></div>
-          <p class="trap-why">“Some” khác “all”, “last year” khác “next year”. Một chi tiết nhỏ sai cũng làm đáp án sai.</p>
-        </article>
+        <TrapCard
+          bad="Thay đổi số lượng hoặc thì so với bài."
+          good="So khớp chính xác số, thời gian và mức độ."
+          why="“Some” khác “all”, “last year” khác “next year”. Một chi tiết nhỏ sai cũng làm đáp án sai."
+        />
       </div>
     </div>
   </section>
@@ -626,13 +603,9 @@ import '../styles/reading.css';
   <!-- QUIZ -->
   <section class="section section-quiz" id="quiz">
     <div class="container">
-      <div class="section-head section-head-center">
-        <div>
-          <p class="section-kicker">07 · Luyện tập</p>
-          <h2>Đọc 12 đoạn, trả lời 12 câu.</h2>
-          <p>Mỗi câu có một đoạn đọc ngắn. Đọc câu hỏi trước, tìm bằng chứng trong đoạn rồi chọn đáp án.</p>
-        </div>
-      </div>
+      <SectionHead kicker="07 · Luyện tập" title="Đọc 12 đoạn, trả lời 12 câu." center>
+        Mỗi câu có một đoạn đọc ngắn. Đọc câu hỏi trước, tìm bằng chứng trong đoạn rồi chọn đáp án.
+      </SectionHead>
 
       <QuizPanel total={12} />
     </div>

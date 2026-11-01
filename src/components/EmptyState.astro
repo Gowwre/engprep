@@ -1,0 +1,25 @@
+---
+interface Props {
+  id: string;
+  class?: string;
+  title: string;
+  text: string;
+  resetId: string;
+  resetLabel?: string;
+}
+
+const {
+  id,
+  class: className,
+  title,
+  text,
+  resetId,
+  resetLabel = 'Xoá bộ lọc'
+} = Astro.props;
+---
+
+<div class:list={['empty-state', className]} id={id} hidden>
+  <p class="empty-title">{title}</p>
+  <p>{text}</p>
+  <button class="btn btn-ghost" id={resetId} type="button">{resetLabel}</button>
+</div>

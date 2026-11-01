@@ -2,47 +2,41 @@
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
 import QuizPanel from '../components/QuizPanel.astro';
+import SectionHead from '../components/SectionHead.astro';
+import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TrapCard from '../components/TrapCard.astro';
 import '../styles/cloze.css';
 ---
 
 <SheetLayout slug="cloze">
   <Fragment slot="visual">
-    <div class="study-stack cz-stack">
-      <div class="stack-card stack-card-back"></div>
-      <div class="stack-card stack-card-mid"></div>
-      <div class="stack-card stack-card-front">
-        <p class="mini-label">Điền khuyết · Từ nối</p>
-        <p class="cz-mini-passage">Plastic bags are convenient. ______, they are harmful to the environment.</p>
-        <div class="cz-mini-options">
-          <span>A. Because</span>
-          <span class="is-correct">B. However</span>
-          <span>C. So</span>
-        </div>
-        <p class="cz-mini-why"><strong>However</strong> báo hiệu ý tương phản.</p>
-        <div class="mini-chips">
-          <span>contrast</span><span>connector</span><span>however</span>
-        </div>
+    <StudyStackVisual
+      stackClass="cz-stack"
+      noteLabel="Mẹo thi"
+      noteTitle="Đọc cả câu"
+      note="đừng chỉ nhìn chỗ trống!"
+    >
+      <p class="mini-label">Điền khuyết · Từ nối</p>
+      <p class="cz-mini-passage">Plastic bags are convenient. ______, they are harmful to the environment.</p>
+      <div class="cz-mini-options">
+        <span>A. Because</span>
+        <span class="is-correct">B. However</span>
+        <span>C. So</span>
       </div>
-    </div>
-    <div class="sticky-note">
-      <span class="sticky-label">Mẹo thi</span>
-      <strong>Đọc cả câu</strong>
-      <span>đừng chỉ nhìn chỗ trống!</span>
-    </div>
-    <div class="stamp">Ôn thi<br>vào 10<br><span>2026–2027</span></div>
+      <p class="cz-mini-why"><strong>However</strong> báo hiệu ý tương phản.</p>
+      <div class="mini-chips">
+        <span>contrast</span><span>connector</span><span>however</span>
+      </div>
+    </StudyStackVisual>
   </Fragment>
 
   <!-- MAP -->
   <section class="section" id="map">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">01 · Bản đồ</p>
-          <h2>Năm loại chỗ trống.</h2>
-          <p>Bài điền khuyết không chỉ hỏi từ vựng. Mỗi chỗ trống có thể kiểm tra ngữ pháp, nghĩa, cụm từ cố định (collocation), từ nối hoặc từ thay thế.</p>
-        </div>
-        <p class="section-aside"><span>5</span> loại chỗ trống<br><span>12</span> câu hỏi</p>
-      </div>
+      <SectionHead kicker="01 · Bản đồ" title="Năm loại chỗ trống.">
+        Bài điền khuyết không chỉ hỏi từ vựng. Mỗi chỗ trống có thể kiểm tra ngữ pháp, nghĩa, cụm từ cố định (collocation), từ nối hoặc từ thay thế.
+        <p slot="aside" class="section-aside"><span>5</span> loại chỗ trống<br><span>12</span> câu hỏi</p>
+      </SectionHead>
 
       <div class="cz-map-grid">
         <a class="cz-map-card cz-map-grammar" href="#grammar">
@@ -103,14 +97,10 @@ import '../styles/cloze.css';
   <!-- STRATEGY -->
   <section class="section section-alt" id="strategy">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">02 · Chiến lược</p>
-          <h2>Bốn bước làm bài điền khuyết.</h2>
-          <p>Bài có 6 chỗ trống thường mất khoảng 8 phút. Đọc lướt trước, xử lý từng chỗ, rồi đọc lại cả đoạn.</p>
-        </div>
-        <p class="section-aside"><span>4</span> bước<br><span>8</span> phút / bài</p>
-      </div>
+      <SectionHead kicker="02 · Chiến lược" title="Bốn bước làm bài điền khuyết.">
+        Bài có 6 chỗ trống thường mất khoảng 8 phút. Đọc lướt trước, xử lý từng chỗ, rồi đọc lại cả đoạn.
+        <p slot="aside" class="section-aside"><span>4</span> bước<br><span>8</span> phút / bài</p>
+      </SectionHead>
 
       <div class="cz-step-grid">
         <article class="cz-step">
@@ -159,14 +149,10 @@ import '../styles/cloze.css';
   <!-- GRAMMAR -->
   <section class="section" id="grammar">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">03 · Ngữ pháp</p>
-          <h2>Chỗ trống ngữ pháp: nhìn dấu hiệu.</h2>
-          <p>62,5% chỗ trống trong bài điền khuyết là ngữ pháp. Khi thấy dấu hiệu quen thuộc, hãy kiểm tra đúng nhóm đó trước.</p>
-        </div>
-        <p class="section-aside"><span>7</span> nhóm<br><span>1</span> bảng tra</p>
-      </div>
+      <SectionHead kicker="03 · Ngữ pháp" title="Chỗ trống ngữ pháp: nhìn dấu hiệu.">
+        62,5% chỗ trống trong bài điền khuyết là ngữ pháp. Khi thấy dấu hiệu quen thuộc, hãy kiểm tra đúng nhóm đó trước.
+        <p slot="aside" class="section-aside"><span>7</span> nhóm<br><span>1</span> bảng tra</p>
+      </SectionHead>
 
       <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
       <div class="cz-table-wrap">
@@ -234,14 +220,10 @@ import '../styles/cloze.css';
   <!-- VOCABULARY -->
   <section class="section section-alt" id="vocabulary">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">04 · Từ vựng</p>
-          <h2>Chỗ trống từ vựng: tìm manh mối.</h2>
-          <p>Khi chỗ trống không phải ngữ pháp, câu xung quanh thường giấu định nghĩa, ví dụ, từ trái nghĩa hoặc cụm từ cố định.</p>
-        </div>
-        <p class="section-aside"><span>6</span> loại manh mối<br><span>1</span> quy tắc</p>
-      </div>
+      <SectionHead kicker="04 · Từ vựng" title="Chỗ trống từ vựng: tìm manh mối.">
+        Khi chỗ trống không phải ngữ pháp, câu xung quanh thường giấu định nghĩa, ví dụ, từ trái nghĩa hoặc cụm từ cố định.
+        <p slot="aside" class="section-aside"><span>6</span> loại manh mối<br><span>1</span> quy tắc</p>
+      </SectionHead>
 
       <div class="cz-clue-grid">
         <article class="cz-clue-card">
@@ -294,14 +276,10 @@ import '../styles/cloze.css';
   <!-- SAMPLE -->
   <section class="section" id="sample">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">05 · Đoạn mẫu</p>
-          <h2>Một đoạn, sáu chỗ trống.</h2>
-          <p>Đọc cả đoạn, thử điền trước khi xem đáp án. Mỗi chỗ trống đại diện cho một loại chỗ trống khác nhau.</p>
-        </div>
-        <p class="section-aside"><span>1</span> đoạn mẫu<br><span>6</span> chỗ trống</p>
-      </div>
+      <SectionHead kicker="05 · Đoạn mẫu" title="Một đoạn, sáu chỗ trống.">
+        Đọc cả đoạn, thử điền trước khi xem đáp án. Mỗi chỗ trống đại diện cho một loại chỗ trống khác nhau.
+        <p slot="aside" class="section-aside"><span>1</span> đoạn mẫu<br><span>6</span> chỗ trống</p>
+      </SectionHead>
 
       <article class="cz-sample">
         <div class="cz-sample-head">
@@ -331,75 +309,71 @@ import '../styles/cloze.css';
   <!-- TRAPS -->
   <section class="section section-alt traps-start" id="traps">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">06 · Bẫy đề</p>
-          <h2>Mười lỗi hay mất điểm.</h2>
-          <p>Đọc câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc khi làm bài điền khuyết.</p>
-        </div>
-        <p class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
-      </div>
+      <SectionHead kicker="06 · Bẫy đề" title="Mười lỗi hay mất điểm.">
+        Đọc câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc khi làm bài điền khuyết.
+        <p slot="aside" class="section-aside"><span>10</span> lỗi<br>cần tránh</p>
+      </SectionHead>
 
       <div class="trap-grid">
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Chọn đáp án chỉ vì <strong>nghe quen</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Kiểm tra <strong>loại từ, ngữ pháp và nghĩa</strong>.</p></div>
-          <p class="trap-why">Đáp án đúng phải khớp cả ba yếu tố, không chỉ khớp nghĩa.</p>
-        </article>
+        <TrapCard
+          bad="Chọn đáp án chỉ vì <strong>nghe quen</strong>."
+          good="Kiểm tra <strong>loại từ, ngữ pháp và nghĩa</strong>."
+          why="Đáp án đúng phải khớp cả ba yếu tố, không chỉ khớp nghĩa."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Many <strong>information</strong> · much <strong>people</strong></p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Much <strong>information</strong> · many <strong>people</strong></p></div>
-          <p class="trap-why">Information không đếm được; people là danh từ số nhiều.</p>
-        </article>
+        <TrapCard
+          bad="Many <strong>information</strong> · much <strong>people</strong>"
+          good="Much <strong>information</strong> · many <strong>people</strong>"
+          why="Information không đếm được; people là danh từ số nhiều."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>It depends <strong>of</strong> the weather.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>It depends <strong>on</strong> the weather.</p></div>
-          <p class="trap-why">Depend on là cụm cố định; không dịch “của” thành of.</p>
-        </article>
+        <TrapCard
+          bad="It depends <strong>of</strong> the weather."
+          good="It depends <strong>on</strong> the weather."
+          why="Depend on là cụm cố định; không dịch “của” thành of."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>She decided <strong>going</strong> abroad.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>She decided <strong>to go</strong> abroad.</p></div>
-          <p class="trap-why">Decide + to-V. Đừng chỉ nhìn nghĩa mà bỏ qua mẫu động từ.</p>
-        </article>
+        <TrapCard
+          bad="She decided <strong>going</strong> abroad."
+          good="She decided <strong>to go</strong> abroad."
+          why="Decide + to-V. Đừng chỉ nhìn nghĩa mà bỏ qua mẫu động từ."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>The book <strong>who</strong> I borrowed is interesting.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>The book <strong>which</strong> I borrowed is interesting.</p></div>
-          <p class="trap-why">Who dùng cho người; which/that dùng cho vật.</p>
-        </article>
+        <TrapCard
+          bad="The book <strong>who</strong> I borrowed is interesting."
+          good="The book <strong>which</strong> I borrowed is interesting."
+          why="Who dùng cho người; which/that dùng cho vật."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>It was <strong>so awful weather</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>It was <strong>such awful weather</strong>.</p></div>
-          <p class="trap-why">So + adj; such + (a/an) + adj + N. Weather không đếm được nên không có “an”.</p>
-        </article>
+        <TrapCard
+          bad="It was <strong>so awful weather</strong>."
+          good="It was <strong>such awful weather</strong>."
+          why="So + adj; such + (a/an) + adj + N. Weather không đếm được nên không có “an”."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>Because</strong> the rain, we stayed home.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>Because of</strong> the rain, we stayed home.</p></div>
-          <p class="trap-why">Because + mệnh đề; because of + N/V-ing.</p>
-        </article>
+        <TrapCard
+          bad="<strong>Because</strong> the rain, we stayed home."
+          good="<strong>Because of</strong> the rain, we stayed home."
+          why="Because + mệnh đề; because of + N/V-ing."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>He <strong>did</strong> a decision.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>He <strong>made</strong> a decision.</p></div>
-          <p class="trap-why">Decision đi với make; homework đi với do. Học cả cụm.</p>
-        </article>
+        <TrapCard
+          bad="He <strong>did</strong> a decision."
+          good="He <strong>made</strong> a decision."
+          why="Decision đi với make; homework đi với do. Học cả cụm."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>She is <strong>a</strong> honest girl.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>She is <strong>an</strong> honest girl.</p></div>
-          <p class="trap-why">Chọn a/an theo âm đầu, không theo chữ cái: an hour, an honest person.</p>
-        </article>
+        <TrapCard
+          bad="She is <strong>a</strong> honest girl."
+          good="She is <strong>an</strong> honest girl."
+          why="Chọn a/an theo âm đầu, không theo chữ cái: an hour, an honest person."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>Điền xong nhưng không đọc lại cả đoạn.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>Đọc lại để kiểm tra logic và mạch văn.</p></div>
-          <p class="trap-why">Một đáp án có thể đúng riêng câu nhưng sai logic của cả đoạn.</p>
-        </article>
+        <TrapCard
+          bad="Điền xong nhưng không đọc lại cả đoạn."
+          good="Đọc lại để kiểm tra logic và mạch văn."
+          why="Một đáp án có thể đúng riêng câu nhưng sai logic của cả đoạn."
+        />
       </div>
     </div>
   </section>
@@ -407,13 +381,9 @@ import '../styles/cloze.css';
   <!-- QUIZ -->
   <section class="section section-quiz" id="quiz">
     <div class="container">
-      <div class="section-head section-head-center">
-        <div>
-          <p class="section-kicker">07 · Luyện tập</p>
-          <h2>Đọc 12 đoạn, điền 12 chỗ trống.</h2>
-          <p>Mỗi câu có một đoạn ngắn và một chỗ trống. Đọc cả câu, chọn đáp án rồi xem giải thích.</p>
-        </div>
-      </div>
+      <SectionHead kicker="07 · Luyện tập" title="Đọc 12 đoạn, điền 12 chỗ trống." center>
+        Mỗi câu có một đoạn ngắn và một chỗ trống. Đọc cả câu, chọn đáp án rồi xem giải thích.
+      </SectionHead>
 
       <QuizPanel total={12} />
     </div>

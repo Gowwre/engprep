@@ -1,46 +1,37 @@
 ---
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
+import EmptyState from '../components/EmptyState.astro';
+import FilterToolbar from '../components/FilterToolbar.astro';
 import QuizPanel from '../components/QuizPanel.astro';
+import SectionHead from '../components/SectionHead.astro';
+import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TrapCard from '../components/TrapCard.astro';
 import '../styles/prepositions.css';
 ---
 
 <SheetLayout slug="prepositions">
   <Fragment slot="visual">
-    <div class="study-stack">
-      <div class="stack-card stack-card-back"></div>
-      <div class="stack-card stack-card-mid"></div>
-      <div class="stack-card stack-card-front">
-        <p class="mini-label">Mẹo nhớ nhanh</p>
-        <p class="mini-formula mini-formula-prep">AT a point<br>ON a surface<br>IN a space</p>
-        <div class="mini-rule"></div>
-        <p class="mini-desc">Một điểm – một bề mặt – một không gian. Cách nhớ này dùng cho cả thời gian và nơi chốn.</p>
-        <div class="mini-chips">
-          <span>at 7 p.m.</span><span>on Monday</span><span>in 2026</span><span>in the box</span>
-        </div>
-        <p class="mini-example">We met <mark>at</mark> the cinema <mark>on</mark> Saturday.</p>
-        <p class="mini-translation">Chúng mình gặp nhau ở rạp chiếu phim vào thứ Bảy.</p>
+    <StudyStackVisual noteLabel="Bẫy quen thuộc" noteTitle="at night" note="nhưng <em>in the morning</em>">
+      <p class="mini-label">Mẹo nhớ nhanh</p>
+      <p class="mini-formula mini-formula-prep">AT a point<br>ON a surface<br>IN a space</p>
+      <div class="mini-rule"></div>
+      <p class="mini-desc">Một điểm – một bề mặt – một không gian. Cách nhớ này dùng cho cả thời gian và nơi chốn.</p>
+      <div class="mini-chips">
+        <span>at 7 p.m.</span><span>on Monday</span><span>in 2026</span><span>in the box</span>
       </div>
-    </div>
-    <div class="sticky-note">
-      <span class="sticky-label">Bẫy quen thuộc</span>
-      <strong>at night</strong>
-      <span>nhưng <em>in the morning</em></span>
-    </div>
-    <div class="stamp">Ôn thi<br>vào 10<br><span>2026–2027</span></div>
+      <p class="mini-example">We met <mark>at</mark> the cinema <mark>on</mark> Saturday.</p>
+      <p class="mini-translation">Chúng mình gặp nhau ở rạp chiếu phim vào thứ Bảy.</p>
+    </StudyStackVisual>
   </Fragment>
 
   <!-- MAP -->
   <section class="section" id="map">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">01 · Bản đồ</p>
-          <h2>Bốn nhóm giới từ, một bản đồ.</h2>
-          <p>Khi nào? Ở đâu? Đi đâu? Đi với từ nào? Bấm vào từng nhóm để xem bảng chi tiết bên dưới.</p>
-        </div>
-        <p class="section-aside"><span>4</span> nhóm<br><span>54</span> cụm</p>
-      </div>
+      <SectionHead kicker="01 · Bản đồ" title="Bốn nhóm giới từ, một bản đồ.">
+        Khi nào? Ở đâu? Đi đâu? Đi với từ nào? Bấm vào từng nhóm để xem bảng chi tiết bên dưới.
+        <p slot="aside" class="section-aside"><span>4</span> nhóm<br><span>54</span> cụm</p>
+      </SectionHead>
 
       <div class="prep-map-grid">
         <a class="prep-map-card" href="#time">
@@ -98,14 +89,10 @@ import '../styles/prepositions.css';
   <!-- RULES -->
   <section class="section section-alt" id="rules">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">02 · Quy tắc</p>
-          <h2>Ba điều cần nắm trước khi học bảng.</h2>
-          <p>Nắm ba điều này, phần lớn câu hỏi giới từ sẽ dễ hơn nhiều.</p>
-        </div>
-        <p class="section-aside"><span>3</span> điều<br>cần nắm</p>
-      </div>
+      <SectionHead kicker="02 · Quy tắc" title="Ba điều cần nắm trước khi học bảng.">
+        Nắm ba điều này, phần lớn câu hỏi giới từ sẽ dễ hơn nhiều.
+        <p slot="aside" class="section-aside"><span>3</span> điều<br>cần nắm</p>
+      </SectionHead>
 
       <div class="rule-grid">
         <article class="rule-card">
@@ -146,14 +133,10 @@ import '../styles/prepositions.css';
   <!-- TIME -->
   <section class="section" id="time">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">03 · Thời gian</p>
-          <h2>Thời gian: at, on, in và những từ dễ nhầm.</h2>
-          <p>Trước hết chọn theo mức độ cụ thể: giờ → ngày → tháng/năm. Sau đó học nhóm since, for, during, while, until, by.</p>
-        </div>
-        <p class="section-aside"><span>3</span> mức thời gian<br><span>6</span> từ dễ nhầm</p>
-      </div>
+      <SectionHead kicker="03 · Thời gian" title="Thời gian: at, on, in và những từ dễ nhầm.">
+        Trước hết chọn theo mức độ cụ thể: giờ → ngày → tháng/năm. Sau đó học nhóm since, for, during, while, until, by.
+        <p slot="aside" class="section-aside"><span>3</span> mức thời gian<br><span>6</span> từ dễ nhầm</p>
+      </SectionHead>
 
       <div class="zoom-ladder" aria-label="Độ lớn thời gian tăng dần">
         <div class="zoom-step">
@@ -283,14 +266,10 @@ import '../styles/prepositions.css';
   <!-- PLACE -->
   <section class="section section-alt" id="place">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">04 · Vị trí</p>
-          <h2>Vị trí: nhìn hình là nhớ.</h2>
-          <p>Nắm chắc bộ ba in – on – at trước, rồi xem các cặp dễ nhầm: between/among, beside/besides, in front of/in the front of.</p>
-        </div>
-        <p class="section-aside"><span>8</span> hình minh hoạ<br><span>4</span> cặp dễ nhầm</p>
-      </div>
+      <SectionHead kicker="04 · Vị trí" title="Vị trí: nhìn hình là nhớ.">
+        Nắm chắc bộ ba in – on – at trước, rồi xem các cặp dễ nhầm: between/among, beside/besides, in front of/in the front of.
+        <p slot="aside" class="section-aside"><span>8</span> hình minh hoạ<br><span>4</span> cặp dễ nhầm</p>
+      </SectionHead>
 
       <div class="scene-grid">
         <figure class="scene-card">
@@ -483,14 +462,10 @@ import '../styles/prepositions.css';
   <!-- MOVEMENT -->
   <section class="section" id="movement">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">05 · Chuyển động</p>
-          <h2>Chuyển động: đi đâu, qua đâu?</h2>
-          <p>Phân biệt hướng đến (to), đi vào bên trong (into), lên trên bề mặt (onto), xuyên qua (through) và băng qua (across).</p>
-        </div>
-        <p class="section-aside"><span>12</span> giới từ<br>chuyển động</p>
-      </div>
+      <SectionHead kicker="05 · Chuyển động" title="Chuyển động: đi đâu, qua đâu?">
+        Phân biệt hướng đến (to), đi vào bên trong (into), lên trên bề mặt (onto), xuyên qua (through) và băng qua (across).
+        <p slot="aside" class="section-aside"><span>12</span> giới từ<br>chuyển động</p>
+      </SectionHead>
 
       <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
       <div class="table-shell">
@@ -609,14 +584,10 @@ import '../styles/prepositions.css';
   <!-- COLLOCATIONS -->
   <section class="section section-alt" id="collocations">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">06 · Cụm cố định</p>
-          <h2>Cụm cố định: thuộc càng kỹ, làm càng nhanh.</h2>
-          <p>Có 54 cụm, chia thành bốn nhóm. Dùng bộ lọc hoặc ô tìm kiếm để tra nhanh trước khi làm đề.</p>
-        </div>
-        <p class="section-aside"><span>54</span> cụm<br><span>4</span> nhóm</p>
-      </div>
+      <SectionHead kicker="06 · Cụm cố định" title="Cụm cố định: thuộc càng kỹ, làm càng nhanh.">
+        Có 54 cụm, chia thành bốn nhóm. Dùng bộ lọc hoặc ô tìm kiếm để tra nhanh trước khi làm đề.
+        <p slot="aside" class="section-aside"><span>54</span> cụm<br><span>4</span> nhóm</p>
+      </SectionHead>
 
       <div class="collocation-legend" aria-label="Chú thích màu theo loại cụm">
         <span><i class="legend-dot" style="--dot-color: var(--jade)"></i>Động từ + giới từ</span>
@@ -625,24 +596,24 @@ import '../styles/prepositions.css';
         <span><i class="legend-dot" style="--dot-color: var(--gold-ink)"></i>Cụm / thành ngữ</span>
       </div>
 
-      <div class="toolbar collocation-toolbar">
-        <div class="filter-tabs" role="group" aria-label="Lọc theo loại cụm">
-          <button class="filter-tab" type="button" data-category="all" aria-pressed="true">Tất cả</button>
-          <button class="filter-tab" type="button" data-category="verb" aria-pressed="false">Động từ</button>
-          <button class="filter-tab" type="button" data-category="adj" aria-pressed="false">Tính từ</button>
-          <button class="filter-tab" type="button" data-category="noun" aria-pressed="false">Danh từ</button>
-          <button class="filter-tab" type="button" data-category="phrase" aria-pressed="false">Cụm</button>
-        </div>
-
-        <div class="search-wrap">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-          <label class="sr-only" for="collocation-search">Tìm cụm giới từ</label>
-          <input id="collocation-search" type="search" placeholder="Tìm “depend”, “tự hào”, “in spite”…" autocomplete="off">
-          <button class="search-clear" id="collocation-clear" type="button" aria-label="Xoá tìm kiếm" hidden>&times;</button>
-        </div>
-
-        <span class="result-count" id="collocation-count" aria-live="polite">54/54 cụm</span>
-      </div>
+      <FilterToolbar
+        class="collocation-toolbar"
+        tabKey="category"
+        ariaLabel="Lọc theo loại cụm"
+        tabs={[
+          { value: 'all', label: 'Tất cả' },
+          { value: 'verb', label: 'Động từ' },
+          { value: 'adj', label: 'Tính từ' },
+          { value: 'noun', label: 'Danh từ' },
+          { value: 'phrase', label: 'Cụm' },
+        ]}
+        searchId="collocation-search"
+        searchLabel="Tìm cụm giới từ"
+        placeholder="Tìm “depend”, “tự hào”, “in spite”…"
+        clearId="collocation-clear"
+        countId="collocation-count"
+        countText="54/54 cụm"
+      />
 
       <div class="collocation-grid" id="collocation-grid">
         <article class="collocation-item" data-cat="verb">
@@ -866,11 +837,13 @@ import '../styles/prepositions.css';
         </article>
       </div>
 
-      <div class="empty-state collocation-empty" id="collocation-empty" hidden>
-        <p class="empty-title">Không tìm thấy cụm nào phù hợp.</p>
-        <p>Thử từ khoá khác, hoặc xoá bộ lọc để xem lại cả 54 cụm.</p>
-        <button class="btn btn-ghost" id="collocation-reset" type="button">Xoá bộ lọc</button>
-      </div>
+      <EmptyState
+        id="collocation-empty"
+        class="collocation-empty"
+        title="Không tìm thấy cụm nào phù hợp."
+        text="Thử từ khoá khác, hoặc xoá bộ lọc để xem lại cả 54 cụm."
+        resetId="collocation-reset"
+      />
 
       <p class="mini-note"><strong>Mẹo làm bài:</strong> gặp câu điền giới từ, hãy đọc cả cụm trước và sau chỗ trống. Đáp án nào không đi với từ đó thì loại luôn, không cần dịch cả câu. Ví dụ: <em>depend ___</em> chỉ có thể là <strong>on</strong>.</p>
     </div>
@@ -879,75 +852,71 @@ import '../styles/prepositions.css';
   <!-- TRAPS -->
   <section class="section" id="traps">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">07 · Bẫy đề</p>
-          <h2>Mười lỗi hay mất điểm.</h2>
-          <p>Xem câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay gặp khi làm phần giới từ.</p>
-        </div>
-        <p class="section-aside"><span>10</span> lỗi<br>cần sửa</p>
-      </div>
+      <SectionHead kicker="07 · Bẫy đề" title="Mười lỗi hay mất điểm.">
+        Xem câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay gặp khi làm phần giới từ.
+        <p slot="aside" class="section-aside"><span>10</span> lỗi<br>cần sửa</p>
+      </SectionHead>
 
       <div class="trap-grid">
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I was born <strong>at</strong> 2010.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I was born <strong>in</strong> 2010.</p></div>
-          <p class="trap-why">Năm dùng in. at chỉ dùng cho giờ: at 7 a.m.</p>
-        </article>
+        <TrapCard
+          bad="I was born <strong>at</strong> 2010."
+          good="I was born <strong>in</strong> 2010."
+          why="Năm dùng in. at chỉ dùng cho giờ: at 7 a.m."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I go to school <strong>by</strong> foot.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I go to school <strong>on</strong> foot.</p></div>
-          <p class="trap-why">Đi bộ là cụm cố định on foot. by dùng cho phương tiện: by bus, by bike.</p>
-        </article>
+        <TrapCard
+          bad="I go to school <strong>by</strong> foot."
+          good="I go to school <strong>on</strong> foot."
+          why="Đi bộ là cụm cố định on foot. by dùng cho phương tiện: by bus, by bike."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>She is good <strong>in</strong> English.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>She is good <strong>at</strong> English.</p></div>
-          <p class="trap-why">good at + môn học/kỹ năng. Tương tự: bad at, excellent at.</p>
-        </article>
+        <TrapCard
+          bad="She is good <strong>in</strong> English."
+          good="She is good <strong>at</strong> English."
+          why="good at + môn học/kỹ năng. Tương tự: bad at, excellent at."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>It depends <strong>of</strong> the weather.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>It depends <strong>on</strong> the weather.</p></div>
-          <p class="trap-why">depend on = phụ thuộc vào. Đừng dịch “của” thành of.</p>
-        </article>
+        <TrapCard
+          bad="It depends <strong>of</strong> the weather."
+          good="It depends <strong>on</strong> the weather."
+          why="depend on = phụ thuộc vào. Đừng dịch “của” thành of."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I’m looking forward to <strong>see</strong> you.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I’m looking forward to <strong>seeing</strong> you.</p></div>
-          <p class="trap-why">“to” trong look forward to là giới từ → sau nó dùng V-ing.</p>
-        </article>
+        <TrapCard
+          bad="I’m looking forward to <strong>see</strong> you."
+          good="I’m looking forward to <strong>seeing</strong> you."
+          why="“to” trong look forward to là giới từ → sau nó dùng V-ing."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>We arrived <strong>to</strong> Da Nang.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>We arrived <strong>in</strong> Da Nang.</p></div>
-          <p class="trap-why">arrive in + thành phố/quốc gia; arrive at + địa điểm nhỏ. Không dùng arrive to.</p>
-        </article>
+        <TrapCard
+          bad="We arrived <strong>to</strong> Da Nang."
+          good="We arrived <strong>in</strong> Da Nang."
+          why="arrive in + thành phố/quốc gia; arrive at + địa điểm nhỏ. Không dùng arrive to."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I have lived here <strong>since</strong> three years.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I have lived here <strong>for</strong> three years.</p></div>
-          <p class="trap-why">since + mốc (since 2020); for + khoảng thời gian (for three years).</p>
-        </article>
+        <TrapCard
+          bad="I have lived here <strong>since</strong> three years."
+          good="I have lived here <strong>for</strong> three years."
+          why="since + mốc (since 2020); for + khoảng thời gian (for three years)."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>Despite of</strong> the rain, we went out.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>Despite</strong> the rain, we went out.</p></div>
-          <p class="trap-why">despite + N/V-ing (không có of). in spite of + N/V-ing mới có of.</p>
-        </article>
+        <TrapCard
+          bad="<strong>Despite of</strong> the rain, we went out."
+          good="<strong>Despite</strong> the rain, we went out."
+          why="despite + N/V-ing (không có of). in spite of + N/V-ing mới có of."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>At the end</strong>, we decided to stay home.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>In the end</strong>, we decided to stay home.</p></div>
-          <p class="trap-why">in the end = cuối cùng (kết quả). at the end of + địa điểm/thời gian.</p>
-        </article>
+        <TrapCard
+          bad="<strong>At the end</strong>, we decided to stay home."
+          good="<strong>In the end</strong>, we decided to stay home."
+          why="in the end = cuối cùng (kết quả). at the end of + địa điểm/thời gian."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I’ll meet you <strong>in</strong> Monday morning.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I’ll meet you <strong>on</strong> Monday morning.</p></div>
-          <p class="trap-why">Có thứ/ngày cụ thể thì dùng on, dù trong câu có “morning”.</p>
-        </article>
+        <TrapCard
+          bad="I’ll meet you <strong>in</strong> Monday morning."
+          good="I’ll meet you <strong>on</strong> Monday morning."
+          why="Có thứ/ngày cụ thể thì dùng on, dù trong câu có “morning”."
+        />
       </div>
     </div>
   </section>
@@ -955,13 +924,9 @@ import '../styles/prepositions.css';
   <!-- QUIZ -->
   <section class="section section-quiz" id="quiz">
     <div class="container">
-      <div class="section-head section-head-center">
-        <div>
-          <p class="section-kicker">08 · Luyện tập</p>
-          <h2>Làm thử 16 câu.</h2>
-          <p>Chọn đáp án đúng. Mỗi câu có giải thích ngay sau khi trả lời để bạn nhớ lại quy tắc.</p>
-        </div>
-      </div>
+      <SectionHead kicker="08 · Luyện tập" title="Làm thử 16 câu." center>
+        Chọn đáp án đúng. Mỗi câu có giải thích ngay sau khi trả lời để bạn nhớ lại quy tắc.
+      </SectionHead>
 
       <QuizPanel total={16} />
     </div>

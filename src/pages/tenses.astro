@@ -1,45 +1,41 @@
 ---
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
+import EmptyState from '../components/EmptyState.astro';
+import FilterToolbar from '../components/FilterToolbar.astro';
 import QuizPanel from '../components/QuizPanel.astro';
+import SectionHead from '../components/SectionHead.astro';
+import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TrapCard from '../components/TrapCard.astro';
 ---
 
 <SheetLayout slug="tenses">
   <Fragment slot="visual">
-    <div class="study-stack">
-      <div class="stack-card stack-card-back"></div>
-      <div class="stack-card stack-card-mid"></div>
-      <div class="stack-card stack-card-front">
-        <p class="mini-label">Hiện tại hoàn thành</p>
-        <p class="mini-formula">S + have/has<br>+ V3/ed</p>
-        <div class="mini-rule"></div>
-        <p class="mini-desc">Đã từng làm · Kết quả còn ảnh hưởng · Kéo dài đến hiện tại</p>
-        <div class="mini-chips">
-          <span>since 2015</span><span>for 3 years</span><span>already</span><span>just</span>
-        </div>
-        <p class="mini-example">I <mark>have visited</mark> Hue three times.</p>
-        <p class="mini-translation">Mình đã đến Huế ba lần rồi.</p>
+    <StudyStackVisual
+      noteLabel="Mẹo thi"
+      noteTitle="While + quá khứ tiếp diễn"
+      note="nhớ dạng viết lại câu!"
+      stampMiddle="giữa kỳ I"
+    >
+      <p class="mini-label">Hiện tại hoàn thành</p>
+      <p class="mini-formula">S + have/has<br>+ V3/ed</p>
+      <div class="mini-rule"></div>
+      <p class="mini-desc">Đã từng làm · Kết quả còn ảnh hưởng · Kéo dài đến hiện tại</p>
+      <div class="mini-chips">
+        <span>since 2015</span><span>for 3 years</span><span>already</span><span>just</span>
       </div>
-    </div>
-    <div class="sticky-note">
-      <span class="sticky-label">Mẹo thi</span>
-      <strong>While + quá khứ tiếp diễn</strong>
-      <span>nhớ dạng viết lại câu!</span>
-    </div>
-    <div class="stamp">Ôn thi<br>giữa kỳ I<br><span>2026–2027</span></div>
+      <p class="mini-example">I <mark>have visited</mark> Hue three times.</p>
+      <p class="mini-translation">Mình đã đến Huế ba lần rồi.</p>
+    </StudyStackVisual>
   </Fragment>
 
   <!-- MAP -->
   <section class="section" id="map">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">01 · Sơ đồ</p>
-          <h2>Nhìn một lần, thấy cả 12 thì.</h2>
-          <p>Bốn dạng, ba mốc thời gian. Bấm vào ô bất kỳ để xem chi tiết bên dưới.</p>
-        </div>
-        <p class="section-aside"><span>4</span> dạng<br><span>3</span> mốc</p>
-      </div>
+      <SectionHead kicker="01 · Sơ đồ" title="Nhìn một lần, thấy cả 12 thì.">
+        Bốn dạng, ba mốc thời gian. Bấm vào ô bất kỳ để xem chi tiết bên dưới.
+        <p slot="aside" class="section-aside"><span>4</span> dạng<br><span>3</span> mốc</p>
+      </SectionHead>
 
       <div class="map-panel">
         <div class="map-scroll">
@@ -119,14 +115,10 @@ import QuizPanel from '../components/QuizPanel.astro';
   <!-- TIMELINE -->
   <section class="section section-alt section-timeline" id="timeline">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">02 · Dòng thời gian</p>
-          <h2>12 thì trên một trục thời gian.</h2>
-          <p>Mỗi hàng là một dạng thì. Chấm tròn thể hiện hành động ngắn, thanh dài thể hiện hành động kéo dài, dấu ✓ nghĩa là đã hoàn thành trước một mốc. Bấm vào từng thì để xem chi tiết.</p>
-        </div>
-        <p class="section-aside"><span>4</span> dạng<br><span>12</span> mốc</p>
-      </div>
+      <SectionHead kicker="02 · Dòng thời gian" title="12 thì trên một trục thời gian.">
+        Mỗi hàng là một dạng thì. Chấm tròn thể hiện hành động ngắn, thanh dài thể hiện hành động kéo dài, dấu ✓ nghĩa là đã hoàn thành trước một mốc. Bấm vào từng thì để xem chi tiết.
+        <p slot="aside" class="section-aside"><span>4</span> dạng<br><span>12</span> mốc</p>
+      </SectionHead>
 
       <div class="timeline-panel">
         <div class="timeline-axis">
@@ -226,34 +218,29 @@ import QuizPanel from '../components/QuizPanel.astro';
   <!-- TENSES -->
   <section class="section" id="tenses">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">03 · Tổng hợp</p>
-          <h2>12 thì, đủ để thi.</h2>
-          <p>Mỗi thẻ có công thức, cách dùng, dấu hiệu, ví dụ và lỗi thường gặp. Dùng nút lọc hoặc ô tìm kiếm khi cần ôn nhanh.</p>
-        </div>
-        <p class="section-aside"><span>12</span> thẻ<br>in khổ A4</p>
-      </div>
+      <SectionHead kicker="03 · Tổng hợp" title="12 thì, đủ để thi.">
+        Mỗi thẻ có công thức, cách dùng, dấu hiệu, ví dụ và lỗi thường gặp. Dùng nút lọc hoặc ô tìm kiếm khi cần ôn nhanh.
+        <p slot="aside" class="section-aside"><span>12</span> thẻ<br>in khổ A4</p>
+      </SectionHead>
 
       <p class="formula-legend"><strong>S:</strong> chủ ngữ · <strong>V:</strong> động từ nguyên mẫu · <strong>V-ing:</strong> động từ thêm -ing · <strong>V2/ed:</strong> quá khứ đơn · <strong>V3/ed:</strong> quá khứ phân từ</p>
 
-      <div class="toolbar">
-        <div class="filter-tabs" role="group" aria-label="Lọc theo mốc thời gian">
-          <button class="filter-tab" type="button" data-group="all" aria-pressed="true">Tất cả</button>
-          <button class="filter-tab" type="button" data-group="present" aria-pressed="false">Hiện tại</button>
-          <button class="filter-tab" type="button" data-group="past" aria-pressed="false">Quá khứ</button>
-          <button class="filter-tab" type="button" data-group="future" aria-pressed="false">Tương lai</button>
-        </div>
-
-        <div class="search-wrap">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-          <label class="sr-only" for="tense-search">Tìm thì, dấu hiệu hoặc ví dụ</label>
-          <input id="tense-search" type="search" placeholder="Tìm “since”, “while”, “tương lai”…" autocomplete="off">
-          <button class="search-clear" id="search-clear" type="button" aria-label="Xoá tìm kiếm" hidden>&times;</button>
-        </div>
-
-        <span class="result-count" id="result-count" aria-live="polite">12/12 thì</span>
-      </div>
+      <FilterToolbar
+        tabKey="group"
+        ariaLabel="Lọc theo mốc thời gian"
+        tabs={[
+          { value: 'all', label: 'Tất cả' },
+          { value: 'present', label: 'Hiện tại' },
+          { value: 'past', label: 'Quá khứ' },
+          { value: 'future', label: 'Tương lai' },
+        ]}
+        searchId="tense-search"
+        searchLabel="Tìm thì, dấu hiệu hoặc ví dụ"
+        placeholder="Tìm “since”, “while”, “tương lai”…"
+        clearId="search-clear"
+        countId="result-count"
+        countText="12/12 thì"
+      />
 
       <div class="tense-grid" id="tense-grid">
 
@@ -659,25 +646,22 @@ import QuizPanel from '../components/QuizPanel.astro';
 
       </div>
 
-      <div class="empty-state" id="empty-state" hidden>
-        <p class="empty-title">Không tìm thấy thì nào khớp.</p>
-        <p>Thử từ khoá khác hoặc xoá bộ lọc để xem lại cả 12 thì.</p>
-        <button class="btn btn-ghost" id="reset-filters" type="button">Xoá bộ lọc</button>
-      </div>
+      <EmptyState
+        id="empty-state"
+        title="Không tìm thấy thì nào khớp."
+        text="Thử từ khoá khác hoặc xoá bộ lọc để xem lại cả 12 thì."
+        resetId="reset-filters"
+      />
     </div>
   </section>
 
   <!-- COMPARE -->
   <section class="section section-alt" id="compare">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">04 · Dễ nhầm</p>
-          <h2>Bốn cặp thì hay bị hỏi.</h2>
-          <p>Đây là những chỗ đề thi lớp 9 thường gài bẫy. Đọc kỹ ví dụ và mốc thời gian.</p>
-        </div>
-        <p class="section-aside"><span>4</span> cặp<br>dễ nhầm</p>
-      </div>
+      <SectionHead kicker="04 · Dễ nhầm" title="Bốn cặp thì hay bị hỏi.">
+        Đây là những chỗ đề thi lớp 9 thường gài bẫy. Đọc kỹ ví dụ và mốc thời gian.
+        <p slot="aside" class="section-aside"><span>4</span> cặp<br>dễ nhầm</p>
+      </SectionHead>
 
       <div class="compare-grid">
         <article class="compare-card">
@@ -761,14 +745,10 @@ import QuizPanel from '../components/QuizPanel.astro';
   <!-- SIGNALS -->
   <section class="section" id="signals">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">05 · Giải mã đề</p>
-          <h2>Thấy từ khoá, nghĩ ngay đến thì nào?</h2>
-          <p>Dấu hiệu chỉ là gợi ý — hãy đọc cả câu để xác định mốc thời gian và ý nghĩa.</p>
-        </div>
-        <p class="section-aside"><span>12</span> dấu hiệu<br>thường gặp</p>
-      </div>
+      <SectionHead kicker="05 · Giải mã đề" title="Thấy từ khoá, nghĩ ngay đến thì nào?">
+        Dấu hiệu chỉ là gợi ý — hãy đọc cả câu để xác định mốc thời gian và ý nghĩa.
+        <p slot="aside" class="section-aside"><span>12</span> dấu hiệu<br>thường gặp</p>
+      </SectionHead>
 
       <div class="signal-grid">
         <article class="signal-card">
@@ -850,63 +830,59 @@ import QuizPanel from '../components/QuizPanel.astro';
   <!-- TRAPS -->
   <section class="section section-alt traps-start" id="traps">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">06 · Bẫy đề</p>
-          <h2>Tám lỗi rất dễ mất điểm.</h2>
-          <p>Đọc câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc nhất khi làm bài về thì.</p>
-        </div>
-        <p class="section-aside"><span>8</span> lỗi<br>cần sửa</p>
-      </div>
+      <SectionHead kicker="06 · Bẫy đề" title="Tám lỗi rất dễ mất điểm.">
+        Đọc câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc nhất khi làm bài về thì.
+        <p slot="aside" class="section-aside"><span>8</span> lỗi<br>cần sửa</p>
+      </SectionHead>
 
       <div class="trap-grid">
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>She <strong>don't</strong> like conical hats.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>She <strong>doesn't</strong> like conical hats.</p></div>
-          <p class="trap-why">Chủ ngữ số ít (he/she/it) đi với doesn't, không đi với don't.</p>
-        </article>
+        <TrapCard
+          bad="She <strong>don't</strong> like conical hats."
+          good="She <strong>doesn't</strong> like conical hats."
+          why="Chủ ngữ số ít (he/she/it) đi với doesn't, không đi với don't."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I have <strong>saw</strong> that film.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I have <strong>seen</strong> that film.</p></div>
-          <p class="trap-why">Sau have/has phải là V3 (quá khứ phân từ), không phải V2.</p>
-        </article>
+        <TrapCard
+          bad="I have <strong>saw</strong> that film."
+          good="I have <strong>seen</strong> that film."
+          why="Sau have/has phải là V3 (quá khứ phân từ), không phải V2."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I <strong>have visited</strong> Hue <strong>last year</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I <strong>visited</strong> Hue last year.</p></div>
-          <p class="trap-why">“Last year” là thời gian đã kết thúc → dùng quá khứ đơn.</p>
-        </article>
+        <TrapCard
+          bad="I <strong>have visited</strong> Hue <strong>last year</strong>."
+          good="I <strong>visited</strong> Hue last year."
+          why="“Last year” là thời gian đã kết thúc → dùng quá khứ đơn."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>When I was walking home, I <strong>was seeing</strong> him.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>When I was walking home, I <strong>saw</strong> him.</p></div>
-          <p class="trap-why">Hành động ngắn xen vào dùng quá khứ đơn, không dùng thì tiếp diễn.</p>
-        </article>
+        <TrapCard
+          bad="When I was walking home, I <strong>was seeing</strong> him."
+          good="When I was walking home, I <strong>saw</strong> him."
+          why="Hành động ngắn xen vào dùng quá khứ đơn, không dùng thì tiếp diễn."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>By the time we arrived, the show <strong>started</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>By the time we arrived, the show <strong>had started</strong>.</p></div>
-          <p class="trap-why">Hành động xảy ra trước một hành động quá khứ khác dùng quá khứ hoàn thành.</p>
-        </article>
+        <TrapCard
+          bad="By the time we arrived, the show <strong>started</strong>."
+          good="By the time we arrived, the show <strong>had started</strong>."
+          why="Hành động xảy ra trước một hành động quá khứ khác dùng quá khứ hoàn thành."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>I <strong>am knowing</strong> the answer.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>I <strong>know</strong> the answer.</p></div>
-          <p class="trap-why">Know là động từ trạng thái, không chia ở thì tiếp diễn.</p>
-        </article>
+        <TrapCard
+          bad="I <strong>am knowing</strong> the answer."
+          good="I <strong>know</strong> the answer."
+          why="Know là động từ trạng thái, không chia ở thì tiếp diễn."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span>She has lived here <strong>since three years</strong>.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span>She has lived here <strong>for three years</strong>.</p></div>
-          <p class="trap-why">since + mốc thời gian (since 2020); for + khoảng thời gian (for three years).</p>
-        </article>
+        <TrapCard
+          bad="She has lived here <strong>since three years</strong>."
+          good="She has lived here <strong>for three years</strong>."
+          why="since + mốc thời gian (since 2020); for + khoảng thời gian (for three years)."
+        />
 
-        <article class="trap">
-          <div class="trap-line trap-line-bad"><span class="trap-mark" aria-hidden="true">✗</span><p><span class="sr-only">Sai: </span><strong>If it will rain</strong>, we will stay home.</p></div>
-          <div class="trap-line trap-line-good"><span class="trap-mark" aria-hidden="true">✓</span><p><span class="sr-only">Đúng: </span><strong>If it rains</strong>, we will stay home.</p></div>
-          <p class="trap-why">Mệnh đề if của câu điều kiện loại 1 dùng hiện tại đơn, không dùng will.</p>
-        </article>
+        <TrapCard
+          bad="<strong>If it will rain</strong>, we will stay home."
+          good="<strong>If it rains</strong>, we will stay home."
+          why="Mệnh đề if của câu điều kiện loại 1 dùng hiện tại đơn, không dùng will."
+        />
       </div>
     </div>
   </section>
@@ -914,13 +890,9 @@ import QuizPanel from '../components/QuizPanel.astro';
   <!-- QUIZ -->
   <section class="section section-quiz" id="quiz">
     <div class="container">
-      <div class="section-head section-head-center">
-        <div>
-          <p class="section-kicker">07 · Luyện tập</p>
-          <h2>Kiểm tra 12 thì trong 12 câu.</h2>
-          <p>Chọn đáp án đúng. Mỗi câu đều có giải thích ngay sau khi trả lời.</p>
-        </div>
-      </div>
+      <SectionHead kicker="07 · Luyện tập" title="Kiểm tra 12 thì trong 12 câu." center>
+        Chọn đáp án đúng. Mỗi câu đều có giải thích ngay sau khi trả lời.
+      </SectionHead>
 
       <QuizPanel total={12} />
     </div>
