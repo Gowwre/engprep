@@ -1,5 +1,5 @@
 /* =========================================================
-   EngPrep — Sentence construction & Part VI (Sắp xếp câu)
+   EngPrep — Sắp xếp câu
    Interactions: quiz
    ========================================================= */
 

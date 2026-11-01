@@ -37,15 +37,15 @@ const sheet = props.kind === 'sheet' ? getSheet(props.sheetSlug) : null;
 const accent = sheet ? accentPalette[sheet.accent] : accentPalette.tenses;
 const pageTitle = sheet ? sheet.title : 'Mười hai tờ, một chỗ ôn thi.';
 const displayTitle = isHome ? 'Mười hai tờ,<br>một chỗ ôn thi.' : pageTitle;
-const kicker = sheet ? sheet.cardNo : 'CHEAT SHEET · LỚP 9';
+const kicker = sheet ? sheet.cardNo : 'TỜ ÔN THI · LỚP 9';
 const lead = sheet
   ? sheet.lead
-  : '12 thì, giới từ, word forms, reading, phát âm, viết lại câu, từ vựng, cloze, biển báo, ngữ pháp, Part VI và đề thi thử 24 câu.';
+  : '12 thì, giới từ, từ loại, đọc hiểu, phát âm, viết lại câu, từ vựng, điền khuyết, biển báo, ngữ pháp, phần VI và đề thi thử 24 câu.';
 const eyebrow = sheet ? sheet.hero.eyebrow : 'Global Success 9 · Ôn thi vào 10';
 const stats = sheet
   ? sheet.hero.stats
   : [
-      { value: String(sheets.length), label: 'tờ cheat sheet' },
+      { value: String(sheets.length), label: 'tờ ôn thi' },
       { value: String(totalQuestions), label: 'câu luyện tập' },
       { value: 'A4', label: 'in được' }
     ];
@@ -92,7 +92,7 @@ const ruleBackground = sheet
           <BrandMark class="og-brand-mark" />
           <span class="og-brand-text">
             <strong>EngPrep</strong>
-            <small>Cheat sheet lớp 9</small>
+            <small>Tờ ôn thi vào 10</small>
           </span>
         </div>
         <span class="og-eyebrow-pill">{eyebrow}</span>
@@ -105,7 +105,7 @@ const ruleBackground = sheet
         </h1>
         <p class="og-lead">{lead}</p>
 
-        <div class="og-stats" aria-label="Thông tin tờ cheat sheet">
+        <div class="og-stats" aria-label="Thông tin tờ ôn thi">
           {stats.map((stat) => (
             <div class="og-stat">
               <strong>{stat.value}</strong>
@@ -115,7 +115,7 @@ const ruleBackground = sheet
         </div>
       </section>
 
-      <aside class="og-panel" aria-label={isHome ? 'Danh sách 12 tờ cheat sheet' : 'Nội dung chính của tờ'}>
+      <aside class="og-panel" aria-label={isHome ? 'Danh sách 12 tờ ôn thi' : 'Nội dung chính của tờ'}>
         <div class="og-panel-card">
           <div class="og-panel-head">
             <span class="og-panel-kicker">{isHome ? 'Bộ tài liệu' : 'Trong tờ này'}</span>

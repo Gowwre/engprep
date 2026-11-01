@@ -8,7 +8,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
       <div class="stack-card stack-card-back"></div>
       <div class="stack-card stack-card-mid"></div>
       <div class="stack-card stack-card-front">
-        <p class="mini-label">Cloze · Từ nối</p>
+        <p class="mini-label">Điền khuyết · Từ nối</p>
         <p class="cz-mini-passage">Plastic bags are convenient. ______, they are harmful to the environment.</p>
         <div class="cz-mini-options">
           <span>A. Because</span>
@@ -36,15 +36,15 @@ import SheetLayout from '../layouts/SheetLayout.astro';
         <div>
           <p class="section-kicker">01 · Bản đồ</p>
           <h2>Năm loại chỗ trống.</h2>
-          <p>Bài điền khuyết không chỉ hỏi từ vựng. Mỗi chỗ trống có thể kiểm tra ngữ pháp, nghĩa, collocation, từ nối hoặc từ thay thế.</p>
+          <p>Bài điền khuyết không chỉ hỏi từ vựng. Mỗi chỗ trống có thể kiểm tra ngữ pháp, nghĩa, cụm từ cố định (collocation), từ nối hoặc từ thay thế.</p>
         </div>
-        <p class="section-aside"><span>5</span> loại gap<br><span>12</span> câu hỏi</p>
+        <p class="section-aside"><span>5</span> loại chỗ trống<br><span>12</span> câu hỏi</p>
       </div>
 
       <div class="cz-map-grid">
         <a class="cz-map-card cz-map-grammar" href="#grammar">
           <p class="map-kicker">01 · Ngữ pháp</p>
-          <h3>Grammar gap</h3>
+          <h3>Chỗ trống ngữ pháp</h3>
           <p class="map-rule">Giới từ, dạng động từ, mệnh đề quan hệ, so sánh.</p>
           <div class="map-chips">
             <span>depend on</span><span>to-V</span><span>who</span><span>more</span>
@@ -54,7 +54,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
 
         <a class="cz-map-card cz-map-vocab" href="#vocabulary">
           <p class="map-kicker">02 · Nghĩa</p>
-          <h3>Vocabulary gap</h3>
+          <h3>Chỗ trống từ vựng</h3>
           <p class="map-rule">Đoán nghĩa từ câu trước, câu sau và chủ đề.</p>
           <div class="map-chips">
             <span>polluted</span><span>opportunity</span><span>benefit</span>
@@ -64,7 +64,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
 
         <a class="cz-map-card cz-map-colloc" href="#vocabulary">
           <p class="map-kicker">03 · Cụm từ</p>
-          <h3>Collocation</h3>
+          <h3>Cụm từ cố định</h3>
           <p class="map-rule">Từ nào đi với từ nào: make a decision, heavy rain.</p>
           <div class="map-chips">
             <span>make a decision</span><span>take part in</span><span>heavy rain</span>
@@ -74,7 +74,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
 
         <a class="cz-map-card cz-map-connector" href="#grammar">
           <p class="map-kicker">04 · Liên kết</p>
-          <h3>Connector</h3>
+          <h3>Từ nối</h3>
           <p class="map-rule">Quan hệ giữa hai câu: thêm ý, tương phản, nguyên nhân, kết quả.</p>
           <div class="map-chips">
             <span>however</span><span>because</span><span>therefore</span>
@@ -84,7 +84,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
 
         <a class="cz-map-card cz-map-ref" href="#grammar">
           <p class="map-kicker">05 · Thay thế</p>
-          <h3>Reference</h3>
+          <h3>Từ thay thế</h3>
           <p class="map-rule">It, they, this, that thay cho danh từ nào?</p>
           <div class="map-chips">
             <span>it</span><span>they</span><span>this</span><span>that</span>
@@ -112,37 +112,37 @@ import SheetLayout from '../layouts/SheetLayout.astro';
       <div class="cz-step-grid">
         <article class="cz-step">
           <span class="cz-step-no" aria-hidden="true">01</span>
-          <h3>Skim cả đoạn</h3>
+          <h3>Đọc lướt cả đoạn</h3>
           <p>Đọc nhanh để nắm chủ đề, giọng điệu và cấu trúc. Chú ý từ nối và các từ lặp lại.</p>
-          <p class="cz-step-formula">topic + tone + structure</p>
+          <p class="cz-step-formula">chủ đề + giọng điệu + cấu trúc</p>
         </article>
 
         <article class="cz-step">
           <span class="cz-step-no" aria-hidden="true">02</span>
-          <h3>Đọc quanh gap</h3>
+          <h3>Đọc quanh chỗ trống</h3>
           <p>Đọc câu chứa chỗ trống và câu trước/sau. Dự đoán loại từ và nghĩa trước khi xem đáp án.</p>
-          <p class="cz-step-formula">sentence before + after</p>
+          <p class="cz-step-formula">câu trước + câu sau</p>
         </article>
 
         <article class="cz-step">
           <span class="cz-step-no" aria-hidden="true">03</span>
           <h3>Kiểm tra ngữ pháp</h3>
-          <p>Loại từ, thì, số ít/số nhiều, giới từ đi kèm và collocation. Đây là bước dễ mất điểm nhất.</p>
-          <p class="cz-step-formula">grammar + collocation</p>
+          <p>Loại từ, thì, số ít/số nhiều, giới từ đi kèm và cụm từ cố định. Đây là bước dễ mất điểm nhất.</p>
+          <p class="cz-step-formula">ngữ pháp + cụm từ cố định</p>
         </article>
 
         <article class="cz-step">
           <span class="cz-step-no" aria-hidden="true">04</span>
           <h3>Đọc lại cả đoạn</h3>
           <p>Điền thử đáp án rồi đọc lại. Nếu câu tối nghĩa hoặc sai logic, hãy xem lại chỗ trống đó.</p>
-          <p class="cz-step-formula">plug in + reread</p>
+          <p class="cz-step-formula">điền thử + đọc lại</p>
         </article>
       </div>
 
       <div class="cz-time-strip" aria-label="Phân bổ thời gian cho một bài điền khuyết">
         <div class="cz-time-step"><span>Skim</span><strong>1 phút</strong></div>
         <span class="cz-time-arrow" aria-hidden="true">→</span>
-        <div class="cz-time-step"><span>Đọc quanh gap</span><strong>1 phút</strong></div>
+        <div class="cz-time-step"><span>Đọc quanh chỗ trống</span><strong>1 phút</strong></div>
         <span class="cz-time-arrow" aria-hidden="true">→</span>
         <div class="cz-time-step"><span>Chọn &amp; kiểm tra</span><strong>5 phút</strong></div>
         <span class="cz-time-arrow" aria-hidden="true">→</span>
@@ -171,7 +171,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
           <caption class="sr-only">Bảng dấu hiệu ngữ pháp trong bài điền khuyết</caption>
           <thead>
             <tr>
-              <th scope="col">Loại gap</th>
+              <th scope="col">Loại chỗ trống</th>
               <th scope="col">Dấu hiệu</th>
               <th scope="col">Cần kiểm tra</th>
               <th scope="col">Ví dụ</th>
@@ -235,7 +235,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
         <div>
           <p class="section-kicker">04 · Từ vựng</p>
           <h2>Chỗ trống từ vựng: tìm manh mối.</h2>
-          <p>Khi chỗ trống không phải ngữ pháp, câu xung quanh thường giấu định nghĩa, ví dụ, từ trái nghĩa hoặc collocation.</p>
+          <p>Khi chỗ trống không phải ngữ pháp, câu xung quanh thường giấu định nghĩa, ví dụ, từ trái nghĩa hoặc cụm từ cố định.</p>
         </div>
         <p class="section-aside"><span>6</span> loại manh mối<br><span>1</span> quy tắc</p>
       </div>
@@ -270,7 +270,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
         </article>
 
         <article class="cz-clue-card">
-          <p class="cz-clue-label">05 · Collocation</p>
+          <p class="cz-clue-label">05 · Cụm từ cố định</p>
           <h3>từ đi với từ</h3>
           <p>Chọn từ tạo thành cụm tự nhiên với từ đứng cạnh.</p>
           <p class="cz-clue-eg"><strong>make</strong> a decision · <strong>heavy</strong> rain · <strong>take</strong> responsibility</p>
@@ -295,7 +295,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
         <div>
           <p class="section-kicker">05 · Đoạn mẫu</p>
           <h2>Một đoạn, sáu chỗ trống.</h2>
-          <p>Đọc cả đoạn, thử điền trước khi xem đáp án. Mỗi chỗ trống đại diện cho một loại gap khác nhau.</p>
+          <p>Đọc cả đoạn, thử điền trước khi xem đáp án. Mỗi chỗ trống đại diện cho một loại chỗ trống khác nhau.</p>
         </div>
         <p class="section-aside"><span>1</span> đoạn mẫu<br><span>6</span> chỗ trống</p>
       </div>
@@ -306,7 +306,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
             <p class="section-kicker">Plastic pollution</p>
             <h3>Đọc và điền từ.</h3>
           </div>
-          <p class="cz-sample-meta">6 gaps · 8 phút</p>
+          <p class="cz-sample-meta">6 chỗ trống · 8 phút</p>
         </div>
 
         <p class="cz-passage">Plastic pollution is a serious <span class="cz-gap">(1) ______</span> in many countries. Every year, millions of tonnes of plastic end up in the sea. Fish and sea turtles often mistake small pieces of plastic <span class="cz-gap">(2) ______</span> food. <span class="cz-gap">(3) ______</span>, some countries are now taking action. They have banned single-use plastic bags and encouraged people to recycle. In Vietnam, many supermarkets have started using paper bags <span class="cz-gap">(4) ______</span> plastic ones. These changes are small, <span class="cz-gap">(5) ______</span> they can make a big difference if everyone joins in. We should all <span class="cz-gap">(6) ______</span> responsibility for protecting the environment.</p>
@@ -425,7 +425,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
         <div class="quiz-stage" id="quiz-stage" aria-live="polite"></div>
       </div>
 
-      <noscript><p class="quiz-noscript">Bật JavaScript để làm bài luyện tập tương tác. Phần cheat sheet phía trên vẫn đọc được bình thường.</p></noscript>
+      <noscript><p class="quiz-noscript">Bật JavaScript để làm bài luyện tập tương tác. Phần tờ ôn phía trên vẫn đọc được bình thường.</p></noscript>
     </div>
   </section>
 

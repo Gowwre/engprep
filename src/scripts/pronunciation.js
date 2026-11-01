@@ -1,5 +1,5 @@
 /* =========================================================
-   EngPrep — Pronunciation & stress (Phát âm, trọng âm)
+   EngPrep — Phát âm & trọng âm
    Interactions: quiz
    ========================================================= */
 

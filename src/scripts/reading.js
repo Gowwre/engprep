@@ -1,5 +1,5 @@
 /* =========================================================
-   EngPrep — Reading comprehension (Đọc hiểu)
+   EngPrep — Đọc hiểu
    Interactions: connector filter and reading quiz
    ========================================================= */
 
@@ -153,7 +153,7 @@
       explain: 'Bài nhắc đến My Khe Beach, seafood và Dragon Bridge; không có museum. Với NOT/EXCEPT, hãy kiểm tra từng phương án.'
     },
     {
-      tag: 'Điền từ',
+      tag: 'Điền khuyết',
       passage: '______ plastic bags are convenient, they are harmful to the environment.',
       q: 'Choose the best word to fill in the blank.',
       options: ['Because', 'Although', 'So', 'Therefore'],

@@ -1,5 +1,5 @@
 /* =========================================================
-   EngPrep — Word forms (Cấu tạo từ)
+   EngPrep — Từ loại (Word forms)
    Interactions: suffix filter, word-family filter and quiz
    ========================================================= */
 
@@ -460,7 +460,7 @@
       if (finalScore === total) {
         return {
           title: 'Hoàn hảo, không sai câu nào!',
-          message: 'Bạn đã nắm chắc vị trí từ loại và các họ từ thường gặp. Tự tin làm phần word forms trong đề thi nhé.'
+          message: 'Bạn đã nắm chắc vị trí từ loại và các họ từ thường gặp. Tự tin làm phần từ loại trong đề thi nhé.'
         };
       }
       if (finalScore >= total - 2) {

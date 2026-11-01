@@ -44,7 +44,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
       <div class="vc-map-grid">
         <a class="vc-map-card vc-map-colloc" href="#collocations">
           <p class="map-kicker">01 · Cách kết hợp</p>
-          <h3>Collocations</h3>
+          <h3>Cụm từ cố định</h3>
           <p class="map-rule">Học cụm 2–3 từ thay vì học từng từ riêng lẻ.</p>
           <div class="map-chips">
             <span>make a decision</span><span>heavy rain</span><span>take part in</span>
@@ -54,17 +54,17 @@ import SheetLayout from '../layouts/SheetLayout.astro';
 
         <a class="vc-map-card vc-map-phrasal" href="#collocations">
           <p class="map-kicker">02 · Nghĩa cố định</p>
-          <h3>Phrasal verbs</h3>
+          <h3>Cụm động từ</h3>
           <p class="map-rule">Động từ + tiểu từ tạo nghĩa mới, không đoán từng chữ.</p>
           <div class="map-chips">
             <span>look after</span><span>run out of</span><span>put off</span>
           </div>
-          <span class="map-link">Xem phrasal verbs →</span>
+          <span class="map-link">Xem cụm động từ →</span>
         </a>
 
         <a class="vc-map-card vc-map-topic" href="#topics">
           <p class="map-kicker">03 · Theo chủ đề</p>
-          <h3>Topic vocabulary</h3>
+          <h3>Từ vựng theo chủ đề</h3>
           <p class="map-rule">Sáu chủ đề quen thuộc: môi trường, công nghệ, du lịch, sức khoẻ, cộng đồng, học đường.</p>
           <div class="map-chips">
             <span>environment</span><span>technology</span><span>travel</span><span>health</span>
@@ -74,7 +74,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
 
         <a class="vc-map-card vc-map-entry" href="#dictionary">
           <p class="map-kicker">04 · Phần VI</p>
-          <h3>Dictionary entry</h3>
+          <h3>Mục từ điển</h3>
           <p class="map-rule">Đọc mục từ, chọn cụm phù hợp và kiểm tra ngữ pháp.</p>
           <div class="map-chips">
             <span>provide</span><span>habit</span><span>an opportunity</span>
@@ -92,27 +92,27 @@ import SheetLayout from '../layouts/SheetLayout.astro';
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="section-kicker">02 · Collocations</p>
+          <p class="section-kicker">02 · Cụm từ</p>
           <h2>32 cụm thường gặp trong đề.</h2>
-          <p>Chia thành sáu nhóm: động từ + danh từ, tính từ + danh từ, động từ + giới từ, danh từ + giới từ, cụm cố định và phrasal verbs.</p>
+          <p>Chia thành sáu nhóm: động từ + danh từ, tính từ + danh từ, động từ + giới từ, danh từ + giới từ, cụm cố định và cụm động từ.</p>
         </div>
         <p class="section-aside"><span>32</span> cụm<br><span>6</span> nhóm</p>
       </div>
 
       <div class="toolbar vc-toolbar">
-        <div class="filter-tabs" role="group" aria-label="Lọc collocations theo nhóm">
+        <div class="filter-tabs" role="group" aria-label="Lọc cụm từ theo nhóm">
           <button class="filter-tab" type="button" data-cat="all" aria-pressed="true">Tất cả</button>
           <button class="filter-tab" type="button" data-cat="vn" aria-pressed="false">V + N</button>
           <button class="filter-tab" type="button" data-cat="adjn" aria-pressed="false">Adj + N</button>
           <button class="filter-tab" type="button" data-cat="vprep" aria-pressed="false">V + prep</button>
           <button class="filter-tab" type="button" data-cat="nprep" aria-pressed="false">N + prep</button>
           <button class="filter-tab" type="button" data-cat="fixed" aria-pressed="false">Cụm cố định</button>
-          <button class="filter-tab" type="button" data-cat="phrasal" aria-pressed="false">Phrasal verb</button>
+          <button class="filter-tab" type="button" data-cat="phrasal" aria-pressed="false">Cụm động từ</button>
         </div>
 
         <div class="search-wrap">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-          <label class="sr-only" for="collocation-search">Tìm collocation</label>
+          <label class="sr-only" for="collocation-search">Tìm cụm từ</label>
           <input id="collocation-search" type="search" placeholder="Tìm “decision”, “quyết định”, “on”…" autocomplete="off">
           <button class="search-clear" id="collocation-clear" type="button" aria-label="Xoá tìm kiếm" hidden>&times;</button>
         </div>
@@ -123,7 +123,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
       <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
       <div class="vc-table-wrap">
         <table class="vc-table vc-collocation-table">
-          <caption class="sr-only">Bảng collocations thường gặp trong đề thi lớp 9</caption>
+          <caption class="sr-only">Bảng cụm từ cố định thường gặp trong đề thi lớp 9</caption>
           <thead>
             <tr>
               <th scope="col">Cụm</th>
@@ -302,31 +302,31 @@ import SheetLayout from '../layouts/SheetLayout.astro';
 
             <tr class="vc-collocation-row" data-cat="phrasal">
               <th scope="row"><code>break down</code></th>
-              <td><span class="vc-cat vc-cat-phrasal">Phrasal verb</span></td>
+              <td><span class="vc-cat vc-cat-phrasal">Cụm động từ</span></td>
               <td>hỏng máy</td>
               <td>Our car <strong>broke down</strong>.</td>
             </tr>
             <tr class="vc-collocation-row" data-cat="phrasal">
               <th scope="row"><code>run out of</code></th>
-              <td><span class="vc-cat vc-cat-phrasal">Phrasal verb</span></td>
+              <td><span class="vc-cat vc-cat-phrasal">Cụm động từ</span></td>
               <td>hết, không còn</td>
               <td>We <strong>ran out of</strong> water.</td>
             </tr>
             <tr class="vc-collocation-row" data-cat="phrasal">
               <th scope="row"><code>put off</code></th>
-              <td><span class="vc-cat vc-cat-phrasal">Phrasal verb</span></td>
+              <td><span class="vc-cat vc-cat-phrasal">Cụm động từ</span></td>
               <td>hoãn lại</td>
               <td>They <strong>put off</strong> the meeting.</td>
             </tr>
             <tr class="vc-collocation-row" data-cat="phrasal">
               <th scope="row"><code>turn off</code></th>
-              <td><span class="vc-cat vc-cat-phrasal">Phrasal verb</span></td>
+              <td><span class="vc-cat vc-cat-phrasal">Cụm động từ</span></td>
               <td>tắt</td>
               <td><strong>Turn off</strong> the lights.</td>
             </tr>
             <tr class="vc-collocation-row" data-cat="phrasal">
               <th scope="row"><code>give up</code></th>
-              <td><span class="vc-cat vc-cat-phrasal">Phrasal verb</span></td>
+              <td><span class="vc-cat vc-cat-phrasal">Cụm động từ</span></td>
               <td>từ bỏ</td>
               <td>Don’t <strong>give up</strong>.</td>
             </tr>
@@ -358,7 +358,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
 
       <div class="vc-topic-grid">
         <article class="vc-topic-card vc-topic-env">
-          <p class="vc-topic-label">01 · Environment</p>
+          <p class="vc-topic-label">01 · Môi trường</p>
           <h3>Môi trường</h3>
           <div class="vc-topic-chips">
             <span>pollution</span><span>climate change</span><span>renewable energy</span><span>plastic waste</span><span>protect the environment</span><span>reduce emissions</span><span>natural disaster</span><span>wildlife</span>
@@ -366,7 +366,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
         </article>
 
         <article class="vc-topic-card vc-topic-tech">
-          <p class="vc-topic-label">02 · Technology &amp; AI</p>
+          <p class="vc-topic-label">02 · Công nghệ &amp; AI</p>
           <h3>Công nghệ</h3>
           <div class="vc-topic-chips">
             <span>artificial intelligence</span><span>deepfake</span><span>misinformation</span><span>social media</span><span>digital device</span><span>online safety</span><span>spread information</span><span>influence public opinion</span>
@@ -374,7 +374,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
         </article>
 
         <article class="vc-topic-card vc-topic-travel">
-          <p class="vc-topic-label">03 · Travel</p>
+          <p class="vc-topic-label">03 · Du lịch</p>
           <h3>Du lịch</h3>
           <div class="vc-topic-chips">
             <span>destination</span><span>accommodation</span><span>tourist attraction</span><span>local cuisine</span><span>package tour</span><span>means of transport</span><span>book a ticket</span><span>go sightseeing</span>
@@ -382,7 +382,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
         </article>
 
         <article class="vc-topic-card vc-topic-health">
-          <p class="vc-topic-label">04 · Health</p>
+          <p class="vc-topic-label">04 · Sức khoẻ</p>
           <h3>Sức khoẻ</h3>
           <div class="vc-topic-chips">
             <span>balanced diet</span><span>physical activity</span><span>mental health</span><span>get enough sleep</span><span>cut down on fast food</span><span>stay healthy</span><span>overweight</span><span>stress</span>
@@ -390,7 +390,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
         </article>
 
         <article class="vc-topic-card vc-topic-community">
-          <p class="vc-topic-label">05 · Community</p>
+          <p class="vc-topic-label">05 · Cộng đồng</p>
           <h3>Cộng đồng</h3>
           <div class="vc-topic-chips">
             <span>volunteer</span><span>charity</span><span>community service</span><span>cultural heritage</span><span>festival</span><span>custom</span><span>tradition</span><span>take part in</span>
@@ -398,7 +398,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
         </article>
 
         <article class="vc-topic-card vc-topic-school">
-          <p class="vc-topic-label">06 · Education</p>
+          <p class="vc-topic-label">06 · Học đường</p>
           <h3>Học đường</h3>
           <div class="vc-topic-chips">
             <span>curriculum</span><span>assignment</span><span>extracurricular activity</span><span>vocational school</span><span>qualification</span><span>higher education</span><span>pass an exam</span><span>school facilities</span>
@@ -593,7 +593,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
         <div class="quiz-stage" id="quiz-stage" aria-live="polite"></div>
       </div>
 
-      <noscript><p class="quiz-noscript">Bật JavaScript để làm bài luyện tập tương tác. Phần cheat sheet phía trên vẫn đọc được bình thường.</p></noscript>
+      <noscript><p class="quiz-noscript">Bật JavaScript để làm bài luyện tập tương tác. Phần tờ ôn phía trên vẫn đọc được bình thường.</p></noscript>
     </div>
   </section>
 

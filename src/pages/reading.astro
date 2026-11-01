@@ -101,8 +101,8 @@ import SheetLayout from '../layouts/SheetLayout.astro';
         </a>
 
         <a class="rc-map-card rc-map-cloze" href="#types">
-          <p class="map-kicker">07 · Điền từ</p>
-          <h3>Cloze</h3>
+          <p class="map-kicker">07 · Điền khuyết</p>
+          <h3>Điền khuyết</h3>
           <p class="map-rule">Ngữ pháp, từ nối và nghĩa của cả câu.</p>
           <div class="map-chips">
             <span>fill in</span><span>best fits</span><span>however</span>
@@ -130,30 +130,30 @@ import SheetLayout from '../layouts/SheetLayout.astro';
       <div class="rc-step-grid">
         <article class="rc-step">
           <span class="rc-step-no" aria-hidden="true">01</span>
-          <h3>Skim · 1 phút</h3>
+          <h3>Đọc lướt · 1 phút</h3>
           <p>Đọc tiêu đề, câu đầu và câu cuối mỗi đoạn. Chú ý từ lặp lại và từ nối để nắm ý chính.</p>
-          <p class="rc-step-formula">title + first / last sentence</p>
+          <p class="rc-step-formula">tiêu đề + câu đầu / cuối</p>
         </article>
 
         <article class="rc-step">
           <span class="rc-step-no" aria-hidden="true">02</span>
           <h3>Đọc câu hỏi · 1 phút</h3>
           <p>Gạch chân keyword: tên riêng, số, ngày, từ hỏi và từ phủ định như NOT, EXCEPT.</p>
-          <p class="rc-step-formula">who · when · why · NOT</p>
+          <p class="rc-step-formula">ai · khi nào · tại sao · NOT</p>
         </article>
 
         <article class="rc-step">
           <span class="rc-step-no" aria-hidden="true">03</span>
-          <h3>Scan · 5 phút</h3>
+          <h3>Đọc quét · 5 phút</h3>
           <p>Tìm keyword hoặc từ đồng nghĩa trong bài. Đáp án thường được viết lại (paraphrase), không lặp y nguyên.</p>
-          <p class="rc-step-formula">keyword → synonym → evidence</p>
+          <p class="rc-step-formula">từ khoá → từ đồng nghĩa → bằng chứng</p>
         </article>
 
         <article class="rc-step">
           <span class="rc-step-no" aria-hidden="true">04</span>
           <h3>Kiểm tra · 1 phút</h3>
           <p>Loại đáp án sai phạm vi, sai số lượng hoặc quá cực đoan. Chỉ chọn khi tìm được câu chứng minh.</p>
-          <p class="rc-step-formula">correct = evidence in the text</p>
+          <p class="rc-step-formula">đáp án đúng = bằng chứng trong bài</p>
         </article>
       </div>
 
@@ -217,7 +217,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
             <tr>
               <th scope="row"><span class="rc-cat rc-cat-detail">Chi tiết</span></th>
               <td><code>according to</code> · <code>who</code> · <code>when</code> · <code>where</code></td>
-              <td>Gạch keyword, scan tên/số/ngày rồi đọc câu chứa thông tin đó.</td>
+              <td>Gạch từ khoá, đọc quét tên/số/ngày rồi đọc câu chứa thông tin đó.</td>
               <td>Chọn đáp án đúng nhưng không trả lời đúng câu hỏi.</td>
             </tr>
             <tr>
@@ -245,7 +245,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
               <td>Bỏ qua chữ NOT hoặc EXCEPT trong câu hỏi.</td>
             </tr>
             <tr>
-              <th scope="row"><span class="rc-cat rc-cat-cloze">Điền từ</span></th>
+              <th scope="row"><span class="rc-cat rc-cat-cloze">Điền khuyết</span></th>
               <td><code>fill in</code> · <code>best fits</code> · <code>gap</code></td>
               <td>Đọc cả câu, xét ngữ pháp, từ nối và nghĩa, rồi thử từng đáp án.</td>
               <td>Chỉ nhìn từ đứng trước/sau mà bỏ qua nghĩa cả câu.</td>
@@ -644,7 +644,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
         <div class="quiz-stage" id="quiz-stage" aria-live="polite"></div>
       </div>
 
-      <noscript><p class="quiz-noscript">Bật JavaScript để làm bài luyện tập tương tác. Phần cheat sheet phía trên vẫn đọc được bình thường.</p></noscript>
+      <noscript><p class="quiz-noscript">Bật JavaScript để làm bài luyện tập tương tác. Phần tờ ôn phía trên vẫn đọc được bình thường.</p></noscript>
     </div>
   </section>
 

@@ -1,5 +1,5 @@
 /* =========================================================
-   EngPrep — Signs, notices & communication (Biển báo, giao tiếp)
+   EngPrep — Biển báo & giao tiếp
    Interactions: quiz
    ========================================================= */
 

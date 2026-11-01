@@ -1,5 +1,5 @@
 /* =========================================================
-   EngPrep — Mixed mini-exam (Đề thi thử 24 câu)
+   EngPrep — Thi thử 24 câu
    Interactions: timed exam, grading, skill breakdown, review
    ========================================================= */
 
@@ -64,7 +64,7 @@
           explain: 'Có “I have ever seen” → so sánh nhất: the most interesting.'
         },
         {
-          tag: 'Collocation',
+          tag: 'Cụm từ cố định',
           q: 'Students should ______ part in the school clean-up.',
           options: ['make', 'do', 'have', 'take'],
           answer: 3,
@@ -129,7 +129,7 @@
         '<p>Many students find it difficult to learn new words. They often write a word again and again, <strong>(11) ______</strong> they still forget it. A better way is to learn words in phrases. <strong>(12) ______</strong>, you can remember “make a decision” more easily than “decision” alone. You should also <strong>(13) ______</strong> the words in example sentences.</p>',
       questions: [
         {
-          tag: 'Cloze · Từ nối',
+          tag: 'Điền khuyết · Từ nối',
           context: 'They often write a word again and again, ______ they still forget it.',
           q: 'Chọn từ cho chỗ trống (11).',
           options: ['so', 'because', 'or', 'but'],
@@ -137,7 +137,7 @@
           explain: 'Hai vế tương phản: viết nhiều lần nhưng vẫn quên → but.'
         },
         {
-          tag: 'Cloze · Ví dụ',
+          tag: 'Điền khuyết · Ví dụ',
           context: 'A better way is to learn words in phrases. ______, you can remember “make a decision” more easily than “decision” alone.',
           q: 'Chọn từ cho chỗ trống (12).',
           options: ['For example', 'However', 'Although', 'Therefore'],
@@ -145,7 +145,7 @@
           explain: 'Câu sau đưa ra ví dụ minh hoạ → For example.'
         },
         {
-          tag: 'Cloze · Từ vựng',
+          tag: 'Điền khuyết · Từ vựng',
           context: 'You should also ______ the words in example sentences.',
           q: 'Chọn từ cho chỗ trống (13).',
           options: ['make', 'use', 'do', 'take'],
@@ -163,7 +163,7 @@
         '<p>Many people think that recycling is enough to solve the plastic problem. However, recycling has limits. Only a small percentage of plastic is actually recycled, and much of it ends up in landfills or the ocean. The best solution is to reduce the amount of plastic we use in the first place. Simple actions such as carrying a reusable bottle or refusing plastic bags can make a big difference.</p>',
       questions: [
         {
-          tag: 'Reading · Ý chính',
+          tag: 'Đọc hiểu · Ý chính',
           q: 'What is the main idea of the passage?',
           options: [
             'Recycling is the best solution.',
@@ -175,7 +175,7 @@
           explain: 'Đoạn văn nêu hạn chế của recycling và khuyên giảm dùng nhựa trước tiên.'
         },
         {
-          tag: 'Reading · Chi tiết',
+          tag: 'Đọc hiểu · Chi tiết',
           q: 'According to the passage, what happens to much of the plastic?',
           options: [
             'It is turned into new bottles.',
@@ -187,7 +187,7 @@
           explain: 'Thông tin trong bài: “much of it ends up in landfills or the ocean.”'
         },
         {
-          tag: 'Reading · Suy luận',
+          tag: 'Đọc hiểu · Suy luận',
           q: 'What can we infer from the passage?',
           options: [
             'Plastic bags are always free.',
@@ -203,25 +203,25 @@
     {
       id: 'word-forms',
       kicker: 'Phần 6 · Câu 17–19',
-      label: 'Cấu tạo từ',
+      label: 'Từ loại',
       instruction: 'Chọn dạng đúng của từ trong ngoặc.',
       questions: [
         {
-          tag: 'Word forms · Danh từ',
+          tag: 'Từ loại · Danh từ',
           q: 'The earthquake caused serious ______ to the city. (DAMAGE)',
           options: ['damage', 'damaged', 'damaging', 'damages'],
           answer: 0,
           explain: 'Sau tính từ “serious” cần danh từ. Damage là danh từ không đếm được → damage.'
         },
         {
-          tag: 'Word forms · Tính từ',
+          tag: 'Từ loại · Tính từ',
           q: 'She is a very ______ student; she always finishes her work on time. (RESPONSIBILITY)',
           options: ['responsibility', 'responsibly', 'responsibilities', 'responsible'],
           answer: 3,
           explain: 'Cần tính từ bổ nghĩa cho “student” → responsible.'
         },
         {
-          tag: 'Word forms · Trạng từ',
+          tag: 'Từ loại · Trạng từ',
           q: 'The teacher explained the lesson ______. (CLEAR)',
           options: ['clear', 'clearness', 'clearly', 'clarify'],
           answer: 2,
@@ -232,11 +232,11 @@
     {
       id: 'part-vi',
       kicker: 'Phần 7 · Câu 20–21',
-      label: 'Part VI',
+      label: 'Phần VI',
       instruction: 'Sắp xếp câu hoặc chọn cụm từ đúng từ mục từ điển.',
       questions: [
         {
-          tag: 'Part VI · Sắp xếp',
+          tag: 'Phần VI · Sắp xếp',
           chunks: ['The local government', 'has encouraged', 'people', 'to use public transport', 'to reduce pollution'],
           q: 'Which sentence is correctly arranged?',
           options: [
@@ -249,7 +249,7 @@
           explain: 'Cấu trúc: S + has encouraged + O + to-V + to reduce pollution. Cụm mục đích đứng cuối câu.'
         },
         {
-          tag: 'Part VI · Từ điển',
+          tag: 'Phần VI · Từ điển',
           dict: dictProvide,
           context: 'The school can ______ to students who need extra help.',
           q: 'Choose the best phrase (2–3 words) to fill the gap.',
@@ -563,7 +563,7 @@
     }
     return {
       title: 'Cần ôn thêm một vòng.',
-      message: 'Đừng lo nếu điểm chưa cao. Xem lại câu sai, quay lại các tờ cheat sheet tương ứng rồi làm đề lần nữa.'
+      message: 'Đừng lo nếu điểm chưa cao. Xem lại câu sai, quay lại các tờ ôn tương ứng rồi làm đề lần nữa.'
     };
   }
 

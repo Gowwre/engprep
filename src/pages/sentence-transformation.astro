@@ -8,7 +8,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
       <div class="stack-card stack-card-back"></div>
       <div class="stack-card stack-card-mid"></div>
       <div class="stack-card stack-card-front">
-        <p class="mini-label">Viết lại câu · Wish</p>
+        <p class="mini-label">Viết lại câu · Câu ước</p>
         <p class="wt-mini-original">I don’t have a bike.</p>
         <p class="wt-mini-arrow">→ I wish I had a bike.</p>
         <div class="mini-rule"></div>
@@ -46,7 +46,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
       <div class="wt-map-grid">
         <a class="wt-map-card wt-map-condition" href="#formulas">
           <p class="map-kicker">01 · Điều kiện</p>
-          <h3>If / Unless</h3>
+          <h3>Câu điều kiện (If / Unless)</h3>
           <p class="map-rule">Đổi câu điều kiện, giữ nguyên hệ quả.</p>
           <div class="map-chips">
             <span>If + V</span><span>Unless</span><span>will/can</span>
@@ -56,7 +56,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
 
         <a class="wt-map-card wt-map-wish" href="#formulas">
           <p class="map-kicker">02 · Ước</p>
-          <h3>Wish</h3>
+          <h3>Câu ước (Wish)</h3>
           <p class="map-rule">Lùi thì để diễn tả điều không có thật.</p>
           <div class="map-chips">
             <span>wish + V2/ed</span><span>wish + had + V3</span>
@@ -76,7 +76,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
 
         <a class="wt-map-card wt-map-since" href="#formulas">
           <p class="map-kicker">04 · Mốc thời gian</p>
-          <h3>Since</h3>
+          <h3>Since + mốc thời gian</h3>
           <p class="map-rule">Đổi giữa “last wrote” và “haven’t written since”.</p>
           <div class="map-chips">
             <span>It has been …</span><span>since</span><span>last + V2/ed</span>
@@ -96,7 +96,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
 
         <a class="wt-map-card wt-map-phrasal" href="#formulas">
           <p class="map-kicker">06 · Cụm động từ</p>
-          <h3>Phrasal verbs</h3>
+          <h3>Cụm động từ (Phrasal verbs)</h3>
           <p class="map-rule">Thay cụm động từ bằng cách diễn đạt tương đương.</p>
           <div class="map-chips">
             <span>break down</span><span>run out of</span><span>put off</span>
@@ -106,7 +106,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
 
         <a class="wt-map-card wt-map-contrast" href="#formulas">
           <p class="map-kicker">07 · Tương phản / lý do</p>
-          <h3>Although / Because</h3>
+          <h3>Nhượng bộ – nguyên nhân (Although / Because)</h3>
           <p class="map-rule">Clause đổi thành N hoặc V-ing sau despite/because of.</p>
           <div class="map-chips">
             <span>although</span><span>despite</span><span>because of</span>
@@ -116,7 +116,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
 
         <a class="wt-map-card wt-map-reported" href="#formulas">
           <p class="map-kicker">08 · Gián tiếp</p>
-          <h3>Reported speech</h3>
+          <h3>Câu gián tiếp (Reported speech)</h3>
           <p class="map-rule">Lùi thì, đổi đại từ và trạng từ thời gian.</p>
           <div class="map-chips">
             <span>said</span><span>told</span><span>suggested</span>
@@ -159,7 +159,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
               <td>If you study hard, you will pass.<br>Unless you study hard, you will fail.</td>
             </tr>
             <tr>
-              <th scope="row"><span class="wt-cat wt-cat-wish">Wish</span></th>
+              <th scope="row"><span class="wt-cat wt-cat-wish">Câu ước</span></th>
               <td><code>S + wish + S + V2/ed</code> (hiện tại)<br><code>S + wish + S + had + V3/ed</code> (quá khứ)</td>
               <td>I wish I had a bike.<br>She wishes she had studied harder.</td>
             </tr>
@@ -199,7 +199,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
 
       <div class="wt-formula-notes">
         <article class="wt-formula-note">
-          <h3>Wish: lùi một thì</h3>
+          <h3>Câu ước: lùi một thì</h3>
           <p>Hiện tại đơn → quá khứ đơn; quá khứ đơn → quá khứ hoàn thành. <em>I don’t have a bike → I wish I had a bike.</em></p>
         </article>
         <article class="wt-formula-note">
@@ -207,7 +207,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
           <p><strong>so + adj</strong> nhưng <strong>such + (a/an) + adj + N</strong>. Gặp danh từ không đếm được, không dùng “a/an”: <em>such awful weather</em>.</p>
         </article>
         <article class="wt-formula-note">
-          <h3>Although / Because: đổi loại từ</h3>
+          <h3>Nhượng bộ / nguyên nhân: đổi loại từ</h3>
           <p>Sau <strong>although/because</strong> là mệnh đề; sau <strong>despite/in spite of/because of</strong> là N hoặc V-ing.</p>
         </article>
       </div>
@@ -364,7 +364,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
         <div class="quiz-stage" id="quiz-stage" aria-live="polite"></div>
       </div>
 
-      <noscript><p class="quiz-noscript">Bật JavaScript để làm bài luyện tập tương tác. Phần cheat sheet phía trên vẫn đọc được bình thường.</p></noscript>
+      <noscript><p class="quiz-noscript">Bật JavaScript để làm bài luyện tập tương tác. Phần tờ ôn phía trên vẫn đọc được bình thường.</p></noscript>
     </div>
   </section>
 

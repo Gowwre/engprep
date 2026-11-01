@@ -1,5 +1,5 @@
 /* =========================================================
-   EngPrep — Cloze & gap-fill (Điền khuyết)
+   EngPrep — Điền khuyết
    Interactions: quiz
    ========================================================= */
 
@@ -24,7 +24,7 @@
       explain: 'be interested in = hứng thú với. Đây là giới từ đi kèm tính từ, không dịch theo tiếng Việt.'
     },
     {
-      tag: 'Collocation',
+      tag: 'Cụm từ cố định',
       passage: 'We should ______ responsibility for protecting the environment.',
       q: 'Which verb forms the correct collocation?',
       options: ['make', 'do', 'have', 'take'],
@@ -72,7 +72,7 @@
       explain: 'Vế sau là kết quả của việc mưa to → Because. However/Although chỉ tương phản; So chỉ kết quả nhưng không đứng đầu câu theo cách này.'
     },
     {
-      tag: 'Collocation',
+      tag: 'Cụm từ cố định',
       passage: 'He ______ a decision to study abroad.',
       q: 'Which verb forms the correct collocation?',
       options: ['made', 'did', 'took', 'had'],

@@ -48,7 +48,6 @@ export interface Sheet {
   slug: SheetSlug;
   href: string;
   navLabel: string;
-  shortTitle: string;
   title: string;
   metaTitle: string;
   metaDescription: string;
@@ -81,9 +80,8 @@ export const sheets: Sheet[] = [
     slug: 'tenses',
     href: sitePath('tenses/'),
     navLabel: '12 thì',
-    shortTitle: '12 thì',
-    title: '12 thì tiếng Anh',
-    metaTitle: '12 Thì Tiếng Anh — Cheatsheet lớp 9 | EngPrep',
+    title: '12 thì',
+    metaTitle: '12 thì tiếng Anh — Tờ ôn thi lớp 9 | EngPrep',
     metaDescription:
       'Tờ ôn thi 12 thì tiếng Anh dành cho học sinh lớp 9: công thức, cách dùng, dấu hiệu nhận biết, ví dụ và bẫy đề thi theo chương trình Global Success 9.',
     cardNo: '01 / TENSES',
@@ -109,9 +107,9 @@ export const sheets: Sheet[] = [
       { id: 'quiz', label: 'Luyện tập' }
     ],
     hero: {
-      eyebrow: 'Global Success 9 · Unit 1–3',
+      eyebrow: 'Global Success 9 · Ôn thi vào 10',
       titleHtml:
-        '12 thì tiếng Anh,<br>gói gọn trong <span class="marker">một tờ</span> <span class="nowrap">cheat sheet.</span>',
+        '12 thì tiếng Anh,<br>gói gọn trong <span class="marker">một tờ</span>.',
       lead: 'Công thức, cách dùng, dấu hiệu nhận biết và bẫy đề thi, tất cả trong một trang, kèm ví dụ về văn hoá, cộng đồng và lối sống lành mạnh.',
       stats: [
         { value: '12', label: 'thì cần nắm' },
@@ -128,11 +126,10 @@ export const sheets: Sheet[] = [
     slug: 'prepositions',
     href: sitePath('prepositions/'),
     navLabel: 'Giới từ',
-    shortTitle: 'Giới từ',
-    title: 'Giới từ tiếng Anh',
-    metaTitle: 'Giới từ tiếng Anh — Cheatsheet lớp 9 | EngPrep',
+    title: 'Giới từ',
+    metaTitle: 'Giới từ tiếng Anh — Tờ ôn thi lớp 9 | EngPrep',
     metaDescription:
-      'Cheatsheet giới từ tiếng Anh cho học sinh lớp 9: cách dùng at/on/in, giới từ chỉ thời gian, nơi chốn, chuyển động, 54 cụm cố định, 10 lỗi thường gặp và bài kiểm tra 16 câu có giải thích.',
+      'Tờ ôn giới từ tiếng Anh cho học sinh lớp 9: cách dùng at/on/in, giới từ chỉ thời gian, nơi chốn, chuyển động, 54 cụm cố định, 10 lỗi thường gặp và bài kiểm tra 16 câu có giải thích.',
     cardNo: '02 / PREPOSITIONS',
     badge: '54 cụm',
     accent: 'prep',
@@ -175,12 +172,11 @@ export const sheets: Sheet[] = [
   {
     slug: 'word-forms',
     href: sitePath('word-forms/'),
-    navLabel: 'Word forms',
-    shortTitle: 'Word forms',
-    title: 'Word forms tiếng Anh',
-    metaTitle: 'Word Forms (Cấu tạo từ) — Cheatsheet lớp 9 | EngPrep',
+    navLabel: 'Từ loại',
+    title: 'Từ loại',
+    metaTitle: 'Từ loại — Tờ ôn thi lớp 9 | EngPrep',
     metaDescription:
-      'Cheatsheet word forms cho học sinh lớp 9: vị trí từ loại trong câu, 33 hậu tố, 15 tiền tố, 40 họ từ thường gặp, 10 bẫy đề và 16 câu luyện tập có giải thích.',
+      'Tờ ôn từ loại cho học sinh lớp 9: vị trí từ loại trong câu, 33 hậu tố, 15 tiền tố, 40 họ từ thường gặp, 10 bẫy đề và 16 câu luyện tập có giải thích.',
     cardNo: '03 / WORD FORMS',
     badge: '40 họ từ',
     accent: 'word',
@@ -206,7 +202,7 @@ export const sheets: Sheet[] = [
     hero: {
       eyebrow: 'Global Success 9 · Ôn thi vào 10',
       titleHtml:
-        'Word forms,<br>xác định đúng <span class="marker">từ loại</span>.',
+        'Từ loại,<br>xác định đúng <span class="marker">dạng từ</span>.',
       lead: 'Đọc vị trí trong câu, nhận diện hậu tố và chọn đúng dạng từ. Trang này gom quy tắc, bảng hậu tố – tiền tố, 40 họ từ và 10 bẫy đề thường gặp, kèm 16 câu tự kiểm tra.',
       stats: [
         { value: '40', label: 'họ từ' },
@@ -223,19 +219,18 @@ export const sheets: Sheet[] = [
     slug: 'reading',
     href: sitePath('reading/'),
     navLabel: 'Đọc hiểu',
-    shortTitle: 'Reading',
-    title: 'Reading comprehension',
-    metaTitle: 'Reading Comprehension (Đọc hiểu) — Cheatsheet lớp 9 | EngPrep',
+    title: 'Đọc hiểu',
+    metaTitle: 'Đọc hiểu — Tờ ôn thi lớp 9 | EngPrep',
     metaDescription:
-      'Cheatsheet đọc hiểu tiếng Anh lớp 9: 7 dạng câu hỏi, chiến lược skim và scan, 26 từ nối, đoạn đọc mẫu có chú thích, 10 bẫy đề và 12 câu luyện tập có giải thích.',
+      'Tờ ôn đọc hiểu tiếng Anh lớp 9: 7 dạng câu hỏi, chiến lược đọc lướt (skim) và đọc quét (scan), 26 từ nối, đoạn đọc mẫu có chú thích, 10 bẫy đề và 12 câu luyện tập có giải thích.',
     cardNo: '04 / READING',
     badge: '7 dạng câu',
     accent: 'reading',
-    lead: 'Skim để nắm ý, scan để tìm bằng chứng và xử lý 7 dạng câu hỏi đọc hiểu thường gặp.',
+    lead: 'Đọc lướt (skim) để nắm ý, đọc quét (scan) để tìm bằng chứng và xử lý 7 dạng câu hỏi đọc hiểu thường gặp.',
     preview: ['main idea', 'detail', 'inference', 'however'],
     highlights: [
       { text: 'Bản đồ 7 dạng câu hỏi và cách xử lý' },
-      { text: 'Quy trình 4 bước skim – scan – chọn bằng chứng' },
+      { text: 'Quy trình 4 bước: đọc lướt – đọc quét – chọn bằng chứng' },
       { strong: '26 từ nối', text: ' và đoạn đọc mẫu có chú thích' },
       { text: '10 bẫy đề và 12 câu luyện tập' }
     ],
@@ -253,8 +248,8 @@ export const sheets: Sheet[] = [
     hero: {
       eyebrow: 'Global Success 9 · Ôn thi vào 10',
       titleHtml:
-        'Reading comprehension,<br>đọc đúng <span class="marker">ý chính</span>.',
-      lead: 'Không cần dịch từng chữ. Trang này dạy cách skim, scan, tìm bằng chứng và xử lý 7 dạng câu hỏi đọc hiểu — kèm đoạn đọc mẫu, 10 bẫy đề và 12 câu luyện tập.',
+        'Đọc hiểu,<br>nắm đúng <span class="marker">ý chính</span>.',
+      lead: 'Không cần dịch từng chữ. Trang này dạy cách đọc lướt (skim), đọc quét (scan), tìm bằng chứng và xử lý 7 dạng câu hỏi đọc hiểu — kèm đoạn đọc mẫu, 10 bẫy đề và 12 câu luyện tập.',
       stats: [
         { value: '7', label: 'dạng câu hỏi' },
         { value: '4', label: 'bước đọc' },
@@ -270,12 +265,11 @@ export const sheets: Sheet[] = [
     slug: 'pronunciation',
     href: sitePath('pronunciation/'),
     navLabel: 'Phát âm',
-    shortTitle: 'Pronunciation',
-    title: 'Pronunciation & stress',
-    metaTitle: 'Pronunciation & Stress (Phát âm, trọng âm) — Cheatsheet lớp 9 | EngPrep',
+    title: 'Phát âm & trọng âm',
+    metaTitle: 'Phát âm & trọng âm — Tờ ôn thi lớp 9 | EngPrep',
     metaDescription:
-      'Cheatsheet phát âm và trọng âm tiếng Anh lớp 9: quy tắc -ed, -s/-es, các cặp nguyên âm dễ nhầm, trọng âm 2 và 3 âm tiết, 10 bẫy đề và 16 câu luyện tập có giải thích.',
-    cardNo: '05 / SOUNDS',
+      'Tờ ôn phát âm và trọng âm tiếng Anh lớp 9: quy tắc -ed, -s/-es, các cặp nguyên âm dễ nhầm, trọng âm 2 và 3 âm tiết, 10 bẫy đề và 16 câu luyện tập có giải thích.',
+    cardNo: '05 / PRONUNCIATION',
     badge: '4 nhóm âm',
     accent: 'sound',
     lead: 'Đuôi -ed, -s/-es, nguyên âm và trọng âm: bốn nhóm âm thanh xuất hiện ở câu 1–4 của đề.',
@@ -317,15 +311,14 @@ export const sheets: Sheet[] = [
     slug: 'sentence-transformation',
     href: sitePath('sentence-transformation/'),
     navLabel: 'Viết lại câu',
-    shortTitle: 'Rewriting',
-    title: 'Sentence transformation',
-    metaTitle: 'Sentence Transformation (Viết lại câu) — Cheatsheet lớp 9 | EngPrep',
+    title: 'Viết lại câu',
+    metaTitle: 'Viết lại câu — Tờ ôn thi lớp 9 | EngPrep',
     metaDescription:
-      'Cheatsheet viết lại câu tiếng Anh lớp 9: câu điều kiện, wish, cụm từ + V-ing, hiện tại hoàn thành + since, so/such, cụm động từ, tương phản và 16 câu luyện tập có giải thích.',
+      'Tờ ôn viết lại câu tiếng Anh lớp 9: câu điều kiện, câu ước (wish), cụm từ + V-ing, hiện tại hoàn thành + since, so/such, cụm động từ, tương phản và 16 câu luyện tập có giải thích.',
     cardNo: '06 / REWRITING',
     badge: '8 nhóm mẫu',
     accent: 'write',
-    lead: 'Điều kiện, wish, V-ing, since, so/such và cụm động từ: tám nhóm viết lại câu lặp lại qua các đề.',
+    lead: 'Câu điều kiện, câu ước (wish), V-ing, since, so/such và cụm động từ: tám nhóm viết lại câu lặp lại qua các đề.',
     preview: ['If / Unless', 'wish + V2/ed', 'fond of + V-ing', 'so … that'],
     highlights: [
       { text: 'Bản đồ 8 nhóm mẫu viết lại câu' },
@@ -362,19 +355,18 @@ export const sheets: Sheet[] = [
     slug: 'vocabulary',
     href: sitePath('vocabulary/'),
     navLabel: 'Từ vựng',
-    shortTitle: 'Vocabulary',
-    title: 'Vocabulary & collocations',
-    metaTitle: 'Vocabulary & Collocations (Từ vựng) — Cheatsheet lớp 9 | EngPrep',
+    title: 'Từ vựng & cụm từ',
+    metaTitle: 'Từ vựng & cụm từ — Tờ ôn thi lớp 9 | EngPrep',
     metaDescription:
-      'Cheatsheet từ vựng và collocations tiếng Anh lớp 9: 32 cụm thường gặp, phrasal verbs, từ vựng theo chủ đề, mục từ điển phần VI, 10 bẫy đề và 16 câu luyện tập có giải thích.',
+      'Tờ ôn từ vựng và cụm từ tiếng Anh lớp 9: 32 cụm thường gặp, cụm động từ (phrasal verbs), từ vựng theo chủ đề, mục từ điển phần VI, 10 bẫy đề và 16 câu luyện tập có giải thích.',
     cardNo: '07 / VOCABULARY',
     badge: '32 cụm',
     accent: 'vocab',
-    lead: 'Collocations, phrasal verbs, từ vựng theo chủ đề và cách đọc mục từ điển ở phần VI.',
+    lead: 'Cụm từ cố định (collocations), cụm động từ (phrasal verbs), từ vựng theo chủ đề và cách đọc mục từ điển ở phần VI.',
     preview: ['make a decision', 'look after', 'renewable energy', 'eating habits'],
     highlights: [
-      { text: '32 cụm collocation thường gặp, có bộ lọc' },
-      { text: 'Phrasal verbs và từ vựng 6 chủ đề thi' },
+      { text: '32 cụm từ cố định thường gặp, có bộ lọc' },
+      { text: 'Cụm động từ và từ vựng 6 chủ đề thi' },
       { strong: 'Mục từ điển', text: ' và cách chọn cụm 2–3 từ' },
       { text: '10 bẫy đề và 16 câu luyện tập' }
     ],
@@ -382,7 +374,7 @@ export const sheets: Sheet[] = [
     questionCount: 16,
     sections: [
       { id: 'map', label: 'Bản đồ' },
-      { id: 'collocations', label: 'Collocations' },
+      { id: 'collocations', label: 'Cụm từ' },
       { id: 'topics', label: 'Chủ đề' },
       { id: 'dictionary', label: 'Từ điển' },
       { id: 'traps', label: 'Bẫy đề' },
@@ -392,9 +384,9 @@ export const sheets: Sheet[] = [
       eyebrow: 'Global Success 9 · Ôn thi vào 10',
       titleHtml:
         'Từ vựng,<br>học theo <span class="marker">cả cụm</span>.',
-      lead: 'Đừng học từ đơn lẻ. Trang này gom collocations, phrasal verbs, từ vựng theo chủ đề và cách xử lý mục từ điển ở phần VI — kèm 16 câu luyện tập.',
+      lead: 'Đừng học từ đơn lẻ. Trang này gom cụm từ cố định (collocations), cụm động từ (phrasal verbs), từ vựng theo chủ đề và cách xử lý mục từ điển ở phần VI — kèm 16 câu luyện tập.',
       stats: [
-        { value: '32', label: 'cụm collocation' },
+        { value: '32', label: 'cụm từ cố định' },
         { value: '10', label: 'bẫy đề' },
         { value: '16', label: 'câu luyện tập' }
       ],
@@ -408,15 +400,14 @@ export const sheets: Sheet[] = [
     slug: 'cloze',
     href: sitePath('cloze/'),
     navLabel: 'Điền khuyết',
-    shortTitle: 'Cloze',
-    title: 'Cloze & gap-fill',
-    metaTitle: 'Cloze & Gap-fill (Điền khuyết) — Cheatsheet lớp 9 | EngPrep',
+    title: 'Điền khuyết',
+    metaTitle: 'Điền khuyết — Tờ ôn thi lớp 9 | EngPrep',
     metaDescription:
-      'Cheatsheet điền khuyết tiếng Anh lớp 9: 5 loại chỗ trống, chiến lược đọc cả đoạn, bảng ngữ pháp và từ vựng, đoạn mẫu có giải thích, 10 bẫy đề và 12 câu luyện tập.',
+      'Tờ ôn điền khuyết tiếng Anh lớp 9: 5 loại chỗ trống, chiến lược đọc cả đoạn, bảng ngữ pháp và từ vựng, đoạn mẫu có giải thích, 10 bẫy đề và 12 câu luyện tập.',
     cardNo: '08 / CLOZE',
-    badge: '5 loại gap',
+    badge: '5 loại chỗ trống',
     accent: 'cloze',
-    lead: 'Ngữ pháp, từ vựng, collocation, từ nối và từ thay thế: năm loại chỗ trống trong bài điền khuyết.',
+    lead: 'Ngữ pháp, từ vựng, cụm từ cố định, từ nối và từ thay thế: năm loại chỗ trống trong bài điền khuyết.',
     preview: ['however', 'depend on', 'much water', 'instead of'],
     highlights: [
       { text: 'Bản đồ 5 loại chỗ trống và cách nhận diện' },
@@ -424,7 +415,7 @@ export const sheets: Sheet[] = [
       { strong: 'Bảng ngữ pháp', text: ' và manh mối từ vựng' },
       { text: 'Đoạn mẫu, 10 bẫy đề và 12 câu luyện tập' }
     ],
-    meta: '5 loại gap · 12 câu hỏi',
+    meta: '5 loại chỗ trống · 12 câu hỏi',
     questionCount: 12,
     sections: [
       { id: 'map', label: 'Bản đồ' },
@@ -438,10 +429,10 @@ export const sheets: Sheet[] = [
     hero: {
       eyebrow: 'Global Success 9 · Ôn thi vào 10',
       titleHtml:
-        'Cloze,<br>đọc cả câu để <span class="marker">điền đúng</span>.',
+        'Điền khuyết,<br>đọc cả câu để <span class="marker">điền đúng</span>.',
       lead: 'Bài điền khuyết kiểm tra cả ngữ pháp lẫn từ vựng. Trang này gom 5 loại chỗ trống, quy trình 4 bước, bảng tra nhanh và 12 câu luyện tập — kèm 10 bẫy đề.',
       stats: [
-        { value: '5', label: 'loại gap' },
+        { value: '5', label: 'loại chỗ trống' },
         { value: '10', label: 'bẫy đề' },
         { value: '12', label: 'câu luyện tập' }
       ],
@@ -455,12 +446,11 @@ export const sheets: Sheet[] = [
     slug: 'signs',
     href: sitePath('signs/'),
     navLabel: 'Biển báo',
-    shortTitle: 'Signs',
-    title: 'Signs, notices & communication',
+    title: 'Biển báo & giao tiếp',
     metaTitle:
-      'Signs, Notices & Communication (Biển báo, giao tiếp) — Cheatsheet lớp 9 | EngPrep',
+      'Biển báo & giao tiếp — Tờ ôn thi lớp 9 | EngPrep',
     metaDescription:
-      'Cheatsheet biển báo, thông báo và giao tiếp tiếng Anh lớp 9: 4 nhóm biển báo, 20 mẫu thường gặp, 8 chức năng giao tiếp, 4 câu đề mẫu, 10 bẫy đề và 16 câu luyện tập có giải thích.',
+      'Tờ ôn biển báo, thông báo và giao tiếp tiếng Anh lớp 9: 4 nhóm biển báo, 20 mẫu thường gặp, 8 chức năng giao tiếp, 4 câu đề mẫu, 10 bẫy đề và 16 câu luyện tập có giải thích.',
     cardNo: '09 / SIGNS',
     badge: '4 nhóm biển',
     accent: 'signs',
@@ -503,11 +493,10 @@ export const sheets: Sheet[] = [
     slug: 'grammar',
     href: sitePath('grammar/'),
     navLabel: 'Ngữ pháp',
-    shortTitle: 'Grammar',
-    title: 'Grammar essentials',
-    metaTitle: 'Grammar Essentials (Ngữ pháp cốt lõi) — Cheatsheet lớp 9 | EngPrep',
+    title: 'Ngữ pháp cốt lõi',
+    metaTitle: 'Ngữ pháp cốt lõi — Tờ ôn thi lớp 9 | EngPrep',
     metaDescription:
-      'Cheatsheet ngữ pháp cốt lõi tiếng Anh lớp 9: từ nối, mệnh đề quan hệ, so sánh, cấu trúc động từ, wish, câu hỏi đuôi, lượng từ, cấu trúc nhờ vả, 10 bẫy đề và 18 câu luyện tập.',
+      'Tờ ôn ngữ pháp cốt lõi tiếng Anh lớp 9: từ nối, mệnh đề quan hệ, so sánh, cấu trúc động từ, câu ước (wish), câu hỏi đuôi, lượng từ, cấu trúc nhờ vả, 10 bẫy đề và 18 câu luyện tập.',
     cardNo: '10 / GRAMMAR',
     badge: '4 nhóm lõi',
     accent: 'grammar',
@@ -551,24 +540,23 @@ export const sheets: Sheet[] = [
     slug: 'sentence-construction',
     href: sitePath('sentence-construction/'),
     navLabel: 'Sắp xếp câu',
-    shortTitle: 'Word order',
-    title: 'Sentence construction',
+    title: 'Sắp xếp câu',
     metaTitle:
-      'Sentence Construction & Part VI (Sắp xếp câu) — Cheatsheet lớp 9 | EngPrep',
+      'Sắp xếp câu — Tờ ôn thi lớp 9 | EngPrep',
     metaDescription:
-      'Cheatsheet sắp xếp câu và Part VI tiếng Anh lớp 9: trật tự từ, cụm danh từ, trạng từ, 4 bước ghép câu, mục từ điển, 10 bẫy đề và 16 câu luyện tập có giải thích.',
+      'Tờ ôn sắp xếp câu và phần VI tiếng Anh lớp 9: trật tự từ, cụm danh từ, trạng từ, 4 bước ghép câu, mục từ điển, 10 bẫy đề và 16 câu luyện tập có giải thích.',
     cardNo: '11 / PART VI',
-    badge: '2 dạng Part VI',
+    badge: '2 dạng phần VI',
     accent: 'sentence',
-    lead: 'Sắp xếp từ thành câu và chọn cụm từ từ mục từ điển: hai dạng Part VI trong bốn đề.',
+    lead: 'Sắp xếp từ thành câu và chọn cụm từ từ mục từ điển: hai dạng phần VI trong bốn đề.',
     preview: ['S + V + O', 'not only … but also', 'by presenting', 'break the habit'],
     highlights: [
-      { text: 'Bản đồ 2 dạng Part VI và cách nhận diện' },
+      { text: 'Bản đồ 2 dạng phần VI và cách nhận diện' },
       { text: 'Trật tự từ, cụm danh từ, trạng từ và 4 mẫu câu' },
       { strong: 'Mục từ điển', text: ' và cách chọn cụm 2–3 từ' },
       { text: '10 bẫy đề và 16 câu luyện tập' }
     ],
-    meta: '2 dạng Part VI · 16 câu hỏi',
+    meta: '2 dạng phần VI · 16 câu hỏi',
     questionCount: 16,
     sections: [
       { id: 'map', label: 'Bản đồ' },
@@ -583,14 +571,14 @@ export const sheets: Sheet[] = [
       eyebrow: 'Global Success 9 · Ôn thi vào 10',
       titleHtml:
         'Sắp xếp câu,<br>ghép đúng <span class="marker">trật tự</span>.',
-      lead: 'Part VI chỉ có 2 câu nhưng dễ mất điểm vì trật tự từ và dạng cụm. Trang này gom quy tắc ghép câu, cách đọc mục từ điển, 10 bẫy đề và 16 câu luyện tập.',
+      lead: 'Phần VI chỉ có 2 câu nhưng dễ mất điểm vì trật tự từ và dạng cụm. Trang này gom quy tắc ghép câu, cách đọc mục từ điển, 10 bẫy đề và 16 câu luyện tập.',
       stats: [
-        { value: '2', label: 'dạng Part VI' },
+        { value: '2', label: 'dạng phần VI' },
         { value: '4', label: 'bước ghép câu' },
         { value: '16', label: 'câu luyện tập' }
       ],
       actions: [
-        { label: 'Xem bản đồ Part VI', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Xem bản đồ phần VI', href: '#map', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 16 câu luyện tập', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
@@ -599,11 +587,10 @@ export const sheets: Sheet[] = [
     slug: 'mock-exam',
     href: sitePath('mock-exam/'),
     navLabel: 'Thi thử',
-    shortTitle: 'Mini exam',
-    title: 'Mixed mini-exam',
-    metaTitle: 'Mixed Mini-Exam (Đề thi thử 24 câu) — EngPrep lớp 9',
+    title: 'Thi thử',
+    metaTitle: 'Thi thử 24 câu — Tờ ôn thi lớp 9 | EngPrep',
     metaDescription:
-      'Đề thi thử tiếng Anh lớp 9 24 câu, 45 phút: phát âm, ngữ pháp, giao tiếp, biển báo, cloze, reading, word forms, Part VI và viết lại câu. Chấm điểm, thống kê kỹ năng và giải thích đáp án.',
+      'Đề thi thử tiếng Anh lớp 9 24 câu, 45 phút: phát âm, ngữ pháp, giao tiếp, biển báo, điền khuyết, đọc hiểu, từ loại, phần VI và viết lại câu. Chấm điểm, thống kê kỹ năng và giải thích đáp án.',
     cardNo: '12 / MOCK EXAM',
     badge: '24 câu · 45 phút',
     accent: 'mock',
@@ -623,10 +610,10 @@ export const sheets: Sheet[] = [
       { id: 'exam', label: 'Làm bài' }
     ],
     hero: {
-      eyebrow: 'Global Success 9 · Đề thi thử',
+      eyebrow: 'Global Success 9 · Ôn thi vào 10',
       titleHtml:
-        '24 câu,<br>đủ <span class="marker">8 nhóm câu</span>.',
-      lead: 'Đề rút gọn 45 phút, trộn đủ phát âm, ngữ pháp, giao tiếp, biển báo, cloze, reading, word forms, Part VI và viết lại câu. Làm bài, chấm điểm và xem lại lỗi sai.',
+        'Thi thử 24 câu,<br>đủ <span class="marker">8 nhóm câu</span>.',
+      lead: 'Đề rút gọn 45 phút, trộn đủ phát âm, ngữ pháp, giao tiếp, biển báo, điền khuyết, đọc hiểu, từ loại, phần VI và viết lại câu. Làm bài, chấm điểm và xem lại lỗi sai.',
       stats: [
         { value: '24', label: 'câu hỏi' },
         { value: '45', label: 'phút' },
@@ -644,7 +631,7 @@ export function getSheet(slug: SheetSlug): Sheet {
   const sheet = sheets.find((item) => item.slug === slug);
 
   if (!sheet) {
-    throw new Error(`Unknown cheat sheet: ${slug}`);
+    throw new Error(`Unknown sheet: ${slug}`);
   }
 
   return sheet;

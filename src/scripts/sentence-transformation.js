@@ -1,5 +1,5 @@
 /* =========================================================
-   EngPrep — Sentence transformation (Viết lại câu)
+   EngPrep — Viết lại câu
    Interactions: quiz
    ========================================================= */
 

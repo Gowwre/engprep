@@ -42,8 +42,8 @@ const siteUrl = new URL(sitePath(), origin).href;
 const resolvedImageAlt =
   ogImageAlt ??
   (sheet
-    ? `Bìa cheat sheet “${sheet.title}” của EngPrep`
-    : 'EngPrep — 12 tờ cheat sheet tiếng Anh lớp 9');
+    ? `Bìa tờ “${sheet.title}” của EngPrep`
+    : 'EngPrep — 12 tờ ôn thi tiếng Anh lớp 9');
 
 const websiteId = `${siteUrl}#website`;
 const websiteLd = {
@@ -51,9 +51,9 @@ const websiteLd = {
   '@id': websiteId,
   url: siteUrl,
   name: 'EngPrep',
-  alternateName: 'EngPrep — Cheat sheet lớp 9',
+  alternateName: 'EngPrep — Tờ ôn thi lớp 9',
   description:
-    'Bộ cheat sheet tiếng Anh lớp 9 theo chương trình Global Success 9: ngữ pháp, từ vựng, đọc hiểu, phát âm, viết lại câu và đề thi thử 24 câu.',
+    'Bộ tờ ôn thi tiếng Anh lớp 9 theo chương trình Global Success 9: ngữ pháp, từ vựng, đọc hiểu, phát âm, viết lại câu và đề thi thử 24 câu.',
   inLanguage: 'vi',
   image: ogImageUrl,
   publisher: {
@@ -79,7 +79,7 @@ if (sheet) {
     url: canonical,
     inLanguage: 'vi',
     image: ogImageUrl,
-    learningResourceType: 'Cheat sheet',
+    learningResourceType: 'Tờ ôn thi',
     educationalLevel: 'Lớp 9',
     typicalAgeRange: '14-15',
     isAccessibleForFree: true,

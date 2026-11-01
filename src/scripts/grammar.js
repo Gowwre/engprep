@@ -1,5 +1,5 @@
 /* =========================================================
-   EngPrep — Grammar essentials (Ngữ pháp cốt lõi)
+   EngPrep — Ngữ pháp cốt lõi
    Interactions: quiz
    ========================================================= */
 
