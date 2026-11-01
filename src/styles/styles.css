@@ -1,6 +1,7 @@
 /* =========================================================
-   EngPrep — 12 thì tiếng Anh
-   A study-notebook style cheatsheet for Grade 9
+   EngPrep — shared layout and quiz styles
+   Base tokens, header/footer, hero, sections, quiz shell,
+   tenses-specific blocks, motion, responsive and print.
    ========================================================= */
 
 :root {

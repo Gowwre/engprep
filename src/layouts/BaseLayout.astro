@@ -1,4 +1,6 @@
 ---
+/* Each page imports global.css before its own stylesheet so the cascade
+   stays global → page. Keep that import out of this layout. */
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import PageNav from '../components/PageNav.astro';
@@ -6,7 +8,6 @@ import { getSheet, sheets, type SheetNavItem, type SheetSlug } from '../data/she
 import { sitePath } from '../lib/urls';
 import beVietnamFont from '../assets/fonts/be-vietnam-pro-vietnamese-400.woff2?url';
 import loraFont from '../assets/fonts/lora-normal-vietnamese.woff2?url';
-import '../styles/global.css';
 
 interface Props {
   title: string;

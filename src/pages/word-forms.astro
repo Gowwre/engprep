@@ -1,5 +1,8 @@
 ---
+import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
+import QuizPanel from '../components/QuizPanel.astro';
+import '../styles/word-forms.css';
 ---
 
 <SheetLayout slug="word-forms">
@@ -1251,20 +1254,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
         </div>
       </div>
 
-      <p class="quiz-best" id="quiz-best" aria-live="polite">Điểm cao nhất của bạn: chưa có</p>
-
-      <div class="quiz-shell">
-        <div class="quiz-top">
-          <span class="quiz-step" id="quiz-step">Câu 1 / 16</span>
-          <div class="quiz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="16" aria-valuenow="1" aria-label="Tiến độ làm bài">
-            <span id="quiz-bar"></span>
-          </div>
-          <span class="quiz-score" id="quiz-score">0 đúng</span>
-        </div>
-        <div class="quiz-stage" id="quiz-stage" aria-live="polite"></div>
-      </div>
-
-      <noscript><p class="quiz-noscript">Bật JavaScript để làm bài luyện tập tương tác. Phần tờ ôn phía trên vẫn đọc được bình thường.</p></noscript>
+      <QuizPanel total={16} />
     </div>
   </section>
 

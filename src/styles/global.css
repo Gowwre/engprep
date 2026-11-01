@@ -1,17 +1,6 @@
 /* Shared stylesheet entry point.
-   Order matters: base tokens and components first, page layers after. */
+   Page-specific sheets are imported by their page so each route
+   only loads the layout and quiz styles it actually uses. */
 
 @import './fonts.css';
 @import './styles.css';
-@import './home.css';
-@import './prepositions.css';
-@import './word-forms.css';
-@import './reading.css';
-@import './pronunciation.css';
-@import './sentence-transformation.css';
-@import './vocabulary.css';
-@import './cloze.css';
-@import './signs.css';
-@import './grammar.css';
-@import './sentence-construction.css';
-@import './mock-exam.css';

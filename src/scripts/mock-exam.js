@@ -3,6 +3,8 @@
    Interactions: timed exam, grading, skill breakdown, review
    ========================================================= */
 
+import { formatGap } from './lib/quiz.js';
+
 (function () {
   'use strict';
 
@@ -374,12 +376,8 @@
   function updateBestLabel() {
     const best = getBest();
     bestEl.textContent = best > 0
-      ? 'Điểm cao nhất: ' + best + '/' + total
-      : 'Điểm cao nhất: chưa có';
-  }
-
-  function formatGap(text) {
-    return text.replace('______', '<span class="gap"><span class="sr-only">chỗ trống</span></span>');
+      ? 'Điểm cao nhất của bạn: ' + best + '/' + total
+      : 'Điểm cao nhất của bạn: chưa có';
   }
 
   function dictHtml(dict) {

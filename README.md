@@ -1,6 +1,6 @@
 # EngPrep
 
-Bộ cheat sheet tiếng Anh lớp 9, xây bằng [Astro](https://astro.build/).
+Bộ tờ ôn thi tiếng Anh lớp 9, xây bằng [Astro](https://astro.build/).
 
 **Live:** https://gowwre.github.io/engprep/
 
@@ -47,95 +47,89 @@ Khi đổi tên repo, dùng custom domain hoặc deploy ở một đường dẫ
 
 ```text
 src/
+├── assets/fonts/          # font self-hosted (Be Vietnam Pro, Lora, Roboto Mono)
 ├── components/
+│   ├── BrandMark.astro
 │   ├── PageNav.astro
+│   ├── QuizPanel.astro    # khung quiz dùng chung cho mọi tờ
 │   ├── SiteFooter.astro
 │   └── SiteHeader.astro
 ├── data/
-│   └── sheets.ts          # registry của tất cả cheat sheet
+│   └── sheets.ts          # registry của tất cả tờ ôn thi
 ├── layouts/
 │   ├── BaseLayout.astro   # head, theme, header/footer, shared JS
-│   └── SheetLayout.astro  # hero + page nav cho một cheat sheet
+│   └── SheetLayout.astro  # hero + page nav cho một tờ
 ├── lib/
 │   └── urls.ts            # helper link có hỗ trợ base
 ├── pages/
 │   ├── og/
 │   │   └── [slug].astro   # render ảnh Open Graph 1200×630
-│   ├── cloze.astro
-│   ├── grammar.astro
-│   ├── index.astro
-│   ├── mock-exam.astro
-│   ├── prepositions.astro
-│   ├── pronunciation.astro
-│   ├── reading.astro
-│   ├── sentence-construction.astro
-│   ├── sentence-transformation.astro
-│   ├── signs.astro
-│   ├── tenses.astro
-│   ├── vocabulary.astro
-│   └── word-forms.astro
+│   └── <slug>.astro       # một page cho mỗi tờ
 ├── scripts/
+│   ├── lib/
+│   │   ├── filter.js      # filter + search dùng chung
+│   │   └── quiz.js        # engine trắc nghiệm dùng chung
 │   ├── generate-og.mjs    # render PNG vào public/og/
 │   ├── site.js            # theme, menu, print, scrollspy
-│   ├── tenses.js          # filter, search, quiz của trang 12 thì
-│   ├── prepositions.js    # filter, quiz của trang giới từ
-│   ├── word-forms.js      # filter, search, quiz của trang word forms
-│   ├── reading.js         # filter, quiz của trang đọc hiểu
-│   ├── pronunciation.js   # quiz của trang phát âm, trọng âm
-│   ├── sentence-transformation.js # quiz của trang viết lại câu
-│   ├── vocabulary.js      # filter, quiz của trang từ vựng
-│   ├── cloze.js           # quiz của trang điền khuyết
-│   ├── signs.js           # quiz của trang biển báo, giao tiếp
-│   ├── grammar.js         # quiz của trang ngữ pháp cốt lõi
-│   ├── sentence-construction.js # quiz của trang sắp xếp câu, Part VI
-│   └── mock-exam.js       # đề thi thử 24 câu, đồng hồ và chấm điểm
+│   └── <slug>.js          # câu hỏi + cấu hình riêng của từng tờ
 └── styles/
-    ├── cloze.css
-    ├── global.css         # entry point, import theo đúng thứ tự
-    ├── grammar.css
-    ├── home.css
-    ├── mock-exam.css
+    ├── fonts.css          # @font-face
+    ├── global.css         # entry point dùng chung: fonts + styles.css
+    ├── styles.css         # layout, header/footer, hero, quiz shell, 12 thì
     ├── og.css             # style cho ảnh Open Graph
-    ├── prepositions.css
-    ├── pronunciation.css
-    ├── reading.css
-    ├── sentence-construction.css
-    ├── sentence-transformation.css
-    ├── signs.css
-    ├── styles.css
-    ├── vocabulary.css
-    └── word-forms.css
+    └── <slug>.css         # style riêng, chỉ load ở page tương ứng
 ```
 
-## Thêm một cheat sheet mới
+Mỗi page import `global.css` trước rồi mới import CSS riêng của trang:
+
+```astro
+---
+import '../styles/global.css';
+import SheetLayout from '../layouts/SheetLayout.astro';
+import QuizPanel from '../components/QuizPanel.astro';
+import '../styles/<slug>.css';
+---
+```
+
+Thứ tự này giữ cascade đúng và để mỗi route chỉ tải stylesheet nó cần. Trang chủ import thêm `home.css`; trang 12 thì dùng luôn phần tenses trong `styles.css`.
+
+## Thêm một tờ ôn thi mới
 
 1. Thêm slug mới vào union `SheetSlug`, rồi thêm một object vào `sheets` trong `src/data/sheets.ts`:
    - `slug`, `href` (dùng `sitePath('slug/')`)
    - tiêu đề, mô tả, badge, preview, highlights
+   - `questionCount` phải khớp số câu trong script của trang
    - `sections` cho thanh điều hướng trong trang
    - `hero` cho phần mở đầu
    - `accent`: hiện có `tenses`, `prep`, `word`, `reading`, `sound`, `write`, `vocab`, `cloze`, `signs`, `grammar`, `sentence` và `mock`; thêm biến thể CSS nếu muốn màu mới
-2. Tạo `src/pages/<slug>.astro`:
+2. Tạo `src/pages/<slug>.astro`, import `global.css`, layout, `QuizPanel` và CSS riêng như mẫu ở trên.
+3. Dùng khung quiz chung trong section luyện tập:
 
 ```astro
----
-import SheetLayout from '../layouts/SheetLayout.astro';
----
+<QuizPanel total={16} />
+```
 
-<SheetLayout slug="<slug>">
-  <Fragment slot="visual">
-    <!-- thẻ minh hoạ riêng của trang -->
-  </Fragment>
+4. Tạo `src/scripts/<slug>.js` với mảng `questions` và gọi engine dùng chung. Không copy lại phần render/chấm điểm:
 
-  <!-- nội dung các section -->
-</SheetLayout>
+```js
+import { initQuiz } from './lib/quiz.js';
 
+const questions = [/* ... */];
+
+initQuiz({
+  questions,
+  storageKey: 'engprep-<slug>-best',
+  reviewLinks: [{ href: '#<section>', label: 'Ôn lại lý thuyết' }]
+});
+```
+
+5. Nếu trang có bộ lọc/tìm kiếm, dùng `initFilter` từ `src/scripts/lib/filter.js` thay vì viết lại logic `hidden`, đếm kết quả và nút xoá.
+6. Import script bằng thẻ `<script>` ở cuối page:
+
+```astro
 <script>
   import '../scripts/<slug>.js';
 </script>
 ```
-
-3. Nếu có CSS riêng, thêm file vào `src/styles/` và import trong `src/styles/global.css` (sau `styles.css`).
-4. Nếu có tương tác riêng, thêm file vào `src/scripts/` và import bằng thẻ `<script>` của trang.
 
 Header, footer, navigation và danh sách trên trang chủ tự động lấy từ registry, không cần sửa thủ công.

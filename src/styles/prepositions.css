@@ -429,27 +429,6 @@
   font-style: italic;
 }
 
-.prep-table .cell-list {
-  display: grid;
-  gap: 3px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.prep-table .cell-list li {
-  position: relative;
-  padding-left: 11px;
-}
-
-.prep-table .cell-list li::before {
-  position: absolute;
-  left: 0;
-  color: var(--row, var(--clay));
-  content: "·";
-  font-weight: 900;
-}
-
 .row-at { --row: var(--clay); }
 .row-on { --row: var(--jade); }
 .row-in { --row: var(--indigo); }
@@ -1266,10 +1245,6 @@
 
   .collocation-empty {
     display: none !important;
-  }
-
-  .section-collocations .collocation-item[hidden] {
-    display: block !important;
   }
 
   #collocations .mini-note {
