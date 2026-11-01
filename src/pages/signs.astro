@@ -6,6 +6,7 @@ import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TableShell from '../components/TableShell.astro';
 import TrapCard from '../components/TrapCard.astro';
 import '../styles/signs.css';
 ---
@@ -152,142 +153,143 @@ import '../styles/signs.css';
         <p slot="aside" class="section-aside"><span>20</span> mẫu<br><span>4</span> nhóm</p>
       </SectionHead>
 
-      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
-      <div class="sg-table-wrap">
-        <table class="sg-table">
-          <caption class="sr-only">Bảng 20 biển báo, thông báo thường gặp và nghĩa</caption>
-          <thead>
-            <tr>
-              <th scope="col">Biển / thông báo</th>
-              <th scope="col">Nhóm</th>
-              <th scope="col">Nghĩa</th>
-              <th scope="col">Bẫy thường gặp</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"><code>NO PARKING</code></th>
-              <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
-              <td>Không được đỗ xe.</td>
-              <td>Không phải “có chỗ đỗ xe”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>NO SMOKING</code></th>
-              <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
-              <td>Không được hút thuốc.</td>
-              <td>Không phải “khu vực hút thuốc”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>DO NOT ENTER</code></th>
-              <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
-              <td>Không được đi vào.</td>
-              <td>Không phải “lối vào”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>KEEP OUT</code></th>
-              <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
-              <td>Không được lại gần hoặc vào khu vực này.</td>
-              <td>Không phải “giữ cửa mở”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>STAFF ONLY</code></th>
-              <td><span class="sg-cat sg-cat-ban">Giới hạn</span></td>
-              <td>Chỉ nhân viên được vào.</td>
-              <td>Không phải “mọi người đều được vào”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>DANGER: HIGH VOLTAGE</code></th>
-              <td><span class="sg-cat sg-cat-warning">Cảnh báo</span></td>
-              <td>Nguy hiểm: điện cao thế.</td>
-              <td>Không phải “ổ điện bình thường”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>WET FLOOR</code></th>
-              <td><span class="sg-cat sg-cat-warning">Cảnh báo</span></td>
-              <td>Sàn ướt, coi chừng trượt.</td>
-              <td>Không phải “sàn đã lau xong”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>MIND THE GAP</code></th>
-              <td><span class="sg-cat sg-cat-warning">Cảnh báo</span></td>
-              <td>Coi chừng khoảng trống.</td>
-              <td>Không phải “đứng chờ ở đây”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>BEWARE OF DOG</code></th>
-              <td><span class="sg-cat sg-cat-warning">Cảnh báo</span></td>
-              <td>Coi chừng chó.</td>
-              <td>Không phải “được mang chó vào”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>PUSH / PULL</code></th>
-              <td><span class="sg-cat sg-cat-rule">Hướng dẫn</span></td>
-              <td>Đẩy / kéo cửa.</td>
-              <td>Không phải “cấm mở cửa”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>KEEP LEFT</code></th>
-              <td><span class="sg-cat sg-cat-rule">Hướng dẫn</span></td>
-              <td>Đi bên trái.</td>
-              <td>Không phải “rẽ trái”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>QUEUE HERE</code></th>
-              <td><span class="sg-cat sg-cat-rule">Hướng dẫn</span></td>
-              <td>Xếp hàng tại đây.</td>
-              <td>Không phải “mua vé ở đây”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>USE OTHER DOOR</code></th>
-              <td><span class="sg-cat sg-cat-rule">Hướng dẫn</span></td>
-              <td>Dùng cửa khác.</td>
-              <td>Không phải “cửa này bị khóa vĩnh viễn”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>OPEN DAILY 8 A.M.–9 P.M.</code></th>
-              <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
-              <td>Mở hằng ngày từ 8 giờ đến 21 giờ.</td>
-              <td>Không phải “mở cả đêm”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>FREE ENTRY</code></th>
-              <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
-              <td>Vào cửa miễn phí.</td>
-              <td>Không phải “đồ ăn miễn phí”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>50% OFF</code></th>
-              <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
-              <td>Giảm 50% giá.</td>
-              <td>Không phải “mua 1 tặng 1”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>BOOKING REQUIRED</code></th>
-              <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
-              <td>Phải đặt trước.</td>
-              <td>Không phải “không cần đặt trước”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>OUT OF ORDER</code></th>
-              <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
-              <td>Máy hoặc hệ thống bị hỏng.</td>
-              <td>Không phải “hãy đặt hàng”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>SOLD OUT</code></th>
-              <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
-              <td>Hết vé hoặc hết hàng.</td>
-              <td>Không phải “đang bán”.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>NO FOOD OR DRINK</code></th>
-              <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
-              <td>Không mang đồ ăn hoặc đồ uống vào.</td>
-              <td>Không phải “chỉ cấm đồ ăn”.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <TableShell
+        wrapperClass="sg-table-wrap"
+        tableClass="sg-table"
+        caption="Bảng 20 biển báo, thông báo thường gặp và nghĩa"
+        hint
+      >
+        <thead>
+          <tr>
+            <th scope="col">Biển / thông báo</th>
+            <th scope="col">Nhóm</th>
+            <th scope="col">Nghĩa</th>
+            <th scope="col">Bẫy thường gặp</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><code>NO PARKING</code></th>
+            <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
+            <td>Không được đỗ xe.</td>
+            <td>Không phải “có chỗ đỗ xe”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>NO SMOKING</code></th>
+            <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
+            <td>Không được hút thuốc.</td>
+            <td>Không phải “khu vực hút thuốc”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>DO NOT ENTER</code></th>
+            <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
+            <td>Không được đi vào.</td>
+            <td>Không phải “lối vào”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>KEEP OUT</code></th>
+            <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
+            <td>Không được lại gần hoặc vào khu vực này.</td>
+            <td>Không phải “giữ cửa mở”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>STAFF ONLY</code></th>
+            <td><span class="sg-cat sg-cat-ban">Giới hạn</span></td>
+            <td>Chỉ nhân viên được vào.</td>
+            <td>Không phải “mọi người đều được vào”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>DANGER: HIGH VOLTAGE</code></th>
+            <td><span class="sg-cat sg-cat-warning">Cảnh báo</span></td>
+            <td>Nguy hiểm: điện cao thế.</td>
+            <td>Không phải “ổ điện bình thường”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>WET FLOOR</code></th>
+            <td><span class="sg-cat sg-cat-warning">Cảnh báo</span></td>
+            <td>Sàn ướt, coi chừng trượt.</td>
+            <td>Không phải “sàn đã lau xong”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>MIND THE GAP</code></th>
+            <td><span class="sg-cat sg-cat-warning">Cảnh báo</span></td>
+            <td>Coi chừng khoảng trống.</td>
+            <td>Không phải “đứng chờ ở đây”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>BEWARE OF DOG</code></th>
+            <td><span class="sg-cat sg-cat-warning">Cảnh báo</span></td>
+            <td>Coi chừng chó.</td>
+            <td>Không phải “được mang chó vào”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>PUSH / PULL</code></th>
+            <td><span class="sg-cat sg-cat-rule">Hướng dẫn</span></td>
+            <td>Đẩy / kéo cửa.</td>
+            <td>Không phải “cấm mở cửa”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>KEEP LEFT</code></th>
+            <td><span class="sg-cat sg-cat-rule">Hướng dẫn</span></td>
+            <td>Đi bên trái.</td>
+            <td>Không phải “rẽ trái”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>QUEUE HERE</code></th>
+            <td><span class="sg-cat sg-cat-rule">Hướng dẫn</span></td>
+            <td>Xếp hàng tại đây.</td>
+            <td>Không phải “mua vé ở đây”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>USE OTHER DOOR</code></th>
+            <td><span class="sg-cat sg-cat-rule">Hướng dẫn</span></td>
+            <td>Dùng cửa khác.</td>
+            <td>Không phải “cửa này bị khóa vĩnh viễn”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>OPEN DAILY 8 A.M.–9 P.M.</code></th>
+            <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
+            <td>Mở hằng ngày từ 8 giờ đến 21 giờ.</td>
+            <td>Không phải “mở cả đêm”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>FREE ENTRY</code></th>
+            <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
+            <td>Vào cửa miễn phí.</td>
+            <td>Không phải “đồ ăn miễn phí”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>50% OFF</code></th>
+            <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
+            <td>Giảm 50% giá.</td>
+            <td>Không phải “mua 1 tặng 1”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>BOOKING REQUIRED</code></th>
+            <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
+            <td>Phải đặt trước.</td>
+            <td>Không phải “không cần đặt trước”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>OUT OF ORDER</code></th>
+            <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
+            <td>Máy hoặc hệ thống bị hỏng.</td>
+            <td>Không phải “hãy đặt hàng”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>SOLD OUT</code></th>
+            <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
+            <td>Hết vé hoặc hết hàng.</td>
+            <td>Không phải “đang bán”.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>NO FOOD OR DRINK</code></th>
+            <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
+            <td>Không mang đồ ăn hoặc đồ uống vào.</td>
+            <td>Không phải “chỉ cấm đồ ăn”.</td>
+          </tr>
+        </tbody>
+      </TableShell>
 
       <p class="mini-note"><strong>Quy tắc vàng:</strong> đáp án đúng là cách diễn đạt khác của biển, không phải câu dài hơn. Nếu đáp án nhắc đến một chi tiết không có trên biển, hãy loại ngay.</p>
     </div>

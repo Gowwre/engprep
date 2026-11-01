@@ -5,6 +5,7 @@ import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TableShell from '../components/TableShell.astro';
 import TrapCard from '../components/TrapCard.astro';
 import '../styles/sentence-construction.css';
 ---
@@ -100,51 +101,52 @@ import '../styles/sentence-construction.css';
         <div class="sc-frame-box"><strong>Time</strong><span>khi nào</span></div>
       </div>
 
-      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
-      <div class="sc-table-wrap">
-        <table class="sc-table">
-          <caption class="sr-only">Sáu quy tắc trật tự từ khi ghép câu</caption>
-          <thead>
-            <tr>
-              <th scope="col">Quy tắc</th>
-              <th scope="col">Ví dụ đúng</th>
-              <th scope="col">Bẫy</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"><span class="sc-cat sc-cat-subject">Chủ ngữ + động từ</span></th>
-              <td>Studying abroad <code>gives</code> students opportunities.</td>
-              <td>Không dùng <code>give</code> khi chủ ngữ là cụm số ít.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="sc-cat sc-cat-adj">Tính từ trước danh từ</span></th>
-              <td>a <code>meaningful</code> song</td>
-              <td>Không viết <code>a song meaningful</code>.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="sc-cat sc-cat-adv">Trạng từ không chen giữa V và O</span></th>
-              <td>explained the project <code>carefully</code></td>
-              <td>Không viết <code>explained carefully the project</code>.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="sc-cat sc-cat-prep">Cụm giới từ đi liền cụm cố định</span></th>
-              <td>started off the concert <code>by presenting</code> a mashup</td>
-              <td>Không tách <code>by presenting</code> khỏi tân ngữ.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="sc-cat sc-cat-order">Manner → Place → Time</span></th>
-              <td>welcomed the guests <code>warmly at the entrance</code>.</td>
-              <td>Không đặt thời gian chen giữa động từ và tân ngữ.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="sc-cat sc-cat-verb">Câu phải có động từ chính</span></th>
-              <td>The host band <code>started</code> off the concert.</td>
-              <td>Không để cụm danh từ rời thành câu cụt.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <TableShell
+        wrapperClass="sc-table-wrap"
+        tableClass="sc-table"
+        caption="Sáu quy tắc trật tự từ khi ghép câu"
+        hint
+      >
+        <thead>
+          <tr>
+            <th scope="col">Quy tắc</th>
+            <th scope="col">Ví dụ đúng</th>
+            <th scope="col">Bẫy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><span class="sc-cat sc-cat-subject">Chủ ngữ + động từ</span></th>
+            <td>Studying abroad <code>gives</code> students opportunities.</td>
+            <td>Không dùng <code>give</code> khi chủ ngữ là cụm số ít.</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="sc-cat sc-cat-adj">Tính từ trước danh từ</span></th>
+            <td>a <code>meaningful</code> song</td>
+            <td>Không viết <code>a song meaningful</code>.</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="sc-cat sc-cat-adv">Trạng từ không chen giữa V và O</span></th>
+            <td>explained the project <code>carefully</code></td>
+            <td>Không viết <code>explained carefully the project</code>.</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="sc-cat sc-cat-prep">Cụm giới từ đi liền cụm cố định</span></th>
+            <td>started off the concert <code>by presenting</code> a mashup</td>
+            <td>Không tách <code>by presenting</code> khỏi tân ngữ.</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="sc-cat sc-cat-order">Manner → Place → Time</span></th>
+            <td>welcomed the guests <code>warmly at the entrance</code>.</td>
+            <td>Không đặt thời gian chen giữa động từ và tân ngữ.</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="sc-cat sc-cat-verb">Câu phải có động từ chính</span></th>
+            <td>The host band <code>started</code> off the concert.</td>
+            <td>Không để cụm danh từ rời thành câu cụt.</td>
+          </tr>
+        </tbody>
+      </TableShell>
 
       <div class="sc-pattern-grid">
         <article class="sc-pattern-card">

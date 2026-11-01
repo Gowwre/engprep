@@ -4,6 +4,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
 import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TableShell from '../components/TableShell.astro';
 import TrapCard from '../components/TrapCard.astro';
 import '../styles/pronunciation.css';
 ---
@@ -181,51 +182,52 @@ import '../styles/pronunciation.css';
         <p slot="aside" class="section-aside"><span>6</span> cặp âm<br><span>2</span> nhóm dấu hiệu</p>
       </SectionHead>
 
-      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
-      <div class="pron-table-wrap">
-        <table class="pron-table pron-vowel-table">
-          <caption class="sr-only">Các cặp nguyên âm dễ nhầm trong tiếng Anh</caption>
-          <thead>
-            <tr>
-              <th scope="col">Cặp âm</th>
-              <th scope="col">Ví dụ</th>
-              <th scope="col">Dấu hiệu / mẹo nhớ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"><code>/ɪ/ – /iː/</code></th>
-              <td><code>sit /sɪt/</code> · <code>seat /siːt/</code> · <code>ship /ʃɪp/</code> · <code>sheep /ʃiːp/</code></td>
-              <td>/ɪ/ ngắn, /iː/ dài. Chú ý <em>i</em> ngắn và <em>ea/ee</em> dài.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/e/ – /eɪ/</code></th>
-              <td><code>pen /pen/</code> · <code>pain /peɪn/</code> · <code>met /met/</code> · <code>mate /meɪt/</code></td>
-              <td>/e/ ngắn; /eɪ/ là âm đôi, thường gặp ở <em>a-e</em> hoặc <em>ai</em>.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/æ/ – /ɑː/</code></th>
-              <td><code>cat /kæt/</code> · <code>cart /kɑːt/</code> · <code>hat /hæt/</code> · <code>heart /hɑːt/</code></td>
-              <td>/æ/ ngắn và bẹt; /ɑː/ dài, thường có <em>r</em> sau <em>a</em>.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/ʌ/ – /ɒ/</code></th>
-              <td><code>cut /kʌt/</code> · <code>cot /kɒt/</code> · <code>luck /lʌk/</code> · <code>lock /lɒk/</code></td>
-              <td>/ʌ/ thường viết bằng <em>u</em>; /ɒ/ thường viết bằng <em>o</em>.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/uː/ – /ʊ/</code></th>
-              <td><code>food /fuːd/</code> · <code>foot /fʊt/</code> · <code>pool /puːl/</code> · <code>pull /pʊl/</code></td>
-              <td>/uː/ dài; /ʊ/ ngắn. Cùng viết <em>oo</em> nhưng khác âm.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/ə/</code></th>
-              <td><code>teacher /ˈtiːtʃə/</code> · <code>about /əˈbaʊt/</code> · <code>banana /bəˈnɑːnə/</code></td>
-              <td>Âm yếu ở âm tiết không nhấn; không đọc rõ như <em>a</em>.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <TableShell
+        wrapperClass="pron-table-wrap"
+        tableClass="pron-table pron-vowel-table"
+        caption="Các cặp nguyên âm dễ nhầm trong tiếng Anh"
+        hint
+      >
+        <thead>
+          <tr>
+            <th scope="col">Cặp âm</th>
+            <th scope="col">Ví dụ</th>
+            <th scope="col">Dấu hiệu / mẹo nhớ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><code>/ɪ/ – /iː/</code></th>
+            <td><code>sit /sɪt/</code> · <code>seat /siːt/</code> · <code>ship /ʃɪp/</code> · <code>sheep /ʃiːp/</code></td>
+            <td>/ɪ/ ngắn, /iː/ dài. Chú ý <em>i</em> ngắn và <em>ea/ee</em> dài.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>/e/ – /eɪ/</code></th>
+            <td><code>pen /pen/</code> · <code>pain /peɪn/</code> · <code>met /met/</code> · <code>mate /meɪt/</code></td>
+            <td>/e/ ngắn; /eɪ/ là âm đôi, thường gặp ở <em>a-e</em> hoặc <em>ai</em>.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>/æ/ – /ɑː/</code></th>
+            <td><code>cat /kæt/</code> · <code>cart /kɑːt/</code> · <code>hat /hæt/</code> · <code>heart /hɑːt/</code></td>
+            <td>/æ/ ngắn và bẹt; /ɑː/ dài, thường có <em>r</em> sau <em>a</em>.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>/ʌ/ – /ɒ/</code></th>
+            <td><code>cut /kʌt/</code> · <code>cot /kɒt/</code> · <code>luck /lʌk/</code> · <code>lock /lɒk/</code></td>
+            <td>/ʌ/ thường viết bằng <em>u</em>; /ɒ/ thường viết bằng <em>o</em>.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>/uː/ – /ʊ/</code></th>
+            <td><code>food /fuːd/</code> · <code>foot /fʊt/</code> · <code>pool /puːl/</code> · <code>pull /pʊl/</code></td>
+            <td>/uː/ dài; /ʊ/ ngắn. Cùng viết <em>oo</em> nhưng khác âm.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>/ə/</code></th>
+            <td><code>teacher /ˈtiːtʃə/</code> · <code>about /əˈbaʊt/</code> · <code>banana /bəˈnɑːnə/</code></td>
+            <td>Âm yếu ở âm tiết không nhấn; không đọc rõ như <em>a</em>.</td>
+          </tr>
+        </tbody>
+      </TableShell>
 
       <div class="pron-spelling">
         <div class="pron-spelling-head">
@@ -288,56 +290,57 @@ import '../styles/pronunciation.css';
         <p>Đừng học trọng âm của cả họ từ như một từ duy nhất. Gặp từ mới, hãy đánh dấu âm tiết được nhấn.</p>
       </div>
 
-      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
-      <div class="pron-table-wrap">
-        <table class="pron-table pron-suffix-table">
-          <caption class="sr-only">Ảnh hưởng của đuôi từ đến trọng âm</caption>
-          <thead>
-            <tr>
-              <th scope="col">Đuôi từ</th>
-              <th scope="col">Ảnh hưởng đến trọng âm</th>
-              <th scope="col">Ví dụ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"><code>-tion / -sion</code></th>
-              <td>Nhấn âm tiết ngay trước đuôi.</td>
-              <td><code>deCIsion</code> · <code>eduCAtion</code> · <code>atTENtion</code></td>
-            </tr>
-            <tr>
-              <th scope="row"><code>-ic / -ical</code></th>
-              <td>Nhấn âm tiết ngay trước đuôi.</td>
-              <td><code>scienTIfic</code> · <code>ecoNOmic</code> · <code>hisTORical</code></td>
-            </tr>
-            <tr>
-              <th scope="row"><code>-ity</code></th>
-              <td>Nhấn âm tiết ngay trước đuôi.</td>
-              <td><code>aBIlity</code> · <code>popuLArity</code> · <code>possIbility</code></td>
-            </tr>
-            <tr>
-              <th scope="row"><code>-ial / -ious</code></th>
-              <td>Nhấn âm tiết ngay trước đuôi.</td>
-              <td><code>comMERcial</code> · <code>deLIcious</code></td>
-            </tr>
-            <tr>
-              <th scope="row"><code>-ed / -ing / -s / -ly</code></th>
-              <td>Thường không làm đổi trọng âm của từ gốc.</td>
-              <td><code>HAPpy → HAPpily</code> · <code>deVELop → deVELoping</code></td>
-            </tr>
-            <tr>
-              <th scope="row"><code>-ment / -ness / -ful / -less</code></th>
-              <td>Thường không làm đổi trọng âm của từ gốc.</td>
-              <td><code>deVELop → deVELopment</code> · <code>HAPpy → HAPpiness</code></td>
-            </tr>
-            <tr>
-              <th scope="row"><code>-able / -ible</code></th>
-              <td>Thường không làm đổi trọng âm của từ gốc.</td>
-              <td><code>COMfort → COMfortable</code> · <code>POSsible → POSsibly</code></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <TableShell
+        wrapperClass="pron-table-wrap"
+        tableClass="pron-table pron-suffix-table"
+        caption="Ảnh hưởng của đuôi từ đến trọng âm"
+        hint
+      >
+        <thead>
+          <tr>
+            <th scope="col">Đuôi từ</th>
+            <th scope="col">Ảnh hưởng đến trọng âm</th>
+            <th scope="col">Ví dụ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><code>-tion / -sion</code></th>
+            <td>Nhấn âm tiết ngay trước đuôi.</td>
+            <td><code>deCIsion</code> · <code>eduCAtion</code> · <code>atTENtion</code></td>
+          </tr>
+          <tr>
+            <th scope="row"><code>-ic / -ical</code></th>
+            <td>Nhấn âm tiết ngay trước đuôi.</td>
+            <td><code>scienTIfic</code> · <code>ecoNOmic</code> · <code>hisTORical</code></td>
+          </tr>
+          <tr>
+            <th scope="row"><code>-ity</code></th>
+            <td>Nhấn âm tiết ngay trước đuôi.</td>
+            <td><code>aBIlity</code> · <code>popuLArity</code> · <code>possIbility</code></td>
+          </tr>
+          <tr>
+            <th scope="row"><code>-ial / -ious</code></th>
+            <td>Nhấn âm tiết ngay trước đuôi.</td>
+            <td><code>comMERcial</code> · <code>deLIcious</code></td>
+          </tr>
+          <tr>
+            <th scope="row"><code>-ed / -ing / -s / -ly</code></th>
+            <td>Thường không làm đổi trọng âm của từ gốc.</td>
+            <td><code>HAPpy → HAPpily</code> · <code>deVELop → deVELoping</code></td>
+          </tr>
+          <tr>
+            <th scope="row"><code>-ment / -ness / -ful / -less</code></th>
+            <td>Thường không làm đổi trọng âm của từ gốc.</td>
+            <td><code>deVELop → deVELopment</code> · <code>HAPpy → HAPpiness</code></td>
+          </tr>
+          <tr>
+            <th scope="row"><code>-able / -ible</code></th>
+            <td>Thường không làm đổi trọng âm của từ gốc.</td>
+            <td><code>COMfort → COMfortable</code> · <code>POSsible → POSsibly</code></td>
+          </tr>
+        </tbody>
+      </TableShell>
 
       <div class="pron-word-pairs">
         <h3>Danh từ – động từ cùng gốc</h3>

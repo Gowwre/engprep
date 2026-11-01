@@ -62,6 +62,7 @@ src/
 │   ├── SiteHeader.astro
 │   ├── StepCard.astro     # thẻ bước làm bài có số thứ tự
 │   ├── StudyStackVisual.astro # thẻ hero, sticky note và stamp
+│   ├── TableShell.astro   # wrapper + caption + hint cho bảng
 │   ├── TenseCard.astro    # thẻ công thức một thì
 │   ├── TrapCard.astro     # câu sai / câu đúng / lý do
 │   └── WordFamilyCard.astro # thẻ họ từ
@@ -117,6 +118,7 @@ Thứ tự này giữ cascade đúng và để mỗi route chỉ tải styleshee
    - `SectionHead` cho tiêu đề từng section.
    - `StudyStackVisual` cho thẻ hero (truyền nội dung mặt trước qua slot).
    - `FilterToolbar` + `EmptyState` nếu section có bộ lọc.
+   - `TableShell` cho bảng có caption và gợi ý kéo ngang.
    - `StepCard` cho các bước làm bài có số thứ tự.
    - `TrapCard` cho các cặp câu sai/câu đúng.
    - Các thẻ chuyên biệt: `TenseCard`, `WordFamilyCard`, `SignalCard`, `ClueCard`, `CommunicationCard`.

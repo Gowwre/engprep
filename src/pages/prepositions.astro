@@ -6,6 +6,7 @@ import FilterToolbar from '../components/FilterToolbar.astro';
 import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TableShell from '../components/TableShell.astro';
 import TrapCard from '../components/TrapCard.astro';
 import '../styles/prepositions.css';
 ---
@@ -164,40 +165,41 @@ import '../styles/prepositions.css';
         </div>
       </div>
 
-      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
-      <div class="table-shell">
-        <table class="prep-table">
-          <caption class="sr-only">Bảng dùng at, on, in với thời gian</caption>
-          <thead>
-            <tr>
-              <th scope="col">Giới từ</th>
-              <th scope="col">Dùng khi nào</th>
-              <th scope="col">Ví dụ</th>
-              <th scope="col">Ghi nhớ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="row-at">
-              <th scope="row" class="row-head"><strong>AT</strong><span>điểm thời gian</span></th>
-              <td>Giờ cụ thể, dịp lễ và một số cụm cố định.</td>
-              <td><code>at 7 p.m.</code> · <code>at noon</code> · <code>at midnight</code> · <code>at Christmas</code> · <code>at the weekend</code> (BrE)</td>
-              <td><code>at night</code>, <code>at the moment</code>, <code>at the age of 15</code>, <code>at the same time</code>.</td>
-            </tr>
-            <tr class="row-on">
-              <th scope="row" class="row-head"><strong>ON</strong><span>ngày, thứ</span></th>
-              <td>Thứ, ngày, ngày tháng; buổi cụ thể của một ngày.</td>
-              <td><code>on Monday</code> · <code>on 12th March</code> · <code>on Monday morning</code> · <code>on Christmas Day</code></td>
-              <td><code>on time</code> = đúng giờ. Không nói <em>on next Monday</em>.</td>
-            </tr>
-            <tr class="row-in">
-              <th scope="row" class="row-head"><strong>IN</strong><span>khoảng thời gian</span></th>
-              <td>Tháng, năm, mùa, thế kỷ; buổi trong ngày; khoảng thời gian tính từ hiện tại.</td>
-              <td><code>in October</code> · <code>in 2026</code> · <code>in winter</code> · <code>in the 21st century</code> · <code>in the morning</code> · <code>in two days</code></td>
-              <td><code>in time</code> = kịp lúc. <code>in the morning</code> nhưng <code>on Monday morning</code>.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <TableShell
+        wrapperClass="table-shell"
+        tableClass="prep-table"
+        caption="Bảng dùng at, on, in với thời gian"
+        hint
+      >
+        <thead>
+          <tr>
+            <th scope="col">Giới từ</th>
+            <th scope="col">Dùng khi nào</th>
+            <th scope="col">Ví dụ</th>
+            <th scope="col">Ghi nhớ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-at">
+            <th scope="row" class="row-head"><strong>AT</strong><span>điểm thời gian</span></th>
+            <td>Giờ cụ thể, dịp lễ và một số cụm cố định.</td>
+            <td><code>at 7 p.m.</code> · <code>at noon</code> · <code>at midnight</code> · <code>at Christmas</code> · <code>at the weekend</code> (BrE)</td>
+            <td><code>at night</code>, <code>at the moment</code>, <code>at the age of 15</code>, <code>at the same time</code>.</td>
+          </tr>
+          <tr class="row-on">
+            <th scope="row" class="row-head"><strong>ON</strong><span>ngày, thứ</span></th>
+            <td>Thứ, ngày, ngày tháng; buổi cụ thể của một ngày.</td>
+            <td><code>on Monday</code> · <code>on 12th March</code> · <code>on Monday morning</code> · <code>on Christmas Day</code></td>
+            <td><code>on time</code> = đúng giờ. Không nói <em>on next Monday</em>.</td>
+          </tr>
+          <tr class="row-in">
+            <th scope="row" class="row-head"><strong>IN</strong><span>khoảng thời gian</span></th>
+            <td>Tháng, năm, mùa, thế kỷ; buổi trong ngày; khoảng thời gian tính từ hiện tại.</td>
+            <td><code>in October</code> · <code>in 2026</code> · <code>in winter</code> · <code>in the 21st century</code> · <code>in the morning</code> · <code>in two days</code></td>
+            <td><code>in time</code> = kịp lúc. <code>in the morning</code> nhưng <code>on Monday morning</code>.</td>
+          </tr>
+        </tbody>
+      </TableShell>
 
       <div class="pair-grid">
         <article class="pair-card">
@@ -346,40 +348,41 @@ import '../styles/prepositions.css';
         </figure>
       </div>
 
-      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
-      <div class="table-shell">
-        <table class="prep-table">
-          <caption class="sr-only">Bảng dùng in, on, at với vị trí</caption>
-          <thead>
-            <tr>
-              <th scope="col">Giới từ</th>
-              <th scope="col">Quy tắc</th>
-              <th scope="col">Ví dụ</th>
-              <th scope="col">Cụm cần nhớ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="row-in">
-              <th scope="row" class="row-head"><strong>IN</strong><span>không gian kín</span></th>
-              <td>Bên trong một không gian, khối, khu vực lớn.</td>
-              <td><code>in the box</code> · <code>in the room</code> · <code>in Hanoi</code> · <code>in Vietnam</code> · <code>in the water</code></td>
-              <td><code>in the middle of</code>, <code>in the corner of the room</code>, <code>in a car/taxi</code>, <code>in the world</code>.</td>
-            </tr>
-            <tr class="row-on">
-              <th scope="row" class="row-head"><strong>ON</strong><span>bề mặt</span></th>
-              <td>Nằm trên bề mặt, trên một tuyến đường hoặc một tầng.</td>
-              <td><code>on the table</code> · <code>on the wall</code> · <code>on the floor</code> · <code>on the second floor</code> · <code>on the left/right</code></td>
-              <td><code>on a bus/train/plane/bike</code>, <code>on foot</code>, <code>on the coast</code>.</td>
-            </tr>
-            <tr class="row-at">
-              <th scope="row" class="row-head"><strong>AT</strong><span>điểm cụ thể</span></th>
-              <td>Một điểm cụ thể hoặc nơi gắn với một hoạt động.</td>
-              <td><code>at the bus stop</code> · <code>at the door</code> · <code>at the corner</code> · <code>at the top/bottom of</code></td>
-              <td><code>at school/work/home</code>, <code>at the party</code>, <code>at the front/back of</code>.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <TableShell
+        wrapperClass="table-shell"
+        tableClass="prep-table"
+        caption="Bảng dùng in, on, at với vị trí"
+        hint
+      >
+        <thead>
+          <tr>
+            <th scope="col">Giới từ</th>
+            <th scope="col">Quy tắc</th>
+            <th scope="col">Ví dụ</th>
+            <th scope="col">Cụm cần nhớ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-in">
+            <th scope="row" class="row-head"><strong>IN</strong><span>không gian kín</span></th>
+            <td>Bên trong một không gian, khối, khu vực lớn.</td>
+            <td><code>in the box</code> · <code>in the room</code> · <code>in Hanoi</code> · <code>in Vietnam</code> · <code>in the water</code></td>
+            <td><code>in the middle of</code>, <code>in the corner of the room</code>, <code>in a car/taxi</code>, <code>in the world</code>.</td>
+          </tr>
+          <tr class="row-on">
+            <th scope="row" class="row-head"><strong>ON</strong><span>bề mặt</span></th>
+            <td>Nằm trên bề mặt, trên một tuyến đường hoặc một tầng.</td>
+            <td><code>on the table</code> · <code>on the wall</code> · <code>on the floor</code> · <code>on the second floor</code> · <code>on the left/right</code></td>
+            <td><code>on a bus/train/plane/bike</code>, <code>on foot</code>, <code>on the coast</code>.</td>
+          </tr>
+          <tr class="row-at">
+            <th scope="row" class="row-head"><strong>AT</strong><span>điểm cụ thể</span></th>
+            <td>Một điểm cụ thể hoặc nơi gắn với một hoạt động.</td>
+            <td><code>at the bus stop</code> · <code>at the door</code> · <code>at the corner</code> · <code>at the top/bottom of</code></td>
+            <td><code>at school/work/home</code>, <code>at the party</code>, <code>at the front/back of</code>.</td>
+          </tr>
+        </tbody>
+      </TableShell>
 
       <p class="place-note"><strong>Phân biệt nhanh:</strong> <code>in the corner of the room</code> (góc phòng) · <code>at/on the corner of the street</code> (góc phố) · <code>on the wall</code> (treo trên tường) · <code>in the wall</code> (lỗ trong tường).</p>
 
@@ -467,100 +470,101 @@ import '../styles/prepositions.css';
         <p slot="aside" class="section-aside"><span>12</span> giới từ<br>chuyển động</p>
       </SectionHead>
 
-      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
-      <div class="table-shell">
-        <table class="prep-table">
-          <caption class="sr-only">Bảng giới từ chuyển động</caption>
-          <thead>
-            <tr>
-              <th scope="col">Giới từ</th>
-              <th scope="col">Hướng</th>
-              <th scope="col">Ví dụ</th>
-              <th scope="col">Lưu ý</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="row-to">
-              <th scope="row" class="row-head"><strong>to</strong><span>hướng đến</span></th>
-              <td>Đi về phía một nơi.</td>
-              <td><code>go to school</code> · <code>fly to Hanoi</code></td>
-              <td><code>go home</code>, <code>go abroad</code>: không dùng to.</td>
-            </tr>
-            <tr class="row-to">
-              <th scope="row" class="row-head"><strong>into</strong><span>vào bên trong</span></th>
-              <td>Đi từ ngoài vào trong.</td>
-              <td><code>walk into the room</code> · <code>jump into the pool</code></td>
-              <td>Nhấn mạnh việc đi vào bên trong.</td>
-            </tr>
-            <tr class="row-to">
-              <th scope="row" class="row-head"><strong>onto</strong><span>lên trên</span></th>
-              <td>Đi lên trên một bề mặt.</td>
-              <td><code>jump onto the stage</code> · <code>climb onto the roof</code></td>
-              <td>onto = lên trên bề mặt; into = vào bên trong.</td>
-            </tr>
-            <tr class="row-path">
-              <th scope="row" class="row-head"><strong>out of</strong><span>ra khỏi</span></th>
-              <td>Ra khỏi bên trong.</td>
-              <td><code>walk out of the building</code></td>
-              <td>out of, không phải out from.</td>
-            </tr>
-            <tr class="row-path">
-              <th scope="row" class="row-head"><strong>off</strong><span>rời bề mặt</span></th>
-              <td>Rời khỏi một bề mặt/phương tiện.</td>
-              <td><code>fall off the bike</code> · <code>get off the bus</code></td>
-              <td>off = rời khỏi; on = đang ở trên.</td>
-            </tr>
-            <tr class="row-path">
-              <th scope="row" class="row-head"><strong>through</strong><span>xuyên qua</span></th>
-              <td>Đi xuyên qua bên trong.</td>
-              <td><code>go through the tunnel</code> · <code>look through the window</code></td>
-              <td>Đi qua bên trong (đường hầm, khu rừng...).</td>
-            </tr>
-            <tr class="row-path">
-              <th scope="row" class="row-head"><strong>across</strong><span>băng qua</span></th>
-              <td>Từ bên này sang bên kia của một bề mặt.</td>
-              <td><code>walk across the road</code> · <code>swim across the river</code></td>
-              <td>Đi ngang qua bề mặt (con đường, dòng sông...).</td>
-            </tr>
-            <tr class="row-path">
-              <th scope="row" class="row-head"><strong>along</strong><span>dọc theo</span></th>
-              <td>Đi theo chiều dài của vật/đường.</td>
-              <td><code>walk along the beach</code> · <code>cycle along the road</code></td>
-              <td>along = theo chiều dài.</td>
-            </tr>
-            <tr class="row-other">
-              <th scope="row" class="row-head"><strong>around</strong><span>vòng quanh</span></th>
-              <td>Đi vòng quanh một vật/khu vực.</td>
-              <td><code>travel around the world</code> · <code>sit around the table</code></td>
-              <td>around = vòng quanh.</td>
-            </tr>
-            <tr class="row-other">
-              <th scope="row" class="row-head"><strong>over</strong><span>qua bên trên</span></th>
-              <td>Đi qua phía trên một vật.</td>
-              <td><code>climb over the wall</code> · <code>fly over the city</code></td>
-              <td>over = bắc qua/qua trên.</td>
-            </tr>
-            <tr class="row-other">
-              <th scope="row" class="row-head"><strong>under</strong><span>qua bên dưới</span></th>
-              <td>Đi qua phía dưới một vật.</td>
-              <td><code>walk under the bridge</code></td>
-              <td>under = ở/đi qua bên dưới.</td>
-            </tr>
-            <tr class="row-other">
-              <th scope="row" class="row-head"><strong>toward(s)</strong><span>về phía</span></th>
-              <td>Đi về phía ai/điều gì.</td>
-              <td><code>run toward the exit</code></td>
-              <td>toward và towards dùng như nhau.</td>
-            </tr>
-            <tr class="row-other">
-              <th scope="row" class="row-head"><strong>past</strong><span>đi ngang qua</span></th>
-              <td>Đi ngang qua và tiếp tục.</td>
-              <td><code>walk past the post office</code></td>
-              <td>past = đi ngang qua rồi đi tiếp.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <TableShell
+        wrapperClass="table-shell"
+        tableClass="prep-table"
+        caption="Bảng giới từ chuyển động"
+        hint
+      >
+        <thead>
+          <tr>
+            <th scope="col">Giới từ</th>
+            <th scope="col">Hướng</th>
+            <th scope="col">Ví dụ</th>
+            <th scope="col">Lưu ý</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-to">
+            <th scope="row" class="row-head"><strong>to</strong><span>hướng đến</span></th>
+            <td>Đi về phía một nơi.</td>
+            <td><code>go to school</code> · <code>fly to Hanoi</code></td>
+            <td><code>go home</code>, <code>go abroad</code>: không dùng to.</td>
+          </tr>
+          <tr class="row-to">
+            <th scope="row" class="row-head"><strong>into</strong><span>vào bên trong</span></th>
+            <td>Đi từ ngoài vào trong.</td>
+            <td><code>walk into the room</code> · <code>jump into the pool</code></td>
+            <td>Nhấn mạnh việc đi vào bên trong.</td>
+          </tr>
+          <tr class="row-to">
+            <th scope="row" class="row-head"><strong>onto</strong><span>lên trên</span></th>
+            <td>Đi lên trên một bề mặt.</td>
+            <td><code>jump onto the stage</code> · <code>climb onto the roof</code></td>
+            <td>onto = lên trên bề mặt; into = vào bên trong.</td>
+          </tr>
+          <tr class="row-path">
+            <th scope="row" class="row-head"><strong>out of</strong><span>ra khỏi</span></th>
+            <td>Ra khỏi bên trong.</td>
+            <td><code>walk out of the building</code></td>
+            <td>out of, không phải out from.</td>
+          </tr>
+          <tr class="row-path">
+            <th scope="row" class="row-head"><strong>off</strong><span>rời bề mặt</span></th>
+            <td>Rời khỏi một bề mặt/phương tiện.</td>
+            <td><code>fall off the bike</code> · <code>get off the bus</code></td>
+            <td>off = rời khỏi; on = đang ở trên.</td>
+          </tr>
+          <tr class="row-path">
+            <th scope="row" class="row-head"><strong>through</strong><span>xuyên qua</span></th>
+            <td>Đi xuyên qua bên trong.</td>
+            <td><code>go through the tunnel</code> · <code>look through the window</code></td>
+            <td>Đi qua bên trong (đường hầm, khu rừng...).</td>
+          </tr>
+          <tr class="row-path">
+            <th scope="row" class="row-head"><strong>across</strong><span>băng qua</span></th>
+            <td>Từ bên này sang bên kia của một bề mặt.</td>
+            <td><code>walk across the road</code> · <code>swim across the river</code></td>
+            <td>Đi ngang qua bề mặt (con đường, dòng sông...).</td>
+          </tr>
+          <tr class="row-path">
+            <th scope="row" class="row-head"><strong>along</strong><span>dọc theo</span></th>
+            <td>Đi theo chiều dài của vật/đường.</td>
+            <td><code>walk along the beach</code> · <code>cycle along the road</code></td>
+            <td>along = theo chiều dài.</td>
+          </tr>
+          <tr class="row-other">
+            <th scope="row" class="row-head"><strong>around</strong><span>vòng quanh</span></th>
+            <td>Đi vòng quanh một vật/khu vực.</td>
+            <td><code>travel around the world</code> · <code>sit around the table</code></td>
+            <td>around = vòng quanh.</td>
+          </tr>
+          <tr class="row-other">
+            <th scope="row" class="row-head"><strong>over</strong><span>qua bên trên</span></th>
+            <td>Đi qua phía trên một vật.</td>
+            <td><code>climb over the wall</code> · <code>fly over the city</code></td>
+            <td>over = bắc qua/qua trên.</td>
+          </tr>
+          <tr class="row-other">
+            <th scope="row" class="row-head"><strong>under</strong><span>qua bên dưới</span></th>
+            <td>Đi qua phía dưới một vật.</td>
+            <td><code>walk under the bridge</code></td>
+            <td>under = ở/đi qua bên dưới.</td>
+          </tr>
+          <tr class="row-other">
+            <th scope="row" class="row-head"><strong>toward(s)</strong><span>về phía</span></th>
+            <td>Đi về phía ai/điều gì.</td>
+            <td><code>run toward the exit</code></td>
+            <td>toward và towards dùng như nhau.</td>
+          </tr>
+          <tr class="row-other">
+            <th scope="row" class="row-head"><strong>past</strong><span>đi ngang qua</span></th>
+            <td>Đi ngang qua và tiếp tục.</td>
+            <td><code>walk past the post office</code></td>
+            <td>past = đi ngang qua rồi đi tiếp.</td>
+          </tr>
+        </tbody>
+      </TableShell>
 
       <div class="movement-notes">
         <article class="movement-note">

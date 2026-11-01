@@ -1,0 +1,23 @@
+---
+interface Props {
+  wrapperClass: string;
+  tableClass: string;
+  caption: string;
+  hint?: boolean;
+}
+
+const { wrapperClass, tableClass, caption, hint = false } = Astro.props;
+---
+
+{hint && (
+  <p class="table-hint">
+    Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span>
+  </p>
+)}
+
+<div class={wrapperClass}>
+  <table class={tableClass}>
+    <caption class="sr-only">{caption}</caption>
+    <slot />
+  </table>
+</div>

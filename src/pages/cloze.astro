@@ -6,6 +6,7 @@ import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TableShell from '../components/TableShell.astro';
 import TrapCard from '../components/TrapCard.astro';
 import '../styles/cloze.css';
 ---
@@ -160,64 +161,65 @@ import '../styles/cloze.css';
         <p slot="aside" class="section-aside"><span>7</span> nhóm<br><span>1</span> bảng tra</p>
       </SectionHead>
 
-      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
-      <div class="cz-table-wrap">
-        <table class="cz-table cz-grammar-table">
-          <caption class="sr-only">Bảng dấu hiệu ngữ pháp trong bài điền khuyết</caption>
-          <thead>
-            <tr>
-              <th scope="col">Loại chỗ trống</th>
-              <th scope="col">Dấu hiệu</th>
-              <th scope="col">Cần kiểm tra</th>
-              <th scope="col">Ví dụ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"><span class="cz-cat cz-cat-prep">Giới từ</span></th>
-              <td>Đứng trước danh từ, V-ing hoặc đại từ.</td>
-              <td>Giới từ đi kèm động từ/tính từ; giới từ thời gian, nơi chốn.</td>
-              <td><code>depend on</code> · <code>interested in</code> · <code>in 2026</code></td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="cz-cat cz-cat-conj">Từ nối</span></th>
-              <td>Nối hai mệnh đề hoặc hai câu.</td>
-              <td>Quan hệ thêm ý, tương phản, nguyên nhân, kết quả.</td>
-              <td><code>however</code> · <code>because</code> · <code>therefore</code></td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="cz-cat cz-cat-rel">Đại từ quan hệ</span></th>
-              <td>Đứng sau danh từ, trước mệnh đề.</td>
-              <td>Người hay vật; mệnh đề xác định hay không xác định.</td>
-              <td><code>who</code> · <code>which</code> · <code>that</code></td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="cz-cat cz-cat-verb">Dạng động từ</span></th>
-              <td>Sau modal, “to”, giới từ hoặc chủ ngữ.</td>
-              <td>V, to-V, V-ing; thì và hòa hợp chủ ngữ.</td>
-              <td><code>decided to go</code> · <code>enjoys reading</code> · <code>has lived</code></td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="cz-cat cz-cat-comp">So sánh</span></th>
-              <td>Có <code>than</code>, <code>the most</code>, <code>as … as</code>.</td>
-              <td>Tính từ ngắn/dài; so sánh hơn hay nhất.</td>
-              <td><code>more crowded</code> · <code>the best</code> · <code>as tall as</code></td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="cz-cat cz-cat-quant">Lượng từ</span></th>
-              <td>Trước danh từ hoặc thay cho danh từ.</td>
-              <td>Đếm được hay không đếm được; khẳng định hay phủ định.</td>
-              <td><code>many people</code> · <code>much water</code> · <code>some</code></td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="cz-cat cz-cat-art">Mạo từ</span></th>
-              <td>Trước danh từ số ít hoặc danh từ đã xác định.</td>
-              <td>a/an/the; danh từ đếm được hay không đếm được.</td>
-              <td><code>a book</code> · <code>an hour</code> · <code>the sun</code></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <TableShell
+        wrapperClass="cz-table-wrap"
+        tableClass="cz-table cz-grammar-table"
+        caption="Bảng dấu hiệu ngữ pháp trong bài điền khuyết"
+        hint
+      >
+        <thead>
+          <tr>
+            <th scope="col">Loại chỗ trống</th>
+            <th scope="col">Dấu hiệu</th>
+            <th scope="col">Cần kiểm tra</th>
+            <th scope="col">Ví dụ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><span class="cz-cat cz-cat-prep">Giới từ</span></th>
+            <td>Đứng trước danh từ, V-ing hoặc đại từ.</td>
+            <td>Giới từ đi kèm động từ/tính từ; giới từ thời gian, nơi chốn.</td>
+            <td><code>depend on</code> · <code>interested in</code> · <code>in 2026</code></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="cz-cat cz-cat-conj">Từ nối</span></th>
+            <td>Nối hai mệnh đề hoặc hai câu.</td>
+            <td>Quan hệ thêm ý, tương phản, nguyên nhân, kết quả.</td>
+            <td><code>however</code> · <code>because</code> · <code>therefore</code></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="cz-cat cz-cat-rel">Đại từ quan hệ</span></th>
+            <td>Đứng sau danh từ, trước mệnh đề.</td>
+            <td>Người hay vật; mệnh đề xác định hay không xác định.</td>
+            <td><code>who</code> · <code>which</code> · <code>that</code></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="cz-cat cz-cat-verb">Dạng động từ</span></th>
+            <td>Sau modal, “to”, giới từ hoặc chủ ngữ.</td>
+            <td>V, to-V, V-ing; thì và hòa hợp chủ ngữ.</td>
+            <td><code>decided to go</code> · <code>enjoys reading</code> · <code>has lived</code></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="cz-cat cz-cat-comp">So sánh</span></th>
+            <td>Có <code>than</code>, <code>the most</code>, <code>as … as</code>.</td>
+            <td>Tính từ ngắn/dài; so sánh hơn hay nhất.</td>
+            <td><code>more crowded</code> · <code>the best</code> · <code>as tall as</code></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="cz-cat cz-cat-quant">Lượng từ</span></th>
+            <td>Trước danh từ hoặc thay cho danh từ.</td>
+            <td>Đếm được hay không đếm được; khẳng định hay phủ định.</td>
+            <td><code>many people</code> · <code>much water</code> · <code>some</code></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="cz-cat cz-cat-art">Mạo từ</span></th>
+            <td>Trước danh từ số ít hoặc danh từ đã xác định.</td>
+            <td>a/an/the; danh từ đếm được hay không đếm được.</td>
+            <td><code>a book</code> · <code>an hour</code> · <code>the sun</code></td>
+          </tr>
+        </tbody>
+      </TableShell>
 
       <p class="mini-note"><strong>Thứ tự kiểm tra:</strong> loại từ → thì/số ít số nhiều → giới từ/collocation → nghĩa. Đừng chọn đáp án chỉ vì nó “nghe quen tai”.</p>
     </div>

@@ -7,6 +7,7 @@ import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TableShell from '../components/TableShell.astro';
 import TrapCard from '../components/TrapCard.astro';
 import WordFamilyCard from '../components/WordFamilyCard.astro';
 import '../styles/word-forms.css';
@@ -148,61 +149,62 @@ import '../styles/word-forms.css';
         />
       </div>
 
-      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
-      <div class="wf-table-wrap">
-        <table class="wf-table wf-position-table">
-          <caption class="sr-only">Bảng vị trí trong câu và từ loại cần điền</caption>
-          <thead>
-            <tr>
-              <th scope="col">Vị trí trong câu</th>
-              <th scope="col">Cần điền</th>
-              <th scope="col">Ví dụ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"><code>a/an/the/my + ___ + N</code></th>
-              <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
-              <td>a <strong>beautiful</strong> city · my <strong>favourite</strong> song</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>a/an/the + ___</code><span>(không có N theo sau)</span></th>
-              <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
-              <td>a <strong>success</strong> · the <strong>development</strong></td>
-            </tr>
-            <tr>
-              <th scope="row"><code>be/look/feel/seem + ___</code></th>
-              <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
-              <td>She looks <strong>happy</strong>. · It seems <strong>difficult</strong>.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>V + ___</code><span>(bổ nghĩa cho động từ)</span></th>
-              <td><span class="wf-cat wf-cat-adv">Trạng từ</span></td>
-              <td>She sings <strong>beautifully</strong>. · He drives <strong>carefully</strong>.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>___ + V</code><span>(chủ ngữ)</span></th>
-              <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
-              <td><strong>Pollution</strong> is harmful. · <strong>Education</strong> changes lives.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>prep + ___</code></th>
-              <td><span class="wf-cat wf-cat-noun">Danh từ / V-ing</span></td>
-              <td>interested in <strong>music</strong> · good at <strong>swimming</strong></td>
-            </tr>
-            <tr>
-              <th scope="row"><code>more/most/very + ___</code></th>
-              <td><span class="wf-cat wf-cat-adj">Tính từ / Trạng từ</span></td>
-              <td>more <strong>careful</strong> · most <strong>carefully</strong></td>
-            </tr>
-            <tr>
-              <th scope="row"><code>the + ___ + of</code></th>
-              <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
-              <td>the <strong>importance</strong> of English · the <strong>beauty</strong> of Hue</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <TableShell
+        wrapperClass="wf-table-wrap"
+        tableClass="wf-table wf-position-table"
+        caption="Bảng vị trí trong câu và từ loại cần điền"
+        hint
+      >
+        <thead>
+          <tr>
+            <th scope="col">Vị trí trong câu</th>
+            <th scope="col">Cần điền</th>
+            <th scope="col">Ví dụ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><code>a/an/the/my + ___ + N</code></th>
+            <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
+            <td>a <strong>beautiful</strong> city · my <strong>favourite</strong> song</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>a/an/the + ___</code><span>(không có N theo sau)</span></th>
+            <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
+            <td>a <strong>success</strong> · the <strong>development</strong></td>
+          </tr>
+          <tr>
+            <th scope="row"><code>be/look/feel/seem + ___</code></th>
+            <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
+            <td>She looks <strong>happy</strong>. · It seems <strong>difficult</strong>.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>V + ___</code><span>(bổ nghĩa cho động từ)</span></th>
+            <td><span class="wf-cat wf-cat-adv">Trạng từ</span></td>
+            <td>She sings <strong>beautifully</strong>. · He drives <strong>carefully</strong>.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>___ + V</code><span>(chủ ngữ)</span></th>
+            <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
+            <td><strong>Pollution</strong> is harmful. · <strong>Education</strong> changes lives.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>prep + ___</code></th>
+            <td><span class="wf-cat wf-cat-noun">Danh từ / V-ing</span></td>
+            <td>interested in <strong>music</strong> · good at <strong>swimming</strong></td>
+          </tr>
+          <tr>
+            <th scope="row"><code>more/most/very + ___</code></th>
+            <td><span class="wf-cat wf-cat-adj">Tính từ / Trạng từ</span></td>
+            <td>more <strong>careful</strong> · most <strong>carefully</strong></td>
+          </tr>
+          <tr>
+            <th scope="row"><code>the + ___ + of</code></th>
+            <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
+            <td>the <strong>importance</strong> of English · the <strong>beauty</strong> of Hue</td>
+          </tr>
+        </tbody>
+      </TableShell>
 
       <p class="mini-note"><strong>Lưu ý:</strong> một từ có thể mang nhiều đuôi: <em>success → successful → successfully</em>. Khi thêm -ly, nhớ các trường hợp đổi chữ: happy → happily, gentle → gently, true → truly, basic → basically.</p>
     </div>
@@ -235,223 +237,224 @@ import '../styles/word-forms.css';
         countText="33/33 hậu tố"
       />
 
-      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
-      <div class="wf-table-wrap">
-        <table class="wf-table wf-suffix-table">
-          <caption class="sr-only">Bảng hậu tố tạo danh từ, tính từ, động từ và trạng từ</caption>
-          <thead>
-            <tr>
-              <th scope="col">Hậu tố</th>
-              <th scope="col">Loại từ</th>
-              <th scope="col">Nghĩa / cách dùng</th>
-              <th scope="col">Ví dụ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="wf-suffix-row" data-cat="noun">
-              <th scope="row"><code>-tion / -sion</code></th>
-              <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
-              <td>Hành động, quá trình, kết quả.</td>
-              <td><code>action</code> · <code>decision</code> · <code>education</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="noun">
-              <th scope="row"><code>-ment</code></th>
-              <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
-              <td>Hành động, kết quả, trạng thái.</td>
-              <td><code>development</code> · <code>improvement</code> · <code>environment</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="noun">
-              <th scope="row"><code>-ness</code></th>
-              <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
-              <td>Tính chất, trạng thái.</td>
-              <td><code>happiness</code> · <code>kindness</code> · <code>darkness</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="noun">
-              <th scope="row"><code>-ity / -ty</code></th>
-              <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
-              <td>Tính chất, khả năng.</td>
-              <td><code>ability</code> · <code>popularity</code> · <code>safety</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="noun">
-              <th scope="row"><code>-ance / -ence</code></th>
-              <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
-              <td>Trạng thái, hành động.</td>
-              <td><code>importance</code> · <code>difference</code> · <code>confidence</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="noun">
-              <th scope="row"><code>-er / -or</code></th>
-              <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
-              <td>Người hoặc vật thực hiện hành động.</td>
-              <td><code>teacher</code> · <code>inventor</code> · <code>actor</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="noun">
-              <th scope="row"><code>-ist / -ian</code></th>
-              <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
-              <td>Người làm nghề, người hoạt động chuyên môn.</td>
-              <td><code>artist</code> · <code>musician</code> · <code>scientist</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="noun">
-              <th scope="row"><code>-ship</code></th>
-              <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
-              <td>Trạng thái, mối quan hệ.</td>
-              <td><code>friendship</code> · <code>leadership</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="noun">
-              <th scope="row"><code>-hood</code></th>
-              <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
-              <td>Giai đoạn, trạng thái.</td>
-              <td><code>childhood</code> · <code>neighbourhood</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="noun">
-              <th scope="row"><code>-age</code></th>
-              <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
-              <td>Hành động, kết quả, tập hợp.</td>
-              <td><code>marriage</code> · <code>shortage</code> · <code>luggage</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="noun">
-              <th scope="row"><code>-al</code></th>
-              <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
-              <td>Hành động, thường từ động từ.</td>
-              <td><code>arrival</code> · <code>survival</code> · <code>refusal</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="noun">
-              <th scope="row"><code>-ing</code></th>
-              <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
-              <td>Hành động hoặc sản phẩm.</td>
-              <td><code>building</code> · <code>learning</code> · <code>meeting</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="noun">
-              <th scope="row"><code>-ure</code></th>
-              <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
-              <td>Hành động, kết quả.</td>
-              <td><code>pressure</code> · <code>failure</code> · <code>pleasure</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="noun">
-              <th scope="row"><code>-dom</code></th>
-              <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
-              <td>Trạng thái, lĩnh vực.</td>
-              <td><code>freedom</code> · <code>kingdom</code></td>
-            </tr>
+      <TableShell
+        wrapperClass="wf-table-wrap"
+        tableClass="wf-table wf-suffix-table"
+        caption="Bảng hậu tố tạo danh từ, tính từ, động từ và trạng từ"
+        hint
+      >
+        <thead>
+          <tr>
+            <th scope="col">Hậu tố</th>
+            <th scope="col">Loại từ</th>
+            <th scope="col">Nghĩa / cách dùng</th>
+            <th scope="col">Ví dụ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="wf-suffix-row" data-cat="noun">
+            <th scope="row"><code>-tion / -sion</code></th>
+            <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
+            <td>Hành động, quá trình, kết quả.</td>
+            <td><code>action</code> · <code>decision</code> · <code>education</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="noun">
+            <th scope="row"><code>-ment</code></th>
+            <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
+            <td>Hành động, kết quả, trạng thái.</td>
+            <td><code>development</code> · <code>improvement</code> · <code>environment</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="noun">
+            <th scope="row"><code>-ness</code></th>
+            <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
+            <td>Tính chất, trạng thái.</td>
+            <td><code>happiness</code> · <code>kindness</code> · <code>darkness</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="noun">
+            <th scope="row"><code>-ity / -ty</code></th>
+            <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
+            <td>Tính chất, khả năng.</td>
+            <td><code>ability</code> · <code>popularity</code> · <code>safety</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="noun">
+            <th scope="row"><code>-ance / -ence</code></th>
+            <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
+            <td>Trạng thái, hành động.</td>
+            <td><code>importance</code> · <code>difference</code> · <code>confidence</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="noun">
+            <th scope="row"><code>-er / -or</code></th>
+            <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
+            <td>Người hoặc vật thực hiện hành động.</td>
+            <td><code>teacher</code> · <code>inventor</code> · <code>actor</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="noun">
+            <th scope="row"><code>-ist / -ian</code></th>
+            <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
+            <td>Người làm nghề, người hoạt động chuyên môn.</td>
+            <td><code>artist</code> · <code>musician</code> · <code>scientist</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="noun">
+            <th scope="row"><code>-ship</code></th>
+            <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
+            <td>Trạng thái, mối quan hệ.</td>
+            <td><code>friendship</code> · <code>leadership</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="noun">
+            <th scope="row"><code>-hood</code></th>
+            <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
+            <td>Giai đoạn, trạng thái.</td>
+            <td><code>childhood</code> · <code>neighbourhood</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="noun">
+            <th scope="row"><code>-age</code></th>
+            <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
+            <td>Hành động, kết quả, tập hợp.</td>
+            <td><code>marriage</code> · <code>shortage</code> · <code>luggage</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="noun">
+            <th scope="row"><code>-al</code></th>
+            <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
+            <td>Hành động, thường từ động từ.</td>
+            <td><code>arrival</code> · <code>survival</code> · <code>refusal</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="noun">
+            <th scope="row"><code>-ing</code></th>
+            <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
+            <td>Hành động hoặc sản phẩm.</td>
+            <td><code>building</code> · <code>learning</code> · <code>meeting</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="noun">
+            <th scope="row"><code>-ure</code></th>
+            <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
+            <td>Hành động, kết quả.</td>
+            <td><code>pressure</code> · <code>failure</code> · <code>pleasure</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="noun">
+            <th scope="row"><code>-dom</code></th>
+            <td><span class="wf-cat wf-cat-noun">Danh từ</span></td>
+            <td>Trạng thái, lĩnh vực.</td>
+            <td><code>freedom</code> · <code>kingdom</code></td>
+          </tr>
 
-            <tr class="wf-suffix-row" data-cat="adj">
-              <th scope="row"><code>-ful</code></th>
-              <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
-              <td>Đầy, có tính chất.</td>
-              <td><code>useful</code> · <code>careful</code> · <code>successful</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="adj">
-              <th scope="row"><code>-less</code></th>
-              <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
-              <td>Không có.</td>
-              <td><code>homeless</code> · <code>careless</code> · <code>useless</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="adj">
-              <th scope="row"><code>-ous</code></th>
-              <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
-              <td>Có tính chất.</td>
-              <td><code>dangerous</code> · <code>famous</code> · <code>curious</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="adj">
-              <th scope="row"><code>-ive</code></th>
-              <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
-              <td>Có xu hướng, tính chất.</td>
-              <td><code>creative</code> · <code>active</code> · <code>effective</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="adj">
-              <th scope="row"><code>-able / -ible</code></th>
-              <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
-              <td>Có thể làm được.</td>
-              <td><code>comfortable</code> · <code>possible</code> · <code>readable</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="adj">
-              <th scope="row"><code>-al</code></th>
-              <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
-              <td>Liên quan đến.</td>
-              <td><code>natural</code> · <code>traditional</code> · <code>cultural</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="adj">
-              <th scope="row"><code>-ic</code></th>
-              <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
-              <td>Liên quan đến.</td>
-              <td><code>fantastic</code> · <code>scientific</code> · <code>historic</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="adj">
-              <th scope="row"><code>-ed</code></th>
-              <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
-              <td>Người cảm thấy thế nào.</td>
-              <td><code>interested</code> · <code>bored</code> · <code>excited</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="adj">
-              <th scope="row"><code>-ing</code></th>
-              <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
-              <td>Vật hoặc việc gây cảm giác.</td>
-              <td><code>interesting</code> · <code>boring</code> · <code>exciting</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="adj">
-              <th scope="row"><code>-y</code></th>
-              <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
-              <td>Có tính chất.</td>
-              <td><code>healthy</code> · <code>rainy</code> · <code>noisy</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="adj">
-              <th scope="row"><code>-ly</code></th>
-              <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
-              <td>Có tính chất (đây là tính từ, không phải trạng từ).</td>
-              <td><code>friendly</code> · <code>lovely</code> · <code>lonely</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="adj">
-              <th scope="row"><code>-ant / -ent</code></th>
-              <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
-              <td>Có tính chất.</td>
-              <td><code>important</code> · <code>different</code> · <code>confident</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="adj">
-              <th scope="row"><code>-ish</code></th>
-              <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
-              <td>Hơi, thuộc về.</td>
-              <td><code>childish</code> · <code>selfish</code> · <code>yellowish</code></td>
-            </tr>
+          <tr class="wf-suffix-row" data-cat="adj">
+            <th scope="row"><code>-ful</code></th>
+            <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
+            <td>Đầy, có tính chất.</td>
+            <td><code>useful</code> · <code>careful</code> · <code>successful</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="adj">
+            <th scope="row"><code>-less</code></th>
+            <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
+            <td>Không có.</td>
+            <td><code>homeless</code> · <code>careless</code> · <code>useless</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="adj">
+            <th scope="row"><code>-ous</code></th>
+            <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
+            <td>Có tính chất.</td>
+            <td><code>dangerous</code> · <code>famous</code> · <code>curious</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="adj">
+            <th scope="row"><code>-ive</code></th>
+            <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
+            <td>Có xu hướng, tính chất.</td>
+            <td><code>creative</code> · <code>active</code> · <code>effective</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="adj">
+            <th scope="row"><code>-able / -ible</code></th>
+            <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
+            <td>Có thể làm được.</td>
+            <td><code>comfortable</code> · <code>possible</code> · <code>readable</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="adj">
+            <th scope="row"><code>-al</code></th>
+            <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
+            <td>Liên quan đến.</td>
+            <td><code>natural</code> · <code>traditional</code> · <code>cultural</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="adj">
+            <th scope="row"><code>-ic</code></th>
+            <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
+            <td>Liên quan đến.</td>
+            <td><code>fantastic</code> · <code>scientific</code> · <code>historic</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="adj">
+            <th scope="row"><code>-ed</code></th>
+            <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
+            <td>Người cảm thấy thế nào.</td>
+            <td><code>interested</code> · <code>bored</code> · <code>excited</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="adj">
+            <th scope="row"><code>-ing</code></th>
+            <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
+            <td>Vật hoặc việc gây cảm giác.</td>
+            <td><code>interesting</code> · <code>boring</code> · <code>exciting</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="adj">
+            <th scope="row"><code>-y</code></th>
+            <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
+            <td>Có tính chất.</td>
+            <td><code>healthy</code> · <code>rainy</code> · <code>noisy</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="adj">
+            <th scope="row"><code>-ly</code></th>
+            <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
+            <td>Có tính chất (đây là tính từ, không phải trạng từ).</td>
+            <td><code>friendly</code> · <code>lovely</code> · <code>lonely</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="adj">
+            <th scope="row"><code>-ant / -ent</code></th>
+            <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
+            <td>Có tính chất.</td>
+            <td><code>important</code> · <code>different</code> · <code>confident</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="adj">
+            <th scope="row"><code>-ish</code></th>
+            <td><span class="wf-cat wf-cat-adj">Tính từ</span></td>
+            <td>Hơi, thuộc về.</td>
+            <td><code>childish</code> · <code>selfish</code> · <code>yellowish</code></td>
+          </tr>
 
-            <tr class="wf-suffix-row" data-cat="verb">
-              <th scope="row"><code>-ize / -ise</code></th>
-              <td><span class="wf-cat wf-cat-verb">Động từ</span></td>
-              <td>Làm cho, biến thành.</td>
-              <td><code>modernise</code> · <code>organise</code> · <code>realise</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="verb">
-              <th scope="row"><code>-ify</code></th>
-              <td><span class="wf-cat wf-cat-verb">Động từ</span></td>
-              <td>Làm cho trở nên.</td>
-              <td><code>beautify</code> · <code>simplify</code> · <code>classify</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="verb">
-              <th scope="row"><code>-en</code></th>
-              <td><span class="wf-cat wf-cat-verb">Động từ</span></td>
-              <td>Làm cho trở nên.</td>
-              <td><code>widen</code> · <code>strengthen</code> · <code>shorten</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="verb">
-              <th scope="row"><code>-ate</code></th>
-              <td><span class="wf-cat wf-cat-verb">Động từ</span></td>
-              <td>Tạo động từ, thường chỉ hành động.</td>
-              <td><code>decorate</code> · <code>celebrate</code> · <code>communicate</code></td>
-            </tr>
+          <tr class="wf-suffix-row" data-cat="verb">
+            <th scope="row"><code>-ize / -ise</code></th>
+            <td><span class="wf-cat wf-cat-verb">Động từ</span></td>
+            <td>Làm cho, biến thành.</td>
+            <td><code>modernise</code> · <code>organise</code> · <code>realise</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="verb">
+            <th scope="row"><code>-ify</code></th>
+            <td><span class="wf-cat wf-cat-verb">Động từ</span></td>
+            <td>Làm cho trở nên.</td>
+            <td><code>beautify</code> · <code>simplify</code> · <code>classify</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="verb">
+            <th scope="row"><code>-en</code></th>
+            <td><span class="wf-cat wf-cat-verb">Động từ</span></td>
+            <td>Làm cho trở nên.</td>
+            <td><code>widen</code> · <code>strengthen</code> · <code>shorten</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="verb">
+            <th scope="row"><code>-ate</code></th>
+            <td><span class="wf-cat wf-cat-verb">Động từ</span></td>
+            <td>Tạo động từ, thường chỉ hành động.</td>
+            <td><code>decorate</code> · <code>celebrate</code> · <code>communicate</code></td>
+          </tr>
 
-            <tr class="wf-suffix-row" data-cat="adv">
-              <th scope="row"><code>-ly</code></th>
-              <td><span class="wf-cat wf-cat-adv">Trạng từ</span></td>
-              <td>Cách thức thực hiện hành động.</td>
-              <td><code>carefully</code> · <code>quickly</code> · <code>successfully</code></td>
-            </tr>
-            <tr class="wf-suffix-row" data-cat="adv">
-              <th scope="row"><code>-ward(s)</code></th>
-              <td><span class="wf-cat wf-cat-adv">Trạng từ</span></td>
-              <td>Theo hướng.</td>
-              <td><code>forward</code> · <code>backward</code> · <code>toward</code></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+          <tr class="wf-suffix-row" data-cat="adv">
+            <th scope="row"><code>-ly</code></th>
+            <td><span class="wf-cat wf-cat-adv">Trạng từ</span></td>
+            <td>Cách thức thực hiện hành động.</td>
+            <td><code>carefully</code> · <code>quickly</code> · <code>successfully</code></td>
+          </tr>
+          <tr class="wf-suffix-row" data-cat="adv">
+            <th scope="row"><code>-ward(s)</code></th>
+            <td><span class="wf-cat wf-cat-adv">Trạng từ</span></td>
+            <td>Theo hướng.</td>
+            <td><code>forward</code> · <code>backward</code> · <code>toward</code></td>
+          </tr>
+        </tbody>
+      </TableShell>
 
       <EmptyState
         id="suffix-empty"
@@ -477,112 +480,113 @@ import '../styles/word-forms.css';
         <p><strong>im-</strong> trước m, b, p · <strong>il-</strong> trước l · <strong>ir-</strong> trước r · <strong>in-</strong> các trường hợp còn lại</p>
       </div>
 
-      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
-      <div class="wf-table-wrap">
-        <table class="wf-table wf-prefix-table">
-          <caption class="sr-only">Bảng tiền tố thường gặp</caption>
-          <thead>
-            <tr>
-              <th scope="col">Tiền tố</th>
-              <th scope="col">Nghĩa</th>
-              <th scope="col">Ví dụ</th>
-              <th scope="col">Ghi nhớ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="wf-prefix-negative">
-              <th scope="row"><code>un-</code></th>
-              <td>Không, ngược lại.</td>
-              <td><code>unhappy</code> · <code>unhealthy</code> · <code>unable</code></td>
-              <td>Tiền tố phủ định phổ biến nhất.</td>
-            </tr>
-            <tr class="wf-prefix-negative">
-              <th scope="row"><code>in-</code></th>
-              <td>Không.</td>
-              <td><code>incorrect</code> · <code>indirect</code> · <code>invisible</code></td>
-              <td>Dùng khi từ gốc không bắt đầu bằng m, b, p, l, r.</td>
-            </tr>
-            <tr class="wf-prefix-negative">
-              <th scope="row"><code>im-</code></th>
-              <td>Không.</td>
-              <td><code>impossible</code> · <code>impolite</code> · <code>impatient</code></td>
-              <td>Đứng trước m, b, p.</td>
-            </tr>
-            <tr class="wf-prefix-negative">
-              <th scope="row"><code>il-</code></th>
-              <td>Không.</td>
-              <td><code>illegal</code> · <code>illogical</code></td>
-              <td>Đứng trước l.</td>
-            </tr>
-            <tr class="wf-prefix-negative">
-              <th scope="row"><code>ir-</code></th>
-              <td>Không.</td>
-              <td><code>irregular</code> · <code>irresponsible</code></td>
-              <td>Đứng trước r.</td>
-            </tr>
-            <tr class="wf-prefix-negative">
-              <th scope="row"><code>dis-</code></th>
-              <td>Không, ngược lại.</td>
-              <td><code>disagree</code> · <code>disappear</code> · <code>dishonest</code></td>
-              <td>Thường gặp với động từ và tính từ.</td>
-            </tr>
-            <tr class="wf-prefix-negative">
-              <th scope="row"><code>non-</code></th>
-              <td>Không, phi.</td>
-              <td><code>non-stop</code> · <code>non-smoker</code></td>
-              <td>Ít gặp hơn, thường viết có gạch nối.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>mis-</code></th>
-              <td>Sai, nhầm.</td>
-              <td><code>misunderstand</code> · <code>mislead</code> · <code>misuse</code></td>
-              <td>Nhấn mạnh việc làm sai.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>re-</code></th>
-              <td>Lại, làm lại lần nữa.</td>
-              <td><code>reuse</code> · <code>rebuild</code> · <code>rewrite</code></td>
-              <td>Rất hay gặp trong chủ đề môi trường.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>over-</code></th>
-              <td>Quá mức.</td>
-              <td><code>overcrowded</code> · <code>overwork</code> · <code>overpopulation</code></td>
-              <td>Nhấn mạnh vượt quá giới hạn.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>under-</code></th>
-              <td>Dưới, chưa đủ.</td>
-              <td><code>underdeveloped</code> · <code>underestimate</code></td>
-              <td>Đối lập với over-.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>pre-</code></th>
-              <td>Trước.</td>
-              <td><code>preview</code> · <code>prehistory</code></td>
-              <td>Thường gặp trong từ chỉ thời gian.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>inter-</code></th>
-              <td>Giữa, giữa các.</td>
-              <td><code>international</code> · <code>interact</code></td>
-              <td>Liên quan đến nhiều nước, nhiều bên.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>multi-</code></th>
-              <td>Nhiều.</td>
-              <td><code>multicultural</code> · <code>multimedia</code></td>
-              <td>Nhấn mạnh số lượng nhiều.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>en- / em-</code></th>
-              <td>Làm cho.</td>
-              <td><code>enrich</code> · <code>enable</code> · <code>empower</code></td>
-              <td>Có thể tạo động từ từ danh từ hoặc tính từ.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <TableShell
+        wrapperClass="wf-table-wrap"
+        tableClass="wf-table wf-prefix-table"
+        caption="Bảng tiền tố thường gặp"
+        hint
+      >
+        <thead>
+          <tr>
+            <th scope="col">Tiền tố</th>
+            <th scope="col">Nghĩa</th>
+            <th scope="col">Ví dụ</th>
+            <th scope="col">Ghi nhớ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="wf-prefix-negative">
+            <th scope="row"><code>un-</code></th>
+            <td>Không, ngược lại.</td>
+            <td><code>unhappy</code> · <code>unhealthy</code> · <code>unable</code></td>
+            <td>Tiền tố phủ định phổ biến nhất.</td>
+          </tr>
+          <tr class="wf-prefix-negative">
+            <th scope="row"><code>in-</code></th>
+            <td>Không.</td>
+            <td><code>incorrect</code> · <code>indirect</code> · <code>invisible</code></td>
+            <td>Dùng khi từ gốc không bắt đầu bằng m, b, p, l, r.</td>
+          </tr>
+          <tr class="wf-prefix-negative">
+            <th scope="row"><code>im-</code></th>
+            <td>Không.</td>
+            <td><code>impossible</code> · <code>impolite</code> · <code>impatient</code></td>
+            <td>Đứng trước m, b, p.</td>
+          </tr>
+          <tr class="wf-prefix-negative">
+            <th scope="row"><code>il-</code></th>
+            <td>Không.</td>
+            <td><code>illegal</code> · <code>illogical</code></td>
+            <td>Đứng trước l.</td>
+          </tr>
+          <tr class="wf-prefix-negative">
+            <th scope="row"><code>ir-</code></th>
+            <td>Không.</td>
+            <td><code>irregular</code> · <code>irresponsible</code></td>
+            <td>Đứng trước r.</td>
+          </tr>
+          <tr class="wf-prefix-negative">
+            <th scope="row"><code>dis-</code></th>
+            <td>Không, ngược lại.</td>
+            <td><code>disagree</code> · <code>disappear</code> · <code>dishonest</code></td>
+            <td>Thường gặp với động từ và tính từ.</td>
+          </tr>
+          <tr class="wf-prefix-negative">
+            <th scope="row"><code>non-</code></th>
+            <td>Không, phi.</td>
+            <td><code>non-stop</code> · <code>non-smoker</code></td>
+            <td>Ít gặp hơn, thường viết có gạch nối.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>mis-</code></th>
+            <td>Sai, nhầm.</td>
+            <td><code>misunderstand</code> · <code>mislead</code> · <code>misuse</code></td>
+            <td>Nhấn mạnh việc làm sai.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>re-</code></th>
+            <td>Lại, làm lại lần nữa.</td>
+            <td><code>reuse</code> · <code>rebuild</code> · <code>rewrite</code></td>
+            <td>Rất hay gặp trong chủ đề môi trường.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>over-</code></th>
+            <td>Quá mức.</td>
+            <td><code>overcrowded</code> · <code>overwork</code> · <code>overpopulation</code></td>
+            <td>Nhấn mạnh vượt quá giới hạn.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>under-</code></th>
+            <td>Dưới, chưa đủ.</td>
+            <td><code>underdeveloped</code> · <code>underestimate</code></td>
+            <td>Đối lập với over-.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>pre-</code></th>
+            <td>Trước.</td>
+            <td><code>preview</code> · <code>prehistory</code></td>
+            <td>Thường gặp trong từ chỉ thời gian.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>inter-</code></th>
+            <td>Giữa, giữa các.</td>
+            <td><code>international</code> · <code>interact</code></td>
+            <td>Liên quan đến nhiều nước, nhiều bên.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>multi-</code></th>
+            <td>Nhiều.</td>
+            <td><code>multicultural</code> · <code>multimedia</code></td>
+            <td>Nhấn mạnh số lượng nhiều.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>en- / em-</code></th>
+            <td>Làm cho.</td>
+            <td><code>enrich</code> · <code>enable</code> · <code>empower</code></td>
+            <td>Có thể tạo động từ từ danh từ hoặc tính từ.</td>
+          </tr>
+        </tbody>
+      </TableShell>
 
       <p class="mini-note"><strong>Mẹo:</strong> gặp từ lạ, hãy bỏ tiền tố để tìm từ gốc. <em>impossible → possible</em>, <em>disagree → agree</em>, <em>irregular → regular</em>. Nghĩa thường chỉ bị đảo ngược, từ loại giữ nguyên.</p>
     </div>

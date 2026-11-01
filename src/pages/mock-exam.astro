@@ -4,6 +4,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TableShell from '../components/TableShell.astro';
 import '../styles/mock-exam.css';
 ---
 
@@ -45,32 +46,33 @@ import '../styles/mock-exam.css';
         <p slot="aside" class="section-aside"><span>24</span> câu<br><span>45</span> phút</p>
       </SectionHead>
 
-      <div class="mx-table-wrap">
-        <table class="mx-table">
-          <caption class="sr-only">Cấu trúc đề thi thử 24 câu</caption>
-          <thead>
-            <tr>
-              <th scope="col">Nhóm</th>
-              <th scope="col">Câu</th>
-              <th scope="col">Kỹ năng</th>
-              <th scope="col">Số câu</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><th scope="row">1</th><td>1–2</td><td>Phát âm &amp; trọng âm</td><td>2</td></tr>
-            <tr><th scope="row">2</th><td>3–6</td><td>Ngữ pháp &amp; từ vựng</td><td>4</td></tr>
-            <tr><th scope="row">3</th><td>7–10</td><td>Giao tiếp &amp; biển báo</td><td>4</td></tr>
-            <tr><th scope="row">4</th><td>11–13</td><td>Điền khuyết</td><td>3</td></tr>
-            <tr><th scope="row">5</th><td>14–16</td><td>Đọc hiểu</td><td>3</td></tr>
-            <tr><th scope="row">6</th><td>17–19</td><td>Từ loại</td><td>3</td></tr>
-            <tr><th scope="row">7</th><td>20–21</td><td>Phần VI</td><td>2</td></tr>
-            <tr><th scope="row">8</th><td>22–24</td><td>Viết lại câu</td><td>3</td></tr>
-          </tbody>
-          <tfoot>
-            <tr><th scope="row">Tổng</th><td>1–24</td><td>Đủ 8 nhóm câu</td><td>24</td></tr>
-          </tfoot>
-        </table>
-      </div>
+      <TableShell
+        wrapperClass="mx-table-wrap"
+        tableClass="mx-table"
+        caption="Cấu trúc đề thi thử 24 câu"
+      >
+        <thead>
+          <tr>
+            <th scope="col">Nhóm</th>
+            <th scope="col">Câu</th>
+            <th scope="col">Kỹ năng</th>
+            <th scope="col">Số câu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">1</th><td>1–2</td><td>Phát âm &amp; trọng âm</td><td>2</td></tr>
+          <tr><th scope="row">2</th><td>3–6</td><td>Ngữ pháp &amp; từ vựng</td><td>4</td></tr>
+          <tr><th scope="row">3</th><td>7–10</td><td>Giao tiếp &amp; biển báo</td><td>4</td></tr>
+          <tr><th scope="row">4</th><td>11–13</td><td>Điền khuyết</td><td>3</td></tr>
+          <tr><th scope="row">5</th><td>14–16</td><td>Đọc hiểu</td><td>3</td></tr>
+          <tr><th scope="row">6</th><td>17–19</td><td>Từ loại</td><td>3</td></tr>
+          <tr><th scope="row">7</th><td>20–21</td><td>Phần VI</td><td>2</td></tr>
+          <tr><th scope="row">8</th><td>22–24</td><td>Viết lại câu</td><td>3</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><th scope="row">Tổng</th><td>1–24</td><td>Đủ 8 nhóm câu</td><td>24</td></tr>
+        </tfoot>
+      </TableShell>
 
       <div class="mx-score-note">
         <p><strong>Cách tính điểm:</strong> 24 câu, mỗi câu khoảng 0,42 điểm. Kết quả hiển thị theo thang 24 và quy đổi thang 10. Điểm chỉ để luyện, không phải điểm thi thật.</p>

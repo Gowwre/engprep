@@ -7,6 +7,7 @@ import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TableShell from '../components/TableShell.astro';
 import TrapCard from '../components/TrapCard.astro';
 import '../styles/vocabulary.css';
 ---
@@ -116,219 +117,220 @@ import '../styles/vocabulary.css';
         countText="32/32 cụm"
       />
 
-      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
-      <div class="vc-table-wrap">
-        <table class="vc-table vc-collocation-table">
-          <caption class="sr-only">Bảng cụm từ cố định thường gặp trong đề thi lớp 9</caption>
-          <thead>
-            <tr>
-              <th scope="col">Cụm</th>
-              <th scope="col">Nhóm</th>
-              <th scope="col">Nghĩa</th>
-              <th scope="col">Ví dụ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="vc-collocation-row" data-cat="vn">
-              <th scope="row"><code>make a decision</code></th>
-              <td><span class="vc-cat vc-cat-vn">V + N</span></td>
-              <td>đưa ra quyết định</td>
-              <td>She <strong>made a decision</strong> about the trip.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="vn">
-              <th scope="row"><code>take part in</code></th>
-              <td><span class="vc-cat vc-cat-vn">V + N</span></td>
-              <td>tham gia</td>
-              <td>He <strong>took part in</strong> the contest.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="vn">
-              <th scope="row"><code>do homework</code></th>
-              <td><span class="vc-cat vc-cat-vn">V + N</span></td>
-              <td>làm bài tập</td>
-              <td>I <strong>do my homework</strong> every evening.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="vn">
-              <th scope="row"><code>have an impact on</code></th>
-              <td><span class="vc-cat vc-cat-vn">V + N</span></td>
-              <td>có tác động đến</td>
-              <td>Social media <strong>has an impact on</strong> teenagers.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="vn">
-              <th scope="row"><code>make a difference</code></th>
-              <td><span class="vc-cat vc-cat-vn">V + N</span></td>
-              <td>tạo sự khác biệt</td>
-              <td>Small actions can <strong>make a difference</strong>.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="vn">
-              <th scope="row"><code>pay attention to</code></th>
-              <td><span class="vc-cat vc-cat-vn">V + N</span></td>
-              <td>chú ý đến</td>
-              <td><strong>Pay attention to</strong> the keywords.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="vn">
-              <th scope="row"><code>take responsibility for</code></th>
-              <td><span class="vc-cat vc-cat-vn">V + N</span></td>
-              <td>chịu trách nhiệm về</td>
-              <td>We should <strong>take responsibility for</strong> our actions.</td>
-            </tr>
+      <TableShell
+        wrapperClass="vc-table-wrap"
+        tableClass="vc-table vc-collocation-table"
+        caption="Bảng cụm từ cố định thường gặp trong đề thi lớp 9"
+        hint
+      >
+        <thead>
+          <tr>
+            <th scope="col">Cụm</th>
+            <th scope="col">Nhóm</th>
+            <th scope="col">Nghĩa</th>
+            <th scope="col">Ví dụ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="vc-collocation-row" data-cat="vn">
+            <th scope="row"><code>make a decision</code></th>
+            <td><span class="vc-cat vc-cat-vn">V + N</span></td>
+            <td>đưa ra quyết định</td>
+            <td>She <strong>made a decision</strong> about the trip.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="vn">
+            <th scope="row"><code>take part in</code></th>
+            <td><span class="vc-cat vc-cat-vn">V + N</span></td>
+            <td>tham gia</td>
+            <td>He <strong>took part in</strong> the contest.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="vn">
+            <th scope="row"><code>do homework</code></th>
+            <td><span class="vc-cat vc-cat-vn">V + N</span></td>
+            <td>làm bài tập</td>
+            <td>I <strong>do my homework</strong> every evening.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="vn">
+            <th scope="row"><code>have an impact on</code></th>
+            <td><span class="vc-cat vc-cat-vn">V + N</span></td>
+            <td>có tác động đến</td>
+            <td>Social media <strong>has an impact on</strong> teenagers.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="vn">
+            <th scope="row"><code>make a difference</code></th>
+            <td><span class="vc-cat vc-cat-vn">V + N</span></td>
+            <td>tạo sự khác biệt</td>
+            <td>Small actions can <strong>make a difference</strong>.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="vn">
+            <th scope="row"><code>pay attention to</code></th>
+            <td><span class="vc-cat vc-cat-vn">V + N</span></td>
+            <td>chú ý đến</td>
+            <td><strong>Pay attention to</strong> the keywords.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="vn">
+            <th scope="row"><code>take responsibility for</code></th>
+            <td><span class="vc-cat vc-cat-vn">V + N</span></td>
+            <td>chịu trách nhiệm về</td>
+            <td>We should <strong>take responsibility for</strong> our actions.</td>
+          </tr>
 
-            <tr class="vc-collocation-row" data-cat="adjn">
-              <th scope="row"><code>heavy rain</code></th>
-              <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
-              <td>mưa lớn</td>
-              <td><strong>Heavy rain</strong> caused floods.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="adjn">
-              <th scope="row"><code>serious problem</code></th>
-              <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
-              <td>vấn đề nghiêm trọng</td>
-              <td>Plastic waste is a <strong>serious problem</strong>.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="adjn">
-              <th scope="row"><code>healthy lifestyle</code></th>
-              <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
-              <td>lối sống lành mạnh</td>
-              <td>A <strong>healthy lifestyle</strong> is important.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="adjn">
-              <th scope="row"><code>public transport</code></th>
-              <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
-              <td>giao thông công cộng</td>
-              <td>We should use <strong>public transport</strong>.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="adjn">
-              <th scope="row"><code>renewable energy</code></th>
-              <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
-              <td>năng lượng tái tạo</td>
-              <td>Solar power is a form of <strong>renewable energy</strong>.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="adjn">
-              <th scope="row"><code>cultural heritage</code></th>
-              <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
-              <td>di sản văn hoá</td>
-              <td>We should protect <strong>cultural heritage</strong>.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="adjn">
-              <th scope="row"><code>social media</code></th>
-              <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
-              <td>mạng xã hội</td>
-              <td>Many teens use <strong>social media</strong> every day.</td>
-            </tr>
+          <tr class="vc-collocation-row" data-cat="adjn">
+            <th scope="row"><code>heavy rain</code></th>
+            <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
+            <td>mưa lớn</td>
+            <td><strong>Heavy rain</strong> caused floods.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="adjn">
+            <th scope="row"><code>serious problem</code></th>
+            <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
+            <td>vấn đề nghiêm trọng</td>
+            <td>Plastic waste is a <strong>serious problem</strong>.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="adjn">
+            <th scope="row"><code>healthy lifestyle</code></th>
+            <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
+            <td>lối sống lành mạnh</td>
+            <td>A <strong>healthy lifestyle</strong> is important.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="adjn">
+            <th scope="row"><code>public transport</code></th>
+            <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
+            <td>giao thông công cộng</td>
+            <td>We should use <strong>public transport</strong>.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="adjn">
+            <th scope="row"><code>renewable energy</code></th>
+            <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
+            <td>năng lượng tái tạo</td>
+            <td>Solar power is a form of <strong>renewable energy</strong>.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="adjn">
+            <th scope="row"><code>cultural heritage</code></th>
+            <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
+            <td>di sản văn hoá</td>
+            <td>We should protect <strong>cultural heritage</strong>.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="adjn">
+            <th scope="row"><code>social media</code></th>
+            <td><span class="vc-cat vc-cat-adjn">Adj + N</span></td>
+            <td>mạng xã hội</td>
+            <td>Many teens use <strong>social media</strong> every day.</td>
+          </tr>
 
-            <tr class="vc-collocation-row" data-cat="vprep">
-              <th scope="row"><code>depend on</code></th>
-              <td><span class="vc-cat vc-cat-vprep">V + prep</span></td>
-              <td>phụ thuộc vào</td>
-              <td>It <strong>depends on</strong> the weather.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="vprep">
-              <th scope="row"><code>look after</code></th>
-              <td><span class="vc-cat vc-cat-vprep">V + prep</span></td>
-              <td>chăm sóc</td>
-              <td>She <strong>looks after</strong> her little brother.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="vprep">
-              <th scope="row"><code>look forward to</code></th>
-              <td><span class="vc-cat vc-cat-vprep">V + prep</span></td>
-              <td>mong chờ (+ V-ing)</td>
-              <td>I <strong>look forward to seeing</strong> you.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="vprep">
-              <th scope="row"><code>deal with</code></th>
-              <td><span class="vc-cat vc-cat-vprep">V + prep</span></td>
-              <td>giải quyết, xử lý</td>
-              <td>We need to <strong>deal with</strong> this problem.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="vprep">
-              <th scope="row"><code>concentrate on</code></th>
-              <td><span class="vc-cat vc-cat-vprep">V + prep</span></td>
-              <td>tập trung vào</td>
-              <td><strong>Concentrate on</strong> your studies.</td>
-            </tr>
+          <tr class="vc-collocation-row" data-cat="vprep">
+            <th scope="row"><code>depend on</code></th>
+            <td><span class="vc-cat vc-cat-vprep">V + prep</span></td>
+            <td>phụ thuộc vào</td>
+            <td>It <strong>depends on</strong> the weather.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="vprep">
+            <th scope="row"><code>look after</code></th>
+            <td><span class="vc-cat vc-cat-vprep">V + prep</span></td>
+            <td>chăm sóc</td>
+            <td>She <strong>looks after</strong> her little brother.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="vprep">
+            <th scope="row"><code>look forward to</code></th>
+            <td><span class="vc-cat vc-cat-vprep">V + prep</span></td>
+            <td>mong chờ (+ V-ing)</td>
+            <td>I <strong>look forward to seeing</strong> you.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="vprep">
+            <th scope="row"><code>deal with</code></th>
+            <td><span class="vc-cat vc-cat-vprep">V + prep</span></td>
+            <td>giải quyết, xử lý</td>
+            <td>We need to <strong>deal with</strong> this problem.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="vprep">
+            <th scope="row"><code>concentrate on</code></th>
+            <td><span class="vc-cat vc-cat-vprep">V + prep</span></td>
+            <td>tập trung vào</td>
+            <td><strong>Concentrate on</strong> your studies.</td>
+          </tr>
 
-            <tr class="vc-collocation-row" data-cat="nprep">
-              <th scope="row"><code>reason for</code></th>
-              <td><span class="vc-cat vc-cat-nprep">N + prep</span></td>
-              <td>lý do cho</td>
-              <td>the <strong>reason for</strong> the change</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="nprep">
-              <th scope="row"><code>solution to</code></th>
-              <td><span class="vc-cat vc-cat-nprep">N + prep</span></td>
-              <td>giải pháp cho</td>
-              <td>a <strong>solution to</strong> the problem</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="nprep">
-              <th scope="row"><code>effect on</code></th>
-              <td><span class="vc-cat vc-cat-nprep">N + prep</span></td>
-              <td>tác động lên</td>
-              <td>Noise has a bad <strong>effect on</strong> sleep.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="nprep">
-              <th scope="row"><code>access to</code></th>
-              <td><span class="vc-cat vc-cat-nprep">N + prep</span></td>
-              <td>quyền tiếp cận</td>
-              <td><strong>access to</strong> the internet</td>
-            </tr>
+          <tr class="vc-collocation-row" data-cat="nprep">
+            <th scope="row"><code>reason for</code></th>
+            <td><span class="vc-cat vc-cat-nprep">N + prep</span></td>
+            <td>lý do cho</td>
+            <td>the <strong>reason for</strong> the change</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="nprep">
+            <th scope="row"><code>solution to</code></th>
+            <td><span class="vc-cat vc-cat-nprep">N + prep</span></td>
+            <td>giải pháp cho</td>
+            <td>a <strong>solution to</strong> the problem</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="nprep">
+            <th scope="row"><code>effect on</code></th>
+            <td><span class="vc-cat vc-cat-nprep">N + prep</span></td>
+            <td>tác động lên</td>
+            <td>Noise has a bad <strong>effect on</strong> sleep.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="nprep">
+            <th scope="row"><code>access to</code></th>
+            <td><span class="vc-cat vc-cat-nprep">N + prep</span></td>
+            <td>quyền tiếp cận</td>
+            <td><strong>access to</strong> the internet</td>
+          </tr>
 
-            <tr class="vc-collocation-row" data-cat="fixed">
-              <th scope="row"><code>in the end</code></th>
-              <td><span class="vc-cat vc-cat-fixed">Cụm cố định</span></td>
-              <td>cuối cùng</td>
-              <td><strong>In the end</strong>, we decided to stay.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="fixed">
-              <th scope="row"><code>on time</code></th>
-              <td><span class="vc-cat vc-cat-fixed">Cụm cố định</span></td>
-              <td>đúng giờ</td>
-              <td>The train arrived <strong>on time</strong>.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="fixed">
-              <th scope="row"><code>by mistake</code></th>
-              <td><span class="vc-cat vc-cat-fixed">Cụm cố định</span></td>
-              <td>do nhầm lẫn</td>
-              <td>I took your bag <strong>by mistake</strong>.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="fixed">
-              <th scope="row"><code>in spite of</code></th>
-              <td><span class="vc-cat vc-cat-fixed">Cụm cố định</span></td>
-              <td>mặc dù</td>
-              <td><strong>In spite of</strong> the rain, we went out.</td>
-            </tr>
+          <tr class="vc-collocation-row" data-cat="fixed">
+            <th scope="row"><code>in the end</code></th>
+            <td><span class="vc-cat vc-cat-fixed">Cụm cố định</span></td>
+            <td>cuối cùng</td>
+            <td><strong>In the end</strong>, we decided to stay.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="fixed">
+            <th scope="row"><code>on time</code></th>
+            <td><span class="vc-cat vc-cat-fixed">Cụm cố định</span></td>
+            <td>đúng giờ</td>
+            <td>The train arrived <strong>on time</strong>.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="fixed">
+            <th scope="row"><code>by mistake</code></th>
+            <td><span class="vc-cat vc-cat-fixed">Cụm cố định</span></td>
+            <td>do nhầm lẫn</td>
+            <td>I took your bag <strong>by mistake</strong>.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="fixed">
+            <th scope="row"><code>in spite of</code></th>
+            <td><span class="vc-cat vc-cat-fixed">Cụm cố định</span></td>
+            <td>mặc dù</td>
+            <td><strong>In spite of</strong> the rain, we went out.</td>
+          </tr>
 
-            <tr class="vc-collocation-row" data-cat="phrasal">
-              <th scope="row"><code>break down</code></th>
-              <td><span class="vc-cat vc-cat-phrasal">Cụm động từ</span></td>
-              <td>hỏng máy</td>
-              <td>Our car <strong>broke down</strong>.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="phrasal">
-              <th scope="row"><code>run out of</code></th>
-              <td><span class="vc-cat vc-cat-phrasal">Cụm động từ</span></td>
-              <td>hết, không còn</td>
-              <td>We <strong>ran out of</strong> water.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="phrasal">
-              <th scope="row"><code>put off</code></th>
-              <td><span class="vc-cat vc-cat-phrasal">Cụm động từ</span></td>
-              <td>hoãn lại</td>
-              <td>They <strong>put off</strong> the meeting.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="phrasal">
-              <th scope="row"><code>turn off</code></th>
-              <td><span class="vc-cat vc-cat-phrasal">Cụm động từ</span></td>
-              <td>tắt</td>
-              <td><strong>Turn off</strong> the lights.</td>
-            </tr>
-            <tr class="vc-collocation-row" data-cat="phrasal">
-              <th scope="row"><code>give up</code></th>
-              <td><span class="vc-cat vc-cat-phrasal">Cụm động từ</span></td>
-              <td>từ bỏ</td>
-              <td>Don’t <strong>give up</strong>.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+          <tr class="vc-collocation-row" data-cat="phrasal">
+            <th scope="row"><code>break down</code></th>
+            <td><span class="vc-cat vc-cat-phrasal">Cụm động từ</span></td>
+            <td>hỏng máy</td>
+            <td>Our car <strong>broke down</strong>.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="phrasal">
+            <th scope="row"><code>run out of</code></th>
+            <td><span class="vc-cat vc-cat-phrasal">Cụm động từ</span></td>
+            <td>hết, không còn</td>
+            <td>We <strong>ran out of</strong> water.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="phrasal">
+            <th scope="row"><code>put off</code></th>
+            <td><span class="vc-cat vc-cat-phrasal">Cụm động từ</span></td>
+            <td>hoãn lại</td>
+            <td>They <strong>put off</strong> the meeting.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="phrasal">
+            <th scope="row"><code>turn off</code></th>
+            <td><span class="vc-cat vc-cat-phrasal">Cụm động từ</span></td>
+            <td>tắt</td>
+            <td><strong>Turn off</strong> the lights.</td>
+          </tr>
+          <tr class="vc-collocation-row" data-cat="phrasal">
+            <th scope="row"><code>give up</code></th>
+            <td><span class="vc-cat vc-cat-phrasal">Cụm động từ</span></td>
+            <td>từ bỏ</td>
+            <td>Don’t <strong>give up</strong>.</td>
+          </tr>
+        </tbody>
+      </TableShell>
 
       <EmptyState
         id="collocation-empty"

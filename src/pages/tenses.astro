@@ -7,6 +7,7 @@ import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
 import SignalCard from '../components/SignalCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TableShell from '../components/TableShell.astro';
 import TenseCard from '../components/TenseCard.astro';
 import TrapCard from '../components/TrapCard.astro';
 ---
@@ -40,45 +41,46 @@ import TrapCard from '../components/TrapCard.astro';
       </SectionHead>
 
       <div class="map-panel">
-        <div class="map-scroll">
-          <table class="tense-map">
-            <caption class="sr-only">Sơ đồ 12 thì tiếng Anh theo dạng và mốc thời gian</caption>
-            <thead>
-              <tr>
-                <th scope="col"><span class="sr-only">Dạng</span></th>
-                <th scope="col">Hiện tại</th>
-                <th scope="col">Quá khứ</th>
-                <th scope="col">Tương lai</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row"><span class="aspect"><strong>Đơn</strong><span>Simple</span></span></th>
-                <td><a class="map-cell map-cell-present" href="#present-simple"><strong>Hiện tại đơn</strong><em>Present Simple</em><code>S + V(s/es)</code></a></td>
-                <td><a class="map-cell map-cell-past" href="#past-simple"><strong>Quá khứ đơn</strong><em>Past Simple</em><code>S + V2/ed</code></a></td>
-                <td><a class="map-cell map-cell-future" href="#future-simple"><strong>Tương lai đơn</strong><em>Future Simple</em><code>S + will + V</code></a></td>
-              </tr>
-              <tr>
-                <th scope="row"><span class="aspect"><strong>Tiếp diễn</strong><span>Continuous</span></span></th>
-                <td><a class="map-cell map-cell-present" href="#present-continuous"><strong>Hiện tại tiếp diễn</strong><em>Present Continuous</em><code>S + am/is/are + V-ing</code></a></td>
-                <td><a class="map-cell map-cell-past" href="#past-continuous"><strong>Quá khứ tiếp diễn</strong><em>Past Continuous</em><code>S + was/were + V-ing</code></a></td>
-                <td><a class="map-cell map-cell-future" href="#future-continuous"><strong>Tương lai tiếp diễn</strong><em>Future Continuous</em><code>S + will be + V-ing</code></a></td>
-              </tr>
-              <tr>
-                <th scope="row"><span class="aspect"><strong>Hoàn thành</strong><span>Perfect</span></span></th>
-                <td><a class="map-cell map-cell-present" href="#present-perfect"><strong>Hiện tại hoàn thành</strong><em>Present Perfect</em><code>S + have/has + V3/ed</code></a></td>
-                <td><a class="map-cell map-cell-past" href="#past-perfect"><strong>Quá khứ hoàn thành</strong><em>Past Perfect</em><code>S + had + V3/ed</code></a></td>
-                <td><a class="map-cell map-cell-future" href="#future-perfect"><strong>Tương lai hoàn thành</strong><em>Future Perfect</em><code>S + will have + V3/ed</code></a></td>
-              </tr>
-              <tr>
-                <th scope="row"><span class="aspect"><strong>Hoàn thành tiếp diễn</strong><span>Perfect Continuous</span></span></th>
-                <td><a class="map-cell map-cell-present" href="#present-perfect-continuous"><strong>Hiện tại hoàn thành tiếp diễn</strong><em>Present Perfect Continuous</em><code>S + have/has been + V-ing</code></a></td>
-                <td><a class="map-cell map-cell-past" href="#past-perfect-continuous"><strong>Quá khứ hoàn thành tiếp diễn</strong><em>Past Perfect Continuous</em><code>S + had been + V-ing</code></a></td>
-                <td><a class="map-cell map-cell-future" href="#future-perfect-continuous"><strong>Tương lai hoàn thành tiếp diễn</strong><em>Future Perfect Continuous</em><code>S + will have been + V-ing</code></a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <TableShell
+          wrapperClass="map-scroll"
+          tableClass="tense-map"
+          caption="Sơ đồ 12 thì tiếng Anh theo dạng và mốc thời gian"
+        >
+        <thead>
+            <tr>
+              <th scope="col"><span class="sr-only">Dạng</span></th>
+              <th scope="col">Hiện tại</th>
+              <th scope="col">Quá khứ</th>
+              <th scope="col">Tương lai</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><span class="aspect"><strong>Đơn</strong><span>Simple</span></span></th>
+              <td><a class="map-cell map-cell-present" href="#present-simple"><strong>Hiện tại đơn</strong><em>Present Simple</em><code>S + V(s/es)</code></a></td>
+              <td><a class="map-cell map-cell-past" href="#past-simple"><strong>Quá khứ đơn</strong><em>Past Simple</em><code>S + V2/ed</code></a></td>
+              <td><a class="map-cell map-cell-future" href="#future-simple"><strong>Tương lai đơn</strong><em>Future Simple</em><code>S + will + V</code></a></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="aspect"><strong>Tiếp diễn</strong><span>Continuous</span></span></th>
+              <td><a class="map-cell map-cell-present" href="#present-continuous"><strong>Hiện tại tiếp diễn</strong><em>Present Continuous</em><code>S + am/is/are + V-ing</code></a></td>
+              <td><a class="map-cell map-cell-past" href="#past-continuous"><strong>Quá khứ tiếp diễn</strong><em>Past Continuous</em><code>S + was/were + V-ing</code></a></td>
+              <td><a class="map-cell map-cell-future" href="#future-continuous"><strong>Tương lai tiếp diễn</strong><em>Future Continuous</em><code>S + will be + V-ing</code></a></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="aspect"><strong>Hoàn thành</strong><span>Perfect</span></span></th>
+              <td><a class="map-cell map-cell-present" href="#present-perfect"><strong>Hiện tại hoàn thành</strong><em>Present Perfect</em><code>S + have/has + V3/ed</code></a></td>
+              <td><a class="map-cell map-cell-past" href="#past-perfect"><strong>Quá khứ hoàn thành</strong><em>Past Perfect</em><code>S + had + V3/ed</code></a></td>
+              <td><a class="map-cell map-cell-future" href="#future-perfect"><strong>Tương lai hoàn thành</strong><em>Future Perfect</em><code>S + will have + V3/ed</code></a></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="aspect"><strong>Hoàn thành tiếp diễn</strong><span>Perfect Continuous</span></span></th>
+              <td><a class="map-cell map-cell-present" href="#present-perfect-continuous"><strong>Hiện tại hoàn thành tiếp diễn</strong><em>Present Perfect Continuous</em><code>S + have/has been + V-ing</code></a></td>
+              <td><a class="map-cell map-cell-past" href="#past-perfect-continuous"><strong>Quá khứ hoàn thành tiếp diễn</strong><em>Past Perfect Continuous</em><code>S + had been + V-ing</code></a></td>
+              <td><a class="map-cell map-cell-future" href="#future-perfect-continuous"><strong>Tương lai hoàn thành tiếp diễn</strong><em>Future Perfect Continuous</em><code>S + will have been + V-ing</code></a></td>
+            </tr>
+          </tbody>
+        </TableShell>
 
         <div class="map-mobile" aria-label="Sơ đồ 12 thì theo mốc thời gian">
           <section class="map-mobile-group">

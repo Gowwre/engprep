@@ -7,6 +7,7 @@ import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TableShell from '../components/TableShell.astro';
 import TrapCard from '../components/TrapCard.astro';
 import '../styles/reading.css';
 ---
@@ -191,64 +192,65 @@ import '../styles/reading.css';
         <p slot="aside" class="section-aside"><span>7</span> dạng<br><span>1</span> bảng tra</p>
       </SectionHead>
 
-      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
-      <div class="rc-table-wrap">
-        <table class="rc-table rc-type-table">
-          <caption class="sr-only">Bảng bảy dạng câu hỏi đọc hiểu và cách xử lý</caption>
-          <thead>
-            <tr>
-              <th scope="col">Dạng câu</th>
-              <th scope="col">Dấu hiệu trong đề</th>
-              <th scope="col">Cách xử lý</th>
-              <th scope="col">Bẫy thường gặp</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"><span class="rc-cat rc-cat-main">Ý chính</span></th>
-              <td><code>mainly about</code> · <code>best title</code> · <code>purpose</code></td>
-              <td>Đọc câu đầu, câu cuối và các từ lặp lại. Chọn ý bao quát được cả bài.</td>
-              <td>Chọn một chi tiết chỉ xuất hiện ở một câu.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="rc-cat rc-cat-detail">Chi tiết</span></th>
-              <td><code>according to</code> · <code>who</code> · <code>when</code> · <code>where</code></td>
-              <td>Gạch từ khoá, đọc quét tên/số/ngày rồi đọc câu chứa thông tin đó.</td>
-              <td>Chọn đáp án đúng nhưng không trả lời đúng câu hỏi.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="rc-cat rc-cat-vocab">Từ vựng</span></th>
-              <td><code>closest in meaning</code> · <code>means</code></td>
-              <td>Đọc câu trước và sau, thay từng đáp án vào câu để thử nghĩa.</td>
-              <td>Chọn nghĩa quen thuộc nhưng sai trong ngữ cảnh.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="rc-cat rc-cat-ref">Từ thay thế</span></th>
-              <td><code>it</code> · <code>they</code> · <code>this</code> · <code>that</code></td>
-              <td>Tìm danh từ hoặc cụm danh từ gần nhất phù hợp số ít/số nhiều.</td>
-              <td>Nhầm số ít với số nhiều hoặc chọn từ quá xa.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="rc-cat rc-cat-infer">Suy luận</span></th>
-              <td><code>infer</code> · <code>suggest</code> · <code>probably</code></td>
-              <td>Ghép 2–3 manh mối trong bài. Đáp án phải suy ra được, không chỉ chép lại.</td>
-              <td>Suy luận quá xa hoặc chọn đáp án cực đoan.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="rc-cat rc-cat-tf">Đúng / Sai / NOT</span></th>
-              <td><code>true</code> · <code>false</code> · <code>NOT mentioned</code> · <code>EXCEPT</code></td>
-              <td>Đối chiếu từng phương án với bài; đánh dấu câu nào đúng, câu nào không có.</td>
-              <td>Bỏ qua chữ NOT hoặc EXCEPT trong câu hỏi.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="rc-cat rc-cat-cloze">Điền khuyết</span></th>
-              <td><code>fill in</code> · <code>best fits</code> · <code>gap</code></td>
-              <td>Đọc cả câu, xét ngữ pháp, từ nối và nghĩa, rồi thử từng đáp án.</td>
-              <td>Chỉ nhìn từ đứng trước/sau mà bỏ qua nghĩa cả câu.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <TableShell
+        wrapperClass="rc-table-wrap"
+        tableClass="rc-table rc-type-table"
+        caption="Bảng bảy dạng câu hỏi đọc hiểu và cách xử lý"
+        hint
+      >
+        <thead>
+          <tr>
+            <th scope="col">Dạng câu</th>
+            <th scope="col">Dấu hiệu trong đề</th>
+            <th scope="col">Cách xử lý</th>
+            <th scope="col">Bẫy thường gặp</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><span class="rc-cat rc-cat-main">Ý chính</span></th>
+            <td><code>mainly about</code> · <code>best title</code> · <code>purpose</code></td>
+            <td>Đọc câu đầu, câu cuối và các từ lặp lại. Chọn ý bao quát được cả bài.</td>
+            <td>Chọn một chi tiết chỉ xuất hiện ở một câu.</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="rc-cat rc-cat-detail">Chi tiết</span></th>
+            <td><code>according to</code> · <code>who</code> · <code>when</code> · <code>where</code></td>
+            <td>Gạch từ khoá, đọc quét tên/số/ngày rồi đọc câu chứa thông tin đó.</td>
+            <td>Chọn đáp án đúng nhưng không trả lời đúng câu hỏi.</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="rc-cat rc-cat-vocab">Từ vựng</span></th>
+            <td><code>closest in meaning</code> · <code>means</code></td>
+            <td>Đọc câu trước và sau, thay từng đáp án vào câu để thử nghĩa.</td>
+            <td>Chọn nghĩa quen thuộc nhưng sai trong ngữ cảnh.</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="rc-cat rc-cat-ref">Từ thay thế</span></th>
+            <td><code>it</code> · <code>they</code> · <code>this</code> · <code>that</code></td>
+            <td>Tìm danh từ hoặc cụm danh từ gần nhất phù hợp số ít/số nhiều.</td>
+            <td>Nhầm số ít với số nhiều hoặc chọn từ quá xa.</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="rc-cat rc-cat-infer">Suy luận</span></th>
+            <td><code>infer</code> · <code>suggest</code> · <code>probably</code></td>
+            <td>Ghép 2–3 manh mối trong bài. Đáp án phải suy ra được, không chỉ chép lại.</td>
+            <td>Suy luận quá xa hoặc chọn đáp án cực đoan.</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="rc-cat rc-cat-tf">Đúng / Sai / NOT</span></th>
+            <td><code>true</code> · <code>false</code> · <code>NOT mentioned</code> · <code>EXCEPT</code></td>
+            <td>Đối chiếu từng phương án với bài; đánh dấu câu nào đúng, câu nào không có.</td>
+            <td>Bỏ qua chữ NOT hoặc EXCEPT trong câu hỏi.</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="rc-cat rc-cat-cloze">Điền khuyết</span></th>
+            <td><code>fill in</code> · <code>best fits</code> · <code>gap</code></td>
+            <td>Đọc cả câu, xét ngữ pháp, từ nối và nghĩa, rồi thử từng đáp án.</td>
+            <td>Chỉ nhìn từ đứng trước/sau mà bỏ qua nghĩa cả câu.</td>
+          </tr>
+        </tbody>
+      </TableShell>
 
       <p class="mini-note"><strong>Mẹo nhận diện:</strong> gạch chân từ hỏi trong đề trước khi đọc đáp án. Với câu hỏi có NOT/EXCEPT, khoanh tròn chữ đó để không bỏ sót.</p>
     </div>
@@ -283,183 +285,184 @@ import '../styles/reading.css';
         countText="26/26 từ nối"
       />
 
-      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
-      <div class="rc-table-wrap">
-        <table class="rc-table rc-connector-table">
-          <caption class="sr-only">Bảng từ nối thường gặp trong bài đọc hiểu</caption>
-          <thead>
-            <tr>
-              <th scope="col">Từ nối</th>
-              <th scope="col">Nhóm</th>
-              <th scope="col">Cách dùng</th>
-              <th scope="col">Ví dụ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="rc-connector-row" data-cat="addition">
-              <th scope="row"><code>and</code></th>
-              <td><span class="rc-cat rc-cat-addition">Thêm ý</span></td>
-              <td>Nối hai ý tương đương.</td>
-              <td>She likes tea <strong>and</strong> coffee.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="addition">
-              <th scope="row"><code>also</code></th>
-              <td><span class="rc-cat rc-cat-addition">Thêm ý</span></td>
-              <td>Cũng, thêm vào.</td>
-              <td>He <strong>also</strong> plays football.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="addition">
-              <th scope="row"><code>moreover</code></th>
-              <td><span class="rc-cat rc-cat-addition">Thêm ý</span></td>
-              <td>Hơn nữa (trang trọng).</td>
-              <td><strong>Moreover</strong>, it is cheap.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="addition">
-              <th scope="row"><code>in addition</code></th>
-              <td><span class="rc-cat rc-cat-addition">Thêm ý</span></td>
-              <td>Ngoài ra.</td>
-              <td><strong>In addition</strong>, recycling saves energy.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="addition">
-              <th scope="row"><code>besides</code></th>
-              <td><span class="rc-cat rc-cat-addition">Thêm ý</span></td>
-              <td>Ngoài ra, bên cạnh đó.</td>
-              <td><strong>Besides</strong>, the weather was perfect.</td>
-            </tr>
+      <TableShell
+        wrapperClass="rc-table-wrap"
+        tableClass="rc-table rc-connector-table"
+        caption="Bảng từ nối thường gặp trong bài đọc hiểu"
+        hint
+      >
+        <thead>
+          <tr>
+            <th scope="col">Từ nối</th>
+            <th scope="col">Nhóm</th>
+            <th scope="col">Cách dùng</th>
+            <th scope="col">Ví dụ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="rc-connector-row" data-cat="addition">
+            <th scope="row"><code>and</code></th>
+            <td><span class="rc-cat rc-cat-addition">Thêm ý</span></td>
+            <td>Nối hai ý tương đương.</td>
+            <td>She likes tea <strong>and</strong> coffee.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="addition">
+            <th scope="row"><code>also</code></th>
+            <td><span class="rc-cat rc-cat-addition">Thêm ý</span></td>
+            <td>Cũng, thêm vào.</td>
+            <td>He <strong>also</strong> plays football.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="addition">
+            <th scope="row"><code>moreover</code></th>
+            <td><span class="rc-cat rc-cat-addition">Thêm ý</span></td>
+            <td>Hơn nữa (trang trọng).</td>
+            <td><strong>Moreover</strong>, it is cheap.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="addition">
+            <th scope="row"><code>in addition</code></th>
+            <td><span class="rc-cat rc-cat-addition">Thêm ý</span></td>
+            <td>Ngoài ra.</td>
+            <td><strong>In addition</strong>, recycling saves energy.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="addition">
+            <th scope="row"><code>besides</code></th>
+            <td><span class="rc-cat rc-cat-addition">Thêm ý</span></td>
+            <td>Ngoài ra, bên cạnh đó.</td>
+            <td><strong>Besides</strong>, the weather was perfect.</td>
+          </tr>
 
-            <tr class="rc-connector-row" data-cat="contrast">
-              <th scope="row"><code>but</code></th>
-              <td><span class="rc-cat rc-cat-contrast">Tương phản</span></td>
-              <td>Nhưng.</td>
-              <td>It was raining, <strong>but</strong> we went out.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="contrast">
-              <th scope="row"><code>however</code></th>
-              <td><span class="rc-cat rc-cat-contrast">Tương phản</span></td>
-              <td>Tuy nhiên.</td>
-              <td><strong>However</strong>, the plan failed.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="contrast">
-              <th scope="row"><code>although / though</code></th>
-              <td><span class="rc-cat rc-cat-contrast">Tương phản</span></td>
-              <td>Mặc dù + mệnh đề.</td>
-              <td><strong>Although</strong> it rained, we went out.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="contrast">
-              <th scope="row"><code>despite / in spite of</code></th>
-              <td><span class="rc-cat rc-cat-contrast">Tương phản</span></td>
-              <td>Mặc dù + N/V-ing.</td>
-              <td><strong>Despite</strong> the rain, we went out.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="contrast">
-              <th scope="row"><code>whereas</code></th>
-              <td><span class="rc-cat rc-cat-contrast">Tương phản</span></td>
-              <td>Trong khi (đối lập hai ý).</td>
-              <td>I like tea, <strong>whereas</strong> she prefers coffee.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="contrast">
-              <th scope="row"><code>on the other hand</code></th>
-              <td><span class="rc-cat rc-cat-contrast">Tương phản</span></td>
-              <td>Mặt khác.</td>
-              <td><strong>On the other hand</strong>, city life is busy.</td>
-            </tr>
+          <tr class="rc-connector-row" data-cat="contrast">
+            <th scope="row"><code>but</code></th>
+            <td><span class="rc-cat rc-cat-contrast">Tương phản</span></td>
+            <td>Nhưng.</td>
+            <td>It was raining, <strong>but</strong> we went out.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="contrast">
+            <th scope="row"><code>however</code></th>
+            <td><span class="rc-cat rc-cat-contrast">Tương phản</span></td>
+            <td>Tuy nhiên.</td>
+            <td><strong>However</strong>, the plan failed.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="contrast">
+            <th scope="row"><code>although / though</code></th>
+            <td><span class="rc-cat rc-cat-contrast">Tương phản</span></td>
+            <td>Mặc dù + mệnh đề.</td>
+            <td><strong>Although</strong> it rained, we went out.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="contrast">
+            <th scope="row"><code>despite / in spite of</code></th>
+            <td><span class="rc-cat rc-cat-contrast">Tương phản</span></td>
+            <td>Mặc dù + N/V-ing.</td>
+            <td><strong>Despite</strong> the rain, we went out.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="contrast">
+            <th scope="row"><code>whereas</code></th>
+            <td><span class="rc-cat rc-cat-contrast">Tương phản</span></td>
+            <td>Trong khi (đối lập hai ý).</td>
+            <td>I like tea, <strong>whereas</strong> she prefers coffee.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="contrast">
+            <th scope="row"><code>on the other hand</code></th>
+            <td><span class="rc-cat rc-cat-contrast">Tương phản</span></td>
+            <td>Mặt khác.</td>
+            <td><strong>On the other hand</strong>, city life is busy.</td>
+          </tr>
 
-            <tr class="rc-connector-row" data-cat="cause">
-              <th scope="row"><code>because</code></th>
-              <td><span class="rc-cat rc-cat-cause">Nguyên nhân – kết quả</span></td>
-              <td>Bởi vì + mệnh đề.</td>
-              <td>We stayed home <strong>because</strong> it rained.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="cause">
-              <th scope="row"><code>since / as</code></th>
-              <td><span class="rc-cat rc-cat-cause">Nguyên nhân – kết quả</span></td>
-              <td>Bởi vì (trang trọng).</td>
-              <td><strong>Since</strong> it was late, we left.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="cause">
-              <th scope="row"><code>so</code></th>
-              <td><span class="rc-cat rc-cat-cause">Nguyên nhân – kết quả</span></td>
-              <td>Vì vậy.</td>
-              <td>It was late, <strong>so</strong> we left.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="cause">
-              <th scope="row"><code>therefore</code></th>
-              <td><span class="rc-cat rc-cat-cause">Nguyên nhân – kết quả</span></td>
-              <td>Do đó.</td>
-              <td>He studied hard; <strong>therefore</strong>, he passed.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="cause">
-              <th scope="row"><code>as a result</code></th>
-              <td><span class="rc-cat rc-cat-cause">Nguyên nhân – kết quả</span></td>
-              <td>Kết quả là.</td>
-              <td><strong>As a result</strong>, the air is cleaner.</td>
-            </tr>
+          <tr class="rc-connector-row" data-cat="cause">
+            <th scope="row"><code>because</code></th>
+            <td><span class="rc-cat rc-cat-cause">Nguyên nhân – kết quả</span></td>
+            <td>Bởi vì + mệnh đề.</td>
+            <td>We stayed home <strong>because</strong> it rained.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="cause">
+            <th scope="row"><code>since / as</code></th>
+            <td><span class="rc-cat rc-cat-cause">Nguyên nhân – kết quả</span></td>
+            <td>Bởi vì (trang trọng).</td>
+            <td><strong>Since</strong> it was late, we left.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="cause">
+            <th scope="row"><code>so</code></th>
+            <td><span class="rc-cat rc-cat-cause">Nguyên nhân – kết quả</span></td>
+            <td>Vì vậy.</td>
+            <td>It was late, <strong>so</strong> we left.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="cause">
+            <th scope="row"><code>therefore</code></th>
+            <td><span class="rc-cat rc-cat-cause">Nguyên nhân – kết quả</span></td>
+            <td>Do đó.</td>
+            <td>He studied hard; <strong>therefore</strong>, he passed.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="cause">
+            <th scope="row"><code>as a result</code></th>
+            <td><span class="rc-cat rc-cat-cause">Nguyên nhân – kết quả</span></td>
+            <td>Kết quả là.</td>
+            <td><strong>As a result</strong>, the air is cleaner.</td>
+          </tr>
 
-            <tr class="rc-connector-row" data-cat="example">
-              <th scope="row"><code>for example</code></th>
-              <td><span class="rc-cat rc-cat-example">Ví dụ</span></td>
-              <td>Ví dụ.</td>
-              <td><strong>For example</strong>, plastic bags harm turtles.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="example">
-              <th scope="row"><code>for instance</code></th>
-              <td><span class="rc-cat rc-cat-example">Ví dụ</span></td>
-              <td>Chẳng hạn.</td>
-              <td><strong>For instance</strong>, Hue is a good example.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="example">
-              <th scope="row"><code>such as</code></th>
-              <td><span class="rc-cat rc-cat-example">Ví dụ</span></td>
-              <td>Như là (trước danh từ).</td>
-              <td>Fruits <strong>such as</strong> mangoes are sweet.</td>
-            </tr>
+          <tr class="rc-connector-row" data-cat="example">
+            <th scope="row"><code>for example</code></th>
+            <td><span class="rc-cat rc-cat-example">Ví dụ</span></td>
+            <td>Ví dụ.</td>
+            <td><strong>For example</strong>, plastic bags harm turtles.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="example">
+            <th scope="row"><code>for instance</code></th>
+            <td><span class="rc-cat rc-cat-example">Ví dụ</span></td>
+            <td>Chẳng hạn.</td>
+            <td><strong>For instance</strong>, Hue is a good example.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="example">
+            <th scope="row"><code>such as</code></th>
+            <td><span class="rc-cat rc-cat-example">Ví dụ</span></td>
+            <td>Như là (trước danh từ).</td>
+            <td>Fruits <strong>such as</strong> mangoes are sweet.</td>
+          </tr>
 
-            <tr class="rc-connector-row" data-cat="sequence">
-              <th scope="row"><code>first / firstly</code></th>
-              <td><span class="rc-cat rc-cat-sequence">Trình tự</span></td>
-              <td>Đầu tiên.</td>
-              <td><strong>First</strong>, read the questions.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="sequence">
-              <th scope="row"><code>then / next</code></th>
-              <td><span class="rc-cat rc-cat-sequence">Trình tự</span></td>
-              <td>Sau đó.</td>
-              <td><strong>Then</strong>, scan for keywords.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="sequence">
-              <th scope="row"><code>before / after</code></th>
-              <td><span class="rc-cat rc-cat-sequence">Trình tự</span></td>
-              <td>Trước / sau.</td>
-              <td>Check your answers <strong>before</strong> you submit.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="sequence">
-              <th scope="row"><code>finally</code></th>
-              <td><span class="rc-cat rc-cat-sequence">Trình tự</span></td>
-              <td>Cuối cùng.</td>
-              <td><strong>Finally</strong>, choose the best answer.</td>
-            </tr>
+          <tr class="rc-connector-row" data-cat="sequence">
+            <th scope="row"><code>first / firstly</code></th>
+            <td><span class="rc-cat rc-cat-sequence">Trình tự</span></td>
+            <td>Đầu tiên.</td>
+            <td><strong>First</strong>, read the questions.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="sequence">
+            <th scope="row"><code>then / next</code></th>
+            <td><span class="rc-cat rc-cat-sequence">Trình tự</span></td>
+            <td>Sau đó.</td>
+            <td><strong>Then</strong>, scan for keywords.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="sequence">
+            <th scope="row"><code>before / after</code></th>
+            <td><span class="rc-cat rc-cat-sequence">Trình tự</span></td>
+            <td>Trước / sau.</td>
+            <td>Check your answers <strong>before</strong> you submit.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="sequence">
+            <th scope="row"><code>finally</code></th>
+            <td><span class="rc-cat rc-cat-sequence">Trình tự</span></td>
+            <td>Cuối cùng.</td>
+            <td><strong>Finally</strong>, choose the best answer.</td>
+          </tr>
 
-            <tr class="rc-connector-row" data-cat="conclusion">
-              <th scope="row"><code>in conclusion</code></th>
-              <td><span class="rc-cat rc-cat-conclusion">Kết luận</span></td>
-              <td>Kết luận.</td>
-              <td><strong>In conclusion</strong>, reading every day helps.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="conclusion">
-              <th scope="row"><code>to sum up</code></th>
-              <td><span class="rc-cat rc-cat-conclusion">Kết luận</span></td>
-              <td>Tóm lại.</td>
-              <td><strong>To sum up</strong>, practice makes perfect.</td>
-            </tr>
-            <tr class="rc-connector-row" data-cat="conclusion">
-              <th scope="row"><code>overall</code></th>
-              <td><span class="rc-cat rc-cat-conclusion">Kết luận</span></td>
-              <td>Nhìn chung.</td>
-              <td><strong>Overall</strong>, the festival was a success.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+          <tr class="rc-connector-row" data-cat="conclusion">
+            <th scope="row"><code>in conclusion</code></th>
+            <td><span class="rc-cat rc-cat-conclusion">Kết luận</span></td>
+            <td>Kết luận.</td>
+            <td><strong>In conclusion</strong>, reading every day helps.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="conclusion">
+            <th scope="row"><code>to sum up</code></th>
+            <td><span class="rc-cat rc-cat-conclusion">Kết luận</span></td>
+            <td>Tóm lại.</td>
+            <td><strong>To sum up</strong>, practice makes perfect.</td>
+          </tr>
+          <tr class="rc-connector-row" data-cat="conclusion">
+            <th scope="row"><code>overall</code></th>
+            <td><span class="rc-cat rc-cat-conclusion">Kết luận</span></td>
+            <td>Nhìn chung.</td>
+            <td><strong>Overall</strong>, the festival was a success.</td>
+          </tr>
+        </tbody>
+      </TableShell>
 
       <EmptyState
         id="connector-empty"

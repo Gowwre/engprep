@@ -4,6 +4,7 @@ import SheetLayout from '../layouts/SheetLayout.astro';
 import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
+import TableShell from '../components/TableShell.astro';
 import TrapCard from '../components/TrapCard.astro';
 import '../styles/grammar.css';
 ---
@@ -112,58 +113,59 @@ import '../styles/grammar.css';
         <p slot="aside" class="section-aside"><span>6</span> quan hệ<br><span>1</span> bảng tra</p>
       </SectionHead>
 
-      <p class="table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
-      <div class="gr-table-wrap">
-        <table class="gr-table">
-          <caption class="sr-only">Bảng từ nối theo quan hệ ý nghĩa</caption>
-          <thead>
-            <tr>
-              <th scope="col">Quan hệ</th>
-              <th scope="col">Từ nối</th>
-              <th scope="col">Cách dùng</th>
-              <th scope="col">Ví dụ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"><span class="gr-cat gr-cat-add">Thêm ý</span></th>
-              <td><code>and</code> · <code>besides</code> · <code>moreover</code> · <code>in addition</code></td>
-              <td>Nối hai ý cùng chiều. <code>and</code> đứng giữa hai mệnh đề; các từ còn lại trang trọng hơn.</td>
-              <td>They save money <code>and</code> conserve resources.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="gr-cat gr-cat-contrast">Tương phản</span></th>
-              <td><code>but</code> · <code>however</code> · <code>although</code> · <code>though</code> · <code>even though</code></td>
-              <td><code>but</code> nối hai mệnh đề; <code>however</code> thường đứng đầu câu, sau dấu chấm; <code>although + mệnh đề</code>.</td>
-              <td>I prepared carefully, <code>but</code> the projector didn’t work.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="gr-cat gr-cat-cause">Nguyên nhân</span></th>
-              <td><code>because</code> · <code>since</code> · <code>as</code></td>
-              <td>+ mệnh đề. Nếu phía sau là danh từ/V-ing, dùng <code>because of</code>.</td>
-              <td>He didn’t come <code>because</code> he was sick.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="gr-cat gr-cat-result">Kết quả</span></th>
-              <td><code>so</code> · <code>therefore</code> · <code>as a result</code></td>
-              <td><code>so</code> nối hai mệnh đề; <code>therefore</code> và <code>as a result</code> trang trọng hơn, thường đứng đầu câu.</td>
-              <td>It rained, <code>so</code> the match was cancelled.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="gr-cat gr-cat-choice">Lựa chọn</span></th>
-              <td><code>or</code> · <code>otherwise</code></td>
-              <td><code>or</code> = hoặc; <code>otherwise</code> = nếu không thì.</td>
-              <td>Hurry up, <code>or</code> you’ll be late.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="gr-cat gr-cat-time">Thời gian</span></th>
-              <td><code>when</code> · <code>while</code> · <code>before</code> · <code>after</code> · <code>as soon as</code></td>
-              <td>+ mệnh đề. <code>when</code> dùng với hành động ngắn; <code>while</code> dùng với hành động kéo dài.</td>
-              <td>I’ll call you <code>when</code> I arrive.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <TableShell
+        wrapperClass="gr-table-wrap"
+        tableClass="gr-table"
+        caption="Bảng từ nối theo quan hệ ý nghĩa"
+        hint
+      >
+        <thead>
+          <tr>
+            <th scope="col">Quan hệ</th>
+            <th scope="col">Từ nối</th>
+            <th scope="col">Cách dùng</th>
+            <th scope="col">Ví dụ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><span class="gr-cat gr-cat-add">Thêm ý</span></th>
+            <td><code>and</code> · <code>besides</code> · <code>moreover</code> · <code>in addition</code></td>
+            <td>Nối hai ý cùng chiều. <code>and</code> đứng giữa hai mệnh đề; các từ còn lại trang trọng hơn.</td>
+            <td>They save money <code>and</code> conserve resources.</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="gr-cat gr-cat-contrast">Tương phản</span></th>
+            <td><code>but</code> · <code>however</code> · <code>although</code> · <code>though</code> · <code>even though</code></td>
+            <td><code>but</code> nối hai mệnh đề; <code>however</code> thường đứng đầu câu, sau dấu chấm; <code>although + mệnh đề</code>.</td>
+            <td>I prepared carefully, <code>but</code> the projector didn’t work.</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="gr-cat gr-cat-cause">Nguyên nhân</span></th>
+            <td><code>because</code> · <code>since</code> · <code>as</code></td>
+            <td>+ mệnh đề. Nếu phía sau là danh từ/V-ing, dùng <code>because of</code>.</td>
+            <td>He didn’t come <code>because</code> he was sick.</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="gr-cat gr-cat-result">Kết quả</span></th>
+            <td><code>so</code> · <code>therefore</code> · <code>as a result</code></td>
+            <td><code>so</code> nối hai mệnh đề; <code>therefore</code> và <code>as a result</code> trang trọng hơn, thường đứng đầu câu.</td>
+            <td>It rained, <code>so</code> the match was cancelled.</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="gr-cat gr-cat-choice">Lựa chọn</span></th>
+            <td><code>or</code> · <code>otherwise</code></td>
+            <td><code>or</code> = hoặc; <code>otherwise</code> = nếu không thì.</td>
+            <td>Hurry up, <code>or</code> you’ll be late.</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="gr-cat gr-cat-time">Thời gian</span></th>
+            <td><code>when</code> · <code>while</code> · <code>before</code> · <code>after</code> · <code>as soon as</code></td>
+            <td>+ mệnh đề. <code>when</code> dùng với hành động ngắn; <code>while</code> dùng với hành động kéo dài.</td>
+            <td>I’ll call you <code>when</code> I arrive.</td>
+          </tr>
+        </tbody>
+      </TableShell>
 
       <div class="gr-note-card">
         <p><strong>Đừng nối hai câu bằng “however” như “but”:</strong> <code>It rained. However, we went out.</code> đúng; <code>It rained, however we went out.</code> thường sai dấu câu. Nếu muốn nối trực tiếp hai mệnh đề, dùng <code>but</code>.</p>
@@ -179,63 +181,64 @@ import '../styles/grammar.css';
         <p slot="aside" class="section-aside"><span>7</span> đại từ<br><span>2</span> loại mệnh đề</p>
       </SectionHead>
 
-      <div class="gr-table-wrap">
-        <table class="gr-table gr-relative-table">
-          <caption class="sr-only">Bảng đại từ quan hệ và cách dùng</caption>
-          <thead>
-            <tr>
-              <th scope="col">Đại từ</th>
-              <th scope="col">Dùng cho</th>
-              <th scope="col">Vai trò</th>
-              <th scope="col">Ví dụ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"><code>who</code></th>
-              <td>Người</td>
-              <td>Chủ ngữ hoặc tân ngữ (thân mật).</td>
-              <td>The girl <code>who</code> sits next to me is Lan.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>whom</code></th>
-              <td>Người</td>
-              <td>Tân ngữ, trang trọng.</td>
-              <td>The man <code>whom</code> we met is a doctor.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>which</code></th>
-              <td>Vật, sự việc</td>
-              <td>Chủ ngữ hoặc tân ngữ.</td>
-              <td>The book <code>which</code> I borrowed is interesting.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>that</code></th>
-              <td>Người hoặc vật</td>
-              <td>Chỉ dùng trong mệnh đề xác định; không đứng sau dấu phẩy.</td>
-              <td>The city <code>that</code> I visited is beautiful.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>whose</code></th>
-              <td>Sở hữu</td>
-              <td>Đứng trước danh từ: <code>whose + N</code>.</td>
-              <td>The boy <code>whose</code> bike was stolen reported it.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>where</code></th>
-              <td>Nơi chốn</td>
-              <td>= <code>in / at which</code>.</td>
-              <td>The house <code>where</code> we lived is old.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>when</code></th>
-              <td>Thời gian</td>
-              <td>= <code>on / in which</code>.</td>
-              <td>I remember the day <code>when</code> we met.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <TableShell
+        wrapperClass="gr-table-wrap"
+        tableClass="gr-table gr-relative-table"
+        caption="Bảng đại từ quan hệ và cách dùng"
+      >
+        <thead>
+          <tr>
+            <th scope="col">Đại từ</th>
+            <th scope="col">Dùng cho</th>
+            <th scope="col">Vai trò</th>
+            <th scope="col">Ví dụ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><code>who</code></th>
+            <td>Người</td>
+            <td>Chủ ngữ hoặc tân ngữ (thân mật).</td>
+            <td>The girl <code>who</code> sits next to me is Lan.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>whom</code></th>
+            <td>Người</td>
+            <td>Tân ngữ, trang trọng.</td>
+            <td>The man <code>whom</code> we met is a doctor.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>which</code></th>
+            <td>Vật, sự việc</td>
+            <td>Chủ ngữ hoặc tân ngữ.</td>
+            <td>The book <code>which</code> I borrowed is interesting.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>that</code></th>
+            <td>Người hoặc vật</td>
+            <td>Chỉ dùng trong mệnh đề xác định; không đứng sau dấu phẩy.</td>
+            <td>The city <code>that</code> I visited is beautiful.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>whose</code></th>
+            <td>Sở hữu</td>
+            <td>Đứng trước danh từ: <code>whose + N</code>.</td>
+            <td>The boy <code>whose</code> bike was stolen reported it.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>where</code></th>
+            <td>Nơi chốn</td>
+            <td>= <code>in / at which</code>.</td>
+            <td>The house <code>where</code> we lived is old.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>when</code></th>
+            <td>Thời gian</td>
+            <td>= <code>on / in which</code>.</td>
+            <td>I remember the day <code>when</code> we met.</td>
+          </tr>
+        </tbody>
+      </TableShell>
 
       <div class="gr-compare-grid">
         <article class="gr-compare-card">
