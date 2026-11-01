@@ -1012,6 +1012,60 @@ h4 {
   margin-inline: auto;
 }
 
+/* Shared map-card content (used by reading, signs, vocabulary, …) */
+
+.map-kicker {
+  margin: 0 0 2px;
+  color: var(--map);
+  font-size: 0.58rem;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.map-rule {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.73rem;
+  line-height: 1.55;
+}
+
+.map-rule code {
+  padding: 1px 4px;
+  border: 1px solid var(--map-line);
+  border-radius: 4px;
+  color: var(--ink);
+  background: var(--map-bg);
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+}
+
+.map-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 12px 0 16px;
+}
+
+.map-chips span {
+  padding: 2px 6px;
+  border: 1px solid var(--map-line);
+  border-radius: 5px;
+  color: var(--ink);
+  background: var(--map-bg);
+  font-family: var(--font-mono);
+  font-size: 0.61rem;
+  line-height: 1.55;
+}
+
+.map-link {
+  margin-top: auto;
+  color: var(--map);
+  font-size: 0.69rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
 /* =========================================================
    Map
    ========================================================= */
@@ -3008,6 +3062,10 @@ h4 {
   .sticky-note {
     left: -18px;
   }
+
+  .map-chips {
+    margin-bottom: 13px;
+  }
 }
 
 @media (max-width: 1180px) {
@@ -4206,5 +4264,30 @@ h4 {
 @media print {
   .sample-start {
     break-before: page;
+  }
+}
+
+@media print {
+  .map-kicker {
+    font-size: 5pt;
+  }
+
+  .map-rule {
+    margin-top: 3px;
+    font-size: 5.6pt;
+  }
+
+  .map-chips {
+    gap: 2px;
+    margin: 4px 0 6px;
+  }
+
+  .map-chips span {
+    padding: 0 3px;
+    font-size: 4.8pt;
+  }
+
+  .map-link {
+    font-size: 5.2pt;
   }
 }

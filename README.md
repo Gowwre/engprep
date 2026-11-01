@@ -105,6 +105,8 @@ import '../styles/<slug>.css';
 
 Thứ tự này giữ cascade đúng và để mỗi route chỉ tải stylesheet nó cần. Trang chủ import thêm `home.css`; trang 12 thì dùng luôn phần tenses trong `styles.css`.
 
+Class nào được dùng ở nhiều trang phải nằm trong `styles.css`, không đặt trong CSS riêng của một trang — nếu không các trang khác sẽ mất style sau khi tách CSS theo route.
+
 ## Thêm một tờ ôn thi mới
 
 1. Thêm slug mới vào union `SheetSlug`, rồi thêm một object vào `sheets` trong `src/data/sheets.ts`:
