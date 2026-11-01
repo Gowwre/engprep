@@ -680,6 +680,12 @@
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.02em;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.path-link:active {
+  transform: translateX(1px);
+  transition-duration: 0.06s;
 }
 
 .path-links {
@@ -697,12 +703,17 @@
   color: var(--ink);
   font-size: 0.68rem;
   font-weight: 700;
-  transition: border-color 0.15s ease, background 0.15s ease;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
 }
 
 .path-links a:hover {
   border-color: var(--border-strong);
   background: var(--surface);
+}
+
+.path-links a:active {
+  transform: scale(0.96);
+  transition-duration: 0.06s;
 }
 
 /* ---------- Closing band ---------- */

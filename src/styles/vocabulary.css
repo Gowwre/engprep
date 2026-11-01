@@ -129,6 +129,12 @@
   transform: translateY(-3px);
 }
 
+.vc-map-card:active {
+  transform: translateY(1px);
+  box-shadow: 2px 2px 0 var(--shadow);
+  transition-duration: 0.06s;
+}
+
 .vc-map-card.vc-map-phrasal {
   --map: var(--clay);
   --map-bg: var(--clay-bg);

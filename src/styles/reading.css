@@ -113,6 +113,12 @@
   transform: translateY(-3px);
 }
 
+.rc-map-card:active {
+  transform: translateY(1px);
+  box-shadow: 2px 2px 0 var(--shadow);
+  transition-duration: 0.06s;
+}
+
 .rc-map-card.rc-map-detail,
 .rc-map-card.rc-map-tf {
   --map: var(--jade);

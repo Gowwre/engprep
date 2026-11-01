@@ -297,6 +297,11 @@ h4 {
   flex-shrink: 0;
   align-items: center;
   gap: 11px;
+  transition: opacity 0.15s ease;
+}
+
+.brand:active {
+  opacity: 0.75;
 }
 
 .brand-mark {
@@ -346,7 +351,11 @@ h4 {
   font-size: 0.8rem;
   font-weight: 600;
   white-space: nowrap;
-  transition: color 0.16s ease;
+  transition: color 0.16s ease, translate 0.16s ease;
+}
+
+.site-nav a:active {
+  translate: 0 1px;
 }
 
 .site-nav a::before {
@@ -411,6 +420,12 @@ h4 {
 .icon-btn:hover {
   border-color: var(--border-strong);
   transform: translateY(-1px);
+}
+
+.icon-btn:active {
+  background: var(--surface-2);
+  transform: translateY(1px);
+  transition-duration: 0.06s;
 }
 
 .icon-btn svg {
@@ -496,7 +511,11 @@ h4 {
   font-size: 0.76rem;
   font-weight: 600;
   white-space: nowrap;
-  transition: color 0.16s ease;
+  transition: color 0.16s ease, translate 0.16s ease;
+}
+
+.page-nav a:active {
+  translate: 0 1px;
 }
 
 .page-nav a::after {
@@ -581,6 +600,11 @@ h4 {
   box-shadow: 5px 5px 0 var(--clay);
 }
 
+.btn-primary:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--clay);
+}
+
 .btn-ghost {
   color: var(--ink);
   background: var(--surface);
@@ -590,6 +614,15 @@ h4 {
 .btn-ghost:hover {
   transform: translate(-1px, -1px);
   box-shadow: 5px 5px 0 var(--shadow);
+}
+
+.btn-ghost:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--shadow);
+}
+
+.btn:active {
+  transition-duration: 0.06s;
 }
 
 .btn-small {
@@ -1066,6 +1099,12 @@ h4 {
   transform: translate(-1px, -1px);
 }
 
+.map-cell:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--shadow);
+  transition-duration: 0.06s;
+}
+
 .map-cell strong {
   font-size: 0.84rem;
   font-weight: 700;
@@ -1168,7 +1207,7 @@ h4 {
   gap: 12px;
   padding: 9px 12px;
   border-bottom: 1px dashed var(--line);
-  transition: background 0.15s ease;
+  transition: background 0.15s ease, transform 0.15s ease;
 }
 
 .map-mobile-list a:last-child {
@@ -1177,6 +1216,12 @@ h4 {
 
 .map-mobile-list a:hover {
   background: var(--surface);
+}
+
+.map-mobile-list a:active {
+  background: var(--surface-2);
+  transform: translateX(1px);
+  transition-duration: 0.06s;
 }
 
 .map-mobile-list a > span {
@@ -1483,7 +1528,12 @@ h4 {
   margin-top: 12px;
   padding: 4px 5px;
   border-radius: 7px;
-  transition: background 0.15s ease;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.tl-node:active .tl-copy {
+  transform: translateY(1px);
+  transition-duration: 0.06s;
 }
 
 .tl-copy strong {
@@ -1603,11 +1653,16 @@ h4 {
   background: transparent;
   font-size: 0.8rem;
   font-weight: 700;
-  transition: color 0.15s ease, background 0.15s ease;
+  transition: color 0.15s ease, background 0.15s ease, transform 0.15s ease;
 }
 
 .filter-tab:hover {
   color: var(--ink);
+}
+
+.filter-tab:active {
+  transform: scale(0.96);
+  transition-duration: 0.06s;
 }
 
 .filter-tab[aria-pressed="true"] {
@@ -1675,11 +1730,17 @@ h4 {
   font-size: 1.1rem;
   line-height: 1;
   transform: translateY(-50%);
+  transition: color 0.15s ease, background 0.15s ease, transform 0.15s ease;
 }
 
 .search-clear:hover {
   color: var(--ink);
   background: var(--surface-2);
+}
+
+.search-clear:active {
+  transform: translateY(-50%) scale(0.9);
+  transition-duration: 0.06s;
 }
 
 .result-count {
@@ -2518,6 +2579,11 @@ h4 {
   transform: translateX(2px);
 }
 
+.option:active:not(:disabled) {
+  transform: translateX(1px);
+  transition-duration: 0.06s;
+}
+
 .option-letter {
   display: grid;
   flex-shrink: 0;
@@ -2818,7 +2884,7 @@ h4 {
   display: inline-block;
   color: var(--muted);
   font-size: 0.79rem;
-  transition: color 0.15s ease;
+  transition: color 0.15s ease, transform 0.15s ease;
 }
 
 .footer-links a:hover {
@@ -2826,6 +2892,11 @@ h4 {
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 3px;
+}
+
+.footer-links a:active {
+  transform: translateX(1px);
+  transition-duration: 0.06s;
 }
 
 .footer-links a[aria-current="page"] {
