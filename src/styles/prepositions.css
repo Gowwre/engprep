@@ -760,6 +760,49 @@
   margin-bottom: 4px;
 }
 
+.movement-scene-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 5px 16px;
+  margin: -6px 0 14px;
+  color: var(--muted);
+  font-size: 0.62rem;
+  line-height: 1.4;
+}
+
+.movement-scene-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.movement-key {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.movement-key-dot {
+  width: 9px;
+  height: 9px;
+  border: 1.5px solid var(--gold-ink);
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.movement-key-path {
+  width: 24px;
+  border-top: 2px dashed var(--clay);
+}
+
+.movement-key-arrow {
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 8px solid var(--clay);
+}
+
 .ms-ground {
   stroke: var(--line);
   stroke-linecap: round;
@@ -772,10 +815,26 @@
   stroke-width: 2;
 }
 
+.ms-struct-fill {
+  fill: var(--surface-2);
+  stroke: none;
+}
+
+.ms-struct-open {
+  fill: none;
+}
+
 .ms-road {
   fill: var(--line);
   opacity: 0.35;
   stroke: none;
+}
+
+.ms-road-edge {
+  stroke: var(--muted);
+  stroke-linecap: round;
+  stroke-width: 1.5;
+  opacity: 0.4;
 }
 
 .ms-road-line {
@@ -798,7 +857,7 @@
   fill: var(--clay);
 }
 
-.ms-ball {
+.ms-start {
   fill: var(--gold);
   stroke: var(--gold-ink);
   stroke-width: 1.5;
@@ -1212,7 +1271,8 @@
     font-size: 5pt;
   }
 
-  .movement-scene-head {
+  .movement-scene-head,
+  .movement-scene-legend {
     display: none !important;
   }
 
@@ -1429,6 +1489,11 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 4px;
+  }
+
+  .movement-scene-legend {
+    justify-content: flex-start;
+    margin-top: -2px;
   }
 
   .movement-scene svg {

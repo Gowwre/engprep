@@ -25,19 +25,20 @@ const { type, word, vi, example } = Astro.props;
 
     {type === 'into' && (
       <>
-        <rect class="ms-struct" x="64" y="34" width="42" height="42" rx="4"></rect>
-        <path class="ms-path" d="M12 58 C38 58 58 58 82 58"></path>
+        <rect class="ms-struct-fill" x="64" y="34" width="42" height="42" rx="4"></rect>
+        <path class="ms-struct ms-struct-open" d="M64 34 H106 V76 H64 V63 M64 51 V34"></path>
+        <path class="ms-path" d="M18 58 C40 58 58 58 82 58"></path>
         <path class="ms-arrow" d="M74 51 L85 58 L74 65 Z"></path>
-        <circle class="ms-ball" cx="96" cy="58" r="5"></circle>
+        <circle class="ms-start" cx="18" cy="58" r="4.5"></circle>
       </>
     )}
 
     {type === 'onto' && (
       <>
         <rect class="ms-struct" x="64" y="44" width="42" height="32" rx="4"></rect>
-        <path class="ms-path" d="M12 62 C42 62 44 27 78 27"></path>
-        <path class="ms-arrow" d="M71 25 L78 38 L85 25 Z"></path>
-        <circle class="ms-ball" cx="93" cy="37" r="5"></circle>
+        <path class="ms-path" d="M18 62 C42 62 44 28 78 28"></path>
+        <path class="ms-arrow" d="M71 30 L78 43 L85 30 Z"></path>
+        <circle class="ms-start" cx="18" cy="62" r="4.5"></circle>
       </>
     )}
 
@@ -48,27 +49,31 @@ const { type, word, vi, example } = Astro.props;
         <rect class="ms-struct" x="56" y="26" width="36" height="8" rx="2"></rect>
         <path class="ms-path" d="M10 54 H105"></path>
         <path class="ms-arrow" d="M97 47 L109 54 L97 61 Z"></path>
-        <circle class="ms-ball" cx="22" cy="54" r="5"></circle>
+        <circle class="ms-start" cx="22" cy="54" r="4.5"></circle>
       </>
     )}
 
     {type === 'across' && (
       <>
         <rect class="ms-road" x="48" y="8" width="24" height="68" rx="3"></rect>
+        <line class="ms-road-edge" x1="48" y1="8" x2="48" y2="76"></line>
+        <line class="ms-road-edge" x1="72" y1="8" x2="72" y2="76"></line>
         <line class="ms-road-line" x1="60" y1="12" x2="60" y2="72"></line>
         <path class="ms-path" d="M14 54 H98"></path>
         <path class="ms-arrow" d="M90 47 L102 54 L90 61 Z"></path>
-        <circle class="ms-ball" cx="24" cy="54" r="5"></circle>
+        <circle class="ms-start" cx="24" cy="54" r="4.5"></circle>
       </>
     )}
 
     {type === 'along' && (
       <>
         <path class="ms-road" d="M10 44 H110 V66 H10 Z"></path>
+        <line class="ms-road-edge" x1="10" y1="44" x2="110" y2="44"></line>
+        <line class="ms-road-edge" x1="10" y1="66" x2="110" y2="66"></line>
         <path class="ms-road-line" d="M14 55 C42 50 78 60 106 55"></path>
         <path class="ms-path" d="M14 55 C42 50 78 60 104 55"></path>
         <path class="ms-arrow" d="M97 49 L109 55 L97 61 Z"></path>
-        <circle class="ms-ball" cx="22" cy="55" r="5"></circle>
+        <circle class="ms-start" cx="22" cy="55" r="4.5"></circle>
       </>
     )}
 
@@ -77,7 +82,7 @@ const { type, word, vi, example } = Astro.props;
         <rect class="ms-struct" x="50" y="38" width="24" height="24" rx="4"></rect>
         <ellipse class="ms-path" cx="62" cy="50" rx="38" ry="25"></ellipse>
         <path class="ms-arrow" d="M94 42 L101 50 L108 42 Z"></path>
-        <circle class="ms-ball" cx="24" cy="50" r="5"></circle>
+        <circle class="ms-start" cx="24" cy="50" r="4.5"></circle>
       </>
     )}
 
@@ -86,7 +91,7 @@ const { type, word, vi, example } = Astro.props;
         <rect class="ms-struct" x="52" y="40" width="16" height="36" rx="2"></rect>
         <path class="ms-path" d="M14 70 C28 24 92 24 106 70"></path>
         <path class="ms-arrow" d="M99 64 L106 76 L113 64 Z"></path>
-        <circle class="ms-ball" cx="22" cy="70" r="5"></circle>
+        <circle class="ms-start" cx="22" cy="70" r="4.5"></circle>
       </>
     )}
 
@@ -97,7 +102,7 @@ const { type, word, vi, example } = Astro.props;
         <rect class="ms-struct" x="80" y="36" width="6" height="38" rx="1"></rect>
         <path class="ms-path" d="M12 58 H105"></path>
         <path class="ms-arrow" d="M97 51 L109 58 L97 65 Z"></path>
-        <circle class="ms-ball" cx="22" cy="58" r="5"></circle>
+        <circle class="ms-start" cx="22" cy="58" r="4.5"></circle>
       </>
     )}
   </svg>
