@@ -53,7 +53,9 @@ src/
 │   ├── ClueCard.astro     # manh mối điền khuyết
 │   ├── CommunicationCard.astro # chức năng giao tiếp
 │   ├── EmptyState.astro   # trạng thái “không tìm thấy” của bộ lọc
+│   ├── FigurePanel.astro  # khung sơ đồ / hình minh hoạ dùng chung
 │   ├── FilterToolbar.astro # tabs + ô tìm kiếm + đếm kết quả
+│   ├── MovementScene.astro # hình minh hoạ giới từ chuyển động
 │   ├── PageNav.astro
 │   ├── QuizPanel.astro    # khung quiz dùng chung cho mọi tờ
 │   ├── SectionHead.astro  # kicker + tiêu đề + lead + aside
@@ -86,7 +88,8 @@ src/
 │   └── <slug>.js          # câu hỏi + cấu hình riêng của từng tờ
 └── styles/
     ├── fonts.css          # @font-face
-    ├── global.css         # entry point dùng chung: fonts + styles.css
+    ├── figures.css        # khung figure, caption và legend dùng chung
+    ├── global.css         # entry point dùng chung: fonts + styles + figures
     ├── styles.css         # layout, header/footer, hero, quiz shell, 12 thì
     ├── og.css             # style cho ảnh Open Graph
     └── <slug>.css         # style riêng, chỉ load ở page tương ứng
@@ -122,6 +125,7 @@ Class nào được dùng ở nhiều trang phải nằm trong `styles.css`, kh�
    - `FilterToolbar` + `EmptyState` nếu section có bộ lọc.
    - `TableShell` cho bảng có caption và gợi ý kéo ngang.
    - `StepCard` cho các bước làm bài có số thứ tự.
+   - `FigurePanel` cho sơ đồ, biểu đồ hoặc hình minh hoạ có caption.
    - `TrapCard` cho các cặp câu sai/câu đúng.
    - Các thẻ chuyên biệt: `TenseCard`, `WordFamilyCard`, `SignalCard`, `ClueCard`, `CommunicationCard`.
 3. Dùng khung quiz chung trong section luyện tập:

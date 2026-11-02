@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
+import FigurePanel from '../components/FigurePanel.astro';
 import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
@@ -239,6 +240,44 @@ import '../styles/grammar.css';
           </tr>
         </tbody>
       </TableShell>
+
+      <FigurePanel
+        kicker="Cách ghép"
+        title="Hai câu thành một mệnh đề quan hệ."
+        caption="Tìm danh từ được bổ nghĩa ở câu 1, tìm đại từ thay cho nó ở câu 2, rồi thay đại từ bằng who/which. Mệnh đề mới đứng ngay sau danh từ."
+      >
+        <div class="gr-merge">
+          <div class="gr-merge-sources">
+            <div class="gr-merge-card">
+              <span>Câu 1 · danh từ cần bổ nghĩa</span>
+              <p><mark class="gr-mark-noun">The girl</mark> is my sister.</p>
+            </div>
+            <div class="gr-merge-card">
+              <span>Câu 2 · đại từ thay thế</span>
+              <p><mark class="gr-mark-replace">She</mark> lives next door.</p>
+            </div>
+          </div>
+
+          <div class="gr-merge-connector" aria-hidden="true">
+            <span class="gr-merge-line"></span>
+            <span class="gr-merge-badge">who</span>
+            <span class="gr-merge-line"></span>
+          </div>
+
+          <div class="gr-merge-result">
+            <span>Câu mới · một mệnh đề</span>
+            <p><mark class="gr-mark-noun">The girl</mark> <mark class="gr-mark-join">who lives next door</mark> is my sister.</p>
+          </div>
+
+          <div class="gr-merge-legend">
+            <span><i class="gr-dot gr-dot-noun"></i>Danh từ được bổ nghĩa</span>
+            <span><i class="gr-dot gr-dot-replace"></i>Đại từ bị thay</span>
+            <span><i class="gr-dot gr-dot-join"></i>Mệnh đề quan hệ</span>
+          </div>
+
+          <p class="gr-merge-extra"><strong>Cùng cách làm với vật:</strong> The book <em>which I borrowed</em> is interesting.</p>
+        </div>
+      </FigurePanel>
 
       <div class="gr-compare-grid">
         <article class="gr-compare-card">

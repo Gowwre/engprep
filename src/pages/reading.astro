@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
 import EmptyState from '../components/EmptyState.astro';
+import FigurePanel from '../components/FigurePanel.astro';
 import FilterToolbar from '../components/FilterToolbar.astro';
 import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
@@ -179,6 +180,57 @@ import '../styles/reading.css';
           <strong>1 phút</strong>
         </div>
       </div>
+
+      <FigurePanel
+        kicker="Mắt đọc"
+        title="Skim đi theo đoạn, scan nhảy thẳng đến từ khoá."
+        caption="Skim đọc câu đầu và câu cuối của từng đoạn để nắm ý. Scan chỉ rời mắt khỏi câu hỏi khi tìm thấy từ khoá hoặc từ đồng nghĩa trong bài."
+      >
+        <div class="rc-eye-grid">
+          <div class="rc-eye-card">
+            <div class="rc-eye-label"><span>Skim</span><em>1 phút</em></div>
+            <svg viewBox="0 0 180 120" aria-hidden="true" focusable="false">
+              <rect class="rc-eye-page" x="8" y="6" width="164" height="108" rx="5"></rect>
+              <rect class="rc-eye-title" x="22" y="17" width="68" height="5" rx="2"></rect>
+              <g class="rc-eye-lines">
+                <line x1="22" y1="34" x2="150" y2="34"></line>
+                <line x1="22" y1="42" x2="132" y2="42"></line>
+                <line x1="22" y1="50" x2="144" y2="50"></line>
+                <line x1="22" y1="64" x2="150" y2="64"></line>
+                <line x1="22" y1="72" x2="120" y2="72"></line>
+                <line x1="22" y1="88" x2="148" y2="88"></line>
+                <line x1="22" y1="96" x2="136" y2="96"></line>
+              </g>
+              <path class="rc-eye-path" d="M26 34 L146 34 L26 64 L146 64 L26 88 L112 88"></path>
+              <circle class="rc-eye-start" cx="26" cy="34" r="3.4"></circle>
+              <path class="rc-eye-arrow" d="M104 82 L114 88 L104 94 Z"></path>
+            </svg>
+            <p class="rc-eye-copy"><strong>Đọc lướt:</strong> mắt chạy theo câu đầu và câu cuối mỗi đoạn. Mục tiêu là ý chính, không phải chi tiết.</p>
+          </div>
+
+          <div class="rc-eye-card">
+            <div class="rc-eye-label"><span>Scan</span><em>5 phút</em></div>
+            <svg viewBox="0 0 180 120" aria-hidden="true" focusable="false">
+              <rect class="rc-eye-page" x="8" y="6" width="164" height="108" rx="5"></rect>
+              <rect class="rc-eye-title" x="22" y="17" width="68" height="5" rx="2"></rect>
+              <g class="rc-eye-lines">
+                <line x1="22" y1="34" x2="150" y2="34"></line>
+                <line x1="22" y1="42" x2="132" y2="42"></line>
+                <line x1="22" y1="50" x2="144" y2="50"></line>
+                <line x1="22" y1="64" x2="72" y2="64"></line>
+                <line x1="22" y1="72" x2="120" y2="72"></line>
+                <line x1="22" y1="88" x2="148" y2="88"></line>
+                <line x1="22" y1="96" x2="136" y2="96"></line>
+              </g>
+              <rect class="rc-eye-highlight" x="76" y="57" width="56" height="8" rx="2"></rect>
+              <path class="rc-eye-path" d="M26 26 L72 26 L90 61"></path>
+              <circle class="rc-eye-start" cx="26" cy="26" r="3.4"></circle>
+              <circle class="rc-eye-ring" cx="106" cy="61" r="15"></circle>
+            </svg>
+            <p class="rc-eye-copy"><strong>Đọc quét:</strong> mắt nhảy đến đúng từ khoá, đọc câu trước và sau, rồi đối chiếu với câu hỏi.</p>
+          </div>
+        </div>
+      </FigurePanel>
 
       <p class="mini-note"><strong>Đừng dịch từng chữ:</strong> đọc theo cụm 3–5 từ và bám vào cấu trúc câu. Gặp từ lạ, hãy đoán nghĩa từ ngữ cảnh rồi đọc tiếp; chỉ tra từ khi nó xuất hiện trong câu hỏi.</p>
     </div>

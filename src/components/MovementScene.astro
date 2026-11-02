@@ -1,0 +1,110 @@
+---
+type MovementType =
+  | 'into'
+  | 'onto'
+  | 'through'
+  | 'across'
+  | 'along'
+  | 'around'
+  | 'over'
+  | 'under';
+
+interface Props {
+  type: MovementType;
+  word: string;
+  vi: string;
+  example: string;
+}
+
+const { type, word, vi, example } = Astro.props;
+---
+
+<figure class="scene-card movement-scene">
+  <svg viewBox="0 0 120 84" aria-hidden="true" focusable="false">
+    <line class="ms-ground" x1="6" y1="76" x2="114" y2="76"></line>
+
+    {type === 'into' && (
+      <>
+        <rect class="ms-struct" x="64" y="34" width="42" height="42" rx="4"></rect>
+        <path class="ms-path" d="M12 58 C38 58 58 58 82 58"></path>
+        <path class="ms-arrow" d="M74 51 L85 58 L74 65 Z"></path>
+        <circle class="ms-ball" cx="96" cy="58" r="5"></circle>
+      </>
+    )}
+
+    {type === 'onto' && (
+      <>
+        <rect class="ms-struct" x="64" y="44" width="42" height="32" rx="4"></rect>
+        <path class="ms-path" d="M12 62 C42 62 44 27 78 27"></path>
+        <path class="ms-arrow" d="M71 25 L78 38 L85 25 Z"></path>
+        <circle class="ms-ball" cx="93" cy="37" r="5"></circle>
+      </>
+    )}
+
+    {type === 'through' && (
+      <>
+        <rect class="ms-struct" x="56" y="26" width="9" height="50" rx="2"></rect>
+        <rect class="ms-struct" x="83" y="26" width="9" height="50" rx="2"></rect>
+        <rect class="ms-struct" x="56" y="26" width="36" height="8" rx="2"></rect>
+        <path class="ms-path" d="M10 54 H105"></path>
+        <path class="ms-arrow" d="M97 47 L109 54 L97 61 Z"></path>
+        <circle class="ms-ball" cx="22" cy="54" r="5"></circle>
+      </>
+    )}
+
+    {type === 'across' && (
+      <>
+        <rect class="ms-road" x="48" y="8" width="24" height="68" rx="3"></rect>
+        <line class="ms-road-line" x1="60" y1="12" x2="60" y2="72"></line>
+        <path class="ms-path" d="M14 54 H98"></path>
+        <path class="ms-arrow" d="M90 47 L102 54 L90 61 Z"></path>
+        <circle class="ms-ball" cx="24" cy="54" r="5"></circle>
+      </>
+    )}
+
+    {type === 'along' && (
+      <>
+        <path class="ms-road" d="M10 44 H110 V66 H10 Z"></path>
+        <path class="ms-road-line" d="M14 55 C42 50 78 60 106 55"></path>
+        <path class="ms-path" d="M14 55 C42 50 78 60 104 55"></path>
+        <path class="ms-arrow" d="M97 49 L109 55 L97 61 Z"></path>
+        <circle class="ms-ball" cx="22" cy="55" r="5"></circle>
+      </>
+    )}
+
+    {type === 'around' && (
+      <>
+        <rect class="ms-struct" x="50" y="38" width="24" height="24" rx="4"></rect>
+        <ellipse class="ms-path" cx="62" cy="50" rx="38" ry="25"></ellipse>
+        <path class="ms-arrow" d="M94 42 L101 50 L108 42 Z"></path>
+        <circle class="ms-ball" cx="24" cy="50" r="5"></circle>
+      </>
+    )}
+
+    {type === 'over' && (
+      <>
+        <rect class="ms-struct" x="52" y="40" width="16" height="36" rx="2"></rect>
+        <path class="ms-path" d="M14 70 C28 24 92 24 106 70"></path>
+        <path class="ms-arrow" d="M99 64 L106 76 L113 64 Z"></path>
+        <circle class="ms-ball" cx="22" cy="70" r="5"></circle>
+      </>
+    )}
+
+    {type === 'under' && (
+      <>
+        <rect class="ms-struct" x="34" y="28" width="52" height="8" rx="2"></rect>
+        <rect class="ms-struct" x="34" y="36" width="6" height="38" rx="1"></rect>
+        <rect class="ms-struct" x="80" y="36" width="6" height="38" rx="1"></rect>
+        <path class="ms-path" d="M12 58 H105"></path>
+        <path class="ms-arrow" d="M97 51 L109 58 L97 65 Z"></path>
+        <circle class="ms-ball" cx="22" cy="58" r="5"></circle>
+      </>
+    )}
+  </svg>
+
+  <figcaption>
+    <strong>{word}</strong>
+    <span>{vi}</span>
+    <em>{example}</em>
+  </figcaption>
+</figure>

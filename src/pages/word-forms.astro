@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
 import EmptyState from '../components/EmptyState.astro';
+import FigurePanel from '../components/FigurePanel.astro';
 import FilterToolbar from '../components/FilterToolbar.astro';
 import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
@@ -205,6 +206,38 @@ import '../styles/word-forms.css';
           </tr>
         </tbody>
       </TableShell>
+
+      <FigurePanel
+        kicker="Câu mẫu"
+        title="Bốn dạng từ trong một câu."
+        caption="Đọc từ đứng trước và sau chỗ trống để đoán dạng cần điền. Tính từ đứng trước danh từ; trạng từ bổ nghĩa cho động từ."
+      >
+        <div class="wf-sentence-frame" aria-label="Khung câu: mạo từ, tính từ, danh từ, động từ, trạng từ">
+          <span class="wf-frame-slot wf-frame-det">a / the</span>
+          <span class="wf-frame-arrow" aria-hidden="true">+</span>
+          <span class="wf-frame-slot wf-frame-adj">tính từ</span>
+          <span class="wf-frame-arrow" aria-hidden="true">+</span>
+          <span class="wf-frame-slot wf-frame-noun">danh từ</span>
+          <span class="wf-frame-arrow" aria-hidden="true">+</span>
+          <span class="wf-frame-slot wf-frame-verb">động từ</span>
+          <span class="wf-frame-arrow" aria-hidden="true">+</span>
+          <span class="wf-frame-slot wf-frame-adv">trạng từ</span>
+        </div>
+
+        <div class="wf-sentence-example">
+          <span class="wf-token wf-token-det">The<small>mạo từ</small></span>
+          <span class="wf-token wf-token-adj">successful<small>tính từ</small></span>
+          <span class="wf-token wf-token-noun">singer<small>danh từ</small></span>
+          <span class="wf-token wf-token-verb">performed<small>động từ</small></span>
+          <span class="wf-token wf-token-adv">beautifully<small>trạng từ</small></span>
+          <span class="wf-token wf-token-prep">at the competition<small>cụm giới từ</small></span>
+        </div>
+
+        <div class="wf-sentence-arrows">
+          <span><b>successful</b> bổ nghĩa cho <b>singer</b></span>
+          <span><b>beautifully</b> bổ nghĩa cho <b>performed</b></span>
+        </div>
+      </FigurePanel>
 
       <p class="mini-note"><strong>Lưu ý:</strong> một từ có thể mang nhiều đuôi: <em>success → successful → successfully</em>. Khi thêm -ly, nhớ các trường hợp đổi chữ: happy → happily, gentle → gently, true → truly, basic → basically.</p>
     </div>

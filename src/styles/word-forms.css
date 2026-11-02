@@ -234,6 +234,137 @@
   line-height: 1.5;
 }
 
+/* Annotated sentence: one sentence showing all four word classes. */
+.wf-frame-det,
+.wf-token-det {
+  --slot: var(--slate);
+  --slot-bg: var(--slate-bg);
+  --slot-line: var(--slate-line);
+}
+
+.wf-frame-adj,
+.wf-token-adj {
+  --slot: var(--jade);
+  --slot-bg: var(--jade-bg);
+  --slot-line: var(--jade-line);
+}
+
+.wf-frame-noun,
+.wf-token-noun {
+  --slot: var(--indigo);
+  --slot-bg: var(--indigo-bg);
+  --slot-line: var(--indigo-line);
+}
+
+.wf-frame-verb,
+.wf-token-verb {
+  --slot: var(--clay);
+  --slot-bg: var(--clay-bg);
+  --slot-line: var(--clay-line);
+}
+
+.wf-frame-adv,
+.wf-token-adv {
+  --slot: var(--gold-ink);
+  --slot-bg: var(--gold-bg);
+  --slot-line: var(--gold);
+}
+
+.wf-token-prep {
+  --slot: var(--graphite);
+  --slot-bg: var(--graphite-bg);
+  --slot-line: var(--graphite-line);
+}
+
+.wf-sentence-frame {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 12px;
+  border: 1px dashed var(--line);
+  border-radius: 11px;
+  background: var(--surface-2);
+}
+
+.wf-frame-slot {
+  padding: 5px 9px;
+  border: 1px solid var(--slot-line);
+  border-radius: 6px;
+  color: var(--slot);
+  background: var(--slot-bg);
+  font-size: 0.64rem;
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.wf-frame-arrow {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+}
+
+.wf-sentence-example {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 8px 14px;
+  padding: 16px 14px 13px;
+  margin-top: 10px;
+  border: 1.5px solid var(--border-strong);
+  border-radius: 11px;
+  background: var(--surface);
+}
+
+.wf-token {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 2px 4px;
+  border-bottom: 3px solid var(--slot);
+  color: var(--slot);
+  font-family: var(--font-display);
+  font-size: 1.18rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.wf-token small {
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.wf-token-prep {
+  font-size: 0.98rem;
+}
+
+.wf-sentence-arrows {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.wf-sentence-arrows span {
+  padding: 7px 10px;
+  border-left: 3px solid var(--jade);
+  border-radius: 0 7px 7px 0;
+  color: var(--muted);
+  background: var(--jade-bg);
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+.wf-sentence-arrows b {
+  color: var(--ink);
+}
+
 /* ---------- Tables (position, suffix, prefix) ---------- */
 
 .wf-table-wrap {
@@ -571,6 +702,33 @@
     grid-template-columns: 1fr;
   }
 
+  .wf-sentence-frame {
+    gap: 5px;
+    padding: 9px;
+  }
+
+  .wf-frame-slot {
+    padding: 4px 7px;
+    font-size: 0.6rem;
+  }
+
+  .wf-sentence-example {
+    gap: 7px 11px;
+    padding: 13px 11px 11px;
+  }
+
+  .wf-token {
+    font-size: 1.02rem;
+  }
+
+  .wf-token-prep {
+    font-size: 0.86rem;
+  }
+
+  .wf-sentence-arrows {
+    grid-template-columns: 1fr;
+  }
+
   .wf-chain {
     grid-template-columns: 1fr;
   }
@@ -777,5 +935,51 @@
 
   .wf-family[hidden] {
     display: flex !important;
+  }
+
+  .wf-sentence-frame {
+    gap: 3px;
+    padding: 5px 6px;
+    border-radius: 5px;
+  }
+
+  .wf-frame-slot {
+    padding: 2px 4px;
+    font-size: 4.6pt;
+  }
+
+  .wf-frame-arrow {
+    font-size: 4.6pt;
+  }
+
+  .wf-sentence-example {
+    gap: 4px 8px;
+    padding: 7px 8px 5px;
+    margin-top: 4px;
+    border-radius: 5px;
+  }
+
+  .wf-token {
+    padding-bottom: 2px;
+    border-bottom-width: 2px;
+    font-size: 7.6pt;
+  }
+
+  .wf-token small {
+    font-size: 3.8pt;
+  }
+
+  .wf-token-prep {
+    font-size: 6.2pt;
+  }
+
+  .wf-sentence-arrows {
+    gap: 3px;
+    margin-top: 4px;
+  }
+
+  .wf-sentence-arrows span {
+    padding: 3px 5px;
+    font-size: 4.6pt;
   }
 }

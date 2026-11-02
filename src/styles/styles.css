@@ -1963,6 +1963,163 @@ h4 {
   white-space: normal;
 }
 
+/* Mini timeline inside each tense card. The bar/dot position and
+   span are set inline by TenseCard so one CSS block serves all 12. */
+.tense-time {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 9px 7px;
+  margin-bottom: 15px;
+  border: 1px solid var(--group-line);
+  border-radius: 9px;
+  background: var(--surface-2);
+}
+
+.tense-time-end {
+  color: var(--muted);
+  font-size: 0.47rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tense-time-track {
+  position: relative;
+  height: 20px;
+}
+
+.tense-time-track::before {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: var(--line);
+  content: "";
+}
+
+.tense-time-now {
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: 50%;
+  border-left: 1px dashed var(--gold);
+  opacity: 0.9;
+}
+
+.tense-time-bar {
+  position: absolute;
+  top: 7px;
+  z-index: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--group);
+  opacity: 0.42;
+}
+
+.tense-time-bar.is-dashed {
+  height: 7px;
+  background: repeating-linear-gradient(90deg, var(--group) 0 5px, transparent 5px 9px);
+  opacity: 0.55;
+}
+
+.tense-time-dot {
+  position: absolute;
+  top: 4px;
+  z-index: 2;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--group);
+  box-shadow: 0 0 0 3px var(--group-bg);
+  transform: translateX(-50%);
+}
+
+.tense-time-dot.is-habit {
+  box-shadow: 0 0 0 3px var(--group-bg), 0 0 0 5px color-mix(in srgb, var(--group) 35%, transparent);
+}
+
+.tense-time-check {
+  position: absolute;
+  top: 1px;
+  z-index: 2;
+  display: grid;
+  width: 17px;
+  height: 17px;
+  place-items: center;
+  border: 1.5px solid var(--group);
+  border-radius: 50%;
+  color: var(--group);
+  background: var(--group-bg);
+  font-family: var(--font-body);
+  font-size: 0.5rem;
+  font-weight: 800;
+  line-height: 1;
+  transform: translateX(-50%);
+}
+
+.tense-time-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 18px;
+  padding: 8px 12px;
+  margin: 0 0 16px;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+.tense-time-legend strong {
+  color: var(--ink);
+}
+
+.tense-time-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tt-dot {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--jade);
+  box-shadow: 0 0 0 2px var(--jade-bg);
+}
+
+.tt-bar {
+  width: 26px;
+  height: 5px;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: var(--jade);
+  opacity: 0.45;
+}
+
+.tt-check {
+  display: grid;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid var(--jade);
+  border-radius: 50%;
+  color: var(--jade);
+  background: var(--jade-bg);
+  font-family: var(--font-body);
+  font-size: 0.45rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
 .card-block {
   margin-bottom: 14px;
 }
@@ -4289,5 +4446,74 @@ h4 {
 
   .map-link {
     font-size: 5.2pt;
+  }
+}
+
+@media print {
+  .tense-time {
+    gap: 4px;
+    padding: 3px 5px 4px;
+    margin-bottom: 6px;
+    border-radius: 4px;
+  }
+
+  .tense-time-end {
+    font-size: 4pt;
+  }
+
+  .tense-time-track {
+    height: 14px;
+  }
+
+  .tense-time-track::before {
+    top: 7px;
+  }
+
+  .tense-time-bar {
+    top: 5px;
+    height: 4px;
+  }
+
+  .tense-time-bar.is-dashed {
+    height: 5px;
+    background: repeating-linear-gradient(90deg, var(--group) 0 3px, transparent 3px 6px);
+  }
+
+  .tense-time-dot {
+    top: 2px;
+    width: 9px;
+    height: 9px;
+    box-shadow: 0 0 0 2px var(--group-bg);
+  }
+
+  .tense-time-check {
+    top: 0;
+    width: 13px;
+    height: 13px;
+    font-size: 4pt;
+  }
+
+  .tense-time-legend {
+    gap: 3px 10px;
+    padding: 4px 6px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    font-size: 5.4pt;
+  }
+
+  .tt-dot {
+    width: 7px;
+    height: 7px;
+  }
+
+  .tt-bar {
+    width: 18px;
+    height: 3px;
+  }
+
+  .tt-check {
+    width: 10px;
+    height: 10px;
+    font-size: 3.4pt;
   }
 }

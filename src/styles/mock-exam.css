@@ -189,6 +189,72 @@
   font-weight: 800;
 }
 
+/* Question-count blueprint: eight bars on a shared 0–4 scale. */
+.mx-blueprint {
+  display: grid;
+  gap: 6px;
+}
+
+.mx-blueprint-row {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr) 24px;
+  gap: 10px;
+  align-items: center;
+}
+
+.mx-blueprint-label {
+  color: var(--ink);
+  font-size: 0.68rem;
+  line-height: 1.35;
+}
+
+.mx-blueprint-track {
+  height: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--surface-2);
+}
+
+.mx-blueprint-track i {
+  display: block;
+  width: calc(var(--n) * 25%);
+  height: 100%;
+  border-radius: 2px;
+  background: var(--bar, var(--cobalt));
+}
+
+.mx-blueprint-row strong {
+  color: var(--bar, var(--cobalt));
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-align: right;
+}
+
+.mx-bp-1 { --bar: var(--clay); }
+.mx-bp-2 { --bar: var(--clay); }
+.mx-bp-3 { --bar: var(--jade); }
+.mx-bp-4 { --bar: var(--jade); }
+.mx-bp-5 { --bar: var(--indigo); }
+.mx-bp-6 { --bar: var(--indigo); }
+.mx-bp-7 { --bar: var(--gold-ink); }
+.mx-bp-8 { --bar: var(--gold-ink); }
+
+.mx-blueprint-scale {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr) 24px;
+  gap: 10px;
+  margin-top: 5px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.54rem;
+}
+
+.mx-blueprint-scale > div {
+  display: flex;
+  justify-content: space-between;
+}
+
 .mx-score-note {
   padding: 12px 16px;
   margin-top: 14px;
@@ -1021,6 +1087,17 @@
 }
 
 @media (max-width: 620px) {
+  .mx-blueprint-row,
+  .mx-blueprint-scale {
+    grid-template-columns: 116px minmax(0, 1fr) 20px;
+    gap: 6px;
+  }
+
+  .mx-blueprint-label,
+  .mx-blueprint-row strong {
+    font-size: 0.6rem;
+  }
+
   .mx-stack {
     height: 405px;
   }
@@ -1208,5 +1285,30 @@
   .mx-checklist li {
     padding-left: 9px;
     font-size: 4.8pt;
+  }
+
+  .mx-blueprint {
+    gap: 3px;
+  }
+
+  .mx-blueprint-row,
+  .mx-blueprint-scale {
+    grid-template-columns: 120px minmax(0, 1fr) 18px;
+    gap: 5px;
+  }
+
+  .mx-blueprint-label,
+  .mx-blueprint-row strong {
+    font-size: 4.8pt;
+  }
+
+  .mx-blueprint-track {
+    height: 9px;
+    border-radius: 2px;
+  }
+
+  .mx-blueprint-scale {
+    margin-top: 2px;
+    font-size: 4.2pt;
   }
 }

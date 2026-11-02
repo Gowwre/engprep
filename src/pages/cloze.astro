@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
 import ClueCard from '../components/ClueCard.astro';
+import FigurePanel from '../components/FigurePanel.astro';
 import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StepCard from '../components/StepCard.astro';
@@ -148,6 +149,57 @@ import '../styles/cloze.css';
         <span class="cz-time-arrow" aria-hidden="true">→</span>
         <div class="cz-time-step"><span>Đọc lại</span><strong>1 phút</strong></div>
       </div>
+
+      <FigurePanel
+        kicker="Sơ đồ quyết định"
+        title="Bốn cổng trước khi chọn đáp án."
+        caption="Đi từ cổng 1 đến cổng 4. Nếu vẫn còn hai đáp án, đọc lại cả đoạn và quay lại cổng đầu tiên."
+      >
+        <div class="cz-funnel">
+          <div class="cz-funnel-start">
+            <span>Chỗ trống</span>
+            <strong>Đừng điền ngay</strong>
+          </div>
+          <span class="cz-funnel-arrow" aria-hidden="true">↓</span>
+
+          <div class="cz-funnel-gates">
+            <div class="cz-funnel-gate cz-gate-grammar">
+              <span>01</span>
+              <div>
+                <strong>Loại từ</strong>
+                <p>Trước và sau chỗ trống cần danh từ, tính từ, động từ hay trạng từ?</p>
+              </div>
+            </div>
+            <div class="cz-funnel-gate cz-gate-grammar">
+              <span>02</span>
+              <div>
+                <strong>Ngữ pháp</strong>
+                <p>Thì, số ít/số nhiều, giới từ đi kèm, mệnh đề quan hệ hay so sánh?</p>
+              </div>
+            </div>
+            <div class="cz-funnel-gate cz-gate-colloc">
+              <span>03</span>
+              <div>
+                <strong>Cụm cố định</strong>
+                <p>Từ nào đi với từ nào: <code>make a decision</code>, <code>depend on</code>, <code>heavy rain</code>?</p>
+              </div>
+            </div>
+            <div class="cz-funnel-gate cz-gate-logic">
+              <span>04</span>
+              <div>
+                <strong>Nghĩa &amp; logic</strong>
+                <p>Câu trước, câu sau, từ nối và chủ đề của cả đoạn nói gì?</p>
+              </div>
+            </div>
+          </div>
+
+          <span class="cz-funnel-arrow" aria-hidden="true">↓</span>
+          <div class="cz-funnel-end">
+            <strong>Đọc lại cả đoạn</strong>
+            <span>đúng nghĩa · đúng ngữ pháp · tự nhiên</span>
+          </div>
+        </div>
+      </FigurePanel>
 
       <p class="mini-note"><strong>Đừng dịch từng chữ:</strong> đọc theo cụm và bám vào cấu trúc câu. Gặp từ lạ, hãy dùng ngữ cảnh để đoán; chỉ tra từ khi nó nằm trong câu hỏi hoặc cần phân biệt nghĩa.</p>
     </div>

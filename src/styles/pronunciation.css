@@ -269,6 +269,93 @@
   font-weight: 700;
 }
 
+/* ---------- Sound sorter figure ---------- */
+
+.pron-sorter {
+  display: grid;
+  gap: 12px;
+}
+
+.pron-sorter-block {
+  display: grid;
+  grid-template-columns: 108px minmax(0, 1fr);
+  gap: 12px;
+  align-items: stretch;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: var(--surface-2);
+}
+
+.pron-sorter-start {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 3px;
+  padding-right: 12px;
+  border-right: 1px dashed var(--line);
+  text-align: center;
+}
+
+.pron-sorter-start span {
+  color: var(--clay);
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.pron-sorter-start strong {
+  color: var(--muted);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pron-sorter-branches {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.pron-sorter-branch {
+  padding: 9px 10px 10px;
+  border: 1px solid var(--sound-line);
+  border-top: 3px solid var(--sound);
+  border-radius: 9px;
+  background: var(--surface);
+}
+
+.pron-sorter-branch span {
+  display: block;
+  min-height: 2.4em;
+  color: var(--muted);
+  font-size: 0.56rem;
+  line-height: 1.4;
+}
+
+.pron-sorter-branch strong {
+  display: block;
+  margin-top: 4px;
+  color: var(--sound);
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.pron-sorter-branch em {
+  display: block;
+  margin-top: 5px;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  font-style: normal;
+  line-height: 1.45;
+}
+
 /* ---------- Section 04: vowels ---------- */
 
 .pron-table-wrap {
@@ -604,6 +691,20 @@
 }
 
 @media (max-width: 780px) {
+  .pron-sorter-block {
+    grid-template-columns: 1fr;
+  }
+
+  .pron-sorter-start {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    justify-items: start;
+    padding: 0 0 8px;
+    border-right: 0;
+    border-bottom: 1px dashed var(--line);
+    text-align: left;
+  }
+
   .pron-spelling-grid {
     grid-template-columns: 1fr;
   }
@@ -640,6 +741,14 @@
   .pron-mini-bucket strong {
     font-size: 0.7rem;
   }
+
+  .pron-sorter-branches {
+    grid-template-columns: 1fr;
+  }
+
+  .pron-sorter-branch span {
+    min-height: 0;
+  }
 }
 
 /* ---------- Print ---------- */
@@ -671,6 +780,48 @@
     border-radius: 6px !important;
     box-shadow: none !important;
     break-inside: avoid;
+  }
+
+  .pron-sorter-block {
+    grid-template-columns: 78px minmax(0, 1fr);
+    gap: 5px;
+    padding: 5px;
+    border-radius: 6px;
+  }
+
+  .pron-sorter-start {
+    padding-right: 5px;
+  }
+
+  .pron-sorter-start span {
+    font-size: 8pt;
+  }
+
+  .pron-sorter-start strong {
+    font-size: 4.4pt;
+  }
+
+  .pron-sorter-branches {
+    gap: 3px;
+  }
+
+  .pron-sorter-branch {
+    padding: 4px 5px;
+    border-radius: 5px;
+  }
+
+  .pron-sorter-branch span {
+    min-height: 0;
+    font-size: 4.4pt;
+  }
+
+  .pron-sorter-branch strong {
+    font-size: 8pt;
+  }
+
+  .pron-sorter-branch em {
+    margin-top: 2px;
+    font-size: 4.4pt;
   }
 
   .pron-rule-sound {
@@ -862,8 +1013,10 @@
   }
 }
 
+/* Let the vowel section flow after the sound-sorter recap so the
+   sorter does not sit alone on a nearly empty printed page. */
 @media print {
   #vowels {
-    break-before: page;
+    break-before: auto;
   }
 }

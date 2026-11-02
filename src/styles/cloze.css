@@ -227,6 +227,147 @@
   font-size: 0.8rem;
 }
 
+/* Decision funnel: four gates before choosing an answer. */
+.cz-funnel {
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+}
+
+.cz-funnel-start {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  padding: 9px 18px;
+  border: 2px solid var(--cocoa);
+  border-radius: 999px;
+  background: var(--cocoa-bg);
+  text-align: center;
+}
+
+.cz-funnel-start span {
+  color: var(--cocoa);
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cz-funnel-start strong {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 0.96rem;
+  line-height: 1.2;
+}
+
+.cz-funnel-arrow {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.cz-funnel-gates {
+  display: grid;
+  gap: 6px;
+  width: 100%;
+  max-width: 760px;
+}
+
+.cz-funnel-gate {
+  --gate: var(--clay);
+  --gate-bg: var(--clay-bg);
+  --gate-line: var(--clay-line);
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  padding: 9px 12px;
+  border: 1px solid var(--gate-line);
+  border-left: 4px solid var(--gate);
+  border-radius: 0 10px 10px 0;
+  background: var(--surface-2);
+}
+
+.cz-funnel-gate.cz-gate-colloc {
+  --gate: var(--gold-ink);
+  --gate-bg: var(--gold-bg);
+  --gate-line: var(--gold);
+}
+
+.cz-funnel-gate.cz-gate-logic {
+  --gate: var(--indigo);
+  --gate-bg: var(--indigo-bg);
+  --gate-line: var(--indigo-line);
+}
+
+.cz-funnel-gate > span {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border: 1px solid var(--gate-line);
+  border-radius: 50%;
+  color: var(--gate);
+  background: var(--gate-bg);
+  font-family: var(--font-mono);
+  font-size: 0.54rem;
+  font-weight: 800;
+}
+
+.cz-funnel-gate strong {
+  display: block;
+  color: var(--gate);
+  font-family: var(--font-display);
+  font-size: 0.96rem;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.cz-funnel-gate p {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+.cz-funnel-gate code {
+  padding: 0 3px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--ink);
+  background: var(--surface);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  white-space: nowrap;
+}
+
+.cz-funnel-end {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 3px 10px;
+  padding: 9px 16px;
+  border: 1.5px solid var(--jade);
+  border-radius: 999px;
+  background: var(--jade-bg);
+  text-align: center;
+}
+
+.cz-funnel-end strong {
+  color: var(--jade);
+  font-family: var(--font-display);
+  font-size: 0.96rem;
+  line-height: 1.2;
+}
+
+.cz-funnel-end span {
+  color: var(--muted);
+  font-size: 0.62rem;
+  line-height: 1.4;
+}
+
 /* ---------- Sections 03–04: grammar / vocabulary ---------- */
 
 .cz-table-wrap {
@@ -543,6 +684,29 @@
 }
 
 @media (max-width: 620px) {
+  .cz-funnel-gate {
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 7px;
+    padding: 8px 9px;
+  }
+
+  .cz-funnel-gate > span {
+    width: 22px;
+    height: 22px;
+  }
+
+  .cz-funnel-gate strong,
+  .cz-funnel-end strong {
+    font-size: 0.9rem;
+  }
+
+  .cz-funnel-end {
+    align-items: center;
+    flex-direction: column;
+    padding: 8px 12px;
+    border-radius: 12px;
+  }
+
   .cz-map-grid,
   .cz-step-grid,
   .cz-clue-grid {
@@ -752,5 +916,58 @@
 
   .cz-answer-grid em {
     font-size: 4.8pt;
+  }
+
+  .cz-funnel {
+    gap: 2px;
+  }
+
+  .cz-funnel-start {
+    padding: 4px 10px;
+  }
+
+  .cz-funnel-start span {
+    font-size: 4.2pt;
+  }
+
+  .cz-funnel-start strong,
+  .cz-funnel-gate strong,
+  .cz-funnel-end strong {
+    font-size: 6.6pt;
+  }
+
+  .cz-funnel-gates {
+    gap: 3px;
+  }
+
+  .cz-funnel-gate {
+    grid-template-columns: 20px minmax(0, 1fr);
+    gap: 5px;
+    padding: 4px 6px;
+    border-radius: 0 5px 5px 0;
+  }
+
+  .cz-funnel-gate > span {
+    width: 16px;
+    height: 16px;
+    font-size: 4.4pt;
+  }
+
+  .cz-funnel-gate p {
+    margin-top: 1px;
+    font-size: 4.8pt;
+    line-height: 1.35;
+  }
+
+  .cz-funnel-gate code {
+    font-size: 4.6pt;
+  }
+
+  .cz-funnel-end {
+    padding: 4px 9px;
+  }
+
+  .cz-funnel-end span {
+    font-size: 4.6pt;
   }
 }

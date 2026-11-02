@@ -250,6 +250,111 @@
   font-size: 0.8rem;
 }
 
+/* Eye-path illustration: skim vs scan. */
+.rc-eye-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.rc-eye-card {
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface-2);
+}
+
+.rc-eye-label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.rc-eye-label span {
+  color: var(--clay);
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.rc-eye-label em {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-style: normal;
+}
+
+.rc-eye-card svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--surface);
+}
+
+.rc-eye-page {
+  fill: var(--surface);
+  stroke: var(--line);
+  stroke-width: 1.5;
+}
+
+.rc-eye-title {
+  fill: var(--ink);
+  opacity: 0.4;
+}
+
+.rc-eye-lines line {
+  stroke: var(--line);
+  stroke-linecap: round;
+  stroke-width: 3;
+}
+
+.rc-eye-path {
+  fill: none;
+  stroke: var(--clay);
+  stroke-dasharray: 4 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.rc-eye-start {
+  fill: var(--gold);
+  stroke: var(--gold-ink);
+  stroke-width: 1.2;
+}
+
+.rc-eye-arrow {
+  fill: var(--clay);
+}
+
+.rc-eye-highlight {
+  fill: var(--gold);
+  opacity: 0.55;
+}
+
+.rc-eye-ring {
+  fill: none;
+  stroke: var(--clay);
+  stroke-width: 2;
+}
+
+.rc-eye-copy {
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+.rc-eye-copy strong {
+  color: var(--ink);
+}
+
 /* ---------- Tables (types, connectors) ---------- */
 
 .rc-table-wrap {
@@ -568,6 +673,10 @@
 }
 
 @media (max-width: 780px) {
+  .rc-eye-grid {
+    grid-template-columns: 1fr;
+  }
+
   .rc-toolbar .filter-tabs {
     display: flex;
     flex-wrap: wrap;
@@ -808,5 +917,34 @@
 
   .rc-connector-row[hidden] {
     display: table-row !important;
+  }
+
+  .rc-eye-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 5px !important;
+  }
+
+  .rc-eye-card {
+    padding: 5px;
+    border-radius: 6px;
+    break-inside: avoid;
+  }
+
+  .rc-eye-label {
+    margin-bottom: 3px;
+  }
+
+  .rc-eye-label span {
+    font-size: 7.4pt;
+  }
+
+  .rc-eye-label em {
+    font-size: 4.6pt;
+  }
+
+  .rc-eye-copy {
+    margin-top: 4px;
+    font-size: 4.8pt;
+    line-height: 1.4;
   }
 }

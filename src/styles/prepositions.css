@@ -722,6 +722,88 @@
   line-height: 1.4;
 }
 
+/* ---------- Movement scene diagrams ---------- */
+
+.movement-scene-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 12px;
+}
+
+.movement-scene-head p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.movement-scene-head span {
+  flex-shrink: 0;
+  color: var(--clay);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.movement-scene {
+  padding: 4px 6px 10px;
+}
+
+.movement-scene svg {
+  display: block;
+  width: 100%;
+  height: 136px;
+  margin-bottom: 4px;
+}
+
+.ms-ground {
+  stroke: var(--line);
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.ms-struct {
+  fill: var(--surface-2);
+  stroke: var(--border-strong);
+  stroke-width: 2;
+}
+
+.ms-road {
+  fill: var(--line);
+  opacity: 0.35;
+  stroke: none;
+}
+
+.ms-road-line {
+  stroke: var(--surface);
+  stroke-dasharray: 4 4;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.ms-path {
+  fill: none;
+  stroke: var(--clay);
+  stroke-dasharray: 5 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.ms-arrow {
+  fill: var(--clay);
+}
+
+.ms-ball {
+  fill: var(--gold);
+  stroke: var(--gold-ink);
+  stroke-width: 1.5;
+}
+
 .place-note {
   padding: 11px 13px;
   margin-top: 16px;
@@ -1130,6 +1212,19 @@
     font-size: 5pt;
   }
 
+  .movement-scene-head {
+    display: none !important;
+  }
+
+  .movement-scene {
+    padding: 2px 3px 4px !important;
+  }
+
+  .movement-scene svg {
+    height: 82px;
+    margin-bottom: 1px;
+  }
+
   .place-note,
   .movement-notes,
   .collocation-legend {
@@ -1328,6 +1423,16 @@
 
   .scene {
     height: 126px;
+  }
+
+  .movement-scene-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .movement-scene svg {
+    height: 108px;
   }
 
   .scene-box {

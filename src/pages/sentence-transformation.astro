@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
+import FigurePanel from '../components/FigurePanel.astro';
 import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
@@ -191,6 +192,56 @@ import '../styles/sentence-transformation.css';
           </tr>
         </tbody>
       </TableShell>
+
+      <FigurePanel
+        kicker="Sơ đồ chuyển đổi"
+        title="Cùng nghĩa, khác cấu trúc."
+        caption="Mỗi hàng là một phép đổi. Phần được tô là phần thay đổi; phần còn lại phải giữ nguyên nghĩa."
+      >
+        <div class="wt-transform-board">
+          <div class="wt-transform-head" aria-hidden="true">
+            <span>Câu gốc</span>
+            <span>Phép đổi</span>
+            <span>Câu mới</span>
+          </div>
+
+          <div class="wt-transform-row">
+            <p class="wt-transform-source">Although <mark>it rained</mark>, we went out.</p>
+            <div class="wt-transform-op">
+              <span>mệnh đề → cụm danh từ</span>
+              <b aria-hidden="true">→</b>
+            </div>
+            <p class="wt-transform-target">Despite <mark>the rain</mark>, we went out.</p>
+          </div>
+
+          <div class="wt-transform-row">
+            <p class="wt-transform-source">She <mark>last wrote</mark> to me <mark>in 2023</mark>.</p>
+            <div class="wt-transform-op">
+              <span>đổi mốc → since</span>
+              <b aria-hidden="true">→</b>
+            </div>
+            <p class="wt-transform-target">She <mark>hasn’t written</mark> to me <mark>since 2023</mark>.</p>
+          </div>
+
+          <div class="wt-transform-row">
+            <p class="wt-transform-source"><mark>“I will help you,”</mark> he said.</p>
+            <div class="wt-transform-op">
+              <span>lùi thì + đổi đại từ</span>
+              <b aria-hidden="true">→</b>
+            </div>
+            <p class="wt-transform-target">He said <mark>he would help me</mark>.</p>
+          </div>
+
+          <div class="wt-transform-row">
+            <p class="wt-transform-source">I <mark>don’t have</mark> a bike.</p>
+            <div class="wt-transform-op">
+              <span>lùi thì sau “wish”</span>
+              <b aria-hidden="true">→</b>
+            </div>
+            <p class="wt-transform-target">I wish I <mark>had</mark> a bike.</p>
+          </div>
+        </div>
+      </FigurePanel>
 
       <div class="wt-formula-notes">
         <article class="wt-formula-note">

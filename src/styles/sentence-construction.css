@@ -232,6 +232,159 @@
   font-size: 0.8rem;
 }
 
+/* Sentence assembly: scrambled chunks → S/V slots → finished sentence. */
+.sc-assembly {
+  display: grid;
+  gap: 9px;
+}
+
+.sc-assembly-bank {
+  padding: 9px 11px;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  background: var(--surface-2);
+}
+
+.sc-assembly-label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.54rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sc-assembly-chunks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 6px;
+}
+
+.sc-assembly-chunks span {
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  background: var(--surface);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  line-height: 1.4;
+}
+
+.sc-assembly-arrow {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.sc-assembly-slots {
+  display: grid;
+  grid-template-columns: 0.9fr 0.55fr 1.7fr 1.1fr;
+  gap: 7px;
+}
+
+.sc-assembly-slot {
+  --slot: var(--graphite);
+  --slot-bg: var(--graphite-bg);
+  --slot-line: var(--graphite-line);
+  padding: 8px 9px;
+  border: 1px solid var(--slot-line);
+  border-top: 3px solid var(--slot);
+  border-radius: 8px;
+  background: var(--slot-bg);
+}
+
+.sc-assembly-slot.sc-slot-s {
+  --slot: var(--jade);
+  --slot-bg: var(--jade-bg);
+  --slot-line: var(--jade-line);
+}
+
+.sc-assembly-slot.sc-slot-v {
+  --slot: var(--clay);
+  --slot-bg: var(--clay-bg);
+  --slot-line: var(--clay-line);
+}
+
+.sc-assembly-slot.sc-slot-adj {
+  --slot: var(--indigo);
+  --slot-bg: var(--indigo-bg);
+  --slot-line: var(--indigo-line);
+}
+
+.sc-assembly-slot.sc-slot-place {
+  --slot: var(--gold-ink);
+  --slot-bg: var(--gold-bg);
+  --slot-line: var(--gold);
+}
+
+.sc-assembly-slot > span {
+  display: inline-block;
+  padding: 0 5px;
+  border: 1px solid var(--slot-line);
+  border-radius: 4px;
+  color: var(--slot);
+  background: var(--surface);
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.sc-assembly-slot strong {
+  display: block;
+  margin-top: 3px;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.sc-assembly-slot em {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.55rem;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+.sc-assembly-result {
+  padding: 9px 11px;
+  border: 1.5px solid var(--jade);
+  border-radius: 9px;
+  background: var(--jade-bg);
+}
+
+.sc-assembly-result > span {
+  display: block;
+  color: var(--jade);
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sc-assembly-result p {
+  margin: 3px 0 0;
+  color: var(--ink);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.sc-assembly-result mark {
+  padding: 0 2px;
+  color: var(--jade);
+  background: transparent;
+  font-weight: 700;
+}
+
 .sc-table-wrap {
   overflow-x: auto;
   margin-top: 15px;
@@ -965,6 +1118,10 @@
     flex-wrap: wrap;
   }
 
+  .sc-assembly-slots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .sc-frame-box {
     flex: 1 1 28%;
   }
@@ -988,6 +1145,10 @@
 }
 
 @media (max-width: 620px) {
+  .sc-assembly-slots {
+    grid-template-columns: 1fr;
+  }
+
   .sc-stack {
     height: 405px;
   }
@@ -1361,5 +1522,66 @@
     padding-top: 3px;
     margin-top: 3px;
     font-size: 4.8pt;
+  }
+
+  .sc-assembly {
+    gap: 4px;
+  }
+
+  .sc-assembly-bank {
+    padding: 4px 6px;
+    border-radius: 5px;
+  }
+
+  .sc-assembly-label {
+    font-size: 4.2pt;
+  }
+
+  .sc-assembly-chunks {
+    gap: 2px;
+    margin-top: 3px;
+  }
+
+  .sc-assembly-chunks span {
+    padding: 1px 4px;
+    font-size: 4.8pt;
+  }
+
+  .sc-assembly-slots {
+    grid-template-columns: 0.9fr 0.55fr 1.7fr 1.1fr !important;
+    gap: 3px !important;
+  }
+
+  .sc-assembly-slot {
+    padding: 4px 5px;
+    border-radius: 5px;
+    border-top-width: 2px;
+  }
+
+  .sc-assembly-slot > span {
+    font-size: 4pt;
+  }
+
+  .sc-assembly-slot strong {
+    margin-top: 2px;
+    font-size: 6pt;
+  }
+
+  .sc-assembly-slot em {
+    font-size: 4.2pt;
+  }
+
+  .sc-assembly-result {
+    padding: 4px 6px;
+    border-radius: 5px;
+  }
+
+  .sc-assembly-result > span {
+    font-size: 4.2pt;
+  }
+
+  .sc-assembly-result p {
+    margin-top: 2px;
+    font-size: 5.8pt;
   }
 }

@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
+import FigurePanel from '../components/FigurePanel.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
@@ -73,6 +74,60 @@ import '../styles/mock-exam.css';
           <tr><th scope="row">Tổng</th><td>1–24</td><td>Đủ 8 nhóm câu</td><td>24</td></tr>
         </tfoot>
       </TableShell>
+
+      <FigurePanel
+        kicker="Tỉ trọng"
+        title="Nhóm nào chiếm nhiều câu nhất?"
+        caption="Mỗi thanh là số câu của một nhóm trên tổng 4 câu tối đa. Nhóm ngữ pháp – từ vựng và giao tiếp – biển báo chiếm nhiều câu nhất, nên đừng bỏ trống."
+      >
+        <div class="mx-blueprint">
+          <div class="mx-blueprint-row mx-bp-1">
+            <span class="mx-blueprint-label">Phát âm &amp; trọng âm</span>
+            <div class="mx-blueprint-track"><i style="--n: 2"></i></div>
+            <strong>2</strong>
+          </div>
+          <div class="mx-blueprint-row mx-bp-2">
+            <span class="mx-blueprint-label">Ngữ pháp &amp; từ vựng</span>
+            <div class="mx-blueprint-track"><i style="--n: 4"></i></div>
+            <strong>4</strong>
+          </div>
+          <div class="mx-blueprint-row mx-bp-3">
+            <span class="mx-blueprint-label">Giao tiếp &amp; biển báo</span>
+            <div class="mx-blueprint-track"><i style="--n: 4"></i></div>
+            <strong>4</strong>
+          </div>
+          <div class="mx-blueprint-row mx-bp-4">
+            <span class="mx-blueprint-label">Điền khuyết</span>
+            <div class="mx-blueprint-track"><i style="--n: 3"></i></div>
+            <strong>3</strong>
+          </div>
+          <div class="mx-blueprint-row mx-bp-5">
+            <span class="mx-blueprint-label">Đọc hiểu</span>
+            <div class="mx-blueprint-track"><i style="--n: 3"></i></div>
+            <strong>3</strong>
+          </div>
+          <div class="mx-blueprint-row mx-bp-6">
+            <span class="mx-blueprint-label">Từ loại</span>
+            <div class="mx-blueprint-track"><i style="--n: 3"></i></div>
+            <strong>3</strong>
+          </div>
+          <div class="mx-blueprint-row mx-bp-7">
+            <span class="mx-blueprint-label">Phần VI</span>
+            <div class="mx-blueprint-track"><i style="--n: 2"></i></div>
+            <strong>2</strong>
+          </div>
+          <div class="mx-blueprint-row mx-bp-8">
+            <span class="mx-blueprint-label">Viết lại câu</span>
+            <div class="mx-blueprint-track"><i style="--n: 3"></i></div>
+            <strong>3</strong>
+          </div>
+        </div>
+        <div class="mx-blueprint-scale" aria-hidden="true">
+          <span></span>
+          <div><span>0</span><span>1</span><span>2</span><span>3</span><span>4 câu</span></div>
+          <span></span>
+        </div>
+      </FigurePanel>
 
       <div class="mx-score-note">
         <p><strong>Cách tính điểm:</strong> 24 câu, mỗi câu khoảng 0,42 điểm. Kết quả hiển thị theo thang 24 và quy đổi thang 10. Điểm chỉ để luyện, không phải điểm thi thật.</p>

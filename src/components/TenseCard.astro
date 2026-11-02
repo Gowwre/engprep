@@ -4,6 +4,16 @@ interface Formula {
   text: string;
 }
 
+interface Timeline {
+  start: number;
+  end: number;
+  dot?: number;
+  check?: boolean;
+  dashed?: boolean;
+  habit?: boolean;
+  label: string;
+}
+
 interface Props {
   id: string;
   group: string;
@@ -13,6 +23,7 @@ interface Props {
   english: string;
   badge?: string;
   formulas: Formula[];
+  timeline?: Timeline;
   uses: string[];
   signals: string[];
   exampleEn: string;
@@ -29,6 +40,7 @@ const {
   english,
   badge,
   formulas,
+  timeline,
   uses,
   signals,
   exampleEn,
@@ -55,6 +67,30 @@ const {
       </div>
     ))}
   </div>
+
+  {timeline && (
+    <div class="tense-time" role="img" aria-label={`Vị trí trên trục thời gian: ${timeline.label}`}>
+      <span class="tense-time-end" aria-hidden="true">Quá khứ</span>
+      <span class="tense-time-track" aria-hidden="true">
+        <span class="tense-time-now"></span>
+        {timeline.end > timeline.start && (
+          <span
+            class:list={['tense-time-bar', { 'is-dashed': timeline.dashed }]}
+            style={`left:${timeline.start}%;width:${timeline.end - timeline.start}%`}
+          ></span>
+        )}
+        {timeline.check ? (
+          <span class="tense-time-check" style={`left:${timeline.end}%`}>✓</span>
+        ) : (
+          <span
+            class:list={['tense-time-dot', { 'is-habit': timeline.habit }]}
+            style={`left:${timeline.dot ?? timeline.end}%`}
+          ></span>
+        )}
+      </span>
+      <span class="tense-time-end" aria-hidden="true">Tương lai</span>
+    </div>
+  )}
 
   <div class="card-block">
     <h4>Cách dùng</h4>

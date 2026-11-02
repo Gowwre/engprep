@@ -1,0 +1,41 @@
+---
+interface Props {
+  class?: string;
+  kicker?: string;
+  title?: string;
+  caption?: string;
+  tone?: 'plain' | 'wash';
+  label?: string;
+}
+
+const {
+  class: className,
+  kicker,
+  title,
+  caption,
+  tone = 'plain',
+  label
+} = Astro.props;
+---
+
+<figure
+  class:list={['figure-panel', `figure-panel--${tone}`, className]}
+  aria-label={label}
+>
+  {(kicker || title) && (
+    <div class="figure-head">
+      <div class="figure-head-copy">
+        {kicker && <p class="figure-kicker">{kicker}</p>}
+        {title && <h3 class="figure-title">{title}</h3>}
+      </div>
+      <slot name="legend" />
+    </div>
+  )}
+
+  <div class="figure-canvas">
+    <slot />
+  </div>
+
+  {caption && <figcaption class="figure-caption">{caption}</figcaption>}
+  <slot name="note" />
+</figure>

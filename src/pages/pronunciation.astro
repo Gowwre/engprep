@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
+import FigurePanel from '../components/FigurePanel.astro';
 import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
@@ -171,6 +172,62 @@ import '../styles/pronunciation.css';
       </div>
 
       <p class="mini-note"><strong>Đừng nhầm:</strong> -es trong chữ không luôn đọc /ɪz/. <em>Goes</em> và <em>does</em> đọc /z/; <em>watches</em> và <em>changes</em> mới đọc /ɪz/. Hãy nghe âm cuối của từ gốc.</p>
+
+      <FigurePanel
+        kicker="Sơ đồ chọn nhanh"
+        title="Âm cuối quyết định cách đọc."
+        caption="Chỉ cần xác định âm cuối của từ gốc, không nhìn chữ -ed hay -es. Ba nhánh màu tương ứng ba cách đọc."
+      >
+        <div class="pron-sorter">
+          <div class="pron-sorter-block">
+            <div class="pron-sorter-start">
+              <span>-ed</span>
+              <strong>âm cuối</strong>
+            </div>
+            <div class="pron-sorter-branches">
+              <div class="pron-sorter-branch pron-t">
+                <span>vô thanh · /p k f s ʃ tʃ/</span>
+                <strong>/t/</strong>
+                <em>watched · stopped · laughed</em>
+              </div>
+              <div class="pron-sorter-branch pron-d">
+                <span>hữu thanh · còn lại</span>
+                <strong>/d/</strong>
+                <em>played · cleaned · opened</em>
+              </div>
+              <div class="pron-sorter-branch pron-id">
+                <span>kết thúc bằng /t/ hoặc /d/</span>
+                <strong>/ɪd/</strong>
+                <em>wanted · needed · decided</em>
+              </div>
+            </div>
+          </div>
+
+          <div class="pron-sorter-block">
+            <div class="pron-sorter-start">
+              <span>-s / -es</span>
+              <strong>âm cuối</strong>
+            </div>
+            <div class="pron-sorter-branches">
+              <div class="pron-sorter-branch pron-s">
+                <span>vô thanh · /p k t f θ/</span>
+                <strong>/s/</strong>
+                <em>stops · books · months</em>
+              </div>
+              <div class="pron-sorter-branch pron-z">
+                <span>hữu thanh · còn lại</span>
+                <strong>/z/</strong>
+                <em>plays · reads · goes</em>
+              </div>
+              <div class="pron-sorter-branch pron-iz">
+                <span>âm xuýt · /s z ʃ ʒ tʃ dʒ/</span>
+                <strong>/ɪz/</strong>
+                <em>misses · watches · changes</em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </FigurePanel>
     </div>
   </section>
 

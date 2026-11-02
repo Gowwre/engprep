@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
+import FigurePanel from '../components/FigurePanel.astro';
 import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StepCard from '../components/StepCard.astro';
@@ -100,6 +101,54 @@ import '../styles/sentence-construction.css';
         <span class="sc-frame-arrow" aria-hidden="true">→</span>
         <div class="sc-frame-box"><strong>Time</strong><span>khi nào</span></div>
       </div>
+
+      <FigurePanel
+        kicker="Ghép câu"
+        title="Từ các mảnh rời thành một câu."
+        caption="Đừng đọc xuôi tai rồi ghép. Tìm chủ ngữ và động từ chính trước, sau đó gắn cụm bổ nghĩa vào đúng vị trí."
+      >
+        <div class="sc-assembly">
+          <div class="sc-assembly-bank">
+            <span class="sc-assembly-label">Các mảnh rời</span>
+            <div class="sc-assembly-chunks">
+              <span>to our environment</span>
+              <span>Nuclear power</span>
+              <span>but also dangerous</span>
+              <span>is not only expensive</span>
+            </div>
+          </div>
+
+          <div class="sc-assembly-arrow" aria-hidden="true">↓ xếp vào khung ↓</div>
+
+          <div class="sc-assembly-slots">
+            <div class="sc-assembly-slot sc-slot-s">
+              <span>S</span>
+              <strong>Nuclear power</strong>
+              <em>chủ ngữ</em>
+            </div>
+            <div class="sc-assembly-slot sc-slot-v">
+              <span>V</span>
+              <strong>is</strong>
+              <em>động từ chính</em>
+            </div>
+            <div class="sc-assembly-slot sc-slot-adj">
+              <span>Bổ nghĩa</span>
+              <strong>not only expensive but also dangerous</strong>
+              <em>cụm tính từ song song</em>
+            </div>
+            <div class="sc-assembly-slot sc-slot-place">
+              <span>Nơi chốn</span>
+              <strong>to our environment</strong>
+              <em>cụm giới từ</em>
+            </div>
+          </div>
+
+          <div class="sc-assembly-result">
+            <span>Câu hoàn chỉnh</span>
+            <p>Nuclear power <mark>is not only expensive but also dangerous</mark> to our environment.</p>
+          </div>
+        </div>
+      </FigurePanel>
 
       <TableShell
         wrapperClass="sc-table-wrap"

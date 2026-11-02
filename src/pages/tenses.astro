@@ -229,6 +229,12 @@ import TrapCard from '../components/TrapCard.astro';
 
       <p class="formula-legend"><strong>S:</strong> chủ ngữ · <strong>V:</strong> động từ nguyên mẫu · <strong>V-ing:</strong> động từ thêm -ing · <strong>V2/ed:</strong> quá khứ đơn · <strong>V3/ed:</strong> quá khứ phân từ</p>
 
+      <p class="tense-time-legend"><strong>Thanh thời gian:</strong>
+        <span><i class="tt-dot" aria-hidden="true"></i>hành động ngắn, thói quen</span>
+        <span><i class="tt-bar" aria-hidden="true"></i>kéo dài</span>
+        <span><i class="tt-check" aria-hidden="true">✓</i>hoàn thành trước mốc</span>
+      </p>
+
       <FilterToolbar
         tabKey="group"
         ariaLabel="Lọc theo mốc thời gian"
@@ -260,6 +266,7 @@ import TrapCard from '../components/TrapCard.astro';
             { sign: "−", text: "S + don't/doesn't + V" },
             { sign: "?", text: "Do/Does + S + V?" },
           ]}
+          timeline={{ start: 50, end: 50, habit: true, label: "thói quen lặp lại quanh hiện tại" }}
           uses={[
             "Thói quen, việc lặp đi lặp lại: <em>I walk to school every day.</em>",
             "Sự thật hiển nhiên, quy luật tự nhiên: <em>The sun rises in the east.</em>",
@@ -284,6 +291,7 @@ import TrapCard from '../components/TrapCard.astro';
             { sign: "−", text: "S + am/is/are + not + V-ing" },
             { sign: "?", text: "Am/Is/Are + S + V-ing?" },
           ]}
+          timeline={{ start: 36, end: 64, dot: 50, label: "đang diễn ra quanh hiện tại" }}
           uses={[
             "Đang xảy ra ngay lúc nói: <em>Listen! Someone is singing.</em>",
             "Tình hình đang thay đổi: <em>More young people are moving to big cities.</em>",
@@ -309,6 +317,7 @@ import TrapCard from '../components/TrapCard.astro';
             { sign: "−", text: "S + haven't/hasn't + V3/ed" },
             { sign: "?", text: "Have/Has + S + V3/ed?" },
           ]}
+          timeline={{ start: 28, end: 50, check: true, label: "hoàn thành trước hoặc tính đến hiện tại" }}
           uses={[
             "Kể trải nghiệm tính đến nay, không nói rõ thời điểm: <em>I have visited Hue three times.</em>",
             "Việc đã xong nhưng kết quả còn ảnh hưởng đến hiện tại: <em>She has lost her ticket, so she can't get in.</em>",
@@ -333,6 +342,7 @@ import TrapCard from '../components/TrapCard.astro';
             { sign: "−", text: "S + haven't/hasn't + been + V-ing" },
             { sign: "?", text: "Have/Has + S + been + V-ing?" },
           ]}
+          timeline={{ start: 22, end: 50, dashed: true, label: "kéo dài từ quá khứ đến hiện tại" }}
           uses={[
             "Việc bắt đầu từ quá khứ, vẫn đang tiếp diễn; nhấn mạnh việc kéo dài bao lâu: <em>They have been restoring the temple for two years.</em>",
             "Việc vừa diễn ra, vẫn còn dấu vết: <em>Her hands are dirty because she has been gardening.</em>",
@@ -356,6 +366,7 @@ import TrapCard from '../components/TrapCard.astro';
             { sign: "−", text: "S + didn't + V" },
             { sign: "?", text: "Did + S + V?" },
           ]}
+          timeline={{ start: 20, end: 20, label: "xảy ra và kết thúc tại một điểm trong quá khứ" }}
           uses={[
             "Việc đã xảy ra và kết thúc tại một thời điểm cụ thể trong quá khứ: <em>We visited My Son Sanctuary last summer.</em>",
             "Chuỗi hành động liên tiếp: <em>She arrived, opened the door, and sat down.</em>",
@@ -387,6 +398,7 @@ import TrapCard from '../components/TrapCard.astro';
             { sign: "−", text: "S + was/were + not + V-ing" },
             { sign: "?", text: "Was/Were + S + V-ing?" },
           ]}
+          timeline={{ start: 8, end: 32, dot: 20, label: "đang diễn ra quanh một điểm trong quá khứ" }}
           uses={[
             "Đang diễn ra tại một thời điểm trong quá khứ: <em>At 8 p.m. yesterday, I was watching a documentary.</em>",
             "Đang diễn ra thì bị hành động khác xen vào: <em>While I was reading, the phone rang.</em>",
@@ -417,6 +429,7 @@ import TrapCard from '../components/TrapCard.astro';
             { sign: "−", text: "S + hadn't + V3/ed" },
             { sign: "?", text: "Had + S + V3/ed?" },
           ]}
+          timeline={{ start: 4, end: 20, check: true, label: "hoàn thành trước một mốc trong quá khứ" }}
           uses={[
             "Xảy ra trước một hành động quá khứ khác: <em>The film had started when we arrived.</em>",
             "Xảy ra trước một mốc trong quá khứ: <em>By 2010, he had worked here for ten years.</em>",
@@ -441,6 +454,7 @@ import TrapCard from '../components/TrapCard.astro';
             { sign: "−", text: "S + hadn't + been + V-ing" },
             { sign: "?", text: "Had + S + been + V-ing?" },
           ]}
+          timeline={{ start: 2, end: 20, dashed: true, label: "kéo dài đến một mốc trong quá khứ" }}
           uses={[
             "Việc đang diễn ra và kéo dài trước một hành động hay một mốc khác trong quá khứ: <em>They had been preparing for months before the festival opened.</em>",
             "Nhấn mạnh việc kéo dài bao lâu: <em>She had been learning Vietnamese for two years before she moved here.</em>",
@@ -464,6 +478,7 @@ import TrapCard from '../components/TrapCard.astro';
             { sign: "−", text: "S + won't + V" },
             { sign: "?", text: "Will + S + V?" },
           ]}
+          timeline={{ start: 80, end: 80, label: "xảy ra tại một điểm trong tương lai" }}
           uses={[
             "Dự đoán theo ý kiến, cảm nhận của người nói: <em>I think the festival will be crowded.</em>",
             "Quyết định ngay lúc nói: <em>The phone is ringing. I'll answer it.</em>",
@@ -494,6 +509,7 @@ import TrapCard from '../components/TrapCard.astro';
             { sign: "−", text: "S + won't + be + V-ing" },
             { sign: "?", text: "Will + S + be + V-ing?" },
           ]}
+          timeline={{ start: 68, end: 92, dot: 80, label: "đang diễn ra quanh một điểm trong tương lai" }}
           uses={[
             "Sẽ đang diễn ra tại một thời điểm trong tương lai: <em>At this time next week, we will be exploring Hoi An.</em>",
             "Hỏi lịch sự về kế hoạch: <em>Will you be using the computer this afternoon?</em>",
@@ -517,6 +533,7 @@ import TrapCard from '../components/TrapCard.astro';
             { sign: "−", text: "S + won't + have + V3/ed" },
             { sign: "?", text: "Will + S + have + V3/ed?" },
           ]}
+          timeline={{ start: 60, end: 80, check: true, label: "hoàn thành trước một mốc trong tương lai" }}
           uses={[
             "Sẽ xong trước một thời điểm trong tương lai: <em>By 2030, the city will have built three new metro lines.</em>",
             "Sẽ xong trước khi một việc khác trong tương lai xảy ra: <em>By the time you arrive, I will have finished cooking.</em>",
@@ -539,6 +556,7 @@ import TrapCard from '../components/TrapCard.astro';
             { sign: "−", text: "S + won't + have + been + V-ing" },
             { sign: "?", text: "Will + S + have + been + V-ing?" },
           ]}
+          timeline={{ start: 50, end: 80, dashed: true, label: "kéo dài đến một mốc trong tương lai" }}
           uses={[
             "Nhấn mạnh việc kéo dài bao lâu tính đến một mốc tương lai: <em>By next June, she will have been learning English for five years.</em>",
             "Việc sẽ diễn ra liên tục cho đến thời điểm đó.",

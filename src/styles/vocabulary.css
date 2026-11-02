@@ -163,6 +163,115 @@
 
 /* ---------- Section 02: collocations ---------- */
 
+.vc-phrasal-web {
+  display: grid;
+  grid-template-columns: 168px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+
+.vc-web-hub {
+  position: relative;
+  display: grid;
+  place-items: center;
+  gap: 4px;
+  padding: 22px 16px;
+  border: 2px solid var(--cobalt);
+  border-radius: 22px;
+  background: var(--cobalt-bg);
+  text-align: center;
+}
+
+.vc-web-hub::after {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  width: 20px;
+  border-top: 1px dashed var(--cobalt-line);
+  content: "";
+}
+
+.vc-web-verb {
+  color: var(--cobalt);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.vc-web-plus {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  line-height: 1.3;
+}
+
+.vc-web-hub strong {
+  color: var(--cobalt);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.vc-web-branches {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.vc-web-branch {
+  padding: 9px 11px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--cobalt);
+  border-radius: 0 9px 9px 0;
+  background: var(--surface-2);
+}
+
+.vc-web-branch code {
+  display: block;
+  color: var(--cobalt);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.vc-web-branch span {
+  display: block;
+  margin-top: 2px;
+  color: var(--ink);
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.vc-web-branch em {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.58rem;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+.vc-web-note {
+  padding: 7px 10px;
+  margin: 12px 0 0;
+  border-left: 3px solid var(--gold);
+  border-radius: 0 7px 7px 0;
+  color: var(--muted);
+  background: var(--gold-bg);
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+.vc-web-note strong {
+  color: var(--gold-ink);
+}
+
 .vc-toolbar .filter-tab {
   padding-inline: 9px;
   font-size: 0.73rem;
@@ -520,6 +629,28 @@
 }
 
 @media (max-width: 780px) {
+  .vc-phrasal-web {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .vc-web-hub {
+    grid-template-columns: auto auto auto;
+    justify-content: flex-start;
+    justify-items: start;
+    gap: 8px;
+    padding: 12px 15px;
+    text-align: left;
+  }
+
+  .vc-web-hub::after {
+    display: none;
+  }
+
+  .vc-web-verb {
+    font-size: 1.55rem;
+  }
+
   .vc-toolbar .filter-tabs {
     display: flex;
     flex-wrap: wrap;
@@ -533,6 +664,10 @@
 }
 
 @media (max-width: 620px) {
+  .vc-web-branches {
+    grid-template-columns: 1fr;
+  }
+
   .vc-map-grid,
   .vc-topic-grid {
     grid-template-columns: 1fr;
@@ -706,6 +841,53 @@
 
   .vc-collocation-row[hidden] {
     display: table-row !important;
+  }
+
+  .vc-phrasal-web {
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .vc-web-hub {
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .vc-web-verb {
+    font-size: 12pt;
+  }
+
+  .vc-web-plus,
+  .vc-web-hub strong {
+    font-size: 4.6pt;
+  }
+
+  .vc-web-branches {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3px;
+  }
+
+  .vc-web-branch {
+    padding: 4px 5px;
+    border-radius: 0 5px 5px 0;
+  }
+
+  .vc-web-branch code {
+    font-size: 5.4pt;
+  }
+
+  .vc-web-branch span {
+    font-size: 5pt;
+  }
+
+  .vc-web-branch em {
+    font-size: 4.3pt;
+  }
+
+  .vc-web-note {
+    padding: 4px 6px;
+    margin-top: 5px;
+    font-size: 5.2pt;
   }
 }
 

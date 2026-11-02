@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
 import CommunicationCard from '../components/CommunicationCard.astro';
+import FigurePanel from '../components/FigurePanel.astro';
 import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StepCard from '../components/StepCard.astro';
@@ -85,6 +86,55 @@ import '../styles/signs.css';
           <span class="map-link">Xem bảng biển báo →</span>
         </a>
       </div>
+
+      <FigurePanel
+        tone="wash"
+        kicker="Hình dạng"
+        title="Nhìn dạng biển, đoán nhóm."
+        caption="Đề thường chỉ in chữ, nhưng hình dạng giúp nhớ nhóm: vòng tròn gạch chéo là cấm, tam giác là cảnh báo, biển xanh là hướng dẫn hoặc thông tin."
+      >
+        <div class="sg-shape-gallery">
+          <article class="sg-shape-card">
+            <div class="sg-shape sg-shape-ban" aria-hidden="true"><span>P</span></div>
+            <div class="sg-shape-copy">
+              <p class="sg-shape-kicker">01 · Cấm</p>
+              <h3>Không được làm</h3>
+              <p>Vòng tròn đỏ, gạch chéo. Từ khoá: <code>No</code>, <code>Do not</code>, <code>Keep out</code>.</p>
+              <div class="sg-shape-chips"><span>NO PARKING</span><span>NO SMOKING</span><span>KEEP OUT</span></div>
+            </div>
+          </article>
+
+          <article class="sg-shape-card">
+            <div class="sg-shape sg-shape-warning" aria-hidden="true"><span>!</span></div>
+            <div class="sg-shape-copy">
+              <p class="sg-shape-kicker">02 · Cảnh báo</p>
+              <h3>Cẩn thận, có rủi ro</h3>
+              <p>Tam giác vàng, viền đậm. Từ khoá: <code>Wet</code>, <code>Mind</code>, <code>Beware</code>.</p>
+              <div class="sg-shape-chips"><span>WET FLOOR</span><span>MIND THE GAP</span><span>BEWARE OF DOG</span></div>
+            </div>
+          </article>
+
+          <article class="sg-shape-card">
+            <div class="sg-shape sg-shape-rule" aria-hidden="true"><span>←</span></div>
+            <div class="sg-shape-copy">
+              <p class="sg-shape-kicker">03 · Hướng dẫn</p>
+              <h3>Được làm gì, đi lối nào</h3>
+              <p>Biển xanh, mũi tên hoặc lệnh ngắn. Từ khoá: <code>Push</code>, <code>Keep left</code>, <code>Queue</code>.</p>
+              <div class="sg-shape-chips"><span>PUSH</span><span>KEEP LEFT</span><span>QUEUE HERE</span></div>
+            </div>
+          </article>
+
+          <article class="sg-shape-card">
+            <div class="sg-shape sg-shape-info" aria-hidden="true"><span>i</span></div>
+            <div class="sg-shape-copy">
+              <p class="sg-shape-kicker">04 · Thông tin</p>
+              <h3>Giờ, giá, điều kiện</h3>
+              <p>Bảng chữ, thường có số hoặc điều kiện. Từ khoá: <code>Free</code>, <code>Off</code>, <code>Required</code>.</p>
+              <div class="sg-shape-chips"><span>FREE ENTRY</span><span>50% OFF</span><span>BOOKING REQUIRED</span></div>
+            </div>
+          </article>
+        </div>
+      </FigurePanel>
 
       <p class="mini-note"><strong>Đừng đoán theo hình:</strong> đề thi thường chỉ in chữ. Hãy đọc đúng từ khoá và loại biển, vì đáp án sai hay đảo nghĩa hoặc thêm thông tin không có trên biển.</p>
     </div>

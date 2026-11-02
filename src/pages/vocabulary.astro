@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
 import EmptyState from '../components/EmptyState.astro';
+import FigurePanel from '../components/FigurePanel.astro';
 import FilterToolbar from '../components/FilterToolbar.astro';
 import QuizPanel from '../components/QuizPanel.astro';
 import SectionHead from '../components/SectionHead.astro';
@@ -95,6 +96,55 @@ import '../styles/vocabulary.css';
         Chia thành sáu nhóm: động từ + danh từ, tính từ + danh từ, động từ + giới từ, danh từ + giới từ, cụm cố định và cụm động từ.
         <p slot="aside" class="section-aside"><span>32</span> cụm<br><span>6</span> nhóm</p>
       </SectionHead>
+
+      <FigurePanel
+        kicker="Cụm động từ"
+        title="Một động từ, sáu nghĩa."
+        caption="Tiểu từ sau “look” đổi nghĩa hoàn toàn. Học cả cụm, đừng dịch riêng động từ và giới từ."
+      >
+        <div class="vc-phrasal-web">
+          <div class="vc-web-hub">
+            <span class="vc-web-verb">look</span>
+            <span class="vc-web-plus">+ particle</span>
+            <strong>→ nghĩa mới</strong>
+          </div>
+
+          <div class="vc-web-branches">
+            <div class="vc-web-branch">
+              <code>look after</code>
+              <span>chăm sóc</span>
+              <em>look after a child</em>
+            </div>
+            <div class="vc-web-branch">
+              <code>look for</code>
+              <span>tìm kiếm</span>
+              <em>look for a job</em>
+            </div>
+            <div class="vc-web-branch">
+              <code>look forward to</code>
+              <span>mong chờ (+ V-ing)</span>
+              <em>look forward to seeing you</em>
+            </div>
+            <div class="vc-web-branch">
+              <code>look up</code>
+              <span>tra cứu</span>
+              <em>look up a word</em>
+            </div>
+            <div class="vc-web-branch">
+              <code>look into</code>
+              <span>điều tra, xem xét</span>
+              <em>look into the problem</em>
+            </div>
+            <div class="vc-web-branch">
+              <code>look out</code>
+              <span>coi chừng</span>
+              <em>look out! there’s a car</em>
+            </div>
+          </div>
+        </div>
+
+        <p class="vc-web-note"><strong>Bẫy:</strong> “look forward <em>to</em>” có “to” là giới từ, nên sau nó là V-ing, không phải to-V.</p>
+      </FigurePanel>
 
       <FilterToolbar
         class="vc-toolbar"
