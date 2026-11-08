@@ -721,3 +721,228 @@
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ---------- Home mode switch ---------- */
+
+.home-switch {
+  padding: 18px 0;
+  border-block: 1px solid var(--line);
+  background: var(--surface-2);
+}
+
+.home-progress {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed var(--line);
+}
+
+.home-progress-label {
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-2xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+}
+
+.home-progress-copy {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--font-size-sm);
+}
+
+.home-progress-copy strong {
+  color: var(--ink);
+  font-size: var(--font-size-base);
+}
+
+.home-progress-dot {
+  margin: 0 5px;
+}
+
+.home-progress-next {
+  margin-left: auto;
+  color: var(--clay);
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+}
+
+.home-mode-tabs {
+  display: flex;
+  gap: 6px;
+  padding-top: 12px;
+}
+
+.home-mode-tab {
+  padding: 9px 14px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  color: var(--muted);
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.home-mode-tab[aria-selected="true"] {
+  border-color: var(--border-strong);
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: var(--shadow-xs);
+}
+
+.home-mode-tab:focus-visible {
+  outline-offset: 2px;
+}
+
+.home-tools {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.home-tools .search-wrap {
+  flex: 1;
+  max-width: 430px;
+}
+
+.hub-progress {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+}
+
+/* ---------- 12-day path ---------- */
+
+.path-grid--days {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.path-day {
+  text-decoration: none;
+}
+
+.path-day-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.path-status {
+  flex-shrink: 0;
+  padding: 3px 7px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-2xs);
+  white-space: nowrap;
+}
+
+.path-status.is-done {
+  border-color: var(--success);
+  color: var(--success);
+  background: var(--success-bg);
+}
+
+.path-day-meta {
+  margin-top: auto;
+  color: var(--clay);
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+}
+
+/* ---------- 12 rules ---------- */
+
+.rule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.rule-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 10px;
+  padding: 15px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.rule-card:hover,
+.rule-card:focus-visible {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.rule-no {
+  grid-row: span 2;
+  color: var(--clay);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-2xs);
+  font-weight: 700;
+}
+
+.rule-card strong {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  line-height: 1.15;
+}
+
+.rule-card > span:last-child {
+  color: var(--muted);
+  font-size: var(--font-size-md);
+  line-height: 1.45;
+}
+
+@media (max-width: 1100px) {
+  .path-grid--days {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .rule-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 780px) {
+  .home-tools {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .home-tools .search-wrap {
+    max-width: none;
+  }
+
+  .path-grid--days,
+  .rule-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-progress-next {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media print {
+  .home-switch {
+    display: none !important;
+  }
+
+  .home-mode-panel[hidden] {
+    display: block !important;
+  }
+}

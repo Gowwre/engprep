@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import EmptyState from '../components/EmptyState.astro';
 import SectionHead from '../components/SectionHead.astro';
 import { getSheet, sheets, totalQuestions } from '../data/sheets';
 import '../styles/home.css';
@@ -17,6 +18,42 @@ const signs = getSheet('signs');
 const grammar = getSheet('grammar');
 const sentenceConstruction = getSheet('sentence-construction');
 const mockExam = getSheet('mock-exam');
+
+const pathNotes: Record<string, string> = {
+  tenses: 'Sơ đồ 4×3, sáu thì trọng tâm và 12 câu luyện tập.',
+  prepositions: 'at/on/in, 54 cụm cố định và 16 câu luyện tập.',
+  'word-forms': 'Vị trí từ loại, hậu tố và 40 họ từ.',
+  reading: 'Bảy dạng câu, bốn bước đọc và đoạn mẫu.',
+  pronunciation: 'Đuôi -ed, -s/-es và trọng âm 2–3 âm tiết.',
+  'sentence-transformation': 'Tám nhóm công thức viết lại câu.',
+  vocabulary: 'Sáu nhóm cụm, cụm động từ và mục từ điển.',
+  cloze: 'Năm loại chỗ trống và bốn bước điền khuyết.',
+  signs: 'Bốn nhóm biển báo và tám chức năng giao tiếp.',
+  grammar: 'Bốn nhóm ngữ pháp lõi và bốn điểm phụ.',
+  'sentence-construction': 'Trật tự từ, bốn bước ghép câu và mục từ điển.',
+  'mock-exam': 'Đề 24 câu, 45 phút, chấm điểm theo phần.'
+};
+
+const pathDays = sheets.map((sheet, index) => ({
+  ...sheet,
+  day: String(index + 1).padStart(2, '0'),
+  note: pathNotes[sheet.slug]
+}));
+
+const rules = [
+  { label: 'Thì', text: 'since + mốc, for + khoảng.', href: tenses.href },
+  { label: 'Giới từ', text: 'at + giờ, on + ngày, in + tháng/năm.', href: prepositions.href },
+  { label: 'Từ loại', text: 'Sau tính từ thường là danh từ.', href: wordForms.href },
+  { label: 'Đọc hiểu', text: 'Đáp án phải có bằng chứng trong bài.', href: reading.href },
+  { label: 'Phát âm', text: 'Xét âm cuối, không xét chữ cuối.', href: pronunciation.href },
+  { label: 'Viết lại', text: 'Đổi cấu trúc, giữ nguyên nghĩa.', href: sentenceTransformation.href },
+  { label: 'Từ vựng', text: 'Học cả cụm, không học từ đơn.', href: vocabulary.href },
+  { label: 'Điền khuyết', text: 'Đọc cả câu, kiểm tra ngữ pháp và nghĩa.', href: cloze.href },
+  { label: 'Biển báo', text: 'Bám từ khoá No, Only, Free, Required.', href: signs.href },
+  { label: 'Ngữ pháp', text: 'Nhìn từ đứng trước và cấu trúc cần điền.', href: grammar.href },
+  { label: 'Phần VI', text: 'Tìm S + V, giữ cụm cố định.', href: sentenceConstruction.href },
+  { label: 'Thi thử', text: 'Canh 45 phút, không bỏ trống.', href: mockExam.href }
+];
 ---
 
 <BaseLayout
@@ -30,7 +67,12 @@ const mockExam = getSheet('mock-exam');
       <div class="hero-copy">
         <p class="eyebrow">Global Success 9 · Ôn thi vào 10</p>
         <h1>Mười hai tờ,<br>một chỗ <span class="marker">ôn thi</span>.</h1>
-        <p class="hero-lead">12 thì, giới từ, từ loại, đọc hiểu, phát âm – trọng âm, viết lại câu, từ vựng – cụm từ, điền khuyết, biển báo – giao tiếp, ngữ pháp cốt lõi, sắp xếp câu – phần VI và đề thi thử 24 câu, gói gọn trong mười hai tờ ôn thi in được khổ A4. Công thức, dấu hiệu, bẫy đề và bài luyện tập có giải thích — tất cả ở cùng một nơi.</p>
+        <p class="hero-lead">12 tờ ôn thi in được khổ A4: công thức, dấu hiệu, bẫy đề và bài luyện tập có giải thích. Chọn một tờ để bắt đầu, hoặc đi theo lộ trình 12 ngày.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#resources" data-home-jump="sheets">Chọn tờ để ôn</a>
+          <a class="btn btn-ghost" href="#plan" data-home-jump="path">Xem lộ trình</a>
+        </div>
 
         <dl class="hero-stats">
           <div><dt>12</dt><dd>thì cần nắm</dd></div>
@@ -196,13 +238,54 @@ const mockExam = getSheet('mock-exam');
     </div>
   </section>
 
+  <!-- MODE SWITCH -->
+  <div class="home-switch">
+    <div class="container">
+      <div class="home-progress" id="home-progress" aria-live="polite">
+        <p class="home-progress-label">Tiến độ của bạn</p>
+        <p class="home-progress-copy">
+          <strong data-progress-done>0</strong>/12 tờ đã luyện
+          <span class="home-progress-dot" aria-hidden="true"> · </span>
+          <span data-progress-mock>Thi thử: chưa làm</span>
+        </p>
+        <a class="home-progress-next" id="home-continue" href="#resources" hidden>Tiếp tục →</a>
+      </div>
+
+      <div class="home-mode-tabs" role="tablist" aria-label="Cách ôn">
+        <button class="home-mode-tab" type="button" role="tab" id="tab-sheets" aria-selected="true" aria-controls="resources-panel" data-home-tab="sheets">Ôn theo tờ</button>
+        <button class="home-mode-tab" type="button" role="tab" id="tab-path" aria-selected="false" aria-controls="plan-panel" tabindex="-1" data-home-tab="path">Ôn theo lộ trình</button>
+      </div>
+    </div>
+  </div>
+
   <!-- RESOURCES -->
+  <div class="home-mode-panel" id="resources-panel" data-home-panel="sheets">
   <section class="section" id="resources">
     <div class="container">
       <SectionHead title="Mười hai tờ, đủ để ôn.">
-        Mỗi tờ có sơ đồ, bảng tra nhanh, bẫy đề và bài kiểm tra riêng. Bắt đầu từ tờ bạn cần, hoặc đi theo lộ trình bên dưới.
+        Mỗi tờ có sơ đồ, bảng tra nhanh, bẫy đề và bài kiểm tra riêng. Tìm tờ bạn cần, hoặc chuyển sang lộ trình 12 ngày.
         <p slot="aside" class="section-aside"><span>{sheets.length}</span> tờ<br><span>{totalQuestions}</span> câu hỏi</p>
       </SectionHead>
+
+      <div class="home-tools">
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" />
+            <path d="M20 20l-3.5-3.5" />
+          </svg>
+          <label class="sr-only" for="home-search">Tìm tờ hoặc kỹ năng</label>
+          <input id="home-search" type="search" placeholder="Tìm “thì”, “đọc hiểu”, “biển báo”…" autocomplete="off" />
+          <button class="search-clear" id="home-clear" type="button" aria-label="Xoá tìm kiếm" hidden>&times;</button>
+        </div>
+        <span class="result-count" id="home-count" aria-live="polite">12/12 tờ</span>
+      </div>
+
+      <EmptyState
+        id="home-empty"
+        title="Không tìm thấy tờ phù hợp"
+        text="Thử từ khoá khác hoặc xoá bộ lọc."
+        resetId="home-reset"
+      />
 
       <div class="hub-grid">
         {sheets.map((sheet) => (
@@ -226,7 +309,8 @@ const mockExam = getSheet('mock-exam');
             </ul>
             <div class="hub-card-foot">
               <span class="hub-meta">{sheet.meta}</span>
-              <a class="btn btn-primary btn-small" href={sheet.href}>
+              <span class="hub-progress" data-progress-sheet={sheet.slug}>Chưa luyện</span>
+              <a class="btn btn-ghost btn-small" href={sheet.href}>
                 Xem
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>
@@ -236,74 +320,50 @@ const mockExam = getSheet('mock-exam');
       </div>
     </div>
   </section>
+  </div>
 
   <!-- PATH -->
+  <div class="home-mode-panel" id="plan-panel" data-home-panel="path" hidden>
   <section class="section section-alt" id="plan">
     <div class="container">
-      <SectionHead title="Năm bước trước khi làm đề.">
-        Không cần học hết trong một buổi. Đi theo thứ tự này để nhớ lâu hơn.
-        <p slot="aside" class="section-aside"><span>5</span> bước<br>mỗi ngày 10 phút</p>
+      <SectionHead title="Lộ trình 12 ngày.">
+        Mỗi ngày một tờ: 10 phút Ôn nhanh, sau đó 10–20 phút luyện tập. Đi đều quan trọng hơn học dồn.
+        <p slot="aside" class="section-aside"><span>12</span> ngày<br><span>20–30</span> phút / ngày</p>
       </SectionHead>
 
-      <div class="path-grid">
-        <article class="path-card">
-          <span class="path-no" aria-hidden="true">01</span>
-          <h3>Nắm 12 thì</h3>
-          <p>Đọc sơ đồ, sau đó học công thức và dấu hiệu của từng thì. Ưu tiên hiện tại hoàn thành, quá khứ tiếp diễn và tương lai đơn.</p>
-          <a class="path-link" href={tenses.href}>Xem 12 thì →</a>
-        </article>
+      <div class="path-grid path-grid--days">
+        {pathDays.map((day) => (
+          <a class="path-card path-day" href={day.href} data-path-sheet={day.slug}>
+            <span class="path-no" aria-hidden="true">{day.day}</span>
+            <div class="path-day-head">
+              <h3>{day.title}</h3>
+              <span class="path-status" data-path-status={day.slug}>Chưa luyện</span>
+            </div>
+            <p>{day.note}</p>
+            <span class="path-day-meta">Ngày {Number(day.day)} · 20–30 phút <span aria-hidden="true">→</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  </div>
 
-        <article class="path-card">
-          <span class="path-no" aria-hidden="true">02</span>
-          <h3>Học giới từ theo cụm</h3>
-          <p>Nắm at/on/in trước, rồi học 54 cụm cố định. Đừng cố dịch từng giới từ riêng lẻ.</p>
-          <a class="path-link" href={prepositions.href}>Xem giới từ →</a>
-        </article>
+  <!-- RULES -->
+  <section class="section section-alt" id="rules">
+    <div class="container">
+      <SectionHead title="Mười hai quy tắc nhớ nhanh.">
+        Mỗi thẻ là một câu nhắc; bấm để mở tờ tương ứng.
+        <p slot="aside" class="section-aside"><span>12</span> quy tắc<br><span>1</span> màn hình</p>
+      </SectionHead>
 
-        <article class="path-card">
-          <span class="path-no" aria-hidden="true">03</span>
-          <h3>Luyện từ vựng, ngữ pháp &amp; kỹ năng</h3>
-          <p>Học từ loại, từ vựng – cụm từ, ngữ pháp cốt lõi, điền khuyết, đọc hiểu, phát âm – trọng âm và biển báo – giao tiếp.</p>
-          <div class="path-links">
-            <a href={wordForms.href}>Từ loại</a>
-            <a href={vocabulary.href}>Từ vựng</a>
-            <a href={grammar.href}>Ngữ pháp</a>
-            <a href={cloze.href}>Điền khuyết</a>
-            <a href={reading.href}>Đọc hiểu</a>
-            <a href={pronunciation.href}>Phát âm</a>
-            <a href={signs.href}>Biển báo</a>
-          </div>
-        </article>
-
-        <article class="path-card">
-          <span class="path-no" aria-hidden="true">04</span>
-          <h3>Viết lại câu &amp; phần VI</h3>
-          <p>Học tám nhóm mẫu viết lại câu, trật tự từ và cách dùng mục từ điển ở phần VI.</p>
-          <div class="path-links">
-            <a href={sentenceTransformation.href}>Viết lại câu</a>
-            <a href={sentenceConstruction.href}>Sắp xếp câu</a>
-          </div>
-        </article>
-
-        <article class="path-card">
-          <span class="path-no" aria-hidden="true">05</span>
-          <h3>Tự kiểm tra &amp; thi thử</h3>
-          <p>Làm bài ngắn để biết phần nào còn hổng, rồi làm đề 24 câu để kiểm tra tổng thể.</p>
-          <div class="path-links">
-            <a href={`${tenses.href}#quiz`}>12 câu thì</a>
-            <a href={`${prepositions.href}#quiz`}>16 câu giới từ</a>
-            <a href={`${wordForms.href}#quiz`}>16 câu từ loại</a>
-            <a href={`${reading.href}#quiz`}>12 câu đọc hiểu</a>
-            <a href={`${pronunciation.href}#quiz`}>16 câu phát âm</a>
-            <a href={`${sentenceTransformation.href}#quiz`}>16 câu viết lại</a>
-            <a href={`${vocabulary.href}#quiz`}>16 câu từ vựng</a>
-            <a href={`${cloze.href}#quiz`}>12 câu điền khuyết</a>
-            <a href={`${signs.href}#quiz`}>16 câu biển báo</a>
-            <a href={`${grammar.href}#quiz`}>18 câu ngữ pháp</a>
-            <a href={`${sentenceConstruction.href}#quiz`}>16 câu sắp xếp</a>
-            <a href={mockExam.href}>Thi thử 24 câu</a>
-          </div>
-        </article>
+      <div class="rule-grid">
+        {rules.map((rule, index) => (
+          <a class="rule-card" href={rule.href}>
+            <span class="rule-no" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+            <strong>{rule.label}</strong>
+            <span>{rule.text}</span>
+          </a>
+        ))}
       </div>
     </div>
   </section>
@@ -313,18 +373,19 @@ const mockExam = getSheet('mock-exam');
     <div class="container">
       <div class="home-band">
         <div>
-          <h2>Mười hai quy tắc nhớ nhanh.</h2>
-          <p><strong>Thì:</strong> since + mốc, for + khoảng · <strong>Giới từ:</strong> at + giờ, on + ngày, in + tháng/năm · <strong>Từ loại:</strong> sau tính từ thường là danh từ, sau động từ thường là trạng từ · <strong>Đọc hiểu:</strong> đáp án phải có bằng chứng trong bài · <strong>Phát âm:</strong> xét âm cuối, không xét chữ cuối · <strong>Viết lại:</strong> đổi cấu trúc, giữ nguyên nghĩa · <strong>Từ vựng:</strong> học cả cụm, không học từ đơn · <strong>Điền khuyết:</strong> đọc cả câu, kiểm tra ngữ pháp và nghĩa · <strong>Biển báo:</strong> bám từ khoá No, Only, Free, Required · <strong>Ngữ pháp:</strong> nhìn từ đứng trước và cấu trúc cần điền · <strong>Phần VI:</strong> tìm S + V, giữ cụm cố định · <strong>Thi thử:</strong> canh 45 phút, không bỏ trống.</p>
+          <h2>Sẵn sàng làm đề chưa?</h2>
+          <p>Làm đề 24 câu để biết phần nào còn hổng, rồi quay lại đúng tờ cần ôn.</p>
         </div>
         <div class="home-band-actions">
           <a class="btn btn-primary" href={mockExam.href}>Thi thử 24 câu</a>
           <a class="btn btn-ghost" href={tenses.href}>Ôn 12 thì</a>
           <a class="btn btn-ghost" href={grammar.href}>Luyện ngữ pháp</a>
-          <a class="btn btn-ghost" href={sentenceConstruction.href}>Luyện phần VI</a>
-          <a class="btn btn-ghost" href={sentenceTransformation.href}>Luyện viết lại câu</a>
-          <a class="btn btn-ghost" href={reading.href}>Luyện đọc hiểu</a>
         </div>
       </div>
     </div>
   </section>
+
+  <script>
+    import '../scripts/home.js';
+  </script>
 </BaseLayout>
