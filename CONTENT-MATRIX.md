@@ -51,23 +51,23 @@ Rewrite the 5 map cards to the matching sub-anchor.
 
 ## Consistency checklist
 
-- [ ] Signs map 4 groups == table tags (Giới hạn becomes a sub-label).
-- [ ] Prepositions copy: 8 hướng chính · 12 giới từ trong bảng.
-- [ ] Tenses hero CTA -> `#quick-review`, like every other sheet.
-- [ ] Process strip removed where it duplicates step cards.
-- [ ] Every map card has a unique destination or is not a link.
-- [ ] Every table wider than 700 px has `hint`.
-- [ ] Every quiz `reviewLinks` points to the new anchors.
-- [ ] Every section aside count matches the content.
-- [ ] Every sheet has the same QuickReview CTA row.
-- [ ] No “cheat sheet” in interface or print copy.
+- [x] Signs map 4 groups == table tags (Giới hạn becomes a sub-label).
+- [x] Prepositions copy: 8 hướng chính · 12 giới từ trong bảng.
+- [x] Tenses hero CTA -> `#quick-review`, like every other sheet.
+- [x] Process strip removed where it duplicates step cards.
+- [x] Every map card has a unique destination or is not a link.
+- [x] Every table wider than 700 px has `hint`.
+- [x] Every quiz `reviewLinks` points to the new anchors.
+- [x] Every section aside count matches the content.
+- [x] Every sheet has the same QuickReview CTA row.
+- [x] No “cheat sheet” in interface or print copy.
 
 ## Print checklist
 
-- [ ] 12 print routes.
-- [ ] 2 pages maximum.
-- [ ] Body ≥ 8.5 pt; captions ≥ 7.5 pt.
-- [ ] No orphan headings.
-- [ ] No page > 20% blank.
-- [ ] Current programme label.
-- [ ] Root PDFs replaced.
+- [x] 12 print routes.
+- [x] 2 pages maximum.
+- [x] Body ≥ 8.5 pt; captions ≥ 7.5 pt.
+- [x] No orphan headings.
+- [x] No page > 20% blank.
+- [x] Current programme label.
+- [x] Root PDFs replaced.

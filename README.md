@@ -118,6 +118,7 @@ src/
 │   └── sheets.ts          # registry của tất cả tờ ôn thi
 ├── layouts/
 │   ├── BaseLayout.astro   # head, theme, header/footer, shared JS
+│   ├── PrintLayout.astro  # layout tối giản cho bản in
 │   └── SheetLayout.astro  # hero + page nav cho một tờ
 ├── lib/
 │   ├── accents.ts         # mapping accent cho header, home, OG
@@ -135,6 +136,7 @@ src/
 │   │   ├── progress.js    # điểm và tiến độ local
 │   │   └── quiz.js        # engine trắc nghiệm dùng chung
 │   ├── generate-og.mjs    # render PNG vào public/og/
+│   ├── generate-pdf.mjs   # render PDF vào public/pdf/
 │   ├── home.js            # tab trang chủ, tìm tờ, tiến độ
 │   ├── site.js            # theme, menu, print, scrollspy
 │   └── <slug>.js          # câu hỏi + cấu hình riêng của từng tờ
@@ -144,7 +146,9 @@ src/
     ├── base.css           # reset, document, a11y, container
     ├── ui.css             # primitive dùng chung
     ├── figures.css        # khung figure, caption và legend dùng chung
-    ├── global.css         # entry point: fonts + tokens + base + ui + styles + figures
+    ├── quick-review.css   # lớp Ôn nhanh
+    ├── print.css          # bản in A4 và preview
+    ├── global.css         # entry point: fonts + tokens + base + ui + styles + quick-review + figures
     ├── styles.css         # layout, header/footer, hero, quiz shell, 12 thì
     ├── og.css             # style cho ảnh Open Graph
     ├── design-system.css  # layout riêng của trang style guide

@@ -1,6 +1,6 @@
 # EngPrep implementation plan
 
-Status: in progress. Rounds are sequential; each round ends with manual verification and a commit.
+Status: complete. Rounds 0–8 are implemented, manually checked and committed one by one.
 
 ## Goal
 
@@ -168,3 +168,17 @@ Two reference sheets first, then two batches of skill sheets. Each batch:
 3. Light and dark themes checked on changed surfaces.
 4. Commit at the end of the round.
 5. No round starts before the previous round’s commit.
+
+## Completed rounds
+
+| Round | Commit |
+|---|---|
+| 0 | `c2f7b0a` |
+| 1 | `14d1350` |
+| 2 | `7d6deb3` |
+| 3 | `418c47e` |
+| 4 | `779c67a` |
+| 5 | `8361ac2` |
+| 6 | `e39f95b` |
+| 7 | `5946483` |
+| 8 | this commit |

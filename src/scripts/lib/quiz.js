@@ -4,7 +4,7 @@
    copy and optional prompt/review markup.
    ========================================================= */
 
-import { migrateSheetBest, recordSheetResult } from './progress.js';
+import { getSheetProgress, migrateSheetBest, recordSheetResult } from './progress.js';
 
 const LETTERS = ['A', 'B', 'C', 'D'];
 const BEST_PREFIX = 'Điểm cao nhất của bạn: ';
@@ -213,7 +213,7 @@ export function initQuiz({
   }
 
   function updateBestLabel() {
-    const best = getBest();
+    const best = Math.max(getBest(), getSheetProgress(slug)?.best ?? 0);
     quizBest.textContent =
       best > 0 ? `${BEST_PREFIX}${best}/${total}` : `${BEST_PREFIX}chưa có`;
   }
@@ -359,7 +359,7 @@ export function initQuiz({
     const wrong = answers.filter((answer) => !answer.isCorrect).map((answer) => answer.questionIndex);
     clearState();
     recordSheetResult(slug, score, total, wrong);
-    const best = getBest();
+    const best = Math.max(getBest(), getSheetProgress(slug)?.best ?? 0);
     if (score > best) writeBest(storageKey, score);
     updateBestLabel();
 

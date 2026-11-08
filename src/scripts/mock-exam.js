@@ -395,6 +395,7 @@ import { recordMockResult } from './lib/progress.js';
       const state = JSON.parse(raw);
       if (!state || !Array.isArray(state.answers) || state.answers.length !== total) return null;
       if (state.submitted) return null;
+      if (!state.answers.some(function (answer) { return answer !== null; })) return null;
       return state;
     } catch (error) {
       return null;

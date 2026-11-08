@@ -17,6 +17,12 @@ const tabId = (id: string) => `qr-${slug}-${id}-tab`;
 ---
 
 <section class="section quick-review no-print" id="quick-review" data-accent={accent} data-quick-review>
+  <noscript>
+    <style>
+      .qr-tabs { display: none !important; }
+      .qr-panel { display: block !important; }
+    </style>
+  </noscript>
   <div class="container">
     <SectionHead kicker={content.kicker ?? 'Ôn nhanh'} title={content.title}>
       {content.lead ?? 'Ba khối nội dung cần nhớ trước khi làm bài. Chuyển tab để xem nhanh.'}
