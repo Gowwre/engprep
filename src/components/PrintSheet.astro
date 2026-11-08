@@ -14,6 +14,7 @@ const fullUrl = `gowwre.github.io${sitePath(sheet.slug + '/')}`;
 
 <div class="print-toolbar no-print">
   <a class="btn btn-ghost btn-small" href={sheet.href}>← Về tờ</a>
+  <a class="btn btn-ghost btn-small" href={sitePath(`pdf/${sheet.slug}.pdf`)} download>Tải PDF</a>
   <button class="btn btn-primary btn-small" type="button" data-print>In trang này</button>
 </div>
 

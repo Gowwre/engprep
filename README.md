@@ -21,6 +21,36 @@ npm run build
 npm run preview
 ```
 
+## Kiểm tra nhanh
+
+```bash
+npm run check
+npm run build
+npm run qa:links
+```
+
+`qa:links` kiểm tra anchor nội bộ bị thiếu và id trùng trong toàn bộ trang đã build.
+
+## Bản in / PDF
+
+Mỗi tờ có một bản in một trang tại `/print/<slug>/`. Bản in dùng dữ liệu `Ôn nhanh`, không in toàn bộ trang web.
+
+```bash
+npm run pdf
+```
+
+Lệnh này build site, render 12 bản in bằng Chrome headless và ghi PDF vào `public/pdf/`. Cần Chrome/Chromium; đặt `CHROME_BIN` nếu Chrome không nằm trong `PATH`.
+
+## Tiến độ học
+
+Quiz và đề thi thử lưu tiến độ cục bộ trong `localStorage`:
+
+- `engprep-progress-v1`: điểm tốt nhất, số lần làm, câu sai.
+- `engprep-<slug>-best-state`: bài đang làm dở của từng quiz.
+- `engprep-mock-state-v1`: bài thi thử đang làm dở.
+
+Không có tài khoản và không gửi dữ liệu lên server.
+
 ## Open Graph
 
 Mỗi trang có metadata Open Graph/Twitter đầy đủ, canonical URL và JSON-LD. Ảnh chia sẻ 1200×630 cho trang chủ và từng tờ nằm trong `public/og/`.
@@ -71,6 +101,8 @@ src/
 │   ├── MovementScene.astro # hình minh hoạ giới từ chuyển động
 │   ├── PageNav.astro
 │   ├── QuizPanel.astro    # khung quiz dùng chung cho mọi tờ
+│   ├── QuickReview.astro  # lớp Ôn nhanh 3 tab
+│   ├── PrintSheet.astro   # bản in một trang
 │   ├── SectionHead.astro  # kicker + tiêu đề + lead + aside
 │   ├── SignalCard.astro   # dấu hiệu nhận biết → thì
 │   ├── SiteFooter.astro
@@ -82,6 +114,7 @@ src/
 │   ├── TrapCard.astro     # câu sai / câu đúng / lý do
 │   └── WordFamilyCard.astro # thẻ họ từ
 ├── data/
+│   ├── quick-review.ts    # nội dung Ôn nhanh cho 12 tờ
 │   └── sheets.ts          # registry của tất cả tờ ôn thi
 ├── layouts/
 │   ├── BaseLayout.astro   # head, theme, header/footer, shared JS
@@ -90,6 +123,8 @@ src/
 │   ├── accents.ts         # mapping accent cho header, home, OG
 │   └── urls.ts            # helper link có hỗ trợ base
 ├── pages/
+│   ├── print/
+│   │   └── [slug].astro   # bản in một trang
 │   ├── og/
 │   │   └── [slug].astro   # render ảnh Open Graph 1200×630
 │   ├── design-system.astro # style guide sống (noindex)
@@ -97,8 +132,10 @@ src/
 ├── scripts/
 │   ├── lib/
 │   │   ├── filter.js      # filter + search dùng chung
+│   │   ├── progress.js    # điểm và tiến độ local
 │   │   └── quiz.js        # engine trắc nghiệm dùng chung
 │   ├── generate-og.mjs    # render PNG vào public/og/
+│   ├── home.js            # tab trang chủ, tìm tờ, tiến độ
 │   ├── site.js            # theme, menu, print, scrollspy
 │   └── <slug>.js          # câu hỏi + cấu hình riêng của từng tờ
 └── styles/

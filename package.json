@@ -12,6 +12,7 @@
     "preview": "astro preview",
     "check": "astro check",
     "qa:links": "node scripts/qa-links.mjs",
+    "pdf": "npm run build && node scripts/generate-pdf.mjs",
     "og": "npm run build && node scripts/generate-og.mjs"
   },
   "dependencies": {

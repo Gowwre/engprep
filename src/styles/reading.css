@@ -475,21 +475,38 @@
 .rc-evidence-main {
   background: var(--gold-bg);
   box-shadow: inset 0 -2px 0 var(--gold);
+  text-decoration: underline solid var(--gold) 2px;
+  text-underline-offset: 3px;
 }
 
 .rc-evidence-detail {
   background: var(--jade-bg);
   box-shadow: inset 0 -2px 0 var(--jade);
+  text-decoration: underline double var(--jade) 2px;
+  text-underline-offset: 3px;
 }
 
 .rc-evidence-ref {
   background: var(--indigo-bg);
   box-shadow: inset 0 -2px 0 var(--indigo);
+  text-decoration: underline dotted var(--indigo) 2px;
+  text-underline-offset: 3px;
 }
 
 .rc-evidence-infer {
   background: var(--clay-bg);
   box-shadow: inset 0 -2px 0 var(--clay);
+  text-decoration: underline dashed var(--clay) 2px;
+  text-underline-offset: 3px;
+}
+
+.rc-evidence-no {
+  display: inline-block;
+  margin-left: 2px;
+  font-family: var(--font-mono);
+  font-size: 0.68em;
+  font-weight: 800;
+  vertical-align: super;
 }
 
 .rc-legend {
@@ -521,6 +538,12 @@
 .rc-dot-detail { background: var(--jade); }
 .rc-dot-ref { background: var(--indigo); }
 .rc-dot-infer { background: var(--clay); }
+
+.rc-legend-no {
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
 
 .rc-qa-grid {
   display: grid;

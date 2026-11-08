@@ -252,3 +252,46 @@ Kiểm tra thêm:
 - Một trang có map card và một trang có bảng.
 - In A4 (Ctrl/Cmd + P): không bóng, nền trắng, bảng không tràn.
 - Keyboard: skip link, focus ring, nút, filter, quiz.
+
+## 10. Lớp Ôn nhanh (QuickReview)
+
+Mỗi tờ có một `QuickReview` ngay sau hero:
+
+- Desktop ≥ 701px: 3 cột, tất cả tab hiện cùng lúc.
+- Mobile ≤ 700px: 3 tab, một panel hiện tại một thời điểm.
+- Nội dung: tối đa 6 mục/tab, mỗi mục ≤ 12 từ.
+- Dữ liệu nằm trong `src/data/quick-review.ts`; trang tờ, bản in và trang chủ dùng chung dữ liệu này.
+- Hero CTA của mọi tờ trỏ tới `#quick-review`.
+
+## 11. Bảng trên mobile
+
+- Dưới 1100px: hiện `.table-hint`, cho phép cuộn ngang, cột đầu sticky.
+- Từ 1100px: bỏ cuộn ngang, `thead` sticky dưới header + page nav.
+- Mọi bảng rộng hơn 700px phải truyền `hint` cho `TableShell`.
+
+## 12. Page nav trên mobile
+
+- ≤ 980px: thanh ngang được thay bằng nút “Mục lục” mở toàn bộ danh sách section.
+- Scrollspy cập nhật cả link ngang và link trong menu.
+- Link đang active được tự cuộn vào giữa thanh ngang trên desktop.
+
+## 13. In và PDF
+
+- Bản in là route riêng `/print/<slug>/`, không phải bản in của trang web dài.
+- Mỗi tờ tối đa 2 trang A4; hiện tại tất cả là 1 trang.
+- Body ≥ 8.5pt; không giảm cỡ chữ để nhồi nội dung — cắt nội dung.
+- `npm run pdf` render toàn bộ bằng Chrome headless vào `public/pdf/`.
+- PDF công khai tại `/pdf/<slug>.pdf`; file gốc cho 12 thì và Giới từ nằm ở thư mục dự án.
+
+## 14. Tiến độ
+
+- `engprep-progress-v1` là nguồn duy nhất cho điểm tốt nhất và số lần làm.
+- Quiz dùng `engprep-<slug>-best-state` để lưu bài đang làm dở.
+- Mock exam dùng `engprep-mock-state-v1`.
+- Trang chủ đọc progress để hiện “Đã luyện”, “Tiếp tục” và tiến độ 12 tờ.
+
+## 15. Accessibility
+
+- Focus ring dùng `--focus-ring`, đạt ≥ 3:1 trên nền giấy ở cả light và dark.
+- Không dùng màu làm tín hiệu duy nhất: reading sample có số thứ tự và kiểu gạch chân (solid/double/dotted/dashed).
+- Nút audio phát âm dùng Web Speech API; ẩn hoàn toàn nếu trình duyệt không hỗ trợ.

@@ -514,7 +514,7 @@ import '../styles/reading.css';
   <section class="section" id="sample">
     <div class="container">
       <SectionHead kicker="05 · Đọc mẫu" title="Một đoạn, bốn câu hỏi.">
-        Đọc đoạn văn, nhìn các chỗ được đánh dấu, rồi xem cách tìm bằng chứng cho từng câu hỏi. Màu đánh dấu tương ứng với dạng câu hỏi.
+        Đọc đoạn văn, nhìn các chỗ được đánh dấu, rồi xem cách tìm bằng chứng cho từng câu hỏi. Số và kiểu gạch chân tương ứng với dạng câu hỏi.
         <p slot="aside" class="section-aside"><span>1</span> đoạn mẫu<br><span>4</span> câu hỏi</p>
       </SectionHead>
 
@@ -527,13 +527,13 @@ import '../styles/reading.css';
           <p class="rc-sample-meta">91 từ · 2 phút</p>
         </div>
 
-        <p class="rc-passage"><mark class="rc-evidence rc-evidence-main">Plastic waste is a serious problem in many oceans.</mark> Every year, millions of tonnes of plastic end up in the sea. <mark class="rc-evidence rc-evidence-detail">Fish and sea turtles often mistake small pieces of plastic for food.</mark> As a result, they can become sick or die. However, <mark class="rc-evidence rc-evidence-ref">some countries are now taking action. They have banned single-use plastic bags and encouraged people to recycle.</mark> In Vietnam, many supermarkets have started using paper bags instead of plastic ones. <mark class="rc-evidence rc-evidence-infer">These changes are small, but they can make a big difference if everyone joins in.</mark></p>
+        <p class="rc-passage"><mark class="rc-evidence rc-evidence-main">Plastic waste is a serious problem in many oceans.<span class="rc-evidence-no" aria-hidden="true">1</span></mark> Every year, millions of tonnes of plastic end up in the sea. <mark class="rc-evidence rc-evidence-detail">Fish and sea turtles often mistake small pieces of plastic for food.<span class="rc-evidence-no" aria-hidden="true">2</span></mark> As a result, they can become sick or die. However, <mark class="rc-evidence rc-evidence-ref">some countries are now taking action. They have banned single-use plastic bags and encouraged people to recycle.<span class="rc-evidence-no" aria-hidden="true">3</span></mark> In Vietnam, many supermarkets have started using paper bags instead of plastic ones. <mark class="rc-evidence rc-evidence-infer">These changes are small, but they can make a big difference if everyone joins in.<span class="rc-evidence-no" aria-hidden="true">4</span></mark></p>
 
         <div class="rc-legend" aria-label="Chú thích màu bằng chứng">
-          <span><i class="rc-legend-dot rc-dot-main"></i>Ý chính / kết luận</span>
-          <span><i class="rc-legend-dot rc-dot-detail"></i>Bằng chứng chi tiết</span>
-          <span><i class="rc-legend-dot rc-dot-ref"></i>Từ thay thế</span>
-          <span><i class="rc-legend-dot rc-dot-infer"></i>Manh mối suy luận</span>
+          <span><i class="rc-legend-dot rc-dot-main"></i><b class="rc-legend-no">1</b> Ý chính / kết luận</span>
+          <span><i class="rc-legend-dot rc-dot-detail"></i><b class="rc-legend-no">2</b> Bằng chứng chi tiết</span>
+          <span><i class="rc-legend-dot rc-dot-ref"></i><b class="rc-legend-no">3</b> Từ thay thế</span>
+          <span><i class="rc-legend-dot rc-dot-infer"></i><b class="rc-legend-no">4</b> Manh mối suy luận</span>
         </div>
 
         <div class="rc-qa-grid">
@@ -548,7 +548,7 @@ import '../styles/reading.css';
             <p class="rc-qa-tag">Chi tiết</p>
             <h4>What do fish and sea turtles mistake for food?</h4>
             <p class="rc-qa-answer">Small pieces of plastic.</p>
-            <p class="rc-qa-why">Thông tin nằm trực tiếp trong câu được đánh dấu màu xanh.</p>
+            <p class="rc-qa-why">Thông tin nằm trực tiếp trong câu được đánh dấu số 2.</p>
           </article>
 
           <article class="rc-qa">
