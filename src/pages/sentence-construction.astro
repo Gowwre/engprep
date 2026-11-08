@@ -3,11 +3,13 @@ import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
 import FigurePanel from '../components/FigurePanel.astro';
 import QuizPanel from '../components/QuizPanel.astro';
+import QuickReview from '../components/QuickReview.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
 import TableShell from '../components/TableShell.astro';
 import TrapCard from '../components/TrapCard.astro';
+import { quickReviews } from '../data/quick-review';
 import '../styles/sentence-construction.css';
 ---
 
@@ -37,6 +39,8 @@ import '../styles/sentence-construction.css';
       </div>
     </StudyStackVisual>
   </Fragment>
+
+  <QuickReview slug="sentence-construction" accent="sentence" content={quickReviews['sentence-construction']!} />
 
   <!-- MAP -->
   <section class="section" id="map">
@@ -241,40 +245,33 @@ import '../styles/sentence-construction.css';
         <StepCard
           prefix="sc"
           no="01"
-          title="Tìm chủ ngữ"
+          title="Tìm chủ ngữ · 30 giây"
           body="Ai hoặc cái gì thực hiện hành động? Chủ ngữ thường là cụm danh từ đứng đầu."
           formula="Who / what + V?"
         />
         <StepCard
           prefix="sc"
           no="02"
-          title="Tìm động từ chính"
+          title="Tìm động từ chính · 30 giây"
           body="Động từ nào chia theo chủ ngữ? Kiểm tra thì, số ít/số nhiều và dạng bị động."
           formula="S + V + …"
         />
         <StepCard
           prefix="sc"
           no="03"
-          title="Gắn tân ngữ & cụm bổ nghĩa"
+          title="Gắn tân ngữ & cụm bổ nghĩa · 1 phút"
           body="Giữ cụm cố định, giới từ và mệnh đề quan hệ đi liền với từ mà chúng bổ nghĩa."
           formula="V + O + by / to / set by …"
         />
         <StepCard
           prefix="sc"
           no="04"
-          title="Đọc lại & kiểm tra"
+          title="Đọc lại & kiểm tra · 1 phút"
           body="Chữ đầu viết hoa, cuối câu có dấu chấm, không thừa/thiếu từ, nghĩa rõ ràng."
           formula="viết hoa + dấu câu + nghĩa"
         />
       </div>
 
-      <div class="sc-time-strip" aria-label="Phân bổ thời gian cho hai câu phần VI">
-        <div><span>Tìm S + V</span><strong>1 phút</strong></div>
-        <span class="sc-time-arrow" aria-hidden="true">→</span>
-        <div><span>Ghép cụm</span><strong>1 phút</strong></div>
-        <span class="sc-time-arrow" aria-hidden="true">→</span>
-        <div><span>Đọc lại</span><strong>1 phút</strong></div>
-      </div>
 
       <div class="sc-checklist">
         <p><strong>Checklist trước khi viết:</strong></p>

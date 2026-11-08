@@ -240,6 +240,7 @@ export const sheets: Sheet[] = [
     meta: '7 dạng câu · 12 câu hỏi',
     questionCount: 12,
     sections: [
+      { id: 'quick-review', label: 'Ôn nhanh' },
       { id: 'map', label: 'Bản đồ' },
       { id: 'strategy', label: 'Chiến lược' },
       { id: 'types', label: 'Dạng câu' },
@@ -259,7 +260,7 @@ export const sheets: Sheet[] = [
         { value: '12', label: 'câu luyện tập' }
       ],
       actions: [
-        { label: 'Xem bản đồ dạng câu', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Ôn nhanh đọc hiểu', href: '#quick-review', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 12 câu đọc hiểu', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
@@ -332,6 +333,7 @@ export const sheets: Sheet[] = [
     meta: '8 nhóm mẫu · 16 câu hỏi',
     questionCount: 16,
     sections: [
+      { id: 'quick-review', label: 'Ôn nhanh' },
       { id: 'map', label: 'Bản đồ' },
       { id: 'formulas', label: 'Công thức' },
       { id: 'verb-patterns', label: 'Mẫu động từ' },
@@ -349,7 +351,7 @@ export const sheets: Sheet[] = [
         { value: '16', label: 'câu luyện tập' }
       ],
       actions: [
-        { label: 'Xem bản đồ mẫu câu', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Ôn nhanh viết lại câu', href: '#quick-review', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 16 câu viết lại', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
@@ -421,6 +423,7 @@ export const sheets: Sheet[] = [
     meta: '5 loại chỗ trống · 12 câu hỏi',
     questionCount: 12,
     sections: [
+      { id: 'quick-review', label: 'Ôn nhanh' },
       { id: 'map', label: 'Bản đồ' },
       { id: 'strategy', label: 'Chiến lược' },
       { id: 'grammar', label: 'Ngữ pháp' },
@@ -440,7 +443,7 @@ export const sheets: Sheet[] = [
         { value: '12', label: 'câu luyện tập' }
       ],
       actions: [
-        { label: 'Xem bản đồ chỗ trống', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Ôn nhanh điền khuyết', href: '#quick-review', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 12 câu điền khuyết', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
@@ -562,6 +565,7 @@ export const sheets: Sheet[] = [
     meta: '2 dạng phần VI · 16 câu hỏi',
     questionCount: 16,
     sections: [
+      { id: 'quick-review', label: 'Ôn nhanh' },
       { id: 'map', label: 'Bản đồ' },
       { id: 'word-order', label: 'Trật tự câu' },
       { id: 'strategy', label: 'Chiến lược' },
@@ -581,7 +585,7 @@ export const sheets: Sheet[] = [
         { value: '16', label: 'câu luyện tập' }
       ],
       actions: [
-        { label: 'Xem bản đồ phần VI', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Ôn nhanh phần VI', href: '#quick-review', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 16 câu luyện tập', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }

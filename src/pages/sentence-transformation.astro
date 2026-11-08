@@ -3,10 +3,12 @@ import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
 import FigurePanel from '../components/FigurePanel.astro';
 import QuizPanel from '../components/QuizPanel.astro';
+import QuickReview from '../components/QuickReview.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
 import TableShell from '../components/TableShell.astro';
 import TrapCard from '../components/TrapCard.astro';
+import { quickReviews } from '../data/quick-review';
 import '../styles/sentence-transformation.css';
 ---
 
@@ -34,6 +36,8 @@ import '../styles/sentence-transformation.css';
     </StudyStackVisual>
   </Fragment>
 
+  <QuickReview slug="sentence-transformation" accent="write" content={quickReviews['sentence-transformation']!} />
+
   <!-- MAP -->
   <section class="section" id="map">
     <div class="container">
@@ -43,7 +47,7 @@ import '../styles/sentence-transformation.css';
       </SectionHead>
 
       <div class="wt-map-grid">
-        <a class="wt-map-card wt-map-condition" href="#formulas">
+        <a class="wt-map-card wt-map-condition" href="#formulas-condition">
           <p class="map-kicker">01 · Điều kiện</p>
           <h3>Câu điều kiện (If / Unless)</h3>
           <p class="map-rule">Đổi câu điều kiện, giữ nguyên hệ quả.</p>
@@ -53,7 +57,7 @@ import '../styles/sentence-transformation.css';
           <span class="map-link">Xem công thức →</span>
         </a>
 
-        <a class="wt-map-card wt-map-wish" href="#formulas">
+        <a class="wt-map-card wt-map-wish" href="#formulas-wish">
           <p class="map-kicker">02 · Ước</p>
           <h3>Câu ước (Wish)</h3>
           <p class="map-rule">Lùi thì để diễn tả điều không có thật.</p>
@@ -63,7 +67,7 @@ import '../styles/sentence-transformation.css';
           <span class="map-link">Xem công thức →</span>
         </a>
 
-        <a class="wt-map-card wt-map-ving" href="#formulas">
+        <a class="wt-map-card wt-map-ving" href="#formulas-ving">
           <p class="map-kicker">03 · V-ing</p>
           <h3>Cụm từ + V-ing</h3>
           <p class="map-rule">fond of, keen on, mind, suggest, look forward to.</p>
@@ -73,7 +77,7 @@ import '../styles/sentence-transformation.css';
           <span class="map-link">Xem công thức →</span>
         </a>
 
-        <a class="wt-map-card wt-map-since" href="#formulas">
+        <a class="wt-map-card wt-map-since" href="#formulas-since">
           <p class="map-kicker">04 · Mốc thời gian</p>
           <h3>Since + mốc thời gian</h3>
           <p class="map-rule">Đổi giữa “last wrote” và “haven’t written since”.</p>
@@ -83,7 +87,7 @@ import '../styles/sentence-transformation.css';
           <span class="map-link">Xem công thức →</span>
         </a>
 
-        <a class="wt-map-card wt-map-result" href="#formulas">
+        <a class="wt-map-card wt-map-result" href="#formulas-so-such">
           <p class="map-kicker">05 · Kết quả</p>
           <h3>So / such … that</h3>
           <p class="map-rule">Đổi giữa so + adj và such + (a/an) + adj + N.</p>
@@ -93,7 +97,7 @@ import '../styles/sentence-transformation.css';
           <span class="map-link">Xem công thức →</span>
         </a>
 
-        <a class="wt-map-card wt-map-phrasal" href="#formulas">
+        <a class="wt-map-card wt-map-phrasal" href="#formulas-phrasal">
           <p class="map-kicker">06 · Cụm động từ</p>
           <h3>Cụm động từ (Phrasal verbs)</h3>
           <p class="map-rule">Thay cụm động từ bằng cách diễn đạt tương đương.</p>
@@ -103,7 +107,7 @@ import '../styles/sentence-transformation.css';
           <span class="map-link">Xem công thức →</span>
         </a>
 
-        <a class="wt-map-card wt-map-contrast" href="#formulas">
+        <a class="wt-map-card wt-map-contrast" href="#formulas-contrast">
           <p class="map-kicker">07 · Tương phản / lý do</p>
           <h3>Nhượng bộ – nguyên nhân (Although / Because)</h3>
           <p class="map-rule">Clause đổi thành N hoặc V-ing sau despite/because of.</p>
@@ -113,7 +117,7 @@ import '../styles/sentence-transformation.css';
           <span class="map-link">Xem công thức →</span>
         </a>
 
-        <a class="wt-map-card wt-map-reported" href="#formulas">
+        <a class="wt-map-card wt-map-reported" href="#formulas-reported">
           <p class="map-kicker">08 · Gián tiếp</p>
           <h3>Câu gián tiếp (Reported speech)</h3>
           <p class="map-rule">Lùi thì, đổi đại từ và trạng từ thời gian.</p>
@@ -150,42 +154,42 @@ import '../styles/sentence-transformation.css';
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="formulas-condition">
             <th scope="row"><span class="wt-cat wt-cat-condition">Điều kiện</span></th>
             <td><code>If + S + V(s/es), S + will/can + V</code><br><code>Unless + S + V(s/es), S + will/can + V</code></td>
             <td>If you study hard, you will pass.<br>Unless you study hard, you will fail.</td>
           </tr>
-          <tr>
+          <tr id="formulas-wish">
             <th scope="row"><span class="wt-cat wt-cat-wish">Câu ước</span></th>
             <td><code>S + wish + S + V2/ed</code> (hiện tại)<br><code>S + wish + S + had + V3/ed</code> (quá khứ)</td>
             <td>I wish I had a bike.<br>She wishes she had studied harder.</td>
           </tr>
-          <tr>
+          <tr id="formulas-ving">
             <th scope="row"><span class="wt-cat wt-cat-ving">V-ing</span></th>
             <td><code>be fond of / keen on + V-ing</code><br><code>mind / suggest / avoid + V-ing</code></td>
             <td>Michael is fond of playing football.<br>He suggested going to the cinema.</td>
           </tr>
-          <tr>
+          <tr id="formulas-since">
             <th scope="row"><span class="wt-cat wt-cat-since">Since</span></th>
             <td><code>It has been + time + since + S + last + V2/ed</code><br><code>S + have/has + not + V3/ed + since + mốc</code></td>
             <td>It has been two years since she last participated.<br>She hasn’t participated since 2023.</td>
           </tr>
-          <tr>
+          <tr id="formulas-so-such">
             <th scope="row"><span class="wt-cat wt-cat-result">So / such</span></th>
             <td><code>S + be + so + adj + that + S + V</code><br><code>It + be + such + (a/an) + adj + N + that + S + V</code></td>
             <td>Tom is so lazy that he can’t get good marks.<br>It was such awful weather that we couldn’t go out.</td>
           </tr>
-          <tr>
+          <tr id="formulas-phrasal">
             <th scope="row"><span class="wt-cat wt-cat-phrasal">Cụm động từ</span></th>
             <td><code>break down = stop working</code><br><code>run out of = have no more</code><br><code>put off = postpone</code></td>
             <td>Our car broke down on the way.<br>The shop has run out of roses.</td>
           </tr>
-          <tr>
+          <tr id="formulas-contrast">
             <th scope="row"><span class="wt-cat wt-cat-contrast">Tương phản / lý do</span></th>
             <td><code>Although + clause ↔ Despite/In spite of + N/V-ing</code><br><code>Because + clause ↔ Because of + N/V-ing</code></td>
             <td>Although it rained, we went out.<br>Despite the rain, we went out.</td>
           </tr>
-          <tr>
+          <tr id="formulas-reported">
             <th scope="row"><span class="wt-cat wt-cat-reported">Gián tiếp</span></th>
             <td><code>S + said (that) + S + V(lùi thì)</code><br><code>S + told + O + (that) + ...</code><br><code>suggest + V-ing / that + S + (should) + V</code></td>
             <td>He said he would help me the next day.<br>He suggested going to the cinema.</td>

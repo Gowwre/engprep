@@ -145,5 +145,169 @@ export const quickReviews: Partial<Record<SheetSlug, QuickReviewContent>> = {
     ],
     quizHref: '#quiz',
     quizLabel: 'Làm 16 câu từ loại'
+  },
+  reading: {
+    title: 'Đọc hiểu: nhìn câu hỏi trước khi đọc bài.',
+    lead: 'Sáu kiểu câu hỏi, bốn bước đọc và ba bẫy làm mất điểm.',
+    tabs: [
+      {
+        id: 'types',
+        label: '7 dạng câu',
+        items: [
+          { label: 'Ý chính', text: 'câu đầu, câu cuối, từ lặp lại.' },
+          { label: 'Chi tiết', text: 'scan tên, số, ngày, địa điểm.' },
+          { label: 'Từ vựng', text: 'đọc câu trước và câu sau.' },
+          { label: 'Từ thay thế', text: 'tìm danh từ phù hợp với it/they/this.' },
+          { label: 'Suy luận', text: 'ghép 2–3 manh mối, không chọn cực đoan.' },
+          { label: 'Đúng/Sai/NOT + điền khuyết', text: 'đối chiếu từng phương án với bài.' }
+        ]
+      },
+      {
+        id: 'method',
+        label: 'Cách làm',
+        items: [
+          { label: '1 phút', text: 'đọc lướt tiêu đề, câu đầu/cuối mỗi đoạn.' },
+          { label: '1 phút', text: 'gạch keyword trong câu hỏi.' },
+          { label: '5 phút', text: 'scan từ khoá, tìm từ đồng nghĩa và bằng chứng.' },
+          { label: '1 phút', text: 'loại đáp án sai phạm vi hoặc quá cực đoan.' },
+          { label: 'Quy tắc', text: 'đáp án đúng phải có bằng chứng trong bài.' },
+          { label: 'Paraphrase', text: 'đáp án thường được viết lại, không lặp y nguyên.' }
+        ]
+      },
+      {
+        id: 'traps',
+        label: 'Bẫy',
+        items: [
+          { label: 'Lặp từ', text: 'đáp án chép y nguyên từ trong bài thường là bẫy.' },
+          { label: 'Phạm vi', text: 'đúng nhưng không trả lời đúng câu hỏi.' },
+          { label: 'NOT / EXCEPT', text: 'bỏ qua từ phủ định trong câu hỏi.' }
+        ]
+      }
+    ],
+    quizHref: '#quiz',
+    quizLabel: 'Làm 12 câu đọc hiểu'
+  },
+  cloze: {
+    title: 'Điền khuyết: đọc cả câu trước khi chọn.',
+    lead: 'Năm loại chỗ trống, bốn bước và ba lỗi hay mất điểm.',
+    tabs: [
+      {
+        id: 'types',
+        label: '5 loại chỗ trống',
+        items: [
+          { label: 'Ngữ pháp', text: 'giới từ, dạng động từ, mệnh đề quan hệ.' },
+          { label: 'Từ vựng', text: 'nghĩa của từ trong câu và cả đoạn.' },
+          { label: 'Cụm cố định', text: 'make a decision, depend on, heavy rain.' },
+          { label: 'Từ nối', text: 'thêm ý, tương phản, nguyên nhân, kết quả.' },
+          { label: 'Từ thay thế', text: 'it/they/this/that thay cho danh từ nào.' },
+          { label: 'Mạo từ / lượng từ', text: 'a/an/the, many/much, some/any.' }
+        ]
+      },
+      {
+        id: 'method',
+        label: '4 bước',
+        items: [
+          { label: '1 phút', text: 'đọc lướt để nắm chủ đề và giọng điệu.' },
+          { label: '1 phút', text: 'đọc câu trước và câu sau chỗ trống.' },
+          { label: '5 phút', text: 'kiểm tra loại từ, thì, giới từ, cụm cố định.' },
+          { label: '1 phút', text: 'điền thử rồi đọc lại cả đoạn.' },
+          { label: 'Thứ tự', text: 'loại từ → ngữ pháp → collocation → nghĩa.' },
+          { label: 'Quy tắc', text: 'không chọn chỉ vì nghe quen tai.' }
+        ]
+      },
+      {
+        id: 'traps',
+        label: 'Bẫy',
+        items: [
+          { label: 'many / much', text: 'many people, much water.' },
+          { label: 'depend on', text: 'không dùng depend of.' },
+          { label: 'Từ nối đôi', text: 'although … but là sai; chọn một.' }
+        ]
+      }
+    ],
+    quizHref: '#quiz',
+    quizLabel: 'Làm 12 câu điền khuyết'
+  },
+  'sentence-transformation': {
+    title: 'Viết lại câu: đổi cấu trúc, giữ nguyên nghĩa.',
+    lead: 'Sáu nhóm công thức, sáu mẫu động từ và ba lỗi hay gặp.',
+    tabs: [
+      {
+        id: 'formulas',
+        label: 'Công thức',
+        items: [
+          { label: 'Điều kiện', text: 'If/Unless + S + V(s/es), S + will/can + V.' },
+          { label: 'Wish', text: 'wish + V2/ed (hiện tại), wish + had + V3/ed (quá khứ).' },
+          { label: 'V-ing', text: 'fond of / keen on / suggest + V-ing.' },
+          { label: 'Since', text: 'It has been + time + since + S + last + V2/ed.' },
+          { label: 'So/such', text: 'so + adj + that ↔ such + (a/an) + adj + N + that.' },
+          { label: 'Cụm động từ / gián tiếp', text: 'break down, run out of; said/told + lùi thì.' }
+        ]
+      },
+      {
+        id: 'verb-patterns',
+        label: 'Mẫu động từ',
+        items: [
+          { label: 'V-ing', text: 'enjoy, mind, avoid, suggest, look forward to.' },
+          { label: 'to-V', text: 'want, decide, hope, plan, promise, refuse.' },
+          { label: 'V + O + to-V', text: 'ask, tell, remind, encourage + sb + to-V.' },
+          { label: 'stop + V-ing', text: 'dừng hành động.' },
+          { label: 'stop + to-V', text: 'dừng lại để làm gì.' },
+          { label: 'remember / try', text: 'đổi dạng là đổi nghĩa; học theo cặp.' }
+        ]
+      },
+      {
+        id: 'traps',
+        label: 'Bẫy',
+        items: [
+          { label: 'Despite', text: 'Despite + N/V-ing, không dùng Despite of.' },
+          { label: 'Since', text: 'since + mốc, for + khoảng thời gian.' },
+          { label: 'So/such', text: 'so + adj, such + (a/an) + adj + N.' }
+        ]
+      }
+    ],
+    quizHref: '#quiz',
+    quizLabel: 'Làm 16 câu viết lại'
+  },
+  'sentence-construction': {
+    title: 'Sắp xếp câu: tìm S + V trước.',
+    lead: 'Một khung câu, bốn bước ghép và ba lỗi thường gặp.',
+    tabs: [
+      {
+        id: 'word-order',
+        label: 'Trật tự từ',
+        items: [
+          { label: 'Khung', text: 'S + V + O + Manner + Place + Time.' },
+          { label: 'Cụm bổ nghĩa', text: 'giữ cụm cố định đi liền nhau.' },
+          { label: 'Mục đích', text: 'to-V thường đứng cuối câu.' },
+          { label: 'By + V-ing', text: 'đi sau động từ chính hoặc cuối câu.' },
+          { label: 'Not only … but also', text: 'giữ đúng cặp và trật tự.' },
+          { label: 'Mệnh đề quan hệ', text: 'đi ngay sau danh từ được bổ nghĩa.' }
+        ]
+      },
+      {
+        id: 'steps',
+        label: '4 bước',
+        items: [
+          { label: '30 giây', text: 'tìm chủ ngữ: ai/cái gì thực hiện hành động?' },
+          { label: '30 giây', text: 'tìm động từ chính và thì của câu.' },
+          { label: '1 phút', text: 'gắn tân ngữ, cụm cố định, giới từ.' },
+          { label: '1 phút', text: 'đọc lại, kiểm tra hoa/dấu câu/nghĩa.' },
+          { label: 'Từ điển', text: 'xác định chỗ trống rồi chọn cụm 2–3 từ.' },
+          { label: 'Kiểm tra', text: 'cụm đúng nghĩa và đúng dạng ngữ pháp.' }
+        ]
+      },
+      {
+        id: 'traps',
+        label: 'Bẫy',
+        items: [
+          { label: 'Ghép theo tai', text: 'cụm đọc xuôi tai chưa chắc đúng trật tự.' },
+          { label: 'Thiếu động từ chính', text: 'mỗi câu cần một động từ chính chia theo S.' },
+          { label: 'Từ điển', text: 'đừng viết cả câu vào chỗ trống 2–3 từ.' }
+        ]
+      }
+    ],
+    quizHref: '#quiz',
+    quizLabel: 'Làm 16 câu phần VI'
   }
 };

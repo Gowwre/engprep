@@ -5,11 +5,13 @@ import EmptyState from '../components/EmptyState.astro';
 import FigurePanel from '../components/FigurePanel.astro';
 import FilterToolbar from '../components/FilterToolbar.astro';
 import QuizPanel from '../components/QuizPanel.astro';
+import QuickReview from '../components/QuickReview.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
 import TableShell from '../components/TableShell.astro';
 import TrapCard from '../components/TrapCard.astro';
+import { quickReviews } from '../data/quick-review';
 import '../styles/reading.css';
 ---
 
@@ -33,6 +35,8 @@ import '../styles/reading.css';
     </StudyStackVisual>
   </Fragment>
 
+  <QuickReview slug="reading" accent="reading" content={quickReviews['reading']!} />
+
   <!-- MAP -->
   <section class="section" id="map">
     <div class="container">
@@ -42,7 +46,7 @@ import '../styles/reading.css';
       </SectionHead>
 
       <div class="map-grid rc-map-grid">
-        <a class="map-card rc-map-card rc-map-main" href="#types">
+        <a class="map-card rc-map-card rc-map-main" href="#types-main-idea">
           <p class="map-kicker">01 · Toàn bài</p>
           <h3>Ý chính</h3>
           <p class="map-rule">Câu đầu, câu cuối và những từ được lặp lại.</p>
@@ -52,7 +56,7 @@ import '../styles/reading.css';
           <span class="map-link">Xem cách làm →</span>
         </a>
 
-        <a class="map-card rc-map-card rc-map-detail" href="#types">
+        <a class="map-card rc-map-card rc-map-detail" href="#types-detail">
           <p class="map-kicker">02 · Thông tin</p>
           <h3>Chi tiết</h3>
           <p class="map-rule">Scan tên, số, ngày, địa điểm trong bài.</p>
@@ -62,7 +66,7 @@ import '../styles/reading.css';
           <span class="map-link">Xem cách làm →</span>
         </a>
 
-        <a class="map-card rc-map-card rc-map-vocab" href="#types">
+        <a class="map-card rc-map-card rc-map-vocab" href="#types-vocab">
           <p class="map-kicker">03 · Ngữ cảnh</p>
           <h3>Từ vựng</h3>
           <p class="map-rule">Đọc câu trước và câu sau để đoán nghĩa.</p>
@@ -72,7 +76,7 @@ import '../styles/reading.css';
           <span class="map-link">Xem cách làm →</span>
         </a>
 
-        <a class="map-card rc-map-card rc-map-ref" href="#types">
+        <a class="map-card rc-map-card rc-map-ref" href="#types-reference">
           <p class="map-kicker">04 · Liên kết</p>
           <h3>Từ thay thế</h3>
           <p class="map-rule">Tìm danh từ phù hợp với đại từ.</p>
@@ -82,7 +86,7 @@ import '../styles/reading.css';
           <span class="map-link">Xem cách làm →</span>
         </a>
 
-        <a class="map-card rc-map-card rc-map-infer" href="#types">
+        <a class="map-card rc-map-card rc-map-infer" href="#types-inference">
           <p class="map-kicker">05 · Suy luận</p>
           <h3>Suy luận</h3>
           <p class="map-rule">Ghép manh mối, không chọn đáp án cực đoan.</p>
@@ -92,7 +96,7 @@ import '../styles/reading.css';
           <span class="map-link">Xem cách làm →</span>
         </a>
 
-        <a class="map-card rc-map-card rc-map-tf" href="#types">
+        <a class="map-card rc-map-card rc-map-tf" href="#types-true-false">
           <p class="map-kicker">06 · Kiểm tra</p>
           <h3>Đúng / Sai / NOT</h3>
           <p class="map-rule">Đối chiếu từng phương án với bài.</p>
@@ -102,7 +106,7 @@ import '../styles/reading.css';
           <span class="map-link">Xem cách làm →</span>
         </a>
 
-        <a class="map-card rc-map-card rc-map-cloze" href="#types">
+        <a class="map-card rc-map-card rc-map-cloze" href="#types-cloze">
           <p class="map-kicker">07 · Điền khuyết</p>
           <h3>Điền khuyết</h3>
           <p class="map-rule">Ngữ pháp, từ nối và nghĩa của cả câu.</p>
@@ -159,27 +163,6 @@ import '../styles/reading.css';
         />
       </div>
 
-      <div class="rc-time-strip" aria-label="Phân bổ thời gian cho một bài đọc">
-        <div class="rc-time-step">
-          <span>Skim</span>
-          <strong>1 phút</strong>
-        </div>
-        <span class="rc-time-arrow" aria-hidden="true">→</span>
-        <div class="rc-time-step">
-          <span>Đọc câu hỏi</span>
-          <strong>1 phút</strong>
-        </div>
-        <span class="rc-time-arrow" aria-hidden="true">→</span>
-        <div class="rc-time-step">
-          <span>Scan &amp; chọn</span>
-          <strong>5 phút</strong>
-        </div>
-        <span class="rc-time-arrow" aria-hidden="true">→</span>
-        <div class="rc-time-step">
-          <span>Kiểm tra</span>
-          <strong>1 phút</strong>
-        </div>
-      </div>
 
       <FigurePanel
         kicker="Mắt đọc"
@@ -259,43 +242,43 @@ import '../styles/reading.css';
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="types-main-idea">
             <th scope="row"><span class="rc-cat rc-cat-main">Ý chính</span></th>
             <td><code>mainly about</code> · <code>best title</code> · <code>purpose</code></td>
             <td>Đọc câu đầu, câu cuối và các từ lặp lại. Chọn ý bao quát được cả bài.</td>
             <td>Chọn một chi tiết chỉ xuất hiện ở một câu.</td>
           </tr>
-          <tr>
+          <tr id="types-detail">
             <th scope="row"><span class="rc-cat rc-cat-detail">Chi tiết</span></th>
             <td><code>according to</code> · <code>who</code> · <code>when</code> · <code>where</code></td>
             <td>Gạch từ khoá, đọc quét tên/số/ngày rồi đọc câu chứa thông tin đó.</td>
             <td>Chọn đáp án đúng nhưng không trả lời đúng câu hỏi.</td>
           </tr>
-          <tr>
+          <tr id="types-vocab">
             <th scope="row"><span class="rc-cat rc-cat-vocab">Từ vựng</span></th>
             <td><code>closest in meaning</code> · <code>means</code></td>
             <td>Đọc câu trước và sau, thay từng đáp án vào câu để thử nghĩa.</td>
             <td>Chọn nghĩa quen thuộc nhưng sai trong ngữ cảnh.</td>
           </tr>
-          <tr>
+          <tr id="types-reference">
             <th scope="row"><span class="rc-cat rc-cat-ref">Từ thay thế</span></th>
             <td><code>it</code> · <code>they</code> · <code>this</code> · <code>that</code></td>
             <td>Tìm danh từ hoặc cụm danh từ gần nhất phù hợp số ít/số nhiều.</td>
             <td>Nhầm số ít với số nhiều hoặc chọn từ quá xa.</td>
           </tr>
-          <tr>
+          <tr id="types-inference">
             <th scope="row"><span class="rc-cat rc-cat-infer">Suy luận</span></th>
             <td><code>infer</code> · <code>suggest</code> · <code>probably</code></td>
             <td>Ghép 2–3 manh mối trong bài. Đáp án phải suy ra được, không chỉ chép lại.</td>
             <td>Suy luận quá xa hoặc chọn đáp án cực đoan.</td>
           </tr>
-          <tr>
+          <tr id="types-true-false">
             <th scope="row"><span class="rc-cat rc-cat-tf">Đúng / Sai / NOT</span></th>
             <td><code>true</code> · <code>false</code> · <code>NOT mentioned</code> · <code>EXCEPT</code></td>
             <td>Đối chiếu từng phương án với bài; đánh dấu câu nào đúng, câu nào không có.</td>
             <td>Bỏ qua chữ NOT hoặc EXCEPT trong câu hỏi.</td>
           </tr>
-          <tr>
+          <tr id="types-cloze">
             <th scope="row"><span class="rc-cat rc-cat-cloze">Điền khuyết</span></th>
             <td><code>fill in</code> · <code>best fits</code> · <code>gap</code></td>
             <td>Đọc cả câu, xét ngữ pháp, từ nối và nghĩa, rồi thử từng đáp án.</td>

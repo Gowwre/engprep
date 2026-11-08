@@ -4,11 +4,13 @@ import SheetLayout from '../layouts/SheetLayout.astro';
 import ClueCard from '../components/ClueCard.astro';
 import FigurePanel from '../components/FigurePanel.astro';
 import QuizPanel from '../components/QuizPanel.astro';
+import QuickReview from '../components/QuickReview.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
 import TableShell from '../components/TableShell.astro';
 import TrapCard from '../components/TrapCard.astro';
+import { quickReviews } from '../data/quick-review';
 import '../styles/cloze.css';
 ---
 
@@ -33,6 +35,8 @@ import '../styles/cloze.css';
       </div>
     </StudyStackVisual>
   </Fragment>
+
+  <QuickReview slug="cloze" accent="cloze" content={quickReviews['cloze']!} />
 
   <!-- MAP -->
   <section class="section" id="map">
@@ -63,7 +67,7 @@ import '../styles/cloze.css';
           <span class="map-link">Xem manh mối →</span>
         </a>
 
-        <a class="map-card cz-map-card cz-map-colloc" href="#vocabulary">
+        <a class="map-card cz-map-card cz-map-colloc" href="#cloze-collocation">
           <p class="map-kicker">03 · Cụm từ</p>
           <h3>Cụm từ cố định</h3>
           <p class="map-rule">Từ nào đi với từ nào: make a decision, heavy rain.</p>
@@ -73,7 +77,7 @@ import '../styles/cloze.css';
           <span class="map-link">Xem collocations →</span>
         </a>
 
-        <a class="map-card cz-map-card cz-map-connector" href="#grammar">
+        <a class="map-card cz-map-card cz-map-connector" href="#cloze-connectors">
           <p class="map-kicker">04 · Liên kết</p>
           <h3>Từ nối</h3>
           <p class="map-rule">Quan hệ giữa hai câu: thêm ý, tương phản, nguyên nhân, kết quả.</p>
@@ -83,7 +87,7 @@ import '../styles/cloze.css';
           <span class="map-link">Xem từ nối →</span>
         </a>
 
-        <a class="map-card cz-map-card cz-map-ref" href="#grammar">
+        <a class="map-card cz-map-card cz-map-ref" href="#grammar-reference">
           <p class="map-kicker">05 · Thay thế</p>
           <h3>Từ thay thế</h3>
           <p class="map-rule">It, they, this, that thay cho danh từ nào?</p>
@@ -110,7 +114,7 @@ import '../styles/cloze.css';
         <StepCard
           prefix="cz"
           no="01"
-          title="Đọc lướt cả đoạn"
+          title="Đọc lướt cả đoạn · 1 phút"
           body="Đọc nhanh để nắm chủ đề, giọng điệu và cấu trúc. Chú ý từ nối và các từ lặp lại."
           formula="chủ đề + giọng điệu + cấu trúc"
         />
@@ -118,7 +122,7 @@ import '../styles/cloze.css';
         <StepCard
           prefix="cz"
           no="02"
-          title="Đọc quanh chỗ trống"
+          title="Đọc quanh chỗ trống · 1 phút"
           body="Đọc câu chứa chỗ trống và câu trước/sau. Dự đoán loại từ và nghĩa trước khi xem đáp án."
           formula="câu trước + câu sau"
         />
@@ -126,7 +130,7 @@ import '../styles/cloze.css';
         <StepCard
           prefix="cz"
           no="03"
-          title="Kiểm tra ngữ pháp"
+          title="Kiểm tra ngữ pháp · 5 phút"
           body="Loại từ, thì, số ít/số nhiều, giới từ đi kèm và cụm từ cố định. Đây là bước dễ mất điểm nhất."
           formula="ngữ pháp + cụm từ cố định"
         />
@@ -134,21 +138,12 @@ import '../styles/cloze.css';
         <StepCard
           prefix="cz"
           no="04"
-          title="Đọc lại cả đoạn"
+          title="Đọc lại cả đoạn · 1 phút"
           body="Điền thử đáp án rồi đọc lại. Nếu câu tối nghĩa hoặc sai logic, hãy xem lại chỗ trống đó."
           formula="điền thử + đọc lại"
         />
       </div>
 
-      <div class="cz-time-strip" aria-label="Phân bổ thời gian cho một bài điền khuyết">
-        <div class="cz-time-step"><span>Skim</span><strong>1 phút</strong></div>
-        <span class="cz-time-arrow" aria-hidden="true">→</span>
-        <div class="cz-time-step"><span>Đọc quanh chỗ trống</span><strong>1 phút</strong></div>
-        <span class="cz-time-arrow" aria-hidden="true">→</span>
-        <div class="cz-time-step"><span>Chọn &amp; kiểm tra</span><strong>5 phút</strong></div>
-        <span class="cz-time-arrow" aria-hidden="true">→</span>
-        <div class="cz-time-step"><span>Đọc lại</span><strong>1 phút</strong></div>
-      </div>
 
       <FigurePanel
         kicker="Sơ đồ quyết định"
@@ -228,47 +223,53 @@ import '../styles/cloze.css';
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="grammar-prep">
             <th scope="row"><span class="cz-cat cz-cat-prep">Giới từ</span></th>
             <td>Đứng trước danh từ, V-ing hoặc đại từ.</td>
             <td>Giới từ đi kèm động từ/tính từ; giới từ thời gian, nơi chốn.</td>
             <td><code>depend on</code> · <code>interested in</code> · <code>in 2026</code></td>
           </tr>
-          <tr>
+          <tr id="grammar-connector">
             <th scope="row"><span class="cz-cat cz-cat-conj">Từ nối</span></th>
             <td>Nối hai mệnh đề hoặc hai câu.</td>
             <td>Quan hệ thêm ý, tương phản, nguyên nhân, kết quả.</td>
             <td><code>however</code> · <code>because</code> · <code>therefore</code></td>
           </tr>
-          <tr>
+          <tr id="grammar-relative">
             <th scope="row"><span class="cz-cat cz-cat-rel">Đại từ quan hệ</span></th>
             <td>Đứng sau danh từ, trước mệnh đề.</td>
             <td>Người hay vật; mệnh đề xác định hay không xác định.</td>
             <td><code>who</code> · <code>which</code> · <code>that</code></td>
           </tr>
-          <tr>
+          <tr id="grammar-verb">
             <th scope="row"><span class="cz-cat cz-cat-verb">Dạng động từ</span></th>
             <td>Sau modal, “to”, giới từ hoặc chủ ngữ.</td>
             <td>V, to-V, V-ing; thì và hòa hợp chủ ngữ.</td>
             <td><code>decided to go</code> · <code>enjoys reading</code> · <code>has lived</code></td>
           </tr>
-          <tr>
+          <tr id="grammar-comparison">
             <th scope="row"><span class="cz-cat cz-cat-comp">So sánh</span></th>
             <td>Có <code>than</code>, <code>the most</code>, <code>as … as</code>.</td>
             <td>Tính từ ngắn/dài; so sánh hơn hay nhất.</td>
             <td><code>more crowded</code> · <code>the best</code> · <code>as tall as</code></td>
           </tr>
-          <tr>
+          <tr id="grammar-quantifier">
             <th scope="row"><span class="cz-cat cz-cat-quant">Lượng từ</span></th>
             <td>Trước danh từ hoặc thay cho danh từ.</td>
             <td>Đếm được hay không đếm được; khẳng định hay phủ định.</td>
             <td><code>many people</code> · <code>much water</code> · <code>some</code></td>
           </tr>
-          <tr>
+          <tr id="grammar-article">
             <th scope="row"><span class="cz-cat cz-cat-art">Mạo từ</span></th>
             <td>Trước danh từ số ít hoặc danh từ đã xác định.</td>
             <td>a/an/the; danh từ đếm được hay không đếm được.</td>
             <td><code>a book</code> · <code>an hour</code> · <code>the sun</code></td>
+          </tr>
+          <tr id="grammar-reference">
+            <th scope="row"><span class="cz-cat cz-cat-ref">Từ thay thế</span></th>
+            <td>it / they / this / that thay cho danh từ đã nhắc.</td>
+            <td>Tìm danh từ hoặc cụm danh từ gần nhất, đúng số ít/số nhiều.</td>
+            <td><code>it</code> · <code>they</code> · <code>this</code></td>
           </tr>
         </tbody>
       </TableShell>
@@ -301,6 +302,7 @@ import '../styles/cloze.css';
         />
 
         <ClueCard
+          id="cloze-connectors"
           label="03 · Tương phản"
           title="but / however / although"
           body="Từ nối tương phản báo hiệu nghĩa trái ngược."
@@ -315,6 +317,7 @@ import '../styles/cloze.css';
         />
 
         <ClueCard
+          id="cloze-collocation"
           label="05 · Cụm từ cố định"
           title="từ đi với từ"
           body="Chọn từ tạo thành cụm tự nhiên với từ đứng cạnh."

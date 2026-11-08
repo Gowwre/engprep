@@ -4,12 +4,13 @@ interface Props {
   title: string;
   body: string;
   example: string;
+  id?: string;
 }
 
-const { label, title, body, example } = Astro.props;
+const { label, title, body, example, id } = Astro.props;
 ---
 
-<article class="cz-clue-card">
+<article class="cz-clue-card" id={id}>
   <p class="cz-clue-label">{label}</p>
   <h3>{title}</h3>
   <p>{body}</p>
