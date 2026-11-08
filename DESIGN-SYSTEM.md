@@ -63,7 +63,7 @@ Không hard-code màu của tờ. Đặt `data-accent` trên khối cha:
 </section>
 ```
 
-Bên trong, các primitive tự dùng `var(--accent)`, `var(--accent-bg)`, `var(--accent-line)`.
+Bên trong, các primitive tự dùng `var(--accent)`, `var(--accent-bg)`, `var(--accent-line)` và `var(--accent-contrast)` (chữ/icon trên nền accent đặc).
 
 Mapping nằm ở `src/styles/tokens.css` và `src/lib/accents.ts`:
 

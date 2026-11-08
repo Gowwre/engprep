@@ -395,19 +395,21 @@
 
 .hub-list li::before {
   position: absolute;
-  top: 0.05em;
-  left: 1px;
+  top: 3px;
+  left: 0;
   display: grid;
   place-items: center;
-  width: 15px;
-  height: 15px;
-  border: 1px solid var(--accent-line);
+  width: 16px;
+  height: 16px;
+  border: 0;
   border-radius: var(--radius-round);
-  color: var(--accent);
+  color: var(--accent-contrast);
+  background: var(--accent);
   content: "✓";
-  font-family: var(--font-mono);
-  font-size: var(--font-size-xs);
-  font-weight: 800;
+  font-family: var(--font-body);
+  font-size: var(--font-size-2xs);
+  font-weight: var(--weight-black);
+  line-height: 1;
 }
 
 .hub-list strong {
@@ -702,6 +704,17 @@
   .path-card p,
   .home-band p {
     font-size: 6.5pt;
+  }
+
+  .hub-list li {
+    padding-left: 9px;
+  }
+
+  .hub-list li::before {
+    top: 1px;
+    width: 5px;
+    height: 5px;
+    font-size: 3.6pt;
   }
 
   .home-band {

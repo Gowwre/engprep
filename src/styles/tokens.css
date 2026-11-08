@@ -119,6 +119,7 @@
   --accent: var(--clay);
   --accent-bg: var(--clay-bg);
   --accent-line: var(--clay-line);
+  --accent-contrast: var(--paper);
 
   /* ---------- Type ---------- */
 
@@ -385,6 +386,9 @@
 
   --color-selection-text: #241f0a;
   --header-bg: rgba(20, 25, 20, 0.9);
+
+  /* Pastel accents need dark ink on top. */
+  --accent-contrast: var(--paper-deep);
 }
 
 /* ---------- Print theme ---------- */
@@ -404,6 +408,7 @@
     --border-strong: #333333;
     --shadow: transparent;
     --dot: transparent;
+    --accent-contrast: #ffffff;
 
     --jade: #175c42;
     --jade-bg: #eef4ef;
