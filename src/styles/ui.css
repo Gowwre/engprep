@@ -347,6 +347,46 @@
   font-size: var(--font-size-md);
 }
 
+/* Wide tables: keep the row label visible while scrolling sideways. */
+@media (max-width: 1099px) {
+  .table-hint {
+    display: block;
+  }
+
+  .table-shell .data-table thead th:first-child,
+  .table-shell .data-table tbody th,
+  .table-shell .data-table tbody td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: var(--color-surface);
+    box-shadow: 1px 0 0 var(--color-rule);
+  }
+
+  .table-shell .data-table thead th:first-child {
+    z-index: 2;
+    background: var(--color-surface-sunken);
+  }
+}
+
+/* On roomy screens the table shell is not a scroll container, so the
+   header can stick to the viewport below the site/page navigation. */
+@media (min-width: 1100px) {
+  .table-shell {
+    overflow: visible;
+  }
+
+  .table-shell .data-table thead th {
+    position: sticky;
+    top: calc(var(--header-h) + var(--page-nav-height) + 8px);
+    z-index: 2;
+  }
+}
+
+.table-shell .data-table tbody tr:target > * {
+  background: var(--accent-bg);
+}
+
 .data-table thead th {
   padding: 11px 14px;
   border-bottom: var(--border-width-strong) solid var(--color-rule);

@@ -293,6 +293,109 @@
   color: var(--clay);
 }
 
+/* Mobile table of contents. The horizontal row stays for desktop; on
+   narrow screens the full section list opens from one summary row. */
+.page-nav-mobile {
+  display: none;
+  position: relative;
+}
+
+.page-nav-menu {
+  position: relative;
+  min-width: 0;
+}
+
+.page-nav-menu-summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 2px;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+}
+
+.page-nav-menu-summary::-webkit-details-marker {
+  display: none;
+}
+
+.page-nav-menu-label {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.page-nav-menu-current {
+  max-width: 150px;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: var(--font-size-md);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.page-nav-menu-summary svg {
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+  transition: rotate var(--duration-fast) var(--ease-standard);
+}
+
+.page-nav-menu[open] .page-nav-menu-summary svg {
+  rotate: 180deg;
+}
+
+.page-nav-menu-panel {
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 0;
+  z-index: 60;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 10px;
+  width: min(90vw, 430px);
+  padding: 10px;
+  border: var(--border-width-strong) solid var(--color-rule-strong);
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  box-shadow: var(--shadow-xl);
+}
+
+.page-nav-menu-panel a {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 8px 9px;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-md);
+}
+
+.page-nav-menu-panel a:hover,
+.page-nav-menu-panel a:focus-visible,
+.page-nav-menu-panel a.is-active {
+  background: var(--accent-bg);
+  color: var(--ink);
+}
+
+@media (max-width: 980px) {
+  .page-nav-inner {
+    display: none;
+  }
+
+  .page-nav-mobile {
+    display: block;
+  }
+
+  .page-nav-mobile .container,
+  .page-nav-mobile.page-nav-mobile {
+    width: min(100% - (var(--gutter) * 2), var(--container-max));
+  }
+}
+
 /* =========================================================
    Hero
    ========================================================= */
@@ -2376,6 +2479,30 @@
   text-transform: uppercase;
 }
 
+.quiz-hint-toggle {
+  margin-left: auto;
+  padding: 3px 7px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  color: var(--muted);
+  background: var(--surface);
+  font-family: var(--font-body);
+  font-size: var(--font-size-2xs);
+  font-weight: var(--weight-semibold);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.quiz-hint-toggle:hover,
+.quiz-hint-toggle:focus-visible {
+  border-color: var(--accent-line);
+  color: var(--ink);
+}
+
+.quiz-shell.hints-hidden .quiz-tag {
+  display: none;
+}
+
 .quiz-question {
   margin: 0 0 22px;
   font-size: clamp(1.1rem, 2.3vw, 1.38rem);
@@ -2662,6 +2789,13 @@
 
 .review-a strong {
   color: var(--success);
+}
+
+.review-why {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: var(--font-size-sm);
+  line-height: 1.55;
 }
 
 /* =========================================================
@@ -3179,6 +3313,14 @@
 @media (max-width: 620px) {
   html {
     scroll-padding-top: calc(var(--header-h) + 64px);
+  }
+
+  .quiz-meta {
+    flex-wrap: wrap;
+  }
+
+  .quiz-hint-toggle {
+    margin-left: auto;
   }
 
   .header-inner {

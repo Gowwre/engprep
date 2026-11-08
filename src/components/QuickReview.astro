@@ -1,0 +1,73 @@
+---
+import SectionHead from './SectionHead.astro';
+import type { QuickReviewContent } from '../data/quick-review';
+
+interface Props {
+  slug: string;
+  accent: string;
+  content: QuickReviewContent;
+}
+
+const { slug, accent, content } = Astro.props;
+const tabs = content.tabs;
+const firstTab = tabs[0]?.id;
+const panelId = (id: string) => `qr-${slug}-${id}`;
+const tabId = (id: string) => `qr-${slug}-${id}-tab`;
+---
+
+<section class="section quick-review no-print" id="quick-review" data-accent={accent} data-quick-review>
+  <div class="container">
+    <SectionHead kicker={content.kicker ?? 'Ôn nhanh'} title={content.title}>
+      {content.lead ?? 'Ba khối nội dung cần nhớ trước khi làm bài. Chuyển tab để xem nhanh.'}
+      <p slot="aside" class="section-aside"><span>1</span> màn hình<br><span>3</span> nhóm</p>
+    </SectionHead>
+
+    <div class="qr-shell">
+      <div class="qr-tabs" role="tablist" aria-label="Nội dung ôn nhanh">
+        {tabs.map((tab) => (
+          <button
+            class="qr-tab"
+            type="button"
+            role="tab"
+            id={tabId(tab.id)}
+            aria-controls={panelId(tab.id)}
+            aria-selected={tab.id === firstTab ? 'true' : 'false'}
+            tabindex={tab.id === firstTab ? 0 : -1}
+            data-qr-tab={tab.id}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
+      <div class="qr-panels">
+        {tabs.map((tab) => (
+          <section
+            class:list={['qr-panel', tab.id === firstTab && 'is-active']}
+            id={panelId(tab.id)}
+            role="tabpanel"
+            aria-labelledby={tabId(tab.id)}
+            data-qr-panel={tab.id}
+          >
+            <p class="qr-panel-title">{tab.label}</p>
+            <ul class="qr-list">
+              {tab.items.map((item) => (
+                <li>
+                  {item.label && <strong class="qr-item-label">{item.label}</strong>}
+                  {item.code ? <code>{item.text}</code> : <span>{item.text}</span>}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+
+      <div class="qr-foot">
+        <a class="btn btn-primary btn-small" href={content.quizHref ?? '#quiz'}>
+          {content.quizLabel ?? 'Làm bài kiểm tra'}
+        </a>
+        <a class="qr-more" href={content.moreHref ?? '#map'}>Xem bản đầy đủ <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>

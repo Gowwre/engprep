@@ -83,6 +83,7 @@
   --gold-bg: #fbf1d3;
   --gold-ink: #775400;
   --gold-line: var(--gold);
+  --focus-ring: #7a5200;
 
   --success: #21724f;
   --success-bg: #e4f2e9;
@@ -104,7 +105,7 @@
   --color-text-muted: var(--muted);
   --color-rule: var(--line);
   --color-rule-strong: var(--border-strong);
-  --color-focus: var(--gold);
+  --color-focus: var(--focus-ring);
   --color-selection-bg: var(--gold);
   --color-selection-text: #241f0a;
   --color-success: var(--success);
@@ -313,6 +314,8 @@
 
 [data-theme="dark"] {
   color-scheme: dark;
+
+  --focus-ring: #f0c25a;
 
   --paper: #141914;
   --paper-deep: #101510;

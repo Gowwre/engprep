@@ -98,6 +98,7 @@ export const sheets: Sheet[] = [
     meta: '12 thì · 12 câu hỏi',
     questionCount: 12,
     sections: [
+      { id: 'quick-review', label: 'Ôn nhanh' },
       { id: 'map', label: 'Sơ đồ' },
       { id: 'timeline', label: 'Dòng thời gian' },
       { id: 'tenses', label: '12 thì' },
@@ -117,7 +118,7 @@ export const sheets: Sheet[] = [
         { value: '12', label: 'câu luyện tập' }
       ],
       actions: [
-        { label: 'Ôn 12 thì', href: '#tenses', variant: 'primary', icon: 'arrow' },
+        { label: 'Ôn nhanh 12 thì', href: '#quick-review', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 12 câu trắc nghiệm', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }

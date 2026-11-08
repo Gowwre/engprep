@@ -47,9 +47,11 @@ export function initFilter({
   countSuffix = '',
   includeData = true,
   matches,
-  shortcut = true
+  shortcut = true,
+  hashSection = '',
+  hashChange = true
 }) {
-  if (!search || !count || !empty) return;
+  if (!search || !count || !empty) return null;
 
   const itemList = Array.from(items);
   const tabList = Array.from(tabs);
@@ -83,12 +85,26 @@ export function initFilter({
     clear?.toggleAttribute('hidden', search.value.length === 0);
   }
 
-  function selectTab(tab) {
+  function selectTabValue(value) {
+    const tab = tabList.find((item) => (item.dataset[tabKey] || 'all') === value);
+    if (!tab) return;
     active = tab.dataset[tabKey] || 'all';
     tabList.forEach((item) => {
       item.setAttribute('aria-pressed', String(item === tab));
     });
     applyFilters();
+  }
+
+  function selectTab(tab) {
+    selectTabValue(tab.dataset[tabKey] || 'all');
+  }
+
+  function readHashPreset() {
+    if (!hashSection) return;
+    const hash = window.location.hash.replace(/^#/, '');
+    const prefix = `${hashSection}-`;
+    if (!hash.startsWith(prefix)) return;
+    selectTabValue(hash.slice(prefix.length));
   }
 
   tabList.forEach((tab) => {
@@ -138,4 +154,22 @@ export function initFilter({
   }
 
   applyFilters();
+  readHashPreset();
+
+  if (hashSection && hashChange) {
+    window.addEventListener('hashchange', readHashPreset);
+  }
+
+  return {
+    selectTab: selectTabValue,
+    setQuery(value) {
+      search.value = value;
+      applyFilters();
+    },
+    reset() {
+      selectTabValue('all');
+      search.value = '';
+      applyFilters();
+    }
+  };
 }

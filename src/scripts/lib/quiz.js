@@ -6,6 +6,23 @@
 
 const LETTERS = ['A', 'B', 'C', 'D'];
 const BEST_PREFIX = 'Điểm cao nhất của bạn: ';
+const HINT_KEY = 'engprep-hints-hidden';
+
+function readHintPreference() {
+  try {
+    return localStorage.getItem(HINT_KEY) === '1';
+  } catch (error) {
+    return false;
+  }
+}
+
+function writeHintPreference(value) {
+  try {
+    localStorage.setItem(HINT_KEY, value ? '1' : '0');
+  } catch (error) {
+    /* Preference is optional. */
+  }
+}
 
 /** Replace the first six-underscore gap with the shared gap markup. */
 export function formatGap(text) {
@@ -92,6 +109,7 @@ export function initQuiz({
   const quizScore = document.getElementById('quiz-score');
   const quizBest = document.getElementById('quiz-best');
   const quizProgress = document.querySelector('.quiz-progress');
+  const quizShell = document.querySelector('.quiz-shell');
 
   if (!quizStage || !quizStep || !quizBar || !quizScore || !quizBest) return;
 
@@ -100,6 +118,13 @@ export function initQuiz({
   let score = 0;
   let answers = [];
   let locked = false;
+  let hintsHidden = readHintPreference();
+
+  function applyHintPreference() {
+    if (quizShell) quizShell.classList.toggle('hints-hidden', hintsHidden);
+  }
+
+  applyHintPreference();
 
   if (quizProgress) {
     quizProgress.setAttribute('aria-valuemax', String(total));
@@ -144,6 +169,9 @@ export function initQuiz({
         <div class="quiz-meta">
           <span class="quiz-tag">${getLabel(item)}</span>
           <span class="quiz-instruction">${instruction}</span>
+          <button class="quiz-hint-toggle" type="button" aria-pressed="${hintsHidden}">
+            ${hintsHidden ? 'Hiện gợi ý' : 'Ẩn gợi ý'}
+          </button>
         </div>
         ${renderPrompt(item)}
         <p class="quiz-question" tabindex="-1">${renderQuestion(item.q)}</p>
@@ -163,6 +191,17 @@ export function initQuiz({
         chooseAnswer(Number(button.dataset.index));
       });
     });
+
+    const hintToggle = quizStage.querySelector('.quiz-hint-toggle');
+    if (hintToggle) {
+      hintToggle.addEventListener('click', () => {
+        hintsHidden = !hintsHidden;
+        writeHintPreference(hintsHidden);
+        applyHintPreference();
+        hintToggle.setAttribute('aria-pressed', String(hintsHidden));
+        hintToggle.textContent = hintsHidden ? 'Hiện gợi ý' : 'Ẩn gợi ý';
+      });
+    }
 
     document.getElementById('next-btn').addEventListener('click', nextQuestion);
   }
@@ -204,6 +243,7 @@ export function initQuiz({
     }
 
     feedback.hidden = false;
+    feedback.tabIndex = -1;
     answers.push({ questionIndex, chosen, isCorrect });
     quizScore.textContent = `${score} câu đúng`;
     hint.textContent = isCorrect
@@ -212,6 +252,14 @@ export function initQuiz({
     nextBtn.disabled = false;
     quizBar.style.width = `${(answers.length / total) * 100}%`;
     if (quizProgress) quizProgress.setAttribute('aria-valuenow', String(answers.length));
+
+    requestAnimationFrame(() => {
+      feedback.focus({ preventScroll: true });
+      feedback.scrollIntoView({
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+        block: 'center'
+      });
+    });
   }
 
   function nextQuestion() {
@@ -251,6 +299,7 @@ export function initQuiz({
               ${renderReviewPrompt(item)}
               <p class="review-q">${item.q}</p>
               <p class="review-a"><strong>${LETTERS[item.answer]}. ${item.options[item.answer]}</strong> · ${getLabel(item)}</p>
+              <p class="review-why">${item.explain}</p>
             </div>`;
         })
         .join('');

@@ -12,10 +12,30 @@ const { items } = Astro.props;
   <div class="container page-nav-inner">
     <span class="page-nav-label">Trong tờ</span>
     {items.map((item, index) => (
-      <a href={`#${item.id}`}>
+      <a class="page-nav-link" href={`#${item.id}`} data-label={item.label}>
         <span class="page-nav-no" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
         {item.label}
       </a>
     ))}
+  </div>
+
+  <div class="container page-nav-mobile">
+    <details class="page-nav-menu">
+      <summary class="page-nav-menu-summary">
+        <span class="page-nav-menu-label">Mục lục</span>
+        <span class="page-nav-menu-current" data-page-nav-current>{items[0]?.label ?? ''}</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m6 9 6 6 6-6" />
+        </svg>
+      </summary>
+      <div class="page-nav-menu-panel">
+        {items.map((item, index) => (
+          <a href={`#${item.id}`} data-label={item.label}>
+            <span class="page-nav-no" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+            {item.label}
+          </a>
+        ))}
+      </div>
+    </details>
   </div>
 </nav>
