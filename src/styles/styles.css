@@ -4225,3 +4225,32 @@
     font-size: 3.4pt;
   }
 }
+
+/* Quiz resume state */
+.quiz-resume {
+  padding: 10px 0 4px;
+}
+
+.quiz-resume-kicker {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.quiz-resume-title {
+  margin: 0 0 6px;
+  font-family: var(--font-display);
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+}
+
+.quiz-resume-copy {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}

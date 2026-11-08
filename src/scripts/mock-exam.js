@@ -4,6 +4,7 @@
    ========================================================= */
 
 import { formatGap } from './lib/quiz.js';
+import { recordMockResult } from './lib/progress.js';
 
 (function () {
   'use strict';
@@ -337,6 +338,10 @@ import { formatGap } from './lib/quiz.js';
   let remaining = DURATION;
   let submitted = false;
   let warningShown = false;
+  let fiveMinuteWarned = false;
+  let oneMinuteWarned = false;
+  let lastSaved = 0;
+  const STATE_KEY = 'engprep-mock-state-v1';
 
   const startPanel = document.getElementById('mx-start');
   const startBtn = document.getElementById('mx-start-btn');
@@ -352,6 +357,9 @@ import { formatGap } from './lib/quiz.js';
   const bestEl = document.getElementById('mx-best');
   const submitTop = document.getElementById('mx-submit-top');
   const submitBottom = document.getElementById('mx-submit');
+  const resumeBtn = document.getElementById('mx-resume-btn');
+  const mapEl = document.getElementById('mx-map');
+  const gotoMissing = document.getElementById('mx-goto-missing');
 
   if (!startPanel || !startBtn || !exam || !form || !result || !timerEl || !progressText || !barFill || !bestEl) {
     return;
@@ -378,6 +386,103 @@ import { formatGap } from './lib/quiz.js';
     bestEl.textContent = best > 0
       ? 'Điểm cao nhất của bạn: ' + best + '/' + total
       : 'Điểm cao nhất của bạn: chưa có';
+  }
+
+  function readMockState() {
+    try {
+      const raw = localStorage.getItem(STATE_KEY);
+      if (!raw) return null;
+      const state = JSON.parse(raw);
+      if (!state || !Array.isArray(state.answers) || state.answers.length !== total) return null;
+      if (state.submitted) return null;
+      return state;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function saveMockState() {
+    if (submitted) return;
+    try {
+      localStorage.setItem(
+        STATE_KEY,
+        JSON.stringify({
+          version: 1,
+          answers,
+          remaining,
+          savedAt: Date.now()
+        })
+      );
+      lastSaved = Date.now();
+    } catch (error) {
+      /* Resume is optional. */
+    }
+  }
+
+  function clearMockState() {
+    try {
+      localStorage.removeItem(STATE_KEY);
+    } catch (error) {
+      /* Ignore. */
+    }
+  }
+
+  function updateExamMap() {
+    if (!mapEl) return;
+    mapEl.querySelectorAll('button').forEach(function (button) {
+      const index = Number(button.dataset.qno) - 1;
+      const question = flatQuestions[index];
+      if (!question) return;
+      const answered = answers[question.index] !== null;
+      button.classList.toggle('is-answered', answered);
+      button.setAttribute('aria-label', `Câu ${question.no}, ${answered ? 'đã chọn' : 'chưa chọn'}`);
+    });
+  }
+
+  function renderExamMap() {
+    if (!mapEl) return;
+    mapEl.innerHTML = flatQuestions
+      .map(function (question) {
+        return `<button type="button" data-qno="${question.no}" aria-label="Câu ${question.no}, chưa chọn">${question.no}</button>`;
+      })
+      .join('');
+
+    mapEl.querySelectorAll('button').forEach(function (button) {
+      button.addEventListener('click', function () {
+        const question = flatQuestions[Number(button.dataset.qno) - 1];
+        if (!question) return;
+        const target = document.getElementById('mx-q-' + question.no);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const option = form.querySelector(`.mx-option[data-qindex="${question.index}"]`);
+        if (option) option.focus({ preventScroll: true });
+      });
+    });
+
+    updateExamMap();
+  }
+
+  function syncSelections() {
+    flatQuestions.forEach(function (question) {
+      const chosen = answers[question.index];
+      if (chosen === null) return;
+      form.querySelectorAll(`.mx-option[data-qindex="${question.index}"]`).forEach(function (button) {
+        button.classList.toggle('is-selected', Number(button.dataset.option) === chosen);
+        button.setAttribute('aria-pressed', String(Number(button.dataset.option) === chosen));
+      });
+    });
+  }
+
+  function jumpToMissing() {
+    const index = answers.findIndex(function (answer) { return answer === null; });
+    if (index === -1) {
+      if (barWarning) barWarning.textContent = 'Bạn đã chọn đủ 24 câu.';
+      return;
+    }
+    const question = flatQuestions[index];
+    const target = document.getElementById('mx-q-' + question.no);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const option = form.querySelector(`.mx-option[data-qindex="${question.index}"]`);
+    if (option) option.focus({ preventScroll: true });
   }
 
   function dictHtml(dict) {
@@ -448,6 +553,8 @@ import { formatGap } from './lib/quiz.js';
         '</section>'
       );
     }).join('');
+
+    renderExamMap();
   }
 
   function updateProgress() {
@@ -472,6 +579,18 @@ import { formatGap } from './lib/quiz.js';
     remaining = Math.max(0, DURATION - elapsed);
     updateTimer();
 
+    if (remaining <= 300 && !fiveMinuteWarned) {
+      fiveMinuteWarned = true;
+      if (barWarning) barWarning.textContent = 'Còn 5 phút. Ưu tiên câu chưa chọn.';
+    }
+
+    if (remaining <= 60 && !oneMinuteWarned) {
+      oneMinuteWarned = true;
+      if (barWarning) barWarning.textContent = 'Còn 1 phút. Kiểm tra các câu chưa chọn.';
+    }
+
+    if (Date.now() - lastSaved > 5000) saveMockState();
+
     if (remaining <= 0) {
       clearInterval(timerId);
       timerId = null;
@@ -480,19 +599,52 @@ import { formatGap } from './lib/quiz.js';
   }
 
   function startExam() {
+    clearMockState();
+    answers = new Array(total).fill(null);
     startPanel.hidden = true;
     result.hidden = true;
     exam.hidden = false;
     submitted = false;
     warningShown = false;
+    fiveMinuteWarned = false;
+    oneMinuteWarned = false;
     remaining = DURATION;
     startedAt = Date.now();
     if (timerId) clearInterval(timerId);
     timerId = setInterval(tick, 1000);
+    if (!form.children.length) renderExam();
+    syncSelections();
+    updateExamMap();
     updateTimer();
     updateProgress();
     if (warning) warning.textContent = '';
     if (barWarning) barWarning.textContent = '';
+    saveMockState();
+  }
+
+  function resumeExam(state) {
+    answers = state.answers.map(function (answer) {
+      return answer === null || answer === undefined ? null : Number(answer);
+    });
+    remaining = Math.max(1, Number(state.remaining) || DURATION);
+    startedAt = Date.now() - (DURATION - remaining) * 1000;
+    startPanel.hidden = true;
+    result.hidden = true;
+    exam.hidden = false;
+    submitted = false;
+    warningShown = false;
+    fiveMinuteWarned = remaining <= 300;
+    oneMinuteWarned = remaining <= 60;
+    if (!form.children.length) renderExam();
+    syncSelections();
+    updateExamMap();
+    updateTimer();
+    updateProgress();
+    if (warning) warning.textContent = '';
+    if (barWarning) barWarning.textContent = '';
+    if (timerId) clearInterval(timerId);
+    timerId = setInterval(tick, 1000);
+    if (resumeBtn) resumeBtn.hidden = true;
   }
 
   function selectAnswer(button) {
@@ -510,6 +662,8 @@ import { formatGap } from './lib/quiz.js';
     if (barWarning) barWarning.textContent = '';
     warningShown = false;
     updateProgress();
+    updateExamMap();
+    saveMockState();
   }
 
   function selectedText(question) {
@@ -653,6 +807,7 @@ import { formatGap } from './lib/quiz.js';
     }
 
     submitted = true;
+    clearMockState();
     if (timerId) {
       clearInterval(timerId);
       timerId = null;
@@ -664,6 +819,7 @@ import { formatGap } from './lib/quiz.js';
 
     const timeUsed = Math.min(DURATION, Math.max(0, DURATION - remaining));
     if (score > getBest()) saveBest(score);
+    recordMockResult(score, total);
 
     exam.hidden = true;
     startPanel.hidden = true;
@@ -678,6 +834,7 @@ import { formatGap } from './lib/quiz.js';
   }
 
   function resetExam() {
+    clearMockState();
     if (timerId) {
       clearInterval(timerId);
       timerId = null;
@@ -685,6 +842,8 @@ import { formatGap } from './lib/quiz.js';
     answers = new Array(total).fill(null);
     submitted = false;
     warningShown = false;
+    fiveMinuteWarned = false;
+    oneMinuteWarned = false;
     remaining = DURATION;
     updateTimer();
     updateProgress();
@@ -692,6 +851,7 @@ import { formatGap } from './lib/quiz.js';
     exam.hidden = true;
     result.hidden = true;
     startPanel.hidden = false;
+    if (resumeBtn) resumeBtn.hidden = true;
     if (warning) warning.textContent = '';
     if (barWarning) barWarning.textContent = '';
     updateBestLabel();
@@ -707,6 +867,15 @@ import { formatGap } from './lib/quiz.js';
   startBtn.addEventListener('click', startExam);
   if (submitTop) submitTop.addEventListener('click', function () { submitExam(false); });
   if (submitBottom) submitBottom.addEventListener('click', function () { submitExam(false); });
+  if (gotoMissing) gotoMissing.addEventListener('click', jumpToMissing);
+
+  const savedMockState = readMockState();
+  if (savedMockState && resumeBtn) {
+    resumeBtn.hidden = false;
+    resumeBtn.addEventListener('click', function () {
+      resumeExam(savedMockState);
+    });
+  }
 
   renderExam();
   updateTimer();

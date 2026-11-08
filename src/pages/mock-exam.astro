@@ -199,7 +199,7 @@ import '../styles/mock-exam.css';
   </section>
 
   <!-- EXAM -->
-  <section class="section" id="exam">
+  <section class="section" id="exam" data-accent="mock">
     <div class="container">
       <div class="mx-start" id="mx-start">
         <p class="section-kicker">03 · Làm bài</p>
@@ -214,6 +214,7 @@ import '../styles/mock-exam.css';
           Bắt đầu tính giờ
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
+        <button class="btn btn-ghost" id="mx-resume-btn" type="button" hidden>Tiếp tục bài đang làm</button>
         <p class="mx-best" id="mx-best" aria-live="polite">Điểm cao nhất của bạn: chưa có</p>
       </div>
 
@@ -231,6 +232,14 @@ import '../styles/mock-exam.css';
           </div>
           <button class="btn btn-primary btn-small" id="mx-submit-top" type="button">Nộp bài</button>
           <span class="mx-bar-warning" id="mx-bar-warning" role="status"></span>
+        </div>
+
+        <div class="mx-map-wrap">
+          <div class="mx-map-head">
+            <span>Bảng câu hỏi</span>
+            <button class="mx-map-jump" id="mx-goto-missing" type="button">Đi đến câu chưa chọn →</button>
+          </div>
+          <div class="mx-map" id="mx-map" aria-label="Bảng câu hỏi"></div>
         </div>
 
         <div class="mx-form" id="mx-form"></div>

@@ -4,6 +4,8 @@
    copy and optional prompt/review markup.
    ========================================================= */
 
+import { migrateSheetBest, recordSheetResult } from './progress.js';
+
 const LETTERS = ['A', 'B', 'C', 'D'];
 const BEST_PREFIX = 'Điểm cao nhất của bạn: ';
 const HINT_KEY = 'engprep-hints-hidden';
@@ -119,6 +121,81 @@ export function initQuiz({
   let answers = [];
   let locked = false;
   let hintsHidden = readHintPreference();
+  const slug = storageKey.replace(/^engprep-/, '').replace(/-best$/, '');
+  const stateKey = `${storageKey}-state`;
+
+  function readState() {
+    try {
+      const raw = localStorage.getItem(stateKey);
+      if (!raw) return null;
+      const state = JSON.parse(raw);
+      if (!state || !Array.isArray(state.answers) || state.answers.length === 0) return null;
+      if (state.answers.length > total) return null;
+      return state;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function saveState() {
+    if (answers.length === 0) return;
+    try {
+      localStorage.setItem(
+        stateKey,
+        JSON.stringify({
+          version: 1,
+          answers,
+          score,
+          updatedAt: new Date().toISOString()
+        })
+      );
+    } catch (error) {
+      /* Resume is optional. */
+    }
+  }
+
+  function clearState() {
+    try {
+      localStorage.removeItem(stateKey);
+    } catch (error) {
+      /* Ignore. */
+    }
+  }
+
+  function renderResumePanel(state) {
+    const done = state.answers.length;
+    quizStep.textContent = `Đã làm ${done} / ${total}`;
+    quizScore.textContent = `${Number(state.score) || 0} câu đúng`;
+    quizBar.style.width = `${(done / total) * 100}%`;
+    if (quizProgress) quizProgress.setAttribute('aria-valuenow', String(done));
+    quizStage.innerHTML = `
+      <div class="quiz-body">
+        <div class="quiz-resume">
+          <p class="quiz-resume-kicker">Bài đang làm dở</p>
+          <h3 class="quiz-resume-title">Bạn đã làm ${done}/${total} câu.</h3>
+          <p class="quiz-resume-copy">Điểm hiện tại: ${state.score ?? 0} câu đúng. Tiếp tục từ câu ${Math.min(done + 1, total)} hoặc làm lại từ đầu.</p>
+          <div class="result-actions">
+            <button class="btn btn-primary" id="resume-btn" type="button">Tiếp tục bài làm</button>
+            <button class="btn btn-ghost" id="resume-restart" type="button">Làm lại từ đầu</button>
+          </div>
+        </div>
+      </div>`;
+
+    document.getElementById('resume-btn').addEventListener('click', () => {
+      answers = state.answers;
+      score = Number(state.score) || 0;
+      questionIndex = answers.length;
+      if (questionIndex >= total) {
+        showResults();
+        return;
+      }
+      renderCurrentQuestion();
+      const heading = quizStage.querySelector('.quiz-question');
+      if (heading) heading.focus({ preventScroll: true });
+    });
+
+    document.getElementById('resume-restart').addEventListener('click', restartQuiz);
+  }
 
   function applyHintPreference() {
     if (quizShell) quizShell.classList.toggle('hints-hidden', hintsHidden);
@@ -245,6 +322,7 @@ export function initQuiz({
     feedback.hidden = false;
     feedback.tabIndex = -1;
     answers.push({ questionIndex, chosen, isCorrect });
+    saveState();
     quizScore.textContent = `${score} câu đúng`;
     hint.textContent = isCorrect
       ? 'Làm tốt lắm. Bấm tiếp tục nhé.'
@@ -278,6 +356,9 @@ export function initQuiz({
 
   function showResults() {
     const copy = resultCopy(score, total);
+    const wrong = answers.filter((answer) => !answer.isCorrect).map((answer) => answer.questionIndex);
+    clearState();
+    recordSheetResult(slug, score, total, wrong);
     const best = getBest();
     if (score > best) writeBest(storageKey, score);
     updateBestLabel();
@@ -337,6 +418,7 @@ export function initQuiz({
   }
 
   function restartQuiz() {
+    clearState();
     questionIndex = 0;
     score = 0;
     answers = [];
@@ -347,5 +429,11 @@ export function initQuiz({
   }
 
   updateBestLabel();
-  renderCurrentQuestion();
+  migrateSheetBest(slug, getBest(), total);
+  const savedState = readState();
+  if (savedState) {
+    renderResumePanel(savedState);
+  } else {
+    renderCurrentQuestion();
+  }
 }
