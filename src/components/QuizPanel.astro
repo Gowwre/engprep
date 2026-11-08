@@ -6,9 +6,9 @@ interface Props {
 const { total } = Astro.props;
 ---
 
-<p class="quiz-best" id="quiz-best" aria-live="polite">Điểm cao nhất của bạn: chưa có</p>
+<p class="quiz-best" id="quiz-best" aria-live="polite" data-pagefind-ignore>Điểm cao nhất của bạn: chưa có</p>
 
-<div class="quiz-shell">
+<div class="quiz-shell" data-pagefind-ignore>
   <div class="quiz-top">
     <span class="quiz-step" id="quiz-step">Câu 1 / {total}</span>
     <div
@@ -26,7 +26,7 @@ const { total } = Astro.props;
   <div class="quiz-stage" id="quiz-stage" aria-live="polite"></div>
 </div>
 
-<noscript>
+<noscript data-pagefind-ignore>
   <p class="quiz-noscript">
     Bật JavaScript để làm bài luyện tập tương tác. Phần tờ ôn phía trên vẫn đọc được bình thường.
   </p>

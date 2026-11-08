@@ -4,6 +4,7 @@
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import PageNav from '../components/PageNav.astro';
+import SearchDialog from '../components/SearchDialog.astro';
 import { getSheet, sheets, type SheetNavItem, type SheetSlug } from '../data/sheets';
 import { sitePath } from '../lib/urls';
 import beVietnamFont from '../assets/fonts/be-vietnam-pro-vietnamese-400.woff2?url';
@@ -36,6 +37,7 @@ const {
 } = Astro.props;
 
 const sheet = current === 'home' || current === 'design-system' ? null : getSheet(current);
+const searchCardNo = sheet?.cardNo.split(' ')[0];
 const origin = Astro.site ?? Astro.url;
 const canonical = new URL(Astro.url.pathname, origin).href;
 const ogImageUrl = new URL(ogImage, origin).href;
@@ -164,14 +166,25 @@ const favicon =
     <SiteHeader current={current} />
     {pageNav.length > 0 && <PageNav items={pageNav} />}
 
-    <main id="main">
+    <main
+      id="main"
+      data-pagefind-body={sheet ? '' : undefined}
+      data-sheet-title={sheet?.title}
+      data-sheet-card={searchCardNo}
+      data-sheet-accent={sheet?.accent}
+      data-pagefind-meta={sheet
+        ? 'title[data-sheet-title], sheet[data-sheet-title], cardNo[data-sheet-card], accent[data-sheet-accent]'
+        : undefined}
+    >
       <slot />
     </main>
 
     <SiteFooter current={current} />
+    <SearchDialog />
 
     <script>
       import '../scripts/site.js';
+      import '../scripts/search.js';
     </script>
   </body>
 </html>

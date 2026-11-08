@@ -37,7 +37,7 @@ import { quickReviews } from '../data/quick-review';
   <QuickReview slug="tenses" accent="tenses" content={quickReviews.tenses!} />
 
   <!-- MAP -->
-  <section class="section" id="map">
+  <section class="section" id="map" data-pagefind-title="Sơ đồ">
     <div class="container">
       <SectionHead kicker="01 · Sơ đồ" title="Nhìn một lần, thấy cả 12 thì.">
         Bốn dạng, ba mốc thời gian. Bấm vào ô bất kỳ để xem chi tiết bên dưới.
@@ -86,7 +86,7 @@ import { quickReviews } from '../data/quick-review';
           </tbody>
         </TableShell>
 
-        <div class="map-mobile" aria-label="Sơ đồ 12 thì theo mốc thời gian">
+        <div class="map-mobile" aria-label="Sơ đồ 12 thì theo mốc thời gian" data-pagefind-ignore>
           <section class="map-mobile-group">
             <h3><span class="map-dot"></span>Hiện tại</h3>
             <div class="map-mobile-list">
@@ -121,7 +121,7 @@ import { quickReviews } from '../data/quick-review';
   </section>
 
   <!-- TIMELINE -->
-  <section class="section section-alt section-timeline" id="timeline">
+  <section class="section section-alt section-timeline" id="timeline" data-pagefind-title="Dòng thời gian">
     <div class="container">
       <SectionHead kicker="02 · Dòng thời gian" title="12 thì trên một trục thời gian.">
         Mỗi hàng là một dạng thì. Chấm tròn thể hiện hành động ngắn, thanh dài thể hiện hành động kéo dài, dấu ✓ nghĩa là đã hoàn thành trước một mốc. Bấm vào từng thì để xem chi tiết.
@@ -224,7 +224,7 @@ import { quickReviews } from '../data/quick-review';
   </section>
 
   <!-- TENSES -->
-  <section class="section" id="tenses">
+  <section class="section" id="tenses" data-pagefind-title="12 thì">
     <div class="container">
       <SectionHead kicker="03 · Tổng hợp" title="12 thì, đủ để thi.">
         Mỗi thẻ có công thức, cách dùng, dấu hiệu, ví dụ và lỗi thường gặp. Dùng nút lọc hoặc ô tìm kiếm khi cần ôn nhanh.
@@ -583,7 +583,7 @@ import { quickReviews } from '../data/quick-review';
   </section>
 
   <!-- COMPARE -->
-  <section class="section section-alt" id="compare">
+  <section class="section section-alt" id="compare" data-pagefind-title="So sánh">
     <div class="container">
       <SectionHead kicker="04 · Dễ nhầm" title="Bốn cặp thì hay bị hỏi.">
         Đây là những chỗ đề thi lớp 9 thường gài bẫy. Đọc kỹ ví dụ và mốc thời gian.
@@ -670,7 +670,7 @@ import { quickReviews } from '../data/quick-review';
   </section>
 
   <!-- SIGNALS -->
-  <section class="section" id="signals">
+  <section class="section" id="signals" data-pagefind-title="Dấu hiệu">
     <div class="container">
       <SectionHead kicker="05 · Giải mã đề" title="Thấy từ khoá, nghĩ ngay đến thì nào?">
         Dấu hiệu chỉ là gợi ý — hãy đọc cả câu để xác định mốc thời gian và ý nghĩa.
@@ -745,7 +745,7 @@ import { quickReviews } from '../data/quick-review';
   </section>
 
   <!-- TRAPS -->
-  <section class="section section-alt traps-start" id="traps">
+  <section class="section section-alt traps-start" id="traps" data-pagefind-title="Bẫy đề">
     <div class="container">
       <SectionHead kicker="06 · Bẫy đề" title="Tám lỗi rất dễ mất điểm.">
         Đọc câu sai, câu đúng và lý do. Đây là những lỗi học sinh lớp 9 hay mắc nhất khi làm bài về thì.
@@ -805,7 +805,7 @@ import { quickReviews } from '../data/quick-review';
   </section>
 
   <!-- QUIZ -->
-  <section class="section section-quiz" id="quiz">
+  <section class="section section-quiz" id="quiz" data-pagefind-title="Luyện tập">
     <div class="container">
       <SectionHead kicker="07 · Luyện tập" title="Kiểm tra 12 thì trong 12 câu." center>
         Chọn đáp án đúng. Mỗi câu đều có giải thích ngay sau khi trả lời.

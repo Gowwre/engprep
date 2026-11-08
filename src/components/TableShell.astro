@@ -10,7 +10,7 @@ const { wrapperClass, tableClass, caption, hint = false } = Astro.props;
 ---
 
 {hint && (
-  <p class="table-hint no-print">
+  <p class="table-hint no-print" data-pagefind-ignore>
     Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span>
   </p>
 )}

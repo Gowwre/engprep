@@ -16,7 +16,7 @@ const panelId = (id: string) => `qr-${slug}-${id}`;
 const tabId = (id: string) => `qr-${slug}-${id}-tab`;
 ---
 
-<section class="section quick-review no-print" id="quick-review" data-accent={accent} data-quick-review>
+<section class="section quick-review no-print" id="quick-review" data-accent={accent} data-quick-review data-pagefind-title="Ôn nhanh">
   <noscript>
     <style>
       .qr-tabs { display: none !important; }
@@ -30,7 +30,7 @@ const tabId = (id: string) => `qr-${slug}-${id}-tab`;
     </SectionHead>
 
     <div class="qr-shell">
-      <div class="qr-tabs" role="tablist" aria-label="Nội dung ôn nhanh">
+      <div class="qr-tabs" role="tablist" aria-label="Nội dung ôn nhanh" data-pagefind-ignore>
         {tabs.map((tab) => (
           <button
             class="qr-tab"
@@ -69,7 +69,7 @@ const tabId = (id: string) => `qr-${slug}-${id}-tab`;
         ))}
       </div>
 
-      <div class="qr-foot">
+      <div class="qr-foot" data-pagefind-ignore>
         <a class="btn btn-primary btn-small" href={content.quizHref ?? '#quiz'}>
           {content.quizLabel ?? 'Làm bài kiểm tra'}
         </a>

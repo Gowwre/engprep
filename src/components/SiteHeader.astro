@@ -49,6 +49,22 @@ const headerAccent = current === 'home' || current === 'design-system' ? 'tenses
     </nav>
 
     <div class="header-actions">
+      <button
+        class="icon-btn search-toggle no-print"
+        id="search-btn"
+        type="button"
+        data-search-open
+        aria-label="Tìm kiếm trong 12 tờ"
+        aria-haspopup="dialog"
+        aria-keyshortcuts="Control+K Meta+K"
+        title="Tìm kiếm (Ctrl/Cmd K)"
+        hidden
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" />
+          <path d="M20 20l-3.5-3.5" />
+        </svg>
+      </button>
       {current !== 'home' && (
         <button class="icon-btn no-print" type="button" data-print aria-label="In trang này" title="In trang này">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">

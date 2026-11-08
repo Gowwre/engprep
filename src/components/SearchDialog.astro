@@ -1,0 +1,104 @@
+---
+const suggestions = [
+  '12 thì',
+  'giới từ',
+  'since / for',
+  'however',
+  'biển báo',
+  'trọng âm',
+  'câu điều kiện',
+  'từ loại'
+];
+---
+
+<div class="site-search" data-search-root>
+  <dialog
+    class="search-dialog"
+    id="site-search"
+    aria-labelledby="site-search-title"
+    aria-describedby="site-search-hint"
+  >
+    <div class="search-panel">
+      <div class="search-head">
+        <h2 class="sr-only" id="site-search-title">Tìm kiếm trong 12 tờ ôn thi</h2>
+
+        <form class="search-form" role="search" data-search-form>
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" />
+            <path d="M20 20l-3.5-3.5" />
+          </svg>
+          <label class="sr-only" for="site-search-input">Tìm trong nội dung 12 tờ</label>
+          <input
+            id="site-search-input"
+            type="search"
+            placeholder="Tìm trong 12 tờ: “since”, “biển báo”, “câu điều kiện”…"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            enterkeyhint="search"
+            aria-controls="site-search-results"
+            data-search-input
+          />
+          <button class="search-dialog-clear" type="button" data-search-clear aria-label="Xoá từ khoá" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
+        </form>
+
+        <button class="search-close" type="button" data-search-close aria-label="Đóng tìm kiếm">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+          <span class="search-close-label">Đóng</span>
+        </button>
+      </div>
+
+      <p class="sr-only" id="site-search-hint">
+        Nhập từ khoá tiếng Việt hoặc tiếng Anh. Dùng phím mũi tên để chọn kết quả, Enter để mở, Escape để đóng.
+      </p>
+
+      <div class="search-status" data-search-status role="status" aria-live="polite"></div>
+
+      <div class="search-body" data-search-body>
+        <div class="search-intro" data-search-intro>
+          <p class="search-intro-label">Gợi ý tìm nhanh</p>
+          <div class="search-chips">
+            {suggestions.map((suggestion) => (
+              <button class="search-chip" type="button" data-search-suggestion={suggestion}>
+                {suggestion}
+              </button>
+            ))}
+          </div>
+          <p class="search-intro-note">
+            Tìm trong toàn bộ nội dung của 12 tờ: công thức, bảng tra, bẫy đề và ví dụ.
+          </p>
+        </div>
+
+        <div class="search-loading" data-search-loading hidden aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+
+        <div class="search-results" id="site-search-results" data-search-results hidden></div>
+
+        <div class="search-empty" data-search-empty role="status" hidden>
+          <p class="search-empty-title">Không tìm thấy mục phù hợp.</p>
+          <p>Thử từ khoá khác, hoặc chọn một tờ ở trang chủ.</p>
+        </div>
+
+        <div class="search-error" data-search-error role="alert" hidden>
+          <p class="search-error-title">Chưa tải được chỉ mục tìm kiếm.</p>
+          <p data-search-error-text>Thử tải lại trang.</p>
+        </div>
+      </div>
+
+      <div class="search-foot">
+        <span><kbd>↑</kbd><kbd>↓</kbd> chọn</span>
+        <span><kbd>↵</kbd> mở</span>
+        <span><kbd>Esc</kbd> đóng</span>
+        <span class="search-foot-spacer"></span>
+        <span class="search-foot-brand">EngPrep</span>
+      </div>
+    </div>
+  </dialog>
+</div>

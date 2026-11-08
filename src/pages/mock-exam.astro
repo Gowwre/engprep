@@ -44,7 +44,7 @@ import '../styles/mock-exam.css';
   <QuickReview slug="mock-exam" accent="mock" content={quickReviews['mock-exam']!} />
 
   <!-- STRUCTURE -->
-  <section class="section" id="structure">
+  <section class="section" id="structure" data-pagefind-title="Cấu trúc">
     <div class="container">
       <SectionHead kicker="01 · Cấu trúc" title="Đề 24 câu, 8 nhóm.">
         Đây là đề rút gọn để luyện tổng hợp, không phải đề thi chính thức. Cấu trúc bám theo bảy phần quen thuộc, chia thành 8 nhóm câu trong 24 câu và 45 phút.
@@ -142,7 +142,7 @@ import '../styles/mock-exam.css';
   </section>
 
   <!-- STRATEGY -->
-  <section class="section section-alt" id="strategy">
+  <section class="section section-alt" id="strategy" data-pagefind-title="Chiến lược">
     <div class="container">
       <SectionHead kicker="02 · Chiến lược" title="45 phút: chia thế nào?">
         Đừng làm lần lượt từ câu 1 đến 24 nếu bị kẹt. Lượt đầu hãy lấy điểm chắc, sau đó mới quay lại câu khó.
@@ -200,7 +200,7 @@ import '../styles/mock-exam.css';
   </section>
 
   <!-- EXAM -->
-  <section class="section" id="exam" data-accent="mock">
+  <section class="section" id="exam" data-accent="mock" data-pagefind-title="Làm bài">
     <div class="container">
       <div class="mx-start" id="mx-start">
         <p class="section-kicker">03 · Làm bài</p>
@@ -211,15 +211,15 @@ import '../styles/mock-exam.css';
           <div><strong>45</strong><span>phút</span></div>
           <div><strong>8</strong><span>nhóm câu</span></div>
         </div>
-        <button class="btn btn-primary" id="mx-start-btn" type="button">
+        <button class="btn btn-primary" id="mx-start-btn" type="button" data-pagefind-ignore>
           Bắt đầu tính giờ
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
-        <button class="btn btn-ghost" id="mx-resume-btn" type="button" hidden>Tiếp tục bài đang làm</button>
-        <p class="mx-best" id="mx-best" aria-live="polite">Điểm cao nhất của bạn: chưa có</p>
+        <button class="btn btn-ghost" id="mx-resume-btn" type="button" hidden data-pagefind-ignore>Tiếp tục bài đang làm</button>
+        <p class="mx-best" id="mx-best" aria-live="polite" data-pagefind-ignore>Điểm cao nhất của bạn: chưa có</p>
       </div>
 
-      <div class="mx-exam" id="mx-exam" hidden>
+      <div class="mx-exam" id="mx-exam" hidden data-pagefind-ignore>
         <div class="mx-bar" id="mx-bar">
           <div class="mx-bar-time">
             <span>Thời gian</span>
@@ -251,9 +251,9 @@ import '../styles/mock-exam.css';
         </div>
       </div>
 
-      <div class="mx-result" id="mx-result" hidden></div>
+      <div class="mx-result" id="mx-result" hidden data-pagefind-ignore></div>
 
-      <noscript><p class="quiz-noscript">Bật JavaScript để làm đề thi thử tương tác. Phần cấu trúc và chiến lược phía trên vẫn đọc được bình thường.</p></noscript>
+      <noscript data-pagefind-ignore><p class="quiz-noscript">Bật JavaScript để làm đề thi thử tương tác. Phần cấu trúc và chiến lược phía trên vẫn đọc được bình thường.</p></noscript>
     </div>
   </section>
 

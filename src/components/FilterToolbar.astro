@@ -31,7 +31,7 @@ const {
 } = Astro.props;
 ---
 
-<div class:list={['toolbar', className]}>
+<div class:list={['toolbar', className]} data-pagefind-ignore>
   <div class="filter-tabs" role="group" aria-label={ariaLabel}>
     {tabs.map((tab) => (
       <button

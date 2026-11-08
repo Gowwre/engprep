@@ -13,6 +13,8 @@ npm run dev
 
 Mặc định Astro chạy ở `http://localhost:4321`.
 
+Tìm kiếm toàn site dùng chỉ mục Pagefind tạo lúc build. Chạy `npm run build` một lần trước khi `npm run dev` (và chạy lại sau khi đổi nội dung) để dev server phục vụ chỉ mục mới nhất.
+
 ## Build và preview
 
 ```bash
@@ -27,9 +29,10 @@ npm run preview
 npm run check
 npm run build
 npm run qa:links
+npm run qa:search
 ```
 
-`qa:links` kiểm tra anchor nội bộ bị thiếu và id trùng trong toàn bộ trang đã build.
+`qa:links` kiểm tra anchor nội bộ bị thiếu và id trùng trong toàn bộ trang đã build. `qa:search` kiểm tra chỉ mục Pagefind và các marker tìm kiếm trên 12 tờ.
 
 ## Bản in / PDF
 
@@ -50,6 +53,20 @@ Quiz và đề thi thử lưu tiến độ cục bộ trong `localStorage`:
 - `engprep-mock-state-v1`: bài thi thử đang làm dở.
 
 Không có tài khoản và không gửi dữ liệu lên server.
+
+## Tìm kiếm toàn site
+
+Tìm kiếm dùng [Pagefind](https://pagefind.app/): chỉ mục được tạo một lần sau khi build, trình duyệt chỉ tải phần chỉ mục cần cho từ khoá. Không có server, không gửi truy vấn đi đâu.
+
+- Nút tìm kiếm ở header trên mọi trang, mở bằng `Ctrl/Cmd+K`.
+- Kết quả được nhóm theo tờ và trỏ đến đúng section, ví dụ `#present-perfect` hoặc `#traps`.
+- Phím `/` vẫn dành cho ô lọc của từng trang; tìm kiếm toàn site dùng `Ctrl/Cmd+K`.
+- Chỉ 12 tờ ôn thi được đánh chỉ mục. Trang chủ, bản in, design system, OG và session deck bị loại.
+- Nội dung trùng lặp trên mobile, toolbar lọc, khung quiz và nội dung trang trí bị loại bằng `data-pagefind-ignore` / `excludeSelectors` trong `scripts/search-integration.mjs`.
+
+Chỉ mục nằm ở `dist/pagefind/` và được tạo tự động trong `npm run build`. Khi chạy `npm run dev`, dev server phục vụ chỉ mục đã build gần nhất; chạy `npm run build` một lần sau khi đổi nội dung để cập nhật kết quả tìm kiếm.
+
+Khi thêm section mới cho một tờ, thêm `data-pagefind-title="<nhãn section>"` vào `<section id="...">` để Pagefind tách kết quả theo section. `data-pagefind-body` và metadata của tờ đã được đặt tự động trong `BaseLayout`.
 
 ## Open Graph
 
@@ -103,6 +120,7 @@ src/
 │   ├── QuizPanel.astro    # khung quiz dùng chung cho mọi tờ
 │   ├── QuickReview.astro  # lớp Ôn nhanh 3 tab
 │   ├── PrintSheet.astro   # bản in một trang
+│   ├── SearchDialog.astro # command palette tìm kiếm toàn site
 │   ├── SectionHead.astro  # kicker + tiêu đề + lead + aside
 │   ├── SignalCard.astro   # dấu hiệu nhận biết → thì
 │   ├── SiteFooter.astro
@@ -138,6 +156,7 @@ src/
 │   ├── generate-og.mjs    # render PNG vào public/og/
 │   ├── generate-pdf.mjs   # render PDF vào public/pdf/
 │   ├── home.js            # tab trang chủ, tìm tờ, tiến độ
+│   ├── search.js          # tải Pagefind, lọc/nhóm kết quả, bàn phím
 │   ├── site.js            # theme, menu, print, scrollspy
 │   └── <slug>.js          # câu hỏi + cấu hình riêng của từng tờ
 └── styles/
@@ -148,12 +167,15 @@ src/
     ├── figures.css        # khung figure, caption và legend dùng chung
     ├── quick-review.css   # lớp Ôn nhanh
     ├── print.css          # bản in A4 và preview
-    ├── global.css         # entry point: fonts + tokens + base + ui + styles + quick-review + figures
+    ├── global.css         # entry point: fonts + tokens + base + ui + styles + quick-review + figures + search
+    ├── search.css         # command palette, nhóm kết quả, mobile, dark mode
     ├── styles.css         # layout, header/footer, hero, quiz shell, 12 thì
     ├── og.css             # style cho ảnh Open Graph
     ├── design-system.css  # layout riêng của trang style guide
     └── <slug>.css         # style riêng, chỉ load ở page tương ứng
 ```
+
+Các script ở thư mục `scripts/` gốc repo: `search-integration.mjs` (tạo chỉ mục Pagefind khi build và phục vụ trong dev), `generate-og.mjs`, `generate-pdf.mjs`, `qa-links.mjs`, `qa-search.mjs`.
 
 Mỗi page import `global.css` trước rồi mới import CSS riêng của trang:
 
@@ -177,6 +199,7 @@ Class nào được dùng ở nhiều trang phải nằm trong `styles.css` ho�
    - tiêu đề, mô tả, badge, preview, highlights
    - `questionCount` phải khớp số câu trong script của trang
    - `sections` cho thanh điều hướng trong trang
+   - mỗi `<section id="...">` cần thêm `data-pagefind-title="<nhãn>"` để tìm kiếm trả về đúng section
    - `hero` cho phần mở đầu
    - `accent`: hiện có `tenses`, `prep`, `word`, `reading`, `sound`, `write`, `vocab`, `cloze`, `signs`, `grammar`, `sentence` và `mock`; thêm biến thể CSS nếu muốn màu mới
 2. Tạo `src/pages/<slug>.astro`, import `global.css`, layout, các component dùng chung và CSS riêng như mẫu ở trên.

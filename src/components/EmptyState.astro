@@ -18,7 +18,7 @@ const {
 } = Astro.props;
 ---
 
-<div class:list={['empty-state', className]} id={id} hidden>
+<div class:list={['empty-state', className]} id={id} hidden data-pagefind-ignore>
   <p class="empty-title">{title}</p>
   <p>{text}</p>
   <button class="btn btn-ghost" id={resetId} type="button">{resetLabel}</button>

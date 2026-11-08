@@ -142,6 +142,8 @@ export function initFilter({
     shortcutBound = true;
 
     document.addEventListener('keydown', (event) => {
+      if (document.querySelector('dialog[open]')) return;
+
       const tag = document.activeElement ? document.activeElement.tagName : '';
       const isTyping = tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
 
