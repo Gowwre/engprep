@@ -6,7 +6,7 @@
 /* ---------- Hero ---------- */
 
 .vc-stack {
-  height: 400px;
+  min-height: 400px;
 }
 
 .vc-stack .stack-card-back {
@@ -39,14 +39,14 @@
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
 .vc-mini-word span {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   letter-spacing: 0;
 }
@@ -54,14 +54,14 @@
 .vc-mini-def {
   margin: 2px 0 8px;
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   line-height: 1.4;
 }
 
 .vc-mini-colloc {
   margin: 0;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.875rem;
   line-height: 1.65;
 }
 
@@ -77,7 +77,7 @@
 .vc-mini-question {
   margin: 12px 0 4px;
   color: var(--muted);
-  font-size: 0.65rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -87,7 +87,7 @@
   margin: 0;
   color: var(--success);
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.9375rem;
   font-weight: 700;
   line-height: 1.5;
 }
@@ -97,7 +97,7 @@
   padding-top: 9px;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.64rem;
+  font-size: 0.8125rem;
   line-height: 1.45;
 }
 
@@ -157,7 +157,7 @@
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.35rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.12;
 }
 
@@ -196,22 +196,22 @@
   font-family: var(--font-display);
   font-size: 2rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1;
 }
 
 .vc-web-plus {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.8125rem;
   line-height: 1.3;
 }
 
 .vc-web-hub strong {
   color: var(--cobalt);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-weight: 800;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   line-height: 1.3;
   text-transform: uppercase;
 }
@@ -234,7 +234,7 @@
   display: block;
   color: var(--cobalt);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.4;
 }
@@ -243,7 +243,7 @@
   display: block;
   margin-top: 2px;
   color: var(--ink);
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -252,7 +252,7 @@
   display: block;
   margin-top: 2px;
   color: var(--muted);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-style: normal;
   line-height: 1.4;
 }
@@ -264,7 +264,7 @@
   border-radius: 0 7px 7px 0;
   color: var(--muted);
   background: var(--gold-bg);
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -274,7 +274,7 @@
 
 .vc-toolbar .filter-tab {
   padding-inline: 9px;
-  font-size: 0.73rem;
+  font-size: 0.875rem;
 }
 
 .vc-table-wrap {
@@ -290,7 +290,7 @@
   width: 100%;
   min-width: 840px;
   border-collapse: collapse;
-  font-size: 0.79rem;
+  font-size: 0.875rem;
 }
 
 .vc-table thead th {
@@ -298,9 +298,9 @@
   border-bottom: 1.5px solid var(--line);
   color: var(--muted);
   background: var(--surface-2);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-align: left;
   text-transform: uppercase;
   white-space: nowrap;
@@ -334,7 +334,7 @@
   border-radius: 4px;
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.67rem;
+  font-size: 0.8125rem;
   white-space: nowrap;
 }
 
@@ -357,7 +357,7 @@
   padding: 2px 7px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   font-weight: 800;
   line-height: 1.5;
   white-space: nowrap;
@@ -437,9 +437,9 @@
 .vc-topic-label {
   margin: 0 0 3px;
   color: var(--topic);
-  font-size: 0.56rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -447,7 +447,7 @@
   margin: 0 0 9px;
   font-family: var(--font-display);
   font-size: 1.16rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
@@ -463,7 +463,7 @@
   border-radius: 5px;
   background: var(--topic-bg);
   font-family: var(--font-mono);
-  font-size: 0.61rem;
+  font-size: 0.8125rem;
   line-height: 1.55;
 }
 
@@ -495,20 +495,20 @@
   color: var(--olive);
   font-family: var(--font-display);
   font-size: 1.5rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.1;
 }
 
 .vc-entry-head span {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.8125rem;
 }
 
 .vc-entry-def {
   margin: 7px 0 10px;
   color: var(--muted);
-  font-size: 0.73rem;
+  font-size: 0.875rem;
   font-style: italic;
   line-height: 1.5;
 }
@@ -525,7 +525,7 @@
   color: var(--ink);
   background: transparent;
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -540,7 +540,7 @@
 
 .vc-entry-line span {
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -562,14 +562,14 @@
 .vc-step > span {
   color: var(--olive);
   font-family: var(--font-mono);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-weight: 800;
 }
 
 .vc-step h3 {
   margin: 2px 0 4px;
   font-family: var(--font-display);
-  font-size: 0.98rem;
+  font-size: 1rem;
   letter-spacing: -0.01em;
   line-height: 1.2;
 }
@@ -577,7 +577,7 @@
 .vc-step p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -597,7 +597,7 @@
   border: 1px solid var(--olive-line);
   border-radius: 5px;
   background: var(--surface);
-  font-size: 0.64rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -659,7 +659,7 @@
   .vc-toolbar .filter-tab {
     flex: 1 1 auto;
     padding-inline: 7px;
-    font-size: 0.68rem;
+    font-size: 0.8125rem;
   }
 }
 
@@ -674,7 +674,7 @@
   }
 
   .vc-stack {
-    height: 390px;
+    min-height: 390px;
   }
 
   .vc-entry-line {

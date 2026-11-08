@@ -6,7 +6,7 @@
 /* ---------- Hero ---------- */
 
 .gr-stack {
-  height: 420px;
+  min-height: 420px;
 }
 
 .gr-stack .stack-card-back {
@@ -46,9 +46,9 @@
   display: block;
   margin-bottom: 1px;
   color: var(--berry);
-  font-size: 0.48rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -62,7 +62,7 @@
 
 .gr-mini-case p {
   margin: 0;
-  font-size: 0.74rem;
+  font-size: 0.875rem;
   line-height: 1.45;
 }
 
@@ -80,7 +80,7 @@
   margin: auto 0 0;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.64rem;
+  font-size: 0.8125rem;
   line-height: 1.45;
 }
 
@@ -145,7 +145,7 @@
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.35rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.12;
 }
 
@@ -160,7 +160,7 @@
   color: var(--ink);
   background: var(--map-bg);
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.8125rem;
 }
 
 .gr-map-card .map-chips {
@@ -172,7 +172,7 @@
   margin: 0 0 11px;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.64rem;
+  font-size: 0.8125rem;
   line-height: 1.45;
 }
 
@@ -191,7 +191,7 @@
 .gr-extra-strip p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -206,13 +206,13 @@
   color: var(--berry);
   background: var(--surface);
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.8125rem;
 }
 
 .gr-extra-strip a {
   flex-shrink: 0;
   color: var(--berry);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   font-weight: 800;
   white-space: nowrap;
 }
@@ -232,7 +232,7 @@
   width: 100%;
   min-width: 900px;
   border-collapse: collapse;
-  font-size: 0.77rem;
+  font-size: 0.875rem;
 }
 
 .gr-table thead th {
@@ -240,9 +240,9 @@
   border-bottom: 1.5px solid var(--line);
   color: var(--muted);
   background: var(--surface-2);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-align: left;
   text-transform: uppercase;
   white-space: nowrap;
@@ -284,7 +284,7 @@
   border-radius: 4px;
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.64rem;
+  font-size: 0.8125rem;
   white-space: nowrap;
 }
 
@@ -305,7 +305,7 @@
   padding: 2px 7px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   font-weight: 800;
   line-height: 1.5;
   white-space: nowrap;
@@ -356,7 +356,7 @@
   border-radius: 10px;
   background: var(--surface);
   color: var(--muted);
-  font-size: 0.76rem;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 
@@ -377,7 +377,7 @@
   border-radius: 4px;
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.64rem;
+  font-size: 0.8125rem;
 }
 
 /* ---------- Relatives: compare ---------- */
@@ -385,9 +385,9 @@
 .gr-mini-label {
   margin: 0 0 3px;
   color: var(--berry);
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -414,16 +414,16 @@
 .gr-merge-result > span {
   display: block;
   color: var(--muted);
-  font-size: 0.53rem;
+  font-size: 0.75rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .gr-merge-card p {
   margin: 3px 0 0;
   color: var(--ink);
-  font-size: 0.86rem;
+  font-size: 0.9375rem;
   line-height: 1.55;
 }
 
@@ -467,7 +467,7 @@
   color: var(--plum);
   background: var(--plum-bg);
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 0.9375rem;
   font-weight: 700;
   line-height: 1.3;
 }
@@ -482,7 +482,7 @@
 .gr-merge-result p {
   margin: 4px 0 0;
   color: var(--ink);
-  font-size: 0.98rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -496,7 +496,7 @@
   justify-content: center;
   gap: 6px 16px;
   color: var(--muted);
-  font-size: 0.62rem;
+  font-size: 0.8125rem;
   line-height: 1.4;
 }
 
@@ -532,7 +532,7 @@
   border-radius: 0 6px 6px 0;
   color: var(--muted);
   background: var(--surface-2);
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -569,7 +569,7 @@
   margin: 0 0 8px;
   font-family: var(--font-display);
   font-size: 1.2rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.15;
 }
 
@@ -585,7 +585,7 @@
   position: relative;
   padding-left: 18px;
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: 0.875rem;
   line-height: 1.55;
 }
 
@@ -596,7 +596,7 @@
   color: var(--berry);
   content: "✓";
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   font-weight: 800;
 }
 
@@ -606,7 +606,7 @@
   border-radius: 3px;
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.8125rem;
 }
 
 .gr-compare-card-alt .gr-check-list code {
@@ -636,7 +636,7 @@
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.2rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.15;
 }
 
@@ -652,14 +652,14 @@
 .gr-formula code {
   color: var(--berry);
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.8125rem;
   font-weight: 700;
 }
 
 .gr-formula-desc {
   margin: 8px 0 0;
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -668,7 +668,7 @@
   margin: auto 0 0;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -701,23 +701,23 @@
   margin: 0 0 9px;
   font-family: var(--font-display);
   font-size: 1.2rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.15;
 }
 
 .gr-irregular-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.7rem;
+  font-size: 0.875rem;
 }
 
 .gr-irregular-table th {
   padding: 5px 6px;
   border-bottom: 1.5px solid var(--line);
   color: var(--muted);
-  font-size: 0.54rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   text-align: left;
   text-transform: uppercase;
 }
@@ -741,7 +741,7 @@
   margin: auto 0 0;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.67rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -755,7 +755,7 @@
   border-radius: 3px;
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.8125rem;
 }
 
 /* ---------- Verb patterns ---------- */
@@ -799,14 +799,14 @@
 .gr-pattern-card h3 code {
   color: var(--berry);
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.875rem;
 }
 
 .gr-verb-list {
   margin: 8px 0 0;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.61rem;
+  font-size: 0.8125rem;
   line-height: 1.7;
 }
 
@@ -815,7 +815,7 @@
   margin: auto 0 0;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   line-height: 1.55;
 }
 
@@ -873,13 +873,13 @@
 .gr-quick-formula code {
   color: var(--berry);
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.8125rem;
 }
 
 .gr-quick-desc {
   margin: 7px 0 0;
   color: var(--muted);
-  font-size: 0.65rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -888,7 +888,7 @@
   margin: auto 0 0;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.67rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -905,7 +905,7 @@
   border-left: 4px solid var(--berry);
   border-radius: 8px;
   background: var(--surface-2);
-  font-size: 0.84rem;
+  font-size: 0.9375rem;
   line-height: 1.7;
 }
 
@@ -921,7 +921,7 @@
 .gr-review-context {
   margin: 0 0 4px;
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 
@@ -959,7 +959,7 @@
 
 @media (max-width: 620px) {
   .gr-stack {
-    height: 405px;
+    min-height: 405px;
   }
 
   .gr-map-grid,

@@ -29,7 +29,7 @@
 /* ---------- Hero ---------- */
 
 .pron-stack {
-  height: 410px;
+  min-height: 410px;
 }
 
 .pron-stack .stack-card-back {
@@ -68,7 +68,7 @@
   display: block;
   color: var(--sound);
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   font-weight: 800;
 }
 
@@ -76,14 +76,14 @@
   display: block;
   margin-top: 2px;
   font-family: var(--font-display);
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   line-height: 1.2;
 }
 
 .pron-mini-question {
   margin: 4px 0 8px;
   font-family: var(--font-display);
-  font-size: 0.98rem;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.3;
 }
@@ -99,7 +99,7 @@
   border-radius: 5px;
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.66rem;
+  font-size: 0.8125rem;
   line-height: 1.45;
 }
 
@@ -115,7 +115,7 @@
   padding-top: 9px;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.64rem;
+  font-size: 0.8125rem;
   line-height: 1.45;
 }
 
@@ -180,7 +180,7 @@
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.5rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.1;
 }
 
@@ -225,7 +225,7 @@
 .pron-rule-desc {
   margin: 0;
   color: var(--muted);
-  font-size: 0.73rem;
+  font-size: 0.875rem;
   line-height: 1.55;
 }
 
@@ -244,7 +244,7 @@
   border-radius: 5px;
   background: var(--sound-bg);
   font-family: var(--font-mono);
-  font-size: 0.64rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -255,7 +255,7 @@
   border-radius: 8px;
   color: var(--muted);
   background: var(--plum-bg);
-  font-size: 0.71rem;
+  font-size: 0.875rem;
   line-height: 1.55;
 }
 
@@ -308,9 +308,9 @@
 
 .pron-sorter-start strong {
   color: var(--muted);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -332,7 +332,7 @@
   display: block;
   min-height: 2.4em;
   color: var(--muted);
-  font-size: 0.56rem;
+  font-size: 0.75rem;
   line-height: 1.4;
 }
 
@@ -342,7 +342,7 @@
   color: var(--sound);
   font-family: var(--font-display);
   font-size: 1.45rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1;
 }
 
@@ -351,7 +351,7 @@
   margin-top: 5px;
   color: var(--ink);
   font-family: var(--font-mono);
-  font-size: 0.56rem;
+  font-size: 0.75rem;
   font-style: normal;
   line-height: 1.45;
 }
@@ -371,7 +371,7 @@
   width: 100%;
   min-width: 760px;
   border-collapse: collapse;
-  font-size: 0.79rem;
+  font-size: 0.875rem;
 }
 
 .pron-table thead th {
@@ -379,9 +379,9 @@
   border-bottom: 1.5px solid var(--line);
   color: var(--muted);
   background: var(--surface-2);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-align: left;
   text-transform: uppercase;
   white-space: nowrap;
@@ -414,7 +414,7 @@
   border-radius: 4px;
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.67rem;
+  font-size: 0.8125rem;
   white-space: nowrap;
 }
 
@@ -456,7 +456,7 @@
 .pron-spelling-head span {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   white-space: nowrap;
 }
 
@@ -480,13 +480,13 @@
   flex-shrink: 0;
   color: var(--plum);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.875rem;
   font-weight: 800;
 }
 
 .pron-spelling-grid span {
   color: var(--muted);
-  font-size: 0.69rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -510,9 +510,9 @@
 .pron-stress-label {
   margin: 0 0 4px;
   color: var(--plum);
-  font-size: 0.57rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -520,7 +520,7 @@
   margin: 0 0 9px;
   font-family: var(--font-display);
   font-size: 1.16rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
@@ -536,7 +536,7 @@
   position: relative;
   padding-left: 15px;
   color: var(--muted);
-  font-size: 0.76rem;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 
@@ -546,7 +546,7 @@
   left: 1px;
   color: var(--plum);
   content: "▸";
-  font-size: 0.62rem;
+  font-size: 0.8125rem;
 }
 
 .pron-stress-list strong {
@@ -584,7 +584,7 @@
 .pron-shift-head span {
   color: var(--plum);
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.8125rem;
   white-space: nowrap;
 }
 
@@ -605,7 +605,7 @@
 .pron-shift-row strong {
   display: block;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.4;
 }
@@ -622,19 +622,19 @@
   display: block;
   margin-top: 2px;
   color: var(--muted);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
 }
 
 .pron-shift-arrow {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.9375rem;
 }
 
 .pron-shift p {
   margin: 9px 0 0;
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -664,7 +664,7 @@
   border-radius: 7px;
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -735,11 +735,11 @@
   }
 
   .pron-stack {
-    height: 400px;
+    min-height: 400px;
   }
 
   .pron-mini-bucket strong {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
 
   .pron-sorter-branches {

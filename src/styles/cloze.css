@@ -6,7 +6,7 @@
 /* ---------- Hero ---------- */
 
 .cz-stack {
-  height: 400px;
+  min-height: 400px;
 }
 
 .cz-stack .stack-card-back {
@@ -45,7 +45,7 @@
   border-radius: 6px;
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   line-height: 1.45;
 }
 
@@ -61,7 +61,7 @@
   padding-top: 9px;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.66rem;
+  font-size: 0.8125rem;
   line-height: 1.45;
 }
 
@@ -121,7 +121,7 @@
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.22rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.12;
 }
 
@@ -153,7 +153,7 @@
   color: var(--cocoa);
   background: var(--cocoa-bg);
   font-family: var(--font-mono);
-  font-size: 0.57rem;
+  font-size: 0.75rem;
   font-weight: 800;
 }
 
@@ -161,14 +161,14 @@
   margin: 0 0 5px;
   font-family: var(--font-display);
   font-size: 1.08rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
 .cz-step p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.73rem;
+  font-size: 0.875rem;
   line-height: 1.55;
 }
 
@@ -180,7 +180,7 @@
   color: var(--ink);
   background: var(--cocoa-bg);
   font-family: var(--font-mono);
-  font-size: 0.61rem;
+  font-size: 0.8125rem;
   line-height: 1.45;
 }
 
@@ -206,9 +206,9 @@
 
 .cz-time-step span {
   color: var(--muted);
-  font-size: 0.56rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -216,7 +216,7 @@
   margin-top: 2px;
   color: var(--cocoa);
   font-family: var(--font-display);
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.2;
 }
 
@@ -224,7 +224,7 @@
   align-self: center;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.9375rem;
 }
 
 /* Decision funnel: four gates before choosing an answer. */
@@ -247,23 +247,23 @@
 
 .cz-funnel-start span {
   color: var(--cocoa);
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .cz-funnel-start strong {
   color: var(--ink);
   font-family: var(--font-display);
-  font-size: 0.96rem;
+  font-size: 1rem;
   line-height: 1.2;
 }
 
 .cz-funnel-arrow {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.9375rem;
   line-height: 1;
 }
 
@@ -311,7 +311,7 @@
   color: var(--gate);
   background: var(--gate-bg);
   font-family: var(--font-mono);
-  font-size: 0.54rem;
+  font-size: 0.75rem;
   font-weight: 800;
 }
 
@@ -319,7 +319,7 @@
   display: block;
   color: var(--gate);
   font-family: var(--font-display);
-  font-size: 0.96rem;
+  font-size: 1rem;
   letter-spacing: -0.01em;
   line-height: 1.2;
 }
@@ -327,7 +327,7 @@
 .cz-funnel-gate p {
   margin: 2px 0 0;
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -338,7 +338,7 @@
   color: var(--ink);
   background: var(--surface);
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.8125rem;
   white-space: nowrap;
 }
 
@@ -358,13 +358,13 @@
 .cz-funnel-end strong {
   color: var(--jade);
   font-family: var(--font-display);
-  font-size: 0.96rem;
+  font-size: 1rem;
   line-height: 1.2;
 }
 
 .cz-funnel-end span {
   color: var(--muted);
-  font-size: 0.62rem;
+  font-size: 0.8125rem;
   line-height: 1.4;
 }
 
@@ -383,7 +383,7 @@
   width: 100%;
   min-width: 860px;
   border-collapse: collapse;
-  font-size: 0.78rem;
+  font-size: 0.875rem;
 }
 
 .cz-table thead th {
@@ -391,9 +391,9 @@
   border-bottom: 1.5px solid var(--line);
   color: var(--muted);
   background: var(--surface-2);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-align: left;
   text-transform: uppercase;
   white-space: nowrap;
@@ -427,7 +427,7 @@
   border-radius: 4px;
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.8125rem;
   white-space: nowrap;
 }
 
@@ -440,7 +440,7 @@
   padding: 2px 7px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   font-weight: 800;
   line-height: 1.5;
   white-space: nowrap;
@@ -490,9 +490,9 @@
 .cz-clue-label {
   margin: 0 0 3px;
   color: var(--cocoa);
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -507,7 +507,7 @@
 .cz-clue-card > p:not(.cz-clue-label):not(.cz-clue-eg) {
   margin: 0;
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -517,7 +517,7 @@
   border-top: 1px dashed var(--line);
   color: var(--muted);
   font-family: var(--font-display);
-  font-size: 0.72rem;
+  font-size: 0.875rem;
   font-style: italic;
   line-height: 1.5;
 }
@@ -551,7 +551,7 @@
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.5rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.15;
 }
 
@@ -560,13 +560,13 @@
   margin: 0;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.8125rem;
   white-space: nowrap;
 }
 
 .cz-passage {
   margin: 17px 0 0;
-  font-size: 0.91rem;
+  font-size: 1rem;
   line-height: 1.9;
 }
 
@@ -576,7 +576,7 @@
   color: var(--cocoa);
   background: var(--cocoa-bg);
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -602,20 +602,20 @@
   grid-row: span 2;
   color: var(--cocoa);
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.8125rem;
   font-weight: 800;
 }
 
 .cz-answer-grid strong {
   color: var(--ink);
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   line-height: 1.4;
 }
 
 .cz-answer-grid em {
   color: var(--muted);
-  font-size: 0.62rem;
+  font-size: 0.8125rem;
   font-style: normal;
   line-height: 1.4;
 }
@@ -629,7 +629,7 @@
   border-left: 4px solid var(--cocoa);
   border-radius: 9px;
   background: var(--surface-2);
-  font-size: 0.84rem;
+  font-size: 0.9375rem;
   line-height: 1.65;
 }
 
@@ -637,9 +637,9 @@
   display: block;
   margin-bottom: 4px;
   color: var(--cocoa);
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -697,7 +697,7 @@
 
   .cz-funnel-gate strong,
   .cz-funnel-end strong {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .cz-funnel-end {
@@ -714,7 +714,7 @@
   }
 
   .cz-stack {
-    height: 390px;
+    min-height: 390px;
   }
 
   .cz-sample {

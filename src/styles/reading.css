@@ -6,7 +6,7 @@
 /* ---------- Hero ---------- */
 
 .rc-stack {
-  height: 410px;
+  min-height: 410px;
 }
 
 .rc-stack .stack-card-back {
@@ -27,7 +27,7 @@
 
 .rc-mini-passage {
   margin: 11px 0 0;
-  font-size: 0.85rem;
+  font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.6;
 }
@@ -61,7 +61,7 @@
   border: 1px solid var(--line);
   border-radius: 6px;
   background: var(--surface-2);
-  font-size: 0.67rem;
+  font-size: 0.8125rem;
   line-height: 1.45;
 }
 
@@ -77,7 +77,7 @@
   padding-top: 10px;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.65rem;
+  font-size: 0.8125rem;
   line-height: 1.45;
 }
 
@@ -144,7 +144,7 @@
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.35rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.1;
 }
 
@@ -176,7 +176,7 @@
   color: var(--gold-ink);
   background: var(--gold-bg);
   font-family: var(--font-mono);
-  font-size: 0.57rem;
+  font-size: 0.75rem;
   font-weight: 800;
 }
 
@@ -184,14 +184,14 @@
   margin: 0 0 6px;
   font-family: var(--font-display);
   font-size: 1.12rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
 .rc-step p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 
@@ -203,7 +203,7 @@
   color: var(--ink);
   background: var(--gold-bg);
   font-family: var(--font-mono);
-  font-size: 0.64rem;
+  font-size: 0.8125rem;
   line-height: 1.45;
 }
 
@@ -229,9 +229,9 @@
 
 .rc-time-step span {
   color: var(--muted);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -247,7 +247,7 @@
   align-self: center;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.9375rem;
 }
 
 /* Eye-path illustration: skim vs scan. */
@@ -284,7 +284,7 @@
 .rc-eye-label em {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-style: normal;
 }
 
@@ -347,7 +347,7 @@
 .rc-eye-copy {
   margin: 9px 0 0;
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -370,7 +370,7 @@
   width: 100%;
   min-width: 820px;
   border-collapse: collapse;
-  font-size: 0.79rem;
+  font-size: 0.875rem;
 }
 
 .rc-table thead th {
@@ -378,9 +378,9 @@
   border-bottom: 1.5px solid var(--line);
   color: var(--muted);
   background: var(--surface-2);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-align: left;
   text-transform: uppercase;
   white-space: nowrap;
@@ -413,7 +413,7 @@
   border-radius: 4px;
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.66rem;
+  font-size: 0.8125rem;
   white-space: nowrap;
 }
 
@@ -439,7 +439,7 @@
   padding: 2px 7px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  font-size: 0.56rem;
+  font-size: 0.75rem;
   font-weight: 800;
   line-height: 1.5;
   white-space: nowrap;
@@ -480,7 +480,7 @@
 
 .rc-toolbar .filter-tab {
   padding-inline: 10px;
-  font-size: 0.74rem;
+  font-size: 0.875rem;
 }
 
 /* ---------- Section 05: sample ---------- */
@@ -506,7 +506,7 @@
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.55rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.15;
 }
 
@@ -515,13 +515,13 @@
   margin: 0;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.8125rem;
   white-space: nowrap;
 }
 
 .rc-passage {
   margin: 17px 0 0;
-  font-size: 0.91rem;
+  font-size: 1rem;
   line-height: 1.85;
 }
 
@@ -561,7 +561,7 @@
   border-radius: 8px;
   background: var(--surface-2);
   color: var(--muted);
-  font-size: 0.63rem;
+  font-size: 0.8125rem;
 }
 
 .rc-legend span {
@@ -603,15 +603,15 @@
   border-radius: 999px;
   color: var(--gold-ink);
   background: var(--gold-bg);
-  font-size: 0.54rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .rc-qa h4 {
   margin: 0 0 7px;
-  font-size: 0.79rem;
+  font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.5;
 }
@@ -619,7 +619,7 @@
 .rc-qa-answer {
   margin: 0;
   color: var(--success);
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.5;
 }
@@ -629,7 +629,7 @@
   margin: 7px 0 0;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -642,7 +642,7 @@
   border-left: 4px solid var(--gold);
   border-radius: 9px;
   background: var(--surface-2);
-  font-size: 0.82rem;
+  font-size: 0.9375rem;
   line-height: 1.65;
 }
 
@@ -650,9 +650,9 @@
   display: block;
   margin-bottom: 4px;
   color: var(--gold-ink);
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -685,7 +685,7 @@
   .rc-toolbar .filter-tab {
     flex: 1 1 auto;
     padding-inline: 7px;
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
 
   .rc-sample {
@@ -724,15 +724,15 @@
   }
 
   .rc-stack {
-    height: 400px;
+    min-height: 400px;
   }
 
   .rc-mini-passage {
-    font-size: 0.8rem;
+    font-size: 0.9375rem;
   }
 
   .rc-mini-question {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 }
 

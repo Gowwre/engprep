@@ -6,7 +6,7 @@
 /* ---------- Hero ---------- */
 
 .wt-stack {
-  height: 380px;
+  min-height: 380px;
 }
 
 .wt-stack .stack-card-back {
@@ -40,14 +40,14 @@
   font-family: var(--font-display);
   font-size: 1.42rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
 .wt-mini-note {
   margin: 0;
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -58,7 +58,7 @@
   border-radius: 7px;
   background: var(--teal-bg);
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   line-height: 1.45;
 }
 
@@ -69,7 +69,7 @@
   margin: auto 0 0;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.64rem;
+  font-size: 0.8125rem;
   line-height: 1.45;
 }
 
@@ -147,7 +147,7 @@
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.35rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.12;
 }
 
@@ -166,7 +166,7 @@
   width: 100%;
   min-width: 860px;
   border-collapse: collapse;
-  font-size: 0.79rem;
+  font-size: 0.875rem;
 }
 
 .wt-table thead th {
@@ -174,9 +174,9 @@
   border-bottom: 1.5px solid var(--line);
   color: var(--muted);
   background: var(--surface-2);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-align: left;
   text-transform: uppercase;
   white-space: nowrap;
@@ -210,7 +210,7 @@
   border-radius: 4px;
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.8125rem;
   white-space: nowrap;
 }
 
@@ -229,7 +229,7 @@
   padding: 2px 7px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   font-weight: 800;
   line-height: 1.5;
   white-space: nowrap;
@@ -293,9 +293,9 @@
 
 .wt-transform-head span {
   color: var(--muted);
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -313,7 +313,7 @@
 .wt-transform-source,
 .wt-transform-target {
   margin: 0;
-  font-size: 0.82rem;
+  font-size: 0.9375rem;
   line-height: 1.55;
 }
 
@@ -351,7 +351,7 @@
   border-radius: 999px;
   color: var(--gold-ink);
   background: var(--gold-bg);
-  font-size: 0.54rem;
+  font-size: 0.75rem;
   font-weight: 700;
   line-height: 1.35;
 }
@@ -382,7 +382,7 @@
   margin: 0 0 4px;
   color: var(--teal);
   font-family: var(--font-display);
-  font-size: 0.98rem;
+  font-size: 1rem;
   letter-spacing: -0.01em;
   line-height: 1.2;
 }
@@ -390,7 +390,7 @@
 .wt-formula-note p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   line-height: 1.55;
 }
 
@@ -427,9 +427,9 @@
 .wt-verb-label {
   margin: 0 0 4px;
   color: var(--teal);
-  font-size: 0.57rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -441,14 +441,14 @@
   margin: 0 0 5px;
   font-family: var(--font-display);
   font-size: 1.16rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
 .wt-verb-desc {
   margin: 0;
   color: var(--muted);
-  font-size: 0.73rem;
+  font-size: 0.875rem;
   line-height: 1.55;
 }
 
@@ -467,7 +467,7 @@
   border-radius: 5px;
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.63rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -476,7 +476,7 @@
   margin: 10px 0 0;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   line-height: 1.55;
 }
 
@@ -521,7 +521,7 @@
   display: block;
   color: var(--teal);
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   line-height: 1.5;
 }
@@ -530,7 +530,7 @@
   display: block;
   margin-top: 1px;
   color: var(--muted);
-  font-size: 0.62rem;
+  font-size: 0.8125rem;
   line-height: 1.45;
 }
 
@@ -538,7 +538,7 @@
   display: block;
   margin-top: 3px;
   color: var(--ink);
-  font-size: 0.65rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   line-height: 1.45;
 }
@@ -594,7 +594,7 @@
   }
 
   .wt-stack {
-    height: 370px;
+    min-height: 370px;
   }
 
   .wt-mini-arrow {

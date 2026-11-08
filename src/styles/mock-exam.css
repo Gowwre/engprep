@@ -6,7 +6,7 @@
 /* ---------- Hero ---------- */
 
 .mx-stack {
-  height: 395px;
+  min-height: 395px;
 }
 
 .mx-stack .stack-card-back {
@@ -31,14 +31,14 @@
   font-family: var(--font-display);
   font-size: 3.2rem;
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
   line-height: 1;
 }
 
 .mx-hero-sub {
   margin: 2px 0 0;
   color: var(--muted);
-  font-size: 0.65rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.04em;
 }
@@ -54,7 +54,7 @@
   flex-shrink: 0;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.8125rem;
   font-weight: 700;
 }
 
@@ -88,9 +88,9 @@
 
 .mx-hero-result span {
   color: var(--muted);
-  font-size: 0.51rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -106,7 +106,7 @@
   margin: 10px 0 0;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.62rem;
+  font-size: 0.8125rem;
   line-height: 1.45;
 }
 
@@ -129,7 +129,7 @@
   width: 100%;
   min-width: 620px;
   border-collapse: collapse;
-  font-size: 0.78rem;
+  font-size: 0.875rem;
 }
 
 .mx-table thead th {
@@ -137,9 +137,9 @@
   border-bottom: 1.5px solid var(--line);
   color: var(--muted);
   background: var(--surface-2);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-align: left;
   text-transform: uppercase;
   white-space: nowrap;
@@ -160,21 +160,21 @@
   width: 70px;
   color: var(--cobalt);
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.8125rem;
   font-weight: 800;
 }
 
 .mx-table td:nth-child(2) {
   width: 95px;
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
 }
 
 .mx-table td:last-child {
   width: 80px;
   color: var(--cobalt);
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   font-weight: 700;
 }
 
@@ -204,7 +204,7 @@
 
 .mx-blueprint-label {
   color: var(--ink);
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   line-height: 1.35;
 }
 
@@ -227,7 +227,7 @@
 .mx-blueprint-row strong {
   color: var(--bar, var(--cobalt));
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   text-align: right;
 }
 
@@ -247,7 +247,7 @@
   margin-top: 5px;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.54rem;
+  font-size: 0.75rem;
 }
 
 .mx-blueprint-scale > div {
@@ -263,7 +263,7 @@
   border-radius: 10px;
   background: var(--surface);
   color: var(--muted);
-  font-size: 0.76rem;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 
@@ -307,7 +307,7 @@
   color: var(--cobalt);
   background: var(--cobalt-bg);
   font-family: var(--font-mono);
-  font-size: 0.57rem;
+  font-size: 0.75rem;
   font-weight: 800;
 }
 
@@ -315,14 +315,14 @@
   margin: 0 0 5px;
   font-family: var(--font-display);
   font-size: 1.06rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
 .mx-step p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: 0.875rem;
   line-height: 1.55;
 }
 
@@ -334,7 +334,7 @@
   color: var(--ink);
   background: var(--cobalt-bg);
   font-family: var(--font-mono);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   line-height: 1.45;
 }
 
@@ -357,7 +357,7 @@
   border-radius: 8px;
   background: var(--surface-2);
   color: var(--muted);
-  font-size: 0.6rem;
+  font-size: 0.8125rem;
   font-weight: 650;
 }
 
@@ -384,7 +384,7 @@
 .mx-checklist p {
   margin: 0;
   color: var(--cobalt);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   font-weight: 800;
   white-space: nowrap;
 }
@@ -402,7 +402,7 @@
   position: relative;
   padding-left: 16px;
   color: var(--muted);
-  font-size: 0.69rem;
+  font-size: 0.8125rem;
   line-height: 1.45;
 }
 
@@ -413,7 +413,7 @@
   color: var(--cobalt);
   content: "✓";
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.8125rem;
   font-weight: 800;
 }
 
@@ -435,7 +435,7 @@
   margin: 5px 0 8px;
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 2.6rem);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
   line-height: 1.05;
 }
 
@@ -443,7 +443,7 @@
   max-width: 62ch;
   margin: 0 auto;
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: 0.9375rem;
   line-height: 1.7;
 }
 
@@ -469,9 +469,9 @@
 
 .mx-start-stats span {
   color: var(--muted);
-  font-size: 0.56rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -482,7 +482,7 @@
 .mx-best {
   margin: 10px 0 0 !important;
   color: var(--muted);
-  font-size: 0.66rem !important;
+  font-size: 0.8125rem !important;
 }
 
 /* ---------- Exam shell ---------- */
@@ -512,9 +512,9 @@
 
 .mx-bar-time span {
   color: var(--muted);
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -555,7 +555,7 @@
 
 #mx-progress-text {
   color: var(--muted);
-  font-size: 0.57rem;
+  font-size: 0.75rem;
   font-weight: 650;
 }
 
@@ -567,7 +567,7 @@
   flex-basis: 100%;
   order: 4;
   color: var(--danger);
-  font-size: 0.66rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   line-height: 1.4;
 }
@@ -588,14 +588,14 @@
   margin: 2px 0 5px;
   font-family: var(--font-display);
   font-size: 1.55rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.15;
 }
 
 .mx-part-head > p:last-child {
   margin: 0;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   line-height: 1.55;
 }
 
@@ -606,7 +606,7 @@
   border-left: 4px solid var(--cobalt);
   border-radius: 9px;
   background: var(--surface-2);
-  font-size: 0.84rem;
+  font-size: 0.9375rem;
   line-height: 1.75;
 }
 
@@ -645,21 +645,21 @@
   color: var(--cobalt);
   background: var(--cobalt-bg);
   font-family: var(--font-mono);
-  font-size: 0.61rem;
+  font-size: 0.8125rem;
   font-weight: 800;
 }
 
 .mx-q-tag {
   color: var(--cobalt);
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .mx-q-text {
   margin: 0 0 10px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.55;
 }
@@ -706,7 +706,7 @@
   color: var(--muted);
   background: var(--surface);
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.8125rem;
   font-weight: 800;
 }
 
@@ -717,7 +717,7 @@
 }
 
 .mx-option-text {
-  font-size: 0.82rem;
+  font-size: 0.9375rem;
   line-height: 1.5;
 }
 
@@ -734,9 +734,9 @@
 .mx-sign span {
   display: block;
   color: var(--cobalt);
-  font-size: 0.49rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -761,9 +761,9 @@
   display: block;
   margin-bottom: 4px;
   color: var(--cobalt);
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -779,7 +779,7 @@
   border-radius: 4px;
   background: var(--surface);
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.8125rem;
   line-height: 1.45;
 }
 
@@ -807,13 +807,13 @@
 .mx-dict-head span {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.57rem;
+  font-size: 0.75rem;
 }
 
 .mx-dict-def {
   margin: 0 0 6px;
   color: var(--muted);
-  font-size: 0.65rem;
+  font-size: 0.8125rem;
   line-height: 1.45;
 }
 
@@ -829,7 +829,7 @@
   border-radius: 3px;
   background: var(--surface);
   font-family: var(--font-mono);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
 }
 
 .mx-context {
@@ -838,7 +838,7 @@
   border-left: 3px solid var(--cobalt);
   border-radius: 4px;
   background: var(--surface-2);
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   line-height: 1.55;
 }
 
@@ -860,7 +860,7 @@
 .mx-warning {
   margin: 0;
   color: var(--danger);
-  font-size: 0.74rem;
+  font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.45;
 }
@@ -893,7 +893,7 @@
 .mx-result-score strong {
   font-family: var(--font-display);
   font-size: 4.4rem;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
 }
 
 .mx-result-score span {
@@ -910,21 +910,21 @@
   margin: 0;
   color: var(--ink);
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 0.9375rem;
   font-weight: 700;
 }
 
 .mx-result-time {
   margin: 3px 0 0;
   color: var(--muted);
-  font-size: 0.65rem;
+  font-size: 0.8125rem;
 }
 
 .mx-result-card h2 {
   margin: 13px 0 5px;
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 3vw, 2.1rem);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
   line-height: 1.1;
 }
 
@@ -932,7 +932,7 @@
   max-width: 66ch;
   margin: 0;
   color: var(--muted);
-  font-size: 0.84rem;
+  font-size: 0.9375rem;
   line-height: 1.65;
 }
 
@@ -945,9 +945,9 @@
 .mx-review-title {
   margin: 0 0 8px;
   color: var(--muted);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -961,14 +961,14 @@
 
 .mx-break-row span {
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: 0.875rem;
   line-height: 1.4;
 }
 
 .mx-break-row strong {
   color: var(--cobalt);
   font-family: var(--font-mono);
-  font-size: 0.66rem;
+  font-size: 0.8125rem;
 }
 
 .mx-break-bar {
@@ -1005,9 +1005,9 @@
   margin: 0 0 2px;
   color: var(--cobalt);
   font-family: var(--font-mono);
-  font-size: 0.57rem;
+  font-size: 0.75rem;
   font-weight: 800;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -1018,13 +1018,13 @@
   border-radius: 3px;
   background: var(--surface-2);
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
 .mx-review-q {
   margin: 0 0 3px;
-  font-size: 0.8rem;
+  font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.5;
 }
@@ -1032,7 +1032,7 @@
 .mx-review-a {
   margin: 0 0 3px;
   color: var(--muted);
-  font-size: 0.71rem;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -1043,7 +1043,7 @@
 .mx-review-why {
   margin: 0;
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   line-height: 1.55;
 }
 
@@ -1054,7 +1054,7 @@
   border-radius: 8px;
   color: var(--success);
   background: var(--success-bg);
-  font-size: 0.8rem;
+  font-size: 0.9375rem;
   line-height: 1.5;
 }
 
@@ -1095,11 +1095,11 @@
 
   .mx-blueprint-label,
   .mx-blueprint-row strong {
-    font-size: 0.6rem;
+    font-size: 0.8125rem;
   }
 
   .mx-stack {
-    height: 405px;
+    min-height: 405px;
   }
 
   .mx-step-grid {

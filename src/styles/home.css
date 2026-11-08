@@ -60,7 +60,7 @@
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   transition: color 0.18s ease, border-color 0.18s ease;
@@ -269,8 +269,8 @@
 }
 
 .hub-stack--twelve .hub-sheet-kicker {
-  font-size: 0.5rem;
-  letter-spacing: 0.11em;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
 }
 
 .hub-stack--twelve .hub-sheet-title {
@@ -281,7 +281,7 @@
 
 .hub-stack--twelve .hub-sheet-formula {
   margin-top: 7px;
-  font-size: 0.84rem;
+  font-size: 0.9375rem;
   line-height: 1.32;
 }
 
@@ -301,9 +301,9 @@
 
 .hub-sheet-kicker {
   color: var(--muted);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -311,7 +311,7 @@
   margin-top: 5px;
   font-family: var(--font-display);
   font-size: 2rem;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
   line-height: 1;
 }
 
@@ -368,7 +368,7 @@
   font-family: var(--font-display);
   font-size: 1.4rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.22;
 }
 
@@ -383,7 +383,7 @@
 .hub-sheet .mini-example {
   margin-top: 14px;
   padding-top: 11px;
-  font-size: 0.82rem;
+  font-size: 0.9375rem;
 }
 
 .hub-sheet--prep .mini-example mark {
@@ -510,9 +510,9 @@
 .hub-card-no {
   color: var(--accent);
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.8125rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
 }
 
 .hub-badge {
@@ -521,9 +521,9 @@
   border-radius: 999px;
   color: var(--accent);
   background: var(--accent-bg);
-  font-size: 0.6rem;
+  font-size: 0.8125rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -531,14 +531,14 @@
   margin: 12px 0 8px;
   font-family: var(--font-display);
   font-size: clamp(1.75rem, 3vw, 2.2rem);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
   line-height: 1.05;
 }
 
 .hub-card-lead {
   margin: 0;
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.9375rem;
   line-height: 1.65;
 }
 
@@ -559,7 +559,7 @@
   border-radius: 4px;
   background: var(--surface);
   font-family: var(--font-mono);
-  font-size: 0.63rem;
+  font-size: 0.8125rem;
   line-height: 1.6;
 }
 
@@ -575,7 +575,7 @@
   position: relative;
   padding-left: 23px;
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 0.9375rem;
   line-height: 1.5;
 }
 
@@ -592,7 +592,7 @@
   color: var(--accent);
   content: "✓";
   font-family: var(--font-mono);
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   font-weight: 800;
 }
 
@@ -614,7 +614,7 @@
 
 .hub-meta {
   color: var(--muted);
-  font-size: 0.67rem;
+  font-size: 0.8125rem;
   font-weight: 650;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -655,7 +655,7 @@
   border-radius: 50%;
   color: var(--clay);
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.8125rem;
   font-weight: 700;
 }
 
@@ -663,21 +663,21 @@
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.22rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
 .path-card p {
   margin: 8px 0 16px;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 
 .path-link {
   margin-top: auto;
   color: var(--clay);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   font-weight: 800;
   letter-spacing: 0.02em;
   transition: color 0.15s ease, transform 0.15s ease;
@@ -701,7 +701,7 @@
   border-radius: 999px;
   background: var(--surface-2);
   color: var(--ink);
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
 }
@@ -734,7 +734,7 @@
   margin: 4px 0 6px;
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 3vw, 2.2rem);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
   line-height: 1.1;
 }
 
@@ -742,7 +742,7 @@
   max-width: 58ch;
   margin: 0;
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: 0.9375rem;
   line-height: 1.6;
 }
 
@@ -812,7 +812,7 @@
   }
 
   .hub-stack--twelve .hub-sheet-formula {
-    font-size: 0.88rem;
+    font-size: 0.9375rem;
   }
 
   .hub-card {
@@ -843,7 +843,7 @@
   }
 
   .hub-stack--twelve .hub-sheet-formula {
-    font-size: 0.82rem;
+    font-size: 0.9375rem;
   }
 
   .hub-card-foot .btn {
