@@ -2,13 +2,17 @@
 import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
 import CommunicationCard from '../components/CommunicationCard.astro';
+import EmptyState from '../components/EmptyState.astro';
 import FigurePanel from '../components/FigurePanel.astro';
+import FilterToolbar from '../components/FilterToolbar.astro';
 import QuizPanel from '../components/QuizPanel.astro';
+import QuickReview from '../components/QuickReview.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
 import TableShell from '../components/TableShell.astro';
 import TrapCard from '../components/TrapCard.astro';
+import { quickReviews } from '../data/quick-review';
 import '../styles/signs.css';
 ---
 
@@ -37,6 +41,8 @@ import '../styles/signs.css';
     </StudyStackVisual>
   </Fragment>
 
+  <QuickReview slug="signs" accent="signs" content={quickReviews['signs']!} />
+
   <!-- MAP -->
   <section class="section" id="map">
     <div class="container">
@@ -46,7 +52,7 @@ import '../styles/signs.css';
       </SectionHead>
 
       <div class="map-grid sg-map-grid">
-        <a class="map-card sg-map-card sg-map-ban" href="#signs">
+        <a class="map-card sg-map-card sg-map-ban" href="#signs-ban">
           <p class="map-kicker">01 · Cấm</p>
           <h3>Cấm</h3>
           <p class="map-rule">Điều bạn <strong>không được làm</strong>. Thường bắt đầu bằng <code>No</code>, <code>Do not</code> hoặc <code>Keep out</code>.</p>
@@ -56,7 +62,7 @@ import '../styles/signs.css';
           <span class="map-link">Xem bảng biển báo →</span>
         </a>
 
-        <a class="map-card sg-map-card sg-map-warning" href="#signs">
+        <a class="map-card sg-map-card sg-map-warning" href="#signs-warning">
           <p class="map-kicker">02 · Cảnh báo</p>
           <h3>Cảnh báo</h3>
           <p class="map-rule">Có <strong>nguy hiểm hoặc rủi ro</strong>. Cần cẩn thận, tránh xa hoặc chú ý khi đi lại.</p>
@@ -66,7 +72,7 @@ import '../styles/signs.css';
           <span class="map-link">Xem bảng biển báo →</span>
         </a>
 
-        <a class="map-card sg-map-card sg-map-rule" href="#signs">
+        <a class="map-card sg-map-card sg-map-rule" href="#signs-instruction">
           <p class="map-kicker">03 · Cho phép &amp; hướng dẫn</p>
           <h3>Hướng dẫn</h3>
           <p class="map-rule">Cho biết <strong>ai được làm gì hoặc đi lối nào</strong>: đẩy cửa, đi bên trái, chỉ nhân viên.</p>
@@ -76,7 +82,7 @@ import '../styles/signs.css';
           <span class="map-link">Xem bảng biển báo →</span>
         </a>
 
-        <a class="map-card sg-map-card sg-map-info" href="#signs">
+        <a class="map-card sg-map-card sg-map-info" href="#signs-info">
           <p class="map-kicker">04 · Thông tin</p>
           <h3>Thông tin</h3>
           <p class="map-rule">Giờ mở cửa, giá, điều kiện đặt chỗ hoặc tình trạng dịch vụ. Đọc kỹ <strong>con số</strong> và <strong>từ điều kiện</strong>.</p>
@@ -203,6 +209,31 @@ import '../styles/signs.css';
         <p slot="aside" class="section-aside"><span>20</span> mẫu<br><span>4</span> nhóm</p>
       </SectionHead>
 
+      <FilterToolbar
+        tabKey="group"
+        ariaLabel="Lọc biển báo theo nhóm"
+        tabs={[
+          { value: 'all', label: 'Tất cả' },
+          { value: 'ban', label: 'Cấm' },
+          { value: 'warning', label: 'Cảnh báo' },
+          { value: 'instruction', label: 'Hướng dẫn' },
+          { value: 'info', label: 'Thông tin' },
+        ]}
+        searchId="sign-search"
+        searchLabel="Tìm biển báo hoặc nghĩa"
+        placeholder="Tìm “parking”, “miễn phí”, “cấm”…"
+        clearId="sign-clear"
+        countId="sign-count"
+        countText="20/20 mẫu"
+      />
+
+      <EmptyState
+        id="sign-empty"
+        title="Không tìm thấy biển báo"
+        text="Thử từ khoá khác hoặc xoá bộ lọc."
+        resetId="sign-reset"
+      />
+
       <TableShell
         wrapperClass="table-shell"
         tableClass="data-table sg-table"
@@ -218,121 +249,121 @@ import '../styles/signs.css';
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="signs-ban" data-group="ban">
             <th scope="row"><code>NO PARKING</code></th>
             <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
             <td>Không được đỗ xe.</td>
             <td>Không phải “có chỗ đỗ xe”.</td>
           </tr>
-          <tr>
+          <tr data-group="ban">
             <th scope="row"><code>NO SMOKING</code></th>
             <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
             <td>Không được hút thuốc.</td>
             <td>Không phải “khu vực hút thuốc”.</td>
           </tr>
-          <tr>
+          <tr data-group="ban">
             <th scope="row"><code>DO NOT ENTER</code></th>
             <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
             <td>Không được đi vào.</td>
             <td>Không phải “lối vào”.</td>
           </tr>
-          <tr>
+          <tr data-group="ban">
             <th scope="row"><code>KEEP OUT</code></th>
             <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
             <td>Không được lại gần hoặc vào khu vực này.</td>
             <td>Không phải “giữ cửa mở”.</td>
           </tr>
-          <tr>
+          <tr id="signs-instruction" data-group="instruction">
             <th scope="row"><code>STAFF ONLY</code></th>
-            <td><span class="sg-cat sg-cat-ban">Giới hạn</span></td>
+            <td><span class="sg-cat sg-cat-rule">Hướng dẫn</span></td>
             <td>Chỉ nhân viên được vào.</td>
             <td>Không phải “mọi người đều được vào”.</td>
           </tr>
-          <tr>
+          <tr id="signs-warning" data-group="warning">
             <th scope="row"><code>DANGER: HIGH VOLTAGE</code></th>
             <td><span class="sg-cat sg-cat-warning">Cảnh báo</span></td>
             <td>Nguy hiểm: điện cao thế.</td>
             <td>Không phải “ổ điện bình thường”.</td>
           </tr>
-          <tr>
+          <tr data-group="warning">
             <th scope="row"><code>WET FLOOR</code></th>
             <td><span class="sg-cat sg-cat-warning">Cảnh báo</span></td>
             <td>Sàn ướt, coi chừng trượt.</td>
             <td>Không phải “sàn đã lau xong”.</td>
           </tr>
-          <tr>
+          <tr data-group="warning">
             <th scope="row"><code>MIND THE GAP</code></th>
             <td><span class="sg-cat sg-cat-warning">Cảnh báo</span></td>
             <td>Coi chừng khoảng trống.</td>
             <td>Không phải “đứng chờ ở đây”.</td>
           </tr>
-          <tr>
+          <tr data-group="warning">
             <th scope="row"><code>BEWARE OF DOG</code></th>
             <td><span class="sg-cat sg-cat-warning">Cảnh báo</span></td>
             <td>Coi chừng chó.</td>
             <td>Không phải “được mang chó vào”.</td>
           </tr>
-          <tr>
+          <tr data-group="instruction">
             <th scope="row"><code>PUSH / PULL</code></th>
             <td><span class="sg-cat sg-cat-rule">Hướng dẫn</span></td>
             <td>Đẩy / kéo cửa.</td>
             <td>Không phải “cấm mở cửa”.</td>
           </tr>
-          <tr>
+          <tr data-group="instruction">
             <th scope="row"><code>KEEP LEFT</code></th>
             <td><span class="sg-cat sg-cat-rule">Hướng dẫn</span></td>
             <td>Đi bên trái.</td>
             <td>Không phải “rẽ trái”.</td>
           </tr>
-          <tr>
+          <tr data-group="instruction">
             <th scope="row"><code>QUEUE HERE</code></th>
             <td><span class="sg-cat sg-cat-rule">Hướng dẫn</span></td>
             <td>Xếp hàng tại đây.</td>
             <td>Không phải “mua vé ở đây”.</td>
           </tr>
-          <tr>
+          <tr data-group="instruction">
             <th scope="row"><code>USE OTHER DOOR</code></th>
             <td><span class="sg-cat sg-cat-rule">Hướng dẫn</span></td>
             <td>Dùng cửa khác.</td>
             <td>Không phải “cửa này bị khóa vĩnh viễn”.</td>
           </tr>
-          <tr>
+          <tr id="signs-info" data-group="info">
             <th scope="row"><code>OPEN DAILY 8 A.M.–9 P.M.</code></th>
             <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
             <td>Mở hằng ngày từ 8 giờ đến 21 giờ.</td>
             <td>Không phải “mở cả đêm”.</td>
           </tr>
-          <tr>
+          <tr data-group="info">
             <th scope="row"><code>FREE ENTRY</code></th>
             <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
             <td>Vào cửa miễn phí.</td>
             <td>Không phải “đồ ăn miễn phí”.</td>
           </tr>
-          <tr>
+          <tr data-group="info">
             <th scope="row"><code>50% OFF</code></th>
             <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
             <td>Giảm 50% giá.</td>
             <td>Không phải “mua 1 tặng 1”.</td>
           </tr>
-          <tr>
+          <tr data-group="info">
             <th scope="row"><code>BOOKING REQUIRED</code></th>
             <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
             <td>Phải đặt trước.</td>
             <td>Không phải “không cần đặt trước”.</td>
           </tr>
-          <tr>
+          <tr data-group="info">
             <th scope="row"><code>OUT OF ORDER</code></th>
             <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
             <td>Máy hoặc hệ thống bị hỏng.</td>
             <td>Không phải “hãy đặt hàng”.</td>
           </tr>
-          <tr>
+          <tr data-group="info">
             <th scope="row"><code>SOLD OUT</code></th>
             <td><span class="sg-cat sg-cat-info">Thông tin</span></td>
             <td>Hết vé hoặc hết hàng.</td>
             <td>Không phải “đang bán”.</td>
           </tr>
-          <tr>
+          <tr data-group="ban">
             <th scope="row"><code>NO FOOD OR DRINK</code></th>
             <td><span class="sg-cat sg-cat-ban">Cấm</span></td>
             <td>Không mang đồ ăn hoặc đồ uống vào.</td>

@@ -5,11 +5,13 @@ import EmptyState from '../components/EmptyState.astro';
 import FigurePanel from '../components/FigurePanel.astro';
 import FilterToolbar from '../components/FilterToolbar.astro';
 import QuizPanel from '../components/QuizPanel.astro';
+import QuickReview from '../components/QuickReview.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
 import TableShell from '../components/TableShell.astro';
 import TrapCard from '../components/TrapCard.astro';
+import { quickReviews } from '../data/quick-review';
 import '../styles/vocabulary.css';
 ---
 
@@ -35,6 +37,8 @@ import '../styles/vocabulary.css';
     </StudyStackVisual>
   </Fragment>
 
+  <QuickReview slug="vocabulary" accent="vocab" content={quickReviews['vocabulary']!} />
+
   <!-- MAP -->
   <section class="section" id="map">
     <div class="container">
@@ -44,7 +48,7 @@ import '../styles/vocabulary.css';
       </SectionHead>
 
       <div class="map-grid vc-map-grid">
-        <a class="map-card vc-map-card vc-map-colloc" href="#collocations">
+        <a class="map-card vc-map-card vc-map-colloc" href="#collocations-fixed">
           <p class="map-kicker">01 · Cách kết hợp</p>
           <h3>Cụm từ cố định</h3>
           <p class="map-rule">Học cụm 2–3 từ thay vì học từng từ riêng lẻ.</p>
@@ -54,7 +58,7 @@ import '../styles/vocabulary.css';
           <span class="map-link">Xem 32 cụm →</span>
         </a>
 
-        <a class="map-card vc-map-card vc-map-phrasal" href="#collocations">
+        <a class="map-card vc-map-card vc-map-phrasal" href="#collocations-phrasal">
           <p class="map-kicker">02 · Nghĩa cố định</p>
           <h3>Cụm động từ</h3>
           <p class="map-rule">Động từ + tiểu từ tạo nghĩa mới, không đoán từng chữ.</p>
@@ -166,6 +170,9 @@ import '../styles/vocabulary.css';
         countId="collocation-count"
         countText="32/32 cụm"
       />
+
+      <div class="anchor-target" id="collocations-fixed" aria-hidden="true"></div>
+      <div class="anchor-target" id="collocations-phrasal" aria-hidden="true"></div>
 
       <TableShell
         wrapperClass="table-shell"

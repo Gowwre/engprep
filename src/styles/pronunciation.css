@@ -955,3 +955,21 @@
     break-before: auto;
   }
 }
+
+/* Audio enhancement: the word chips are buttons when speech synthesis exists. */
+.pron-examples span.pron-audio {
+  cursor: pointer;
+}
+
+.pron-examples span.pron-audio::after {
+  margin-left: 5px;
+  color: var(--teal);
+  content: "♪";
+  font-size: 0.9em;
+}
+
+.pron-examples span.pron-audio:hover,
+.pron-examples span.pron-audio:focus-visible {
+  border-color: var(--teal);
+  color: var(--ink);
+}

@@ -287,6 +287,7 @@ export const sheets: Sheet[] = [
     meta: '4 nhóm âm · 16 câu hỏi',
     questionCount: 16,
     sections: [
+      { id: 'quick-review', label: 'Ôn nhanh' },
       { id: 'map', label: 'Bản đồ' },
       { id: 'ed', label: '-ed' },
       { id: 's', label: '-s / -es' },
@@ -306,7 +307,7 @@ export const sheets: Sheet[] = [
         { value: '16', label: 'câu luyện tập' }
       ],
       actions: [
-        { label: 'Xem bản đồ âm', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Ôn nhanh phát âm', href: '#quick-review', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 16 câu luyện tập', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
@@ -378,6 +379,7 @@ export const sheets: Sheet[] = [
     meta: '32 cụm · 16 câu hỏi',
     questionCount: 16,
     sections: [
+      { id: 'quick-review', label: 'Ôn nhanh' },
       { id: 'map', label: 'Bản đồ' },
       { id: 'collocations', label: 'Cụm từ' },
       { id: 'topics', label: 'Chủ đề' },
@@ -396,7 +398,7 @@ export const sheets: Sheet[] = [
         { value: '16', label: 'câu luyện tập' }
       ],
       actions: [
-        { label: 'Xem bản đồ từ vựng', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Ôn nhanh từ vựng', href: '#quick-review', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 16 câu luyện tập', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
@@ -471,6 +473,7 @@ export const sheets: Sheet[] = [
     meta: '4 nhóm biển · 16 câu hỏi',
     questionCount: 16,
     sections: [
+      { id: 'quick-review', label: 'Ôn nhanh' },
       { id: 'map', label: 'Bản đồ' },
       { id: 'strategy', label: 'Chiến lược' },
       { id: 'signs', label: 'Biển báo' },
@@ -490,7 +493,7 @@ export const sheets: Sheet[] = [
         { value: '16', label: 'câu luyện tập' }
       ],
       actions: [
-        { label: 'Xem bản đồ biển báo', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Ôn nhanh biển báo', href: '#quick-review', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 16 câu luyện tập', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
@@ -517,6 +520,7 @@ export const sheets: Sheet[] = [
     meta: '4 nhóm lõi · 18 câu hỏi',
     questionCount: 18,
     sections: [
+      { id: 'quick-review', label: 'Ôn nhanh' },
       { id: 'map', label: 'Bản đồ' },
       { id: 'connectors', label: 'Từ nối' },
       { id: 'relatives', label: 'Mệnh đề quan hệ' },
@@ -537,7 +541,7 @@ export const sheets: Sheet[] = [
         { value: '18', label: 'câu luyện tập' }
       ],
       actions: [
-        { label: 'Xem bản đồ ngữ pháp', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Ôn nhanh ngữ pháp', href: '#quick-review', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 18 câu luyện tập', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
@@ -612,6 +616,7 @@ export const sheets: Sheet[] = [
     meta: '24 câu · 45 phút',
     questionCount: 24,
     sections: [
+      { id: 'quick-review', label: 'Ôn nhanh' },
       { id: 'structure', label: 'Cấu trúc' },
       { id: 'strategy', label: 'Chiến lược' },
       { id: 'exam', label: 'Làm bài' }

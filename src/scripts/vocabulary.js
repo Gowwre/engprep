@@ -129,7 +129,8 @@ initFilter({
   count: document.getElementById('collocation-count'),
   empty: document.getElementById('collocation-empty'),
   reset: document.getElementById('collocation-reset'),
-  countSuffix: 'cụm'
+  countSuffix: 'cụm',
+  hashSection: 'collocations'
 });
 
 initQuiz({

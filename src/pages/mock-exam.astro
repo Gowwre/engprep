@@ -6,6 +6,8 @@ import SectionHead from '../components/SectionHead.astro';
 import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
 import TableShell from '../components/TableShell.astro';
+import QuickReview from '../components/QuickReview.astro';
+import { quickReviews } from '../data/quick-review';
 import '../styles/mock-exam.css';
 ---
 
@@ -38,6 +40,8 @@ import '../styles/mock-exam.css';
       </div>
     </StudyStackVisual>
   </Fragment>
+
+  <QuickReview slug="mock-exam" accent="mock" content={quickReviews['mock-exam']!} />
 
   <!-- STRUCTURE -->
   <section class="section" id="structure">

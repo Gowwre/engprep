@@ -3,10 +3,12 @@ import '../styles/global.css';
 import SheetLayout from '../layouts/SheetLayout.astro';
 import FigurePanel from '../components/FigurePanel.astro';
 import QuizPanel from '../components/QuizPanel.astro';
+import QuickReview from '../components/QuickReview.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
 import TableShell from '../components/TableShell.astro';
 import TrapCard from '../components/TrapCard.astro';
+import { quickReviews } from '../data/quick-review';
 import '../styles/grammar.css';
 ---
 
@@ -42,6 +44,8 @@ import '../styles/grammar.css';
       </div>
     </StudyStackVisual>
   </Fragment>
+
+  <QuickReview slug="grammar" accent="grammar" content={quickReviews['grammar']!} />
 
   <!-- MAP -->
   <section class="section" id="map">

@@ -309,5 +309,209 @@ export const quickReviews: Partial<Record<SheetSlug, QuickReviewContent>> = {
     ],
     quizHref: '#quiz',
     quizLabel: 'Làm 16 câu phần VI'
+  },
+  pronunciation: {
+    title: 'Phát âm: xét âm cuối, không xét chữ cuối.',
+    lead: 'Hai đuôi -ed/-s, bốn nhóm trọng âm và ba lỗi hay gặp.',
+    tabs: [
+      {
+        id: 'endings',
+        label: '-ed / -s',
+        items: [
+          { label: '-ed', text: 'vô thanh → /t/: watched, stopped.' },
+          { label: '-ed', text: 'hữu thanh/nguyên âm → /d/: played.' },
+          { label: '-ed', text: 'sau /t/, /d/ → /ɪd/: wanted.' },
+          { label: '-s', text: 'vô thanh → /s/: stops, books.' },
+          { label: '-s', text: 'hữu thanh/nguyên âm → /z/: plays.' },
+          { label: '-s', text: 'âm xuýt → /ɪz/: misses, watches.' }
+        ]
+      },
+      {
+        id: 'stress',
+        label: 'Trọng âm',
+        items: [
+          { label: '2 âm tiết', text: 'danh từ/tính từ nhấn âm 1; động từ nhấn âm 2.' },
+          { label: '-tion / -sion', text: 'nhấn âm trước đuôi.' },
+          { label: '-ic', text: 'nhấn âm trước -ic.' },
+          { label: '-ity / -ical', text: 'nhấn âm trước đuôi.' },
+          { label: '-ly', text: 'không làm đổi trọng âm gốc.' },
+          { label: 'Ngoại lệ', text: 'photo /ˈfoʊtoʊ/ → photography /fəˈtɑːɡrəfi/.' }
+        ]
+      },
+      {
+        id: 'traps',
+        label: 'Bẫy',
+        items: [
+          { label: 'Chữ cuối', text: 'xét âm cuối, không xét chữ cuối.' },
+          { label: '-es', text: 'không phải lúc nào cũng đọc /ɪz/.' },
+          { label: 'Trọng âm', text: 'đổi loại từ có thể đổi trọng âm: REcord / reCORD.' }
+        ]
+      }
+    ],
+    quizHref: '#quiz',
+    quizLabel: 'Làm 16 câu phát âm'
+  },
+  vocabulary: {
+    title: 'Từ vựng: học cả cụm, không học từ đơn.',
+    lead: 'Sáu nhóm cụm, sáu cụm động từ và ba cặp dễ nhầm.',
+    tabs: [
+      {
+        id: 'groups',
+        label: 'Nhóm cụm',
+        items: [
+          { label: 'V + N', text: 'make a decision, take part in.' },
+          { label: 'Adj + N', text: 'heavy rain, serious problem.' },
+          { label: 'V + prep', text: 'depend on, look after.' },
+          { label: 'N + prep', text: 'reason for, solution to.' },
+          { label: 'Cụm cố định', text: 'in the end, at first, on time.' },
+          { label: 'Cụm động từ', text: 'look up, run out of, break down.' }
+        ]
+      },
+      {
+        id: 'phrasal',
+        label: 'Cụm động từ',
+        items: [
+          { label: 'look after', text: 'chăm sóc' },
+          { label: 'look for', text: 'tìm kiếm' },
+          { label: 'look forward to + V-ing', text: 'mong chờ' },
+          { label: 'take part in', text: 'tham gia' },
+          { label: 'depend on', text: 'phụ thuộc vào' },
+          { label: 'break down', text: 'hỏng, ngừng hoạt động' }
+        ]
+      },
+      {
+        id: 'traps',
+        label: 'Bẫy',
+        items: [
+          { label: 'make / do', text: 'make a decision, do homework.' },
+          { label: 'provide', text: 'provide sb with sth / provide sth for sb.' },
+          { label: 'borrow / lend', text: 'borrow from / lend to.' }
+        ]
+      }
+    ],
+    quizHref: '#quiz',
+    quizLabel: 'Làm 16 câu từ vựng'
+  },
+  signs: {
+    title: 'Biển báo: nhóm trước, nghĩa sau.',
+    lead: 'Bốn nhóm biển, sáu chức năng giao tiếp và ba bẫy đảo nghĩa.',
+    tabs: [
+      {
+        id: 'groups',
+        label: '4 nhóm',
+        items: [
+          { label: 'Cấm', text: 'NO PARKING, DO NOT ENTER, KEEP OUT.' },
+          { label: 'Cảnh báo', text: 'WET FLOOR, MIND THE GAP, DANGER.' },
+          { label: 'Hướng dẫn', text: 'PUSH, KEEP LEFT, STAFF ONLY (giới hạn).' },
+          { label: 'Thông tin', text: 'FREE ENTRY, 50% OFF, BOOKING REQUIRED.' }
+        ]
+      },
+      {
+        id: 'communication',
+        label: 'Giao tiếp',
+        items: [
+          { label: 'Gợi ý', text: 'Why don’t we…? → Good idea.' },
+          { label: 'Mời', text: 'Would you like to…? → I’d love to.' },
+          { label: 'Xin lỗi', text: 'I’m sorry… → Never mind.' },
+          { label: 'Cảm ơn', text: 'Thank you. → You’re welcome.' },
+          { label: 'Yêu cầu', text: 'Can/Could you…? → Sure.' },
+          { label: 'Cho phép', text: 'May I…? → Go ahead.' }
+        ]
+      },
+      {
+        id: 'traps',
+        label: 'Bẫy',
+        items: [
+          { label: 'NO PARKING', text: 'không phải “có chỗ đỗ xe”.' },
+          { label: 'FREE ENTRY', text: 'vào cửa miễn phí, không phải đồ ăn miễn phí.' },
+          { label: 'Would you mind…?', text: '“Not at all.” là đồng ý giúp, không phải từ chối.' }
+        ]
+      }
+    ],
+    quizHref: '#quiz',
+    quizLabel: 'Làm 16 câu biển báo'
+  },
+  grammar: {
+    title: 'Ngữ pháp: nhìn cấu trúc, đừng nghe theo tai.',
+    lead: 'Bốn nhóm lõi, sáu mẫu câu và ba lỗi hay gặp.',
+    tabs: [
+      {
+        id: 'core',
+        label: '4 nhóm lõi',
+        items: [
+          { label: 'Từ nối', text: 'however, therefore, although, because.' },
+          { label: 'Mệnh đề quan hệ', text: 'who/which/that/whose/where/when.' },
+          { label: 'So sánh', text: 'as … as, -er/more, the -est/most.' },
+          { label: 'Mẫu động từ', text: 'V-ing, to-V, V + O + to-V.' },
+          { label: 'Câu ước', text: 'wish + V2/ed, wish + had + V3/ed.' },
+          { label: 'Câu hỏi đuôi', text: 'khẳng định → đuôi phủ định.' }
+        ]
+      },
+      {
+        id: 'patterns',
+        label: 'Mẫu câu',
+        items: [
+          { label: 'Although ↔ Despite', text: 'clause ↔ N/V-ing' },
+          { label: 'Because ↔ Because of', text: 'clause ↔ N/V-ing' },
+          { label: 'So/such … that', text: 'so + adj; such + (a/an) + adj + N.' },
+          { label: 'Enough / too', text: 'adj + enough; too + adj + to-V.' },
+          { label: 'Used to', text: 'used to + V (đã từng).' },
+          { label: 'Suggest', text: 'suggest + V-ing / that + S + (should) + V.' }
+        ]
+      },
+      {
+        id: 'traps',
+        label: 'Bẫy',
+        items: [
+          { label: 'Although', text: 'không dùng although … but cùng câu.' },
+          { label: 'Despite', text: 'Despite + N/V-ing, không dùng Despite of.' },
+          { label: 'So sánh', text: 'more better là sai; dùng better.' }
+        ]
+      }
+    ],
+    quizHref: '#quiz',
+    quizLabel: 'Làm 18 câu ngữ pháp'
+  },
+  'mock-exam': {
+    title: 'Thi thử: biết đề trước khi bấm giờ.',
+    lead: 'Cấu trúc 24 câu, chiến lược 45 phút và ba lỗi cần tránh.',
+    tabs: [
+      {
+        id: 'structure',
+        label: 'Cấu trúc',
+        items: [
+          { label: 'Phát âm', text: '2 câu: -ed/-s và trọng âm.' },
+          { label: 'Ngữ pháp & từ vựng', text: '4 câu: nối, quan hệ, so sánh, cụm.' },
+          { label: 'Giao tiếp & biển báo', text: '4 câu: chức năng và nghĩa biển.' },
+          { label: 'Điền khuyết & đọc hiểu', text: '6 câu: đoạn ngắn, ý chính, chi tiết.' },
+          { label: 'Từ loại & phần VI', text: '5 câu: dạng từ, sắp xếp, từ điển.' },
+          { label: 'Viết lại câu', text: '3 câu: since, because of, so/such.' }
+        ]
+      },
+      {
+        id: 'strategy',
+        label: 'Chiến lược',
+        items: [
+          { label: '5 phút', text: 'đọc nhanh toàn đề, đánh dấu câu dễ.' },
+          { label: '20 phút', text: 'làm các câu chắc chắn trước.' },
+          { label: '15 phút', text: 'đọc kỹ phần đọc hiểu và viết lại.' },
+          { label: '5 phút', text: 'kiểm tra, không bỏ trống.' },
+          { label: 'Canh giờ', text: '45 phút; còn 5 phút phải chuyển sang kiểm tra.' },
+          { label: 'Ưu tiên', text: 'câu dễ lấy điểm trước, câu khó sau.' }
+        ]
+      },
+      {
+        id: 'traps',
+        label: 'Bẫy',
+        items: [
+          { label: 'Bỏ trống', text: 'không có điểm âm; luôn chọn một đáp án.' },
+          { label: 'Sa câu khó', text: 'một câu khó không đáng mất 5 phút.' },
+          { label: 'Đổi đáp án', text: 'chỉ đổi khi có bằng chứng mới.' }
+        ]
+      }
+    ],
+    quizHref: '#exam',
+    quizLabel: 'Bắt đầu làm bài',
+    moreHref: '#structure'
   }
 };

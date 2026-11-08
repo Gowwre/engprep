@@ -3,6 +3,7 @@
    Interactions: quiz
    ========================================================= */
 
+import { initFilter } from './lib/filter.js';
 import { initQuiz } from './lib/quiz.js';
 
 const questions = [
@@ -212,6 +213,20 @@ function signReviewPrompt(item) {
 
   return '';
 }
+
+initFilter({
+  items: document.querySelectorAll('#signs .sg-table tbody tr'),
+  tabs: document.querySelectorAll('#signs .filter-tab'),
+  search: document.getElementById('sign-search'),
+  clear: document.getElementById('sign-clear'),
+  count: document.getElementById('sign-count'),
+  empty: document.getElementById('sign-empty'),
+  reset: document.getElementById('sign-reset'),
+  tabKey: 'group',
+  itemKey: 'group',
+  countSuffix: 'mẫu',
+  hashSection: 'signs'
+});
 
 initQuiz({
   questions,
