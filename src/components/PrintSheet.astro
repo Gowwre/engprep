@@ -1,0 +1,70 @@
+---
+import type { QuickReviewContent } from '../data/quick-review';
+import type { Sheet } from '../data/sheets';
+import { sitePath } from '../lib/urls';
+
+interface Props {
+  sheet: Sheet;
+  quick: QuickReviewContent;
+}
+
+const { sheet, quick } = Astro.props;
+const fullUrl = `gowwre.github.io${sitePath(sheet.slug + '/')}`;
+---
+
+<div class="print-toolbar no-print">
+  <a class="btn btn-ghost btn-small" href={sheet.href}>← Về tờ</a>
+  <button class="btn btn-primary btn-small" type="button" data-print>In trang này</button>
+</div>
+
+<article class="print-page">
+  <header class="print-head">
+    <p class="print-kicker">EngPrep · Tờ ôn thi lớp 9 · Global Success 9</p>
+    <div class="print-title-row">
+      <div>
+        <h1>{sheet.title}</h1>
+        <p class="print-lead">{quick.lead ?? sheet.lead}</p>
+      </div>
+      <div class="print-stamp" aria-hidden="true">
+        <span>{sheet.badge}</span>
+        <strong>ÔN THI VÀO 10</strong>
+      </div>
+    </div>
+  </header>
+
+  <div class="print-grid">
+    {quick.tabs.map((tab) => (
+      <section class="print-block">
+        <h2>{tab.label}</h2>
+        <ul>
+          {tab.items.map((item) => (
+            <li>
+              {item.label && <strong>{item.label}</strong>}
+              {item.code ? <code>{item.text}</code> : <span>{item.text}</span>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+
+  <section class="print-steps">
+    <p class="print-steps-title">Ba bước dùng tờ này</p>
+    <ol>
+      <li><strong>Đọc ôn nhanh.</strong> Nhắc lại công thức và dấu hiệu, không nhìn bảng chi tiết.</li>
+      <li><strong>Che đáp án.</strong> Tự nói lại ví dụ hoặc quy tắc trong từng ô.</li>
+      <li><strong>Làm bài kiểm tra.</strong> Mở bản online, làm {sheet.questionCount} câu và xem lại câu sai.</li>
+    </ol>
+  </section>
+
+  <section class="print-notes" aria-label="Ghi chú của bạn">
+    <p>Ghi chú của bạn</p>
+    <span></span><span></span><span></span><span></span>
+  </section>
+
+  <footer class="print-foot">
+    <span>{sheet.meta}</span>
+    <span>Bản đầy đủ: {fullUrl}</span>
+    <span>Trang 1 / 1</span>
+  </footer>
+</article>

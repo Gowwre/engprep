@@ -129,7 +129,8 @@ initFilter({
   count: document.getElementById('suffix-count'),
   empty: document.getElementById('suffix-empty'),
   reset: document.getElementById('suffix-reset'),
-  countSuffix: 'hậu tố'
+  countSuffix: 'hậu tố',
+  hashSection: 'suffixes'
 });
 
 initFilter({

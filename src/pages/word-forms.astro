@@ -5,12 +5,14 @@ import EmptyState from '../components/EmptyState.astro';
 import FigurePanel from '../components/FigurePanel.astro';
 import FilterToolbar from '../components/FilterToolbar.astro';
 import QuizPanel from '../components/QuizPanel.astro';
+import QuickReview from '../components/QuickReview.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StepCard from '../components/StepCard.astro';
 import StudyStackVisual from '../components/StudyStackVisual.astro';
 import TableShell from '../components/TableShell.astro';
 import TrapCard from '../components/TrapCard.astro';
 import WordFamilyCard from '../components/WordFamilyCard.astro';
+import { quickReviews } from '../data/quick-review';
 import '../styles/word-forms.css';
 ---
 
@@ -36,6 +38,8 @@ import '../styles/word-forms.css';
     </StudyStackVisual>
   </Fragment>
 
+  <QuickReview slug="word-forms" accent="word" content={quickReviews['word-forms']!} />
+
   <!-- MAP -->
   <section class="section" id="map">
     <div class="container">
@@ -45,7 +49,7 @@ import '../styles/word-forms.css';
       </SectionHead>
 
       <div class="map-grid wf-map-grid">
-        <a class="map-card wf-map-card wf-map-noun" href="#suffixes">
+        <a class="map-card wf-map-card wf-map-noun" href="#suffixes-noun">
           <p class="map-kicker">01 · Người, vật, việc</p>
           <h3>Danh từ</h3>
           <p class="map-rule">Đứng sau mạo từ, tính từ hoặc giới từ.</p>
@@ -55,7 +59,7 @@ import '../styles/word-forms.css';
           <span class="map-link">Xem hậu tố danh từ →</span>
         </a>
 
-        <a class="map-card wf-map-card wf-map-adj" href="#suffixes">
+        <a class="map-card wf-map-card wf-map-adj" href="#suffixes-adj">
           <p class="map-kicker">02 · Tính chất</p>
           <h3>Tính từ</h3>
           <p class="map-rule">Đứng trước danh từ hoặc sau be, look, feel.</p>
@@ -65,7 +69,7 @@ import '../styles/word-forms.css';
           <span class="map-link">Xem hậu tố tính từ →</span>
         </a>
 
-        <a class="map-card wf-map-card wf-map-verb" href="#suffixes">
+        <a class="map-card wf-map-card wf-map-verb" href="#suffixes-verb">
           <p class="map-kicker">03 · Hành động</p>
           <h3>Động từ</h3>
           <p class="map-rule">Đứng sau chủ ngữ, modal hoặc “to”.</p>
@@ -75,7 +79,7 @@ import '../styles/word-forms.css';
           <span class="map-link">Xem hậu tố động từ →</span>
         </a>
 
-        <a class="map-card wf-map-card wf-map-adv" href="#suffixes">
+        <a class="map-card wf-map-card wf-map-adv" href="#suffixes-adv">
           <p class="map-kicker">04 · Cách thức</p>
           <h3>Trạng từ</h3>
           <p class="map-rule">Bổ nghĩa cho động từ, tính từ hoặc trạng từ khác.</p>
@@ -269,6 +273,11 @@ import '../styles/word-forms.css';
         countId="suffix-count"
         countText="33/33 hậu tố"
       />
+
+      <div class="anchor-target" id="suffixes-noun" aria-hidden="true"></div>
+      <div class="anchor-target" id="suffixes-adj" aria-hidden="true"></div>
+      <div class="anchor-target" id="suffixes-verb" aria-hidden="true"></div>
+      <div class="anchor-target" id="suffixes-adv" aria-hidden="true"></div>
 
       <TableShell
         wrapperClass="table-shell"

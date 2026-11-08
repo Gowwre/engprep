@@ -1,6 +1,7 @@
 ---
 import SectionHead from './SectionHead.astro';
 import type { QuickReviewContent } from '../data/quick-review';
+import { sitePath } from '../lib/urls';
 
 interface Props {
   slug: string;
@@ -66,6 +67,7 @@ const tabId = (id: string) => `qr-${slug}-${id}-tab`;
         <a class="btn btn-primary btn-small" href={content.quizHref ?? '#quiz'}>
           {content.quizLabel ?? 'Làm bài kiểm tra'}
         </a>
+        <a class="btn btn-ghost btn-small" href={sitePath(`print/${slug}/`)}>In tờ này</a>
         <a class="qr-more" href={content.moreHref ?? '#map'}>Xem bản đầy đủ <span aria-hidden="true">→</span></a>
       </div>
     </div>

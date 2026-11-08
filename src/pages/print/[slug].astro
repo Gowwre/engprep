@@ -1,0 +1,30 @@
+---
+import PrintLayout from '../../layouts/PrintLayout.astro';
+import PrintSheet from '../../components/PrintSheet.astro';
+import { quickReviews } from '../../data/quick-review';
+import { sheets, type Sheet } from '../../data/sheets';
+import type { QuickReviewContent } from '../../data/quick-review';
+
+export function getStaticPaths() {
+  return sheets
+    .filter((sheet) => quickReviews[sheet.slug])
+    .map((sheet) => ({
+      params: { slug: sheet.slug },
+      props: { sheet, quick: quickReviews[sheet.slug]! }
+    }));
+}
+
+interface Props {
+  sheet: Sheet;
+  quick: QuickReviewContent;
+}
+
+const { sheet, quick } = Astro.props;
+---
+
+<PrintLayout
+  title={`${sheet.title} — Bản in | EngPrep`}
+  description={`Bản in một trang của tờ ${sheet.title}: công thức, dấu hiệu và bẫy cần nhớ.`}
+>
+  <PrintSheet sheet={sheet} quick={quick} />
+</PrintLayout>

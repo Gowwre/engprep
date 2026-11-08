@@ -1,0 +1,255 @@
+/* Dedicated print page — screen preview and A4 output. */
+
+.print-body {
+  margin: 0;
+  background: #ded8cb;
+  color: #111;
+  font-family: var(--font-body);
+}
+
+.print-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  width: min(210mm, 100% - 24px);
+  margin: 16px auto 0;
+}
+
+.print-page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 16px auto 32px;
+  padding: 14mm 14mm 10mm;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  font-size: 10.5pt;
+  line-height: 1.45;
+}
+
+.print-head {
+  padding-bottom: 6mm;
+  border-bottom: 2px solid #a64326;
+}
+
+.print-kicker {
+  margin: 0 0 3mm;
+  color: #8a3d2a;
+  font-family: var(--font-mono);
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.print-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8mm;
+}
+
+.print-title-row h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 31pt;
+  line-height: 1.08;
+}
+
+.print-lead {
+  max-width: 145mm;
+  margin: 3mm 0 0;
+  color: #444;
+  font-size: 11pt;
+  line-height: 1.5;
+}
+
+.print-stamp {
+  flex: 0 0 34mm;
+  padding: 3mm;
+  border: 1.5px solid #a64326;
+  border-radius: 3mm;
+  color: #8a3d2a;
+  text-align: center;
+}
+
+.print-stamp span {
+  display: block;
+  font-size: 8pt;
+  font-weight: 700;
+}
+
+.print-stamp strong {
+  display: block;
+  margin-top: 1.5mm;
+  font-family: var(--font-mono);
+  font-size: 6.5pt;
+  letter-spacing: 0.06em;
+}
+
+.print-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 5mm;
+  margin-top: 7mm;
+}
+
+.print-block {
+  min-width: 0;
+  padding-top: 3mm;
+  border-top: 2px solid #1f6b4f;
+}
+
+.print-block:nth-child(2) {
+  border-top-color: #a64326;
+}
+
+.print-block:nth-child(3) {
+  border-top-color: #b17d10;
+}
+
+.print-block h2 {
+  margin: 0 0 3mm;
+  color: #333;
+  font-family: var(--font-mono);
+  font-size: 8.5pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.print-block ul {
+  display: grid;
+  gap: 2.8mm;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.print-block li {
+  position: relative;
+  padding-left: 4.5mm;
+  font-size: 10.2pt;
+  line-height: 1.4;
+}
+
+.print-block li::before {
+  position: absolute;
+  top: 0.55em;
+  left: 0;
+  width: 1.7mm;
+  height: 1.7mm;
+  border-radius: 50%;
+  background: #a64326;
+  content: "";
+}
+
+.print-block strong {
+  display: inline;
+  margin-right: 1mm;
+  font-weight: 700;
+}
+
+.print-block code {
+  padding: 0.2mm 1mm;
+  border-radius: 1mm;
+  background: #f0efe9;
+  font-family: var(--font-mono);
+  font-size: 8.4pt;
+}
+
+.print-steps {
+  margin-top: 8mm;
+  padding: 4mm 5mm;
+  border: 1px solid #d6cbb9;
+  border-radius: 2mm;
+  background: #faf6ed;
+}
+
+.print-steps-title {
+  margin: 0 0 2.5mm;
+  color: #8a3d2a;
+  font-family: var(--font-mono);
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.print-steps ol {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4mm;
+  margin: 0;
+  padding-left: 4.5mm;
+}
+
+.print-steps li {
+  font-size: 9.5pt;
+  line-height: 1.4;
+}
+
+.print-notes {
+  margin-top: 7mm;
+  padding-top: 3mm;
+  border-top: 1px dashed #bbb;
+}
+
+.print-notes p {
+  margin: 0 0 3mm;
+  color: #777;
+  font-family: var(--font-mono);
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.print-notes span {
+  display: block;
+  height: 9mm;
+  border-bottom: 1px solid #ddd;
+}
+
+.print-foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 5mm;
+  margin-top: 7mm;
+  padding-top: 3mm;
+  border-top: 1px solid #bbb;
+  color: #555;
+  font-size: 8pt;
+}
+
+.print-foot span:nth-child(2) {
+  text-align: center;
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+
+  .print-body {
+    background: #fff;
+  }
+
+  .print-toolbar {
+    display: none !important;
+  }
+
+  .print-page {
+    width: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .print-block,
+  .print-head,
+  .print-foot {
+    break-inside: avoid;
+  }
+}

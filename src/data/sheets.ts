@@ -145,6 +145,7 @@ export const sheets: Sheet[] = [
     meta: '54 cụm · 16 câu hỏi',
     questionCount: 16,
     sections: [
+      { id: 'quick-review', label: 'Ôn nhanh' },
       { id: 'map', label: 'Bản đồ' },
       { id: 'rules', label: 'Quy tắc' },
       { id: 'time', label: 'Thời gian' },
@@ -165,7 +166,7 @@ export const sheets: Sheet[] = [
         { value: '10', label: 'bẫy đề' }
       ],
       actions: [
-        { label: 'Xem bản đồ giới từ', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Ôn nhanh giới từ', href: '#quick-review', variant: 'primary', icon: 'arrow' },
         { label: 'Làm bài kiểm tra', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
@@ -192,6 +193,7 @@ export const sheets: Sheet[] = [
     meta: '40 họ từ · 16 câu hỏi',
     questionCount: 16,
     sections: [
+      { id: 'quick-review', label: 'Ôn nhanh' },
       { id: 'map', label: 'Bản đồ' },
       { id: 'rules', label: 'Quy tắc' },
       { id: 'suffixes', label: 'Hậu tố' },
@@ -211,7 +213,7 @@ export const sheets: Sheet[] = [
         { value: '16', label: 'câu luyện tập' }
       ],
       actions: [
-        { label: 'Xem bản đồ từ loại', href: '#map', variant: 'primary', icon: 'arrow' },
+        { label: 'Ôn nhanh từ loại', href: '#quick-review', variant: 'primary', icon: 'arrow' },
         { label: 'Làm 16 câu trắc nghiệm', href: '#quiz', variant: 'ghost', icon: 'chevron' }
       ]
     }
