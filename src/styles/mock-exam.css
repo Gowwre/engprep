@@ -38,7 +38,7 @@
 .mx-hero-sub {
   margin: 2px 0 0;
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   font-weight: 700;
   letter-spacing: 0.04em;
 }
@@ -54,7 +54,7 @@
   flex-shrink: 0;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   font-weight: 700;
 }
 
@@ -62,7 +62,7 @@
   flex: 1;
   height: 7px;
   overflow: hidden;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--surface-2);
 }
 
@@ -82,14 +82,14 @@
   padding: 7px 10px;
   margin-top: 10px;
   border: 1px solid var(--cobalt-line);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--cobalt-bg);
 }
 
 .mx-hero-result span {
   color: var(--muted);
-  font-size: 0.75rem;
-  font-weight: 850;
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-extrabold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -106,7 +106,7 @@
   margin: 10px 0 0;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.45;
 }
 
@@ -116,43 +116,8 @@
 
 /* ---------- Section 01: structure ---------- */
 
-.mx-table-wrap {
-  overflow-x: auto;
-  border: 1.5px solid var(--border-strong);
-  border-radius: 18px;
-  background: var(--surface);
-  box-shadow: 4px 4px 0 var(--shadow);
-  scrollbar-width: thin;
-}
-
 .mx-table {
-  width: 100%;
   min-width: 620px;
-  border-collapse: collapse;
-  font-size: 0.875rem;
-}
-
-.mx-table thead th {
-  padding: 11px 14px;
-  border-bottom: 1.5px solid var(--line);
-  color: var(--muted);
-  background: var(--surface-2);
-  font-size: 0.75rem;
-  font-weight: 850;
-  letter-spacing: 0.08em;
-  text-align: left;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.mx-table td,
-.mx-table tbody th,
-.mx-table tfoot th {
-  padding: 9px 14px;
-  border-bottom: 1px solid var(--line);
-  line-height: 1.5;
-  text-align: left;
-  vertical-align: top;
 }
 
 .mx-table tbody th,
@@ -160,21 +125,21 @@
   width: 70px;
   color: var(--cobalt);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   font-weight: 800;
 }
 
 .mx-table td:nth-child(2) {
   width: 95px;
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
 }
 
 .mx-table td:last-child {
   width: 80px;
   color: var(--cobalt);
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   font-weight: 700;
 }
 
@@ -204,7 +169,7 @@
 
 .mx-blueprint-label {
   color: var(--ink);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.35;
 }
 
@@ -227,7 +192,7 @@
 .mx-blueprint-row strong {
   color: var(--bar, var(--cobalt));
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   text-align: right;
 }
 
@@ -247,7 +212,7 @@
   margin-top: 5px;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
 }
 
 .mx-blueprint-scale > div {
@@ -260,10 +225,10 @@
   margin-top: 14px;
   border: 1.5px solid var(--line);
   border-left: 4px solid var(--cobalt);
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   background: var(--surface);
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.6;
 }
 
@@ -293,7 +258,7 @@
   border: 1.5px solid var(--border-strong);
   border-radius: 14px;
   background: var(--surface);
-  box-shadow: 4px 4px 0 var(--shadow);
+  box-shadow: var(--shadow-md);
 }
 
 .mx-step-no {
@@ -303,11 +268,11 @@
   height: 23px;
   margin-bottom: 8px;
   border: 1px solid var(--cobalt-line);
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   color: var(--cobalt);
   background: var(--cobalt-bg);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   font-weight: 800;
 }
 
@@ -322,7 +287,7 @@
 .mx-step p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.55;
 }
 
@@ -330,11 +295,11 @@
   padding: 6px 8px;
   margin-top: 9px;
   border: 1px solid var(--cobalt-line);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   color: var(--ink);
   background: var(--cobalt-bg);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   line-height: 1.45;
 }
 
@@ -354,11 +319,11 @@
   gap: 5px;
   padding: 7px 9px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--surface-2);
   color: var(--muted);
-  font-size: 0.8125rem;
-  font-weight: 650;
+  font-size: var(--font-size-sm);
+  font-weight: var(--weight-semibold);
 }
 
 .mx-time-strip strong {
@@ -377,14 +342,14 @@
   margin-top: 14px;
   border: 1.5px solid var(--line);
   border-left: 4px solid var(--cobalt);
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   background: var(--surface);
 }
 
 .mx-checklist p {
   margin: 0;
   color: var(--cobalt);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   font-weight: 800;
   white-space: nowrap;
 }
@@ -402,7 +367,7 @@
   position: relative;
   padding-left: 16px;
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.45;
 }
 
@@ -413,7 +378,7 @@
   color: var(--cobalt);
   content: "✓";
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   font-weight: 800;
 }
 
@@ -425,9 +390,9 @@
   margin: 0 auto;
   border: 1.5px solid var(--border-strong);
   border-top: 6px solid var(--cobalt);
-  border-radius: 20px;
+  border-radius: var(--radius-3xl);
   background: var(--surface);
-  box-shadow: 6px 6px 0 var(--shadow);
+  box-shadow: var(--shadow-xl);
   text-align: center;
 }
 
@@ -443,7 +408,7 @@
   max-width: 62ch;
   margin: 0 auto;
   color: var(--muted);
-  font-size: 0.9375rem;
+  font-size: var(--font-size-base);
   line-height: 1.7;
 }
 
@@ -469,7 +434,7 @@
 
 .mx-start-stats span {
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -482,7 +447,7 @@
 .mx-best {
   margin: 10px 0 0 !important;
   color: var(--muted);
-  font-size: 0.8125rem !important;
+  font-size: var(--font-size-sm) !important;
 }
 
 /* ---------- Exam shell ---------- */
@@ -498,9 +463,9 @@
   padding: 10px 14px;
   margin-bottom: 22px;
   border: 1.5px solid var(--border-strong);
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   background: var(--surface);
-  box-shadow: 4px 4px 0 var(--shadow);
+  box-shadow: var(--shadow-md);
 }
 
 .mx-bar-time {
@@ -512,8 +477,8 @@
 
 .mx-bar-time span {
   color: var(--muted);
-  font-size: 0.75rem;
-  font-weight: 850;
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-extrabold);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -540,7 +505,7 @@
 .mx-bar-track {
   height: 7px;
   overflow: hidden;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--surface-2);
 }
 
@@ -555,8 +520,8 @@
 
 #mx-progress-text {
   color: var(--muted);
-  font-size: 0.75rem;
-  font-weight: 650;
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-semibold);
 }
 
 .mx-bar .btn {
@@ -567,7 +532,7 @@
   flex-basis: 100%;
   order: 4;
   color: var(--danger);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   font-weight: 700;
   line-height: 1.4;
 }
@@ -595,7 +560,7 @@
 .mx-part-head > p:last-child {
   margin: 0;
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.55;
 }
 
@@ -606,7 +571,7 @@
   border-left: 4px solid var(--cobalt);
   border-radius: 9px;
   background: var(--surface-2);
-  font-size: 0.9375rem;
+  font-size: var(--font-size-base);
   line-height: 1.75;
 }
 
@@ -623,7 +588,7 @@
 .mx-q {
   padding: 16px 18px 17px;
   border: 1.5px solid var(--line);
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   background: var(--surface);
 }
 
@@ -641,25 +606,25 @@
   width: 26px;
   height: 26px;
   border: 1px solid var(--cobalt-line);
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   color: var(--cobalt);
   background: var(--cobalt-bg);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   font-weight: 800;
 }
 
 .mx-q-tag {
   color: var(--cobalt);
-  font-size: 0.75rem;
-  font-weight: 850;
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-extrabold);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .mx-q-text {
   margin: 0 0 10px;
-  font-size: 1rem;
+  font-size: var(--font-size-lg);
   font-weight: 600;
   line-height: 1.55;
 }
@@ -676,7 +641,7 @@
   width: 100%;
   padding: 9px 11px;
   border: 1.5px solid var(--line);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   color: var(--ink);
   background: var(--surface-2);
   cursor: pointer;
@@ -706,7 +671,7 @@
   color: var(--muted);
   background: var(--surface);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   font-weight: 800;
 }
 
@@ -717,7 +682,7 @@
 }
 
 .mx-option-text {
-  font-size: 0.9375rem;
+  font-size: var(--font-size-base);
   line-height: 1.5;
 }
 
@@ -726,7 +691,7 @@
   padding: 12px 16px;
   margin: 9px 0 10px;
   border: 2.5px solid var(--cobalt);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--cobalt-bg);
   text-align: center;
 }
@@ -734,8 +699,8 @@
 .mx-sign span {
   display: block;
   color: var(--cobalt);
-  font-size: 0.75rem;
-  font-weight: 850;
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-extrabold);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -761,8 +726,8 @@
   display: block;
   margin-bottom: 4px;
   color: var(--cobalt);
-  font-size: 0.75rem;
-  font-weight: 850;
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-extrabold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -776,10 +741,10 @@
 .mx-chunk-list span {
   padding: 2px 5px;
   border: 1px solid var(--cobalt-line);
-  border-radius: 4px;
+  border-radius: var(--radius-xs);
   background: var(--surface);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.45;
 }
 
@@ -807,13 +772,13 @@
 .mx-dict-head span {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
 }
 
 .mx-dict-def {
   margin: 0 0 6px;
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.45;
 }
 
@@ -829,16 +794,16 @@
   border-radius: 3px;
   background: var(--surface);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
 }
 
 .mx-context {
   padding: 6px 9px;
   margin: 0 0 8px;
   border-left: 3px solid var(--cobalt);
-  border-radius: 4px;
+  border-radius: var(--radius-xs);
   background: var(--surface-2);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.55;
 }
 
@@ -860,7 +825,7 @@
 .mx-warning {
   margin: 0;
   color: var(--danger);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   font-weight: 700;
   line-height: 1.45;
 }
@@ -871,9 +836,9 @@
   padding: 29px 30px 26px;
   border: 1.5px solid var(--border-strong);
   border-top: 6px solid var(--cobalt);
-  border-radius: 20px;
+  border-radius: var(--radius-3xl);
   background: var(--surface);
-  box-shadow: 6px 6px 0 var(--shadow);
+  box-shadow: var(--shadow-xl);
 }
 
 .mx-result-head {
@@ -899,7 +864,7 @@
 .mx-result-score span {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 1.25rem;
+  font-size: var(--font-size-2xl);
 }
 
 .mx-result-meta {
@@ -910,14 +875,14 @@
   margin: 0;
   color: var(--ink);
   font-family: var(--font-mono);
-  font-size: 0.9375rem;
+  font-size: var(--font-size-base);
   font-weight: 700;
 }
 
 .mx-result-time {
   margin: 3px 0 0;
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
 }
 
 .mx-result-card h2 {
@@ -932,7 +897,7 @@
   max-width: 66ch;
   margin: 0;
   color: var(--muted);
-  font-size: 0.9375rem;
+  font-size: var(--font-size-base);
   line-height: 1.65;
 }
 
@@ -945,8 +910,8 @@
 .mx-review-title {
   margin: 0 0 8px;
   color: var(--muted);
-  font-size: 0.75rem;
-  font-weight: 850;
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-extrabold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -961,21 +926,21 @@
 
 .mx-break-row span {
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.4;
 }
 
 .mx-break-row strong {
   color: var(--cobalt);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
 }
 
 .mx-break-bar {
   grid-column: 1 / -1;
   height: 6px;
   overflow: hidden;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--surface-2);
 }
 
@@ -1005,7 +970,7 @@
   margin: 0 0 2px;
   color: var(--cobalt);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   font-weight: 800;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -1018,13 +983,13 @@
   border-radius: 3px;
   background: var(--surface-2);
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.5;
 }
 
 .mx-review-q {
   margin: 0 0 3px;
-  font-size: 0.9375rem;
+  font-size: var(--font-size-base);
   font-weight: 600;
   line-height: 1.5;
 }
@@ -1032,7 +997,7 @@
 .mx-review-a {
   margin: 0 0 3px;
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.5;
 }
 
@@ -1043,7 +1008,7 @@
 .mx-review-why {
   margin: 0;
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.55;
 }
 
@@ -1051,10 +1016,10 @@
   padding: 12px 14px;
   margin: 18px 0 0;
   border: 1px solid var(--success);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   color: var(--success);
   background: var(--success-bg);
-  font-size: 0.9375rem;
+  font-size: var(--font-size-base);
   line-height: 1.5;
 }
 
@@ -1095,7 +1060,7 @@
 
   .mx-blueprint-label,
   .mx-blueprint-row strong {
-    font-size: 0.8125rem;
+    font-size: var(--font-size-sm);
   }
 
   .mx-stack {
@@ -1175,12 +1140,6 @@
   .mx-exam,
   .mx-result {
     display: none !important;
-  }
-
-  .mx-table-wrap {
-    overflow: visible !important;
-    border-radius: 8px !important;
-    box-shadow: none !important;
   }
 
   .mx-table {

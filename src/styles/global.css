@@ -1,7 +1,11 @@
 /* Shared stylesheet entry point.
+   fonts → tokens → base → UI primitives → site styles → figures.
    Page-specific sheets are imported by their page so each route
    only loads the layout and quiz styles it actually uses. */
 
 @import './fonts.css';
+@import './tokens.css';
+@import './base.css';
+@import './ui.css';
 @import './styles.css';
 @import './figures.css';

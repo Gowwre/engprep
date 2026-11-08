@@ -41,7 +41,7 @@ const mockExam = getSheet('mock-exam');
 
       <div class="hero-visual">
         <div class="hub-stack hub-stack--twelve">
-          <a class="hub-sheet hub-sheet--tenses" href={tenses.href} aria-label="Xem 12 thì">
+          <a class="hub-sheet hub-sheet--tenses" data-accent="tenses" href={tenses.href} aria-label="Xem 12 thì">
             <span class="hub-sheet-kicker">Tờ 01</span>
             <strong class="hub-sheet-title">12 thì</strong>
             <p class="hub-sheet-formula">S + have/has<br>+ V3/ed</p>
@@ -53,7 +53,7 @@ const mockExam = getSheet('mock-exam');
             <span class="hub-sheet-open">Xem <span aria-hidden="true">→</span></span>
           </a>
 
-          <a class="hub-sheet hub-sheet--prep" href={prepositions.href} aria-label="Xem Giới từ">
+          <a class="hub-sheet hub-sheet--prep" data-accent="prep" href={prepositions.href} aria-label="Xem Giới từ">
             <span class="hub-sheet-kicker">Tờ 02</span>
             <strong class="hub-sheet-title">Giới từ</strong>
             <p class="hub-sheet-formula">AT a point<br>ON a surface<br>IN a space</p>
@@ -65,7 +65,7 @@ const mockExam = getSheet('mock-exam');
             <span class="hub-sheet-open">Xem <span aria-hidden="true">→</span></span>
           </a>
 
-          <a class="hub-sheet hub-sheet--word" href={wordForms.href} aria-label="Xem Từ loại">
+          <a class="hub-sheet hub-sheet--word" data-accent="word" href={wordForms.href} aria-label="Xem Từ loại">
             <span class="hub-sheet-kicker">Tờ 03</span>
             <strong class="hub-sheet-title">Từ loại</strong>
             <p class="hub-sheet-formula">success<br>→ successful<br>→ successfully</p>
@@ -77,7 +77,7 @@ const mockExam = getSheet('mock-exam');
             <span class="hub-sheet-open">Xem <span aria-hidden="true">→</span></span>
           </a>
 
-          <a class="hub-sheet hub-sheet--reading" href={reading.href} aria-label="Xem Đọc hiểu">
+          <a class="hub-sheet hub-sheet--reading" data-accent="reading" href={reading.href} aria-label="Xem Đọc hiểu">
             <span class="hub-sheet-kicker">Tờ 04</span>
             <strong class="hub-sheet-title">Đọc hiểu</strong>
             <p class="hub-sheet-formula">ý chính<br>→ chi tiết<br>→ suy luận</p>
@@ -89,7 +89,7 @@ const mockExam = getSheet('mock-exam');
             <span class="hub-sheet-open">Xem <span aria-hidden="true">→</span></span>
           </a>
 
-          <a class="hub-sheet hub-sheet--sound" href={pronunciation.href} aria-label="Xem Phát âm">
+          <a class="hub-sheet hub-sheet--sound" data-accent="sound" href={pronunciation.href} aria-label="Xem Phát âm">
             <span class="hub-sheet-kicker">Tờ 05</span>
             <strong class="hub-sheet-title">Phát âm</strong>
             <p class="hub-sheet-formula">-ed · -s<br>nguyên âm<br>trọng âm</p>
@@ -101,7 +101,7 @@ const mockExam = getSheet('mock-exam');
             <span class="hub-sheet-open">Xem <span aria-hidden="true">→</span></span>
           </a>
 
-          <a class="hub-sheet hub-sheet--write" href={sentenceTransformation.href} aria-label="Xem Viết lại câu">
+          <a class="hub-sheet hub-sheet--write" data-accent="write" href={sentenceTransformation.href} aria-label="Xem Viết lại câu">
             <span class="hub-sheet-kicker">Tờ 06</span>
             <strong class="hub-sheet-title">Viết lại câu</strong>
             <p class="hub-sheet-formula">If / Unless<br>wish<br>so … that</p>
@@ -113,7 +113,7 @@ const mockExam = getSheet('mock-exam');
             <span class="hub-sheet-open">Xem <span aria-hidden="true">→</span></span>
           </a>
 
-          <a class="hub-sheet hub-sheet--vocab" href={vocabulary.href} aria-label="Xem Từ vựng">
+          <a class="hub-sheet hub-sheet--vocab" data-accent="vocab" href={vocabulary.href} aria-label="Xem Từ vựng">
             <span class="hub-sheet-kicker">Tờ 07</span>
             <strong class="hub-sheet-title">Từ vựng</strong>
             <p class="hub-sheet-formula">cụm từ<br>cụm động từ<br>mục từ</p>
@@ -125,7 +125,7 @@ const mockExam = getSheet('mock-exam');
             <span class="hub-sheet-open">Xem <span aria-hidden="true">→</span></span>
           </a>
 
-          <a class="hub-sheet hub-sheet--cloze" href={cloze.href} aria-label="Xem Điền khuyết">
+          <a class="hub-sheet hub-sheet--cloze" data-accent="cloze" href={cloze.href} aria-label="Xem Điền khuyết">
             <span class="hub-sheet-kicker">Tờ 08</span>
             <strong class="hub-sheet-title">Điền khuyết</strong>
             <p class="hub-sheet-formula">ngữ pháp<br>từ vựng<br>từ nối</p>
@@ -137,7 +137,7 @@ const mockExam = getSheet('mock-exam');
             <span class="hub-sheet-open">Xem <span aria-hidden="true">→</span></span>
           </a>
 
-          <a class="hub-sheet hub-sheet--signs" href={signs.href} aria-label="Xem Biển báo">
+          <a class="hub-sheet hub-sheet--signs" data-accent="signs" href={signs.href} aria-label="Xem Biển báo">
             <span class="hub-sheet-kicker">Tờ 09</span>
             <strong class="hub-sheet-title">Biển báo</strong>
             <p class="hub-sheet-formula">thông báo<br>giao tiếp<br>đáp lại</p>
@@ -149,7 +149,7 @@ const mockExam = getSheet('mock-exam');
             <span class="hub-sheet-open">Xem <span aria-hidden="true">→</span></span>
           </a>
 
-          <a class="hub-sheet hub-sheet--grammar" href={grammar.href} aria-label="Xem Ngữ pháp">
+          <a class="hub-sheet hub-sheet--grammar" data-accent="grammar" href={grammar.href} aria-label="Xem Ngữ pháp">
             <span class="hub-sheet-kicker">Tờ 10</span>
             <strong class="hub-sheet-title">Ngữ pháp</strong>
             <p class="hub-sheet-formula">từ nối<br>mệnh đề quan hệ<br>so sánh<br>mẫu động từ</p>
@@ -161,7 +161,7 @@ const mockExam = getSheet('mock-exam');
             <span class="hub-sheet-open">Xem <span aria-hidden="true">→</span></span>
           </a>
 
-          <a class="hub-sheet hub-sheet--sentence" href={sentenceConstruction.href} aria-label="Xem Sắp xếp câu">
+          <a class="hub-sheet hub-sheet--sentence" data-accent="sentence" href={sentenceConstruction.href} aria-label="Xem Sắp xếp câu">
             <span class="hub-sheet-kicker">Tờ 11</span>
             <strong class="hub-sheet-title">Sắp xếp câu</strong>
             <p class="hub-sheet-formula">S + V + O<br>by + V-ing<br>Phần VI</p>
@@ -173,7 +173,7 @@ const mockExam = getSheet('mock-exam');
             <span class="hub-sheet-open">Xem <span aria-hidden="true">→</span></span>
           </a>
 
-          <a class="hub-sheet hub-sheet--mock" href={mockExam.href} aria-label="Xem Thi thử">
+          <a class="hub-sheet hub-sheet--mock" data-accent="mock" href={mockExam.href} aria-label="Xem Thi thử">
             <span class="hub-sheet-kicker">Tờ 12</span>
             <strong class="hub-sheet-title">Thi thử</strong>
             <p class="hub-sheet-formula">24 câu<br>45 phút<br>chấm điểm</p>
@@ -206,10 +206,10 @@ const mockExam = getSheet('mock-exam');
 
       <div class="hub-grid">
         {sheets.map((sheet) => (
-          <article class:list={['hub-card', `hub-card--${sheet.accent}`]}>
+          <article class:list={['hub-card']} data-accent={sheet.accent}>
             <div class="hub-card-top">
               <span class="hub-card-no">{sheet.cardNo}</span>
-              <span class="hub-badge">{sheet.badge}</span>
+              <span class="badge badge--accent">{sheet.badge}</span>
             </div>
             <h3>{sheet.title}</h3>
             <p class="hub-card-lead">{sheet.lead}</p>

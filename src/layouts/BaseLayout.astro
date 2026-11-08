@@ -12,7 +12,7 @@ import loraFont from '../assets/fonts/lora-normal-vietnamese.woff2?url';
 interface Props {
   title: string;
   description: string;
-  current?: SheetSlug | 'home';
+  current?: SheetSlug | 'home' | 'design-system';
   pageNav?: SheetNavItem[];
   ogTitle?: string;
   ogDescription?: string;
@@ -35,7 +35,7 @@ const {
   noindex = false
 } = Astro.props;
 
-const sheet = current === 'home' ? null : getSheet(current);
+const sheet = current === 'home' || current === 'design-system' ? null : getSheet(current);
 const origin = Astro.site ?? Astro.url;
 const canonical = new URL(Astro.url.pathname, origin).href;
 const ogImageUrl = new URL(ogImage, origin).href;

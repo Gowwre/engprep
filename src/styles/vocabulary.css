@@ -30,14 +30,14 @@
   margin-top: 11px;
   border: 1px solid var(--line);
   border-left: 4px solid var(--olive);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--surface-2);
 }
 
 .vc-mini-word {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: var(--font-size-2xl);
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1.2;
@@ -46,7 +46,7 @@
 .vc-mini-word span {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   font-weight: 500;
   letter-spacing: 0;
 }
@@ -54,14 +54,14 @@
 .vc-mini-def {
   margin: 2px 0 8px;
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.4;
 }
 
 .vc-mini-colloc {
   margin: 0;
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.65;
 }
 
@@ -77,7 +77,7 @@
 .vc-mini-question {
   margin: 12px 0 4px;
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -87,7 +87,7 @@
   margin: 0;
   color: var(--success);
   font-family: var(--font-mono);
-  font-size: 0.9375rem;
+  font-size: var(--font-size-base);
   font-weight: 700;
   line-height: 1.5;
 }
@@ -97,14 +97,13 @@
   padding-top: 9px;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.45;
 }
 
 /* ---------- Section 01: map ---------- */
 
 .vc-map-grid {
-  display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
 }
@@ -113,26 +112,6 @@
   --map: var(--olive);
   --map-bg: var(--olive-bg);
   --map-line: var(--olive-line);
-  display: flex;
-  flex-direction: column;
-  padding: 17px 16px 15px;
-  border: 1.5px solid var(--border-strong);
-  border-top: 5px solid var(--map);
-  border-radius: 15px;
-  background: var(--surface);
-  box-shadow: 4px 4px 0 var(--shadow);
-  transition: transform 0.16s ease, box-shadow 0.16s ease;
-}
-
-.vc-map-card:hover {
-  box-shadow: 6px 6px 0 var(--shadow);
-  transform: translateY(-3px);
-}
-
-.vc-map-card:active {
-  transform: translateY(1px);
-  box-shadow: 2px 2px 0 var(--shadow);
-  transition-duration: 0.06s;
 }
 
 .vc-map-card.vc-map-phrasal {
@@ -194,7 +173,7 @@
 .vc-web-verb {
   color: var(--cobalt);
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: var(--font-size-5xl);
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1;
@@ -203,13 +182,13 @@
 .vc-web-plus {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.3;
 }
 
 .vc-web-hub strong {
   color: var(--cobalt);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   font-weight: 800;
   letter-spacing: 0.05em;
   line-height: 1.3;
@@ -234,7 +213,7 @@
   display: block;
   color: var(--cobalt);
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   font-weight: 700;
   line-height: 1.4;
 }
@@ -243,7 +222,7 @@
   display: block;
   margin-top: 2px;
   color: var(--ink);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   font-weight: 600;
   line-height: 1.4;
 }
@@ -252,7 +231,7 @@
   display: block;
   margin-top: 2px;
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   font-style: normal;
   line-height: 1.4;
 }
@@ -264,7 +243,7 @@
   border-radius: 0 7px 7px 0;
   color: var(--muted);
   background: var(--gold-bg);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.5;
 }
 
@@ -274,49 +253,11 @@
 
 .vc-toolbar .filter-tab {
   padding-inline: 9px;
-  font-size: 0.875rem;
-}
-
-.vc-table-wrap {
-  overflow-x: auto;
-  border: 1.5px solid var(--border-strong);
-  border-radius: 18px;
-  background: var(--surface);
-  box-shadow: 4px 4px 0 var(--shadow);
-  scrollbar-width: thin;
+  font-size: var(--font-size-md);
 }
 
 .vc-table {
-  width: 100%;
   min-width: 840px;
-  border-collapse: collapse;
-  font-size: 0.875rem;
-}
-
-.vc-table thead th {
-  padding: 11px 14px;
-  border-bottom: 1.5px solid var(--line);
-  color: var(--muted);
-  background: var(--surface-2);
-  font-size: 0.75rem;
-  font-weight: 850;
-  letter-spacing: 0.08em;
-  text-align: left;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.vc-table td,
-.vc-table tbody th {
-  padding: 11px 14px;
-  border-bottom: 1px solid var(--line);
-  line-height: 1.55;
-  text-align: left;
-  vertical-align: top;
-}
-
-.vc-table tbody tr:last-child > * {
-  border-bottom: 0;
 }
 
 .vc-table tbody tr:hover {
@@ -331,10 +272,10 @@
 .vc-table code {
   padding: 1px 5px;
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: var(--radius-xs);
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   white-space: nowrap;
 }
 
@@ -349,15 +290,15 @@
 
 .vc-table strong {
   color: var(--olive);
-  font-weight: 750;
+  font-weight: var(--weight-bold);
 }
 
 .vc-cat {
   display: inline-block;
   padding: 2px 7px;
   border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
   font-weight: 800;
   line-height: 1.5;
   white-space: nowrap;
@@ -401,7 +342,7 @@
   border-top: 5px solid var(--topic);
   border-radius: 14px;
   background: var(--surface);
-  box-shadow: 4px 4px 0 var(--shadow);
+  box-shadow: var(--shadow-md);
 }
 
 .vc-topic-card.vc-topic-tech {
@@ -437,8 +378,8 @@
 .vc-topic-label {
   margin: 0 0 3px;
   color: var(--topic);
-  font-size: 0.75rem;
-  font-weight: 850;
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-extrabold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -463,7 +404,7 @@
   border-radius: 5px;
   background: var(--topic-bg);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.55;
 }
 
@@ -480,7 +421,7 @@
   border: 1.5px solid var(--border-strong);
   border-radius: 14px;
   background: var(--surface);
-  box-shadow: 4px 4px 0 var(--shadow);
+  box-shadow: var(--shadow-md);
 }
 
 .vc-entry-head {
@@ -494,7 +435,7 @@
 .vc-entry-head strong {
   color: var(--olive);
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: var(--font-size-3xl);
   letter-spacing: -0.01em;
   line-height: 1.1;
 }
@@ -502,13 +443,13 @@
 .vc-entry-head span {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
 }
 
 .vc-entry-def {
   margin: 7px 0 10px;
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   font-style: italic;
   line-height: 1.5;
 }
@@ -525,7 +466,7 @@
   color: var(--ink);
   background: transparent;
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.5;
 }
 
@@ -540,7 +481,7 @@
 
 .vc-entry-line span {
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.5;
 }
 
@@ -562,14 +503,14 @@
 .vc-step > span {
   color: var(--olive);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   font-weight: 800;
 }
 
 .vc-step h3 {
   margin: 2px 0 4px;
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: var(--font-size-lg);
   letter-spacing: -0.01em;
   line-height: 1.2;
 }
@@ -577,7 +518,7 @@
 .vc-step p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.5;
 }
 
@@ -597,7 +538,7 @@
   border: 1px solid var(--olive-line);
   border-radius: 5px;
   background: var(--surface);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.5;
 }
 
@@ -659,7 +600,7 @@
   .vc-toolbar .filter-tab {
     flex: 1 1 auto;
     padding-inline: 7px;
-    font-size: 0.8125rem;
+    font-size: var(--font-size-sm);
   }
 }
 
@@ -700,12 +641,6 @@
 
   .vc-map-card h3 {
     font-size: 8pt;
-  }
-
-  .vc-table-wrap {
-    overflow: visible !important;
-    border-radius: 8px !important;
-    box-shadow: none !important;
   }
 
   .vc-table {
@@ -850,7 +785,7 @@
 
   .vc-web-hub {
     padding: 10px;
-    border-radius: 10px;
+    border-radius: var(--radius-lg);
   }
 
   .vc-web-verb {

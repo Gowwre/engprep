@@ -51,8 +51,8 @@ import '../styles/grammar.css';
         <p slot="aside" class="section-aside"><span>4</span> nhóm lõi<br><span>4</span> điểm phụ</p>
       </SectionHead>
 
-      <div class="gr-map-grid">
-        <a class="gr-map-card gr-map-connector" href="#connectors">
+      <div class="map-grid gr-map-grid">
+        <a class="map-card gr-map-card gr-map-connector" href="#connectors">
           <p class="map-kicker">01 · Liên kết</p>
           <h3>Từ nối</h3>
           <p class="map-rule">Chọn từ nối theo <strong>quan hệ giữa hai vế</strong>: thêm ý, tương phản, nguyên nhân, kết quả.</p>
@@ -63,7 +63,7 @@ import '../styles/grammar.css';
           <span class="map-link">Xem bảng từ nối →</span>
         </a>
 
-        <a class="gr-map-card gr-map-relative" href="#relatives">
+        <a class="map-card gr-map-card gr-map-relative" href="#relatives">
           <p class="map-kicker">02 · Bổ sung</p>
           <h3>Mệnh đề quan hệ</h3>
           <p class="map-rule">Chọn đại từ quan hệ theo <strong>danh từ đứng trước</strong>: người, vật, nơi chốn hay thời gian.</p>
@@ -74,7 +74,7 @@ import '../styles/grammar.css';
           <span class="map-link">Xem bảng đại từ →</span>
         </a>
 
-        <a class="gr-map-card gr-map-comparison" href="#comparisons">
+        <a class="map-card gr-map-card gr-map-comparison" href="#comparisons">
           <p class="map-kicker">03 · So sánh</p>
           <h3>So sánh</h3>
           <p class="map-rule">Chọn công thức theo <strong>dấu hiệu</strong>: <code>than</code>, <code>as … as</code> hay <code>the most</code>.</p>
@@ -85,7 +85,7 @@ import '../styles/grammar.css';
           <span class="map-link">Xem công thức →</span>
         </a>
 
-        <a class="gr-map-card gr-map-pattern" href="#verb-patterns">
+        <a class="map-card gr-map-card gr-map-pattern" href="#verb-patterns">
           <p class="map-kicker">04 · Mẫu động từ</p>
           <h3>Mẫu động từ</h3>
           <p class="map-rule">Động từ đứng trước quyết định dạng theo sau: <strong>to-V, V-ing hay V nguyên mẫu</strong>.</p>
@@ -115,8 +115,8 @@ import '../styles/grammar.css';
       </SectionHead>
 
       <TableShell
-        wrapperClass="gr-table-wrap"
-        tableClass="gr-table"
+        wrapperClass="table-shell"
+        tableClass="data-table gr-table"
         caption="Bảng từ nối theo quan hệ ý nghĩa"
         hint
       >
@@ -183,8 +183,8 @@ import '../styles/grammar.css';
       </SectionHead>
 
       <TableShell
-        wrapperClass="gr-table-wrap"
-        tableClass="gr-table gr-relative-table"
+        wrapperClass="table-shell"
+        tableClass="data-table gr-table gr-relative-table"
         caption="Bảng đại từ quan hệ và cách dùng"
       >
         <thead>

@@ -43,6 +43,19 @@ Repo đã được cấu hình cho GitHub Pages tại `https://gowwre.github.io/
 
 Khi đổi tên repo, dùng custom domain hoặc deploy ở một đường dẫn khác, cập nhật `site`/`base` trong `astro.config.mjs`. Các link nội bộ đã đi qua `src/lib/urls.ts` nên sẽ tự cập nhật theo `base`.
 
+## Design system
+
+Hướng thiết kế đã chốt được codify thành token và primitive dùng chung:
+
+- `src/styles/tokens.css` — palette, semantic alias, accent role, type/space/radius/shadow/motion, dark và print.
+- `src/styles/base.css` — reset, document, focus, container, skip link, reduced motion.
+- `src/styles/ui.css` — nút, badge, chip, card, callout, map card, table, empty state.
+- `src/lib/accents.ts` — mapping accent của 12 tờ, dùng chung cho header, trang chủ và OG.
+- `DESIGN-SYSTEM.md` — quy ước đầy đủ.
+- `/design-system/` — trang tham chiếu sống, `noindex`, xem token và component ở cả light/dark.
+
+Khi thêm component hoặc tờ mới, dùng `data-accent` thay vì hard-code màu, và ưu tiên primitive trong `ui.css` trước khi viết CSS riêng.
+
 ## Cấu trúc
 
 ```text
@@ -74,10 +87,12 @@ src/
 │   ├── BaseLayout.astro   # head, theme, header/footer, shared JS
 │   └── SheetLayout.astro  # hero + page nav cho một tờ
 ├── lib/
+│   ├── accents.ts         # mapping accent cho header, home, OG
 │   └── urls.ts            # helper link có hỗ trợ base
 ├── pages/
 │   ├── og/
 │   │   └── [slug].astro   # render ảnh Open Graph 1200×630
+│   ├── design-system.astro # style guide sống (noindex)
 │   └── <slug>.astro       # một page cho mỗi tờ
 ├── scripts/
 │   ├── lib/
@@ -88,10 +103,14 @@ src/
 │   └── <slug>.js          # câu hỏi + cấu hình riêng của từng tờ
 └── styles/
     ├── fonts.css          # @font-face
+    ├── tokens.css         # design tokens + accent + dark/print
+    ├── base.css           # reset, document, a11y, container
+    ├── ui.css             # primitive dùng chung
     ├── figures.css        # khung figure, caption và legend dùng chung
-    ├── global.css         # entry point dùng chung: fonts + styles + figures
+    ├── global.css         # entry point: fonts + tokens + base + ui + styles + figures
     ├── styles.css         # layout, header/footer, hero, quiz shell, 12 thì
     ├── og.css             # style cho ảnh Open Graph
+    ├── design-system.css  # layout riêng của trang style guide
     └── <slug>.css         # style riêng, chỉ load ở page tương ứng
 ```
 
@@ -108,7 +127,7 @@ import '../styles/<slug>.css';
 
 Thứ tự này giữ cascade đúng và để mỗi route chỉ tải stylesheet nó cần. Trang chủ import thêm `home.css`; trang 12 thì dùng luôn phần tenses trong `styles.css`.
 
-Class nào được dùng ở nhiều trang phải nằm trong `styles.css`, không đặt trong CSS riêng của một trang — nếu không các trang khác sẽ mất style sau khi tách CSS theo route.
+Class nào được dùng ở nhiều trang phải nằm trong `styles.css` hoặc `ui.css`, không đặt trong CSS riêng của một trang — nếu không các trang khác sẽ mất style sau khi tách CSS theo route. Primitive mới (nút, badge, card, callout, bảng, map card) đặt trong `ui.css`; token mới đặt trong `tokens.css`.
 
 ## Thêm một tờ ôn thi mới
 
@@ -128,6 +147,8 @@ Class nào được dùng ở nhiều trang phải nằm trong `styles.css`, kh�
    - `FigurePanel` cho sơ đồ, biểu đồ hoặc hình minh hoạ có caption.
    - `TrapCard` cho các cặp câu sai/câu đúng.
    - Các thẻ chuyên biệt: `TenseCard`, `WordFamilyCard`, `SignalCard`, `ClueCard`, `CommunicationCard`.
+   - Lưới thẻ dùng `map-grid` + `map-card`; bảng dùng `TableShell` với `wrapperClass="table-shell"` và `tableClass="data-table <slug>-table"`.
+   - Đặt `data-accent="<accent>"` ở khối cha để primitive tự lấy màu accent của tờ.
 3. Dùng khung quiz chung trong section luyện tập:
 
 ```astro

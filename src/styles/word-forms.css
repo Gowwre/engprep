@@ -41,7 +41,6 @@
 /* ---------- Section 01: map ---------- */
 
 .wf-map-grid {
-  display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 15px;
 }
@@ -50,26 +49,6 @@
   --map: var(--indigo);
   --map-bg: var(--indigo-bg);
   --map-line: var(--indigo-line);
-  display: flex;
-  flex-direction: column;
-  padding: 19px 18px 17px;
-  border: 1.5px solid var(--border-strong);
-  border-top: 5px solid var(--map);
-  border-radius: 16px;
-  background: var(--surface);
-  box-shadow: 4px 4px 0 var(--shadow);
-  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
-}
-
-.wf-map-card:hover {
-  box-shadow: 6px 6px 0 var(--shadow);
-  transform: translateY(-3px);
-}
-
-.wf-map-card:active {
-  transform: translateY(1px);
-  box-shadow: 2px 2px 0 var(--shadow);
-  transition-duration: 0.06s;
 }
 
 .wf-map-card.wf-map-adj {
@@ -105,7 +84,7 @@
   padding: 16px;
   margin-top: 20px;
   border: 1.5px dashed var(--line);
-  border-radius: 16px;
+  border-radius: var(--radius-2xl);
   background: var(--surface);
 }
 
@@ -118,7 +97,7 @@
   padding: 11px 13px;
   border: 1px solid var(--node-line);
   border-top: 4px solid var(--node);
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   background: var(--node-bg);
 }
 
@@ -143,8 +122,8 @@
 .wf-chain-node span {
   display: block;
   color: var(--node);
-  font-size: 0.75rem;
-  font-weight: 850;
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-extrabold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -162,7 +141,7 @@
   display: block;
   margin-top: 3px;
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   font-style: normal;
   line-height: 1.4;
 }
@@ -172,7 +151,7 @@
   flex-shrink: 0;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 1rem;
+  font-size: var(--font-size-lg);
 }
 
 /* ---------- Section 02: rules ---------- */
@@ -189,7 +168,7 @@
   border: 1.5px solid var(--border-strong);
   border-radius: 15px;
   background: var(--surface);
-  box-shadow: 4px 4px 0 var(--shadow);
+  box-shadow: var(--shadow-md);
 }
 
 .wf-step-no {
@@ -199,11 +178,11 @@
   height: 24px;
   margin-bottom: 10px;
   border: 1px solid var(--indigo-line);
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   color: var(--indigo);
   background: var(--indigo-bg);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   font-weight: 800;
 }
 
@@ -218,7 +197,7 @@
 .wf-step p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.6;
 }
 
@@ -230,7 +209,7 @@
   color: var(--ink);
   background: var(--indigo-bg);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.5;
 }
 
@@ -290,10 +269,10 @@
 .wf-frame-slot {
   padding: 5px 9px;
   border: 1px solid var(--slot-line);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   color: var(--slot);
   background: var(--slot-bg);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   font-weight: 700;
   line-height: 1.4;
   white-space: nowrap;
@@ -302,7 +281,7 @@
 .wf-frame-arrow {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
 }
 
 .wf-sentence-example {
@@ -334,14 +313,14 @@
 .wf-token small {
   color: var(--muted);
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   font-weight: 800;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .wf-token-prep {
-  font-size: 1rem;
+  font-size: var(--font-size-lg);
 }
 
 .wf-sentence-arrows {
@@ -357,7 +336,7 @@
   border-radius: 0 7px 7px 0;
   color: var(--muted);
   background: var(--jade-bg);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.5;
 }
 
@@ -367,46 +346,9 @@
 
 /* ---------- Tables (position, suffix, prefix) ---------- */
 
-.wf-table-wrap {
-  overflow-x: auto;
-  border: 1.5px solid var(--border-strong);
-  border-radius: 18px;
-  background: var(--surface);
-  box-shadow: 4px 4px 0 var(--shadow);
-  scrollbar-width: thin;
-}
-
 .wf-table {
-  width: 100%;
   min-width: 720px;
-  border-collapse: collapse;
-  font-size: 0.9375rem;
-}
-
-.wf-table thead th {
-  padding: 11px 14px;
-  border-bottom: 1.5px solid var(--line);
-  color: var(--muted);
-  background: var(--surface-2);
-  font-size: 0.75rem;
-  font-weight: 850;
-  letter-spacing: 0.08em;
-  text-align: left;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.wf-table td,
-.wf-table tbody th {
-  padding: 11px 14px;
-  border-bottom: 1px solid var(--line);
-  line-height: 1.55;
-  text-align: left;
-  vertical-align: top;
-}
-
-.wf-table tbody tr:last-child > * {
-  border-bottom: 0;
+  font-size: var(--font-size-base);
 }
 
 .wf-table tbody tr:hover {
@@ -421,16 +363,16 @@
 .wf-table code {
   padding: 1px 5px;
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: var(--radius-xs);
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   white-space: nowrap;
 }
 
 .wf-table strong {
   color: var(--indigo);
-  font-weight: 750;
+  font-weight: var(--weight-bold);
 }
 
 .wf-position-table tbody th code {
@@ -442,7 +384,7 @@
   display: block;
   margin-top: 2px;
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   font-weight: 500;
   line-height: 1.4;
 }
@@ -460,8 +402,8 @@
   display: inline-block;
   padding: 2px 7px;
   border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
   font-weight: 800;
   line-height: 1.5;
   white-space: nowrap;
@@ -500,7 +442,7 @@
   padding: 13px 16px;
   margin-bottom: 18px;
   border: 1.5px dashed var(--indigo-line);
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   background: var(--indigo-bg);
 }
 
@@ -508,11 +450,11 @@
   flex-shrink: 0;
   padding: 3px 8px;
   border: 1px solid var(--indigo-line);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   color: var(--indigo);
   background: var(--surface);
-  font-size: 0.75rem;
-  font-weight: 850;
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-extrabold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -520,7 +462,7 @@
 .wf-mnemonic p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.55;
 }
 
@@ -554,7 +496,7 @@
 
 .wf-family:hover {
   border-color: var(--border-strong);
-  box-shadow: 3px 3px 0 var(--shadow);
+  box-shadow: var(--shadow-sm);
   transform: translateY(-2px);
 }
 
@@ -568,7 +510,7 @@
   top: 9px;
   right: 11px;
   color: var(--gold-ink);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1;
 }
 
@@ -591,7 +533,7 @@
 
 .wf-family-gloss {
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.4;
 }
 
@@ -610,7 +552,7 @@
   border: 1px solid var(--line);
   border-radius: 5px;
   background: var(--surface-2);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.5;
 }
 
@@ -621,9 +563,9 @@
 
 .wf-forms i {
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   font-style: normal;
-  font-weight: 750;
+  font-weight: var(--weight-bold);
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -634,7 +576,7 @@
   border-top: 1px dashed var(--line);
   color: var(--muted);
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   font-style: italic;
   line-height: 1.45;
 }
@@ -709,7 +651,7 @@
 
   .wf-frame-slot {
     padding: 4px 7px;
-    font-size: 0.8125rem;
+    font-size: var(--font-size-sm);
   }
 
   .wf-sentence-example {
@@ -722,7 +664,7 @@
   }
 
   .wf-token-prep {
-    font-size: 0.9375rem;
+    font-size: var(--font-size-base);
   }
 
   .wf-sentence-arrows {
@@ -826,12 +768,6 @@
     font-size: 5.2pt !important;
   }
 
-  .wf-table-wrap {
-    overflow: visible !important;
-    border-radius: 8px !important;
-    box-shadow: none !important;
-  }
-
   .wf-table {
     min-width: 0 !important;
   }
@@ -869,7 +805,7 @@
     gap: 6px;
     padding: 5px 7px;
     margin-bottom: 6px;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
   }
 
   .wf-mnemonic-label {
@@ -887,7 +823,7 @@
 
   .wf-family {
     padding: 6px 7px !important;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     break-inside: avoid;
   }
 

@@ -1,10 +1,10 @@
 ---
 import BrandMark from './BrandMark.astro';
-import { getSheet, sheets, type Sheet, type SheetSlug } from '../data/sheets';
+import { getSheet, sheets, type SheetSlug } from '../data/sheets';
 import { sitePath } from '../lib/urls';
 
 interface Props {
-  current?: SheetSlug | 'home';
+  current?: SheetSlug | 'home' | 'design-system';
 }
 
 const { current = 'home' } = Astro.props;
@@ -15,30 +15,14 @@ const navItems = sheets.map((sheet) => ({
   label: sheet.navLabel
 }));
 
-const accentVars: Record<Sheet['accent'], string> = {
-  tenses: 'var(--clay)',
-  prep: 'var(--jade)',
-  word: 'var(--indigo)',
-  reading: 'var(--gold-ink)',
-  sound: 'var(--plum)',
-  write: 'var(--teal)',
-  vocab: 'var(--olive)',
-  cloze: 'var(--cocoa)',
-  signs: 'var(--slate)',
-  grammar: 'var(--berry)',
-  sentence: 'var(--graphite)',
-  mock: 'var(--cobalt)'
-};
-
-const currentSheet = current === 'home' ? null : getSheet(current);
-const headerAccent = currentSheet ? accentVars[currentSheet.accent] : 'var(--clay)';
+const headerAccent = current === 'home' || current === 'design-system' ? 'tenses' : getSheet(current).accent;
 ---
 
-<header class="site-header" style={`--header-accent:${headerAccent}`}>
+<header class="site-header" data-accent={headerAccent}>
   <span class:list={['header-strip', current === 'home' && 'header-strip--twelve']} aria-hidden="true">
     {current === 'home' &&
       sheets.map((sheet) => (
-        <span class="header-strip-seg" style={`background:${accentVars[sheet.accent]}`}></span>
+        <span class="header-strip-seg" data-accent={sheet.accent}></span>
       ))}
   </span>
 

@@ -43,8 +43,8 @@ import '../styles/pronunciation.css';
         <p slot="aside" class="section-aside"><span>4</span> nhóm âm<br><span>16</span> câu hỏi</p>
       </SectionHead>
 
-      <div class="pron-map-grid">
-        <a class="pron-map-card pron-map-ed" href="#ed">
+      <div class="map-grid pron-map-grid">
+        <a class="map-card pron-map-card pron-map-ed" href="#ed">
           <p class="map-kicker">01 · Đuôi động từ</p>
           <h3>-ed</h3>
           <p class="map-rule">Ba cách đọc tùy theo âm cuối của từ gốc.</p>
@@ -54,7 +54,7 @@ import '../styles/pronunciation.css';
           <span class="map-link">Xem quy tắc -ed →</span>
         </a>
 
-        <a class="pron-map-card pron-map-s" href="#s">
+        <a class="map-card pron-map-card pron-map-s" href="#s">
           <p class="map-kicker">02 · Số nhiều, ngôi 3</p>
           <h3>-s / -es</h3>
           <p class="map-rule">Ba âm /s/, /z/, /ɪz/ theo âm cuối.</p>
@@ -64,7 +64,7 @@ import '../styles/pronunciation.css';
           <span class="map-link">Xem quy tắc -s →</span>
         </a>
 
-        <a class="pron-map-card pron-map-vowel" href="#vowels">
+        <a class="map-card pron-map-card pron-map-vowel" href="#vowels">
           <p class="map-kicker">03 · Nguyên âm</p>
           <h3>Nguyên âm</h3>
           <p class="map-rule">Các cặp tối thiểu dễ nghe nhầm trong đề.</p>
@@ -74,7 +74,7 @@ import '../styles/pronunciation.css';
           <span class="map-link">Xem cặp nguyên âm →</span>
         </a>
 
-        <a class="pron-map-card pron-map-stress" href="#stress">
+        <a class="map-card pron-map-card pron-map-stress" href="#stress">
           <p class="map-kicker">04 · Trọng âm</p>
           <h3>Trọng âm</h3>
           <p class="map-rule">Từ 2 và 3 âm tiết, cùng các đuôi hút trọng âm.</p>
@@ -240,8 +240,8 @@ import '../styles/pronunciation.css';
       </SectionHead>
 
       <TableShell
-        wrapperClass="pron-table-wrap"
-        tableClass="pron-table pron-vowel-table"
+        wrapperClass="table-shell"
+        tableClass="data-table pron-table pron-vowel-table"
         caption="Các cặp nguyên âm dễ nhầm trong tiếng Anh"
         hint
       >
@@ -348,8 +348,8 @@ import '../styles/pronunciation.css';
       </div>
 
       <TableShell
-        wrapperClass="pron-table-wrap"
-        tableClass="pron-table pron-suffix-table"
+        wrapperClass="table-shell"
+        tableClass="data-table pron-table pron-suffix-table"
         caption="Ảnh hưởng của đuôi từ đến trọng âm"
         hint
       >

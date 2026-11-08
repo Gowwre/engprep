@@ -46,8 +46,8 @@
   display: block;
   margin-bottom: 1px;
   color: var(--berry);
-  font-size: 0.75rem;
-  font-weight: 850;
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-extrabold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -62,7 +62,7 @@
 
 .gr-mini-case p {
   margin: 0;
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.45;
 }
 
@@ -80,7 +80,7 @@
   margin: auto 0 0;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.45;
 }
 
@@ -91,7 +91,6 @@
 /* ---------- Section 01: map ---------- */
 
 .gr-map-grid {
-  display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
 }
@@ -100,27 +99,7 @@
   --map: var(--clay);
   --map-bg: var(--clay-bg);
   --map-line: var(--clay-line);
-  display: flex;
-  flex-direction: column;
   min-height: 255px;
-  padding: 17px 16px 15px;
-  border: 1.5px solid var(--border-strong);
-  border-top: 5px solid var(--map);
-  border-radius: 15px;
-  background: var(--surface);
-  box-shadow: 4px 4px 0 var(--shadow);
-  transition: transform 0.16s ease, box-shadow 0.16s ease;
-}
-
-.gr-map-card:hover {
-  box-shadow: 6px 6px 0 var(--shadow);
-  transform: translateY(-3px);
-}
-
-.gr-map-card:active {
-  transform: translateY(1px);
-  box-shadow: 2px 2px 0 var(--shadow);
-  transition-duration: 0.06s;
 }
 
 .gr-map-card.gr-map-relative {
@@ -160,7 +139,7 @@
   color: var(--ink);
   background: var(--map-bg);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
 }
 
 .gr-map-card .map-chips {
@@ -172,7 +151,7 @@
   margin: 0 0 11px;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.45;
 }
 
@@ -184,14 +163,14 @@
   padding: 12px 16px;
   margin-top: 14px;
   border: 1.5px dashed var(--berry-line);
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   background: var(--berry-bg);
 }
 
 .gr-extra-strip p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.5;
 }
 
@@ -202,63 +181,25 @@
 .gr-extra-strip code {
   padding: 1px 4px;
   border: 1px solid var(--berry-line);
-  border-radius: 4px;
+  border-radius: var(--radius-xs);
   color: var(--berry);
   background: var(--surface);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
 }
 
 .gr-extra-strip a {
   flex-shrink: 0;
   color: var(--berry);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   font-weight: 800;
   white-space: nowrap;
 }
 
 /* ---------- Tables ---------- */
 
-.gr-table-wrap {
-  overflow-x: auto;
-  border: 1.5px solid var(--border-strong);
-  border-radius: 18px;
-  background: var(--surface);
-  box-shadow: 4px 4px 0 var(--shadow);
-  scrollbar-width: thin;
-}
-
 .gr-table {
-  width: 100%;
   min-width: 900px;
-  border-collapse: collapse;
-  font-size: 0.875rem;
-}
-
-.gr-table thead th {
-  padding: 11px 14px;
-  border-bottom: 1.5px solid var(--line);
-  color: var(--muted);
-  background: var(--surface-2);
-  font-size: 0.75rem;
-  font-weight: 850;
-  letter-spacing: 0.08em;
-  text-align: left;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.gr-table td,
-.gr-table tbody th {
-  padding: 10px 14px;
-  border-bottom: 1px solid var(--line);
-  line-height: 1.55;
-  text-align: left;
-  vertical-align: top;
-}
-
-.gr-table tbody tr:last-child > * {
-  border-bottom: 0;
 }
 
 .gr-table tbody tr:hover {
@@ -281,10 +222,10 @@
 .gr-table code {
   padding: 1px 5px;
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: var(--radius-xs);
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   white-space: nowrap;
 }
 
@@ -304,8 +245,8 @@
   display: inline-block;
   padding: 2px 7px;
   border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
   font-weight: 800;
   line-height: 1.5;
   white-space: nowrap;
@@ -353,10 +294,10 @@
   margin-top: 14px;
   border: 1.5px solid var(--line);
   border-left: 4px solid var(--berry);
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   background: var(--surface);
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.6;
 }
 
@@ -374,10 +315,10 @@
 .gr-pattern-note code {
   padding: 1px 4px;
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: var(--radius-xs);
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
 }
 
 /* ---------- Relatives: compare ---------- */
@@ -385,8 +326,8 @@
 .gr-mini-label {
   margin: 0 0 3px;
   color: var(--berry);
-  font-size: 0.75rem;
-  font-weight: 850;
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-extrabold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -414,7 +355,7 @@
 .gr-merge-result > span {
   display: block;
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   font-weight: 800;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -423,7 +364,7 @@
 .gr-merge-card p {
   margin: 3px 0 0;
   color: var(--ink);
-  font-size: 0.9375rem;
+  font-size: var(--font-size-base);
   line-height: 1.55;
 }
 
@@ -463,11 +404,11 @@
   padding: 4px 14px;
   place-items: center;
   border: 1.5px solid var(--plum);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   color: var(--plum);
   background: var(--plum-bg);
   font-family: var(--font-mono);
-  font-size: 0.9375rem;
+  font-size: var(--font-size-base);
   font-weight: 700;
   line-height: 1.3;
 }
@@ -475,14 +416,14 @@
 .gr-merge-result {
   padding: 12px 14px;
   border: 1.5px solid var(--plum);
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   background: var(--plum-bg);
 }
 
 .gr-merge-result p {
   margin: 4px 0 0;
   color: var(--ink);
-  font-size: 1rem;
+  font-size: var(--font-size-lg);
   line-height: 1.6;
 }
 
@@ -496,7 +437,7 @@
   justify-content: center;
   gap: 6px 16px;
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.4;
 }
 
@@ -532,7 +473,7 @@
   border-radius: 0 6px 6px 0;
   color: var(--muted);
   background: var(--surface-2);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.5;
 }
 
@@ -585,7 +526,7 @@
   position: relative;
   padding-left: 18px;
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.55;
 }
 
@@ -596,7 +537,7 @@
   color: var(--berry);
   content: "✓";
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   font-weight: 800;
 }
 
@@ -606,7 +547,7 @@
   border-radius: 3px;
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
 }
 
 .gr-compare-card-alt .gr-check-list code {
@@ -629,7 +570,7 @@
   border-top: 4px solid var(--berry);
   border-radius: 14px;
   background: var(--surface);
-  box-shadow: 4px 4px 0 var(--shadow);
+  box-shadow: var(--shadow-md);
 }
 
 .gr-formula-card h3 {
@@ -652,14 +593,14 @@
 .gr-formula code {
   color: var(--berry);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   font-weight: 700;
 }
 
 .gr-formula-desc {
   margin: 8px 0 0;
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.5;
 }
 
@@ -668,7 +609,7 @@
   margin: auto 0 0;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.5;
 }
 
@@ -708,15 +649,15 @@
 .gr-irregular-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
 }
 
 .gr-irregular-table th {
   padding: 5px 6px;
   border-bottom: 1.5px solid var(--line);
   color: var(--muted);
-  font-size: 0.75rem;
-  font-weight: 850;
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-extrabold);
   letter-spacing: 0.05em;
   text-align: left;
   text-transform: uppercase;
@@ -741,7 +682,7 @@
   margin: auto 0 0;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.5;
 }
 
@@ -755,7 +696,7 @@
   border-radius: 3px;
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
 }
 
 /* ---------- Verb patterns ---------- */
@@ -772,7 +713,7 @@
   padding: 15px 15px 14px;
   border: 1.5px solid var(--line);
   border-top: 4px solid var(--clay);
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   background: var(--surface);
 }
 
@@ -799,14 +740,14 @@
 .gr-pattern-card h3 code {
   color: var(--berry);
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
 }
 
 .gr-verb-list {
   margin: 8px 0 0;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.7;
 }
 
@@ -815,7 +756,7 @@
   margin: auto 0 0;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.55;
 }
 
@@ -837,7 +778,7 @@
   padding: 15px 15px 14px;
   border: 1.5px solid var(--line);
   border-top: 4px solid var(--berry);
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   background: var(--surface);
 }
 
@@ -865,7 +806,7 @@
   padding: 7px 8px;
   margin: 8px 0 0;
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   background: var(--surface-2);
   line-height: 1.65;
 }
@@ -873,13 +814,13 @@
 .gr-quick-formula code {
   color: var(--berry);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
 }
 
 .gr-quick-desc {
   margin: 7px 0 0;
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.5;
 }
 
@@ -888,7 +829,7 @@
   margin: auto 0 0;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.5;
 }
 
@@ -903,9 +844,9 @@
   margin-bottom: 16px;
   border: 1.5px solid var(--line);
   border-left: 4px solid var(--berry);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--surface-2);
-  font-size: 0.9375rem;
+  font-size: var(--font-size-base);
   line-height: 1.7;
 }
 
@@ -921,7 +862,7 @@
 .gr-review-context {
   margin: 0 0 4px;
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.6;
 }
 
@@ -1018,7 +959,7 @@
     gap: 5px;
     padding: 5px 7px;
     margin-top: 4px;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
   }
 
   .gr-extra-strip p {
@@ -1027,12 +968,6 @@
 
   .gr-extra-strip a {
     font-size: 5pt;
-  }
-
-  .gr-table-wrap {
-    overflow: visible !important;
-    border-radius: 8px !important;
-    box-shadow: none !important;
   }
 
   .gr-table {
@@ -1098,7 +1033,7 @@
 
   .gr-compare-card {
     padding: 6px 7px;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     break-inside: avoid;
   }
 
@@ -1127,7 +1062,7 @@
 
   .gr-formula-card {
     padding: 6px 7px;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     box-shadow: none !important;
     break-inside: avoid;
   }
@@ -1169,7 +1104,7 @@
   .gr-irregular-card,
   .gr-compare-note {
     padding: 6px 7px;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     break-inside: avoid;
   }
 
@@ -1275,7 +1210,7 @@
 
   .gr-merge-result {
     padding: 6px 7px;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
   }
 
   .gr-merge-result p {

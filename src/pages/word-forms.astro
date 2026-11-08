@@ -44,8 +44,8 @@ import '../styles/word-forms.css';
         <p slot="aside" class="section-aside"><span>4</span> dạng từ<br><span>1</span> từ gốc</p>
       </SectionHead>
 
-      <div class="wf-map-grid">
-        <a class="wf-map-card wf-map-noun" href="#suffixes">
+      <div class="map-grid wf-map-grid">
+        <a class="map-card wf-map-card wf-map-noun" href="#suffixes">
           <p class="map-kicker">01 · Người, vật, việc</p>
           <h3>Danh từ</h3>
           <p class="map-rule">Đứng sau mạo từ, tính từ hoặc giới từ.</p>
@@ -55,7 +55,7 @@ import '../styles/word-forms.css';
           <span class="map-link">Xem hậu tố danh từ →</span>
         </a>
 
-        <a class="wf-map-card wf-map-adj" href="#suffixes">
+        <a class="map-card wf-map-card wf-map-adj" href="#suffixes">
           <p class="map-kicker">02 · Tính chất</p>
           <h3>Tính từ</h3>
           <p class="map-rule">Đứng trước danh từ hoặc sau be, look, feel.</p>
@@ -65,7 +65,7 @@ import '../styles/word-forms.css';
           <span class="map-link">Xem hậu tố tính từ →</span>
         </a>
 
-        <a class="wf-map-card wf-map-verb" href="#suffixes">
+        <a class="map-card wf-map-card wf-map-verb" href="#suffixes">
           <p class="map-kicker">03 · Hành động</p>
           <h3>Động từ</h3>
           <p class="map-rule">Đứng sau chủ ngữ, modal hoặc “to”.</p>
@@ -75,7 +75,7 @@ import '../styles/word-forms.css';
           <span class="map-link">Xem hậu tố động từ →</span>
         </a>
 
-        <a class="wf-map-card wf-map-adv" href="#suffixes">
+        <a class="map-card wf-map-card wf-map-adv" href="#suffixes">
           <p class="map-kicker">04 · Cách thức</p>
           <h3>Trạng từ</h3>
           <p class="map-rule">Bổ nghĩa cho động từ, tính từ hoặc trạng từ khác.</p>
@@ -151,8 +151,8 @@ import '../styles/word-forms.css';
       </div>
 
       <TableShell
-        wrapperClass="wf-table-wrap"
-        tableClass="wf-table wf-position-table"
+        wrapperClass="table-shell"
+        tableClass="data-table wf-table wf-position-table"
         caption="Bảng vị trí trong câu và từ loại cần điền"
         hint
       >
@@ -271,8 +271,8 @@ import '../styles/word-forms.css';
       />
 
       <TableShell
-        wrapperClass="wf-table-wrap"
-        tableClass="wf-table wf-suffix-table"
+        wrapperClass="table-shell"
+        tableClass="data-table wf-table wf-suffix-table"
         caption="Bảng hậu tố tạo danh từ, tính từ, động từ và trạng từ"
         hint
       >
@@ -514,8 +514,8 @@ import '../styles/word-forms.css';
       </div>
 
       <TableShell
-        wrapperClass="wf-table-wrap"
-        tableClass="wf-table wf-prefix-table"
+        wrapperClass="table-shell"
+        tableClass="data-table wf-table wf-prefix-table"
         caption="Bảng tiền tố thường gặp"
         hint
       >

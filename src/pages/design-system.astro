@@ -1,0 +1,500 @@
+---
+import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { accents, accentNames } from '../lib/accents';
+import { sitePath } from '../lib/urls';
+import '../styles/design-system.css';
+
+const typeScale = [
+  ['2xs', '--font-size-2xs', '11px', 'Nhãn phụ, folio'],
+  ['xs', '--font-size-xs', '12px', 'Badge, caption nhỏ'],
+  ['sm', '--font-size-sm', '13px', 'Nhãn bảng, chú thích'],
+  ['md', '--font-size-md', '14px', 'Nội dung bảng, ghi chú'],
+  ['base', '--font-size-base', '15px', 'Nội dung thẻ, mô tả'],
+  ['lg', '--font-size-lg', '16px', 'Thân bài, nút'],
+  ['xl', '--font-size-xl', '18px', 'Tiêu đề nhỏ'],
+  ['2xl', '--font-size-2xl', '20px', 'Tiêu đề thẻ'],
+  ['3xl', '--font-size-3xl', '24px', 'Tiêu đề mục'],
+  ['4xl', '--font-size-4xl', '28px', 'Tiêu đề lớn'],
+  ['5xl', '--font-size-5xl', '32px', 'Hero phụ'],
+  ['6xl', '--font-size-6xl', '40px', 'Hero chính'],
+  ['7xl', '--font-size-7xl', '48px', 'Display']
+];
+
+const spaces = ['1', '2', '3', '4', '5', '6', '8', '10', '12', '16', '20'];
+
+const actionAccents = ['tenses', 'prep', 'word', 'reading'] as const;
+
+const radii = [
+  ['xs', '--radius-xs'],
+  ['sm', '--radius-sm'],
+  ['md', '--radius-md'],
+  ['lg', '--radius-lg'],
+  ['xl', '--radius-xl'],
+  ['2xl', '--radius-2xl'],
+  ['3xl', '--radius-3xl'],
+  ['4xl', '--radius-4xl'],
+  ['pill', '--radius-pill']
+];
+
+const shadows = [
+  ['xs', '--shadow-xs'],
+  ['sm', '--shadow-sm'],
+  ['md', '--shadow-md'],
+  ['lg', '--shadow-lg'],
+  ['xl', '--shadow-xl'],
+  ['2xl', '--shadow-2xl']
+];
+---
+
+<BaseLayout
+  title="Design system — EngPrep"
+  description="Hệ thống thiết kế của EngPrep: token, kiểu chữ, màu accent và các thành phần dùng chung cho 12 tờ ôn thi."
+  current="design-system"
+  ogImage={sitePath('og/home.png')}
+  noindex
+>
+  <section class="ds-hero">
+    <div class="container">
+      <p class="eyebrow">EngPrep · Design system</p>
+      <h1>Một ngôn ngữ chung<br />cho <span class="marker">mười hai tờ</span>.</h1>
+      <p class="ds-lead">
+        Tờ ôn thi là sản phẩm chính. Mọi trang dùng cùng một hệ thống giấy, mực, màu accent,
+        kiểu chữ và các primitive bên dưới. Trang này là bản sống của hệ thống đó.
+      </p>
+      <div class="ds-meta">
+        <span class="badge badge--gold">Bản 1.0</span>
+        <span class="badge">Tokens → Base → UI → Page</span>
+        <span class="badge">Sáng / tối / in A4</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ds-section" id="principles">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">01 · Nguyên tắc</p>
+          <h2>Giấy, mực và một chút màu chức năng.</h2>
+          <p>Hệ thống giữ đúng hướng thiết kế đã chốt: nền giấy ấm, chữ mực, viền rõ, bóng lệch và màu accent theo từng tờ.</p>
+        </div>
+      </div>
+
+      <div class="ds-principles">
+        <article class="card card--flat">
+          <h3 class="card-title">Tờ là trung tâm</h3>
+          <p class="card-copy">Mỗi trang là một tờ ôn in được. Không biến nó thành dashboard hay landing page.</p>
+        </article>
+        <article class="card card--flat">
+          <h3 class="card-title">Mực làm việc</h3>
+          <p class="card-copy">Độ tương phản cao, đường kẻ rõ, chữ đủ lớn. Màu chỉ để phân nhóm và đánh dấu trạng thái.</p>
+        </article>
+        <article class="card card--flat">
+          <h3 class="card-title">Một tờ, một accent</h3>
+          <p class="card-copy">Mỗi tờ có một họ màu riêng. Component lấy màu qua <code>data-accent</code>, không hard-code.</p>
+        </article>
+        <article class="card card--flat">
+          <h3 class="card-title">In được trước, đẹp sau</h3>
+          <p class="card-copy">Mọi thành phần có hành vi in. Bóng, hiệu ứng và điều hướng biến mất trên giấy.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt ds-section" id="color">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">02 · Màu</p>
+          <h2>Nền giấy, mực và mười hai accent.</h2>
+          <p>Accent của tờ được kế thừa tự động. Thêm <code>data-accent="tenses"</code> vào một khối là mọi primitive bên trong đổi theo.</p>
+        </div>
+      </div>
+
+      <div class="ds-swatch-grid ds-swatch-grid--core">
+        <div class="ds-swatch">
+          <span class="ds-swatch-color" style="background: var(--paper)"></span>
+          <strong>paper</strong>
+          <small>Nền trang</small>
+        </div>
+        <div class="ds-swatch">
+          <span class="ds-swatch-color" style="background: var(--surface)"></span>
+          <strong>surface</strong>
+          <small>Mặt thẻ</small>
+        </div>
+        <div class="ds-swatch">
+          <span class="ds-swatch-color" style="background: var(--surface-2)"></span>
+          <strong>surface-2</strong>
+          <small>Vùng lõm</small>
+        </div>
+        <div class="ds-swatch">
+          <span class="ds-swatch-color" style="background: var(--ink)"></span>
+          <strong>ink</strong>
+          <small>Chữ chính</small>
+        </div>
+        <div class="ds-swatch">
+          <span class="ds-swatch-color" style="background: var(--muted)"></span>
+          <strong>muted</strong>
+          <small>Chữ phụ</small>
+        </div>
+        <div class="ds-swatch">
+          <span class="ds-swatch-color" style="background: var(--line)"></span>
+          <strong>line</strong>
+          <small>Đường kẻ</small>
+        </div>
+        <div class="ds-swatch">
+          <span class="ds-swatch-color" style="background: var(--gold)"></span>
+          <strong>gold</strong>
+          <small>Nhấn / focus</small>
+        </div>
+        <div class="ds-swatch">
+          <span class="ds-swatch-color" style="background: var(--success)"></span>
+          <strong>success</strong>
+          <small>Đáp án đúng</small>
+        </div>
+        <div class="ds-swatch">
+          <span class="ds-swatch-color" style="background: var(--danger)"></span>
+          <strong>danger</strong>
+          <small>Đáp án sai</small>
+        </div>
+      </div>
+
+      <div class="ds-accent-grid">
+        {accentNames.map((name) => (
+          <div class="ds-accent" data-accent={name}>
+            <span class="ds-accent-bar"></span>
+            <strong>{accents[name].label}</strong>
+            <small>{name}</small>
+            <span class="ds-accent-swatches" aria-hidden="true">
+              <i style="background: var(--accent)"></i>
+              <i style="background: var(--accent-bg)"></i>
+              <i style="background: var(--accent-line)"></i>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section ds-section" id="type">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">03 · Kiểu chữ</p>
+          <h2>Lora cho tiêu đề, Be Vietnam Pro cho giao diện, Roboto Mono cho công thức.</h2>
+          <p>Tiêu đề dùng serif để giữ cảm giác tờ in. Nội dung dùng sans-serif Việt hoá. Công thức, nhãn và số liệu dùng mono.</p>
+        </div>
+      </div>
+
+      <div class="ds-type-specimens">
+        <div class="ds-type-specimen">
+          <span class="ds-type-label">Display · Lora</span>
+          <p class="ds-type-display">Mười hai tờ, một chỗ ôn thi.</p>
+        </div>
+        <div class="ds-type-specimen">
+          <span class="ds-type-label">Body · Be Vietnam Pro</span>
+          <p class="ds-type-body">Học công thức, nhận diện dấu hiệu và tránh bẫy đề trong cùng một tờ ôn in được khổ A4.</p>
+        </div>
+        <div class="ds-type-specimen">
+          <span class="ds-type-label">Mono · Roboto Mono</span>
+          <p class="ds-type-mono">S + have/has + V3/ed · since 2015 · /ɪd/</p>
+        </div>
+      </div>
+
+      <div class="table-shell ds-token-table">
+        <table class="data-table">
+          <caption class="sr-only">Thang cỡ chữ</caption>
+          <thead>
+            <tr><th scope="col">Token</th><th scope="col">Cỡ</th><th scope="col">Dùng cho</th><th scope="col">Mẫu</th></tr>
+          </thead>
+          <tbody>
+            {typeScale.map(([, token, size, use]) => (
+              <tr>
+                <td><code>{token}</code></td>
+                <td>{size}</td>
+                <td>{use}</td>
+                <td><span style={`font-size: var(${token})`}>Ôn thi lớp 9</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt ds-section" id="space">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">04 · Khoảng cách, bo góc, độ nổi</p>
+          <h2>Một thang đo, không đoán bằng mắt.</h2>
+          <p>Khoảng cách đi theo lưới 4px. Bo góc và bóng dùng token để mọi tờ giữ cùng nhịp.</p>
+        </div>
+      </div>
+
+      <div class="ds-scale-block">
+        <h3>Spacing</h3>
+        <div class="ds-space-list">
+          {spaces.map((step) => (
+            <div class="ds-space-row">
+              <code>--space-{step}</code>
+              <span class="ds-space-bar" style={`width: var(--space-${step})`}></span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="ds-scale-grid">
+        <div class="ds-scale-block">
+          <h3>Radius</h3>
+          <div class="ds-radius-grid">
+            {radii.map(([name, token]) => (
+              <div class="ds-radius">
+                <span class="ds-radius-sample" style={`border-radius: var(${token})`}></span>
+                <code>{name}</code>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="ds-scale-block">
+          <h3>Elevation</h3>
+          <div class="ds-shadow-grid">
+            {shadows.map(([name, token]) => (
+              <div class="ds-shadow">
+                <span class="ds-shadow-sample" style={`box-shadow: var(${token})`}></span>
+                <code>{name}</code>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ds-section" id="actions">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">05 · Hành động & nhãn</p>
+          <h2>Nút, badge và chip.</h2>
+          <p>Nút chính dùng mực đậm và bóng accent. Nút phụ dùng mặt giấy. Badge và chip lấy màu từ <code>--accent</code> của khối cha.</p>
+        </div>
+      </div>
+
+      <div class="ds-demo" data-accent="tenses">
+        <div class="ds-demo-row">
+          <a class="btn btn-primary" href="#actions">Bắt đầu ôn <span aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="#actions">Xem bản đồ</a>
+          <a class="btn btn-ghost btn-small" href="#actions">In tờ này</a>
+          <button class="btn btn-primary" type="button" disabled>Đang chấm…</button>
+          <button class="icon-btn" type="button" aria-label="Ví dụ nút icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 3v18M3 12h18" /></svg>
+          </button>
+        </div>
+
+        <div class="ds-demo-row">
+          <span class="badge badge--accent">12 thì</span>
+          <span class="badge badge--gold">Bẫy đề</span>
+          <span class="badge badge--success">Đúng</span>
+          <span class="badge badge--danger">Sai</span>
+          <span class="badge">Trung tính</span>
+        </div>
+
+        <div class="chip-row">
+          <span class="chip">at 7 p.m.</span>
+          <span class="chip">on Monday</span>
+          <span class="chip">in 2026</span>
+        </div>
+      </div>
+
+      <div class="ds-accent-actions">
+        {actionAccents.map((name) => (
+          <div class="ds-demo ds-demo--compact" data-accent={name}>
+            <span class="badge badge--accent">{accents[name].label}</span>
+            <a class="btn btn-primary btn-small" href="#actions">Xem tờ</a>
+            <span class="chip">{name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt ds-section" id="surfaces">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">06 · Mặt phẳng</p>
+          <h2>Card, callout và trạng thái trống.</h2>
+          <p>Card dùng viền đậm và bóng lệch. Callout dùng màu chức năng. Trạng thái trống giữ giọng bình tĩnh, không minh hoạ.</p>
+        </div>
+      </div>
+
+      <div class="ds-card-grid">
+        <article class="card" data-accent="grammar">
+          <span class="badge badge--accent">Card · accent</span>
+          <h3 class="card-title">Từ nối</h3>
+          <p class="card-copy">Dùng cho nội dung chính của một mục. Viền trên lấy màu accent của tờ.</p>
+        </article>
+
+        <article class="card card--flat">
+          <span class="badge">Card · flat</span>
+          <h3 class="card-title">Bảng tra nhanh</h3>
+          <p class="card-copy">Dùng khi nội dung đã có nhiều đường kẻ hoặc nằm trong một khối lớn hơn.</p>
+        </article>
+
+        <article class="card card--wash" data-accent="reading">
+          <span class="badge badge--accent">Card · wash</span>
+          <h3 class="card-title">Ví dụ</h3>
+          <p class="card-copy">Dùng cho ghi chú, ví dụ hoặc vùng cần tách nhẹ khỏi mặt giấy.</p>
+        </article>
+      </div>
+
+      <div class="ds-callout-grid">
+        <div class="callout callout--note">
+          <div>
+            <p class="callout-title">Ghi nhớ</p>
+            <p>“Since” đi với mốc thời gian, “for” đi với khoảng thời gian.</p>
+          </div>
+        </div>
+        <div class="callout callout--tip">
+          <div>
+            <p class="callout-title">Mẹo thi</p>
+            <p>Đọc cả câu trước khi điền. Từ nối thường quyết định nghĩa của cả chỗ trống.</p>
+          </div>
+        </div>
+        <div class="callout callout--warn">
+          <div>
+            <p class="callout-title">Bẫy đề</p>
+            <p>“In the morning” nhưng “at night”. Đừng dịch từng giới từ riêng lẻ.</p>
+          </div>
+        </div>
+        <div class="callout callout--success">
+          <div>
+            <p class="callout-title">Đúng</p>
+            <p>Đáp án có bằng chứng trong bài đọc.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="empty-state ds-empty">
+        <p class="empty-title">Không tìm thấy mục nào</p>
+        <p>Thử từ khoá khác hoặc xoá bộ lọc để xem toàn bộ tờ.</p>
+        <button class="btn btn-ghost" type="button">Xoá bộ lọc</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ds-section" id="data">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">07 · Dữ liệu</p>
+          <h2>Bảng dùng chung một khung.</h2>
+          <p><code>TableShell</code> giữ khung, bo góc, bóng và cuộn ngang. <code>.data-table</code> giữ nhịp ô, header và đường kẻ.</p>
+        </div>
+      </div>
+
+      <div class="table-shell">
+        <table class="data-table">
+          <caption class="sr-only">Ví dụ bảng so sánh thì</caption>
+          <thead>
+            <tr><th scope="col">Thì</th><th scope="col">Công thức</th><th scope="col">Dấu hiệu</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Hiện tại đơn</td><td><code>S + V(s/es)</code></td><td>always, usually, every day</td></tr>
+            <tr><td>Quá khứ đơn</td><td><code>S + V2/ed</code></td><td>yesterday, last week, in 2023</td></tr>
+            <tr><td>Hiện tại hoàn thành</td><td><code>S + have/has + V3/ed</code></td><td>since, for, already, just</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="table-hint ds-table-hint">Kéo ngang để xem đủ bảng <span aria-hidden="true">→</span></p>
+    </div>
+  </section>
+
+  <section class="section section-alt ds-section" id="patterns">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">08 · Mẫu nội dung</p>
+          <h2>Map card và section head.</h2>
+          <p>Đây là hai mẫu xuất hiện trên gần như mọi tờ. Chúng dùng chung primitive thay vì lặp CSS theo từng trang.</p>
+        </div>
+        <p slot="aside" class="section-aside"><span>2</span> mẫu<br>dùng chung</p>
+      </div>
+
+      <div class="map-grid ds-map-grid">
+        <a class="map-card" data-accent="tenses" href="#patterns">
+          <p class="map-kicker">01 · Thì</p>
+          <h3>Mốc thời gian</h3>
+          <p class="map-rule">Quá khứ, hiện tại, tương lai. Mỗi mốc có bốn dạng.</p>
+          <div class="map-chips"><span>before</span><span>now</span><span>after</span></div>
+          <span class="map-link">Xem sơ đồ →</span>
+        </a>
+        <a class="map-card" data-accent="prep" href="#patterns">
+          <p class="map-kicker">02 · Giới từ</p>
+          <h3>Vị trí</h3>
+          <p class="map-rule">AT một điểm, ON một bề mặt, IN một không gian.</p>
+          <div class="map-chips"><span>at</span><span>on</span><span>in</span></div>
+          <span class="map-link">Xem bảng →</span>
+        </a>
+        <a class="map-card" data-accent="grammar" href="#patterns">
+          <p class="map-kicker">03 · Ngữ pháp</p>
+          <h3>Cấu trúc</h3>
+          <p class="map-rule">Nhìn từ đứng trước để chọn dạng từ và cấu trúc cần điền.</p>
+          <div class="map-chips"><span>who</span><span>which</span><span>that</span></div>
+          <span class="map-link">Xem bảng →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ds-section" id="usage">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">09 · Cách dùng</p>
+          <h2>Quy ước cho người viết tờ mới.</h2>
+          <p>Không thêm màu mới cho một lỗi cục bộ. Chọn token, chọn accent của tờ, rồi ghép primitive.</p>
+        </div>
+      </div>
+
+      <div class="ds-usage-grid">
+        <article class="callout callout--note">
+          <div>
+            <p class="callout-title">Chọn accent</p>
+            <p>Đặt <code>data-accent="&lt;slug&gt;"</code> trên khối cha. Dùng <code>var(--accent)</code>, <code>var(--accent-bg)</code> và <code>var(--accent-line)</code>.</p>
+          </div>
+        </article>
+        <article class="callout callout--tip">
+          <div>
+            <p class="callout-title">Chọn thành phần</p>
+            <p>Nút dùng <code>.btn</code>. Nhãn dùng <code>.badge</code>. Chip dùng <code>.chip</code>. Bảng dùng <code>TableShell</code> + <code>.data-table</code>.</p>
+          </div>
+        </article>
+        <article class="callout callout--warn">
+          <div>
+            <p class="callout-title">Không hard-code</p>
+            <p>Không viết hex, bo góc hay bóng mới trong CSS trang. Nếu thiếu token, thêm vào <code>tokens.css</code> trước.</p>
+          </div>
+        </article>
+        <article class="callout callout--success">
+          <div>
+            <p class="callout-title">In và tối</p>
+            <p>Kiểm tra ở chế độ tối và bản in A4. Dark mode chỉ đổi palette; accent, semantic token và primitive tự theo.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="ds-footer-note">
+        <p>
+          Nguồn chuẩn: <code>src/styles/tokens.css</code>, <code>src/styles/base.css</code>,
+          <code>src/styles/ui.css</code>, <code>src/lib/accents.ts</code>.
+          Trang này chỉ để tham chiếu nội bộ và không được index.
+        </p>
+        <a class="btn btn-ghost btn-small" href={sitePath()}>Về trang chủ</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

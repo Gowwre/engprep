@@ -41,8 +41,8 @@ import '../styles/reading.css';
         <p slot="aside" class="section-aside"><span>7</span> dạng câu<br><span>4</span> bước đọc</p>
       </SectionHead>
 
-      <div class="rc-map-grid">
-        <a class="rc-map-card rc-map-main" href="#types">
+      <div class="map-grid rc-map-grid">
+        <a class="map-card rc-map-card rc-map-main" href="#types">
           <p class="map-kicker">01 · Toàn bài</p>
           <h3>Ý chính</h3>
           <p class="map-rule">Câu đầu, câu cuối và những từ được lặp lại.</p>
@@ -52,7 +52,7 @@ import '../styles/reading.css';
           <span class="map-link">Xem cách làm →</span>
         </a>
 
-        <a class="rc-map-card rc-map-detail" href="#types">
+        <a class="map-card rc-map-card rc-map-detail" href="#types">
           <p class="map-kicker">02 · Thông tin</p>
           <h3>Chi tiết</h3>
           <p class="map-rule">Scan tên, số, ngày, địa điểm trong bài.</p>
@@ -62,7 +62,7 @@ import '../styles/reading.css';
           <span class="map-link">Xem cách làm →</span>
         </a>
 
-        <a class="rc-map-card rc-map-vocab" href="#types">
+        <a class="map-card rc-map-card rc-map-vocab" href="#types">
           <p class="map-kicker">03 · Ngữ cảnh</p>
           <h3>Từ vựng</h3>
           <p class="map-rule">Đọc câu trước và câu sau để đoán nghĩa.</p>
@@ -72,7 +72,7 @@ import '../styles/reading.css';
           <span class="map-link">Xem cách làm →</span>
         </a>
 
-        <a class="rc-map-card rc-map-ref" href="#types">
+        <a class="map-card rc-map-card rc-map-ref" href="#types">
           <p class="map-kicker">04 · Liên kết</p>
           <h3>Từ thay thế</h3>
           <p class="map-rule">Tìm danh từ phù hợp với đại từ.</p>
@@ -82,7 +82,7 @@ import '../styles/reading.css';
           <span class="map-link">Xem cách làm →</span>
         </a>
 
-        <a class="rc-map-card rc-map-infer" href="#types">
+        <a class="map-card rc-map-card rc-map-infer" href="#types">
           <p class="map-kicker">05 · Suy luận</p>
           <h3>Suy luận</h3>
           <p class="map-rule">Ghép manh mối, không chọn đáp án cực đoan.</p>
@@ -92,7 +92,7 @@ import '../styles/reading.css';
           <span class="map-link">Xem cách làm →</span>
         </a>
 
-        <a class="rc-map-card rc-map-tf" href="#types">
+        <a class="map-card rc-map-card rc-map-tf" href="#types">
           <p class="map-kicker">06 · Kiểm tra</p>
           <h3>Đúng / Sai / NOT</h3>
           <p class="map-rule">Đối chiếu từng phương án với bài.</p>
@@ -102,7 +102,7 @@ import '../styles/reading.css';
           <span class="map-link">Xem cách làm →</span>
         </a>
 
-        <a class="rc-map-card rc-map-cloze" href="#types">
+        <a class="map-card rc-map-card rc-map-cloze" href="#types">
           <p class="map-kicker">07 · Điền khuyết</p>
           <h3>Điền khuyết</h3>
           <p class="map-rule">Ngữ pháp, từ nối và nghĩa của cả câu.</p>
@@ -245,8 +245,8 @@ import '../styles/reading.css';
       </SectionHead>
 
       <TableShell
-        wrapperClass="rc-table-wrap"
-        tableClass="rc-table rc-type-table"
+        wrapperClass="table-shell"
+        tableClass="data-table rc-table rc-type-table"
         caption="Bảng bảy dạng câu hỏi đọc hiểu và cách xử lý"
         hint
       >
@@ -338,8 +338,8 @@ import '../styles/reading.css';
       />
 
       <TableShell
-        wrapperClass="rc-table-wrap"
-        tableClass="rc-table rc-connector-table"
+        wrapperClass="table-shell"
+        tableClass="data-table rc-table rc-connector-table"
         caption="Bảng từ nối thường gặp trong bài đọc hiểu"
         hint
       >

@@ -42,8 +42,8 @@ import '../styles/cloze.css';
         <p slot="aside" class="section-aside"><span>5</span> loại chỗ trống<br><span>12</span> câu hỏi</p>
       </SectionHead>
 
-      <div class="cz-map-grid">
-        <a class="cz-map-card cz-map-grammar" href="#grammar">
+      <div class="map-grid cz-map-grid">
+        <a class="map-card cz-map-card cz-map-grammar" href="#grammar">
           <p class="map-kicker">01 · Ngữ pháp</p>
           <h3>Chỗ trống ngữ pháp</h3>
           <p class="map-rule">Giới từ, dạng động từ, mệnh đề quan hệ, so sánh.</p>
@@ -53,7 +53,7 @@ import '../styles/cloze.css';
           <span class="map-link">Xem bảng ngữ pháp →</span>
         </a>
 
-        <a class="cz-map-card cz-map-vocab" href="#vocabulary">
+        <a class="map-card cz-map-card cz-map-vocab" href="#vocabulary">
           <p class="map-kicker">02 · Nghĩa</p>
           <h3>Chỗ trống từ vựng</h3>
           <p class="map-rule">Đoán nghĩa từ câu trước, câu sau và chủ đề.</p>
@@ -63,7 +63,7 @@ import '../styles/cloze.css';
           <span class="map-link">Xem manh mối →</span>
         </a>
 
-        <a class="cz-map-card cz-map-colloc" href="#vocabulary">
+        <a class="map-card cz-map-card cz-map-colloc" href="#vocabulary">
           <p class="map-kicker">03 · Cụm từ</p>
           <h3>Cụm từ cố định</h3>
           <p class="map-rule">Từ nào đi với từ nào: make a decision, heavy rain.</p>
@@ -73,7 +73,7 @@ import '../styles/cloze.css';
           <span class="map-link">Xem collocations →</span>
         </a>
 
-        <a class="cz-map-card cz-map-connector" href="#grammar">
+        <a class="map-card cz-map-card cz-map-connector" href="#grammar">
           <p class="map-kicker">04 · Liên kết</p>
           <h3>Từ nối</h3>
           <p class="map-rule">Quan hệ giữa hai câu: thêm ý, tương phản, nguyên nhân, kết quả.</p>
@@ -83,7 +83,7 @@ import '../styles/cloze.css';
           <span class="map-link">Xem từ nối →</span>
         </a>
 
-        <a class="cz-map-card cz-map-ref" href="#grammar">
+        <a class="map-card cz-map-card cz-map-ref" href="#grammar">
           <p class="map-kicker">05 · Thay thế</p>
           <h3>Từ thay thế</h3>
           <p class="map-rule">It, they, this, that thay cho danh từ nào?</p>
@@ -214,8 +214,8 @@ import '../styles/cloze.css';
       </SectionHead>
 
       <TableShell
-        wrapperClass="cz-table-wrap"
-        tableClass="cz-table cz-grammar-table"
+        wrapperClass="table-shell"
+        tableClass="data-table cz-table cz-grammar-table"
         caption="Bảng dấu hiệu ngữ pháp trong bài điền khuyết"
         hint
       >

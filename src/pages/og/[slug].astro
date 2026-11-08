@@ -1,24 +1,10 @@
 ---
 import BrandMark from '../../components/BrandMark.astro';
-import { getSheet, sheets, totalQuestions, type Sheet, type SheetSlug } from '../../data/sheets';
+import { getSheet, sheets, totalQuestions, type SheetSlug } from '../../data/sheets';
+import { accents } from '../../lib/accents';
 import '../../styles/og.css';
 
 type OgProps = { kind: 'home' } | { kind: 'sheet'; sheetSlug: SheetSlug };
-
-const accentPalette: Record<Sheet['accent'], { main: string; bg: string; line: string }> = {
-  tenses: { main: '#b0472a', bg: '#f8e6dd', line: '#ecc3b2' },
-  prep: { main: '#1f6b4f', bg: '#e4efe7', line: '#b9d6c5' },
-  word: { main: '#40538f', bg: '#e7eaf6', line: '#c3cae6' },
-  reading: { main: '#775400', bg: '#fbf1d3', line: '#e0a92f' },
-  sound: { main: '#7a3f6b', bg: '#f2e4ee', line: '#d8b8cf' },
-  write: { main: '#1d6b68', bg: '#e2f0ee', line: '#b8d8d3' },
-  vocab: { main: '#5f6b2a', bg: '#eef1dc', line: '#cfd7a8' },
-  cloze: { main: '#7a5230', bg: '#f0e6da', line: '#d9c2a9' },
-  signs: { main: '#3d5a6c', bg: '#e6eef2', line: '#bfd2dc' },
-  grammar: { main: '#8a3d52', bg: '#f4e4e8', line: '#ddb8c2' },
-  sentence: { main: '#4b555c', bg: '#e9edf0', line: '#c6d0d6' },
-  mock: { main: '#285a9e', bg: '#e5edf8', line: '#bfd1ea' }
-};
 
 export function getStaticPaths() {
   return [
@@ -34,7 +20,7 @@ const props = Astro.props as OgProps;
 const isHome = props.kind === 'home';
 const sheet = props.kind === 'sheet' ? getSheet(props.sheetSlug) : null;
 
-const accent = sheet ? accentPalette[sheet.accent] : accentPalette.tenses;
+const accent = sheet ? accents[sheet.accent].hex : accents.tenses.hex;
 const pageTitle = sheet ? sheet.title : 'Mười hai tờ, một chỗ ôn thi.';
 const displayTitle = isHome ? 'Mười hai tờ,<br>một chỗ ôn thi.' : pageTitle;
 const kicker = sheet ? sheet.cardNo : 'TỜ ÔN THI · LỚP 9';
@@ -60,7 +46,7 @@ const footnote =
 
 const homeRule = `linear-gradient(90deg, ${sheets
   .map((item, index) => {
-    const color = accentPalette[item.accent].main;
+    const color = accents[item.accent].hex.main;
     const start = (index / sheets.length) * 100;
     const end = ((index + 1) / sheets.length) * 100;
     return `${color} ${start}% ${end}%`;
@@ -127,7 +113,7 @@ const ruleBackground = sheet
               {sheets.map((item, index) => (
                 <div
                   class="og-mini-card"
-                  style={`--mini-accent:${accentPalette[item.accent].main}`}
+                  style={`--mini-accent:${accents[item.accent].hex.main}`}
                 >
                   <span class="og-mini-no">{String(index + 1).padStart(2, '0')}</span>
                   <strong>{item.navLabel}</strong>

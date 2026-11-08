@@ -45,8 +45,8 @@ import '../styles/signs.css';
         <p slot="aside" class="section-aside"><span>4</span> nhóm biển<br><span>8</span> chức năng giao tiếp</p>
       </SectionHead>
 
-      <div class="sg-map-grid">
-        <a class="sg-map-card sg-map-ban" href="#signs">
+      <div class="map-grid sg-map-grid">
+        <a class="map-card sg-map-card sg-map-ban" href="#signs">
           <p class="map-kicker">01 · Cấm</p>
           <h3>Cấm</h3>
           <p class="map-rule">Điều bạn <strong>không được làm</strong>. Thường bắt đầu bằng <code>No</code>, <code>Do not</code> hoặc <code>Keep out</code>.</p>
@@ -56,7 +56,7 @@ import '../styles/signs.css';
           <span class="map-link">Xem bảng biển báo →</span>
         </a>
 
-        <a class="sg-map-card sg-map-warning" href="#signs">
+        <a class="map-card sg-map-card sg-map-warning" href="#signs">
           <p class="map-kicker">02 · Cảnh báo</p>
           <h3>Cảnh báo</h3>
           <p class="map-rule">Có <strong>nguy hiểm hoặc rủi ro</strong>. Cần cẩn thận, tránh xa hoặc chú ý khi đi lại.</p>
@@ -66,7 +66,7 @@ import '../styles/signs.css';
           <span class="map-link">Xem bảng biển báo →</span>
         </a>
 
-        <a class="sg-map-card sg-map-rule" href="#signs">
+        <a class="map-card sg-map-card sg-map-rule" href="#signs">
           <p class="map-kicker">03 · Cho phép &amp; hướng dẫn</p>
           <h3>Hướng dẫn</h3>
           <p class="map-rule">Cho biết <strong>ai được làm gì hoặc đi lối nào</strong>: đẩy cửa, đi bên trái, chỉ nhân viên.</p>
@@ -76,7 +76,7 @@ import '../styles/signs.css';
           <span class="map-link">Xem bảng biển báo →</span>
         </a>
 
-        <a class="sg-map-card sg-map-info" href="#signs">
+        <a class="map-card sg-map-card sg-map-info" href="#signs">
           <p class="map-kicker">04 · Thông tin</p>
           <h3>Thông tin</h3>
           <p class="map-rule">Giờ mở cửa, giá, điều kiện đặt chỗ hoặc tình trạng dịch vụ. Đọc kỹ <strong>con số</strong> và <strong>từ điều kiện</strong>.</p>
@@ -204,8 +204,8 @@ import '../styles/signs.css';
       </SectionHead>
 
       <TableShell
-        wrapperClass="sg-table-wrap"
-        tableClass="sg-table"
+        wrapperClass="table-shell"
+        tableClass="data-table sg-table"
         caption="Bảng 20 biển báo, thông báo thường gặp và nghĩa"
         hint
       >

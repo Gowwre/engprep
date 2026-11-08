@@ -42,10 +42,10 @@
 .cz-mini-options span {
   padding: 4px 8px;
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.45;
 }
 
@@ -61,7 +61,7 @@
   padding-top: 9px;
   border-top: 1px dashed var(--line);
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.45;
 }
 
@@ -72,7 +72,6 @@
 /* ---------- Section 01: map ---------- */
 
 .cz-map-grid {
-  display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 12px;
 }
@@ -81,26 +80,6 @@
   --map: var(--cocoa);
   --map-bg: var(--cocoa-bg);
   --map-line: var(--cocoa-line);
-  display: flex;
-  flex-direction: column;
-  padding: 16px 15px 14px;
-  border: 1.5px solid var(--border-strong);
-  border-top: 5px solid var(--map);
-  border-radius: 14px;
-  background: var(--surface);
-  box-shadow: 4px 4px 0 var(--shadow);
-  transition: transform 0.16s ease, box-shadow 0.16s ease;
-}
-
-.cz-map-card:hover {
-  box-shadow: 6px 6px 0 var(--shadow);
-  transform: translateY(-3px);
-}
-
-.cz-map-card:active {
-  transform: translateY(1px);
-  box-shadow: 2px 2px 0 var(--shadow);
-  transition-duration: 0.06s;
 }
 
 .cz-map-card.cz-map-vocab,
@@ -139,7 +118,7 @@
   border: 1.5px solid var(--border-strong);
   border-radius: 14px;
   background: var(--surface);
-  box-shadow: 4px 4px 0 var(--shadow);
+  box-shadow: var(--shadow-md);
 }
 
 .cz-step-no {
@@ -149,11 +128,11 @@
   height: 23px;
   margin-bottom: 8px;
   border: 1px solid var(--cocoa-line);
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   color: var(--cocoa);
   background: var(--cocoa-bg);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   font-weight: 800;
 }
 
@@ -168,7 +147,7 @@
 .cz-step p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.55;
 }
 
@@ -176,11 +155,11 @@
   padding: 6px 8px;
   margin-top: 9px;
   border: 1px solid var(--cocoa-line);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   color: var(--ink);
   background: var(--cocoa-bg);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.45;
 }
 
@@ -200,13 +179,13 @@
   flex-direction: column;
   padding: 7px 9px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--surface-2);
 }
 
 .cz-time-step span {
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -216,7 +195,7 @@
   margin-top: 2px;
   color: var(--cocoa);
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: var(--font-size-lg);
   line-height: 1.2;
 }
 
@@ -224,7 +203,7 @@
   align-self: center;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.9375rem;
+  font-size: var(--font-size-base);
 }
 
 /* Decision funnel: four gates before choosing an answer. */
@@ -240,14 +219,14 @@
   gap: 2px;
   padding: 9px 18px;
   border: 2px solid var(--cocoa);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--cocoa-bg);
   text-align: center;
 }
 
 .cz-funnel-start span {
   color: var(--cocoa);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -256,14 +235,14 @@
 .cz-funnel-start strong {
   color: var(--ink);
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: var(--font-size-lg);
   line-height: 1.2;
 }
 
 .cz-funnel-arrow {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.9375rem;
+  font-size: var(--font-size-base);
   line-height: 1;
 }
 
@@ -307,11 +286,11 @@
   height: 24px;
   place-items: center;
   border: 1px solid var(--gate-line);
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   color: var(--gate);
   background: var(--gate-bg);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   font-weight: 800;
 }
 
@@ -319,7 +298,7 @@
   display: block;
   color: var(--gate);
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: var(--font-size-lg);
   letter-spacing: -0.01em;
   line-height: 1.2;
 }
@@ -327,7 +306,7 @@
 .cz-funnel-gate p {
   margin: 2px 0 0;
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.5;
 }
 
@@ -338,7 +317,7 @@
   color: var(--ink);
   background: var(--surface);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   white-space: nowrap;
 }
 
@@ -350,7 +329,7 @@
   gap: 3px 10px;
   padding: 9px 16px;
   border: 1.5px solid var(--jade);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--jade-bg);
   text-align: center;
 }
@@ -358,58 +337,20 @@
 .cz-funnel-end strong {
   color: var(--jade);
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: var(--font-size-lg);
   line-height: 1.2;
 }
 
 .cz-funnel-end span {
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   line-height: 1.4;
 }
 
 /* ---------- Sections 03–04: grammar / vocabulary ---------- */
 
-.cz-table-wrap {
-  overflow-x: auto;
-  border: 1.5px solid var(--border-strong);
-  border-radius: 18px;
-  background: var(--surface);
-  box-shadow: 4px 4px 0 var(--shadow);
-  scrollbar-width: thin;
-}
-
 .cz-table {
-  width: 100%;
   min-width: 860px;
-  border-collapse: collapse;
-  font-size: 0.875rem;
-}
-
-.cz-table thead th {
-  padding: 11px 14px;
-  border-bottom: 1.5px solid var(--line);
-  color: var(--muted);
-  background: var(--surface-2);
-  font-size: 0.75rem;
-  font-weight: 850;
-  letter-spacing: 0.08em;
-  text-align: left;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.cz-table td,
-.cz-table tbody th {
-  padding: 11px 14px;
-  border-bottom: 1px solid var(--line);
-  line-height: 1.55;
-  text-align: left;
-  vertical-align: top;
-}
-
-.cz-table tbody tr:last-child > * {
-  border-bottom: 0;
 }
 
 .cz-table tbody tr:hover {
@@ -424,10 +365,10 @@
 .cz-table code {
   padding: 1px 5px;
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: var(--radius-xs);
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   white-space: nowrap;
 }
 
@@ -439,8 +380,8 @@
   display: inline-block;
   padding: 2px 7px;
   border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
   font-weight: 800;
   line-height: 1.5;
   white-space: nowrap;
@@ -483,15 +424,15 @@
   padding: 15px 16px;
   border: 1.5px solid var(--line);
   border-top: 4px solid var(--cocoa);
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   background: var(--surface);
 }
 
 .cz-clue-label {
   margin: 0 0 3px;
   color: var(--cocoa);
-  font-size: 0.75rem;
-  font-weight: 850;
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-extrabold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -507,7 +448,7 @@
 .cz-clue-card > p:not(.cz-clue-label):not(.cz-clue-eg) {
   margin: 0;
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.5;
 }
 
@@ -517,7 +458,7 @@
   border-top: 1px dashed var(--line);
   color: var(--muted);
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   font-style: italic;
   line-height: 1.5;
 }
@@ -533,9 +474,9 @@
 .cz-sample {
   padding: 23px 24px;
   border: 1.5px solid var(--border-strong);
-  border-radius: 20px;
+  border-radius: var(--radius-3xl);
   background: var(--surface);
-  box-shadow: 5px 5px 0 var(--shadow);
+  box-shadow: var(--shadow-lg);
 }
 
 .cz-sample-head {
@@ -550,7 +491,7 @@
 .cz-sample-head h3 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: var(--font-size-3xl);
   letter-spacing: -0.01em;
   line-height: 1.15;
 }
@@ -560,13 +501,13 @@
   margin: 0;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   white-space: nowrap;
 }
 
 .cz-passage {
   margin: 17px 0 0;
-  font-size: 1rem;
+  font-size: var(--font-size-lg);
   line-height: 1.9;
 }
 
@@ -576,7 +517,7 @@
   color: var(--cocoa);
   background: var(--cocoa-bg);
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   font-weight: 700;
   white-space: nowrap;
 }
@@ -594,7 +535,7 @@
   gap: 2px 7px;
   padding: 8px 9px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--surface-2);
 }
 
@@ -602,20 +543,20 @@
   grid-row: span 2;
   color: var(--cocoa);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   font-weight: 800;
 }
 
 .cz-answer-grid strong {
   color: var(--ink);
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: var(--font-size-md);
   line-height: 1.4;
 }
 
 .cz-answer-grid em {
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--font-size-sm);
   font-style: normal;
   line-height: 1.4;
 }
@@ -629,7 +570,7 @@
   border-left: 4px solid var(--cocoa);
   border-radius: 9px;
   background: var(--surface-2);
-  font-size: 0.9375rem;
+  font-size: var(--font-size-base);
   line-height: 1.65;
 }
 
@@ -637,8 +578,8 @@
   display: block;
   margin-bottom: 4px;
   color: var(--cocoa);
-  font-size: 0.75rem;
-  font-weight: 850;
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-extrabold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -697,14 +638,14 @@
 
   .cz-funnel-gate strong,
   .cz-funnel-end strong {
-    font-size: 1rem;
+    font-size: var(--font-size-lg);
   }
 
   .cz-funnel-end {
     align-items: center;
     flex-direction: column;
     padding: 8px 12px;
-    border-radius: 12px;
+    border-radius: var(--radius-xl);
   }
 
   .cz-map-grid,
@@ -789,7 +730,7 @@
   .cz-time-strip {
     gap: 3px;
     padding: 4px;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
   }
 
   .cz-time-step {
@@ -802,12 +743,6 @@
 
   .cz-time-step strong {
     font-size: 6.6pt;
-  }
-
-  .cz-table-wrap {
-    overflow: visible !important;
-    border-radius: 8px !important;
-    box-shadow: none !important;
   }
 
   .cz-table {
