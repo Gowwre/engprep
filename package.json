@@ -13,6 +13,7 @@
     "check": "astro check",
     "qa:links": "node scripts/qa-links.mjs",
     "qa:search": "node scripts/qa-search.mjs",
+    "audio": "node scripts/generate-audio.mjs",
     "pdf": "npm run build && node scripts/generate-pdf.mjs",
     "og": "npm run build && node scripts/generate-og.mjs"
   },

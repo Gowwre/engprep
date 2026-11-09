@@ -44,6 +44,30 @@ npm run pdf
 
 Lệnh này build site, render 12 bản in bằng Chrome headless và ghi PDF vào `public/pdf/`. Cần Chrome/Chromium; đặt `CHROME_BIN` nếu Chrome không nằm trong `PATH`.
 
+## Phát âm bằng TTSMaker
+
+Trang Phát âm, Từ vựng, Giới từ và một số bảng từ vựng dùng audio của [TTSMaker](https://ttsmaker.com/). Danh sách core gồm 278 từ/cụm từ, nằm trong `src/data/tts-words.json` (sinh từ nội dung thật của 12 tờ). Vì site là static và API key không được lộ ra trình duyệt, audio được tạo trước ở máy local rồi commit vào `public/audio/tts/`; trình duyệt chỉ tải file MP3 cùng site.
+
+1. Đăng ký TTSMaker Pro/Studio và tạo API key tại [API Platform](https://pro.ttsmaker.com/api-platform/api-key-list). API v2 không hỗ trợ gói Lite.
+2. Copy `.env.example` thành `.env` rồi điền `TTSMAKER_API_KEY`.
+3. Chạy `npm run audio` để tạo các MP3 còn thiếu và cập nhật `src/data/tts-audio.json`.
+4. Chạy `npm run build` (hoặc deploy bình thường). Nên commit cả `public/audio/tts/*.mp3` và manifest để GitHub Pages phục vụ audio mà không cần key.
+
+Script đọc `src/data/tts-words.json`, gọi API tuần tự (giới hạn 1 request/giây), tải file và bỏ qua MP3 đã có. Các lệnh phụ:
+
+```bash
+npm run audio -- --dry-run       # liệt kê từ và file, không gọi API
+npm run audio -- --force         # tạo lại toàn bộ MP3
+npm run audio -- --list-voices   # xem voice tiếng Anh và ID
+npm run audio -- --status        # xem quota còn lại
+```
+
+Cấu hình trong `.env`: `TTSMAKER_VOICE_ID` (mặc định `1480`), `TTSMAKER_AUDIO_SPEED` (mặc định `0.9`), `TTSMAKER_HIGH_QUALITY` (`1`). Nếu một từ chưa có MP3, trình duyệt tự dùng `speechSynthesis`; nếu trình duyệt không hỗ trợ, từ vẫn hiển thị như bình thường. Build và deploy không cần API key.
+
+Script `src/scripts/tts-audio.js` chạy trên mọi trang, tự nhận các từ core trong word chips, bảng collocation, topic vocabulary, phrasal verbs, giới từ và phần VI, rồi biến chúng thành nút nghe. Chỉ cần thêm selector vào `targets` trong script nếu muốn phủ thêm một khu vực mới.
+
+Workflow deploy có bước tùy chọn: nếu đặt `TTSMAKER_API_KEY` làm GitHub Actions secret, CI sẽ tạo các MP3 còn thiếu trước khi build; nếu không có secret, CI dùng audio đã commit và bỏ qua bước này.
+
 ## Tiến độ học
 
 Quiz và đề thi thử lưu tiến độ cục bộ trong `localStorage`:
@@ -133,13 +157,16 @@ src/
 │   └── WordFamilyCard.astro # thẻ họ từ
 ├── data/
 │   ├── quick-review.ts    # nội dung Ôn nhanh cho 12 tờ
-│   └── sheets.ts          # registry của tất cả tờ ôn thi
+│   ├── sheets.ts          # registry của tất cả tờ ôn thi
+│   ├── tts-words.json     # 278 từ/cụm từ core cần tạo audio
+│   └── tts-audio.json     # manifest audio TTSMaker (tạo bởi npm run audio)
 ├── layouts/
 │   ├── BaseLayout.astro   # head, theme, header/footer, shared JS
 │   ├── PrintLayout.astro  # layout tối giản cho bản in
 │   └── SheetLayout.astro  # hero + page nav cho một tờ
 ├── lib/
 │   ├── accents.ts         # mapping accent cho header, home, OG
+│   ├── tts.js             # chuẩn hoá từ và tên file audio dùng chung
 │   └── urls.ts            # helper link có hỗ trợ base
 ├── pages/
 │   ├── print/
@@ -155,9 +182,11 @@ src/
 │   │   └── quiz.js        # engine trắc nghiệm dùng chung
 │   ├── generate-og.mjs    # render PNG vào public/og/
 │   ├── generate-pdf.mjs   # render PDF vào public/pdf/
+│   ├── generate-audio.mjs # tạo MP3 TTSMaker vào public/audio/tts/
 │   ├── home.js            # tab trang chủ, tìm tờ, tiến độ
 │   ├── search.js          # tải Pagefind, lọc/nhóm kết quả, bàn phím
 │   ├── site.js            # theme, menu, print, scrollspy
+│   ├── tts-audio.js       # phát audio và fallback speechSynthesis
 │   └── <slug>.js          # câu hỏi + cấu hình riêng của từng tờ
 └── styles/
     ├── fonts.css          # @font-face

@@ -1,0 +1,278 @@
+stopped
+watched
+laughed
+missed
+washed
+played
+cleaned
+opened
+listened
+arrived
+wanted
+needed
+decided
+visited
+started
+stops
+books
+cats
+laughs
+months
+plays
+reads
+dogs
+goes
+comes
+misses
+buzzes
+washes
+watches
+changes
+sit
+seat
+ship
+sheep
+pen
+pain
+met
+mate
+cat
+cart
+hat
+heart
+cut
+cot
+luck
+lock
+food
+foot
+pool
+pull
+teacher
+about
+banana
+bread
+great
+time
+machine
+name
+car
+hour
+honest
+know
+knife
+write
+listen
+castle
+island
+table
+happy
+doctor
+music
+begin
+decide
+enjoy
+forget
+record
+present
+decision
+education
+attention
+scientific
+economic
+historical
+ability
+commercial
+delicious
+beautiful
+accident
+interesting
+popularity
+possibility
+happily
+develop
+developing
+development
+happiness
+comfort
+comfortable
+possible
+possibly
+export
+object
+photograph
+photography
+photographic
+naked
+wicked
+beloved
+does
+live
+leave
+photo
+make a decision
+take part in
+do homework
+have an impact on
+make a difference
+pay attention to
+take responsibility for
+heavy rain
+serious problem
+healthy lifestyle
+public transport
+renewable energy
+cultural heritage
+social media
+depend on
+look after
+look forward to
+deal with
+concentrate on
+reason for
+solution to
+effect on
+access to
+in the end
+on time
+by mistake
+in spite of
+break down
+run out of
+put off
+turn off
+give up
+look for
+look up
+look into
+look out
+pollution
+climate change
+plastic waste
+protect the environment
+reduce emissions
+natural disaster
+wildlife
+artificial intelligence
+deepfake
+misinformation
+digital device
+online safety
+spread information
+influence public opinion
+destination
+accommodation
+tourist attraction
+local cuisine
+package tour
+means of transport
+book a ticket
+go sightseeing
+balanced diet
+physical activity
+mental health
+get enough sleep
+cut down on fast food
+stay healthy
+overweight
+stress
+volunteer
+charity
+community service
+festival
+custom
+tradition
+curriculum
+assignment
+extracurricular activity
+vocational school
+qualification
+higher education
+pass an exam
+school facilities
+provide
+habit
+provide information
+provide an opportunity
+provide support
+eating habits
+break the habit of
+sleeping habits
+provides an opportunity
+environment
+technology
+travel
+health
+an opportunity
+make
+do
+say
+tell
+lend
+borrow
+affect
+effect
+break up
+listen to
+wait for
+belong to
+arrive at
+arrive in
+agree with
+apologise for
+apologize for
+rely on
+succeed in
+worry about
+interested in
+good at
+bad at
+afraid of
+proud of
+famous for
+different from
+similar to
+kind to
+angry with
+excited about
+tired of
+fond of
+full of
+key to
+cause of
+result of
+problem with
+interest in
+difference between
+invitation to
+relationship between
+at the end of
+in time
+at first
+in fact
+on purpose
+in my opinion
+because of
+instead of
+since
+for
+during
+while
+until
+by
+in the box
+on the wall
+at the door
+under
+between
+behind
+opposite
+into
+onto
+through
+across
+along
+around
+past
+provide a service
+remind

@@ -2888,6 +2888,19 @@
   line-height: 1.6;
 }
 
+.footer-tts-hint {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  color: var(--muted);
+  font-size: var(--font-size-sm);
+}
+
+.footer-tts-hint span {
+  color: var(--teal);
+  font-size: 1.1em;
+}
+
 .footer-bottom {
   display: flex;
   align-items: center;

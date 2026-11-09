@@ -1,0 +1,730 @@
+stopped
+watched
+laughed
+missed
+washed
+played
+cleaned
+opened
+listened
+arrived
+wanted
+needed
+decided
+visited
+started
+stops
+books
+cats
+laughs
+months
+plays
+reads
+dogs
+goes
+comes
+misses
+buzzes
+washes
+watches
+changes
+sit
+seat
+ship
+sheep
+pen
+pain
+met
+mate
+cat
+cart
+hat
+heart
+cut
+cot
+luck
+lock
+food
+foot
+pool
+pull
+teacher
+about
+banana
+bread
+great
+time
+machine
+name
+car
+hour
+honest
+know
+knife
+write
+listen
+castle
+island
+table
+happy
+doctor
+music
+begin
+decide
+enjoy
+forget
+record
+present
+decision
+education
+attention
+scientific
+economic
+historical
+ability
+commercial
+delicious
+beautiful
+accident
+interesting
+popularity
+possibility
+happily
+develop
+developing
+development
+happiness
+comfort
+comfortable
+possible
+possibly
+export
+object
+photograph
+photography
+photographic
+naked
+wicked
+beloved
+does
+live
+leave
+photo
+make a decision
+take part in
+do homework
+have an impact on
+make a difference
+pay attention to
+take responsibility for
+heavy rain
+serious problem
+healthy lifestyle
+public transport
+renewable energy
+cultural heritage
+social media
+depend on
+look after
+look forward to
+deal with
+concentrate on
+reason for
+solution to
+effect on
+access to
+in the end
+on time
+by mistake
+in spite of
+break down
+run out of
+put off
+turn off
+give up
+look for
+look up
+look into
+look out
+pollution
+climate change
+plastic waste
+protect the environment
+reduce emissions
+natural disaster
+wildlife
+artificial intelligence
+deepfake
+misinformation
+digital device
+online safety
+spread information
+influence public opinion
+destination
+accommodation
+tourist attraction
+local cuisine
+package tour
+means of transport
+book a ticket
+go sightseeing
+balanced diet
+physical activity
+mental health
+get enough sleep
+cut down on fast food
+stay healthy
+overweight
+stress
+volunteer
+charity
+community service
+festival
+custom
+tradition
+curriculum
+assignment
+extracurricular activity
+vocational school
+qualification
+higher education
+pass an exam
+school facilities
+provide
+habit
+provide information
+provide an opportunity
+provide support
+eating habits
+break the habit of
+sleeping habits
+provides an opportunity
+environment
+technology
+travel
+health
+an opportunity
+make
+do
+say
+tell
+lend
+borrow
+affect
+effect
+break up
+listen to
+wait for
+belong to
+arrive at
+arrive in
+agree with
+apologise for
+apologize for
+rely on
+succeed in
+worry about
+interested in
+good at
+bad at
+afraid of
+proud of
+famous for
+different from
+similar to
+kind to
+angry with
+excited about
+tired of
+fond of
+full of
+key to
+cause of
+result of
+problem with
+interest in
+difference between
+invitation to
+relationship between
+at the end of
+in time
+at first
+in fact
+on purpose
+in my opinion
+because of
+instead of
+since
+for
+during
+while
+until
+by
+in the box
+on the wall
+at the door
+under
+between
+behind
+opposite
+into
+onto
+through
+across
+along
+around
+past
+succeed
+pollute
+care
+beauty
+danger
+educate
+culture
+nature
+science
+invent
+create
+produce
+differ
+friend
+nation
+employ
+strong
+noise
+interest
+excite
+disappoint
+satisfy
+imagine
+communicate
+compete
+protect
+rely
+power
+use
+wonder
+success
+successful
+successfully
+developed
+environmental
+environmentally
+polluted
+polluting
+careful
+careless
+carefully
+carelessly
+healthy
+unhealthy
+healthily
+beautifully
+dangerous
+dangerously
+educational
+educationally
+cultural
+culturally
+traditional
+traditionally
+natural
+naturally
+scientifically
+technological
+technologically
+invention
+inventor
+inventive
+inventively
+creation
+creativity
+creative
+creatively
+product
+production
+productive
+productively
+decisive
+decisively
+difference
+different
+differently
+friendship
+friendly
+unfriendly
+knowledge
+knowledgeable
+musician
+musical
+musically
+national
+nationally
+employment
+unemployment
+employer
+employee
+employed
+unemployed
+unhappy
+strength
+strongly
+uncomfortable
+comfortably
+noisy
+noisily
+interested
+interestingly
+excitement
+excited
+exciting
+excitedly
+disappointment
+disappointed
+disappointing
+disappointingly
+satisfaction
+satisfied
+satisfying
+satisfactorily
+imagination
+imaginative
+imaginatively
+communication
+communicative
+competition
+competitor
+competitive
+competitively
+protection
+protective
+protectively
+reliance
+reliability
+reliable
+reliably
+powerful
+powerless
+powerfully
+useful
+useless
+usefully
+wonderful
+wonderfully
+action
+improvement
+kindness
+darkness
+safety
+importance
+confidence
+actor
+artist
+scientist
+leadership
+childhood
+neighbourhood
+marriage
+shortage
+luggage
+arrival
+survival
+refusal
+building
+learning
+meeting
+pressure
+failure
+pleasure
+freedom
+kingdom
+homeless
+famous
+curious
+active
+effective
+readable
+fantastic
+historic
+bored
+boring
+rainy
+lovely
+lonely
+important
+confident
+childish
+selfish
+yellowish
+modernise
+organise
+realise
+beautify
+simplify
+classify
+widen
+strengthen
+shorten
+decorate
+celebrate
+quickly
+forward
+backward
+toward
+unable
+incorrect
+indirect
+invisible
+impossible
+impolite
+impatient
+illegal
+illogical
+irregular
+irresponsible
+disagree
+disappear
+dishonest
+non-stop
+non-smoker
+misunderstand
+mislead
+misuse
+reuse
+rebuild
+rewrite
+overcrowded
+overwork
+overpopulation
+underdeveloped
+underestimate
+preview
+prehistory
+international
+interact
+multicultural
+multimedia
+enrich
+enable
+empower
+advice
+advise
+hard
+hardly
+NO PARKING
+NO SMOKING
+DO NOT ENTER
+KEEP OUT
+STAFF ONLY
+DANGER: HIGH VOLTAGE
+WET FLOOR
+MIND THE GAP
+BEWARE OF DOG
+PUSH
+KEEP LEFT
+QUEUE HERE
+USE OTHER DOOR
+OPEN DAILY 8 A.M.-9 P.M.
+FREE ENTRY
+50% OFF
+BOOKING REQUIRED
+OUT OF ORDER
+SOLD OUT
+NO FOOD OR DRINK
+I’m sorry I’m late.
+Thanks a lot.
+Don’t worry.
+You can do it.
+Cheer up!
+Keep trying!
+What’s the matter?
+You look tired.
+Bless you!
+Get well soon.
+Good idea.
+That sounds great.
+I’d love to. Thanks.
+I’m sorry, I can’t.
+That’s all right.
+Never mind.
+Don’t worry about it.
+You’re welcome.
+Not at all.
+It’s my pleasure.
+Sure.
+Of course.
+Go ahead.
+Yes, of course.
+I’m afraid you can’t.
+Thanks. I’ll try.
+That’s very kind of you.
+I have a headache.
+I feel better now.
+Thank you.
+always
+usually
+often
+sometimes
+never
+every day
+on Mondays
+now
+right now
+at the moment
+Look!
+Listen!
+these days
+currently
+already
+just
+yet
+ever
+so far
+all day
+all week
+how long
+lately
+recently
+yesterday
+last week
+ago
+in 2010
+then
+when
+in the past
+at 8 p.m. yesterday
+at that time
+all morning
+before
+after
+by the time
+by 2010
+tomorrow
+next week
+in the future
+soon
+I think
+probably
+at this time tomorrow
+at 8 p.m. next Sunday
+this time next week
+all day tomorrow
+by 2030
+by then
+by next month
+by next June
+and
+besides
+moreover
+in addition
+but
+however
+although
+though
+even though
+because
+as
+so
+therefore
+as a result
+or
+otherwise
+as soon as
+who
+whom
+which
+that
+whose
+where
+good
+better
+the best
+bad
+worse
+the worst
+far
+farther
+further
+the farthest
+furthest
+many
+much
+more
+the most
+little
+less
+the least
+hope
+plan
+want
+need
+promise
+agree
+refuse
+encourage
+ask
+mind
+suggest
+avoid
+finish
+practice
+keep
+be interested in
+be fond of
+let
+have
+would rather
+remember
+stop
+try
+prefer
+wish
+some
+most
+none
+get
+also
+despite
+whereas
+on the other hand
+for example
+for instance
+such as
+first
+firstly
+next
+finally
+in conclusion
+to sum up
+overall
+mainly about
+best title
+purpose
+according to
+closest in meaning
+means
+it
+they
+this
+infer
+true
+false
+NOT mentioned
+EXCEPT
+fill in
+best fits
+gap
+in 2026
+decided to go
+enjoys reading
+has lived
+more crowded
+as tall as
+many people
+much water
+a book
+an hour
+the sun
+any
+provide a service
+remind

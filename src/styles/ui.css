@@ -437,6 +437,60 @@
   font-size: var(--font-size-base);
 }
 
+/* ---------- TTS audio targets ---------- */
+
+.tts-audio {
+  cursor: pointer;
+}
+
+.tts-audio::after {
+  margin-left: 3px;
+  color: var(--teal);
+  content: "♪";
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
+.tts-inline::after {
+  margin-left: 2px;
+  font-size: 0.7em;
+  opacity: 0.65;
+}
+
+.tts-audio:hover,
+.tts-audio:focus-visible {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
+
+.tts-audio:hover::after,
+.tts-audio:focus-visible::after {
+  opacity: 1;
+}
+
+.tts-audio.is-playing::after {
+  content: "♫";
+  animation: tts-audio-pulse 0.9s ease-in-out infinite;
+}
+
+@keyframes tts-audio-pulse {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tts-audio.is-playing::after {
+    animation: none;
+  }
+}
+
+@media print {
+  .tts-audio::after {
+    content: none !important;
+  }
+}
+
 /* ---------- Print ---------- */
 
 @media print {

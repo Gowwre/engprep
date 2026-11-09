@@ -47,6 +47,9 @@ const { current = 'home' } = Astro.props;
     <div class="footer-action">
       <p class="footer-label">Mỗi ngày 10 phút</p>
       <p>Đều đặn mỗi ngày hiệu quả hơn học dồn một buổi. Chọn một tờ, in ra và dán ở góc học tập.</p>
+      {current !== 'home' && current !== 'design-system' && (
+        <p class="footer-tts-hint no-print"><span aria-hidden="true">♪</span> Nhấn vào từ có biểu tượng này để nghe phát âm.</p>
+      )}
       {current !== 'home' && (
         <button class="btn btn-ghost btn-small no-print" type="button" data-print>In trang này</button>
       )}

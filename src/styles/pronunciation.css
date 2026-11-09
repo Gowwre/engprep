@@ -956,20 +956,19 @@
   }
 }
 
-/* Audio enhancement: the word chips are buttons when speech synthesis exists. */
-.pron-examples span.pron-audio {
+/* Audio enhancement: pronunciation word chips are buttons when audio or
+   speech synthesis is available. */
+.pron-examples .tts-audio {
   cursor: pointer;
 }
 
-.pron-examples span.pron-audio::after {
+.pron-examples .tts-audio::after {
   margin-left: 5px;
-  color: var(--teal);
-  content: "♪";
   font-size: 0.9em;
 }
 
-.pron-examples span.pron-audio:hover,
-.pron-examples span.pron-audio:focus-visible {
+.pron-examples .tts-audio:hover,
+.pron-examples .tts-audio:focus-visible {
   border-color: var(--teal);
   color: var(--ink);
 }

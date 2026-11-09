@@ -9,3 +9,8 @@ dist/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Local secrets (TTSMaker API key)
+.env
+.env.*
+!.env.example

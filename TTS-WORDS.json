@@ -1,0 +1,6229 @@
+{
+  "source": "https://gowwre.github.io/engprep/",
+  "generatedAt": "2026-11-09T04:22:22.782Z",
+  "counts": {
+    "groups": {
+      "pronunciation": {
+        "edExamples": 15,
+        "sExamples": 15,
+        "minimalPairs": 23,
+        "spelling": 18,
+        "stress": 22,
+        "suffixExamples": 21,
+        "wordPairs": 4,
+        "familyShift": 3,
+        "exceptions": 3,
+        "trapWords": 15,
+        "quickReview": 2
+      },
+      "vocabulary": {
+        "collocations": 32,
+        "lookPhrasalVerbs": 6,
+        "topicWords": 48,
+        "headwords": 2,
+        "entryCollocations": 6,
+        "checkStrip": 4,
+        "mapChips": 13,
+        "quickReviewPhrasal": 6,
+        "trapWords": 10
+      },
+      "prepositions": {
+        "collocations": 56,
+        "mapChips": 25
+      },
+      "word-forms": {
+        "families": 40,
+        "forms": 139,
+        "suffixExamples": 96,
+        "prefixExamples": 38,
+        "quickReview": 6
+      },
+      "signs": {
+        "signs": 21,
+        "communicationPrompts": 10,
+        "communicationReplies": 20,
+        "mapChips": 13
+      },
+      "tenses": {
+        "signalWords": 55
+      },
+      "grammar": {
+        "connectors": 22,
+        "relativePronouns": 7,
+        "comparisons": 18,
+        "verbPatterns": 31,
+        "quickPoints": 5
+      },
+      "reading": {
+        "connectors": 32,
+        "questionKeywords": 23
+      },
+      "cloze": {
+        "signalExamples": 24,
+        "quickReview": 7
+      },
+      "sentence-patterns": {
+        "constructionCollocations": 4,
+        "transformationPhrasalVerbs": 3,
+        "transformationLinkers": 5,
+        "transformationVerbPatterns": 18
+      }
+    },
+    "unique": 730,
+    "tiers": {
+      "1": 112,
+      "2": 166,
+      "3": 237,
+      "4": 215
+    },
+    "longForm": 132
+  },
+  "tiers": {
+    "1": "Pronunciation targets: -ed/-s, minimal pairs, spelling, stress, word pairs, exceptions",
+    "2": "Vocabulary and phrase targets: collocations, topic words, phrasal verbs, prepositions, sentence patterns",
+    "3": "Word families and word-formation examples",
+    "4": "Grammar, reading, signs, communication, tense signals"
+  },
+  "groups": {
+    "pronunciation": {
+      "edExamples": [
+        "stopped",
+        "watched",
+        "laughed",
+        "missed",
+        "washed",
+        "played",
+        "cleaned",
+        "opened",
+        "listened",
+        "arrived",
+        "wanted",
+        "needed",
+        "decided",
+        "visited",
+        "started"
+      ],
+      "sExamples": [
+        "stops",
+        "books",
+        "cats",
+        "laughs",
+        "months",
+        "plays",
+        "reads",
+        "dogs",
+        "goes",
+        "comes",
+        "misses",
+        "buzzes",
+        "washes",
+        "watches",
+        "changes"
+      ],
+      "minimalPairs": [
+        "sit",
+        "seat",
+        "ship",
+        "sheep",
+        "pen",
+        "pain",
+        "met",
+        "mate",
+        "cat",
+        "cart",
+        "hat",
+        "heart",
+        "cut",
+        "cot",
+        "luck",
+        "lock",
+        "food",
+        "foot",
+        "pool",
+        "pull",
+        "teacher",
+        "about",
+        "banana"
+      ],
+      "spelling": [
+        "seat",
+        "bread",
+        "great",
+        "sit",
+        "time",
+        "machine",
+        "cat",
+        "name",
+        "car",
+        "about",
+        "hour",
+        "honest",
+        "know",
+        "knife",
+        "write",
+        "listen",
+        "castle",
+        "island"
+      ],
+      "stress": [
+        "table",
+        "happy",
+        "doctor",
+        "music",
+        "begin",
+        "decide",
+        "enjoy",
+        "forget",
+        "record",
+        "present",
+        "decision",
+        "education",
+        "attention",
+        "scientific",
+        "economic",
+        "historical",
+        "ability",
+        "commercial",
+        "delicious",
+        "beautiful",
+        "accident",
+        "interesting"
+      ],
+      "suffixExamples": [
+        "decision",
+        "education",
+        "attention",
+        "scientific",
+        "economic",
+        "historical",
+        "ability",
+        "popularity",
+        "possibility",
+        "commercial",
+        "delicious",
+        "happy",
+        "happily",
+        "develop",
+        "developing",
+        "development",
+        "happiness",
+        "comfort",
+        "comfortable",
+        "possible",
+        "possibly"
+      ],
+      "wordPairs": [
+        "record",
+        "present",
+        "export",
+        "object"
+      ],
+      "familyShift": [
+        "photograph",
+        "photography",
+        "photographic"
+      ],
+      "exceptions": [
+        "naked",
+        "wicked",
+        "beloved"
+      ],
+      "trapWords": [
+        "goes",
+        "does",
+        "ship",
+        "sheep",
+        "sit",
+        "seat",
+        "live",
+        "leave",
+        "pen",
+        "pain",
+        "cat",
+        "cart",
+        "hour",
+        "know",
+        "write"
+      ],
+      "quickReview": [
+        "photo",
+        "photography"
+      ]
+    },
+    "vocabulary": {
+      "collocations": [
+        "make a decision",
+        "take part in",
+        "do homework",
+        "have an impact on",
+        "make a difference",
+        "pay attention to",
+        "take responsibility for",
+        "heavy rain",
+        "serious problem",
+        "healthy lifestyle",
+        "public transport",
+        "renewable energy",
+        "cultural heritage",
+        "social media",
+        "depend on",
+        "look after",
+        "look forward to",
+        "deal with",
+        "concentrate on",
+        "reason for",
+        "solution to",
+        "effect on",
+        "access to",
+        "in the end",
+        "on time",
+        "by mistake",
+        "in spite of",
+        "break down",
+        "run out of",
+        "put off",
+        "turn off",
+        "give up"
+      ],
+      "lookPhrasalVerbs": [
+        "look after",
+        "look for",
+        "look forward to",
+        "look up",
+        "look into",
+        "look out"
+      ],
+      "topicWords": [
+        "pollution",
+        "climate change",
+        "renewable energy",
+        "plastic waste",
+        "protect the environment",
+        "reduce emissions",
+        "natural disaster",
+        "wildlife",
+        "artificial intelligence",
+        "deepfake",
+        "misinformation",
+        "social media",
+        "digital device",
+        "online safety",
+        "spread information",
+        "influence public opinion",
+        "destination",
+        "accommodation",
+        "tourist attraction",
+        "local cuisine",
+        "package tour",
+        "means of transport",
+        "book a ticket",
+        "go sightseeing",
+        "balanced diet",
+        "physical activity",
+        "mental health",
+        "get enough sleep",
+        "cut down on fast food",
+        "stay healthy",
+        "overweight",
+        "stress",
+        "volunteer",
+        "charity",
+        "community service",
+        "cultural heritage",
+        "festival",
+        "custom",
+        "tradition",
+        "take part in",
+        "curriculum",
+        "assignment",
+        "extracurricular activity",
+        "vocational school",
+        "qualification",
+        "higher education",
+        "pass an exam",
+        "school facilities"
+      ],
+      "headwords": [
+        "provide",
+        "habit"
+      ],
+      "entryCollocations": [
+        "provide information",
+        "provide an opportunity",
+        "provide support",
+        "eating habits",
+        "break the habit of",
+        "sleeping habits"
+      ],
+      "checkStrip": [
+        "provide information",
+        "provides an opportunity",
+        "eating habits",
+        "break the habit of"
+      ],
+      "mapChips": [
+        "make a decision",
+        "heavy rain",
+        "take part in",
+        "look after",
+        "run out of",
+        "put off",
+        "environment",
+        "technology",
+        "travel",
+        "health",
+        "provide",
+        "habit",
+        "an opportunity"
+      ],
+      "quickReviewPhrasal": [
+        "look after",
+        "look for",
+        "look forward to",
+        "take part in",
+        "depend on",
+        "break down"
+      ],
+      "trapWords": [
+        "make",
+        "do",
+        "say",
+        "tell",
+        "lend",
+        "borrow",
+        "affect",
+        "effect",
+        "break up",
+        "break down"
+      ]
+    },
+    "prepositions": {
+      "collocations": [
+        "depend on",
+        "look after",
+        "look for",
+        "look forward to",
+        "listen to",
+        "wait for",
+        "take part in",
+        "belong to",
+        "arrive at",
+        "arrive in",
+        "agree with",
+        "apologise for",
+        "apologize for",
+        "concentrate on",
+        "deal with",
+        "rely on",
+        "succeed in",
+        "worry about",
+        "interested in",
+        "good at",
+        "bad at",
+        "afraid of",
+        "proud of",
+        "famous for",
+        "different from",
+        "similar to",
+        "kind to",
+        "angry with",
+        "excited about",
+        "tired of",
+        "fond of",
+        "full of",
+        "reason for",
+        "solution to",
+        "key to",
+        "cause of",
+        "result of",
+        "problem with",
+        "interest in",
+        "difference between",
+        "access to",
+        "effect on",
+        "invitation to",
+        "relationship between",
+        "in the end",
+        "at the end of",
+        "on time",
+        "in time",
+        "at first",
+        "in fact",
+        "on purpose",
+        "by mistake",
+        "in my opinion",
+        "in spite of",
+        "because of",
+        "instead of"
+      ],
+      "mapChips": [
+        "since",
+        "for",
+        "during",
+        "while",
+        "until",
+        "by",
+        "in the box",
+        "on the wall",
+        "at the door",
+        "under",
+        "between",
+        "behind",
+        "opposite",
+        "into",
+        "onto",
+        "through",
+        "across",
+        "along",
+        "around",
+        "past",
+        "depend on",
+        "good at",
+        "proud of",
+        "look forward to",
+        "in spite of"
+      ]
+    },
+    "word-forms": {
+      "families": [
+        "succeed",
+        "develop",
+        "environment",
+        "pollute",
+        "care",
+        "health",
+        "beauty",
+        "danger",
+        "educate",
+        "culture",
+        "tradition",
+        "nature",
+        "science",
+        "technology",
+        "invent",
+        "create",
+        "produce",
+        "decide",
+        "differ",
+        "friend",
+        "know",
+        "music",
+        "nation",
+        "employ",
+        "happy",
+        "strong",
+        "comfort",
+        "noise",
+        "interest",
+        "excite",
+        "disappoint",
+        "satisfy",
+        "imagine",
+        "communicate",
+        "compete",
+        "protect",
+        "rely",
+        "power",
+        "use",
+        "wonder"
+      ],
+      "forms": [
+        "success",
+        "successful",
+        "successfully",
+        "development",
+        "developed",
+        "developing",
+        "environment",
+        "environmental",
+        "environmentally",
+        "pollution",
+        "polluted",
+        "polluting",
+        "care",
+        "careful",
+        "careless",
+        "carefully",
+        "carelessly",
+        "health",
+        "healthy",
+        "unhealthy",
+        "healthily",
+        "beauty",
+        "beautiful",
+        "beautifully",
+        "danger",
+        "dangerous",
+        "dangerously",
+        "education",
+        "educational",
+        "educationally",
+        "culture",
+        "cultural",
+        "culturally",
+        "tradition",
+        "traditional",
+        "traditionally",
+        "nature",
+        "natural",
+        "naturally",
+        "science",
+        "scientific",
+        "scientifically",
+        "technology",
+        "technological",
+        "technologically",
+        "invention",
+        "inventor",
+        "inventive",
+        "inventively",
+        "creation",
+        "creativity",
+        "creative",
+        "creatively",
+        "product",
+        "production",
+        "productive",
+        "productively",
+        "decision",
+        "decisive",
+        "decisively",
+        "difference",
+        "different",
+        "differently",
+        "friend",
+        "friendship",
+        "friendly",
+        "unfriendly",
+        "knowledge",
+        "knowledgeable",
+        "music",
+        "musician",
+        "musical",
+        "musically",
+        "nation",
+        "national",
+        "nationally",
+        "employment",
+        "unemployment",
+        "employer",
+        "employee",
+        "employed",
+        "unemployed",
+        "happiness",
+        "happy",
+        "unhappy",
+        "happily",
+        "strength",
+        "strong",
+        "strongly",
+        "comfort",
+        "comfortable",
+        "uncomfortable",
+        "comfortably",
+        "noise",
+        "noisy",
+        "noisily",
+        "interest",
+        "interested",
+        "interesting",
+        "interestingly",
+        "excitement",
+        "excited",
+        "exciting",
+        "excitedly",
+        "disappointment",
+        "disappointed",
+        "disappointing",
+        "disappointingly",
+        "satisfaction",
+        "satisfied",
+        "satisfying",
+        "satisfactorily",
+        "imagination",
+        "imaginative",
+        "imaginatively",
+        "communication",
+        "communicative",
+        "competition",
+        "competitor",
+        "competitive",
+        "competitively",
+        "protection",
+        "protective",
+        "protectively",
+        "reliance",
+        "reliability",
+        "reliable",
+        "reliably",
+        "power",
+        "powerful",
+        "powerless",
+        "powerfully",
+        "use",
+        "useful",
+        "useless",
+        "usefully",
+        "wonder",
+        "wonderful",
+        "wonderfully"
+      ],
+      "suffixExamples": [
+        "action",
+        "decision",
+        "education",
+        "development",
+        "improvement",
+        "environment",
+        "happiness",
+        "kindness",
+        "darkness",
+        "ability",
+        "popularity",
+        "safety",
+        "importance",
+        "difference",
+        "confidence",
+        "teacher",
+        "inventor",
+        "actor",
+        "artist",
+        "musician",
+        "scientist",
+        "friendship",
+        "leadership",
+        "childhood",
+        "neighbourhood",
+        "marriage",
+        "shortage",
+        "luggage",
+        "arrival",
+        "survival",
+        "refusal",
+        "building",
+        "learning",
+        "meeting",
+        "pressure",
+        "failure",
+        "pleasure",
+        "freedom",
+        "kingdom",
+        "useful",
+        "careful",
+        "successful",
+        "homeless",
+        "careless",
+        "useless",
+        "dangerous",
+        "famous",
+        "curious",
+        "creative",
+        "active",
+        "effective",
+        "comfortable",
+        "possible",
+        "readable",
+        "natural",
+        "traditional",
+        "cultural",
+        "fantastic",
+        "scientific",
+        "historic",
+        "interested",
+        "bored",
+        "excited",
+        "interesting",
+        "boring",
+        "exciting",
+        "healthy",
+        "rainy",
+        "noisy",
+        "friendly",
+        "lovely",
+        "lonely",
+        "important",
+        "different",
+        "confident",
+        "childish",
+        "selfish",
+        "yellowish",
+        "modernise",
+        "organise",
+        "realise",
+        "beautify",
+        "simplify",
+        "classify",
+        "widen",
+        "strengthen",
+        "shorten",
+        "decorate",
+        "celebrate",
+        "communicate",
+        "carefully",
+        "quickly",
+        "successfully",
+        "forward",
+        "backward",
+        "toward"
+      ],
+      "prefixExamples": [
+        "unhappy",
+        "unhealthy",
+        "unable",
+        "incorrect",
+        "indirect",
+        "invisible",
+        "impossible",
+        "impolite",
+        "impatient",
+        "illegal",
+        "illogical",
+        "irregular",
+        "irresponsible",
+        "disagree",
+        "disappear",
+        "dishonest",
+        "non-stop",
+        "non-smoker",
+        "misunderstand",
+        "mislead",
+        "misuse",
+        "reuse",
+        "rebuild",
+        "rewrite",
+        "overcrowded",
+        "overwork",
+        "overpopulation",
+        "underdeveloped",
+        "underestimate",
+        "preview",
+        "prehistory",
+        "international",
+        "interact",
+        "multicultural",
+        "multimedia",
+        "enrich",
+        "enable",
+        "empower"
+      ],
+      "quickReview": [
+        "advice",
+        "advise",
+        "hard",
+        "hardly",
+        "interesting",
+        "interested"
+      ]
+    },
+    "signs": {
+      "signs": [
+        "NO PARKING",
+        "NO SMOKING",
+        "DO NOT ENTER",
+        "KEEP OUT",
+        "STAFF ONLY",
+        "DANGER: HIGH VOLTAGE",
+        "WET FLOOR",
+        "MIND THE GAP",
+        "BEWARE OF DOG",
+        "PUSH",
+        "PULL",
+        "KEEP LEFT",
+        "QUEUE HERE",
+        "USE OTHER DOOR",
+        "OPEN DAILY 8 A.M.-9 P.M.",
+        "FREE ENTRY",
+        "50% OFF",
+        "BOOKING REQUIRED",
+        "OUT OF ORDER",
+        "SOLD OUT",
+        "NO FOOD OR DRINK"
+      ],
+      "communicationPrompts": [
+        "I’m sorry I’m late.",
+        "Thanks a lot.",
+        "Don’t worry.",
+        "You can do it.",
+        "Cheer up!",
+        "Keep trying!",
+        "What’s the matter?",
+        "You look tired.",
+        "Bless you!",
+        "Get well soon."
+      ],
+      "communicationReplies": [
+        "Good idea.",
+        "That sounds great.",
+        "I’d love to. Thanks.",
+        "I’m sorry, I can’t.",
+        "That’s all right.",
+        "Never mind.",
+        "Don’t worry about it.",
+        "You’re welcome.",
+        "Not at all.",
+        "It’s my pleasure.",
+        "Sure.",
+        "Of course.",
+        "Go ahead.",
+        "Yes, of course.",
+        "I’m afraid you can’t.",
+        "Thanks. I’ll try.",
+        "That’s very kind of you.",
+        "I have a headache.",
+        "I feel better now.",
+        "Thank you."
+      ],
+      "mapChips": [
+        "NO PARKING",
+        "DO NOT ENTER",
+        "KEEP OUT",
+        "WET FLOOR",
+        "MIND THE GAP",
+        "BEWARE OF DOG",
+        "PUSH",
+        "KEEP LEFT",
+        "QUEUE HERE",
+        "STAFF ONLY",
+        "FREE ENTRY",
+        "50% OFF",
+        "BOOKING REQUIRED"
+      ]
+    },
+    "tenses": {
+      "signalWords": [
+        "always",
+        "usually",
+        "often",
+        "sometimes",
+        "never",
+        "every day",
+        "on Mondays",
+        "now",
+        "right now",
+        "at the moment",
+        "Look!",
+        "Listen!",
+        "these days",
+        "currently",
+        "already",
+        "just",
+        "yet",
+        "ever",
+        "since",
+        "for",
+        "so far",
+        "all day",
+        "all week",
+        "how long",
+        "lately",
+        "recently",
+        "yesterday",
+        "last week",
+        "ago",
+        "in 2010",
+        "then",
+        "when",
+        "in the past",
+        "at 8 p.m. yesterday",
+        "at that time",
+        "while",
+        "all morning",
+        "before",
+        "after",
+        "by the time",
+        "by 2010",
+        "tomorrow",
+        "next week",
+        "in the future",
+        "soon",
+        "I think",
+        "probably",
+        "at this time tomorrow",
+        "at 8 p.m. next Sunday",
+        "this time next week",
+        "all day tomorrow",
+        "by 2030",
+        "by then",
+        "by next month",
+        "by next June"
+      ]
+    },
+    "grammar": {
+      "connectors": [
+        "and",
+        "besides",
+        "moreover",
+        "in addition",
+        "but",
+        "however",
+        "although",
+        "though",
+        "even though",
+        "because",
+        "since",
+        "as",
+        "so",
+        "therefore",
+        "as a result",
+        "or",
+        "otherwise",
+        "when",
+        "while",
+        "before",
+        "after",
+        "as soon as"
+      ],
+      "relativePronouns": [
+        "who",
+        "whom",
+        "which",
+        "that",
+        "whose",
+        "where",
+        "when"
+      ],
+      "comparisons": [
+        "good",
+        "better",
+        "the best",
+        "bad",
+        "worse",
+        "the worst",
+        "far",
+        "farther",
+        "further",
+        "the farthest",
+        "furthest",
+        "many",
+        "much",
+        "more",
+        "the most",
+        "little",
+        "less",
+        "the least"
+      ],
+      "verbPatterns": [
+        "decide",
+        "hope",
+        "plan",
+        "want",
+        "need",
+        "promise",
+        "agree",
+        "refuse",
+        "encourage",
+        "ask",
+        "tell",
+        "enjoy",
+        "mind",
+        "suggest",
+        "avoid",
+        "finish",
+        "practice",
+        "keep",
+        "look forward to",
+        "be interested in",
+        "be fond of",
+        "make",
+        "let",
+        "have",
+        "would rather",
+        "remember",
+        "forget",
+        "stop",
+        "try",
+        "prefer",
+        "listen to"
+      ],
+      "quickPoints": [
+        "wish",
+        "some",
+        "most",
+        "none",
+        "get"
+      ]
+    },
+    "reading": {
+      "connectors": [
+        "and",
+        "also",
+        "moreover",
+        "in addition",
+        "besides",
+        "but",
+        "however",
+        "although",
+        "though",
+        "despite",
+        "in spite of",
+        "whereas",
+        "on the other hand",
+        "because",
+        "since",
+        "as",
+        "so",
+        "therefore",
+        "as a result",
+        "for example",
+        "for instance",
+        "such as",
+        "first",
+        "firstly",
+        "then",
+        "next",
+        "before",
+        "after",
+        "finally",
+        "in conclusion",
+        "to sum up",
+        "overall"
+      ],
+      "questionKeywords": [
+        "mainly about",
+        "best title",
+        "purpose",
+        "according to",
+        "who",
+        "when",
+        "where",
+        "closest in meaning",
+        "means",
+        "it",
+        "they",
+        "this",
+        "that",
+        "infer",
+        "suggest",
+        "probably",
+        "true",
+        "false",
+        "NOT mentioned",
+        "EXCEPT",
+        "fill in",
+        "best fits",
+        "gap"
+      ]
+    },
+    "cloze": {
+      "signalExamples": [
+        "depend on",
+        "interested in",
+        "in 2026",
+        "however",
+        "because",
+        "therefore",
+        "who",
+        "which",
+        "that",
+        "decided to go",
+        "enjoys reading",
+        "has lived",
+        "more crowded",
+        "the best",
+        "as tall as",
+        "many people",
+        "much water",
+        "some",
+        "a book",
+        "an hour",
+        "the sun",
+        "it",
+        "they",
+        "this"
+      ],
+      "quickReview": [
+        "make a decision",
+        "depend on",
+        "heavy rain",
+        "many people",
+        "much water",
+        "some",
+        "any"
+      ]
+    },
+    "sentence-patterns": {
+      "constructionCollocations": [
+        "provide information",
+        "provides an opportunity",
+        "provide support",
+        "provide a service"
+      ],
+      "transformationPhrasalVerbs": [
+        "break down",
+        "run out of",
+        "put off"
+      ],
+      "transformationLinkers": [
+        "although",
+        "despite",
+        "in spite of",
+        "because",
+        "because of"
+      ],
+      "transformationVerbPatterns": [
+        "enjoy",
+        "mind",
+        "avoid",
+        "suggest",
+        "look forward to",
+        "want",
+        "decide",
+        "hope",
+        "plan",
+        "promise",
+        "refuse",
+        "ask",
+        "tell",
+        "remind",
+        "encourage",
+        "stop",
+        "remember",
+        "try"
+      ]
+    }
+  },
+  "flat": [
+    {
+      "text": "stopped",
+      "category": "pronunciation",
+      "group": "edExamples",
+      "tier": 1
+    },
+    {
+      "text": "watched",
+      "category": "pronunciation",
+      "group": "edExamples",
+      "tier": 1
+    },
+    {
+      "text": "laughed",
+      "category": "pronunciation",
+      "group": "edExamples",
+      "tier": 1
+    },
+    {
+      "text": "missed",
+      "category": "pronunciation",
+      "group": "edExamples",
+      "tier": 1
+    },
+    {
+      "text": "washed",
+      "category": "pronunciation",
+      "group": "edExamples",
+      "tier": 1
+    },
+    {
+      "text": "played",
+      "category": "pronunciation",
+      "group": "edExamples",
+      "tier": 1
+    },
+    {
+      "text": "cleaned",
+      "category": "pronunciation",
+      "group": "edExamples",
+      "tier": 1
+    },
+    {
+      "text": "opened",
+      "category": "pronunciation",
+      "group": "edExamples",
+      "tier": 1
+    },
+    {
+      "text": "listened",
+      "category": "pronunciation",
+      "group": "edExamples",
+      "tier": 1
+    },
+    {
+      "text": "arrived",
+      "category": "pronunciation",
+      "group": "edExamples",
+      "tier": 1
+    },
+    {
+      "text": "wanted",
+      "category": "pronunciation",
+      "group": "edExamples",
+      "tier": 1
+    },
+    {
+      "text": "needed",
+      "category": "pronunciation",
+      "group": "edExamples",
+      "tier": 1
+    },
+    {
+      "text": "decided",
+      "category": "pronunciation",
+      "group": "edExamples",
+      "tier": 1
+    },
+    {
+      "text": "visited",
+      "category": "pronunciation",
+      "group": "edExamples",
+      "tier": 1
+    },
+    {
+      "text": "started",
+      "category": "pronunciation",
+      "group": "edExamples",
+      "tier": 1
+    },
+    {
+      "text": "stops",
+      "category": "pronunciation",
+      "group": "sExamples",
+      "tier": 1
+    },
+    {
+      "text": "books",
+      "category": "pronunciation",
+      "group": "sExamples",
+      "tier": 1
+    },
+    {
+      "text": "cats",
+      "category": "pronunciation",
+      "group": "sExamples",
+      "tier": 1
+    },
+    {
+      "text": "laughs",
+      "category": "pronunciation",
+      "group": "sExamples",
+      "tier": 1
+    },
+    {
+      "text": "months",
+      "category": "pronunciation",
+      "group": "sExamples",
+      "tier": 1
+    },
+    {
+      "text": "plays",
+      "category": "pronunciation",
+      "group": "sExamples",
+      "tier": 1
+    },
+    {
+      "text": "reads",
+      "category": "pronunciation",
+      "group": "sExamples",
+      "tier": 1
+    },
+    {
+      "text": "dogs",
+      "category": "pronunciation",
+      "group": "sExamples",
+      "tier": 1
+    },
+    {
+      "text": "goes",
+      "category": "pronunciation",
+      "group": "sExamples",
+      "tier": 1
+    },
+    {
+      "text": "comes",
+      "category": "pronunciation",
+      "group": "sExamples",
+      "tier": 1
+    },
+    {
+      "text": "misses",
+      "category": "pronunciation",
+      "group": "sExamples",
+      "tier": 1
+    },
+    {
+      "text": "buzzes",
+      "category": "pronunciation",
+      "group": "sExamples",
+      "tier": 1
+    },
+    {
+      "text": "washes",
+      "category": "pronunciation",
+      "group": "sExamples",
+      "tier": 1
+    },
+    {
+      "text": "watches",
+      "category": "pronunciation",
+      "group": "sExamples",
+      "tier": 1
+    },
+    {
+      "text": "changes",
+      "category": "pronunciation",
+      "group": "sExamples",
+      "tier": 1
+    },
+    {
+      "text": "sit",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "seat",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "ship",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "sheep",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "pen",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "pain",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "met",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "mate",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "cat",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "cart",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "hat",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "heart",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "cut",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "cot",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "luck",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "lock",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "food",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "foot",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "pool",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "pull",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "teacher",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "about",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "banana",
+      "category": "pronunciation",
+      "group": "minimalPairs",
+      "tier": 1
+    },
+    {
+      "text": "bread",
+      "category": "pronunciation",
+      "group": "spelling",
+      "tier": 1
+    },
+    {
+      "text": "great",
+      "category": "pronunciation",
+      "group": "spelling",
+      "tier": 1
+    },
+    {
+      "text": "time",
+      "category": "pronunciation",
+      "group": "spelling",
+      "tier": 1
+    },
+    {
+      "text": "machine",
+      "category": "pronunciation",
+      "group": "spelling",
+      "tier": 1
+    },
+    {
+      "text": "name",
+      "category": "pronunciation",
+      "group": "spelling",
+      "tier": 1
+    },
+    {
+      "text": "car",
+      "category": "pronunciation",
+      "group": "spelling",
+      "tier": 1
+    },
+    {
+      "text": "hour",
+      "category": "pronunciation",
+      "group": "spelling",
+      "tier": 1
+    },
+    {
+      "text": "honest",
+      "category": "pronunciation",
+      "group": "spelling",
+      "tier": 1
+    },
+    {
+      "text": "know",
+      "category": "pronunciation",
+      "group": "spelling",
+      "tier": 1
+    },
+    {
+      "text": "knife",
+      "category": "pronunciation",
+      "group": "spelling",
+      "tier": 1
+    },
+    {
+      "text": "write",
+      "category": "pronunciation",
+      "group": "spelling",
+      "tier": 1
+    },
+    {
+      "text": "listen",
+      "category": "pronunciation",
+      "group": "spelling",
+      "tier": 1
+    },
+    {
+      "text": "castle",
+      "category": "pronunciation",
+      "group": "spelling",
+      "tier": 1
+    },
+    {
+      "text": "island",
+      "category": "pronunciation",
+      "group": "spelling",
+      "tier": 1
+    },
+    {
+      "text": "table",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "happy",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "doctor",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "music",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "begin",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "decide",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "enjoy",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "forget",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "record",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "present",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "decision",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "education",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "attention",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "scientific",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "economic",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "historical",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "ability",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "commercial",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "delicious",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "beautiful",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "accident",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "interesting",
+      "category": "pronunciation",
+      "group": "stress",
+      "tier": 1
+    },
+    {
+      "text": "popularity",
+      "category": "pronunciation",
+      "group": "suffixExamples",
+      "tier": 1
+    },
+    {
+      "text": "possibility",
+      "category": "pronunciation",
+      "group": "suffixExamples",
+      "tier": 1
+    },
+    {
+      "text": "happily",
+      "category": "pronunciation",
+      "group": "suffixExamples",
+      "tier": 1
+    },
+    {
+      "text": "develop",
+      "category": "pronunciation",
+      "group": "suffixExamples",
+      "tier": 1
+    },
+    {
+      "text": "developing",
+      "category": "pronunciation",
+      "group": "suffixExamples",
+      "tier": 1
+    },
+    {
+      "text": "development",
+      "category": "pronunciation",
+      "group": "suffixExamples",
+      "tier": 1
+    },
+    {
+      "text": "happiness",
+      "category": "pronunciation",
+      "group": "suffixExamples",
+      "tier": 1
+    },
+    {
+      "text": "comfort",
+      "category": "pronunciation",
+      "group": "suffixExamples",
+      "tier": 1
+    },
+    {
+      "text": "comfortable",
+      "category": "pronunciation",
+      "group": "suffixExamples",
+      "tier": 1
+    },
+    {
+      "text": "possible",
+      "category": "pronunciation",
+      "group": "suffixExamples",
+      "tier": 1
+    },
+    {
+      "text": "possibly",
+      "category": "pronunciation",
+      "group": "suffixExamples",
+      "tier": 1
+    },
+    {
+      "text": "export",
+      "category": "pronunciation",
+      "group": "wordPairs",
+      "tier": 1
+    },
+    {
+      "text": "object",
+      "category": "pronunciation",
+      "group": "wordPairs",
+      "tier": 1
+    },
+    {
+      "text": "photograph",
+      "category": "pronunciation",
+      "group": "familyShift",
+      "tier": 1
+    },
+    {
+      "text": "photography",
+      "category": "pronunciation",
+      "group": "familyShift",
+      "tier": 1
+    },
+    {
+      "text": "photographic",
+      "category": "pronunciation",
+      "group": "familyShift",
+      "tier": 1
+    },
+    {
+      "text": "naked",
+      "category": "pronunciation",
+      "group": "exceptions",
+      "tier": 1
+    },
+    {
+      "text": "wicked",
+      "category": "pronunciation",
+      "group": "exceptions",
+      "tier": 1
+    },
+    {
+      "text": "beloved",
+      "category": "pronunciation",
+      "group": "exceptions",
+      "tier": 1
+    },
+    {
+      "text": "does",
+      "category": "pronunciation",
+      "group": "trapWords",
+      "tier": 1
+    },
+    {
+      "text": "live",
+      "category": "pronunciation",
+      "group": "trapWords",
+      "tier": 1
+    },
+    {
+      "text": "leave",
+      "category": "pronunciation",
+      "group": "trapWords",
+      "tier": 1
+    },
+    {
+      "text": "photo",
+      "category": "pronunciation",
+      "group": "quickReview",
+      "tier": 1
+    },
+    {
+      "text": "make a decision",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "take part in",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "do homework",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "have an impact on",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "make a difference",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "pay attention to",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "take responsibility for",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "heavy rain",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "serious problem",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "healthy lifestyle",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "public transport",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "renewable energy",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "cultural heritage",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "social media",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "depend on",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "look after",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "look forward to",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "deal with",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "concentrate on",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "reason for",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "solution to",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "effect on",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "access to",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "in the end",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "on time",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "by mistake",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "in spite of",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "break down",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "run out of",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "put off",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "turn off",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "give up",
+      "category": "vocabulary",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "look for",
+      "category": "vocabulary",
+      "group": "lookPhrasalVerbs",
+      "tier": 2
+    },
+    {
+      "text": "look up",
+      "category": "vocabulary",
+      "group": "lookPhrasalVerbs",
+      "tier": 2
+    },
+    {
+      "text": "look into",
+      "category": "vocabulary",
+      "group": "lookPhrasalVerbs",
+      "tier": 2
+    },
+    {
+      "text": "look out",
+      "category": "vocabulary",
+      "group": "lookPhrasalVerbs",
+      "tier": 2
+    },
+    {
+      "text": "pollution",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "climate change",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "plastic waste",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "protect the environment",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "reduce emissions",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "natural disaster",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "wildlife",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "artificial intelligence",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "deepfake",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "misinformation",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "digital device",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "online safety",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "spread information",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "influence public opinion",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "destination",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "accommodation",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "tourist attraction",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "local cuisine",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "package tour",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "means of transport",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "book a ticket",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "go sightseeing",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "balanced diet",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "physical activity",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "mental health",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "get enough sleep",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "cut down on fast food",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "stay healthy",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "overweight",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "stress",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "volunteer",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "charity",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "community service",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "festival",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "custom",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "tradition",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "curriculum",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "assignment",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "extracurricular activity",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "vocational school",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "qualification",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "higher education",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "pass an exam",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "school facilities",
+      "category": "vocabulary",
+      "group": "topicWords",
+      "tier": 2
+    },
+    {
+      "text": "provide",
+      "category": "vocabulary",
+      "group": "headwords",
+      "tier": 2
+    },
+    {
+      "text": "habit",
+      "category": "vocabulary",
+      "group": "headwords",
+      "tier": 2
+    },
+    {
+      "text": "provide information",
+      "category": "vocabulary",
+      "group": "entryCollocations",
+      "tier": 2
+    },
+    {
+      "text": "provide an opportunity",
+      "category": "vocabulary",
+      "group": "entryCollocations",
+      "tier": 2
+    },
+    {
+      "text": "provide support",
+      "category": "vocabulary",
+      "group": "entryCollocations",
+      "tier": 2
+    },
+    {
+      "text": "eating habits",
+      "category": "vocabulary",
+      "group": "entryCollocations",
+      "tier": 2
+    },
+    {
+      "text": "break the habit of",
+      "category": "vocabulary",
+      "group": "entryCollocations",
+      "tier": 2
+    },
+    {
+      "text": "sleeping habits",
+      "category": "vocabulary",
+      "group": "entryCollocations",
+      "tier": 2
+    },
+    {
+      "text": "provides an opportunity",
+      "category": "vocabulary",
+      "group": "checkStrip",
+      "tier": 2
+    },
+    {
+      "text": "environment",
+      "category": "vocabulary",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "technology",
+      "category": "vocabulary",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "travel",
+      "category": "vocabulary",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "health",
+      "category": "vocabulary",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "an opportunity",
+      "category": "vocabulary",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "make",
+      "category": "vocabulary",
+      "group": "trapWords",
+      "tier": 2
+    },
+    {
+      "text": "do",
+      "category": "vocabulary",
+      "group": "trapWords",
+      "tier": 2
+    },
+    {
+      "text": "say",
+      "category": "vocabulary",
+      "group": "trapWords",
+      "tier": 2
+    },
+    {
+      "text": "tell",
+      "category": "vocabulary",
+      "group": "trapWords",
+      "tier": 2
+    },
+    {
+      "text": "lend",
+      "category": "vocabulary",
+      "group": "trapWords",
+      "tier": 2
+    },
+    {
+      "text": "borrow",
+      "category": "vocabulary",
+      "group": "trapWords",
+      "tier": 2
+    },
+    {
+      "text": "affect",
+      "category": "vocabulary",
+      "group": "trapWords",
+      "tier": 2
+    },
+    {
+      "text": "effect",
+      "category": "vocabulary",
+      "group": "trapWords",
+      "tier": 2
+    },
+    {
+      "text": "break up",
+      "category": "vocabulary",
+      "group": "trapWords",
+      "tier": 2
+    },
+    {
+      "text": "listen to",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "wait for",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "belong to",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "arrive at",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "arrive in",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "agree with",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "apologise for",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "apologize for",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "rely on",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "succeed in",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "worry about",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "interested in",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "good at",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "bad at",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "afraid of",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "proud of",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "famous for",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "different from",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "similar to",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "kind to",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "angry with",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "excited about",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "tired of",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "fond of",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "full of",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "key to",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "cause of",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "result of",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "problem with",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "interest in",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "difference between",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "invitation to",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "relationship between",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "at the end of",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "in time",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "at first",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "in fact",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "on purpose",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "in my opinion",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "because of",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "instead of",
+      "category": "prepositions",
+      "group": "collocations",
+      "tier": 2
+    },
+    {
+      "text": "since",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "for",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "during",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "while",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "until",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "by",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "in the box",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "on the wall",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "at the door",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "under",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "between",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "behind",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "opposite",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "into",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "onto",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "through",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "across",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "along",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "around",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "past",
+      "category": "prepositions",
+      "group": "mapChips",
+      "tier": 2
+    },
+    {
+      "text": "succeed",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "pollute",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "care",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "beauty",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "danger",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "educate",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "culture",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "nature",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "science",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "invent",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "create",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "produce",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "differ",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "friend",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "nation",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "employ",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "strong",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "noise",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "interest",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "excite",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "disappoint",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "satisfy",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "imagine",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "communicate",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "compete",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "protect",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "rely",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "power",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "use",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "wonder",
+      "category": "word-forms",
+      "group": "families",
+      "tier": 3
+    },
+    {
+      "text": "success",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "successful",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "successfully",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "developed",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "environmental",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "environmentally",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "polluted",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "polluting",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "careful",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "careless",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "carefully",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "carelessly",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "healthy",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "unhealthy",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "healthily",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "beautifully",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "dangerous",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "dangerously",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "educational",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "educationally",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "cultural",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "culturally",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "traditional",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "traditionally",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "natural",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "naturally",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "scientifically",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "technological",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "technologically",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "invention",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "inventor",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "inventive",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "inventively",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "creation",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "creativity",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "creative",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "creatively",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "product",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "production",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "productive",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "productively",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "decisive",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "decisively",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "difference",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "different",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "differently",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "friendship",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "friendly",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "unfriendly",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "knowledge",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "knowledgeable",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "musician",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "musical",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "musically",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "national",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "nationally",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "employment",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "unemployment",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "employer",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "employee",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "employed",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "unemployed",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "unhappy",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "strength",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "strongly",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "uncomfortable",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "comfortably",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "noisy",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "noisily",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "interested",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "interestingly",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "excitement",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "excited",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "exciting",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "excitedly",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "disappointment",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "disappointed",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "disappointing",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "disappointingly",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "satisfaction",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "satisfied",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "satisfying",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "satisfactorily",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "imagination",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "imaginative",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "imaginatively",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "communication",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "communicative",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "competition",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "competitor",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "competitive",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "competitively",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "protection",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "protective",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "protectively",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "reliance",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "reliability",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "reliable",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "reliably",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "powerful",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "powerless",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "powerfully",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "useful",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "useless",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "usefully",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "wonderful",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "wonderfully",
+      "category": "word-forms",
+      "group": "forms",
+      "tier": 3
+    },
+    {
+      "text": "action",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "improvement",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "kindness",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "darkness",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "safety",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "importance",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "confidence",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "actor",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "artist",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "scientist",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "leadership",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "childhood",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "neighbourhood",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "marriage",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "shortage",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "luggage",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "arrival",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "survival",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "refusal",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "building",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "learning",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "meeting",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "pressure",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "failure",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "pleasure",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "freedom",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "kingdom",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "homeless",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "famous",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "curious",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "active",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "effective",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "readable",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "fantastic",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "historic",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "bored",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "boring",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "rainy",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "lovely",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "lonely",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "important",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "confident",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "childish",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "selfish",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "yellowish",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "modernise",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "organise",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "realise",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "beautify",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "simplify",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "classify",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "widen",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "strengthen",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "shorten",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "decorate",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "celebrate",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "quickly",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "forward",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "backward",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "toward",
+      "category": "word-forms",
+      "group": "suffixExamples",
+      "tier": 3
+    },
+    {
+      "text": "unable",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "incorrect",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "indirect",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "invisible",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "impossible",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "impolite",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "impatient",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "illegal",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "illogical",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "irregular",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "irresponsible",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "disagree",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "disappear",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "dishonest",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "non-stop",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "non-smoker",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "misunderstand",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "mislead",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "misuse",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "reuse",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "rebuild",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "rewrite",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "overcrowded",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "overwork",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "overpopulation",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "underdeveloped",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "underestimate",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "preview",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "prehistory",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "international",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "interact",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "multicultural",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "multimedia",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "enrich",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "enable",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "empower",
+      "category": "word-forms",
+      "group": "prefixExamples",
+      "tier": 3
+    },
+    {
+      "text": "advice",
+      "category": "word-forms",
+      "group": "quickReview",
+      "tier": 3
+    },
+    {
+      "text": "advise",
+      "category": "word-forms",
+      "group": "quickReview",
+      "tier": 3
+    },
+    {
+      "text": "hard",
+      "category": "word-forms",
+      "group": "quickReview",
+      "tier": 3
+    },
+    {
+      "text": "hardly",
+      "category": "word-forms",
+      "group": "quickReview",
+      "tier": 3
+    },
+    {
+      "text": "NO PARKING",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "NO SMOKING",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "DO NOT ENTER",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "KEEP OUT",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "STAFF ONLY",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "DANGER: HIGH VOLTAGE",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "WET FLOOR",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "MIND THE GAP",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "BEWARE OF DOG",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "PUSH",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "KEEP LEFT",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "QUEUE HERE",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "USE OTHER DOOR",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "OPEN DAILY 8 A.M.-9 P.M.",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "FREE ENTRY",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "50% OFF",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "BOOKING REQUIRED",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "OUT OF ORDER",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "SOLD OUT",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "NO FOOD OR DRINK",
+      "category": "signs",
+      "group": "signs",
+      "tier": 4
+    },
+    {
+      "text": "I’m sorry I’m late.",
+      "category": "signs",
+      "group": "communicationPrompts",
+      "tier": 4
+    },
+    {
+      "text": "Thanks a lot.",
+      "category": "signs",
+      "group": "communicationPrompts",
+      "tier": 4
+    },
+    {
+      "text": "Don’t worry.",
+      "category": "signs",
+      "group": "communicationPrompts",
+      "tier": 4
+    },
+    {
+      "text": "You can do it.",
+      "category": "signs",
+      "group": "communicationPrompts",
+      "tier": 4
+    },
+    {
+      "text": "Cheer up!",
+      "category": "signs",
+      "group": "communicationPrompts",
+      "tier": 4
+    },
+    {
+      "text": "Keep trying!",
+      "category": "signs",
+      "group": "communicationPrompts",
+      "tier": 4
+    },
+    {
+      "text": "What’s the matter?",
+      "category": "signs",
+      "group": "communicationPrompts",
+      "tier": 4
+    },
+    {
+      "text": "You look tired.",
+      "category": "signs",
+      "group": "communicationPrompts",
+      "tier": 4
+    },
+    {
+      "text": "Bless you!",
+      "category": "signs",
+      "group": "communicationPrompts",
+      "tier": 4
+    },
+    {
+      "text": "Get well soon.",
+      "category": "signs",
+      "group": "communicationPrompts",
+      "tier": 4
+    },
+    {
+      "text": "Good idea.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "That sounds great.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "I’d love to. Thanks.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "I’m sorry, I can’t.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "That’s all right.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "Never mind.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "Don’t worry about it.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "You’re welcome.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "Not at all.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "It’s my pleasure.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "Sure.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "Of course.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "Go ahead.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "Yes, of course.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "I’m afraid you can’t.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "Thanks. I’ll try.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "That’s very kind of you.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "I have a headache.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "I feel better now.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "Thank you.",
+      "category": "signs",
+      "group": "communicationReplies",
+      "tier": 4
+    },
+    {
+      "text": "always",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "usually",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "often",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "sometimes",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "never",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "every day",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "on Mondays",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "now",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "right now",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "at the moment",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "Look!",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "Listen!",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "these days",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "currently",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "already",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "just",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "yet",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "ever",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "so far",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "all day",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "all week",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "how long",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "lately",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "recently",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "yesterday",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "last week",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "ago",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "in 2010",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "then",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "when",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "in the past",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "at 8 p.m. yesterday",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "at that time",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "all morning",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "before",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "after",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "by the time",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "by 2010",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "tomorrow",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "next week",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "in the future",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "soon",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "I think",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "probably",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "at this time tomorrow",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "at 8 p.m. next Sunday",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "this time next week",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "all day tomorrow",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "by 2030",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "by then",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "by next month",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "by next June",
+      "category": "tenses",
+      "group": "signalWords",
+      "tier": 4
+    },
+    {
+      "text": "and",
+      "category": "grammar",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "besides",
+      "category": "grammar",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "moreover",
+      "category": "grammar",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "in addition",
+      "category": "grammar",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "but",
+      "category": "grammar",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "however",
+      "category": "grammar",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "although",
+      "category": "grammar",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "though",
+      "category": "grammar",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "even though",
+      "category": "grammar",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "because",
+      "category": "grammar",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "as",
+      "category": "grammar",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "so",
+      "category": "grammar",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "therefore",
+      "category": "grammar",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "as a result",
+      "category": "grammar",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "or",
+      "category": "grammar",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "otherwise",
+      "category": "grammar",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "as soon as",
+      "category": "grammar",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "who",
+      "category": "grammar",
+      "group": "relativePronouns",
+      "tier": 4
+    },
+    {
+      "text": "whom",
+      "category": "grammar",
+      "group": "relativePronouns",
+      "tier": 4
+    },
+    {
+      "text": "which",
+      "category": "grammar",
+      "group": "relativePronouns",
+      "tier": 4
+    },
+    {
+      "text": "that",
+      "category": "grammar",
+      "group": "relativePronouns",
+      "tier": 4
+    },
+    {
+      "text": "whose",
+      "category": "grammar",
+      "group": "relativePronouns",
+      "tier": 4
+    },
+    {
+      "text": "where",
+      "category": "grammar",
+      "group": "relativePronouns",
+      "tier": 4
+    },
+    {
+      "text": "good",
+      "category": "grammar",
+      "group": "comparisons",
+      "tier": 4
+    },
+    {
+      "text": "better",
+      "category": "grammar",
+      "group": "comparisons",
+      "tier": 4
+    },
+    {
+      "text": "the best",
+      "category": "grammar",
+      "group": "comparisons",
+      "tier": 4
+    },
+    {
+      "text": "bad",
+      "category": "grammar",
+      "group": "comparisons",
+      "tier": 4
+    },
+    {
+      "text": "worse",
+      "category": "grammar",
+      "group": "comparisons",
+      "tier": 4
+    },
+    {
+      "text": "the worst",
+      "category": "grammar",
+      "group": "comparisons",
+      "tier": 4
+    },
+    {
+      "text": "far",
+      "category": "grammar",
+      "group": "comparisons",
+      "tier": 4
+    },
+    {
+      "text": "farther",
+      "category": "grammar",
+      "group": "comparisons",
+      "tier": 4
+    },
+    {
+      "text": "further",
+      "category": "grammar",
+      "group": "comparisons",
+      "tier": 4
+    },
+    {
+      "text": "the farthest",
+      "category": "grammar",
+      "group": "comparisons",
+      "tier": 4
+    },
+    {
+      "text": "furthest",
+      "category": "grammar",
+      "group": "comparisons",
+      "tier": 4
+    },
+    {
+      "text": "many",
+      "category": "grammar",
+      "group": "comparisons",
+      "tier": 4
+    },
+    {
+      "text": "much",
+      "category": "grammar",
+      "group": "comparisons",
+      "tier": 4
+    },
+    {
+      "text": "more",
+      "category": "grammar",
+      "group": "comparisons",
+      "tier": 4
+    },
+    {
+      "text": "the most",
+      "category": "grammar",
+      "group": "comparisons",
+      "tier": 4
+    },
+    {
+      "text": "little",
+      "category": "grammar",
+      "group": "comparisons",
+      "tier": 4
+    },
+    {
+      "text": "less",
+      "category": "grammar",
+      "group": "comparisons",
+      "tier": 4
+    },
+    {
+      "text": "the least",
+      "category": "grammar",
+      "group": "comparisons",
+      "tier": 4
+    },
+    {
+      "text": "hope",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "plan",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "want",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "need",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "promise",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "agree",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "refuse",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "encourage",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "ask",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "mind",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "suggest",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "avoid",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "finish",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "practice",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "keep",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "be interested in",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "be fond of",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "let",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "have",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "would rather",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "remember",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "stop",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "try",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "prefer",
+      "category": "grammar",
+      "group": "verbPatterns",
+      "tier": 4
+    },
+    {
+      "text": "wish",
+      "category": "grammar",
+      "group": "quickPoints",
+      "tier": 4
+    },
+    {
+      "text": "some",
+      "category": "grammar",
+      "group": "quickPoints",
+      "tier": 4
+    },
+    {
+      "text": "most",
+      "category": "grammar",
+      "group": "quickPoints",
+      "tier": 4
+    },
+    {
+      "text": "none",
+      "category": "grammar",
+      "group": "quickPoints",
+      "tier": 4
+    },
+    {
+      "text": "get",
+      "category": "grammar",
+      "group": "quickPoints",
+      "tier": 4
+    },
+    {
+      "text": "also",
+      "category": "reading",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "despite",
+      "category": "reading",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "whereas",
+      "category": "reading",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "on the other hand",
+      "category": "reading",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "for example",
+      "category": "reading",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "for instance",
+      "category": "reading",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "such as",
+      "category": "reading",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "first",
+      "category": "reading",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "firstly",
+      "category": "reading",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "next",
+      "category": "reading",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "finally",
+      "category": "reading",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "in conclusion",
+      "category": "reading",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "to sum up",
+      "category": "reading",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "overall",
+      "category": "reading",
+      "group": "connectors",
+      "tier": 4
+    },
+    {
+      "text": "mainly about",
+      "category": "reading",
+      "group": "questionKeywords",
+      "tier": 4
+    },
+    {
+      "text": "best title",
+      "category": "reading",
+      "group": "questionKeywords",
+      "tier": 4
+    },
+    {
+      "text": "purpose",
+      "category": "reading",
+      "group": "questionKeywords",
+      "tier": 4
+    },
+    {
+      "text": "according to",
+      "category": "reading",
+      "group": "questionKeywords",
+      "tier": 4
+    },
+    {
+      "text": "closest in meaning",
+      "category": "reading",
+      "group": "questionKeywords",
+      "tier": 4
+    },
+    {
+      "text": "means",
+      "category": "reading",
+      "group": "questionKeywords",
+      "tier": 4
+    },
+    {
+      "text": "it",
+      "category": "reading",
+      "group": "questionKeywords",
+      "tier": 4
+    },
+    {
+      "text": "they",
+      "category": "reading",
+      "group": "questionKeywords",
+      "tier": 4
+    },
+    {
+      "text": "this",
+      "category": "reading",
+      "group": "questionKeywords",
+      "tier": 4
+    },
+    {
+      "text": "infer",
+      "category": "reading",
+      "group": "questionKeywords",
+      "tier": 4
+    },
+    {
+      "text": "true",
+      "category": "reading",
+      "group": "questionKeywords",
+      "tier": 4
+    },
+    {
+      "text": "false",
+      "category": "reading",
+      "group": "questionKeywords",
+      "tier": 4
+    },
+    {
+      "text": "NOT mentioned",
+      "category": "reading",
+      "group": "questionKeywords",
+      "tier": 4
+    },
+    {
+      "text": "EXCEPT",
+      "category": "reading",
+      "group": "questionKeywords",
+      "tier": 4
+    },
+    {
+      "text": "fill in",
+      "category": "reading",
+      "group": "questionKeywords",
+      "tier": 4
+    },
+    {
+      "text": "best fits",
+      "category": "reading",
+      "group": "questionKeywords",
+      "tier": 4
+    },
+    {
+      "text": "gap",
+      "category": "reading",
+      "group": "questionKeywords",
+      "tier": 4
+    },
+    {
+      "text": "in 2026",
+      "category": "cloze",
+      "group": "signalExamples",
+      "tier": 4
+    },
+    {
+      "text": "decided to go",
+      "category": "cloze",
+      "group": "signalExamples",
+      "tier": 4
+    },
+    {
+      "text": "enjoys reading",
+      "category": "cloze",
+      "group": "signalExamples",
+      "tier": 4
+    },
+    {
+      "text": "has lived",
+      "category": "cloze",
+      "group": "signalExamples",
+      "tier": 4
+    },
+    {
+      "text": "more crowded",
+      "category": "cloze",
+      "group": "signalExamples",
+      "tier": 4
+    },
+    {
+      "text": "as tall as",
+      "category": "cloze",
+      "group": "signalExamples",
+      "tier": 4
+    },
+    {
+      "text": "many people",
+      "category": "cloze",
+      "group": "signalExamples",
+      "tier": 4
+    },
+    {
+      "text": "much water",
+      "category": "cloze",
+      "group": "signalExamples",
+      "tier": 4
+    },
+    {
+      "text": "a book",
+      "category": "cloze",
+      "group": "signalExamples",
+      "tier": 4
+    },
+    {
+      "text": "an hour",
+      "category": "cloze",
+      "group": "signalExamples",
+      "tier": 4
+    },
+    {
+      "text": "the sun",
+      "category": "cloze",
+      "group": "signalExamples",
+      "tier": 4
+    },
+    {
+      "text": "any",
+      "category": "cloze",
+      "group": "quickReview",
+      "tier": 4
+    },
+    {
+      "text": "provide a service",
+      "category": "sentence-patterns",
+      "group": "constructionCollocations",
+      "tier": 2
+    },
+    {
+      "text": "remind",
+      "category": "sentence-patterns",
+      "group": "transformationVerbPatterns",
+      "tier": 2
+    }
+  ],
+  "longForm": [
+    {
+      "text": "Plastic waste is a serious problem in many oceans. Every year, millions of tonnes of plastic end up in the sea. Fish and sea turtles often mistake small pieces of plastic for food. As a result, they can become sick or die. However, some countries are now taking action. They have banned single-use plastic bags and encouraged people to recycle. In Vietnam, many supermarkets have started using paper bags instead of plastic ones. These changes are small, but they can make a big difference if everyone joins in.",
+      "category": "longForm",
+      "group": "readingSamplePassage"
+    },
+    {
+      "text": "Plastic pollution is a serious problem in many countries. Every year, millions of tonnes of plastic end up in the sea. Fish and sea turtles often mistake small pieces of plastic for food. However, some countries are now taking action. They have banned single-use plastic bags and encouraged people to recycle. In Vietnam, many supermarkets have started using paper bags instead of plastic ones. These changes are small, but they can make a big difference if everyone joins in. We should all take responsibility for protecting the environment.",
+      "category": "longForm",
+      "group": "clozeSamplePassage"
+    },
+    {
+      "text": "She made a decision about the trip.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "He took part in the contest.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "I do my homework every evening.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "Social media has an impact on teenagers.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "Small actions can make a difference.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "Pay attention to the keywords.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "We should take responsibility for our actions.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "Heavy rain caused floods.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "Plastic waste is a serious problem.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "A healthy lifestyle is important.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "We should use public transport.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "Solar power is a form of renewable energy.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "We should protect cultural heritage.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "Many teens use social media every day.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "It depends on the weather.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "She looks after her little brother.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "I look forward to seeing you.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "We need to deal with this problem.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "Concentrate on your studies.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "the reason for the change",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "a solution to the problem",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "Noise has a bad effect on sleep.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "access to the internet",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "In the end, we decided to stay.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "The train arrived on time.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "I took your bag by mistake.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "In spite of the rain, we went out.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "Our car broke down.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "We ran out of water.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "They put off the meeting.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "Turn off the lights.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "Don’t give up.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "Volunteers provide information about the museum.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "The program provides an opportunity for learners.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "They provide support for local families.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "Your eating habits affect your health.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "I’m trying to break the habit of staying up late.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "Good sleeping habits help you focus.",
+      "category": "longForm",
+      "group": "vocabularyExamples"
+    },
+    {
+      "text": "She is a successful singer.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "The city has developed quickly.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "Environmental protection is important.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "Air pollution is harmful to health.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "She drives carefully.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "A healthy lifestyle is important.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "Hue is a beautiful city.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "Swimming there is dangerous.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "Education changes lives.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "We should protect cultural heritage.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "Ao dai is a traditional dress.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "We should protect natural resources.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "Scientific research helps us understand the world.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "Technological advances change our lives.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "The telephone was a great invention.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "Creative thinking is important.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "The factory produces shoes.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "She made an important decision.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "People think differently.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "She is friendly to everyone.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "She has a lot of knowledge.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "She is a talented musician.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "National independence is important.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "He has been unemployed for a year.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "Happiness comes from small things.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "She is strong enough to carry it.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "This chair is very comfortable.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "The street is very noisy.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "I am interested in music.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "The match was exciting.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "The result was disappointing.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "The service satisfied everyone.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "Children have vivid imaginations.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "Good communication is important.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "The competition is fierce.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "We need to protect the environment.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "She is a reliable friend.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "Music has the power to heal.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "This app is useful for students.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "We had a wonderful trip.",
+      "category": "longForm",
+      "group": "wordFormExamples"
+    },
+    {
+      "text": "Why don’t we recycle paper? — Good idea.",
+      "category": "longForm",
+      "group": "communicationExamples"
+    },
+    {
+      "text": "Would you like to join us? — I’d love to. Thanks.",
+      "category": "longForm",
+      "group": "communicationExamples"
+    },
+    {
+      "text": "I’m sorry I’m late. — Never mind.",
+      "category": "longForm",
+      "group": "communicationExamples"
+    },
+    {
+      "text": "Thank you for your help. — You’re welcome.",
+      "category": "longForm",
+      "group": "communicationExamples"
+    },
+    {
+      "text": "Would you mind opening the window? — Not at all.",
+      "category": "longForm",
+      "group": "communicationExamples"
+    },
+    {
+      "text": "May I use your phone? — I’m afraid you can’t.",
+      "category": "longForm",
+      "group": "communicationExamples"
+    },
+    {
+      "text": "Don’t worry. You can do it! — Thanks. I’ll try.",
+      "category": "longForm",
+      "group": "communicationExamples"
+    },
+    {
+      "text": "You look tired. — I have a headache.",
+      "category": "longForm",
+      "group": "communicationExamples"
+    },
+    {
+      "text": "They save money and conserve resources.",
+      "category": "longForm",
+      "group": "grammarExamples"
+    },
+    {
+      "text": "I prepared carefully, but the projector didn’t work.",
+      "category": "longForm",
+      "group": "grammarExamples"
+    },
+    {
+      "text": "He didn’t come because he was sick.",
+      "category": "longForm",
+      "group": "grammarExamples"
+    },
+    {
+      "text": "It rained, so the match was cancelled.",
+      "category": "longForm",
+      "group": "grammarExamples"
+    },
+    {
+      "text": "Hurry up, or you’ll be late.",
+      "category": "longForm",
+      "group": "grammarExamples"
+    },
+    {
+      "text": "I’ll call you when I arrive.",
+      "category": "longForm",
+      "group": "grammarExamples"
+    },
+    {
+      "text": "The girl who sits next to me is Lan.",
+      "category": "longForm",
+      "group": "grammarExamples"
+    },
+    {
+      "text": "The man whom we met is a doctor.",
+      "category": "longForm",
+      "group": "grammarExamples"
+    },
+    {
+      "text": "The book which I borrowed is interesting.",
+      "category": "longForm",
+      "group": "grammarExamples"
+    },
+    {
+      "text": "The city that I visited is beautiful.",
+      "category": "longForm",
+      "group": "grammarExamples"
+    },
+    {
+      "text": "The boy whose bike was stolen reported it.",
+      "category": "longForm",
+      "group": "grammarExamples"
+    },
+    {
+      "text": "The house where we lived is old.",
+      "category": "longForm",
+      "group": "grammarExamples"
+    },
+    {
+      "text": "I remember the day when we met.",
+      "category": "longForm",
+      "group": "grammarExamples"
+    },
+    {
+      "text": "If you study hard, you will pass.",
+      "category": "longForm",
+      "group": "transformationExamples"
+    },
+    {
+      "text": "Unless you study hard, you will fail.",
+      "category": "longForm",
+      "group": "transformationExamples"
+    },
+    {
+      "text": "I wish I had a bike.",
+      "category": "longForm",
+      "group": "transformationExamples"
+    },
+    {
+      "text": "She wishes she had studied harder.",
+      "category": "longForm",
+      "group": "transformationExamples"
+    },
+    {
+      "text": "Michael is fond of playing football.",
+      "category": "longForm",
+      "group": "transformationExamples"
+    },
+    {
+      "text": "He suggested going to the cinema.",
+      "category": "longForm",
+      "group": "transformationExamples"
+    },
+    {
+      "text": "It has been two years since she last participated.",
+      "category": "longForm",
+      "group": "transformationExamples"
+    },
+    {
+      "text": "She hasn’t participated since 2023.",
+      "category": "longForm",
+      "group": "transformationExamples"
+    },
+    {
+      "text": "Tom is so lazy that he can’t get good marks.",
+      "category": "longForm",
+      "group": "transformationExamples"
+    },
+    {
+      "text": "It was such awful weather that we couldn’t go out.",
+      "category": "longForm",
+      "group": "transformationExamples"
+    },
+    {
+      "text": "Our car broke down on the way.",
+      "category": "longForm",
+      "group": "transformationExamples"
+    },
+    {
+      "text": "The shop has run out of roses.",
+      "category": "longForm",
+      "group": "transformationExamples"
+    },
+    {
+      "text": "Although it rained, we went out.",
+      "category": "longForm",
+      "group": "transformationExamples"
+    },
+    {
+      "text": "Despite the rain, we went out.",
+      "category": "longForm",
+      "group": "transformationExamples"
+    },
+    {
+      "text": "He said he would help me the next day.",
+      "category": "longForm",
+      "group": "transformationExamples"
+    },
+    {
+      "text": "He suggested going to the cinema.",
+      "category": "longForm",
+      "group": "transformationExamples"
+    },
+    {
+      "text": "Studying abroad gives students opportunities.",
+      "category": "longForm",
+      "group": "constructionExamples"
+    },
+    {
+      "text": "welcomed the guests warmly at the entrance.",
+      "category": "longForm",
+      "group": "constructionExamples"
+    },
+    {
+      "text": "The host band started off the concert.",
+      "category": "longForm",
+      "group": "constructionExamples"
+    },
+    {
+      "text": "Every weekend, my family visits Bat Trang pottery village.",
+      "category": "longForm",
+      "group": "tenseExamples"
+    },
+    {
+      "text": "Look! The artisans are moulding clay at the workshop.",
+      "category": "longForm",
+      "group": "tenseExamples"
+    },
+    {
+      "text": "I have already tried making conical hats.",
+      "category": "longForm",
+      "group": "tenseExamples"
+    },
+    {
+      "text": "They have been restoring the old communal house for six months.",
+      "category": "longForm",
+      "group": "tenseExamples"
+    },
+    {
+      "text": "Last summer, our class visited My Son Sanctuary.",
+      "category": "longForm",
+      "group": "tenseExamples"
+    },
+    {
+      "text": "While I was reading about Vietnamese customs, my brother was watching a documentary.",
+      "category": "longForm",
+      "group": "tenseExamples"
+    },
+    {
+      "text": "By the time we arrived, the water puppet show had started.",
+      "category": "longForm",
+      "group": "tenseExamples"
+    },
+    {
+      "text": "The dancers had been practising for hours before the show began.",
+      "category": "longForm",
+      "group": "tenseExamples"
+    },
+    {
+      "text": "I think Vietnam will attract more tourists next year.",
+      "category": "longForm",
+      "group": "tenseExamples"
+    },
+    {
+      "text": "At this time next week, we will be exploring Hoi An Ancient Town.",
+      "category": "longForm",
+      "group": "tenseExamples"
+    },
+    {
+      "text": "By 2030, the city will have built three new metro lines.",
+      "category": "longForm",
+      "group": "tenseExamples"
+    },
+    {
+      "text": "By next June, she will have been learning English for five years.",
+      "category": "longForm",
+      "group": "tenseExamples"
+    }
+  ]
+}

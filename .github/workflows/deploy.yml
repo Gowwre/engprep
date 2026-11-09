@@ -33,6 +33,17 @@ jobs:
       - name: Check
         run: npm run check
 
+      - name: Generate TTSMaker audio (optional)
+        continue-on-error: true
+        env:
+          TTSMAKER_API_KEY: ${{ secrets.TTSMAKER_API_KEY }}
+        run: |
+          if [ -n "$TTSMAKER_API_KEY" ]; then
+            npm run audio
+          else
+            echo "TTSMAKER_API_KEY is not configured; using committed audio."
+          fi
+
       - name: Build
         run: npm run build
 
